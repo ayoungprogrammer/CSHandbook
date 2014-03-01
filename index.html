@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Responsive Website Test</title>
+	
+	<link type="text/css" rel="stylesheet" href="main.css">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>	
+	
+	
+	<script>
+		$(document).ready(function() {
+			var pull 		= $('#pull');
+				menu 		= $('nav ul');
+				menuHeight	= menu.height();
+
+			$(pull).on('click', function(e) {
+				
+					console.log(menu.css("height"));
+				if (menu.css("display")=="none"){
+					menu.slideDown();
+					
+				}
+				else{
+					menu.slideUp();
+					
+				}
+			});
+			$(window).resize(function(){
+        		var w = $(window).width();
+        		if(w > 320 && menu.is(':hidden')) {
+        			menu.removeAttr('style');
+        		}
+    		});
+			$(window).resize(function(){
+        		var w = $(window).width();
+        		if(w < 700) {
+        			menu.slideUp(0);
+        		}
+    		});
+		});
+	</script>
+</head>
+
+<body>
+	<div id="header">
+		<div id="navContainer">
+			<h1 id="logo">ALGORITHMS</h1>
+			<nav>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Products</a></li>
+					<li><a href="#">Services</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+				<a id="pull" href="#">MENU</a>
+			</nav>
+		</div>
+	</div>
+</body>
+</html>
