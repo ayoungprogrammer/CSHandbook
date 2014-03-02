@@ -1,34 +1,39 @@
 
 body{
-	font-family:Tahoma;
+	font-family: Tahoma, Arial;
+}
+
+#container{
+
 }
 #header{
-	width:100%;
-	height:130px;
-	background-color:rgba(40,0,100,0.7);
-	position:absolute;
-	top:0px;
-	left:0px;
+	width: 100%;
+	height: 80px;
+	background-color: rgba(50,50,50,0.6);
+	position: absolute;
+	top: 0;
+	left: 0;
 	}
 	#navContainer{
 		max-width:900px;
-		height:90px;
 		margin:auto;
-		padding:20px;
+		padding:0;
 		}
 		#logo{
-			float:left;
-			color:white;
-			padding:10px;
+            font-weight: normal;
+			float: left;
+			color: white;
+			padding: 0px 10px;
+            line-height: 1em;
 			}
 		nav{
-			height:50px;
-			padding:40px 10px 10px 10px;
+			height: 50px;
+			padding: 20px 10px 10px 10px;
 			text-align:center;
 			float:right;
 			}
 			nav ul{
-				padding:0;
+				padding-top: 10px;
 				margin:0px;
 				height:auto;
 			}
@@ -36,13 +41,19 @@ body{
 				display:inline;
 			}
 			nav li a{
+                -webkit-transition: all 0.5s  ease;
+                -moz-transition: all 0.5s  ease;
+                -o-transition: all 0.5s  ease;
 				text-decoration:none;
 				color:white;
 				padding:10px;
 				border-radius:4px;
 			}
 			nav li a:hover{
-				color:rgba(40,0,100,0.7);
+                -webkit-transition: all 0.5s  ease;
+                -moz-transition: all 0.5s  ease;
+                -o-transition: all 0.5s  ease;
+				color:black;
 				background-color:white;
 			}
 			nav #pull {
@@ -62,7 +73,7 @@ body{
 #header{
 	width:100%;
 	height:auto;
-	background-color:rgba(40,0,100,0.7);
+    background-color: rgba(50,50,50,0.6);
 	position:absolute;
 	top:0px;
 	left:0px;
@@ -81,16 +92,16 @@ body{
 		nav{
 			height:auto;
 			width:100%;
-			padding:0px;
+			padding:0;
 			text-align:center;
 			}
 			nav ul{
 				padding:0;
-				margin:0px;
+				margin:0;
 			}
 			nav li{
 				display:block;
-				height:50px;
+				height:45px;
 			}
 			nav li a{
 				box-sizing:border-box;  
@@ -101,16 +112,16 @@ body{
 				width:100%;
 				height:100%;
 				display:block;
-				padding:10px 0 0 0;
+				padding:10px;
 				border-radius:0px;
-				border-top: 2px solid rgb(200,200,50);
+				border-top: 2px solid white;
 			}
 			nav #pull {
-				border-top: 2px solid rgb(255,255,50);
-				font-weight:bold;
-				box-sizing:border-box;  
-				-moz-box-sizing:border-box;  
-				-webkit-box-sizing:border-box; 
+				border-top: 2px solid white;
+				font-weight:normal;
+				box-sizing:border-box;
+				-moz-box-sizing:border-box;
+				-webkit-box-sizing:border-box;
 				text-decoration:none;
 				color:white;
 				text-align:left;
