@@ -4,6 +4,7 @@
     <list default="true" id="b061c21a-2433-41b1-a958-474849ebb0f3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.css" afterPath="$PROJECT_DIR$/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Algorithms Wiki.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,13 +26,13 @@
     <favorites_list name="Algorithms Wiki" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.3884533">
+    <splitter split-orientation="horizontal" split-proportion="0.5124733">
       <split-first>
         <leaf>
-          <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="51" column="13" selection-start="2186" selection-end="2186" vertical-scroll-proportion="0.4744409" vertical-offset="570" max-vertical-offset="1275">
+                <state line="61" column="101" selection-start="2571" selection-end="2571" vertical-scroll-proportion="0.6198083" vertical-offset="649" max-vertical-offset="1275">
                   <folding />
                 </state>
               </provider>
@@ -41,10 +42,10 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/main.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="154" column="9" selection-start="3393" selection-end="3393" vertical-scroll-proportion="0.31014493" vertical-offset="2404" max-vertical-offset="3094">
+                <state line="183" column="20" selection-start="3990" selection-end="3990" vertical-scroll-proportion="0.92608696" vertical-offset="2472" max-vertical-offset="3230">
                   <folding />
                 </state>
               </provider>
@@ -81,8 +82,8 @@
       <list>
         <option value="$PROJECT_DIR$/mainResponsive.css" />
         <option value="$PROJECT_DIR$/responsiveNav.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/main.css" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -260,16 +261,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="13" selection-start="2186" selection-end="2186" vertical-scroll-proportion="0.4744409" vertical-offset="570" max-vertical-offset="1275">
+        <state line="183" column="20" selection-start="3990" selection-end="3990" vertical-scroll-proportion="0.92608696" vertical-offset="2472" max-vertical-offset="3230">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.css">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="154" column="9" selection-start="3393" selection-end="3393" vertical-scroll-proportion="0.31014493" vertical-offset="2404" max-vertical-offset="3094">
+        <state line="61" column="101" selection-start="2571" selection-end="2571" vertical-scroll-proportion="0.6198083" vertical-offset="649" max-vertical-offset="1275">
           <folding />
         </state>
       </provider>
