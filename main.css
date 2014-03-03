@@ -73,25 +73,25 @@ header{
     margin-top:40px;
 }
     .container .row{
-        -webkit-transition: all 0.5s  ease;
-        -moz-transition: all 0.5s  ease;
-        -o-transition: all 0.5s  ease;
-        opacity:0.4;
+        -webkit-transition: all 0.3s  ease;
+        -moz-transition: all 0.3s  ease;
+        -o-transition: all 0.3s  ease;
+        opacity:0.6;
         margin-top:60px;
         width: 280px;
         height: 280px;
         display: inline-block;
     }
     .container .row:hover{
-        -webkit-transition: all 0.5s  ease;
-        -moz-transition: all 0.5s  ease;
-        -o-transition: all 0.5s  ease;
+        -webkit-transition: all 0.3s  ease;
+        -moz-transition: all 0.3s  ease;
+        -o-transition: all 0.3s  ease;
         opacity:0.9;
     }
         .row span{
-            font-weight: 600;
-            font-size: 1.6em;
-            line-height: 3em;
+            font-weight: bold;
+            font-size: 1.4em;
+            line-height: 4em;
             display: block;
         }
         .row:nth-child(1){
@@ -102,6 +102,18 @@ header{
         }
         .row:nth-child(3){
             background: url('icon-algorithms.png');
+        }
+        .row:nth-child(1):hover{
+            color:rgb(21,139,152);
+            background: url('icon-website-hover.png');
+        }
+        .row:nth-child(2):hover{
+            color: rgb(255,42,42);
+            background: url('icon-guys-hover.png');
+        }
+        .row:nth-child(3):hover{
+            color: rgb(0,180,0);
+            background: url('icon-algorithms-hover.png');
         }
 
 
@@ -129,9 +141,9 @@ padding:30px;
         margin-top: 50px;
         }
         aside a{
-            -webkit-transition: all 0.5s  ease;
-            -moz-transition: all 0.5s  ease;
-            -o-transition: all 0.5s  ease;
+            -webkit-transition: all 0.3s  ease;
+            -moz-transition: all 0.3s  ease;
+            -o-transition: all 0.3s  ease;
             display:inline-block;
             width: auto;
             margin:0 30px;
@@ -142,9 +154,9 @@ padding:30px;
             border-radius: 10px;
         }
         aside a:hover{
-            -webkit-transition: all 0.5s  ease;
-            -moz-transition: all 0.5s  ease;
-            -o-transition: all 0.5s  ease;
+            -webkit-transition: all 0.2s  ease;
+            -moz-transition: all 0.2s  ease;
+            -o-transition: all 0.2s  ease;
             background: rgb(100,150,200);
             color:white;
         }
