@@ -4,6 +4,7 @@
 	<title>CS Algorithm Wiki</title>
 	
 	<link type="text/css" rel="stylesheet" href="main.css">
+    <link type="text/css" rel="stylesheet" href="mainResponsive.css">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -30,13 +31,13 @@
 
     <div class="banner container">
         <div class="row">
-            <span>200 Algorithms</span>
+            <span>1 website</span>
         </div>
         <div class="row">
-            <span>2 Guys</span>
+            <span>2 hackers</span>
         </div>
         <div class="row">
-            <span>1 Website</span>
+            <span>200 algorithms</span>
         </div>
     </div>
 
@@ -47,8 +48,11 @@
             <hr/>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce placerat ullamcorper justo ac tincidunt. Cras blandit mauris sapien, quis laoreet leo mattis vel. Etiam ac metus blandit, eleifend magna eu, molestie mauris. Ut viverra enim tortor, sed ullamcorper nunc sollicitudin id. Donec sollicitudin pretium nisl, vitae semper mi hendrerit id. Aenean convallis ante a elit ullamcorper malesuada. Curabitur a dui at metus porta fringilla ac sed odio.</p>
             <p> Curabitur ullamcorper elementum urna ut volutpat. Vivamus scelerisque lorem a aliquet adipiscing. Aenean aliquam lobortis est. Etiam posuere gravida mi nec ultrices. Duis leo sem, interdum sit amet magna in, placerat elementum nibh. Vestibulum sit amet adipiscing lorem, quis blandit risus. Integer in facilisis purus. Donec fermentum venenatis consequat. Sed non auctor diam. Morbi sed consequat enim. Nunc sed rhoncus lectus. Nulla blandit libero a ligula rutrum imperdiet. Donec varius pulvinar mauris, eget ultrices tellus suscipit eu.</p>
-        </article>
 
+            <aside>
+                <a href="http://simon-huang.ca">Simon Huang</a> | <a href="http://ayoungprogrammer.com">Michael Young</a>
+            </aside>
+        </article>
     </div>
 
 
@@ -59,37 +63,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
 
-    <script>
-        $(document).ready(function() {
-            var pull 		= $('#pull');
-            menu 		= $('nav ul');
-            menuHeight	= menu.height();
-
-            $(pull).on('click', function(e) {
-
-                console.log(menu.css("height"));
-                if (menu.css("display")=="none"){
-                    menu.slideDown();
-
-                }
-                else{
-                    menu.slideUp();
-
-                }
-            });
-            $(window).resize(function(){
-                var w = $(window).width();
-                if(w > 320 && menu.is(':hidden')) {
-                    menu.removeAttr('style');
-                }
-            });
-            $(window).resize(function(){
-                var w = $(window).width();
-                if(w < 700) {
-                    menu.slideUp(0);
-                }
-            });
-        });
-    </script>
+    <script type="text/javascript" src="responsiveNav.js"></script>
 </body>
 </html>
