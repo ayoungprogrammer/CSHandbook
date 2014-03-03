@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b061c21a-2433-41b1-a958-474849ebb0f3" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/home.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.css" afterPath="$PROJECT_DIR$/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -29,10 +30,10 @@
     <splitter split-orientation="horizontal" split-proportion="0.5124733">
       <split-first>
         <leaf>
-          <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="61" column="101" selection-start="2571" selection-end="2571" vertical-scroll-proportion="0.6198083" vertical-offset="649" max-vertical-offset="1275">
+                <state line="53" column="33" selection-start="2322" selection-end="2322" vertical-scroll-proportion="0.80473375" vertical-offset="357" max-vertical-offset="1292">
                   <folding />
                 </state>
               </provider>
@@ -42,10 +43,10 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/main.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="183" column="20" selection-start="3990" selection-end="3990" vertical-scroll-proportion="0.92608696" vertical-offset="2472" max-vertical-offset="3230">
+                <state line="8" column="7" selection-start="134" selection-end="134" vertical-scroll-proportion="-5.44" vertical-offset="0" max-vertical-offset="1547">
                   <folding />
                 </state>
               </provider>
@@ -54,7 +55,16 @@
           <file leaf-file-name="mainResponsive.css" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/mainResponsive.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="10" column="15" selection-start="171" selection-end="171" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1411">
+                <state line="8" column="38" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1411">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="home.css" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/home.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="116" column="18" selection-start="2459" selection-end="2459" vertical-scroll-proportion="0.8335664" vertical-offset="1376" max-vertical-offset="2210">
                   <folding />
                 </state>
               </provider>
@@ -84,6 +94,7 @@
         <option value="$PROJECT_DIR$/responsiveNav.js" />
         <option value="$PROJECT_DIR$/main.css" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/home.css" />
       </list>
     </option>
   </component>
@@ -256,21 +267,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mainResponsive.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="15" selection-start="171" selection-end="171" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1411">
+        <state line="8" column="38" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1411">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="183" column="20" selection-start="3990" selection-end="3990" vertical-scroll-proportion="0.92608696" vertical-offset="2472" max-vertical-offset="3230">
+        <state line="8" column="7" selection-start="134" selection-end="134" vertical-scroll-proportion="-5.44" vertical-offset="0" max-vertical-offset="1547">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="101" selection-start="2571" selection-end="2571" vertical-scroll-proportion="0.6198083" vertical-offset="649" max-vertical-offset="1275">
+        <state line="53" column="33" selection-start="2322" selection-end="2322" vertical-scroll-proportion="0.80473375" vertical-offset="357" max-vertical-offset="1292">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="116" column="18" selection-start="2459" selection-end="2459" vertical-scroll-proportion="0.8335664" vertical-offset="1376" max-vertical-offset="2210">
           <folding />
         </state>
       </provider>
