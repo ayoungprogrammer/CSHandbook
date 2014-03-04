@@ -63,11 +63,21 @@ main{
 #sideNav{
     border: 1px solid black;
     width: 150px;
+    height: auto;
     display: inline-block;
     position: absolute;
     top: 20px;
     margin-left:20px;
-}
+    padding: 0;
+    }
+    #sideNav ul{
+        list-style: none;
+        padding-left: 0;
+        }
+        #sideNav ul li{
+            display: block;
+            margin: 10px 0;
+        }
 
 
 @media screen and (max-width: 800px) {

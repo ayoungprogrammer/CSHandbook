@@ -16,7 +16,7 @@
 <body>
 	<header>
 		<div id="navContainer">
-            <a href="#"><h1 id="logo">ALGORITHMS</h1></a>
+            <a href="index.html"><h1 id="logo">ALGORITHMS</h1></a>
 			<nav>
 				<ul>
                     <li><a href="#">About</a></li>
@@ -156,7 +156,9 @@
             -->
         </main>
         <nav id="sideNav">
-            nav
+            <ul>
+
+            </ul>
         </nav>
     </div>
 
@@ -166,25 +168,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
-    <script>
-        var sideBar = $('#sideNav')
-        var initialPos = sideBar.offset().top;
-        $(window).scroll(function(){
-            var currentScroll = $(window).scrollTop();
-            console.log(currentScroll);
-            if (currentScroll >= (initialPos - 100)){
-                sideBar.css({
-                    position: 'fixed',
-                    top: '100px'
-                });
-            } else {
-                sideBar.css({
-                    position: 'absolute',
-                    top: '20px'
-                });
-            }
-        })
-    </script>
+    <script type="text/javascript" src="sideNav.js"> </script>
     <script type="text/javascript" src="responsiveNav.js"></script>
 </body>
 </html>
