@@ -11,6 +11,10 @@
 
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 
+    <!-- SYNTAX HIGHLIGHTING -->
+    <link type="text/css" rel="stylesheet" href="google-code-prettify/desert.css"/>
+    <script src="google-code-prettify/prettify.js"></script>
+
 </head>
 
 <body>
@@ -41,32 +45,37 @@
             <h2>[main section]</h2>
             <hr/>
             <article>
-                <h3>[algorithm name]</h3>
+                <h3>GCD</h3>
                 <details>
                     <summary>Overview</summary>
                     <table>
                         <tbody>
                         <tr>
-                            <td><strong>Run Time:</strong> n<sup>2</sup></td>
-                            <td><strong>Complexity:</strong> Medium</td>
+                            <td><strong>Run Time:</strong> n<sup></sup></td>
+                            <td><strong>Complexity:</strong> Simple - Recursion</td>
                         </tr>
                         <tr>
-                            <td><strong>Implementation:</strong> Long</td>
-                            <td><strong>Data Structures:</strong> Priority Queue</td>
+                            <td><strong>Implementation:</strong> Short</td>
+                            <td><strong>Data Structures:</strong> None</td>
                         </tr>
                         </tbody>
                     </table>
                 </details>
                 <section class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce placerat ullamcorper justo ac tincidunt.
-                    Cras blandit mauris sapien, quis laoreet leo mattis vel. Etiam ac metus blandit, eleifend magna eu,
-                    molestie mauris. Ut viverra enim tortor, sed ullamcorper nunc sollicitudin id. Donec sollicitudin
-                    pretium nisl, vitae semper mi hendrerit id. Aenean convallis ante a elit ullamcorper malesuada.
-                    Curabitur a dui at metus porta fringilla ac sed odio.
+                    Compute the greatest common divisor of
+                    two non-negative integers p and q as follows:
+                    If q is 0, the answer is p. If not, divide p by q
+                    and take the remainder r. The answer is the
+                    greatest common divisor of q and r.
                 </section>
-                <section class="implementation">
-
-                </section>
+<pre class="prettyprint linenums">
+public static int gcd(int p, int q)
+{
+    if (q == 0) return p;
+    int r = p % q;
+    return gcd(q, r);
+}
+</pre>
             </article>
             <article>
                 <h3>[algorithm name]</h3>
@@ -92,9 +101,14 @@
                     pretium nisl, vitae semper mi hendrerit id. Aenean convallis ante a elit ullamcorper malesuada.
                     Curabitur a dui at metus porta fringilla ac sed odio.
                 </section>
-                <section class="implementation">
-
-                </section>
+<pre class="prettyprint">
+public static int gcd(int p, int q)
+{
+    if (q == 0) return p;
+    int r = p % q;
+    return gcd(q, r);
+}
+</pre>
             </article>
 
 
@@ -102,7 +116,7 @@
             <hr/>
 
             <article>
-                <h3>[algorithm name]</h3>
+                <h3>gg</h3>
                 <details>
                     <summary>Overview</summary>
                     <table>
@@ -125,9 +139,9 @@
                     pretium nisl, vitae semper mi hendrerit id. Aenean convallis ante a elit ullamcorper malesuada.
                     Curabitur a dui at metus porta fringilla ac sed odio.
                 </section>
-                <section class="implementation">
-
-                </section>
+<pre class="prettyprint">
+some code
+</pre>
             </article>
 
             <article>
@@ -154,9 +168,9 @@
                     pretium nisl, vitae semper mi hendrerit id. Aenean convallis ante a elit ullamcorper malesuada.
                     Curabitur a dui at metus porta fringilla ac sed odio.
                 </section>
-                <section class="implementation">
-
-                </section>
+<pre class="prettyprint">
+some code
+</pre>
             </article>
 
             <article>
@@ -183,9 +197,9 @@
                     pretium nisl, vitae semper mi hendrerit id. Aenean convallis ante a elit ullamcorper malesuada.
                     Curabitur a dui at metus porta fringilla ac sed odio.
                 </section>
-                <section class="implementation">
-
-                </section>
+<pre class="prettyprint">
+some code
+</pre>
             </article>
 
         </main>
@@ -200,7 +214,9 @@
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-
+    <script>
+        prettyPrint();
+    </script>
     <script type="text/javascript" src="sideNav.js"> </script>
     <script type="text/javascript" src="responsiveNav.js"></script>
 </body>

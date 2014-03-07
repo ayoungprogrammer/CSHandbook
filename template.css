@@ -58,7 +58,16 @@ main{
             }
     main article{
         margin-bottom:60px;
-    }
+        text-align: left;
+        }
+        article .description{
+            font-size: 0.9em;
+        }
+        article pre{
+            text-align: left;
+            padding: 20px;
+            border-radius: 10px;
+        }
 
 #sideNav{
     width: 150px;

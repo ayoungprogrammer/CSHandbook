@@ -10,7 +10,7 @@
 
         index++;
     }
-    console.log($('h3').eq(0).html());
+
     for (var i=0; i<index; i++){
         if (i==0){
             $('<li></li>', {
