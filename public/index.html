@@ -1,34 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>CS Algorithm Wiki</title>
-	
-	<link type="text/css" rel="stylesheet" href="stylesheets/main.css">
-    <link type="text/css" rel="stylesheet" href="stylesheets/mainResponsive.css">
+    <title>CS Algorithm Wiki</title>
+    
+    <link type="text/css" rel="stylesheet" href="/stylesheets/main.css">
+    <link type="text/css" rel="stylesheet" href="/stylesheets/mainResponsive.css">
 
-    <link type="text/css" rel="stylesheet" href="stylesheets/home.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/stylesheets/home.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 
 </head>
 
 <body>
-	<header>
-		<div id="navContainer">
+    <header>
+        <div id="navContainer">
             <a href="#"><h1 id="logo">ALGORITHMS</h1></a>
-			<nav>
-				<ul>
+            <nav>
+                <ul>
                     <li><a href="#">About</a></li>
-					<li><a href="template.html">Fundamentals</a></li>
-					<li><a href="#">Sorting</a></li>
-					<li><a href="#">Graphs</a></li>
-					<li><a href="#">Strings</a></li>
-				</ul>
-				<a id="pull" href="#">MENU</a>
-			</nav>
-		</div>
-	</header>
+                    <li><a href="template.html">Fundamentals</a></li>
+                    <li><a href="#">Sorting</a>
+                        <div>
+                        <ul>
+                            <li><a href="#">n<sup>2</sup> sorting</a></li>
+                            <li><a href="#">nlogn sorting</a></li>
+                        </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">Graphs</a>
+                        <div>
+                        <ul>
+                            <li><a href="#">n<sup>2</sup> sorting</a></li>
+                            <li><a href="#">nlogn sorting</a></li>
+                            <li><a href="#">n<sup>2</sup> sorting</a></li>
+                            <li><a href="#">nlogn sorting</a></li>
+                        </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">Strings</a></li>
+                </ul>
+                <a id="pull" href="#">MENU</a>
+            </nav>
+        </div>
+    </header>
 
     <section class="banner container">
         <div class="row">
@@ -77,8 +93,17 @@
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-
-
-    <script type="text/javascript" src="js/responsiveNav.js"></script>
+    <script type="text/javascript" src="/js/responsiveNav.js"></script>
+    <script>
+        (function(){
+            $('nav ul li').mouseenter(function(){
+                var nestedNav =  $(this).find('ul');
+                nestedNav.css({
+                    'margin-left': -parseInt(nestedNav.outerWidth()) / 2,
+                });
+                nestedNav.parent('div').css('padding-top', 5);
+            });
+        })();
+    </script>
 </body>
 </html>
