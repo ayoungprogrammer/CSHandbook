@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a43b440-25d9-4db7-8dd9-9e0f22e84a5b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/Algorithms-Wiki.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/nestedNav.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/home.css" afterPath="$PROJECT_DIR$/public/stylesheets/home.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/main.css" afterPath="$PROJECT_DIR$/public/stylesheets/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/mainResponsive.css" afterPath="$PROJECT_DIR$/public/stylesheets/mainResponsive.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/nestedNav.js" afterPath="$PROJECT_DIR$/public/js/nestedNav.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/responsiveNav.js" afterPath="$PROJECT_DIR$/public/js/responsiveNav.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="F:\GitHub\Algorithms-Wiki\public\stylesheets\mainResponsive.css" afterPath="$PROJECT_DIR$/public/stylesheets/responsiveNav.css" />
     </list>
     <ignored path="Algorithms-Wiki.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,22 +30,31 @@
     <favorites_list name="Algorithms-Wiki" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5438266">
+    <splitter split-orientation="horizontal" split-proportion="0.6044776">
       <split-first>
         <leaf>
           <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/public/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="108" column="54" selection-start="4392" selection-end="4392" vertical-scroll-proportion="1.25" vertical-offset="1296" max-vertical-offset="1972">
+                <state line="8" column="50" selection-start="274" selection-end="274" vertical-scroll-proportion="0.3105023" vertical-offset="0" max-vertical-offset="1989">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="mainResponsive.css" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/public/stylesheets/mainResponsive.css">
+          <file leaf-file-name="responsiveNav.css" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/public/stylesheets/responsiveNav.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="9" column="7" selection-start="158" selection-end="158" vertical-scroll-proportion="0.0" vertical-offset="100" max-vertical-offset="1683">
+                <state line="20" column="20" selection-start="332" selection-end="332" vertical-scroll-proportion="-4.38" vertical-offset="121" max-vertical-offset="1683">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="home.css" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/public/stylesheets/home.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="111" column="5" selection-start="2765" selection-end="2765" vertical-scroll-proportion="0.0" vertical-offset="1750" max-vertical-offset="2465">
                   <folding />
                 </state>
               </provider>
@@ -61,7 +67,7 @@
           <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/public/stylesheets/main.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="7" column="24" selection-start="147" selection-end="147" vertical-scroll-proportion="0.25265393" vertical-offset="0" max-vertical-offset="2261">
+                <state line="36" column="9" selection-start="638" selection-end="638" vertical-scroll-proportion="0.8553459" vertical-offset="204" max-vertical-offset="2261">
                   <folding />
                 </state>
               </provider>
@@ -87,9 +93,12 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/public/stylesheets/main.css" />
         <option value="$PROJECT_DIR$/public/stylesheets/mainResponsive.css" />
         <option value="$PROJECT_DIR$/public/js/nestedNav.js" />
+        <option value="$PROJECT_DIR$/public/stylesheets/main.css" />
+        <option value="$PROJECT_DIR$/public/stylesheets/responsiveNav.css" />
+        <option value="$PROJECT_DIR$/public/js/responsiveNav.js" />
+        <option value="$PROJECT_DIR$/public/stylesheets/home.css" />
         <option value="$PROJECT_DIR$/public/index.html" />
       </list>
     </option>
@@ -246,13 +255,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32928476" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3211876" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2275" sideWeight="0.6707153" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13125" sideWeight="0.67881244" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -286,30 +295,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="24" selection-start="147" selection-end="147" vertical-scroll-proportion="0.25265393" vertical-offset="0" max-vertical-offset="2261">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/mainResponsive.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="7" selection-start="158" selection-end="158" vertical-scroll-proportion="0.0" vertical-offset="100" max-vertical-offset="1683">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/nestedNav.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="715">
+        <state line="17" column="5" selection-start="595" selection-end="595" vertical-scroll-proportion="0.4212828" vertical-offset="0" max-vertical-offset="686">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="9" selection-start="638" selection-end="638" vertical-scroll-proportion="0.8553459" vertical-offset="204" max-vertical-offset="2261">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/responsiveNav.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="20" selection-start="332" selection-end="332" vertical-scroll-proportion="-4.38" vertical-offset="121" max-vertical-offset="1683">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/responsiveNav.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="36" selection-start="155" selection-end="155" vertical-scroll-proportion="0.12160229" vertical-offset="0" max-vertical-offset="699">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/home.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="111" column="5" selection-start="2765" selection-end="2765" vertical-scroll-proportion="0.0" vertical-offset="1750" max-vertical-offset="2465">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="54" selection-start="4392" selection-end="4392" vertical-scroll-proportion="1.25" vertical-offset="1296" max-vertical-offset="1972">
+        <state line="8" column="50" selection-start="274" selection-end="274" vertical-scroll-proportion="0.3105023" vertical-offset="0" max-vertical-offset="1989">
           <folding />
         </state>
       </provider>

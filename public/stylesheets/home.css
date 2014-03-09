@@ -99,13 +99,19 @@
 
 
 @media screen and (max-width: 700px) {
+    .row:nth-child{
+        opacity: 1;
+    }
     .row:nth-child(1){
+        color:rgb(21,139,152);
         background: url('../img/icon-website-hover.png');
     }
     .row:nth-child(2){
+        color: rgb(255,42,42);
         background: url('../img/icon-guys-hover.png');
     }
     .row:nth-child(3){
+        color: rgb(0,180,0);
         background: url('../img/icon-algorithms-hover.png');
     }
     aside a{
@@ -115,7 +121,7 @@
         display:inline-block;
         width: auto;
         margin:0 5px;
-        padding: 5px;
+        padding: 15px;
         text-decoration: none;
         border-radius: 10px;
         font-size:0.9em;

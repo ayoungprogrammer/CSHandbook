@@ -3,6 +3,8 @@ $(document).ready(function() {
     menu 		= $('nav ul');
     menuHeight	= menu.height();
 
+    console.log ($(window).width());
+    menu.hide();
     $(pull).on('click', function(e) {
 
         console.log(menu.css("height"));
