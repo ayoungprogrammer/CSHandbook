@@ -4,7 +4,9 @@ body{
     background: url('../img/squared_metal.png');
     background-repeat: repeat;
 }
-
+sup{
+    vertical-align: top;
+}
 /*NAVIGATION*/
 header{
 	width: 100%;
@@ -68,18 +70,27 @@ header{
                     background-color:white;
 			    }
                 nav ul li:hover ul{
-                    display: inline-block;
+                    -webkit-transition: max-height 1s  ease;
+                    -moz-transition: max-height 1s  ease;
+                    -o-transition: max-height 1s  ease;
+                    max-height: 1000px;
                 }
                     nav ul ul{
-                        display: none;
+                        -webkit-transition: max-height 0.4s  ease;
+                        -moz-transition: max-height 0.4s  ease;
+                        -o-transition: max-height 0.4s  ease;
+                        display: inline-block;
                         position: absolute;
                         margin-top: 10px;
                         padding: 0;
                         border-radius: 8px;
                         color: black;
 
+                        max-height:0;
+                        overflow: hidden;
+
                         background-color: rgb(50,50,50);
-                        background-color: rgba(50,50,50,0.6);
+                        background-color: rgba(100,100,100,0.9);
                     }
                     nav ul ul li{
                         float:none;

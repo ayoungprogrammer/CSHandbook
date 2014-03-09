@@ -22,6 +22,7 @@ header{
 		padding:0;
 		}
 		#logo{
+            padding: 0;
 			width:100%;
 			text-align:center;
 			color:white;
@@ -36,9 +37,8 @@ header{
 				padding:0;
 				margin:0;
 			}
-			nav li{
-				display:block;
-				height:45px;
+			nav ul li{
+				display: block;
 			}
 			nav li a{
 				box-sizing:border-box;  
@@ -52,7 +52,23 @@ header{
 				padding:10px;
 				border-radius:0;
 				border-top: 2px solid white;
-			}
+			    }
+                nav li div{
+                    height: auto;
+                }
+                nav ul ul{
+                    max-height: 1000px;
+                    position: relative;
+                    z-index: 5;
+                    background: none;
+                    border-radius: 0;
+                }
+                nav ul ul li{
+                    font-size: 0.8em;
+                    height: 40px;
+                    width: 40%;
+                    display: inline-block;
+                }
 			nav #pull {
 				border-top: 2px solid white;
 				font-weight:normal;
