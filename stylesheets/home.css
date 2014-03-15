@@ -31,25 +31,25 @@
         display: block;
     }
     .row:nth-child(1){
-        background: url('../img/icon-website.png');
+        background: url('imgon-website.png');
     }
     .row:nth-child(2){
-        background: url('../img/icon-guys.png');
+        background: url('imgon-guys.png');
     }
     .row:nth-child(3){
-        background: url('../img/icon-algorithms.png');
+        background: url('imgon-algorithms.png');
     }
     .row:nth-child(1):hover{
         color:rgb(21,139,152);
-        background: url('../img/icon-website-hover.png');
+        background: url('imgon-website-hover.png');
     }
     .row:nth-child(2):hover{
         color: rgb(255,42,42);
-        background: url('../img/icon-guys-hover.png');
+        background: url('imgon-guys-hover.png');
     }
     .row:nth-child(3):hover{
         color: rgb(0,180,0);
-        background: url('../img/icon-algorithms-hover.png');
+        background: url('imgon-algorithms-hover.png');
     }
 
 
@@ -98,21 +98,33 @@
         }
 
 
+@viewport{
+    zoom: 1.0;
+    width: device-width;
+}
+@-ms-viewport{
+    width: device-width;
+    zoom: 1.0;
+}
+
 @media screen and (max-width: 700px) {
-    .row:nth-child{
-        opacity: 1;
+    .row{
+
     }
     .row:nth-child(1){
+        opacity: 1;
         color:rgb(21,139,152);
-        background: url('../img/icon-website-hover.png');
+        background: url('imgon-website-hover.png');
     }
     .row:nth-child(2){
+        opacity: 1;
         color: rgb(255,42,42);
-        background: url('../img/icon-guys-hover.png');
+        background: url('imgon-guys-hover.png');
     }
     .row:nth-child(3){
+        opacity: 1;
         color: rgb(0,180,0);
-        background: url('../img/icon-algorithms-hover.png');
+        background: url('imgon-algorithms-hover.png');
     }
     aside a{
         -webkit-transition: all 0.3s  ease;
@@ -121,7 +133,6 @@
         display:inline-block;
         width: auto;
         margin:0 5px;
-        padding: 15px;
         text-decoration: none;
         border-radius: 10px;
         font-size:0.9em;

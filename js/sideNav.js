@@ -1,18 +1,16 @@
 (function (){
     var algs = new Array();
     var algsHeight = new Array();
-    var index =0;
-
-    while ($('h3').eq(index).html()!=null){
-        var currentAlg = $('h3').eq(index);
-        algs[index] = currentAlg.html();
-        algsHeight[index] = currentAlg.offset().top;
-
-        index++;
+    var headings = $('h3');
+    for (var i=0;i<headings.length;i++){
+        var currentAlg = headings.eq(i);
+        algs[i] = currentAlg.html();
+        algsHeight[i] = currentAlg.offset().top;
     }
 
-    for (var i=0; i<index; i++){
+    for (var i=0; i<headings.length; i++){
         if (i==0){
+            console.log('okay');
             $('<li></li>', {
                 text: algs[i],
                 class: 'active'

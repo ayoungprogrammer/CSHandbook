@@ -3,12 +3,12 @@
 <head>
     <title>CS Algorithm Wiki</title>
 
-    <link type="text/css" rel="stylesheet" href="/stylesheets/main.css">
-    <link type="text/css" rel="stylesheet" href="/stylesheets/responsiveNav.css">
+    <link type="text/css" rel="stylesheet" href="stylesheets/main.css">
+    <link type="text/css" rel="stylesheet" href="stylesheets/responsiveNav.css">
 
-    <link type="text/css" rel="stylesheet" href="/stylesheets/home.css">
+    <link type="text/css" rel="stylesheet" href="stylesheets/home.css">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 
@@ -17,7 +17,7 @@
 <body>
 <header>
     <div id="navContainer">
-        <a href="#"><h1 id="logo">ALGORITHMS</h1></a>
+        <a href="#"><h1 id="logo">{ CS ALGORITHMS }</h1></a>
         <nav>
             <ul>
                 <li><a href="template.html">Number Theory</a>
@@ -106,7 +106,13 @@
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script type="text/javascript" src="/js/responsiveNav.js"></script>
-<script type="text/javascript" src="/js/nestedNav.js"></script>
+<script type="text/javascript" src="js/responsiveNav.js"></script>
+<script type="text/javascript" src="js/nestedNav.js"></script>
+
+<script>
+    (function(){
+        console.log($(window).width());
+    })();
+</script>
 </body>
 </html>

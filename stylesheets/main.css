@@ -1,7 +1,8 @@
 
 body{
 	font-family: Tahoma, Arial;
-    background: url('../img/squared_metal.png');
+    width: auto;
+    background: url('imguared_metal.png');
     background-repeat: repeat;
 }
 sup{
@@ -74,7 +75,7 @@ header{
                     -moz-transition: max-height 1s  ease;
                     -o-transition: max-height 1s  ease;
                     max-height: 1000px;
-                }
+                    }
                     nav ul ul{
                         -webkit-transition: max-height 0.4s  ease;
                         -moz-transition: max-height 0.4s  ease;
