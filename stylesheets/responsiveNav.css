@@ -85,7 +85,7 @@ header{
 			}
 			nav #pull:after {
 				content:"";
-				background: url('imgv-icon.png') no-repeat;
+				background: url('../img/nav-icon.png') no-repeat;
 				width: 30px;
 				height: 30px;
 				float:right;

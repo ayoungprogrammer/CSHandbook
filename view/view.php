@@ -48,13 +48,5 @@ return gcd(q, r);
 
     </main>
 
-
-
-    <nav id="sideNav">
-        <ul>
-        </ul>
-    </nav>
-
-
 </div>
 <?php require('viewFooter.php'); ?>
