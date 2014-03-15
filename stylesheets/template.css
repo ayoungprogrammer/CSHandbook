@@ -2,7 +2,7 @@
 body{
 	font-family: Tahoma, Arial;
     width: auto;
-    background: url('imguared_metal.png');
+    background: url('../img/squared_metal.png');
     background-repeat: repeat;
 }
 sup{

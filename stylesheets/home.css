@@ -31,25 +31,25 @@
         display: block;
     }
     .row:nth-child(1){
-        background: url('imgon-website.png');
+        background: url('../img/icon-website.png');
     }
     .row:nth-child(2){
-        background: url('imgon-guys.png');
+        background: url('../img/icon-guys.png');
     }
     .row:nth-child(3){
-        background: url('imgon-algorithms.png');
+        background: url('../img/icon-algorithms.png');
     }
     .row:nth-child(1):hover{
         color:rgb(21,139,152);
-        background: url('imgon-website-hover.png');
+        background: url('../img/icon-website-hover.png');
     }
     .row:nth-child(2):hover{
         color: rgb(255,42,42);
-        background: url('imgon-guys-hover.png');
+        background: url('../img/icon-guys-hover.png');
     }
     .row:nth-child(3):hover{
         color: rgb(0,180,0);
-        background: url('imgon-algorithms-hover.png');
+        background: url('../img/icon-algorithms-hover.png');
     }
 
 
@@ -114,17 +114,17 @@
     .row:nth-child(1){
         opacity: 1;
         color:rgb(21,139,152);
-        background: url('imgon-website-hover.png');
+        background: url('../img/icon-website-hover.png');
     }
     .row:nth-child(2){
         opacity: 1;
         color: rgb(255,42,42);
-        background: url('imgon-guys-hover.png');
+        background: url('../img/icon-guys-hover.png');
     }
     .row:nth-child(3){
         opacity: 1;
         color: rgb(0,180,0);
-        background: url('imgon-algorithms-hover.png');
+        background: url('../img/icon-algorithms-hover.png');
     }
     aside a{
         -webkit-transition: all 0.3s  ease;
