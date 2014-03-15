@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>[Title]</title>
+    
+    <link type="text/css" rel="stylesheet" href="stylesheets/main.css">
+    <link type="text/css" rel="stylesheet" href="stylesheets/mainResponsive.css">
+
+    <link type="text/css" rel="stylesheet" href="stylesheets/view.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+    <!-- SYNTAX HIGHLIGHTING -->
+    <link type="text/css" rel="stylesheet" href="vendor/prettify/desert.css"/>
+
+</head>
+
+<body>
+    <header>
+        <div id="navContainer">
+            <a href="index.html"><h1 id="logo">ALGORITHMS</h1></a>
+            <nav>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Fundamentals</a></li>
+                    <li><a href="#">Sorting</a></li>
+                    <li><a href="#">Graphs</a></li>
+                    <li><a href="#">Strings</a></li>
+                </ul>
+                <a id="pull" href="#">MENU</a>
+            </nav>
+        </div>
+    </header>
+    <div class="banner container">
+        <h1>Fundamentals</h1>
+        <div>
+            These are algorithms that every programmer should know.
+            Whether you're an beginner or expert. No Excuses.
+        </div>
+    </div>
+    <div class="container">
+        <main>
+            <h2>[main section]</h2>
+            <hr/>
+            <article>
+                <h3>GCD</h3>
+                <details>
+                    <summary>Overview</summary>
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td><strong>Run Time:</strong> n<sup></sup></td>
+                            <td><strong>Complexity:</strong> Simple - Recursion</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Implementation:</strong> Short</td>
+                            <td><strong>Data Structures:</strong> None</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </details>
+                <section class="description">
+                    Compute the greatest common divisor of
+                    two non-negative integers p and q as follows:
+                    If q is 0, the answer is p. If not, divide p by q
+                    and take the remainder r. The answer is the
+                    greatest common divisor of q and r.
+                </section>
+<pre class="prettyprint linenums">
+public static int gcd(int p, int q)
+{
+    if (q == 0) return p;
+    int r = p % q;
+    return gcd(q, r);
+}
+</pre>
+            </article>
+            <article>
+                <h3>[algorithm name]</h3>
+                <details>
+                    <summary>Overview</summary>
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td><strong>Run Time:</strong> n<sup>2</sup></td>
+                            <td><strong>Complexity:</strong> Medium</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Implementation:</strong> Long</td>
+                            <td><strong>Data Structures:</strong> Priority Queue</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </details>
+                <section class="description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce placerat ullamcorper justo ac tincidunt.
+                    Cras blandit mauris sapien, quis laoreet leo mattis vel. Etiam ac metus blandit, eleifend magna eu,
+                    molestie mauris. Ut viverra enim tortor, sed ullamcorper nunc sollicitudin id. Donec sollicitudin
+                    pretium nisl, vitae semper mi hendrerit id. Aenean convallis ante a elit ullamcorper malesuada.
+                    Curabitur a dui at metus porta fringilla ac sed odio.
+                </section>
+<pre class="prettyprint">
+public static int gcd(int p, int q)
+{
+    if (q == 0) return p;
+    int r = p % q;
+    return gcd(q, r);
+}
+</pre>
+            </article>
+
+
+            <h2>[main section]</h2>
+            <hr/>
+
+            <article>
+                <h3>gg</h3>
+                <details>
+                    <summary>Overview</summary>
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td><strong>Run Time:</strong> n<sup>2</sup></td>
+                            <td><strong>Complexity:</strong> Medium</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Implementation:</strong> Long</td>
+                            <td><strong>Data Structures:</strong> Priority Queue</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </details>
+                <section class="description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce placerat ullamcorper justo ac tincidunt.
+                    Cras blandit mauris sapien, quis laoreet leo mattis vel. Etiam ac metus blandit, eleifend magna eu,
+                    molestie mauris. Ut viverra enim tortor, sed ullamcorper nunc sollicitudin id. Donec sollicitudin
+                    pretium nisl, vitae semper mi hendrerit id. Aenean convallis ante a elit ullamcorper malesuada.
+                    Curabitur a dui at metus porta fringilla ac sed odio.
+                </section>
+<pre class="prettyprint">
+some code
+</pre>
+            </article>
+
+            <article>
+                <h3>[algorithm name]</h3>
+                <details>
+                    <summary>Overview</summary>
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td><strong>Run Time:</strong> n<sup>2</sup></td>
+                            <td><strong>Complexity:</strong> Medium</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Implementation:</strong> Long</td>
+                            <td><strong>Data Structures:</strong> Priority Queue</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </details>
+                <section class="description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce placerat ullamcorper justo ac tincidunt.
+                    Cras blandit mauris sapien, quis laoreet leo mattis vel. Etiam ac metus blandit, eleifend magna eu,
+                    molestie mauris. Ut viverra enim tortor, sed ullamcorper nunc sollicitudin id. Donec sollicitudin
+                    pretium nisl, vitae semper mi hendrerit id. Aenean convallis ante a elit ullamcorper malesuada.
+                    Curabitur a dui at metus porta fringilla ac sed odio.
+                </section>
+<pre class="prettyprint">
+some code
+</pre>
+            </article>
+
+            <article>
+                <h3>[algorithm name]</h3>
+                <details>
+                    <summary>Overview</summary>
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td><strong>Run Time:</strong> n<sup>2</sup></td>
+                            <td><strong>Complexity:</strong> Medium</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Implementation:</strong> Long</td>
+                            <td><strong>Data Structures:</strong> Priority Queue</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </details>
+                <section class="description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce placerat ullamcorper justo ac tincidunt.
+                    Cras blandit mauris sapien, quis laoreet leo mattis vel. Etiam ac metus blandit, eleifend magna eu,
+                    molestie mauris. Ut viverra enim tortor, sed ullamcorper nunc sollicitudin id. Donec sollicitudin
+                    pretium nisl, vitae semper mi hendrerit id. Aenean convallis ante a elit ullamcorper malesuada.
+                    Curabitur a dui at metus porta fringilla ac sed odio.
+                </section>
+<pre class="prettyprint">
+some code
+</pre>
+            </article>
+
+        </main>
+        <nav id="sideNav">
+            <ul>
+            </ul>
+        </nav>
+    </div>
+
+    <footer>
+        <strong>Feedback?</strong> <a href="mailto:simonhuang989@hotmail.com"> Send us a message here</a>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="vendor/prettify/prettify.js"></script>
+    <script>
+        prettyPrint();
+    </script>
+    <script type="text/javascript" src="js/sideNav.js"> </script>
+    <script type="text/javascript" src="js/responsiveNav.js"></script>
+</body>
+</html>

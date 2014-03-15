@@ -1,0 +1,119 @@
+/*CONTENT*/
+.container{
+    max-width: 900px;
+    padding:20px 0;
+    margin:auto;
+    position:relative;
+}
+
+.banner{
+    margin-top: 80px;
+    color: rgb(100,100,100);
+    font-size: 1.5em;
+    }
+    .banner h1{
+        font-size: 2em;
+        line-height: 1em;
+        color: rgb(50,50,50);
+        font-weight:500;
+    }
+    .banner div{
+        max-width:700px;
+    }
+
+main{
+    background: rgb(200,200,200);
+    border-radius: 30px;
+    padding:30px;
+    max-width:650px;
+    display: inline-block;
+    }
+    main details{
+            width:100%;
+            margin-bottom:10px;
+            outline:none;
+            cursor: pointer;
+            display:inline-block;
+
+        }
+        main summary{
+            outline:none;
+            margin-bottom: 20px;
+        }
+
+        main table{
+            width: 100%;
+            border-collapse:collapse;
+            font-size: 0.8em;
+            }
+            table tr td:first-child{
+                width:180px;
+            }
+            table td{
+                border:solid 1px grey;
+                padding:10px;
+            }
+            table td:hover{
+                background:rgb(230,230,230);
+            }
+    main article{
+        margin-bottom:60px;
+        text-align: left;
+        }
+        article .description{
+            font-size: 0.9em;
+        }
+        article pre{
+            text-align: left;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+#sideNav{
+    width: 150px;
+    height: auto;
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    margin-left:20px;
+    padding: 0;
+    }
+    #sideNav ul{
+        list-style: none;
+        padding-left: 0;
+        text-align: right;
+        }
+        #sideNav ul li{
+            display: block;
+            padding-left: 5px;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+        ul .inactive{
+            -webkit-transition: all 0.4s  ease;
+            -moz-transition: all 0.4s  ease;
+            -o-transition: all 0.4s  ease;
+            border-left: 3px solid transparent;
+        }
+        ul .inactive:hover{
+            -webkit-transition: all 0.4s  ease;
+            -moz-transition: all 0.4s  ease;
+            -o-transition: all 0.4s  ease;
+            border-left: 3px solid rgb(150,150,150);
+        }
+        ul .active{
+            border-left: 3px solid rgb(100,100,100);
+        }
+
+
+@media screen and (max-width: 800px) {
+    .banner{
+        margin-top:120px;
+    }
+    table tr td:first-child{
+        width:100px;
+    }
+    #sideNav{
+        display:none;
+    }
+}

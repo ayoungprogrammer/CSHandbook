@@ -1,0 +1,151 @@
+/*CONTENT*/
+.container{
+    max-width: 900px;
+    padding:20px 0;
+    margin:auto;
+    text-align: center;
+}
+.banner{
+    margin-top:40px;
+    }
+    .container .row{
+        -webkit-transition: all 0.3s  ease;
+        -moz-transition: all 0.3s  ease;
+        -o-transition: all 0.3s  ease;
+        opacity:0.6;
+        margin-top:60px;
+        width: 280px;
+        height: 280px;
+        display: inline-block;
+    }
+    .container .row:hover{
+        -webkit-transition: all 0.3s  ease;
+        -moz-transition: all 0.3s  ease;
+        -o-transition: all 0.3s  ease;
+        opacity:0.9;
+    }
+    .row span{
+        font-weight: bold;
+        font-size: 1.4em;
+        line-height: 4em;
+        display: block;
+    }
+    .row:nth-child(1){
+        background: url('imgon-website.png');
+    }
+    .row:nth-child(2){
+        background: url('imgon-guys.png');
+    }
+    .row:nth-child(3){
+        background: url('imgon-algorithms.png');
+    }
+    .row:nth-child(1):hover{
+        color:rgb(21,139,152);
+        background: url('imgon-website-hover.png');
+    }
+    .row:nth-child(2):hover{
+        color: rgb(255,42,42);
+        background: url('imgon-guys-hover.png');
+    }
+    .row:nth-child(3):hover{
+        color: rgb(0,180,0);
+        background: url('imgon-algorithms-hover.png');
+    }
+
+
+.info{
+    margin-top:20px;
+    text-align: left;
+    }
+    .wrapper{
+        background: rgb(200,200,200);
+        border-radius: 30px;
+        padding:30px;
+    }
+    .wrapper h3{
+        text-align:center;
+        color: rgb(100,100,100);
+        font-weight:normal;
+        font-size: 1.5em;
+    }
+    .wrapper p{
+        color: rgb(60,60,60);
+        }
+
+        .wrapper aside{
+            text-align: center;
+            margin-top: 50px;
+        }
+        aside a{
+            -webkit-transition: all 0.3s  ease;
+            -moz-transition: all 0.3s  ease;
+            -o-transition: all 0.3s  ease;
+            display:inline-block;
+            width: auto;
+            margin:0 30px;
+            padding: 20px;
+            background: rgb(150,150,150);
+            text-decoration: none;
+            color: rgb(60,60,60);
+            border-radius: 10px;
+        }
+        aside a:hover{
+            -webkit-transition: all 0.2s  ease;
+            -moz-transition: all 0.2s  ease;
+            -o-transition: all 0.2s  ease;
+            background: rgb(100,150,200);
+            color:white;
+        }
+
+
+@viewport{
+    zoom: 1.0;
+    width: device-width;
+}
+@-ms-viewport{
+    width: device-width;
+    zoom: 1.0;
+}
+
+@media screen and (max-width: 700px) {
+    .row{
+
+    }
+    .row:nth-child(1){
+        opacity: 1;
+        color:rgb(21,139,152);
+        background: url('imgon-website-hover.png');
+    }
+    .row:nth-child(2){
+        opacity: 1;
+        color: rgb(255,42,42);
+        background: url('imgon-guys-hover.png');
+    }
+    .row:nth-child(3){
+        opacity: 1;
+        color: rgb(0,180,0);
+        background: url('imgon-algorithms-hover.png');
+    }
+    aside a{
+        -webkit-transition: all 0.3s  ease;
+        -moz-transition: all 0.3s  ease;
+        -o-transition: all 0.3s  ease;
+        display:inline-block;
+        width: auto;
+        margin:0 5px;
+        text-decoration: none;
+        border-radius: 10px;
+        font-size:0.9em;
+        background: rgb(100,150,200);
+        color:white;
+    }
+    .info{
+        margin-top:20px;
+        text-align: left;
+        }
+        .wrapper{
+            background: rgb(200,200,200);
+            border-radius: 15px;
+            padding:15px;
+        }
+}
