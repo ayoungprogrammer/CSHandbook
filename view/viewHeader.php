@@ -23,39 +23,17 @@
         <a href="#"><h1 id="logo">{ CS ALGORITHMS }</h1></a>
         <nav>
             <ul>
-                <li><a href="template.html">Number Theory</a>
+                <li><a href="#">Donate</a></li>
+                <li><a href="#">Algorithms</a>
                     <div>
                         <ul>
-                            <li><a href="#">n<sup>2</sup> sorting</a></li>
-                            <li><a href="#">nlogn sorting</a></li>
-                            <li><a href="#">n sorting</a></li>
-                            <li><a href="#">nlogn sorting</a></li>
-                            <li><a href="#">ahahsfaewofhi</a></li>
-                        </ul>
-                    </div></li>
-                <li><a href="#">Sorting</a>
-                    <div>
-                        <ul>
-                            <li><a href="#">n<sup>2</sup> sorting</a></li>
-                            <li><a href="#">nlogn sorting</a></li>
-                            <li><a href="#">n sorting</a></li>
-                            <li><a href="#">nlogn sorting</a></li>
-                            <li><a href="#">ahahsfaewofhi</a></li>
+                            <li><a href="#">String</a></li>
+                            <li><a href="#">Graph Theory</a></li>
+                            <li><a href="#">Number sorting</a></li>
+                            <li><a href="#">Sorting</a></li>
                         </ul>
                     </div>
                 </li>
-                <li><a href="#">Graphs</a>
-                    <div>
-                        <ul>
-                            <li><a href="#">n<sup>2</sup> sorting</a></li>
-                            <li><a href="#">nlogn sorting</a></li>
-                            <li><a href="#">n sorting</a></li>
-                            <li><a href="#">nlogn sorting</a></li>
-                            <li><a href="#">ahahsfaewofhi</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li><a href="#">Strings</a></li>
             </ul>
             <a id="pull" href="#">MENU</a>
         </nav>

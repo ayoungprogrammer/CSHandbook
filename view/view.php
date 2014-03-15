@@ -9,10 +9,9 @@
 </div>
 <div class="container">
     <main>
-        <h2>{{category name}}</h2>
+        <h2>{{alg name}}</h2>
         <hr/>
         <article>
-            <h3>{{alg name}}</h3>
             <details>
                 <summary>Overview</summary>
                 <table>
