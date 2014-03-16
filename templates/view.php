@@ -1,9 +1,9 @@
-<?php //require('viewHeader.php'); ?>
-<?php //require('../nav.php'); ?>
+<?php require('viewHeader.php'); ?>
+<?php require('nav.php'); ?>
 
 
 
-<link type="text/css" rel="stylesheet" href="./vendor/prettify/desert.css"/>
+<link type="text/css" rel="stylesheet" href="/vendor/prettify/desert.css"/>
 
 <div class="banner container">
     <h1>Fundamentals</h1>
@@ -53,4 +53,4 @@ return gcd(q, r);
     </main>
 
 </div>
-<?php //require('viewFooter.php'); ?>
+<?php require('viewFooter.php'); ?>

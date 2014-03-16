@@ -3,7 +3,8 @@
         <a href="#"><h1 id="logo">{ CS ALGORITHMS }</h1></a>
         <nav>
             <ul>
-                <li><a href="template.html">Donate</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Donate</a></li>
                 <li><a href="#">Algorithms</a>
                     <div>
                         <ul>

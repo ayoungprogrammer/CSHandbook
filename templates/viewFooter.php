@@ -7,6 +7,21 @@
 <script>
     prettyPrint();
 </script>
+
+<script>
+    (function(){
+
+        var links = $('#navContainer>nav>ul>li');
+        var linksCount = links.length;
+
+        for (var i=0;i<linksCount;i++){
+            if (links.eq(i).children('a').html() == 'About'){
+                links.eq(i).addClass('active');
+            }
+        }
+
+    })();
+</script>
 <script type="text/javascript" src="../public_html/js/responsiveNav.js"></script>
 <script type="text/javascript" src="../public_html/js/nestedNav.js"></script>
 

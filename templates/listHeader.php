@@ -3,8 +3,8 @@
 <head>
     <title>[Title]</title>
 
-    <link type="text/css" rel="stylesheet" href="../public_html/stylesheets/template.css">
-    <link type="text/css" rel="stylesheet" href="../public_html/stylesheets/responsiveNav.css">
+    <link type="text/css" rel="stylesheet" href="../public_html/stylesheets/header_footer.css">
+    <link type="text/css" rel="stylesheet" href="../public_html/stylesheets/responsive_nav.css">
 
     <link type="text/css" rel="stylesheet" href="../public_html/stylesheets/list.css">
 
