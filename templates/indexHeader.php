@@ -3,10 +3,10 @@
 <head>
     <title>CS Algorithm Wiki</title>
 
-    <link type="text/css" rel="stylesheet" href="../public_html/stylesheets/template.css">
-    <link type="text/css" rel="stylesheet" href="../public_html/stylesheets/responsiveNav.css">
+    <link type="text/css" rel="stylesheet" href="./public_html/stylesheets/template.css">
+    <link type="text/css" rel="stylesheet" href="./public_html/stylesheets/responsiveNav.css">
 
-    <link type="text/css" rel="stylesheet" href="../public_html/stylesheets/home.css">
+    
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 

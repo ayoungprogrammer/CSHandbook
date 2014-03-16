@@ -1,0 +1,9 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteCond $1 !^(index\.php)
+RewriteRule ^(.*)$ index.php/$1 [L]
+
+#RewriteRule |\.(html|ico|gif|jpg|png)$ index.php

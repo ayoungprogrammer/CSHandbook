@@ -1,0 +1,165 @@
+[
+    {
+        "name": "dflydev/markdown",
+        "version": "v1.0.2",
+        "version_normalized": "1.0.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/dflydev/dflydev-markdown.git",
+            "reference": "2a1b3516bd5af6e722b40ae9e1fccd03e1772060"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/dflydev/dflydev-markdown/zipball/2a1b3516bd5af6e722b40ae9e1fccd03e1772060",
+            "reference": "2a1b3516bd5af6e722b40ae9e1fccd03e1772060",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3"
+        },
+        "time": "2012-01-16 03:36:37",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "dflydev\\markdown": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "New BSD License"
+        ],
+        "authors": [
+            {
+                "name": "Dragonfly Development Inc.",
+                "email": "info@dflydev.com",
+                "homepage": "http://dflydev.com"
+            },
+            {
+                "name": "Beau Simensen",
+                "email": "beau@dflydev.com",
+                "homepage": "http://beausimensen.com"
+            },
+            {
+                "name": "Michel Fortin",
+                "homepage": "http://michelf.com"
+            },
+            {
+                "name": "John Gruber",
+                "homepage": "http://daringfireball.net"
+            }
+        ],
+        "description": "PHP Markdown & Extra",
+        "homepage": "http://github.com/dflydev/dflydev-markdown",
+        "keywords": [
+            "markdown"
+        ]
+    },
+    {
+        "name": "dispatch/dispatch",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/noodlehaus/dispatch.git",
+            "reference": "6511e58736ba1c6677ebb6afe532318eac756840"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/noodlehaus/dispatch/zipball/6511e58736ba1c6677ebb6afe532318eac756840",
+            "reference": "6511e58736ba1c6677ebb6afe532318eac756840",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">= 5.4.0"
+        },
+        "suggest": {
+            "dispatch/dispatch-extras": "Encryption, caching and more, for dispatch",
+            "dispatch/dispatch-mustache": "mustache template support within dispatch",
+            "giggleboxstudios/dispatch-handlebars": "handlebars template support within dispatch"
+        },
+        "time": "2014-03-01 01:30:13",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "4.x-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "files": [
+                "src/dispatch.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Jesus A. Domingo",
+                "homepage": "http://noodlehaus.github.io/",
+                "role": "Developer"
+            },
+            {
+                "name": "Kafene",
+                "homepage": "https://github.com/kafene",
+                "role": "Contributor"
+            },
+            {
+                "name": "Martin Angelov",
+                "homepage": "https://github.com/martinaglv",
+                "role": "Contributor"
+            },
+            {
+                "name": "Lars",
+                "homepage": "https://github.com/larsbo",
+                "role": "Developer"
+            },
+            {
+                "name": "4d47",
+                "homepage": "https://github.com/4d47",
+                "role": "Contributor"
+            },
+            {
+                "name": "Bastian Widmer",
+                "homepage": "https://github.com/dasrecht",
+                "role": "Contributor"
+            },
+            {
+                "name": "Lloyd Zhou",
+                "homepage": "https://github.com/lloydzhou",
+                "role": "Contributor"
+            },
+            {
+                "name": "Darkalemanbr",
+                "homepage": "https://github.com/darkalemanbr",
+                "role": "Contributor"
+            },
+            {
+                "name": "Amin By",
+                "homepage": "https://github.com/xielingwang",
+                "role": "Contributor"
+            },
+            {
+                "name": "Ross Masters",
+                "homepage": "https://github.com/rmasters",
+                "role": "Contributor"
+            },
+            {
+                "name": "scan",
+                "homepage": "https://github.com/scan",
+                "role": "Contributor"
+            }
+        ],
+        "description": "a microframework/front-controller",
+        "homepage": "http://noodlehaus.github.io/dispatch/",
+        "keywords": [
+            "framework",
+            "micro",
+            "microframework",
+            "microphp",
+            "router"
+        ]
+    }
+]

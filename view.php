@@ -1,9 +1,6 @@
-<?php //require('viewHeader.php'); ?>
-<?php //require('../nav.php'); ?>
+<?php require('viewHeader.php'); ?>
 
-
-
-<link type="text/css" rel="stylesheet" href="./vendor/prettify/desert.css"/>
+<link type="text/css" rel="stylesheet" href="./public_html/stylesheets/view.css">
 
 <div class="banner container">
     <h1>Fundamentals</h1>
@@ -14,9 +11,10 @@
 </div>
 <div class="container">
     <main>
-        <h2>{{alg name}}</h2>
+        <h2>{{category name}}</h2>
         <hr/>
         <article>
+            <h3>{{alg name}}</h3>
             <details>
                 <summary>Overview</summary>
                 <table>
@@ -52,5 +50,13 @@ return gcd(q, r);
 
     </main>
 
+
+
+    <nav id="sideNav">
+        <ul>
+        </ul>
+    </nav>
+
+
 </div>
-<?php //require('viewFooter.php'); ?>
+<?php require('viewFooter.php'); ?>

@@ -1,5 +1,7 @@
-<?php require('indexHeader.php'); ?>
-<?php require('nav.php'); ?>
+<?php //require('indexHeader.php'); ?>
+<?php //require('nav.php'); ?>
+
+<link type="text/css" rel="stylesheet" href="./public_html/stylesheets/home.css">
 
 <section class="banner container">
     <div class="row">
@@ -42,4 +44,4 @@
     </article>
 </section>
 
-<?php require('indexFooter.php'); ?>
+<?php //require('indexFooter.php'); ?>
