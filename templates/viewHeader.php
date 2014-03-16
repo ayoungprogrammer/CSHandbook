@@ -3,10 +3,10 @@
 <head>
     <title>[Title]</title>
 
-    <link type="text/css" rel="stylesheet" href="../stylesheets/template.css">
-    <link type="text/css" rel="stylesheet" href="../stylesheets/responsiveNav.css">
+    <link type="text/css" rel="stylesheet" href="../public_html/stylesheets/template.css">
+    <link type="text/css" rel="stylesheet" href="../public_html/stylesheets/responsiveNav.css">
 
-    <link type="text/css" rel="stylesheet" href="../stylesheets/view.css">
+    <link type="text/css" rel="stylesheet" href="../public_html/stylesheets/view.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 

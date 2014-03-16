@@ -4,9 +4,9 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
-<script type="text/javascript" src="../js/sideNav.js"> </script>
-<script type="text/javascript" src="../js/responsiveNav.js"></script>
-<script type="text/javascript" src="../js/nestedNav.js"></script>
+<script type="text/javascript" src="../public_html/js/sideNav.js"> </script>
+<script type="text/javascript" src="../public_html/js/responsiveNav.js"></script>
+<script type="text/javascript" src="../public_html/js/nestedNav.js"></script>
 
 </body>
 </html>
