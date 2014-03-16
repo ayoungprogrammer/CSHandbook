@@ -15,24 +15,3 @@
 </head>
 
 <body>
-<header>
-    <div id="navContainer">
-        <a href="#"><h1 id="logo">{ CS ALGORITHMS }</h1></a>
-        <nav>
-            <ul>
-                <li><a href="template.html">Donate</a></li>
-                <li><a href="#">Algorithms</a>
-                    <div>
-                        <ul>
-                            <li><a href="#">String</a></li>
-                            <li><a href="#">Graph Theory</a></li>
-                            <li><a href="#">Number sorting</a></li>
-                            <li><a href="#">Sorting</a></li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-            <a id="pull" href="#">MENU</a>
-        </nav>
-    </div>
-</header>

@@ -1,4 +1,5 @@
 <?php require ('indexHeader.php'); ?>
+<?php require ('nav.php'); ?>
 
 <section class="banner container">
     <div class="row">

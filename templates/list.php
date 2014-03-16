@@ -1,4 +1,5 @@
 <?php require('listHeader.php'); ?>
+<?php require('../nav.php'); ?>
 
 <div class="banner container">
     <h1>Fundamentals</h1>
