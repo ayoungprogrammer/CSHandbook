@@ -19,7 +19,7 @@
         },
         "time": "2012-01-16 03:36:37",
         "type": "library",
-        "installation-source": "dist",
+        "installation-source": "source",
         "autoload": {
             "psr-0": {
                 "dflydev\\markdown": "src"
