@@ -3,9 +3,9 @@
 <head>
     <title>CS Algorithm Wiki</title>
 
-    <link type="text/css" rel="stylesheet" href="../public_html/stylesheets/header_footer.css">
-    <link type="text/css" rel="stylesheet" href="../public_html/stylesheets/responsive_nav.css">
-    <link type="text/css" rel="stylesheet" href="../public_html/stylesheets/about.css">
+    <link type="text/css" rel="stylesheet" href="./public_html/stylesheets/header_footer.css">
+    <link type="text/css" rel="stylesheet" href="./public_html/stylesheets/responsive_nav.css">
+    <link type="text/css" rel="stylesheet" href="./public_html/stylesheets/about.css">
 
     
 

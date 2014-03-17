@@ -1,8 +1,6 @@
 <?php require('indexHeader.php'); ?>
 <?php require('nav.php'); ?>
 
-<link type="text/css" rel="stylesheet" href="./public_html/stylesheets/home.css">
-
 <section class="banner container">
     <div class="row">
         <span>1 website</span>
