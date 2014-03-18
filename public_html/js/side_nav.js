@@ -22,18 +22,16 @@
     var subHeadingIndex=0;
 
     for (var i=0; i<headings.length; i++){
-        if (i==0){
-            $('<li></li>', {
-                text: algs[i],
-                class: 'active'
-            }).appendTo('#sideNav>ul');
-        }
-        else{
-            $('<li></li>', {
-                text: algs[i],
-                class: 'inactive'
-            }).appendTo('#sideNav>ul');
-        }
+
+        $('<li></li>').appendTo('#sideNav>ul');
+        $('<h5></h5>',{
+            text: algs[i],
+            class: 'inactive'
+        }).appendTo('#sideNav>ul>li:last-child');
+
+
+
+
         $('<ul></ul>').appendTo('#sideNav>ul>li:last-child');
         while (subAlgsHeight[subHeadingIndex]<algsHeight[i+1] && subHeadingIndex<subHeadings.length){
             $('<li></li>', {
@@ -47,12 +45,50 @@
     //SCROLL ACTIVITY
     var sideBar = $('#sideNav');
     var initialPos = sideBar.offset().top;
-    var currentActive = -1;
-    var subCurrentActive = -1;
-    $('#sideNav>ul>li:first-child').addClass("active");
+    var currentActive = 0;
+
 
     var listItems = $('#sideNav>ul>li');
     var subListItems =  $('#sideNav>ul>li>ul>li');
+
+    var navItems = new Array();
+    var itemsHeight = new Array();
+
+    var listIndex = 0,
+        subListIndex = 0,
+        listLength = algs.length,
+        subListLength = subAlgs.length;
+
+
+    while (!(listIndex == listLength && subListIndex == subListLength)){
+        if (listIndex == listLength){
+            navItems.push(subListItems.eq(subListIndex));
+            itemsHeight.push(subAlgsHeight[subListIndex]);
+            subListIndex++;
+        }
+        else if (subListIndex == subListLength){
+            navItems.push(listItems.eq(listIndex).children('h5'));
+            itemsHeight.push(algsHeight[listIndex]);
+            listIndex++;
+        }
+        else{
+            if (subAlgsHeight[subListIndex] > algsHeight[listIndex]){
+                navItems.push(listItems.eq(listIndex).children('h5'));
+                itemsHeight.push(algsHeight[listIndex]);
+                listIndex++;
+            }
+            else{
+                navItems.push(subListItems.eq(subListIndex));
+                itemsHeight.push(subAlgsHeight[subListIndex]);
+                subListIndex++;
+            }
+        }
+    }
+
+    $('#sideNav>ul>li:first-child>h5').addClass("active");
+    $('#sideNav>ul>li:first-child').addClass("current");
+
+
     $(window).scroll(function(){
         var currentScroll = $(window).scrollTop() + 100;
         if (currentScroll >= initialPos){
@@ -67,49 +103,44 @@
                 top: '20px'
             });
         }
+//        for (var i=0;i<navItems.length;i++){
+//            console.log(navItems[i]);
+//            console.log(itemsHeight[i]);
+//        }
 
-        if (currentScroll >= algsHeight[currentActive+1]){
-            listItems.eq(currentActive).removeClass();
-            listItems.eq(currentActive).addClass('inactive');
+        if (currentScroll >= itemsHeight[currentActive+1]){
+//            console.log('wtf');
+            navItems[currentActive].removeClass();
+            navItems[currentActive].addClass('inactive');
+            navItems[currentActive].parents('li').removeClass();
             currentActive++;
-            listItems.eq(currentActive).removeClass();
-            listItems.eq(currentActive).addClass("active");
-        }
-        else if (currentScroll <= (algsHeight[currentActive]-200)
-            && currentActive > 0){
-            listItems.eq(currentActive).removeClass();
-            listItems.eq(currentActive).addClass('inactive');
-            currentActive--;
-            listItems.eq(currentActive).removeClass();
-            listItems.eq(currentActive).addClass("active");
-        }
+            navItems[currentActive].removeClass();
+            navItems[currentActive].addClass('active');
+            navItems[currentActive].parents('li').addClass('current');
 
-        if (currentScroll >= subAlgsHeight[subCurrentActive+1]){
-            subListItems.eq(subCurrentActive).removeClass();
-            subListItems.eq(subCurrentActive).addClass('inactive');
-            subCurrentActive++;
-            subListItems.eq(subCurrentActive).removeClass();
-            subListItems.eq(subCurrentActive).addClass("active");
         }
-        else if (currentScroll <= (algsHeight[subCurrentActive]-200)
-            && subCurrentActive > 0){
-            subListItems.eq(subCurrentActive).removeClass();
-            subListItems.eq(subCurrentActive).addClass('inactive');
-            subCurrentActive--;
-            subListItems.eq(subCurrentActive).removeClass();
-            subListItems.eq(subCurrentActive).addClass("active");
+        else if (currentScroll <= (itemsHeight[currentActive]-100)
+            && currentActive > 0){
+            navItems[currentActive].removeClass();
+            navItems[currentActive].addClass('inactive');
+            navItems[currentActive].parents('li').removeClass();
+            currentActive--;
+            navItems[currentActive].removeClass();
+            navItems[currentActive].addClass('active');
+            navItems[currentActive].parents('li').addClass('current');
         }
 
 
     })
-    listItems.click(function() {
+    listItems.children('h5').click(function() {
         $('html, body').animate({
-            scrollTop: algsHeight[$(this).index()]-90
+            scrollTop: algsHeight[$(this).parent().index()]-90
         }, 1000);
     });
     subListItems.click(function() {
+        console.log($(this).index());
         $('html, body').animate({
-            scrollTop: algsHeight[$(this).index()]-90
+            scrollTop: subAlgsHeight[$(this).index('#sideNav>ul>li>ul>li')]-90
         }, 1000);
     });
 })();

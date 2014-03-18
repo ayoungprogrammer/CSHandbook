@@ -128,7 +128,7 @@ Maps (also called dictionaries) are a data structure that store pairs of key-val
 
 [====================================================================]
 
-###[[Hash Map|Hash Map]]
+###[[Hash Map]]
 
 | Operation || Membership || Insertion || Deletion
 |-

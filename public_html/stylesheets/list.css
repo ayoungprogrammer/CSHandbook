@@ -52,11 +52,24 @@ main{
             padding-left: 5px;
             margin: 10px 0;
             cursor: pointer;
-
             color:rgb(100,100,100);
         }
-        #sideNav>ul>li{
-            font-weight: bold;
+        #sideNav>ul>li ul{
+            -webkit-transition: all 0.4s  ease;
+            -moz-transition: all 0.4s  ease;
+            -o-transition: all 0.4s  ease;
+            max-height:0;
+            overflow: hidden;
+        }
+        #sideNav>ul>li.current ul{
+            -webkit-transition: all 0.4s  ease;
+            -moz-transition: all 0.4s  ease;
+            -o-transition: all 0.4s  ease;
+            max-height: 1000px;
+        }
+        #sideNav h5{
+            font-size: 1em;
+            margin: 0;
         }
         #sideNav>ul>li>ul>li{
             font-weight: normal;
