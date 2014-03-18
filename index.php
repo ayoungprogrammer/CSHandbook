@@ -6,9 +6,10 @@ use \Michelf\MarkdownExtra;
 
 
 function parse($str){
-
+	//[======]   =>     <br><hr><br>
 	$str = preg_replace('/\[\=+\]/',"<br><hr><br>",$str);
-	//$str = preg_replace('/\[\[3\]\]/')
+
+	$str = preg_replace('/\[\[[A-Za-z\_\s]+\]\]/','$1',$str);
 
 	return MarkdownExtra::defaultTransform($str);
 }
