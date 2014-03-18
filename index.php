@@ -19,7 +19,7 @@ on('GET','/', function () {
 
 
 on('GET','/:page',function($page){
-	render("view",['content' => 'Test'],false);
+	render("view",['title'=>$page,'body' => 'Test'],false);
 });
 
 dispatch();
