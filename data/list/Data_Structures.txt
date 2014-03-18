@@ -1,0 +1,187 @@
+Data structures are a way of storing data such that it can be accessed or changed in a efficient manner.
+
+
+
+
+## Arrays
+
+An array is the most basic data structure that holds n elements of the same type in a block of data. The fact that it is in one block and the same type is important because it allows accessing the ith element in constant time. For example if an array is at location 0x4000 that contains 10 integers (4 bytes), then getting the ith element is simple as reading the integer at 0x4000 + (4 * i). However if you want to insert an element into an array at the ith position you will need to move everything past the ith element by 1 and similarly with deletion.
+
+Arrays can be multidimensional meaning you can have an array of array of objects. 
+
+ Operation | Get ith | Insertion | Deletion 
+-----------|---------|-----------|--------
+Time Complexity | O(1) | O(n) | O(n)
+
+
+
+[====================================================================]
+
+
+
+
+### Linked List 
+
+A linked list is similar to an array but it is different such that it is not stored in one block of data. Each element of the linked list also contains a point to the next element thus forming a chain of pointers. Since the elements aren't in a block, accessing the ith element must be done by traversing the entire linked list by following each pointer to the next. However, this also allows insertion to be done more quickly by simply changing the point of the previous element and setting to the pointer of the current element to the next element. Deletion is also done by taking the previous element and changing its pointer to two elements ahead. 
+
+A doubly linked list is a linked list that has pointers going backwards as well as forwards.
+
+
+| Operation | Get ith | Insertion* | Deletion*
+|-----------|---------|------------|---------
+| Time Complexity | O(n) | O(1) | O(1)
+
+*We assume we are already at the element when inserting. If not, then to get the element we would have to iterate through the linked list until we are at i
+
+[====================================================================]
+
+
+### Queue
+
+A queue is an array but with the property that it can only have removal from the front and insertion from the back (FIFI, first in first out). Removal from the front is called "pop" or "dequeue". Insertion from the back is called "push" or "enqueue". As the name implies queues are the same as those found in every day life, for example a queue for a bus stop. The first person in line for the bus will get on the bus first and the last person in line will get on the bus last.
+
+Queues are often used for buffer systems, for example a text message service. The messages that arrive at the server first are relayed first and the messages that arrive later are relayed later.
+
+Queues are usually implemented as a linked list because its memory size changes as more elements and pushed and popped.
+
+
+
+| Operation || Pop || Push
+|-
+| Time Complexity || O(1) || O(1)
+
+
+[====================================================================]
+
+### Stack
+
+A stack is an array with the property that it can only have removal and insertion from the back (FILO, first in last out). Remove from the back is called "pop" and insertion from the back is called "push". Imagine a stack of plates at a buffet, the plates are taken from the top and are also replaced from the top. 
+
+Stacks are used for function calls on the memory stack. Whenever a function is called, it is placed on the memory stack with its variables and when it is returning a value, it is popped off the stack.
+
+
+
+| Operation | Pop | Push
+|-----------|-----|-----
+| Time Complexity | O(1) | O(1)
+
+
+[====================================================================]
+
+## Sets
+
+Sets are data structures that stores values and is used for testing if an element already exists.  Sets generally have three operations: insertion, deletion and membership test. '''Membership''' is when is an element exists within the set. Insertion places an element into the set and deletion removes an element from the set.
+
+
+[====================================================================]
+
+### Hash Sets
+
+Hash sets generate "hashes" from elements and use equality checks for "hashes" before checking for equality between elements. Usually the hashes will be a number and be different between most elements. A hash set uses "buckets" which is a linked list of elements which have the same hash as the other elements in the "bucket". To check if an element is in the hash set, the hash of the element is computed and the hash set iterates through the bucket with the same hash to see if there is an element in the linked list that is equal. To add an element, we take the hash of it and put it in the bucket with the corresponding hash. When two element have the same hash, a "collision" occurs and when there are too many collisions then the hash map becomes inefficient. An efficient hash map will reallocate itself with twice the amount of buckets if there are too many collisions.
+
+For example, we have the hash set comprising of the numbers: 3523, 3242342, 815, 538, 123.  Our hash algorithm is (x mod 10) so our buckets will look like:
+
+
+Bucket | List
+-------|-----
+     1 |     
+ 2 | 3242342
+ 3 | 3523, 123
+ 4 |
+ 5 | 815
+ 6 |
+ 7 |
+8 | 538
+9 |
+
+If we wanted to check if 7239 was in the hash set, we would get the hash (7238 mod 10 = 8) and then we would check elements in bucket 8 for equality. Since 528 is not equal to 7238 and there are no more elements in bucket 8, then 7238 is not in the hash set.
+
+
+| Operation || Membership || Insertion || Deletion
+|-
+| Time Complexity || O(1) || O(1) || O(1)
+
+
+The advantage of hash map is that it is very fast but a disadvantage is that it is not sorted unlike a tree set.
+
+[====================================================================]
+
+
+###[[Tree Sets]]
+
+A tree set is a set which stores the values in a [[Binary Tree|binary tree]]. To store elements in a tree set, they must be able to be sorted by a property. To insert an element, it is added to the binary tree. To delete an element, it is removed from the binary tree. To check for membership, we look for the element in the binary tree.
+
+The advantage to this is that it is sorted but this is at the expense of speed.
+
+
+| Operation || Membership || Insertion || Deletion
+|-
+| Time Complexity || O(log n) || O(log n) || O(log n)
+
+
+[====================================================================]
+
+## Maps
+
+Maps (also called dictionaries) are a data structure that store pairs of key-values and are used to retrieve values from the keys. For example an English dictionary is a map, the keys are the words and the values are the definitions. If you were to look up the word "map" you would use the key (the word "map" in the dictionary) to look up the value (definition of "map"). Maps use sets to store the keys which are paired with the values.
+
+
+[====================================================================]
+
+###[[Hash Map|Hash Map]]
+
+| Operation || Membership || Insertion || Deletion
+|-
+| Time Complexity || O(1) || O(1) || O(1)
+
+
+
+[====================================================================]
+
+### [[Tree Map]]
+
+| Operation || Membership || Insertion || Deletion
+|-
+| Time Complexity || O(log n) || O(log n) || O(log n)
+
+
+[====================================================================]
+
+## Trees
+
+Trees are data structures that follow a hierarchy, each element has a parent and each element has children. The element at the top of the tree with no parents is called a root. The element at the bottom of the tree with no children is called a leaf. 
+
+
+[====================================================================]
+
+### [[Binary Tree]]
+
+A binary tree is a tree where each node can have at max 2 children
+
+
+[====================================================================]
+
+### [[Heap]]
+
+Heaps are trees which have the property that the a node must either be greater than all the elements in its left and right subtrees (a max heap) or less than all the elements in its left and right subtrees (a min heap). Heaps are also known as a priority queue.
+
+
+
+| Operation       | Insert   | Remove   |
+| --------------- | -------- | -------- |
+| Time Complexity | O(log n) | O(log n) |
+
+
+[====================================================================]
+
+### [[Trie]]
+
+A trie is tree which stores strings by their prefixes. A trie can replace a set for storing strings as it is faster than a hash set and it can the stored strings sorted but it takes more memory.
+
+Let m be the length of the string.
+
+
+| Operation || Membership || Insertion || Deletion 
+|-
+| Time Complexity || O(m) || O(m) || O(m)
+

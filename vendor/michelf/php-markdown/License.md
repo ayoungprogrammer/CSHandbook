@@ -1,10 +1,6 @@
-PHP Markdown & Extra
-Copyright (c) 2011, Dragonfly Development Inc 
-All rights reserved. 
-
-Based on PHP Markdown & Extra  
-Copyright (c) 2004-2009 Michel Fortin  
-<http://michelf.com/>  
+PHP Markdown Lib  
+Copyright (c) 2004-2013 Michel Fortin  
+<http://michelf.ca/>  
 All rights reserved.
 
 Based on Markdown  

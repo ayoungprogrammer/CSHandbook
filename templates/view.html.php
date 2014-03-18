@@ -20,7 +20,7 @@
             <a href="#">Breadcrumb1</a>
             This page
         </p>
-        <?php echo $body?>
+        <?php echo $body ?>
 
 
         </article>

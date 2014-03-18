@@ -2,6 +2,18 @@
 // the markdown parser and RSS feed builder.
 require 'vendor/autoload.php';
 
+use \Michelf\MarkdownExtra;
+
+
+function parse($str){
+
+	$str = preg_replace('/\[\=+\]/',"<br><hr><br>",$str);
+	//$str = preg_replace('/\[\[3\]\]/')
+
+	return MarkdownExtra::defaultTransform($str);
+}
+
+
 // Load the configuration file
 //config('source', 'local_config.ini');
 config([
@@ -18,11 +30,29 @@ on('GET','/', function () {
 });
 
 
-on('GET','/:page',function($page){
-	render("view",['title'=>$page,'body' => 'Test'],false);
+on('GET','/view/:page',function($page){
+
+	$content = file_get_contents('data/view/'.$page.'.txt');
+
+	$content = parse($content);
+	
+	render("view",['title'=>$page,'body' => $content],false);
+});
+
+on('GET','/list/:page',function($page){
+
+
+	$content = file_get_contents('data/list/'.$page.'.txt');
+	$content = parse($content);
+
+	render("list",['title'=>$page,'body'=>$content],false);
 });
 
 dispatch();
 
+
+
 ?>
+
+
 
