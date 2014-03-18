@@ -19,10 +19,10 @@
 
 
 
-    <nav id="sideNav">
+    <aside id="sideNav">
         <ul>
         </ul>
-    </nav>
+    </aside>
 
 
 </div>
