@@ -3,9 +3,13 @@ Data structures are a way of storing data such that it can be accessed or change
 
 
 
-## Arrays
+## [[Arrays]]
 
-An array is the most basic data structure that holds n elements of the same type in a block of data. The fact that it is in one block and the same type is important because it allows accessing the ith element in constant time. For example if an array is at location 0x4000 that contains 10 integers (4 bytes), then getting the ith element is simple as reading the integer at 0x4000 + (4 * i). However if you want to insert an element into an array at the ith position you will need to move everything past the ith element by 1 and similarly with deletion.
+An array is the most basic data structure that holds a number of fixed elements of the same type in a block of data. The fact that it is in one block and the same type is important because it allows accessing the ith element in constant time. For example if an array is at location 0x4000 that contains 10 integers (4 bytes), then getting the ith element is simple as reading the integer at 0x4000 + (4 * i). 
+
+However if you want to insert an element into an array at the ith position you will need to move everything past the ith element by 1 and similarly with deletion.
+
+Since arrays are fixed length, if you wanted to add more elements when your array is already full, you will need to allocate a new array of larger size.
 
 Arrays can be multidimensional meaning you can have an array of array of objects. 
 
@@ -20,7 +24,7 @@ Time Complexity | O(1) | O(n) | O(n)
 
 
 
-### Linked List
+### [[Linked List]] 
 
 A linked list is similar to an array but it is different such that it is not stored in one block of data. Each element of the linked list also contains a point to the next element thus forming a chain of pointers. Since the elements aren't in a block, accessing the ith element must be done by traversing the entire linked list by following each pointer to the next. However, this also allows insertion to be done more quickly by simply changing the point of the previous element and setting to the pointer of the current element to the next element. Deletion is also done by taking the previous element and changing its pointer to two elements ahead. 
 
@@ -36,7 +40,7 @@ A doubly linked list is a linked list that has pointers going backwards as well 
 [====================================================================]
 
 
-### Queue
+### [[Queue]]
 
 A queue is an array but with the property that it can only have removal from the front and insertion from the back (FIFI, first in first out). Removal from the front is called "pop" or "dequeue". Insertion from the back is called "push" or "enqueue". As the name implies queues are the same as those found in every day life, for example a queue for a bus stop. The first person in line for the bus will get on the bus first and the last person in line will get on the bus last.
 
@@ -53,7 +57,7 @@ Queues are usually implemented as a linked list because its memory size changes 
 
 [====================================================================]
 
-### Stack
+### [[Stack]]
 
 A stack is an array with the property that it can only have removal and insertion from the back (FILO, first in last out). Remove from the back is called "pop" and insertion from the back is called "push". Imagine a stack of plates at a buffet, the plates are taken from the top and are also replaced from the top. 
 
@@ -68,14 +72,14 @@ Stacks are used for function calls on the memory stack. Whenever a function is c
 
 [====================================================================]
 
-## Sets
+## [[Sets]]
 
 Sets are data structures that stores values and is used for testing if an element already exists.  Sets generally have three operations: insertion, deletion and membership test. '''Membership''' is when is an element exists within the set. Insertion places an element into the set and deletion removes an element from the set.
 
 
 [====================================================================]
 
-### Hash Sets
+### [[Hash Sets]]
 
 Hash sets generate "hashes" from elements and use equality checks for "hashes" before checking for equality between elements. Usually the hashes will be a number and be different between most elements. A hash set uses "buckets" which is a linked list of elements which have the same hash as the other elements in the "bucket". To check if an element is in the hash set, the hash of the element is computed and the hash set iterates through the bucket with the same hash to see if there is an element in the linked list that is equal. To add an element, we take the hash of it and put it in the bucket with the corresponding hash. When two element have the same hash, a "collision" occurs and when there are too many collisions then the hash map becomes inefficient. An efficient hash map will reallocate itself with twice the amount of buckets if there are too many collisions.
 
@@ -121,7 +125,7 @@ The advantage to this is that it is sorted but this is at the expense of speed.
 
 [====================================================================]
 
-## Maps
+## [[Maps]]
 
 Maps (also called dictionaries) are a data structure that store pairs of key-values and are used to retrieve values from the keys. For example an English dictionary is a map, the keys are the words and the values are the definitions. If you were to look up the word "map" you would use the key (the word "map" in the dictionary) to look up the value (definition of "map"). Maps use sets to store the keys which are paired with the values.
 
@@ -147,7 +151,7 @@ Maps (also called dictionaries) are a data structure that store pairs of key-val
 
 [====================================================================]
 
-## Trees
+## [[Trees]]
 
 Trees are data structures that follow a hierarchy, each element has a parent and each element has children. The element at the top of the tree with no parents is called a root. The element at the bottom of the tree with no children is called a leaf. 
 

@@ -1,0 +1,12 @@
+##Primes
+
+Primes are an important part of encryption for modern cryptography. Many transactions use RSA which rely on prime numbers. 
+
+###Sieve
+
+
+### Primality Test
+
+## GCD
+
+Greatest common denominator 
