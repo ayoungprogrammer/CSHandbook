@@ -4,16 +4,13 @@
 <div class="banner container">
     <h1><?php echo $title?></h1>
     <div>
-        These are algorithms that every programmer should know.
-        Whether you're an beginner or expert. No Excuses.
+      [<a href="./edit/<?php echo $page?>">edit</a>]
     </div>
 </div>
 <div class="container">
     <main>
 
         <?php echo $body ?>
-
-        
 
     </main>
 

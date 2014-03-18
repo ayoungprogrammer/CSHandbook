@@ -9,7 +9,7 @@ function parse($str){
 	//[======]   =>     <br><hr><br>
 	$str = preg_replace('/\[\=+\]/',"<br><hr><br>",$str);
 
-	$str = preg_replace('/\[\[[A-Za-z\_\s]+\]\]/','$1',$str);
+	$str = preg_replace('/\[\[([A-Za-z\_\s\']+)\]\]/','<a href="../view/$1">$1</a>',$str);
 
 	return MarkdownExtra::defaultTransform($str);
 }
@@ -36,20 +36,50 @@ on('GET','/view/:page',function($page){
 	$content = file_get_contents('data/view/'.$page.'.txt');
 
 	$content = parse($content);
+
+	$title = preg_replace('\_',' ',$page);
 	
-	render("view",['title'=>$page,'body' => $content],false);
+	render("view",['title'=>$title,'body' => $content],false);
 });
 
-on('GET','/list/:page',function($page){
+on('GET','/:page',function($page){
 
+	$path  = 'data/'.$page.'.txt';
+	$title = preg_replace('/\_/',' ',$page);
 
-	$content = file_get_contents('data/list/'.$page.'.txt');
-	$content = parse($content);
+	if (file_exists($path)){
+		$content = file_get_contents($path);
+		$content = parse($content);
 
-	render("list",['title'=>$page,'body'=>$content],false);
+		render("list",['page'=>$page,'title'=>$title,'body'=>$content],false);
+	}
+	else {
+		redirect('./edit/'.$page);
+	}
+	
 });
 
-dispatch();
+on('GET','/edit/:page',function($page){
+	$path  = 'data/'.$page.'.txt';
+	$title = preg_replace('/\_/',' ',$page);
+
+	if (file_exists($path)){
+		$content = file_get_contents($path);
+		
+		render("edit",['page'=>$page,'title'=>$title,'body'=>$content],false);
+	}
+	else {
+		render("edit",['page'=>$page,'title'=>$title,'body'=>''],false);
+	}
+	});
+	
+	on('POST','/save/:page',function($page){
+		$path  = 'data/'.$page.'.txt';
+		file_put_contents($path, params('content'));
+		redirect('../'.$page);
+	});
+	
+	dispatch();
 
 
 
