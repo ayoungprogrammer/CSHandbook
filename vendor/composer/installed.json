@@ -131,7 +131,7 @@
                 "dev-lib": "1.4.x-dev"
             }
         },
-        "installation-source": "dist",
+        "installation-source": "source",
         "autoload": {
             "psr-0": {
                 "Michelf": ""
