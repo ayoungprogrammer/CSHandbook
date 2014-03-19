@@ -9,7 +9,9 @@ function parse($str){
 	//[======]   =>     <br><hr><br>
 	$str = preg_replace('/\[\=+\]/',"<br><hr><br>",$str);
 
-	$str = preg_replace('/\[\[([A-Za-z\_\s\']+)\]\]/','<a href="../view/$1">$1</a>',$str);
+	$str = preg_replace('/\[\[([A-Za-z\_\s\']+)\]\]/','<a href="./$1">$1</a>',$str);
+
+	$str = preg_replace('/\<{4}([\s\S]*)\>{4}/','<pre class="prettyprint linenums">$1</pre>',$str);
 
 	return MarkdownExtra::defaultTransform($str);
 }
@@ -23,61 +25,53 @@ config([
     ]);
 
 
-// The front page of the blog.
-// This will match the root url
-on('GET','/', function () {
-    //echo "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-    render("main",[],false);
-});
-
-
-on('GET','/view/:page',function($page){
-
-	$content = file_get_contents('data/view/'.$page.'.txt');
-
-	$content = parse($content);
-
-	$title = preg_replace('\_',' ',$page);
-	
-	render("view",['title'=>$title,'body' => $content],false);
-});
-
-on('GET','/:page',function($page){
-
-	$path  = 'data/'.$page.'.txt';
-	$title = preg_replace('/\_/',' ',$page);
-
-	if (file_exists($path)){
-		$content = file_get_contents($path);
-		$content = parse($content);
-
-		render("list",['page'=>$page,'title'=>$title,'body'=>$content],false);
-	}
-	else {
-		redirect('./edit/'.$page);
-	}
-	
-});
-
-on('GET','/edit/:page',function($page){
-	$path  = 'data/'.$page.'.txt';
-	$title = preg_replace('/\_/',' ',$page);
-
-	if (file_exists($path)){
-		$content = file_get_contents($path);
-		
-		render("edit",['page'=>$page,'title'=>$title,'body'=>$content],false);
-	}
-	else {
-		render("edit",['page'=>$page,'title'=>$title,'body'=>''],false);
-	}
+	// The front page of the blog.
+	// This will match the root url
+	on('GET','/', function () {
+	    //echo "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+	    render("main",[],false);
 	});
+
+
+	on('GET','/:page&=edit',function($page){
+		$path  = 'data/'.$page.'.txt';
+		$title = preg_replace('/\_/',' ',$page);
+
+		if (file_exists($path)){
+			$content = file_get_contents($path);
+			
+			render("edit",['page'=>$page,'title'=>$title,'body'=>$content],false);
+		}
+		else {
+			render("edit",['page'=>$page,'title'=>$title,'body'=>''],false);
+		}
+	});
+
+	on('GET','/:page',function($page){
+
+		$path  = 'data/'.$page.'.txt';
+		$title = preg_replace('/\_/',' ',$page);
+
+		if (file_exists($path)){
+			$content = file_get_contents($path);
+			$content = parse($content);
+
+			render("list",['page'=>$page,'title'=>$title,'body'=>$content],false);
+		}
+		else {
+			redirect('./'.$page.'&=edit');
+		}
 	
-	on('POST','/save/:page',function($page){
+	});
+
+	on('POST','/:page&=submit',function($page){
 		$path  = 'data/'.$page.'.txt';
 		file_put_contents($path, params('content'));
-		redirect('../'.$page);
+		redirect('./'.$page);
 	});
+	
+
+	
 	
 	dispatch();
 

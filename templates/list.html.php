@@ -4,7 +4,7 @@
 <div class="banner container">
     <h1><?php echo $title?></h1>
     <div>
-      [<a href="./edit/<?php echo $page?>">edit</a>]
+      [<a href="./<?php echo $page.'&'?>=edit">edit</a>]
     </div>
 </div>
 <div class="container">

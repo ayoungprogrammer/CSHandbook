@@ -1,0 +1,21 @@
+## Convex Hull
+
+A convex hull is the set of points which has encompasses the other points in the set.
+
+Let n be number of points in set and h be number of points on convex hull.
+
+
+| Algorithm || Desc || Time || Space
+|-
+|[[Gift wrapping]] || Simplest algorithm || O(nh) || O(n)
+|[[Graham Scan]] || Sophisticated and efficient algorithm|| O(n log n) || O(n)
+
+##Area of polygon
+
+To find the area of a polygon given a set of points, we can use the shoelace formula. 
+
+Area = 0.5 (x1y2+x2y3+ .... + xn-1yn + xny1 - x2y1 - x3y2 - ... - xnyn-1 - x1yn
+
+##Point Test
+
+To test if a point is in a polygon, we take a random outside of the polygon and draw a line from that point to the testing point. On the line we count the number of times it crosses a line segment from the polygon and if it is even, then the point is not in the polygon and if it is odd, then the point is inside the polygon

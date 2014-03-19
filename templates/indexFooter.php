@@ -18,8 +18,8 @@
 
     })();
 </script>
-<script type="text/javascript" src="./public_html/js/responsiveNav.js"></script>
-<script type="text/javascript" src="./public_html/js/nestedNav.js"></script>
+<script type="text/javascript" src="./public_html/js/responsive_nav.js"></script>
+<script type="text/javascript" src="./public_html/js/nested_nav.js"></script>
 
 </body>
 </html>

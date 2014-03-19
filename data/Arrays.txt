@@ -1,0 +1,9 @@
+An array is the most basic data structure that holds a number of fixed elements of the same type in a block of data. The fact that it is in one block and the same type is important because it allows accessing the ith element in constant time. For example if an array is at location 0x4000 that contains 10 integers (4 bytes), then getting the ith element is simple as reading the integer at 0x4000 + (4 * i).
+
+However if you want to insert an element into an array at the ith position you will need to move everything past the ith element by 1 and similarly with deletion.
+
+Since arrays are fixed length, if you wanted to add more elements when your array is already full, you will need to allocate a new array of larger size.
+
+Arrays can be multidimensional meaning you can have an array of array of objects.
+
+
