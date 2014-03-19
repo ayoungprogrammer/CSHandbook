@@ -67,6 +67,12 @@ main{
             -o-transition: all 0.4s  ease;
             max-height: 1000px;
         }
+        #sideNav>ul>li:hover ul{
+            -webkit-transition: all 0.4s  ease;
+            -moz-transition: all 0.4s  ease;
+            -o-transition: all 0.4s  ease;
+            max-height: 1000px;
+        }
         #sideNav h5{
             font-size: 1em;
             margin: 0;
