@@ -9,13 +9,13 @@
 
     for (var i=0;i<headings.length;i++){
         var currentAlg = headings.eq(i);
-        algs[i] = currentAlg.html();
+        algs[i] = currentAlg.text();
         algsHeight[i] = currentAlg.offset().top;
     }
     algsHeight.push(100000);
     for (var i=0;i<subHeadings.length;i++){
         var currentAlg = subHeadings.eq(i);
-        subAlgs[i]=currentAlg.html();
+        subAlgs[i]=currentAlg.text();
         subAlgsHeight[i]=currentAlg.offset().top;
     }
 
