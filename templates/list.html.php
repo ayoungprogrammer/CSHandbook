@@ -5,9 +5,10 @@
     <h1><?php echo $title?>  [<a href="./<?php echo $page.'&'?>=edit">edit</a>]</h1>
 </div>
 <div class="container">
+    <?php breadcrumbs($page); ?>
     <main>
 
-        <?php breadcrumbs($page); ?>
+
 
         <?php echo $body; ?>
 

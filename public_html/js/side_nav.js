@@ -100,7 +100,7 @@
         else {
             sideBar.css({
                 position: 'absolute',
-                top: '20px'
+                top: '70px'
             });
         }
 //        for (var i=0;i<navItems.length;i++){

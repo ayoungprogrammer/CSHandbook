@@ -28,6 +28,27 @@ main{
     max-width:650px;
     display: inline-block;
     }
+    #breadcrumbs{
+        margin-left: 10px;
+    }
+    #breadcrumbs a:before{
+        content:" » ";
+    }
+    #breadcrumbs a{
+        -webkit-transition: all 0.4s  ease;
+        -moz-transition: all 0.4s  ease;
+        -o-transition: all 0.4s  ease;
+        text-decoration: none;
+        color:rgb(100,100,100);
+    }
+    #breadcrumbs a:hover{
+        -webkit-transition: all 0.4s  ease;
+        -moz-transition: all 0.4s  ease;
+        -o-transition: all 0.4s  ease;
+        text-decoration: none;
+        color: rgb(0,100,180);
+    }
+
     main h2{
         color: rgb(0,100,180);
         font-size:2em;
@@ -41,7 +62,8 @@ main{
         -moz-box-shadow: 0px 0px 20px rgb(0,100,180);
         box-shadow: 0px 0px 20px rgb(0,100,180);
         border-radius: 20px;
-        padding: 20px;
+        padding: 30px;
+        line-height: 1.7em;
         }
         section table{
             margin: 40px 0 10px 0;
@@ -88,7 +110,7 @@ main{
     height: auto;
     display: inline-block;
     position: absolute;
-    top: 20px;
+    top: 70px;
     margin-left:20px;
     padding: 0;
     }
@@ -105,22 +127,22 @@ main{
             color:rgb(130,130,130);
         }
         #sideNav>ul>li ul{
-            -webkit-transition: all 0.4s  ease;
-            -moz-transition: all 0.4s  ease;
-            -o-transition: all 0.4s  ease;
+            -webkit-transition: all 0.6s  ease;
+            -moz-transition: all 0.6s  ease;
+            -o-transition: all 0.6s  ease;
             max-height:0;
             overflow: hidden;
         }
         #sideNav>ul>li.current ul{
-            -webkit-transition: all 0.6s  ease;
-            -moz-transition: all 0.6s  ease;
-            -o-transition: all 0.6s  ease;
+            -webkit-transition: all 1s  ease;
+            -moz-transition: all 1s  ease;
+            -o-transition: all 1s  ease;
             max-height: 1000px;
         }
         #sideNav>ul>li:hover ul{
-            -webkit-transition: all 0.6s  ease;
-            -moz-transition: all 0.6s  ease;
-            -o-transition: all 0.6s  ease;
+            -webkit-transition: all 1s  ease;
+            -moz-transition: all 1s  ease;
+            -o-transition: all 1s  ease;
             max-height: 1000px;
         }
         #sideNav h5{
@@ -161,5 +183,8 @@ main{
     }
     table td {
         padding: 3px;
+    }
+    main section{
+        padding: 10px;
     }
 }
