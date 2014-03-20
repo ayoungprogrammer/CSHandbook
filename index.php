@@ -110,7 +110,7 @@ function parse($str){
 	$first_h3 = strpos('<h2>',$str);
 	$pre_str = substr($str,0,$first_h3+4);
 	$sub_str = substr($str,$first_h3+4);
-	$str = $pre_str.preg_replace('/<h2>/','</section><br><hr><br><section><h2>',$sub_str);
+	$str = $pre_str.preg_replace('/<h2>/','</section><br><br><section><h2>',$sub_str);
 	$str = '<section>'.$str.'</section>';
 
 	//[======]   =>     <br><hr><br>
