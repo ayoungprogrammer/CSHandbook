@@ -1,15 +1,15 @@
 ## Introduction
 
-Graphs are a set of objects where some pairs of objects  ('''nodes''') are usually connected by links ('''edges'''). The nodes here can be seen numbered from 1 to 6. There are edges connecting these various nodes. The graph here can be seen as an undirected graph. That means that this graph can go from 4 to 5 and back to 4 from 5. The movements can be bidirectional and there is no particular direction that must be used. However in a directed graph (as seen below) there is a particular direction that must be followed. 
+Graphs are a set of objects where some pairs of objects  **nodes** are usually connected by links **edges**. The nodes here can be seen numbered from 1 to 6. There are edges connecting these various nodes. The graph here can be seen as an undirected graph. That means that this graph can go from 4 to 5 and back to 4 from 5. The movements can be bidirectional and there is no particular direction that must be used. However in a directed graph (as seen below) there is a particular direction that must be followed. 
 
-A '''subgraph''' is a subset of edges and vertices within a graph.
+A **subgraph** is a subset of edges and vertices within a graph.
 
 A directed acyclic graph (DAG) is a graph with no directed cycles (see topological sorting). 
 
-A '''weighted''' graph is a graph that contains weights or values assigned to each edge or node. Usually these weights act as the cost to reach/use that node.
+A **weighted** graph is a graph that contains weights or values assigned to each edge or node. Usually these weights act as the cost to reach/use that node.
 
 
-[==============================]
+[[==============================]]
 
 ## Representations
 
@@ -47,13 +47,13 @@ Node | edges
 5 || 1 2 4
 6 ||4
 
-[==============================]
+[[==============================]]
 
 ##Tree
 
 A tree is a special graph with n-1 edges with n nodes. It has the special property that there will be only one path from one node to another node. Trees follow a recursive structure such that each child of a tree is a tree as well.
 
-A '''subtree''' is a child tree of a tree.
+A **subtree** is a child tree of a tree.
 
 
 [==============================]
@@ -68,11 +68,11 @@ Spanning tree algorithms are essential in networking to ensure no loops occur wh
 
 | Algorithm || Desc || Time || Space
 |-
-|[[Prim's]] || Using greedy method || O(n log n) || O(n^2)
-|[[Kruskal]] || Using connected componenets|| O(n log n) || O(n^2)
+|[[Prim's]] || Using greedy method || O(n log n) || O(n^^2^^)
+|[[Kruskal]] || Using connected componenets|| O(n log n) || O(n^^2^^)
 
 
-[==============================]
+[[==============================]]
 ##Shortest Path
 
 The shortest path is defined as a path from one node to another while trying to minimize a certain property (least number of nodes, smallest total weight). However, shortest paths may have negative weights leads to cycles. 
@@ -84,8 +84,8 @@ The shortest path is defined as a path from one node to another while trying to 
 
 | Algorithm || Desc || Time || Space || Detect cycles?
 |----------||----||------||-----||----------
-|[[Floyd Warshall]] || Computes shortest path between all pairs of nodes || O(n^3) || O(n^2) || Yes
-|[[Bellman Ford]] || Computes shortest path between a pairs of nodes || O(n^2) || O(n) || Yes
+|[[Floyd Warshall]] || Computes shortest path between all pairs of nodes || O(n^^3^^) || O(n^^2^^) || Yes
+|[[Bellman Ford]] || Computes shortest path between a pairs of nodes || O(n^^2^^) || O(n) || Yes
 |[[Dijkstra's]]|| Computes shortest path between a pair of nodes using the Greedy method || O(n log n) || O(n log n) || No
 
 

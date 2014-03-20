@@ -5,29 +5,89 @@ require 'vendor/autoload.php';
 use \Michelf\MarkdownExtra;
 
 
-function bfsLinks($current_path){
+$sections = array(
+	'Data Structures',
+	'Sorting',
+	'Geometry',
+	'Graph Theory',
+	'Number Theory',
+	'Pattern Matching',
+	);
+
+
+function navBar(){
+	foreach($GLOBALS['sections'] as $section){
+		$section_ref = './'.str_replace(' ','_',$section);
+		echo '<li><a href="'.$section_ref.'">'.$section.'</a></li>';
+	}
+}
+
+function breadcrumbs($link){
+	$map = json_decode(file_get_contents('breadcrumbs.txt'),true);
+	//print_r($map);
+	$tok = strtok($map[$link],'/');
+	echo '<p id="breadcrumbs">';
+	while($tok !== false){
+		$ref = str_replace(' ','_',$tok);
+		echo '<a href=./'.$ref.'>'.$tok.'</a>';
+		$tok = strtok('/');
+	}
+}
+
+function bfsLinks(){
+
+	//preg_match_all("/a/","aaaa",$matches,PREG_OFFSET_CAPTURE,1);
+	//print_r($matches);
+
 	$head = 0;
-	$end = 1;
-	$queue = array(0=>$current_path);
-	$map = array('/topics'=>'/');
+	$end = 0;
+	$queue = array();
+	foreach($GLOBALS['sections'] as $section){
+		$queue[$end]='/'.$section;
+		$map[str_replace(' ','_',$section)] = $queue[$end];
+		$end++;
+	}
+	
 	while($head < $end){
 		
-		$page = substr($queue[$head],strrchr($queue[$head],'/'));
+
+		//echo 'pre'.$queue[$head].'<br>';
+
+		$page = substr($queue[$head],strrpos($queue[$head],'/')+1);
+
 		
-		if(file_exists($page)){
-			$content = file_get_contents($page);
-			preg_match('/\[\[([\s\S]*)\]\]/',$content,$matches);
-			foreach ($matches as $link){
-				if($map[$link]){
-					$queue[$end] = $queue[$head].$link;
-					$map[$link]  = $queue[$end];
+		//echo 'suf'.$page.'<br>';
+
+		$path = 'data/'.$page.'.txt';
+		$path = str_replace(" ","_",$path);
+
+		//echo $path.'<br>';
+
+
+		
+		if(file_exists($path)){
+			$content = file_get_contents($path);
+
+			preg_match_all('/\[\[([A-Za-z\_\s]*?)\]\]/',$content,$matches);
+			//print_r($matches);
+			foreach ($matches[1] as $link){
+				
+				if(!$map[$link]){
+
+					$queue[$end] = $queue[$head].'/'.$link;
+					// $queue[$end].'<br>';
+					$map[str_replace(" ","_",$link)]  = $queue[$end];
 					$end++;
 				}
 			}
 		}
 		$head++;
 	}
-	echo $map;
+	file_put_contents('breadcrumbs.txt',json_encode($map));
+	foreach ($map as $link){
+		echo $link.'<br>';
+	}
+	print_r($map);
 }
 
 function parse($str){
@@ -39,22 +99,32 @@ function parse($str){
 	$str = htmlspecialchars($str,ENT_NOQUOTES);
 
 	//<<<<CODE>>>> => <pre class="prettyprint linenums">CODE</pre>
-	$str = preg_replace('/\[{4}([\s\S]*)\]{4}/','<pre class="prettyprint linenums">$1</pre>',$str);
+	$str = preg_replace('/\[{4}([\s\S]*?)\]{4}/','<pre class="prettyprint linenums">$1</pre>',$str);
 
 	//Apply markdown
 	$str = MarkdownExtra::defaultTransform($str);
 	
 	//[[==================]]
-	$str = preg_replace('/\[\[\=+\]\]/',"</section><br><hr><br><section>",$str);
+	$str = preg_replace('/\[\[\=+\]\]/',"",$str);
+
+	$first_h3 = strpos('<h2>',$str);
+	$pre_str = substr($str,0,$first_h3+4);
+	$sub_str = substr($str,$first_h3+4);
+	$str = $pre_str.preg_replace('/<h2>/','</section><br><hr><br><section><h2>',$sub_str);
 	$str = '<section>'.$str.'</section>';
 
 	//[======]   =>     <br><hr><br>
 	$str = preg_replace('/\[\=+\]/',"",$str);
+	$str = preg_replace('/<h3>/','<br><hr><br><h3>',$str);
 
 	
 
+	//^^n^^
+	$str = preg_replace('/\^\^([A-Za-z0-9]+?)\^\^/','<sup>$1</sup>',$str);
+	
+
 	//[[link]]  => <a href="./link">link</a>
-	$str = preg_replace('/\[\[([A-Za-z\_\s\']+)\]\]/','<a href="./$1">$1</a>',$str);
+	$str = preg_replace('/\[\[([A-Za-z\_\s\']+?)\]\]/','<a href="./$1">$1</a>',$str);
 
 	//<a href="one two three"></a> => <a href="one_two_three"></a>
 	//$str = preg_replace('/\x20(?=[^"]*"\s*>)/','_',$str);

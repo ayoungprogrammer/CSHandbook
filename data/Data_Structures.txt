@@ -49,7 +49,7 @@ Queues are often used for buffer systems, for example a text message service. Th
 
 Queues are usually implemented as a linked list because its memory size changes as more elements and pushed and popped.
 
-
+A [[priority queue]] is a queue that always pops the element with the highest priority (either the maximum element or minimum element).
 
 | Operation || Pop || Push
 |-
@@ -166,11 +166,13 @@ A binary tree is a tree where each node can have at max 2 children
 
 [====================================================================]
 
-### [[Heap]]
+## [[Heap]]
 
 Heaps are trees which have the property that the a node must either be greater than all the elements in its left and right subtrees (a max heap) or less than all the elements in its left and right subtrees (a min heap). Heaps are also known as a priority queue.
 
+### [[Priority Queue]]
 
+Priority queues are queues that are able to pop the element with the highest priority. They are usually implemented as a [[heap]] as they are efficient in finding the priority element.
 
 | Operation       | Insert   | Remove   |
 | --------------- | -------- | -------- |
