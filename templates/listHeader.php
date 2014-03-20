@@ -6,10 +6,11 @@
     <link type="text/css" rel="stylesheet" href="./public_html/stylesheets/header_footer.css">
     <link type="text/css" rel="stylesheet" href="./public_html/stylesheets/responsive_nav.css">
 
-   
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600,700' rel='stylesheet' type='text/css'>
 
     <link type="text/css" rel="stylesheet" href="./public_html/stylesheets/list.css">
 
+    <link type="text/css" rel="stylesheet" href="./public_html/stylesheets/reset.css">
 
 	<link type="text/css" rel="stylesheet" href="./vendor/prettify/desert.css"/>
 

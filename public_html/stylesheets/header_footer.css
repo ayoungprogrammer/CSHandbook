@@ -1,6 +1,10 @@
 
+a{
+    text-decoration: none;
+    color: inherit;
+}
 body{
-    font-family: Tahoma, Arial;
+    font-family: 'Open Sans', Tahoma, Arial;
     width: auto;
     background: url('../img/squared_metal.png');
     background-repeat: repeat;
@@ -19,23 +23,32 @@ header{
     top: 0;
     left: 0;
 }
-#logo a{
-    text-decoration: none;
-    color:white;
-}
+
 #navContainer{
     max-width:900px;
     margin:auto;
     padding:0;
 }
 #logo{
-    font-weight: normal;
-    float: left;
-    color: white;
-    padding: 0 10px;
-    line-height: 1em;
-    text-decoration: none;
+    -webkit-transition: all 0.4s  ease;
+    -moz-transition: all 0.4s  ease;
+    -o-transition: all 0.4s  ease;
+    margin-top:10px;
+    float:left;
+    width:260px;
+    height:50px;
+    background: url('../img/logo.png') no-repeat;
 }
+#logo:hover{
+     -webkit-transition: all 0.4s  ease;
+     -moz-transition: all 0.4s  ease;
+     -o-transition: all 0.4s  ease;
+     margin-top:10px;
+     float:left;
+     width:260px;
+     height:50px;
+     background: url('../img/logo_hover.png') no-repeat;
+ }
 nav{
     height: 50px;
     padding: 20px 10px 10px 10px;

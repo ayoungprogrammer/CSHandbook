@@ -1,6 +1,6 @@
 <header>
     <div id="navContainer">
-        <a href="./"><img src="./public_html/img/logo.png" alt="The CS Handbook"></a>
+        <div><a href="./"><div id="logo"></div></a></div>
         <nav>
             <ul>
                 <li><a href="./">Algorithms</a>

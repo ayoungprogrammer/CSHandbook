@@ -21,11 +21,13 @@ header{
 		margin:auto;
 		padding:0;
 		}
+        #navContainer>div{
+            margin: auto;
+            width:260px;
+        }
 		#logo{
-            padding: 0;
-			width:100%;
-			text-align:center;
-			color:white;
+            width: 260px;
+            margin: 15px auto;
 			}
 		nav{
 			height:auto;

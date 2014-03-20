@@ -28,9 +28,11 @@ main{
     max-width:650px;
     display: inline-block;
     }
-    main article{
-        margin-bottom:60px;
-        text-align: left;
+    main h2{
+        font-size:2em;
+    }
+    main h3{
+        font-size:1.4em;
     }
 
 #sideNav{
@@ -74,11 +76,12 @@ main{
             max-height: 1000px;
         }
         #sideNav h5{
-            font-size: 1em;
+            font-size: 1.2em;
+            font-weight: normal;
             margin: 0;
         }
         #sideNav>ul>li>ul>li{
-            font-weight: normal;
+            font-weight: lighter;
         }
         #sideNav ul .inactive{
             -webkit-transition: all 0.4s  ease;
