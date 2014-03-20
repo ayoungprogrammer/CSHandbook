@@ -49,7 +49,7 @@ function parse($str){
 	$str = '<section>'.$str.'</section>';
 
 	//[======]   =>     <br><hr><br>
-	$str = preg_replace('/\[\=+\]/',"",$str);
+	$str = preg_replace('/\[\=+\]/',"<br/><br/>",$str);
 
 	
 
