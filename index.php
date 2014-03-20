@@ -6,14 +6,32 @@ use \Michelf\MarkdownExtra;
 
 
 function parse($str){
+
+	// < > -> &lt; , %gt;
+
+	$str = preg_replace('/</','&lt;',$str);
+	$str = preg_replace('/>/','&gt;',$str);
+
+	//<<<<CODE>>>> => <pre class="prettyprint linenums">CODE</pre>
+	$str = preg_replace('/\[{4}([\s\S]*)\]{4}/','<pre class="prettyprint linenums">$1</pre>',$str);
+
 	//[======]   =>     <br><hr><br>
 	$str = preg_replace('/\[\=+\]/',"<br><hr><br>",$str);
 
+	//[[link]]  => <a href="./link">link</a>
 	$str = preg_replace('/\[\[([A-Za-z\_\s\']+)\]\]/','<a href="./$1">$1</a>',$str);
 
-	$str = preg_replace('/\<{4}([\s\S]*)\>{4}/','<pre class="prettyprint linenums">$1</pre>',$str);
+	//<a href="one two three"></a> => <a href="one_two_three"></a>
+	//$str = preg_replace('/\x20(?=[^"]*"\s*>)/','_',$str);
+	$str = preg_replace('~(?>\bhref\s*=\s*["\']|\G(?<!^))[^ "\']*+\K ~','_',$str);
+	//$str = preg_replace('/(?<=href\=")(?=[^"]*")/','_',$str);
+	
 
-	return MarkdownExtra::defaultTransform($str);
+	//$str = preg_replace('/<<<<([^>]|>(?!>>>([^>]|$)))*>>>>/,'<pre class="prettyprint linenums">$1</pre>',$str);
+
+	$str = MarkdownExtra::defaultTransform($str);
+
+	return $str;
 }
 
 

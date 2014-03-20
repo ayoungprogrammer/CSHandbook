@@ -1,0 +1,69 @@
+## Introduction
+
+Bellman Ford is an algorithm that finds the shortest path between two nodes from start to end. The running time is O(n^2) and is slower than [[Dijkstra's]] but it is able to find negative cycles. 
+
+## Implementation
+
+[[[[
+class edge{
+	int weight,source,dest;
+	public edge(int source,int dest,int weight){
+		this.source = source;
+		this.dest = dest;
+		this.weight = weight;
+	}
+}
+
+public static int BellmanFord(Vector<Vector<edge>> adjList,int startNode,int endNode){
+		
+	int n = adjList.size();
+	int[] dist=new int[n];
+	
+	for(int i=0;i<n;i++){
+		dist[i] = -1;
+	}
+	dist[startNode] = 0;
+	for(int i=0;i<n-1;i++){
+		//Iterate through adjacency list
+		for(int j=0;j<n;j++){
+			for(int k=0;k<adjList.get(j).size();k++){
+				if(dist[j]==-1)continue;
+				edge e = adjList.get(j).get(k);
+				int newDist = dist[e.source]+e.weight;
+				if(newDist<dist[e.dest] || dist[e.dest]==-1)dist[e.dest] = newDist;
+			}
+		}
+	}
+	
+	for(int j=0;j<n;j++){
+		for(int k=0;k<adjList.get(j).size();k++){
+			edge e = adjList.get(j).get(k);
+			//If negative cycle, return -2
+			if(dist[e.source]+e.weight < dist[e.dest]){
+				return -2;
+			}
+		}
+	}
+	
+	//Return distance from start to end, or -1 if no path
+	return dist[endNode];
+}
+
+]]]]
+
+## Applications
+
+Arbitrage occurs when you can exchange currencies for another and make a profit. For example given a currency exchange table:
+
+ | USD | CAD | EURO
+-|-|-|-
+USD| / | 1.12 | 0.72
+CAD| 0.90 | / | 0.64
+EURO| 1.38 | 1.56 | /
+
+Notice that 1 USD -> 1.12 CAD -> 1.008 USD. Bellman Ford can be used to find methods of arbitrage by using the vertex as currency and edges as transactions, and the weight as the exchange rate. All that is needed is to find a path that maximizes product of weights and finding a negative cycle.
+
+## Exercises
+
+1. Write a program that detects a path for arbitrage to occur
+2. Prove Bellmand-Ford works
