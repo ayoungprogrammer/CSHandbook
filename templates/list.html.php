@@ -2,15 +2,14 @@
 <?php require('nav.php'); ?>
 
 <div class="banner container">
-    <h1><?php echo $title?></h1>
-    <div>
-      [<a href="./<?php echo $page.'&'?>=edit">edit</a>]
-    </div>
+    <h1><?php echo $title?>  [<a href="./<?php echo $page.'&'?>=edit">edit</a>]</h1>
 </div>
 <div class="container">
     <main>
 
-        <?php echo $body ?>
+        <?php breadcrumbs($page); ?>
+
+        <?php echo $body; ?>
 
     </main>
 

@@ -1,0 +1,15 @@
+## Introduction
+
+A linked list is similar to an array but it is different such that it is not stored in one block of data. Each element of the linked list also contains a point to the next element thus forming a chain of pointers. Since the elements aren't in a block, accessing the ith element must be done by traversing the entire linked list by following each pointer to the next. However, this also allows insertion to be done more quickly by simply changing the point of the previous element and setting to the pointer of the current element to the next element. Deletion is also done by taking the previous element and changing its pointer to two elements ahead. 
+
+A doubly linked list is a linked list that has pointers going backwards as well as forwards.
+
+
+## Implementation
+
+### Get i
+
+
+## Applications
+
+## Exercises
