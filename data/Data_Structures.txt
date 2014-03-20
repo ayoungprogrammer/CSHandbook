@@ -51,9 +51,9 @@ Queues are usually implemented as a linked list because its memory size changes 
 
 
 
-| Operation || Pop || Push
+| Operation | Pop | Push
 |-
-| Time Complexity || O(1) || O(1)
+| Time Complexity | O(1) | O(1)
 
 
 [====================================================================]
@@ -102,9 +102,9 @@ Bucket | List
 If we wanted to check if 7239 was in the hash set, we would get the hash (7238 mod 10 = 8) and then we would check elements in bucket 8 for equality. Since 528 is not equal to 7238 and there are no more elements in bucket 8, then 7238 is not in the hash set.
 
 
-| Operation || Membership || Insertion || Deletion
+| Operation | Membership | Insertion | Deletion
 |-
-| Time Complexity || O(1) || O(1) || O(1)
+| Time Complexity | O(1) | O(1) | O(1)
 
 
 The advantage of hash map is that it is very fast but a disadvantage is that it is not sorted unlike a tree set.
@@ -119,9 +119,9 @@ A tree set is a set which stores the values in a [[Binary Tree|binary tree]]. To
 The advantage to this is that it is sorted but this is at the expense of speed.
 
 
-| Operation || Membership || Insertion || Deletion
+| Operation | Membership | Insertion | Deletion
 |-
-| Time Complexity || O(log n) || O(log n) || O(log n)
+| Time Complexity | O(log n) | O(log n) | O(log n)
 
 
 [[====================================================================]]
@@ -135,9 +135,9 @@ Maps (also called dictionaries) are a data structure that store pairs of key-val
 
 ###[[Hash Map]]
 
-| Operation || Membership || Insertion || Deletion
+| Operation | Membership | Insertion | Deletion
 |-
-| Time Complexity || O(1) || O(1) || O(1)
+| Time Complexity | O(1) || O(1) | O(1)
 
 
 
@@ -145,9 +145,9 @@ Maps (also called dictionaries) are a data structure that store pairs of key-val
 
 ### [[Tree Map]]
 
-| Operation || Membership || Insertion || Deletion
+| Operation | Membership | Insertion | Deletion
 |-
-| Time Complexity || O(log n) || O(log n) || O(log n)
+| Time Complexity | O(log n) | O(log n) | O(log n)
 
 
 [[====================================================================]]
@@ -186,7 +186,7 @@ A trie is tree which stores strings by their prefixes. A trie can replace a set 
 Let m be the length of the string.
 
 
-| Operation || Membership || Insertion || Deletion 
+| Operation | Membership | Insertion | Deletion 
 |-
-| Time Complexity || O(m) || O(m) || O(m)
+| Time Complexity | O(m) || O(m) | O(m)
 
