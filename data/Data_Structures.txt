@@ -1,7 +1,8 @@
+## Introduction
+
 Data structures are a way of storing data such that it can be accessed or changed in a efficient manner.
 
-
-
+[[============================================================]]
 
 ## [[Arrays]]
 
@@ -70,7 +71,7 @@ Stacks are used for function calls on the memory stack. Whenever a function is c
 | Time Complexity | O(1) | O(1)
 
 
-[====================================================================]
+[[====================================================================]]
 
 ## [[Sets]]
 
@@ -123,7 +124,7 @@ The advantage to this is that it is sorted but this is at the expense of speed.
 | Time Complexity || O(log n) || O(log n) || O(log n)
 
 
-[====================================================================]
+[[====================================================================]]
 
 ## [[Maps]]
 
@@ -149,7 +150,7 @@ Maps (also called dictionaries) are a data structure that store pairs of key-val
 | Time Complexity || O(log n) || O(log n) || O(log n)
 
 
-[====================================================================]
+[[====================================================================]]
 
 ## [[Trees]]
 
