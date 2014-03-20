@@ -15,22 +15,36 @@ class edge{
 }
 
 public static int BellmanFord(Vector<Vector<edge>> adjList,int startNode,int endNode){
-		
+	
 	int n = adjList.size();
+	//dist[i] is minimum distance from start to i
 	int[] dist=new int[n];
 	
+	//used[i] is if dist[i] has been initialized
+	boolean[] used = new boolean[n];
+	
+	//initialize dist[i]=0 and used[i]=false
 	for(int i=0;i<n;i++){
-		dist[i] = -1;
+		dist[i] = 0;
+		used[i] = false;
 	}
+	used[startNode] = true;
 	dist[startNode] = 0;
 	for(int i=0;i<n-1;i++){
 		//Iterate through adjacency list
 		for(int j=0;j<n;j++){
 			for(int k=0;k<adjList.get(j).size();k++){
-				if(dist[j]==-1)continue;
+				if(!used[j])continue;
 				edge e = adjList.get(j).get(k);
-				int newDist = dist[e.source]+e.weight;
-				if(newDist<dist[e.dest] || dist[e.dest]==-1)dist[e.dest] = newDist;
+				//If dist[e.source] has been used
+				if(used[e.source]){
+					//If new dist < cur dist or not used, then update
+					int newDist = dist[e.source]+e.weight;
+					if(newDist<dist[e.dest] || !used[e.dest]){
+						used[e.dest]= true; 
+						dist[e.dest] = newDist;
+					}
+				}
 			}
 		}
 	}
@@ -38,14 +52,19 @@ public static int BellmanFord(Vector<Vector<edge>> adjList,int startNode,int end
 	for(int j=0;j<n;j++){
 		for(int k=0;k<adjList.get(j).size();k++){
 			edge e = adjList.get(j).get(k);
-			//If negative cycle, return -2
+			//If negative cycle
 			if(dist[e.source]+e.weight < dist[e.dest]){
-				return -2;
+				System.out.println("Negative cycle");
 			}
 		}
 	}
 	
-	//Return distance from start to end, or -1 if no path
+	//If no path exists
+	if(!used[endNode]){
+		System.out.println("No path from start to end");
+	}
+	
+	//Return distance from start to end
 	return dist[endNode];
 }
 

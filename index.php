@@ -5,18 +5,53 @@ require 'vendor/autoload.php';
 use \Michelf\MarkdownExtra;
 
 
+function bfsLinks($map,$current_path){
+	$head = 0;
+	$end = 1;
+	$queue = array(0=>'/topics');
+	$map = array('/topics'=>'/');
+	while($head < $end){
+		
+		$page = substr($queue[$head],strrchr($queue[$head],'/'));
+		
+		if(file_exists($page)){
+			$content = file_get_contents($page);
+			preg_match('/\[\[([\s\S]*)\]\]/',$content,$matches);
+			foreach ($matches as $link){
+				if($map[$link]){
+					$queue[$end] = $queue[$head].$link;
+					$map[$link]  = $queue[$end];
+					$end++;
+				}
+			}
+		}
+		$head++;
+	}
+	echo $map;
+}
+
 function parse($str){
 
 	// < > -> &lt; , %gt;
 
-	$str = preg_replace('/</','&lt;',$str);
-	$str = preg_replace('/>/','&gt;',$str);
+	//$str = preg_replace('/</','&lt;',$str);
+	//$str = preg_replace('/>/','&gt;',$str);
+	$str = htmlspecialchars($str,ENT_NOQUOTES);
 
 	//<<<<CODE>>>> => <pre class="prettyprint linenums">CODE</pre>
 	$str = preg_replace('/\[{4}([\s\S]*)\]{4}/','<pre class="prettyprint linenums">$1</pre>',$str);
 
+	//Apply markdown
+	$str = MarkdownExtra::defaultTransform($str);
+	
+	//[[==================]]
+	$str = preg_replace('/\[\[\=+\]\]/',"</article><article>",$str);
+	$str = '<article>'.$str.'</article>';
+
 	//[======]   =>     <br><hr><br>
 	$str = preg_replace('/\[\=+\]/',"<br><hr><br>",$str);
+
+	
 
 	//[[link]]  => <a href="./link">link</a>
 	$str = preg_replace('/\[\[([A-Za-z\_\s\']+)\]\]/','<a href="./$1">$1</a>',$str);
@@ -29,7 +64,7 @@ function parse($str){
 
 	//$str = preg_replace('/<<<<([^>]|>(?!>>>([^>]|$)))*>>>>/,'<pre class="prettyprint linenums">$1</pre>',$str);
 
-	$str = MarkdownExtra::defaultTransform($str);
+	
 
 	return $str;
 }
