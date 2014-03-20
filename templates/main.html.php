@@ -15,7 +15,8 @@
 
 <section class="info container">
 
-    <article class="wrapper">
+    <main>
+        <article>
         <h3>Computer Science Algorithms</h3>
         <hr/>
         <p>
@@ -39,7 +40,8 @@
             |
             <a href="http://ayoungprogrammer.com" target="_blank">Michael Young</a>
         </aside>
-    </article>
+        </article>
+    </main>
 </section>
 
 <?php require('indexFooter.php'); ?>

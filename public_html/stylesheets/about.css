@@ -26,9 +26,10 @@
     }
     .row span{
         font-weight: bold;
+        color: rgb(70,150,220);
         font-size: 1.4em;
         line-height: 4em;
-        display: block;
+        color: rgb(0,100,180);
     }
     .row:nth-child(1){
         background: url('../img/icon-website.png');
@@ -40,15 +41,12 @@
         background: url('../img/icon-algorithms.png');
     }
     .row:nth-child(1):hover{
-        color:rgb(21,139,152);
         background: url('../img/icon-website-hover.png');
     }
     .row:nth-child(2):hover{
-        color: rgb(255,42,42);
         background: url('../img/icon-guys-hover.png');
     }
     .row:nth-child(3):hover{
-        color: rgb(0,180,0);
         background: url('../img/icon-algorithms-hover.png');
     }
 
@@ -57,22 +55,29 @@
     margin-top:20px;
     text-align: left;
     }
-    .wrapper{
-        background: rgb(200,200,200);
+    main{
+        background: rgb(220,220,220);
         border-radius: 30px;
-        padding:30px;
+        padding:20px;
     }
-    .wrapper h3{
+    main h3{
         text-align:center;
-        color: rgb(100,100,100);
+        color: rgb(0,100,180);
         font-weight:normal;
         font-size: 1.5em;
     }
-    .wrapper p{
-        color: rgb(60,60,60);
+    main article{
+        -webkit-box-shadow: 0px 0px 20px rgb(0,100,180);
+        -moz-box-shadow: 0px 0px 20px rgb(0,100,180);
+        box-shadow: 0px 0px 20px rgb(0,100,180);
+        border-radius: 20px;
+        padding: 20px;
+    }
+    main p{
+        color: rgb(100,100,100);
         }
 
-        .wrapper aside{
+        main aside{
             text-align: center;
             margin-top: 50px;
         }
@@ -84,17 +89,19 @@
             width: auto;
             margin:0 30px;
             padding: 20px;
-            background: rgb(150,150,150);
+            background-color: rgb(70,150,220);
+            background-color: rgba(70,150,220,0.8);
             text-decoration: none;
-            color: rgb(60,60,60);
+            color: white;
             border-radius: 10px;
         }
         aside a:hover{
             -webkit-transition: all 0.2s  ease;
             -moz-transition: all 0.2s  ease;
             -o-transition: all 0.2s  ease;
-            background: rgb(100,150,200);
-            color:white;
+            background-color: rgb(70,150,220);
+            background-color: rgba(70,150,220,0.8);
+            color:black;
         }
 
 
@@ -143,7 +150,7 @@
         margin-top:20px;
         text-align: left;
         }
-        .wrapper{
+        main{
             background: rgb(200,200,200);
             border-radius: 15px;
             padding:15px;

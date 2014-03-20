@@ -14,7 +14,7 @@
     .banner h1{
         font-size: 2em;
         line-height: 1em;
-        color: rgb(50,50,50);
+        color: rgb(40,140,200);
         font-weight:500;
     }
     .banner div{
@@ -22,23 +22,24 @@
     }
 
 main{
-    
-    background: rgb(200,200,200);
+    background: rgb(220,220,220);
     border-radius: 30px;
-    padding:25px;
+    padding:10px;
     max-width:650px;
     display: inline-block;
     }
     main h2{
+        color: rgb(0,100,180);
         font-size:2em;
     }
     main h3{
+        color: rgb(0,50,180);
         font-size:1.4em;
     }
     main section{
-        -webkit-box-shadow: 0px 0px 20px rgba(40,170,170,1);
-        -moz-box-shadow: 0px 0px 20px rgba(40,170,170,1);
-        box-shadow: 0px 0px 20px rgb(100,100,100);
+        -webkit-box-shadow: 0px 0px 20px rgb(0,100,180);
+        -moz-box-shadow: 0px 0px 20px rgb(0,100,180);
+        box-shadow: 0px 0px 20px rgb(0,100,180);
         border-radius: 20px;
         padding: 20px;
         }
@@ -72,7 +73,7 @@ main{
                 -webkit-border-radius: 0 0 12px 0;
             }
             table th{
-                background-color: rgb(180,180,180);
+                background-color: rgb(80,160,240);
                 border: 1px solid rgb(150,150,150);
                 padding: 10px;
             }
@@ -101,7 +102,7 @@ main{
             padding-left: 5px;
             margin: 10px 0;
             cursor: pointer;
-            color:rgb(100,100,100);
+            color:rgb(130,130,130);
         }
         #sideNav>ul>li ul{
             -webkit-transition: all 0.4s  ease;
@@ -139,11 +140,11 @@ main{
             -webkit-transition: all 0.4s  ease;
             -moz-transition: all 0.4s  ease;
             -o-transition: all 0.4s  ease;
-            border-left: 3px solid rgb(150,150,150);
+            border-left: 5px solid rgb(70,150,230);
             color:black;
         }
         #sideNav ul .active{
-            border-left: 3px solid rgb(100,100,100);
+            border-left: 5px solid rgb(70,150,230);
             color:black;
         }
 
