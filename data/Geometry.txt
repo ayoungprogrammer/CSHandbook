@@ -5,10 +5,10 @@ A convex hull is the set of points which has encompasses the other points in the
 Let n be number of points in set and h be number of points on convex hull.
 
 
-| Algorithm || Desc || Time || Space
-|-
-|[[Gift wrapping]] || Simplest algorithm || O(nh) || O(n)
-|[[Graham Scan]] || Sophisticated and efficient algorithm|| O(n log n) || O(n)
+ Algorithm | Desc | Time |Space
+-|-|-|-
+[[Gift wrapping]] | Simplest algorithm | O(nh) | O(n)
+[[Graham Scan]] | Sophisticated and efficient algorithm| O(n log n) | O(n)
 
 ##Area of polygon
 
