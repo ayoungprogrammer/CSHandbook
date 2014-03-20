@@ -5,10 +5,10 @@ require 'vendor/autoload.php';
 use \Michelf\MarkdownExtra;
 
 
-function bfsLinks($map,$current_path){
+function bfsLinks($current_path){
 	$head = 0;
 	$end = 1;
-	$queue = array(0=>'/topics');
+	$queue = array(0=>$current_path);
 	$map = array('/topics'=>'/');
 	while($head < $end){
 		
@@ -45,11 +45,11 @@ function parse($str){
 	$str = MarkdownExtra::defaultTransform($str);
 	
 	//[[==================]]
-	$str = preg_replace('/\[\[\=+\]\]/',"</article><article>",$str);
-	$str = '<article>'.$str.'</article>';
+	$str = preg_replace('/\[\[\=+\]\]/',"</section><br><hr><br><section>",$str);
+	$str = '<section>'.$str.'</section>';
 
 	//[======]   =>     <br><hr><br>
-	$str = preg_replace('/\[\=+\]/',"<br><hr><br>",$str);
+	$str = preg_replace('/\[\=+\]/',"",$str);
 
 	
 
@@ -83,6 +83,11 @@ config([
 	on('GET','/', function () {
 	    //echo "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 	    render("main",[],false);
+	});
+
+
+	on('GET','/links',function($page){
+		bfsLinks('/Topics');
 	});
 
 
