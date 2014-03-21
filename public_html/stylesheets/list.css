@@ -1,6 +1,6 @@
 /*CONTENT*/
 .container{
-    max-width: 900px;
+    max-width: 970px;
     padding:20px 0;
     margin:auto;
     position:relative;
@@ -25,7 +25,7 @@ main{
     background: rgb(220,220,220);
     border-radius: 30px;
     padding:10px;
-    max-width:650px;
+    max-width:740px;
     display: inline-block;
     margin-top: 20px;
     }
@@ -107,7 +107,7 @@ main{
             }
 
 #sideNav{
-    width: 150px;
+    width: 180px;
     height: auto;
     display: inline-block;
     position: absolute;
@@ -187,5 +187,8 @@ main{
     }
     main section{
         padding: 10px;
+    }
+    main h2, main h3{
+        text-align: center;
     }
 }

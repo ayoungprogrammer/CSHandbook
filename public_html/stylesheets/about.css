@@ -1,6 +1,6 @@
 /*CONTENT*/
 .container{
-    max-width: 900px;
+    max-width: 970px;
     padding:20px 0;
     margin:auto;
     text-align: center;
@@ -118,8 +118,8 @@
 }
 
 @media screen and (max-width: 700px) {
-    .row{
-
+    main{
+        padding:0;
     }
     .row:nth-child(1){
         opacity: 1;
@@ -137,20 +137,7 @@
         background: url('../img/icon-algorithms-hover.png');
     }
     aside a{
-        -webkit-transition: all 0.3s  ease;
-        -moz-transition: all 0.3s  ease;
-        -o-transition: all 0.3s  ease;
-        display:inline-block;
-        width: auto;
-        margin:0 5px;
-        text-decoration: none;
-        border-radius: 10px;
-        font-size:0.9em;
-        background: rgb(100,150,200);
-        color:white;
+        padding: 10px;
+        margin:0;
     }
-    .info{
-        margin-top:20px;
-        text-align: left;
-        }
 }
