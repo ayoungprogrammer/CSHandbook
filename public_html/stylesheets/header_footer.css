@@ -18,10 +18,10 @@ header{
     height: 80px;
     /*
     background-color: rgb(50,50,50);
-    background-color: rgba(50,50,50,0.6);
+    background-color: rgba(50,50,50,0.8);
     */
     background-color: rgb(70,150,220);
-    background-color: rgba(70,150,220,0.6);
+    background-color: rgba(70,150,220,0.8);
     position: fixed;
     z-index: 2;
     top: 0;
@@ -71,6 +71,9 @@ header{
             color:white;
             display: inline-block;
         }
+        nav>ul>li{
+            margin: 0 3px;
+        }
         nav li a{
             -webkit-transition: all 0.4s  ease;
             -moz-transition: all 0.4s  ease;
@@ -97,15 +100,15 @@ header{
             background-color:white;
             }
             nav ul li:hover ul{
-                -webkit-transition: max-height 1s  ease;
-                -moz-transition: max-height 1s  ease;
-                -o-transition: max-height 1s  ease;
-                max-height: 1000px;
+                -webkit-transition: max-height 0.5s  ease;
+                -moz-transition: max-height 0.5s  ease;
+                -o-transition: max-height 0.5s  ease;
+                max-height: 500px;
             }
             nav ul ul{
-                -webkit-transition: max-height 0.4s  ease;
-                -moz-transition: max-height 0.4s  ease;
-                -o-transition: max-height 0.4s  ease;
+                -webkit-transition: max-height 0.5s  ease;
+                -moz-transition: max-height 0.5s  ease;
+                -o-transition: max-height 0.5s  ease;
                 display: inline-block;
                 position: absolute;
                 margin-top: 10px;
@@ -117,7 +120,7 @@ header{
                 overflow: hidden;
 
                 background-color: rgb(70,150,220);
-                background-color: rgba(70,150,220,0.6);
+                background-color: rgba(70,150,220,0.8);
             }
             nav ul ul li{
                 float:none;

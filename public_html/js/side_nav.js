@@ -85,6 +85,7 @@
         }
     }
 
+
     $('#sideNav>ul>li:first-child>h5').addClass("active");
     $('#sideNav>ul>li:first-child').addClass("current");
 
@@ -100,7 +101,7 @@
         else {
             sideBar.css({
                 position: 'absolute',
-                top: '70px'
+                top: '100px'
             });
         }
 //        for (var i=0;i<navItems.length;i++){

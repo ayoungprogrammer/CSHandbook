@@ -27,6 +27,7 @@ main{
     padding:10px;
     max-width:650px;
     display: inline-block;
+    margin-top: 20px;
     }
     #breadcrumbs{
         margin-left: 10px;
@@ -110,7 +111,7 @@ main{
     height: auto;
     display: inline-block;
     position: absolute;
-    top: 70px;
+    top: 100px;
     margin-left:20px;
     padding: 0;
     }

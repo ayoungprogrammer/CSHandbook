@@ -17,19 +17,17 @@
         width: 280px;
         height: 280px;
         display: inline-block;
+        font-weight: bold;
+        color: rgb(0,100,180);
+        font-size: 1.4em;
+        line-height: 4em;
     }
     .container .row:hover{
         -webkit-transition: all 0.3s  ease;
         -moz-transition: all 0.3s  ease;
         -o-transition: all 0.3s  ease;
+        color: rgb(100,100,100);
         opacity:0.9;
-    }
-    .row span{
-        font-weight: bold;
-        color: rgb(70,150,220);
-        font-size: 1.4em;
-        line-height: 4em;
-        color: rgb(0,100,180);
     }
     .row:nth-child(1){
         background: url('../img/icon-website.png');
