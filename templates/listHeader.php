@@ -2,6 +2,7 @@
 <html>
 <head>
     <title><?php echo $title ?></title>
+    <link rel="icon" type="image/png" href="./public_html/img/favicon.png">
 
     <link type="text/css" rel="stylesheet" href="./public_html/stylesheets/header_footer.css">
     <link type="text/css" rel="stylesheet" href="./public_html/stylesheets/responsive_nav.css">

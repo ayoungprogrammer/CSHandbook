@@ -104,9 +104,7 @@
             -webkit-transition: all 0.2s  ease;
             -moz-transition: all 0.2s  ease;
             -o-transition: all 0.2s  ease;
-            background-color: rgb(70,150,220);
-            background-color: rgba(70,150,220,0.8);
-            color:black;
+            color:rgb(100,100,100);
         }
 
 

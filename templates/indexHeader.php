@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>CS Algorithm Wiki</title>
+    <title>The CS Handbook</title>
+    <link rel="icon" type="image/png" href="./public_html/img/favicon.png">
+
 
     <link type="text/css" rel="stylesheet" href="./public_html/stylesheets/header_footer.css">
     <link type="text/css" rel="stylesheet" href="./public_html/stylesheets/responsive_nav.css">
