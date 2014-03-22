@@ -154,7 +154,10 @@ config([
 	    //echo "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 	    render("main",[],false);
 	});
-
+    on('GET','/donate', function () {
+        //echo "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+        render("donate",[],false);
+    });
 
 	on('GET','/links',function($page){
 		bfsLinks('/Topics');

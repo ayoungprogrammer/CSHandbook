@@ -106,6 +106,27 @@
             color:rgb(100,100,100);
         }
 
+/* DONATE PAGE*/
+
+main section{
+    display:block;
+    padding:50px;
+}
+div.donateButton{
+    box-sizing: border-box;
+    padding:20px;
+    display:inline-block;
+    width:50%;
+    float:left;
+}
+div.donateButton:first-child{
+    text-align: right;
+}
+div.donateButton:nth-child(2){
+    padding-top:25px;
+    text-align: left;
+}
+
 
 @viewport{
     zoom: 1.0;
@@ -120,6 +141,9 @@
     main{
         padding:0;
     }
+    .banner{
+        margin-top:100px;
+    }
     .row:nth-child(1){
         opacity: 1;
         background: url('../img/icon-website-hover.png');
@@ -133,7 +157,8 @@
         background: url('../img/icon-algorithms-hover.png');
     }
     aside a{
-        padding: 10px;
+        font-size: 0.8em;
+        padding: 8px;
         margin:0;
     }
 }

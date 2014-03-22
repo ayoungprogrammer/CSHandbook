@@ -1,11 +1,14 @@
 (function(){
-    if ($(window).width()>700){
+    if ($(window).width()>800){
         $('nav ul li').mouseenter(function(){
             var nestedNav =  $(this).find('ul');
             nestedNav.css({
                 'margin-left': -parseInt(nestedNav.outerWidth()) / 2,
             });
-            nestedNav.parent('div').css('padding-top', 15);
+            nestedNav.parent('div').css({
+                'padding-top':15,
+                'height':100
+            });
         });
     }
     else{
