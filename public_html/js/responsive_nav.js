@@ -3,6 +3,9 @@ $(document).ready(function() {
     menu 		= $('nav ul');
     menuHeight	= menu.height();
 
+    $('nav>ul>li:first-child>a').on('click', function(e){
+        e.preventDefault();
+    });
     if ($(window).width() < 700){
         menu.hide();
     }

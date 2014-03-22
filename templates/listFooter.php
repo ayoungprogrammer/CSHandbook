@@ -11,7 +11,7 @@
         var linksCount = links.length;
 
         for (var i=0;i<linksCount;i++){
-            if (links.eq(i).children('a').html() == 'About'){
+            if (links.eq(i).children('a').html() == 'Algorithms'){
                 links.eq(i).addClass('active');
             }
         }
@@ -25,31 +25,7 @@
     prettyPrint();
 </script>
 
-<script>
-    function resizeTable (){
-        var windowWidth = $(window).width();
-        var table = $('section table');
-        if (windowWidth<700){
-            if (!table.parent().is('div')){
-                $('section table').wrap('<div></div>');
-            }
-            var tableWidth = $(window).width() - 70;
-            console.log(tableWidth);
-            $('section div').css('width', tableWidth);
-        } else {
-            if (!table.parent().is('div')){
-                //$('section table').unwrap('<div></div>');
-            }
-        }
-    }
-    (function(){
-        resizeTable();
-    })();
-    $(window).resize(function(){
-        resizeTable();
-    });
-</script>
-
+<script type="text/javascript" src="./public_html/js/responsive_table.js"></script>
 <script type="text/javascript" src="./public_html/js/side_nav.js"> </script>
 <script type="text/javascript" src="./public_html/js/responsive_nav.js"></script>
 <script type="text/javascript" src="./public_html/js/nested_nav.js"></script>

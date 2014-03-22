@@ -27,9 +27,11 @@ header{
             width:260px;
         }
 		#logo{
-            width: 260px;
-            margin: 15px auto;
-			}
+            margin: 30px auto;
+		}
+        #logo:hover{
+            background: url('../img/logo.png') no-repeat;
+        }
 		nav{
 			height:auto;
 			width:100%;
