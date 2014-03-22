@@ -28,9 +28,9 @@
             </p>
             <p>
                 The CS Handbook is an on-going project started by two computer science students from the University of
-                Waterloo. It's a collection of computer science algorithms that ranges from simple calculations such as the
+                Waterloo. It's a collection of computer science algorithms that range from simple calculations such as the
                 GCD, to the perplexing calculations behind Shortest Path Problems. It's a place for quick reference and
-                intensive learning for both beginnings and experts alike.
+                intensive learning for both beginningers and experts alike.
             </p>
 
             <p> Again, welcome and enjoy your stay!</p>
