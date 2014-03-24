@@ -12,7 +12,7 @@
         -webkit-transition: all 0.3s  ease;
         -moz-transition: all 0.3s  ease;
         -o-transition: all 0.3s  ease;
-        opacity:0.7;
+        opacity:0.6;
         margin-top:60px;
         width: 280px;
         height: 280px;
@@ -26,8 +26,9 @@
         -webkit-transition: all 0.3s  ease;
         -moz-transition: all 0.3s  ease;
         -o-transition: all 0.3s  ease;
-        opacity:0.9;
+        opacity:1;
     }
+    /*
     .row:nth-child(1){
         background: url('../img/icon-website.png');
     }
@@ -37,13 +38,14 @@
     .row:nth-child(3){
         background: url('../img/icon-algorithms.png');
     }
-    .row:nth-child(1):hover{
+    */
+    .row:nth-child(1){
         background: url('../img/icon-website-hover.png');
     }
-    .row:nth-child(2):hover{
+    .row:nth-child(2){
         background: url('../img/icon-guys-hover.png');
     }
-    .row:nth-child(3):hover{
+    .row:nth-child(3){
         background: url('../img/icon-algorithms-hover.png');
     }
 

@@ -18,7 +18,7 @@
                         </ul>
                     </div>
                 </li>
-                <li><a href="#">Donate</a></li>
+                <li><a href="./donate">Donate</a></li>
                 <li><a href="#">About</a></li>
             </ul>
             <a id="pull" href="#">MENU</a>
