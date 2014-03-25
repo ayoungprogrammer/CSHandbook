@@ -28,7 +28,7 @@
         -o-transition: all 0.3s  ease;
         opacity:1;
     }
-    /*
+
     .row:nth-child(1){
         background: url('../img/icon-website.png');
     }
@@ -38,14 +38,14 @@
     .row:nth-child(3){
         background: url('../img/icon-algorithms.png');
     }
-    */
-    .row:nth-child(1){
+
+    .row:nth-child(1):hover{
         background: url('../img/icon-website-hover.png');
     }
-    .row:nth-child(2){
+    .row:nth-child(2):hover{
         background: url('../img/icon-guys-hover.png');
     }
-    .row:nth-child(3){
+    .row:nth-child(3):hover{
         background: url('../img/icon-algorithms-hover.png');
     }
 
@@ -116,19 +116,14 @@ main section{
 }
 div.donateButton{
     box-sizing: border-box;
-    padding:20px;
-    display:inline-block;
-    width:50%;
-    float:left;
+    text-align: center;
 }
-div.donateButton:first-child{
-    text-align: right;
+div.donateInfo{
+    text-align: center;
 }
-div.donateButton:nth-child(2){
-    padding-top:25px;
-    text-align: left;
+div.donateInfo p:first-child{
+    font-size: 1.2em;
 }
-
 
 @viewport{
     zoom: 1.0;
