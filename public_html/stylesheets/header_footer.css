@@ -5,9 +5,7 @@ body{
     background: url('../img/squared_metal.png');
     background-repeat: repeat;
 }
-sup{
-    vertical-align: top;
-}
+
 /*NAVIGATION*/
 header{
     width: 100%;
@@ -23,7 +21,9 @@ header{
     top: 0;
     left: 0;
 }
-
+header sup{
+    vertical-align: top;
+}
 #navContainer{
     max-width:970px;
     margin:auto;
