@@ -55,15 +55,12 @@ main{
         font-size:2em;
     }
     main h3{
-        color: rgb(0,50,180);
+        color: rgb(0,100,180);
         font-size:1.4em;
-    }
-    main h2 a, main h3 a{
-        color: inherit;
-        text-decoration: none;
     }
     main a{
         color: rgb(0,100,180);
+        text-decoration: none;
     }
     h3 a:after, h2 a:after{
         content: url('../img/link.png');
