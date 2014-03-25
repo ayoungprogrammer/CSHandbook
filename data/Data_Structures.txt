@@ -2,8 +2,6 @@
 
 Data structures are a way of storing data such that it can be accessed or changed in a efficient manner.
 
-[[============================================================]]
-
 ## [[Arrays]]
 
 An array is the most basic data structure that holds a number of fixed elements of the same type in a block of data. The fact that it is in one block and the same type is important because it allows accessing the ith element in constant time. For example if an array is at location 0x4000 that contains 10 integers (4 bytes), then getting the ith element is simple as reading the integer at 0x4000 + (4 * i). 
@@ -18,9 +16,6 @@ Arrays can be multidimensional meaning you can have an array of array of objects
 -----------|---------|-----------|--------
 Time Complexity | O(1) | O(n) | O(n)
 
-
-
-[====================================================================]
 
 
 
@@ -38,7 +33,6 @@ A doubly linked list is a linked list that has pointers going backwards as well 
 
 *We assume we are already at the element when inserting. If not, then to get the element we would have to iterate through the linked list until we are at i
 
-[====================================================================]
 
 
 ### [[Queue]]
@@ -56,7 +50,6 @@ Queues are usually implemented as a linked list because its memory size changes 
 | Time Complexity | O(1) | O(1)
 
 
-[====================================================================]
 
 ### [[Stack]]
 
@@ -71,14 +64,11 @@ Stacks are used for function calls on the memory stack. Whenever a function is c
 | Time Complexity | O(1) | O(1)
 
 
-[[====================================================================]]
 
 ## [[Sets]]
 
 Sets are data structures that stores values and is used for testing if an element already exists.  Sets generally have three operations: insertion, deletion and membership test. '''Membership''' is when is an element exists within the set. Insertion places an element into the set and deletion removes an element from the set.
 
-
-[====================================================================]
 
 ### [[Hash Sets]]
 
@@ -109,8 +99,6 @@ If we wanted to check if 7239 was in the hash set, we would get the hash (7238 m
 
 The advantage of hash map is that it is very fast but a disadvantage is that it is not sorted unlike a tree set.
 
-[====================================================================]
-
 
 ###[[Tree Sets]]
 
@@ -124,13 +112,10 @@ The advantage to this is that it is sorted but this is at the expense of speed.
 | Time Complexity | O(log n) | O(log n) | O(log n)
 
 
-[[====================================================================]]
-
 ## [[Maps]]
 
 Maps (also called dictionaries) are a data structure that store pairs of key-values and are used to retrieve values from the keys. For example an English dictionary is a map, the keys are the words and the values are the definitions. If you were to look up the word "map" you would use the key (the word "map" in the dictionary) to look up the value (definition of "map"). Maps use sets to store the keys which are paired with the values.
 
-[====================================================================]
 
 ###[[Hash Map]]
 
@@ -142,8 +127,6 @@ Hash maps use [[hash sets|Hash Set]] to store the keys which then map to their v
 
 
 
-[====================================================================]
-
 ### [[Tree Map]]
 
 Tree maps use [[tree sets|Tree Set]] to  
@@ -153,21 +136,15 @@ Tree maps use [[tree sets|Tree Set]] to
 | Time Complexity | O(log n) | O(log n) | O(log n)
 
 
-[[====================================================================]]
-
 ## [[Trees]]
 
 Trees are data structures that follow a hierarchy, each element has a parent and each element has children. The element at the top of the tree with no parents is called a root. The element at the bottom of the tree with no children is called a leaf. 
 
 
-[====================================================================]
-
 ### [[Binary Tree]]
 
 A binary tree is a tree where each node can have at max 2 children
 
-
-[====================================================================]
 
 ## [[Heap]]
 
@@ -180,14 +157,11 @@ Heaps are trees which have the property that the a node must either be greater t
 | Time Complexity | O(log n) | O(log n) |
 
 
-[====================================================================]
-
 ## [[Trie]]
 
 A trie is tree which stores strings by their prefixes. A trie can replace a set for storing strings as it is faster than a hash set and it can the stored strings sorted but it takes more memory.
 
 Let m be the length of the string.
-
 
 | Operation | Membership | Insertion | Deletion 
 |-

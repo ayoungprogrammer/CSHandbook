@@ -1,10 +1,14 @@
 ## Introduction
 
-Graphs are a set of objects where some pairs of objects  **nodes** are usually connected by links **edges**. The nodes here can be seen numbered from 1 to 6. There are edges connecting these various nodes. The graph here can be seen as an undirected graph. That means that this graph can go from 4 to 5 and back to 4 from 5. The movements can be bidirectional and there is no particular direction that must be used. However in a directed graph (as seen below) there is a particular direction that must be followed. 
+Graphs are a set of objects where some pairs of objects  **nodes** are usually connected by links **edges**. The nodes here can be seen numbered from 1 to 6. There are edges connecting these various nodes.
+
+A **undirected** graph is a graph where the edge from A to B is the same as the edge from B to A
+
+A **directed** or **bidirectional** graph is a graph where edges have direction meaning if there is an edge from A to B then there may not be an edge from B to A. 
 
 A **subgraph** is a subset of edges and vertices within a graph.
 
-A directed acyclic graph (DAG) is a graph with no directed cycles (see topological sorting). 
+A **directed acyclic graph** (DAG) is a graph with no directed cycles (see topological sorting). 
 
 A **weighted** graph is a graph that contains weights or values assigned to each edge or node. Usually these weights act as the cost to reach/use that node.
 
@@ -55,12 +59,11 @@ A tree is a special graph with n-1 edges with n nodes. It has the special proper
 A **subtree** is a child tree of a tree.
 
 
-[==============================]
 ###Spanning Tree
 
 A spanning tree of a graph is a tree that spans all the nodes of the graph but only using some of the edges to connect all the nodes. 
 
-A [[Minimum Spanning Tree]] is the spanning tree that requires the minimum of some property such as total weight or total edges.
+A [[minimum spanning tree|Minimum Spanning Tree]] is the spanning tree that requires the minimum of some property such as total weight or total edges.
 
 Spanning tree algorithms are essential in networking to ensure no loops occur when sending data through a network.
 
@@ -68,7 +71,7 @@ Spanning tree algorithms are essential in networking to ensure no loops occur wh
 | Algorithm | Desc | Time | Space
 |-
 |[[Prim's]] | Using greedy method | O(n log n) | O(n^^2^^)
-|[[Kruskal]] | Using connected componenets| O(n log n) | O(n^^2^^)
+|[[Kruskal]] | Using connected components| O(n log n) | O(n^^2^^)
 
 
 ##Shortest Path
