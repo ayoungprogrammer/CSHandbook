@@ -48,7 +48,7 @@ public static int dijkstra(int[][] adjMatrix,int start,int end){
 
 ## Applications
 
-In general, Dijkstra is usually to goto method for finding the minimum cost between two nodes in any kind of network. For example, Dijkstra can be used in networking to find the shortest path between two hosts. It is also used in flight networking to find the cheapest cost to get from one airport to another airport. 
+In general, Dijkstra is usually the goto method for finding the minimum cost between two nodes in any kind of network. For example, Dijkstra can be used in networking to find the shortest path between two hosts. It can also be used in flight networking to find the cheapest cost to get from one airport to another airport. 
 
 ## Practice Exercises
 

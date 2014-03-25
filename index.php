@@ -68,7 +68,7 @@ function bfsLinks(){
 		if(file_exists($path)){
 			$content = file_get_contents($path);
 
-			preg_match_all('/\[\[([A-Za-z\_\s]*?)\]\]/',$content,$matches);
+			preg_match_all('/\[\[([A-Za-z\_\s\']+?)\]\]/',$content,$matches);
 			//print_r($matches);
 			foreach ($matches[1] as $link){
 				
@@ -122,6 +122,8 @@ function parse($str){
 	//^^n^^
 	$str = preg_replace('/\^\^([A-Za-z0-9]+?)\^\^/','<sup>$1</sup>',$str);
 	
+	//[[link | text]] => <ahref="./link">text</a>
+	$str = preg_replace('/\[\[([A-Za-z\_\s\']+?)\|([A-Za-z\_\s\']+?)\]\]/','<a href="./$2">$1</a>',$str);
 
 	//[[link]]  => <a href="./link">link</a>
 	$str = preg_replace('/\[\[([A-Za-z\_\s\']+?)\]\]/','<a href="./$1">$1</a>',$str);

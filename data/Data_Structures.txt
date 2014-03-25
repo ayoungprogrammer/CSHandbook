@@ -130,10 +130,11 @@ The advantage to this is that it is sorted but this is at the expense of speed.
 
 Maps (also called dictionaries) are a data structure that store pairs of key-values and are used to retrieve values from the keys. For example an English dictionary is a map, the keys are the words and the values are the definitions. If you were to look up the word "map" you would use the key (the word "map" in the dictionary) to look up the value (definition of "map"). Maps use sets to store the keys which are paired with the values.
 
-
 [====================================================================]
 
 ###[[Hash Map]]
+
+Hash maps use [[hash sets|Hash Set]] to store the keys which then map to their values.
 
 | Operation | Membership | Insertion | Deletion
 |-
@@ -144,6 +145,8 @@ Maps (also called dictionaries) are a data structure that store pairs of key-val
 [====================================================================]
 
 ### [[Tree Map]]
+
+Tree maps use [[tree sets|Tree Set]] to  
 
 | Operation | Membership | Insertion | Deletion
 |-
@@ -166,9 +169,9 @@ A binary tree is a tree where each node can have at max 2 children
 
 [====================================================================]
 
-### [[Heap]]
+## [[Heap]]
 
-Heaps are trees which have the property that the a node must either be greater than all the elements in its left and right subtrees (a max heap) or less than all the elements in its left and right subtrees (a min heap). Heaps are also known as a priority queue.
+Heaps are trees which have the property that the a node must either be greater than all the elements in its left and right subtrees (a max heap) or less than all the elements in its left and right subtrees (a min heap). [[Priority queue's|Priority Queue]] are most efficiently implemented as heaps.
 
 
 
@@ -179,7 +182,7 @@ Heaps are trees which have the property that the a node must either be greater t
 
 [====================================================================]
 
-### [[Trie]]
+## [[Trie]]
 
 A trie is tree which stores strings by their prefixes. A trie can replace a set for storing strings as it is faster than a hash set and it can the stored strings sorted but it takes more memory.
 
@@ -188,5 +191,5 @@ Let m be the length of the string.
 
 | Operation | Membership | Insertion | Deletion 
 |-
-| Time Complexity | O(m) || O(m) | O(m)
+| Time Complexity | O(m) | O(m) | O(m)
 
