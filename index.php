@@ -3,6 +3,7 @@
 require 'vendor/autoload.php';
 require 'parser.php';
 require 'breadcrumbs.php';
+require 'db.php';
 
 use \Michelf\MarkdownExtra;
 
@@ -71,29 +72,26 @@ config([
 
 	on('GET','/:page',function($page){
 
-		$path  = 'data/'.$page.'.txt';
+		
 		$title = preg_replace('/\_/',' ',$page);
 
-		if (file_exists($path)){
-			$content = file_get_contents($path);
+		if(article_exists($page)){
+			$content = get_article($page);
 			$content = parse($content);
-
 			render("list",['page'=>$page,'title'=>$title,'body'=>$content],false);
-		}
-		else {
+		}else {
 			redirect('./'.$page.'&=edit');
 		}
 	
 	});
 
 	on('POST','/:page&=submit',function($page){
-		$path  = 'data/'.$page.'.txt';
-		file_put_contents($path, params('content'));
+		$content = params('content');
+		save_article($page,$content);
 		redirect('./'.$page);
 	});
 	
 
-	
 	
 	dispatch();
 
