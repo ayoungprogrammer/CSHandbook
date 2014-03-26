@@ -1,0 +1,34 @@
+## Introduction
+
+Insertion Sort is the another n<sup>2</sup> sorting algorithm.
+
+It works by starting with an empty sorted sequence of numbers and then inserting every element in the array into the sorted sequence maintaining the order after each insert.
+
+The sorting algorithms are implemented to sort integer arrays but can be adapted to sort arrays of any data structure that is comparable. 
+
+## Implementation
+
+
+[[[[
+//sorts integers from smallest to greatest
+public static void InsertionSort (int a[]){
+	//iterates through the array selecting the smallest elements
+	for (int i=0;i<a.length;i++){
+		//element that needs to be inserted into the sorted list
+		int val = a[i]; 
+		//keeps track of where to insert the element
+		int index = i; 
+		
+		//loops through the already sorted list to find where to 
+		//insert the current element
+		while (index > 0 && a[index-1] > val){
+			//switches the current item at index with the one before 
+			//to check if the element that needs to be inserted will 
+			//go in the next spot
+			a[index] = a[index-1];
+			index--;
+		}
+		a[index] = val;
+	}
+}
+]]]]

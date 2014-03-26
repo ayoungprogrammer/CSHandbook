@@ -66,6 +66,13 @@ main{
         content: url('../img/link.png');
         margin-left:8px;
     }
+    main pre{
+        white-space: pre-wrap;       /* css-3 */
+        white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+        word-wrap: break-word;       /* Internet Explorer 5.5+ */
+        padding:10px;
+        border-radius: 10px;
+    }
     main section{
         -webkit-box-shadow: 0px 0px 20px rgb(0,100,180);
         -moz-box-shadow: 0px 0px 20px rgb(0,100,180);
