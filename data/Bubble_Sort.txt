@@ -1,0 +1,27 @@
+## Introduction
+
+Bubble sort is one of the most basic sorting algorithms, one of the first you should learn. 
+
+Its name describes how the algorithm works: bigger bubbles float to the top. This will become more clear when we see the implmentation.
+
+The sorting algorithms are implemented to sort integer arrays but can be adapted to sort arrays of any data structure that is comparable. 
+
+## Implementation
+
+[[[[
+//sorts integers from smallest to greatest
+public static void BubbleSort (int a[]){
+	for (int i=0;i<a.length;i++){
+		for (int j=1;j<a.length;j++){
+			//if the current bubble is smaller than the bubble that's 
+			//below then the bigger bubble floats up
+			if (a[j]<a[j-1]){
+				//swap the bubbles
+				int temp = a[j];
+				a[j] = a[j-1];
+				a[j-1] = temp;
+			}
+		}
+	}
+}
+]]]]

@@ -1,0 +1,31 @@
+## Introduction
+
+Selection Sort is similar to Bubble Sort in terms of complexity and arguably more intuitive. 
+
+Selection Sort works by selecting the smallest element and setting it as the first item in the array, then selecting the second element and setting that as the second item in the array and so on. This process repeats until the least smallest element (the largest element) is set as the last item in the array.
+
+The sorting algorithms are implemented to sort integer arrays but can be adapted to sort arrays of any data structure that is comparable. 
+
+## Implementation
+
+[[[[
+//sorts integers from smallest to greatest
+public static void SelectionSort (int a[]){
+	//iterates through the array selecting the smallest elements
+	for (int i=0;i<a.length-1;i++){
+		int minIndex = i;//var for storing where the ith smallest element is
+		//iterates through the array looking for the ith smallest element
+		for (int j=i+1;j<a.length;j++){
+			//if the current element is smaller than the current smallest element
+			if (a[j]<a[minIndex]){
+				//updated the location of the smallest element
+				minIndex = j;
+			}
+			//swap the current i with the smallest element
+			int temp = a[i];
+			a[i] = a[minIndex];
+			a[minIndex] = temp;
+		}
+	}
+}
+]]]]
