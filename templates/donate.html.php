@@ -45,16 +45,26 @@
                        </script>
                    </form>
                    -->
-                   <form id="payment-form" action="buy.php" method="POST">
+                   <form action="buy.php" method="POST" id="payment-form">
+
+
+
+                       <span class="help-block">You can pay using: Mastercard, Visa, American Express, JCB, Discover, and Diners Club.</span>
+
+                       <div class="alert alert-info"><h4>JavaScript Required!</h4>For security purposes, JavaScript is required in order to complete an order.</div>
+
                        <label>Card Number</label>
-                       <input type="text" size="20" autocomplete="off">
-                       <span>Enter the number without spaces or hyphens.</span>
+                       <input type="text" size="20" autocomplete="off" class="card-number input-medium">
+                       <span class="help-block">Enter the number without spaces or hyphens.</span>
                        <label>CVC</label>
-                       <input type="text" size="4" autocomplete="off">
+                       <input type="text" size="4" autocomplete="off" class="card-cvc input-mini">
                        <label>Expiration (MM/YYYY)</label>
-                       <input type="text" size="2">
+                       <input type="text" size="2" class="card-expiry-month input-mini">
                        <span> / </span>
-                       <input type="text" size="4">
+                       <input type="text" size="4" class="card-expiry-year input-mini">
+
+                       <button type="submit" class="btn" id="submitBtn">Submit Payment</button>
+
                    </form>
                </div>
             </section>
