@@ -1,5 +1,7 @@
 <?php 
 
+use \Michelf\MarkdownExtra;
+
 function parse($str){
 
 	// < > -> &lt; , %gt;

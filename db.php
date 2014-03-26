@@ -10,7 +10,7 @@ $mysqli = new mysqli("localhost",$user,$password);
 /*
 Returns if article $page exists
 */
-function article_exsits($page){
+function article_exists($page){
 	$path  = 'data/'.$page.'.txt';
 	return file_exists($path);
 }
