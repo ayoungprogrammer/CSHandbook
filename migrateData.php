@@ -30,7 +30,7 @@ $data_dir = 'data/';
 $dir = new DirectoryIterator($data_dir);
 foreach($dir as $fileinfo){
 	if(!$fileinfo->isDot() && $fileinfo->getExtension()=='txt'){
-		$title = $fileinfo->getBasename('.txt');
+		$title = mysql_real_escape_string($fileinfo->getBasename('.txt'));
 		$content = file_get_contents($data_dir.$fileinfo->getBasename());
 		$content = mysql_real_escape_string($content);
 		echo $fileinfo->getBasename('.txt')."\n";

@@ -12,9 +12,14 @@ Returns if article $page exists
 */
 function article_exists($page){
     global $mysqli;
-    return true;
-    $content = $mysqli->prepare('SELECT id FROM articles WHERE id= :page');
-    return ($content->num_rows > 0);
+    $stmt = $mysqli->prepare('SELECT id FROM articles WHERE id= ?');
+    $stmt->bind_param('s',$page);
+    $stmt->execute();
+   	$stmt->bind_result($res);
+   	$stmt->fetch();
+   	$stmt->close();
+    if($res)return true;
+    return false;
 }
 
 /*
@@ -23,9 +28,13 @@ returns content of article
 */
 function get_article($page){
     global $mysqli;
-    $content = $mysqli->query('SELECT content from articles where id="'.$page.'"');
-    $content = mysqli_fetch_array($content);
-    return $content[0];
+    $stmt = $mysqli->prepare('SELECT content from articles where id= ?');
+    $stmt->bind_param('s',$page);
+    $stmt->execute();
+    $stmt->bind_result($res);
+    $stmt->fetch();
+    $stmt->close();
+    return $res;
 }
 
 /*
@@ -34,8 +43,15 @@ POST: article $page is saved with $content
 */
 function save_article($page,$content){
     global $mysqli;
-    $mysqli->query("INSERT INTO articles (id,content)
-			VALUES ('".$page."','".$content."')");
+    $stmt = $mysqli->prepare(
+    	    "INSERT INTO articles (id,content)
+			VALUES (?,?)
+			ON DUPLICATE KEY UPDATE
+			   content = VALUES(content)");
+    $stmt->bind_param('ss',$page,$content);
+    $stmt->execute();
+    $stmt->close();
+
 }
 
 
