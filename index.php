@@ -5,7 +5,7 @@ require 'parser.php';
 require 'breadcrumbs.php';
 require 'db.php';
 
-use \Michelf\MarkdownExtra;
+
 
 
 
