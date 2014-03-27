@@ -32,6 +32,9 @@ header{
         #logo:hover{
             background: url('../img/logo.png') no-repeat;
         }
+        #logoHover{
+            display:none;
+        }
 		nav{
 			height:auto;
 			width:100%;

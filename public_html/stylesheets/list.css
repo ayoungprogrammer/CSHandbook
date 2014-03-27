@@ -85,7 +85,12 @@ main{
         white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
         word-wrap: break-word;       /* Internet Explorer 5.5+ */
         padding:10px;
-        border-radius: 10px;
+        border: 8px solid rgb(180,180,180);
+        border-radius: 8px;
+        overflow-y: scroll;
+        overflow-x: auto;
+        height: 500px;
+        line-height: 1.4em;
     }
     main section{
         -webkit-box-shadow: 0px 0px 20px rgb(0,100,180);
@@ -248,5 +253,16 @@ main{
         -ms-overflow-style: -ms-autohiding-scrollbar;
         border:10px solid rgb(200,200,200);
         border-radius: 10px;
+    }
+
+    main pre{
+        white-space: pre-wrap;       /* css-3 */
+        white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+        word-wrap: break-word;       /* Internet Explorer 5.5+ */
+        padding:0;
+        border: none;
+        border-radius: 10px;
+        height:auto;
+        overflow: hidden;
     }
 }
