@@ -11,20 +11,19 @@ if ($mysqli->connect_errno) {
     echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
 }
 
-if(!$mysqli->select_db("db")){
-	$mysqli->query("Create database if not exists db");
+if(!$mysqli->select_db("algorithms")){
+	$mysqli->query("Create database if not exists algorithms");
 	echo "DB does not exists, creating...\n";
 }else {
 	echo "DB exists\n";
-	$mysqli->select_db("db");
 }
-
+$mysqli->select_db("algorithms");
 
 $res = $mysqli->query("SHOW TABLES like db");
 
 $mysqli->query("CREATE TABLE articles (
 	id varchar(100) NOT NULL PRIMARY KEY, 
-	content varchar(1024) NOT NULL
+	content varchar(65000) NOT NULL
 	)");
 
 $data_dir = 'data/';
