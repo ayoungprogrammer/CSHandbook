@@ -1,23 +1,22 @@
 <?php
 
 
-$user = "root";
-$password = "";
+require 'db_init.php';
 
+$mysqli = new mysqli($host,$user,$password);
 
-$mysqli = new mysqli("localhost",$user,$password);
 
 if ($mysqli->connect_errno) {
     echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
 }
 
-if(!$mysqli->select_db("algorithms")){
+if(!$mysqli->select_db($db)){
 	$mysqli->query("Create database if not exists algorithms");
 	echo "DB does not exists, creating...\n";
 }else {
 	echo "DB exists\n";
 }
-$mysqli->select_db("algorithms");
+$mysqli->select_db($db);
 
 $res = $mysqli->query("SHOW TABLES like db");
 

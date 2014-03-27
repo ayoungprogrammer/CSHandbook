@@ -1,11 +1,9 @@
 <?php
 
+require 'db_init.php';
 
-$user = "root";
-$password = "";
-
-
-$mysqli = new mysqli("localhost",$user,$password,"algorithms");
+$mysqli = new mysqli($host,$user,$password);
+$mysqli->select_db($db);
 
 /*
 Returns if article $page exists
