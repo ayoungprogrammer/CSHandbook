@@ -1,0 +1,12 @@
+## Introduction
+
+Pattern matching is finding if a certain sequence of elements exists in another larger sequence of elements. For example we want to find if the string "abc" is in the string "abdabdbdacbaabcasd" (which the answer is yes). 
+
+## [[Knuth Morris Pratt]]
+
+## [[Rabin Karp]]
+
+## [[Finite State Automata]]
+
+## [[Boyer Moore]]
+

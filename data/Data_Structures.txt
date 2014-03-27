@@ -72,7 +72,7 @@ Sets are data structures that stores values and is used for testing if an elemen
 
 ### [[Hash Sets]]
 
-Hash sets generate "hashes" from elements and use equality checks for "hashes" before checking for equality between elements. Usually the hashes will be a number and be different between most elements. A hash set uses "buckets" which is a linked list of elements which have the same hash as the other elements in the "bucket". To check if an element is in the hash set, the hash of the element is computed and the hash set iterates through the bucket with the same hash to see if there is an element in the linked list that is equal. To add an element, we take the hash of it and put it in the bucket with the corresponding hash. When two element have the same hash, a "collision" occurs and when there are too many collisions then the hash map becomes inefficient. An efficient hash map will reallocate itself with twice the amount of buckets if there are too many collisions.
+Hash sets are sets that use hashes to store elements. A hashing algorithm is an algorithm that takes an element and converts it to a smaller chunk called a **hash**.
 
 For example, we have the hash set comprising of the numbers: 3523, 3242342, 815, 538, 123.  Our hash algorithm is (x mod 10) so our buckets will look like:
 
