@@ -61,7 +61,7 @@ config([
 		$title = preg_replace('/\_/',' ',$page);
 
 		if (file_exists($path)){
-			$content = file_get_contents($path);
+            $content = get_article($page);
 			
 			render("edit",['page'=>$page,'title'=>$title,'body'=>$content],false);
 		}

@@ -12,7 +12,8 @@ Returns if article $page exists
 */
 function article_exists($page){
     global $mysqli;
-    $content = $mysqli->query('SELECT id FROM articles WHERE id="'.$page.'"');
+    return true;
+    $content = $mysqli->prepare('SELECT id FROM articles WHERE id= :page');
     return ($content->num_rows > 0);
 }
 
