@@ -27,28 +27,42 @@ main{
     padding:10px;
     max-width:740px;
     display: inline-block;
-    margin: 20px 0 0 0;
+    margin-top: 20px;
     }
-    #breadcrumbs{
+    ul.breadcrumbs{
+        padding: 0;
         margin-left: 10px;
-    }
-    #breadcrumbs a:before{
-        content:" » ";
-    }
-    #breadcrumbs a{
-        -webkit-transition: all 0.4s  ease;
-        -moz-transition: all 0.4s  ease;
-        -o-transition: all 0.4s  ease;
-        text-decoration: none;
-        color:rgb(100,100,100);
-    }
-    #breadcrumbs a:hover{
-        -webkit-transition: all 0.4s  ease;
-        -moz-transition: all 0.4s  ease;
-        -o-transition: all 0.4s  ease;
-        text-decoration: none;
-        color: rgb(0,100,180);
-    }
+        margin-bottom: 20px;
+        list-style: none;
+        }
+        ul.breadcrumbs li{
+            display: inline-block;
+            margin-right: 5px;
+        }
+        ul.breadcrumbs li:before{
+            content:" » ";
+            margin-right: 3px;
+        }
+        ul.breadcrumbs a{
+            -webkit-transition: all 0.4s  ease;
+            -moz-transition: all 0.4s  ease;
+            -o-transition: all 0.4s  ease;
+            text-decoration: none;
+            padding: 2px 10px;
+            border-radius: 20px;
+            color:white;
+            background-color: rgb(180,180,180);
+        }
+        ul.breadcrumbs li:last-child a{
+            cursor: default;
+            background-color: rgb(100,180,250);
+        }
+        ul.breadcrumbs a:hover{
+            -webkit-transition: all 0.4s  ease;
+            -moz-transition: all 0.4s  ease;
+            -o-transition: all 0.4s  ease;
+            background-color: rgb(100,180,250);
+        }
 
     main h2{
         color: rgb(0,100,180);

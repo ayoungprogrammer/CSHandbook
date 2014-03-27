@@ -3,12 +3,13 @@ function breadcrumbs($link){
 	$map = json_decode(file_get_contents('breadcrumbs.txt'),true);
 	//print_r($map);
 	$tok = strtok($map[$link],'/');
-	echo '<p id="breadcrumbs">';
+	echo '<ul class="breadcrumbs">';
 	while($tok !== false){
 		$ref = str_replace(' ','_',$tok);
-		echo '<a href=./'.$ref.'>'.$tok.'</a>';
+		echo '<li><a href=./'.$ref.'>'.$tok.'</a></li>';
 		$tok = strtok('/');
 	}
+    echo '</ul>';
 }
 
 function bfsLinks(){
