@@ -1,0 +1,299 @@
+[33mcommit 2af2c896a895c8fd2cda4c6b20a68077c94b7f26[m
+Merge: 550fe9b c238e0b
+Author: Michael <michaelyoung1995@gmail.com>
+Date:   Wed Mar 26 20:59:00 2014 -0400
+
+    merge
+
+[33mcommit 550fe9b9be369bcffb9e174911e7807347903bd5[m
+Author: Michael <michaelyoung1995@gmail.com>
+Date:   Wed Mar 26 20:58:35 2014 -0400
+
+    article changes
+
+[33mcommit c238e0bebbc46fda77ee503fd3073cac9ed522af[m
+Merge: 822af35 3c924b1
+Author: simonhuang989 <simonhuang989@hotmail.com>
+Date:   Wed Mar 26 20:48:47 2014 -0400
+
+    migrate to db
+
+[33mcommit 822af35ba68295808ed20645802121ae69649676[m
+Author: simonhuang989 <simonhuang989@hotmail.com>
+Date:   Wed Mar 26 19:27:46 2014 -0400
+
+    connect to db
+
+[33mcommit 3c924b121ac53122eb8505b7f8427ec430063536[m
+Author: Michael <michaelyoung1995@gmail.com>
+Date:   Wed Mar 26 19:27:44 2014 -0400
+
+    hotfix
+
+[33mcommit a678ed02b5e58e4d89f82662a05bcf86757fdd20[m
+Author: Michael <michaelyoung1995@gmail.com>
+Date:   Wed Mar 26 18:42:49 2014 -0400
+
+    db refactor
+
+[33mcommit 325277a9c94c5a62ccad91a48bd53bbacddca02b[m
+Merge: aa28b44 a009e33
+Author: Michael <michaelyoung1995@gmail.com>
+Date:   Wed Mar 26 18:03:26 2014 -0400
+
+    merge
+
+[33mcommit aa28b4489a8197f86198367736c135a64f3642b2[m
+Author: Michael <michaelyoung1995@gmail.com>
+Date:   Wed Mar 26 18:02:02 2014 -0400
+
+    refactor
+
+[33mcommit a009e3303c9e8701b34f83654dac1b121dca9e34[m
+Author: simonhuang989 <simonhuang989@hotmail.com>
+Date:   Wed Mar 26 16:56:49 2014 -0400
+
+    sorting algs
+
+[33mcommit e34337792b60c0b345f24948daebaa5af626795c[m
+Author: simonhuang989 <simonhuang989@hotmail.com>
+Date:   Wed Mar 26 02:09:46 2014 -0400
+
+    updated
+
+[33mcommit 0f4bcace016add9996a206341198ebbcf2cb303d[m
+Merge: c39a2eb d14daf9
+Author: root <root@www.ayoungprogrammer.com>
+Date:   Tue Mar 25 11:09:59 2014 -0400
+
+    Merge branch 'master' of https://github.com/simonhuang989/Algorithms-Wiki
+
+[33mcommit d14daf9968cb6f19cc0d542ee5966a6aad15281c[m
+Author: simonhuang989 <simonhuang989@hotmail.com>
+Date:   Tue Mar 25 12:24:51 2014 -0400
+
+    fixed superscript
+
+[33mcommit c39a2eb17d06acf319701f3ddbba3a74ad3c8b6f[m
+Author: root <root@www.ayoungprogrammer.com>
+Date:   Tue Mar 25 11:09:56 2014 -0400
+
+    article edits
+
+[33mcommit 998ac2392b64f329fdf4575700011dfaf4921dde[m
+Author: simonhuang989 <simonhuang989@hotmail.com>
+Date:   Tue Mar 25 00:45:57 2014 -0400
+
+    adjusted links
+
+[33mcommit bb00f6223b2fa6fccda2608d3c054e3a0350a0f7[m
+Author: Michael <michaelyoung1995@gmail.com>
+Date:   Tue Mar 25 00:43:20 2014 -0400
+
+    htaccess
+
+[33mcommit 16d5f053141d7b554182210771ec63f180a54629[m
+Merge: a9d3bbd e9150fd
+Author: Michael <michaelyoung1995@gmail.com>
+Date:   Tue Mar 25 00:38:29 2014 -0400
+
+    merged
+
+[33mcommit a9d3bbd53614fd82df7d63f681f01fa4f7d59f9e[m
+Author: Michael <michaelyoung1995@gmail.com>
+Date:   Tue Mar 25 00:37:27 2014 -0400
+
+    fixed links
+
+[33mcommit e9150fd02e30d52c437009d49e2c1c6bafb3ba86[m
+Author: simonhuang989 <simonhuang989@hotmail.com>
+Date:   Tue Mar 25 00:36:08 2014 -0400
+
+    styled links in list view
+
+[33mcommit 31f138907139d1520697fd8830cd6cb2869afc97[m
+Author: simonhuang989 <simonhuang989@hotmail.com>
+Date:   Tue Mar 25 00:32:00 2014 -0400
+
+    added link icon
+
+[33mcommit 56345dbb5628f88312ef5281f23a9627dafbc9aa[m
+Author: root <root@www.ayoungprogrammer.com>
+Date:   Mon Mar 24 22:28:25 2014 -0400
+
+    .htaccess fixed
+
+[33mcommit a5e5ef3a9b453093c690ea1efea9cadabe13601c[m
+Author: Michael <michaelyoung1995@gmail.com>
+Date:   Mon Mar 24 19:36:50 2014 -0400
+
+    htaccess
+
+[33mcommit 80eb496926e315c875e92bdea8d677216290e94b[m
+Author: Michael <michaelyoung1995@gmail.com>
+Date:   Mon Mar 24 19:20:35 2014 -0400
+
+    added .htaccess
+
+[33mcommit 97307dddabe213a1c5fadda88156cd72c8818347[m
+Author: Michael <michaelyoung1995@gmail.com>
+Date:   Mon Mar 24 19:16:47 2014 -0400
+
+    added .htaccess
+
+[33mcommit 669bac68726ff5ce5d33343f13f75d5bc35d30ed[m
+Author: simonhuang989 <simonhuang989@hotmail.com>
+Date:   Sun Mar 23 23:09:17 2014 -0400
+
+    changed banner pics
+
+[33mcommit 4a2cd0e31f9cf65908fd7cd679edf2973062203e[m
+Author: simonhuang989 <simonhuang989@hotmail.com>
+Date:   Sat Mar 22 19:21:12 2014 -0400
+
+    donate page
+
+[33mcommit 96e09b7cf167f658a1ab3eedb1bd4a30fd419991[m
+Author: simonhuang989 <simonhuang989@hotmail.com>
+Date:   Fri Mar 21 21:26:13 2014 -0400
+
+    typos
+
+[33mcommit 4b8945d245a8e166af932a26b8df847aeef50a5a[m
+Author: simonhuang989 <simonhuang989@hotmail.com>
+Date:   Fri Mar 21 21:24:14 2014 -0400
+
+    mobile site touchup
+
+[33mcommit d2253308d33f491c9be879053ecbb33f1ae279a3[m
+Author: simonhuang989 <simonhuang989@hotmail.com>
+Date:   Fri Mar 21 20:59:45 2014 -0400
+
+    table responsiveness added
+
+[33mcommit bd0f3f3b34aa9816ae4611e6733eb6824c0b34d7[m
+Author: simonhuang989 <simonhuang989@hotmail.com>
+Date:   Fri Mar 21 14:30:26 2014 -0400
+
+    mobile website changes
+
+[33mcommit 294952960c4bc51f2202994e455259a52b5dc6d5[m
+Author: simonhuang989 <simonhuang989@hotmail.com>
+Date:   Fri Mar 21 12:16:18 2014 -0400
+
+    favicon
+
+[33mcommit 12ee219d9a530ba09ffb6f20ede20f8bcc4f40d9[m
+Author: simonhuang989 <simonhuang989@hotmail.com>
+Date:   Fri Mar 21 12:09:39 2014 -0400
+
+    minor css changes
+
+[33mcommit 45ac46b27195cc0c9926498426e6fc87621ef5ec[m
+Author: Michael <michaelyoung1995@gmail.com>
+Date:   Thu Mar 20 17:27:43 2014 -0400
+
+    Remove double columns
+
+[33mcommit dc7c1c5121b9126f49e959e21d3dc05c63115c76[m
+Merge: 82ca71f da9dde1
+Author: Michael <michaelyoung1995@gmail.com>
+Date:   Thu Mar 20 17:24:57 2014 -0400
+
+    Merge branch 'backend'
+
+[33mcommit da9dde105157f92391aef6ef61840ea40fa7ca5f[m
+Author: Michael <michaelyoung1995@gmail.com>
+Date:   Thu Mar 20 17:24:28 2014 -0400
+
+    update backend
+
+[33mcommit 82ca71fe14c066bd4fe570179340e7646763bbc8[m
+Author: simonhuang989 <simonhuang989@hotmail.com>
+Date:   Thu Mar 20 17:15:20 2014 -0400
+
+    adjusted breadcrumbs
+
+[33mcommit 90c9aec1a88f14933de4b36ce97cce21a54542b0[m
+Author: simonhuang989 <simonhuang989@hotmail.com>
+Date:   Thu Mar 20 16:56:52 2014 -0400
+
+    merge
+
+[33mcommit f8b73174ff837ed1f376b06a97a62a1214442e94[m
+Merge: 86627cc 75dbc63
+Author: Michael <michaelyoung1995@gmail.com>
+Date:   Thu Mar 20 14:36:27 2014 -0400
+
+    mere
+
+[33mcommit 75dbc63bd1866b432ac3804c1b7630e04a0b6623[m
+Author: Michael <michaelyoung1995@gmail.com>
+Date:   Thu Mar 20 14:34:11 2014 -0400
+
+    backend changes
+
+[33mcommit 86627ccc10ee5915f4e420d1b7f05d1f032e4825[m
+Author: simonhuang989 <simonhuang989@hotmail.com>
+Date:   Thu Mar 20 14:32:04 2014 -0400
+
+    added about content
+
+[33mcommit 1636a9a4951845bcc73dc0b05c4b299934c20db4[m
+Author: simonhuang989 <simonhuang989@hotmail.com>
+Date:   Thu Mar 20 13:31:15 2014 -0400
+
+    color rework
+
+[33mcommit 6333fe5d9a5d87d1da61dab536470d60af67dbb6[m
+Author: simonhuang989 <simonhuang989@hotmail.com>
+Date:   Thu Mar 20 02:33:19 2014 -0400
+
+    styled list view
+
+[33mcommit d8459fdf9e616cee4a84795e36339cd17ec14f9d[m
+Author: simonhuang989 <simonhuang989@hotmail.com>
+Date:   Thu Mar 20 01:17:43 2014 -0400
+
+    testing branches
+
+[33mcommit aa490d5a0bdce6170b5e77c45def74c02ceab39f[m
+Author: simonhuang989 <simonhuang989@hotmail.com>
+Date:   Thu Mar 20 01:16:34 2014 -0400
+
+    fix
+
+[33mcommit df568da87c0f423f625c09c738e9d0bf4c682a44[m
+Author: Michael <michaelyoung1995@gmail.com>
+Date:   Thu Mar 20 01:15:31 2014 -0400
+
+    fixed tags
+
+[33mcommit 01aed09e34dac20c691d452cf70d78af3f857712[m
+Merge: aa8c318 c292089
+Author: Michael <michaelyoung1995@gmail.com>
+Date:   Thu Mar 20 01:01:48 2014 -0400
+
+    Merge branch 'articles'
+
+[33mcommit c29208977127260f008615cca15c3f968571e29b[m
+Author: Michael <michaelyoung1995@gmail.com>
+Date:   Thu Mar 20 01:01:19 2014 -0400
+
+    backend
+
+[33mcommit aa8c3181e3feba451afd3aa73cb8be2769fcd541[m
+Author: simonhuang989 <simonhuang989@hotmail.com>
+Date:   Thu Mar 20 01:00:57 2014 -0400
+
+    new logo
+
+[33mcommit d4bee3eac643bc96c9e6d2274506dabf80e6203c[m
+Author: Michael <michaelyoung1995@gmail.com>
+Date:   Wed Mar 19 22:11:50 2014 -0400
+
+    Added better parsing and pages
+
+[33mcommit 2bac8fa4cd7a7b90f6b1364e60752f29ec711786[m
+Author: simonhuang989 <simonhuang989@hotmail.com>
+Date:   Wed Mar 19 12:18:

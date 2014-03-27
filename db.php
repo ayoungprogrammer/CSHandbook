@@ -5,17 +5,15 @@ $user = "root";
 $password = "";
 
 
-$mysqli = new mysqli("localhost",$user,$password);
+$mysqli = new mysqli("localhost",$user,$password,"algorithms");
 
 /*
 Returns if article $page exists
 */
 function article_exists($page){
     global $mysqli;
-    if ($mysqli->query('SELECT id from articles where id="$page"')>0){
-        return false;
-    }
-    return true;
+    $content = $mysqli->query('SELECT id FROM articles WHERE id="'.$page.'"');
+    return ($content->num_rows > 0);
 }
 
 /*
@@ -24,8 +22,9 @@ returns content of article
 */
 function get_article($page){
     global $mysqli;
-    $content = $mysqli->query('SELECT content from articles where id="$page"');
-    return $content;
+    $content = $mysqli->query('SELECT content from articles where id="'.$page.'"');
+    $content = mysqli_fetch_array($content);
+    return $content[0];
 }
 
 /*
