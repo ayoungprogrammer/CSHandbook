@@ -9,9 +9,9 @@
     margin-top:40px;
     }
     .container .row{
-        -webkit-transition: all 0.3s  ease;
-        -moz-transition: all 0.3s  ease;
-        -o-transition: all 0.3s  ease;
+        -webkit-transition: opacity 0.3s  ease, background-position-y 0.3s  ease;
+        -moz-transition: opacity 0.3s  ease, background-position-y 0.3s  ease;
+        -o-transition: opacity 0.3s  ease, background-position-y 0.3s  ease;
         opacity:0.6;
         margin-top:60px;
         width: 280px;
@@ -23,30 +23,24 @@
         line-height: 4em;
     }
     .container .row:hover{
-        -webkit-transition: all 0.3s  ease;
-        -moz-transition: all 0.3s  ease;
-        -o-transition: all 0.3s  ease;
+        -webkit-transition: opacity 0.3s  ease, background-position-y 0.3s  ease;
+        -moz-transition: opacity 0.3s  ease, background-position-y 0.3s  ease;
+        -o-transition: opacity 0.3s  ease, background-position-y 0.3s  ease;
         opacity:1;
+        -ms-background-position-x: -280px;
+        background-position-x: -280px;
+        -ms-background-position-y: -10px;
+        background-position-y: -10px;
     }
 
     .row:nth-child(1){
-        background: url('../img/icon-website.png');
+        background: url('../img/icon_website.png');
     }
     .row:nth-child(2){
-        background: url('../img/icon-guys.png');
+        background: url('../img/icon_guys.png');
     }
     .row:nth-child(3){
-        background: url('../img/icon-algorithms.png');
-    }
-
-    .row:nth-child(1):hover{
-        background: url('../img/icon-website-hover.png');
-    }
-    .row:nth-child(2):hover{
-        background: url('../img/icon-guys-hover.png');
-    }
-    .row:nth-child(3):hover{
-        background: url('../img/icon-algorithms-hover.png');
+        background: url('../img/icon_algorithms.png');
     }
 
 

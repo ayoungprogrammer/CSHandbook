@@ -30,21 +30,31 @@ header sup{
     padding:0;
 }
     #logo{
-    -webkit-transition: all 0.4s  ease;
-    -moz-transition: all 0.4s  ease;
-    -o-transition: all 0.4s  ease;
-    margin-top:10px;
-    float:left;
-    width:260px;
-    height:50px;
-    background: url('../img/logo.png') no-repeat;
-    }
-    #logo:hover{
+        -webkit-transition: all 0.4s  ease;
+        -moz-transition: all 0.4s  ease;
+        -o-transition: all 0.4s  ease;
+        margin-top:10px;
+        float:left;
+        width:260px;
+        height:50px;
+        background: url('../img/logo.png') no-repeat;
+        opacity: 1;
+        z-index: 10;
+        }
+    #logoHover{
          -webkit-transition: all 0.4s  ease;
          -moz-transition: all 0.4s  ease;
          -o-transition: all 0.4s  ease;
-         background: url('../img/logo_hover.png') no-repeat;
-     }
+        margin-top:10px;
+        float:left;
+        width:260px;
+        height:50px;
+        background: url('../img/logo_hover.png') no-repeat;
+        position:relative;
+        left: -260px;
+        opacity:0;
+        z-index: 6;
+        }
     nav{
         height: 50px;
         padding: 20px 10px 10px 10px;

@@ -1,6 +1,6 @@
 <header>
     <div id="navContainer">
-        <div><a href="./"><div id="logo"></div></a></div>
+        <div><a href="./"><div id="logo"></div><div id="logoHover"></div></a></div>
         <nav>
             <ul>
                 <li><a href="./">Algorithms</a>

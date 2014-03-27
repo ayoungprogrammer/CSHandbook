@@ -16,6 +16,17 @@
             }
         }
 
+        var logoLink = $('#navContainer div a');
+        var logo = $('#logo');
+        var logoHover = $('#logoHover');
+        logoLink.mouseenter(function(){
+            logo.animate({'opacity': 0},100);
+            logoHover.animate({'opacity': 1},400);
+        });
+        logoLink.mouseleave(function(){
+            logo.animate({'opacity': 1},400);
+            logoHover.animate({'opacity': 0},100);
+        });
     })();
 </script>
 <script type="text/javascript" src="./public_html/js/responsive_nav.js"></script>
