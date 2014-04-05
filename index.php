@@ -57,10 +57,9 @@ config([
 
 
 	on('GET','/:page&=edit',function($page){
-		$path  = 'data/'.$page.'.txt';
 		$title = preg_replace('/\_/',' ',$page);
 
-		if (article_exists($path)){
+		if (article_exists($page)){
             $content = get_article($page);
 			
 			render("edit",['page'=>$page,'title'=>$title,'body'=>$content],false);
