@@ -60,7 +60,7 @@ config([
 		$path  = 'data/'.$page.'.txt';
 		$title = preg_replace('/\_/',' ',$page);
 
-		if (file_exists($path)){
+		if (article_exists($path)){
             $content = get_article($page);
 			
 			render("edit",['page'=>$page,'title'=>$title,'body'=>$content],false);
