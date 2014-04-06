@@ -7,9 +7,87 @@ A doubly linked list is a linked list that has pointers going backwards as well 
 
 ## Implementation
 
-### Get i
+In Java, there already exists a LinkedList class but we will implement our own.
 
+### Link Class
 
+The Link class for each "link" in the Linked List. In each Link we only need the value and location of the previous and next node. 
+
+[[[[
+class Link{
+	int value;
+	Link next;
+	Link prev;
+	public Link(int value){
+		this.value = value;
+		this.next = null;
+		this.prev = null;
+	}
+}
+]]]]
+
+### Create
+
+Create the linked list by initializing the starting node as null and setting the size to empty.
+[[[[
+public LinkedList(){
+	start = null;
+	size = 0;
+}
+]]]]
+ 
+### Add to Head
+
+Create a new node with the value given and add it to the head. We have to set the current head previous node to the new node and the new next next to the last node.
+
+[[[[
+public void addToHead(int value){
+	Link nn = new Link(value);
+	nn.next = start;
+	start.prev = nn;
+	start = nn;
+	size++;
+}
+]]]]
+
+### Get 
+
+Get retrieves the value at the specified index. We have to loop through the entire list to get the index we want because the nodes are not in the same block of memory.
+
+[[[[
+/*
+* Gets the value at index
+*/
+public int get(int index){
+	int i = 0;
+	Link curNode = start;
+	while(curNode!=null){
+		if(index==i){
+			return curNode.value;
+		}
+		curNode = curNode.next;
+		i++;
+	}
+	throw new ArrayIndexOutOfBoundsException();
+}
+]]]]
+
+### Delete
+
+To delete the current node we set the previous node next link to the link after and the same for the previous link of the next node.
+
+[[[[
+/*
+ * Deletes value at current node
+ */
+public void delete(Link node){
+	if(node.prev!=null)node.prev.next = node.next;
+	if(node.next!=null)node.next.prev = node.prev;
+	size--;
+}
+]]]]
 ## Applications
 
 ## Exercises
+
+

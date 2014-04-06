@@ -18,4 +18,4 @@ Area = 0.5 (x1y2+x2y3+ .... + xn-1yn + xny1 - x2y1 - x3y2 - ... - xnyn-1 - x1yn
 
 ##Point Test
 
-To test if a point is in a polygon, we take a random outside of the polygon and draw a line from that point to the testing point. On the line we count the number of times it crosses a line segment from the polygon and if it is even, then the point is not in the polygon and if it is odd, then the point is inside the polygon
+To test if a point is in a polygon, we take a random outside of the polygon and draw a line from that point to the testing point. On the line we count the number of times it crosses a line segment from the polygon and if it is even, then the point is not in the polygon and if it is odd, then the point is inside the polygon.

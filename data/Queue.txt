@@ -1,0 +1,7 @@
+## Introduction
+
+A queue is a data structure with the property that it can only have removal from the front and insertion from the back (FIFI, first in first out). Removal from the front is called "pop" or "dequeue". Insertion from the back is called "push" or "enqueue". As the name implies queues are the same as those found in every day life, for example a queue for a bus stop. The first person in line for the bus will get on the bus first and the last person in line will get on the bus last.
+
+Queues are often used for buffer systems, for example a text message service. The messages that arrive at the server first are relayed first and the messages that arrive later are relayed later.
+
+Queues are usually implemented as a linked list because its memory size changes as more elements and pushed and popped. 

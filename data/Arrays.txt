@@ -8,15 +8,17 @@ Since arrays are fixed length, if you wanted to add more elements when your arra
 
 Arrays can be multidimensional meaning you can have an array of array of objects.
 
-[[======]]
+## Implementation
 
-##Create array
+
+ Operation | Create | Get i | Set i
+-----------|---------|--
+Time Complexity | O(n) |  O(1) | O(1) 
+### Create array
 
 Creating an array allocates a block of memory for us to store the elements. 
 
-[========]
 
-###Implementation
 
 [[[[
 public static int[] createArray(int size){
@@ -25,11 +27,10 @@ public static int[] createArray(int size){
 }
 ]]]]
 
-[=====]
+### Get
 
-## Get Element at Index
+When we want to get the element of an index all we have to do is offset the index by the array. However we need to check that the index is within bounds of the array.
 
-When we want to get the element of an index all we have to do is offset the index by the array. However we need to check th
 
 [[[[
 public static int getElemenent(int[] arr, int i){
@@ -40,23 +41,22 @@ public static int getElemenent(int[] arr, int i){
 }
 ]]]]
 
-[[===============================]]
 
+### Set
 
-## Insert Element
+Setting is very similar to getting but instead we change the value in the array.
+
 [[[[
-public static int[] insertElement(int[] arr,int index,int e){
-	int[] arr2 = new int[arr.length+1];
-	//Copy element up to index of insertion
-	for(int i=0;i<index;i++){
-		arr2[i] = arr[i];
-	}
-	//Copy evrything after index of insertion
-	for(int i=index;i<arr.length;i++){
-		arr2[i+1] = arr[i];
-	}
-	//Set inserted element
-	arr2[index] = e;
-	return arr2;
+public static void setElemenent(int[] arr, int i,int value){
+    if(i<0 || i>=arr.length){
+        throw new ArrayIndexOutOfBoundsException();
+    }
+    arr[i] = value;
 }
 ]]]]
+
+## See Also
+
+* [[Vector]]
+* [[Stack]]
+

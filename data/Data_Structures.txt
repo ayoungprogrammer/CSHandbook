@@ -4,34 +4,35 @@ Data structures are a way of storing data such that it can be accessed or change
 
 ## [[Arrays]]
 
-An array is the most basic data structure that holds a number of fixed elements of the same type in a block of data. The fact that it is in one block and the same type is important because it allows accessing the ith element in constant time. For example if an array is at location 0x4000 that contains 10 integers (4 bytes), then getting the ith element is simple as reading the integer at 0x4000 + (4 * i). 
+An array is the most basic data structure that holds a number of fixed elements of the same type in a block of data. The fact that it is in one block and the same type is important because it allows accessing the element at index i very quickly. 
 
-However if you want to insert an element into an array at the ith position you will need to move everything past the ith element by 1 and similarly with deletion.
-
-Since arrays are fixed length, if you wanted to add more elements when your array is already full, you will need to allocate a new array of larger size.
+However if you want to insert an element into an array at index i you will need to move everything past the ith element by 1 and similarly with deletion.
 
 Arrays can be multidimensional meaning you can have an array of array of objects. 
 
- Operation | Get ith | Insertion | Deletion 
------------|---------|-----------|--------
-Time Complexity | O(1) | O(n) | O(n)
+
+### [[Vector]]
+
+Vectors are arrays that are able to be dynamically resized. This allows the features of insertion, removal and deletion. Vectors are implemented as arrays and when more space is required, they are copied to a new array with twice the original size.
 
 
-
-
-
+ Operation | Create | Get  | Set | Insert | Delete
+-----------|---------|--
+Time Complexity | O(1) | O(1)  | O(1) | O(n) | O(n)
 ### [[Linked List]] 
 
-A linked list is similar to an array but it is different such that it is not stored in one block of data. Each element of the linked list also contains a point to the next element thus forming a chain of pointers. Since the elements aren't in a block, accessing the ith element must be done by traversing the entire linked list by following each pointer to the next. However, this also allows insertion to be done more quickly by simply changing the point of the previous element and setting to the pointer of the current element to the next element. Deletion is also done by taking the previous element and changing its pointer to two elements ahead. 
+A **pointer** holds the memory location of another object.
+
+A linked list is similar to an array but it is different such that it is not stored in one block of data. Each element can be stored in a random place in memory but each element contains a pointer to the next element thus forming a chain of pointers. Since the elements aren't in a block, accessing the ith element must be done by traversing the entire linked list by following each pointer to the next. However, this also allows insertion to be done more quickly by simply changing the point of the previous element and setting to the pointer of the current element to the next element. Deletion is also done by taking the previous element and changing its pointer to two elements ahead. 
 
 A doubly linked list is a linked list that has pointers going backwards as well as forwards.
 
 
-| Operation | Get ith | Insertion* | Deletion*
+| Operation | Get | Add at node | Delete at node | Add | Delete
 |-----------|---------|------------|---------
-| Time Complexity | O(n) | O(1) | O(1)
+| Time Complexity | O(n) | O(n) | O(n) | O(1) | O(1)
 
-*We assume we are already at the element when inserting. If not, then to get the element we would have to iterate through the linked list until we are at i
+
 
 
 
@@ -67,15 +68,20 @@ Stacks are used for function calls on the memory stack. Whenever a function is c
 
 ## [[Sets]]
 
-Sets are data structures that stores values and is used for testing if an element already exists.  Sets generally have three operations: insertion, deletion and membership test. '''Membership''' is when is an element exists within the set. Insertion places an element into the set and deletion removes an element from the set.
+Sets are data structures that stores values and are used for testing if an element already exists within the set.  Sets generally have three operations: insertion, deletion and membership test. 
+
+**Membership** test is checking whether an element exists within the set. Insertion places an element into the set and deletion removes an element from the set.
 
 
 ### [[Hash Sets]]
 
-Hash sets are sets that use hashes to store elements. A hashing algorithm is an algorithm that takes an element and converts it to a smaller chunk called a **hash**.
+Hash sets are sets that use hashes to store elements. A hashing algorithm is an algorithm that takes an element and converts it to a smaller chunk called a **hash**. For example let our hashing algorithm be (x mod 10). So the hashes of 232, 217 and 10 be 2,7, and 9 respectively. 
 
-For example, we have the hash set comprising of the numbers: 3523, 3242342, 815, 538, 123.  Our hash algorithm is (x mod 10) so our buckets will look like:
+For every element in a hash set, the hash is computed and elements with the same hash are grouped together and stored in a [[linked list|Linked List]]. The linked list is called a **bucket**.
 
+If we want to check if an element already exists within the set, we first compute the hash of the element and then search through the linked list associated with the hash to see if the element is contained.
+
+Let use the example of the hashset of the elements of 3242342, 3523, 123, 815 and 538. The hash set looks like this when computed:
 
 Bucket | List
 -------|-----
@@ -89,7 +95,11 @@ Bucket | List
 8 | 538
 9 |
 
-If we wanted to check if 7239 was in the hash set, we would get the hash (7238 mod 10 = 8) and then we would check elements in bucket 8 for equality. Since 528 is not equal to 7238 and there are no more elements in bucket 8, then 7238 is not in the hash set.
+If we wanted to check if 7238 was in the hash set, we would get the hash (7238 mod 10 = 8). So we get the bucket associated with the hash 8 and we get the list of (538). When we iterate through this short list, we see that 7238 is not a member of the set. 
+
+Similarly, if we wanted to insert 7238 into the hash set, we would check if it exists and if it did not we would append the element to the end of the bucket. For deletion we would find 7238 check if it existed in the set and remove it from the bucket. 
+
+Hash sets are very efficient in all three set operations if a good hashing algorithm is used. When the objects are that being stored are large then hash sets are effective as a set.
 
 
 | Operation | Membership | Insertion | Deletion
@@ -97,14 +107,13 @@ If we wanted to check if 7239 was in the hash set, we would get the hash (7238 m
 | Time Complexity | O(1) | O(1) | O(1)
 
 
-The advantage of hash map is that it is very fast but a disadvantage is that it is not sorted unlike a tree set.
 
 
 ###[[Tree Sets]]
 
-A tree set is a set which stores the values in a [[Binary Tree|binary tree]]. To store elements in a tree set, they must be able to be sorted by a property. To insert an element, it is added to the binary tree. To delete an element, it is removed from the binary tree. To check for membership, we look for the element in the binary tree.
+A tree set is a set which stores the values in a [[binary tree|Binary Tree]]. To store elements in a tree set, they must be able to be sorted by a property. To insert an element, it is added to the binary tree. To delete an element, it is removed from the binary tree. To check for membership, we do a binary search for the element in the binary tree.
 
-The advantage to this is that it is sorted but this is at the expense of speed.
+The advantage of tree sets is that they are maintained in a sorted order. 
 
 
 | Operation | Membership | Insertion | Deletion
@@ -119,17 +128,17 @@ Maps (also called dictionaries) are a data structure that store pairs of key-val
 
 ###[[Hash Map]]
 
-Hash maps use [[hash sets|Hash Set]] to store the keys which then map to their values.
+Hash maps use [[hash sets|Hash Set]] to store the keys which then map to their values. The advantage of a hash map is that it is very fast but a disadvantage is that it is not sorted unlike a tree set.
 
 | Operation | Membership | Insertion | Deletion
 |-
-| Time Complexity | O(1) || O(1) | O(1)
+| Time Complexity | O(1) | O(1) | O(1)
 
 
 
 ### [[Tree Map]]
 
-Tree maps use [[tree sets|Tree Set]] to  
+Tree maps use [[tree sets|Tree Set]] to store the keys which then maps to their values.
 
 | Operation | Membership | Insertion | Deletion
 |-
@@ -138,17 +147,28 @@ Tree maps use [[tree sets|Tree Set]] to
 
 ## [[Trees]]
 
-Trees are data structures that follow a hierarchy, each element has a parent and each element has children. The element at the top of the tree with no parents is called a root. The element at the bottom of the tree with no children is called a leaf. 
+Trees are data structures that follow a hierarchy, each node has exactly one or zero parents and each node has children. Trees are recursive structures meaning that each child of a tree is also a tree. A tree within another tree is called a **subtree**.
 
+A **child** is a node that is below another node. A **parent** is a node that is above another node.
+
+The element at the top of the tree with no parents is called a **root**. The node at the bottom of the tree with no children is called a **leaf**. 
+
+Each node can hold different kinds of information depending on the tree. A node can hold the children it has, the parent it has, a key associated with the node and a value associated with the node. 
 
 ### [[Binary Tree]]
 
-A binary tree is a tree where each node can have at max 2 children
+A binary tree is a tree where each node has at most two children. 
+
+A [[binary search tree|Binary Search Tree]] is a binary tree with special properties. Each node in a BST holds information about its children and a key. The BST has the property that all the nodes in the left subtree have keys smaller than the key of the parent node and all the nodes in the right subtree have keys greater than the key of the parent node. If we wanted to find if a key existed we could perform a search on the tree, if the key we are looking for is greater than the current node's key we go to the right subtree and if the key we are looking for is smaller, than we go to the left subtree.
+
+### [[Segment Tree]]
+
+
 
 
 ## [[Heap]]
 
-Heaps are trees which have the property that the a node must either be greater than all the elements in its left and right subtrees (a max heap) or less than all the elements in its left and right subtrees (a min heap). [[Priority queue's|Priority Queue]] are most efficiently implemented as heaps.
+Heaps are trees which have the property that a node must either be greater than all the elements in its left and right subtrees (a max heap) or less than all the elements in its left and right subtrees (a min heap). [[Priority queue's|Priority Queue]] are most efficiently implemented as heaps.
 
 
 

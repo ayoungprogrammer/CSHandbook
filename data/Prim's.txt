@@ -1,0 +1,55 @@
+A [[minimum spanning tree|Minimum Spanning Tree]] is a tree in a graph that connects all the nodes using the smallest cost total cost of edges. 
+
+Prim's algorithm finds the minimum spanning tree using a greedy fashion. It works as such:
+
+1. Pick an arbitrary node
+2. Find the closest node to that node
+3. Find the closest node to the 2 nodes
+4. Find the closest node to the 3 nodes
+5. ...
+6. Find the closest node to n-1 nodes
+
+The closest node is the node with the lowest cost edge to the already connected nodes.
+
+### Implementation
+
+[[[[
+public static int Prims(Vector<Vector<node>> adjList){
+	int cost = 0;
+	int n = adjList.size();
+	PriorityQueue<node> pq = new PriorityQueue<node>();
+	boolean visited[] = new boolean[n];
+	for(int i=0;i<n;i++){
+		visited[i] = false;
+	}
+	int inTree = 1;
+	visited[0] = true;
+	for(int i=0;i<adjList.get(0).size();i++){
+		pq.add(adjList.get(0).get(i));
+	}
+	while(!pq.isEmpty()&&inTree<n){
+		node cur = pq.poll();
+		if(visited[cur.index])continue;
+		inTree++;
+		visited[cur.index]=true;
+		cost+=cur.weight;
+		for(int i=0;i<adjList.get(cur.index).size();i++){
+			pq.add(adjList.get(cur.index).get(i));			
+                 }
+	}
+	//Graph is not connected
+	if(inTree<n)return -1;
+	return cost;
+}
+]]]]
+
+### Applications
+
+In networking, if a cable company wanted to connect all the houses with the least amount of wiring, the minimum spanning tree can be found that finds the least total cost of wire. 
+
+Minimum spanning trees can also be used in generating mazes.
+
+### Exercises
+
+1. Prove that Prim's algorithm works
+2. Extends Prim's to output all the edges used
