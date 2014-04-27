@@ -15,7 +15,7 @@ $sections = array(
 	'Geometry',
 	'Graph Theory',
 	'Number Theory',
-	'Pattern Matching',
+	'Pattern Matching'
 	);
 
 

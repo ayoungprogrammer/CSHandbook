@@ -1,13 +1,13 @@
 /*CONTENT*/
 .container{
     max-width: 970px;
-    padding:20px 0;
+    padding:0px 0;
     margin:auto;
     position:relative;
 }
 
 .banner{
-    margin-top: 80px;
+    margin-top: 100px;
     color: rgb(100,100,100);
     font-size: 1.5em;
     }
