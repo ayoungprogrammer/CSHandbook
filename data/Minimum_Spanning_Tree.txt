@@ -1,0 +1,19 @@
+## Introduction
+
+A spanning tree of a graph is a tree that spans all the nodes of the graph but only using some of the edges to connect all the nodes. 
+
+A [[minimum spanning tree|Minimum Spanning Tree]] is the spanning tree that requires the minimum of some property such as total weight or total edges.
+
+Spanning tree algorithms are essential in networking to ensure no loops occur when sending data through a network.
+
+## Implementations
+
+| Algorithm | Desc | Time | Space
+|-
+|[[Prim's]] | Using greedy method | O(n log n) | O(n^^2^^)
+|[[Kruskal]] | Using connected components| O(n log n) | O(n^^2^^)
+
+## Exercises
+
+1. Given a weighted graph with n nodes, find the smallest total cost to connect all nodes into 3 separate groups. (A single node can be a group)
+2. Same as 3, but a group must contain at least 3 other nodes.

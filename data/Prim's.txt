@@ -13,7 +13,22 @@ The closest node is the node with the lowest cost edge to the already connected 
 
 ### Implementation
 
+In Java, we need to specify a comparison for the Priority Queue to order. We do this be implementing the Comparable class and overriding the compareTo method. 
+
+adjList is an [[adjacency list|Adjacency List]] that is an array of arrays that store the graph. 
+
 [[[[
+
+class node implements Comparable<node>{
+	int weight,index;
+	public node(int weight,int index){
+		this.weight = weight;
+		this.index = index;
+	}
+	public int compareTo(node e){
+		return weight-e.weight;
+	}
+}
 public static int Prims(Vector<Vector<node>> adjList){
 	int cost = 0;
 	int n = adjList.size();
@@ -53,3 +68,5 @@ Minimum spanning trees can also be used in generating mazes.
 
 1. Prove that Prim's algorithm works
 2. Extends Prim's to output all the edges used
+3. Given a weighted graph with n nodes, find the smallest total cost to connect all nodes into 3 separate groups. (A single node can be a group)
+4. Same as 3, but a group must contain at least 3 other nodes.

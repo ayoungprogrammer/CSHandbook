@@ -20,9 +20,9 @@ A graph can be represented as a adjacency matrix or a adjacency list.
 
 
 
-### Adjacency Matrix
+### [[Adjacency Matrix]]
 
-Adjacency matrixes use a matrix to store the edges between nodes. A 1 means a connection between x and y and a 0 means no connection. The edge weight could also be used instead of a 1. O(n^2) where n is the number of nodes. For example the matrix for graph below is:
+Adjacency matrixes use a matrix to store the edges between nodes. A 1 means a connection between x and y and a 0 means no connection. The edge weight could also be used instead of a 1. O(n^^2^^) where n is the number of nodes. For example the matrix for graph below is:
 
 
   |1|2|3|4|5|6
@@ -37,7 +37,7 @@ Adjacency matrixes use a matrix to store the edges between nodes. A 1 means a co
 
 
 
-### Adjacency List
+### [[Adjacency List]]
 
 Adjacency lists use an array of [[linked lists|Linked Lists]] to store all the edges. At x, you have a linked list of nodes that connect to that node. 1 connects to nodes 2 and 5, 2 connects to 1, 3 and 5 and so forth. O(m) storage where m is number of edges.
 
@@ -90,7 +90,7 @@ The shortest path is defined as a path from one node to another while trying to 
 |[[Dijkstra's]] | Computes shortest path between a pair of nodes using the Greedy method | O(n log n) | O(n log n) | No
 
 
-##Travelling Salesman Problem
+## [[Travelling Salesman Problem]]
 
 The [[Travelling salesman]] is the problem where a salesman wants to visit all nodes in path while minimizing the total cost of weights used of edges. 
 
@@ -98,13 +98,18 @@ The [[Travelling salesman]] is the problem where a salesman wants to visit all n
 
 ##[[Cycle detection]]
 
+A cycle occurs in a graph when a duplicate node is encountered when traversing a tree using a [[depth first search|Depth First Search]]. Note that [[trees|Trees]] cannot contain cycles.
+
+### [[Hamiltonian Cycle]]
+
+A Hamiltonian path is a path in a graph that passes through all the nodes. 
+
+A Hamiltonian cycle is a cycle in a graph that passes through all the nodes and ends back in the starting node.
 
 ##[[Connected Components]]
 
 A connected component is a subgraph where all the vertices in the subgraph connect to each other. Finding the number of distinct connected components can be done using a [[breadth first search|Breadth First Search]] or a [[depth first search|Depth First Search]]. 
 
-
 ###[[Strongly Connected Components]]
 
-A strongly connected component is a connected component but has the property that each vertex can visit any other vertex in the strongly connected component from any path. For bidirectional graphs, this is just the connected component but it is different for directed graphs.
-                        
+A strongly connected component is a connected component but has the property that each vertex can visit any other vertex in the strongly connected component from any path.  This can be done using a [[breath first search|Breath First Search]].

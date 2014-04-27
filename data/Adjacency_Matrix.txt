@@ -1,0 +1,44 @@
+## Introduction
+
+An adjacency matrix is a method of storing a graph using a two dimensional array. Given n nodes, the adjacency matrix can be stored in a n x n matrix. 
+
+Array[i][j] represents the weight between the node i and node j.
+
+
+
+Example
+
+  |1|2|3|4|5|6
+-|-|-|-|-|-|-
+1 | 0 | 1 | 0 | 0 | 1 | 0
+ 2 | 1 | 0 | 1 | 0 | 1 | 0
+ 3 |0 | 1 | 0 | 1 | 0 | 0
+ 4 | 0 | 0 | 1 | 0 | 1 |1
+ 5 | 1 | 1 | 0 | 1 | 0 | 0
+ 6 | 0 | 0 | 0 | 1 | 0 | 0
+
+## Implementation
+
+[[[[
+class edge{
+	int weight,source,dest;
+	public edge(int source,int dest,int weight){
+		this.source = source;
+		this.dest = dest;
+		this.weight = weight;
+	}
+}
+public static int[][] getAdjMatrix(Vector<edge> edges){
+	int n = 0;
+	int adjMatrix[][] = new int[n][n];
+	
+	for(int i=0;i<n;i++)for(int j=0;j<n;j++)adjMatrix[i][j] = 0;
+	
+	for(int i=0;i<edges.size();i++){
+		edge e = edges.get(i);
+		adjMatrix[e.source][e.dest] = e.weight;
+		adjMatrix[e.dest][e.source] = e.weight;
+	}
+	return adjMatrix;
+}
+]]]]

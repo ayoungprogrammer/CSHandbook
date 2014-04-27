@@ -1,0 +1,35 @@
+## Introduction
+
+Advanced data structures are data structures are very specific in performing a single task and they usually require more time to implement.
+
+## Trees
+
+### [[B tree]]
+
+### [[Binary Indexed Tree]]
+
+### [[AVL Tree]]
+
+### [[Red Black Tree]]
+
+### [[Segment Tree]]
+
+### [[Interval Tree]]
+
+### [[Splay Tree]]
+
+## [[Heap]]
+
+### [[Fibonacci Heap]]
+
+### [[Binomial Heap]]
+
+## [[Trie]]
+
+A trie is tree which stores strings by their prefixes. A trie can replace a set for storing strings as it is faster than a hash set and it can the stored strings sorted but it takes more memory.
+
+Let m be the length of the string.
+
+| Operation | Membership | Insertion | Deletion 
+|-
+| Time Complexity | O(m) | O(m) | O(m)

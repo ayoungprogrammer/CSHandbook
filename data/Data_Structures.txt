@@ -1,6 +1,8 @@
 ## Introduction
 
-Data structures are a way of storing data such that it can be accessed or changed in a efficient manner.
+Data structures are a way of storing data such that it can be accessed or changed in a efficient manner. 
+
+For more intermediate data structures, read the the [[advanced data structures|Advanced Data Structures]] page.
 
 ## [[Arrays]]
 
@@ -30,10 +32,7 @@ A doubly linked list is a linked list that has pointers going backwards as well 
 
 | Operation | Get | Add at node | Delete at node | Add | Delete
 |-----------|---------|------------|---------
-| Time Complexity | O(n) | O(n) | O(n) | O(1) | O(1)
-
-
-
+| Time Complexity | O(n) | O(1) | O(1) | O(n) | O(n)
 
 
 ### [[Queue]]
@@ -161,10 +160,6 @@ A binary tree is a tree where each node has at most two children.
 
 A [[binary search tree|Binary Search Tree]] is a binary tree with special properties. Each node in a BST holds information about its children and a key. The BST has the property that all the nodes in the left subtree have keys smaller than the key of the parent node and all the nodes in the right subtree have keys greater than the key of the parent node. If we wanted to find if a key existed we could perform a search on the tree, if the key we are looking for is greater than the current node's key we go to the right subtree and if the key we are looking for is smaller, than we go to the left subtree.
 
-### [[Segment Tree]]
-
-
-
 
 ## [[Heap]]
 
@@ -177,13 +172,5 @@ Heaps are trees which have the property that a node must either be greater than 
 | Time Complexity | O(log n) | O(log n) |
 
 
-## [[Trie]]
 
-A trie is tree which stores strings by their prefixes. A trie can replace a set for storing strings as it is faster than a hash set and it can the stored strings sorted but it takes more memory.
-
-Let m be the length of the string.
-
-| Operation | Membership | Insertion | Deletion 
-|-
-| Time Complexity | O(m) | O(m) | O(m)
 
