@@ -35,10 +35,10 @@ function parse($str){
 	$str = preg_replace('/\^\^([A-Za-z0-9]+?)\^\^/','<sup>$1</sup>',$str);
 	
 	//[[link | text]] => <ahref="./link">text</a>
-	$str = preg_replace('/\[\[([A-Za-z\_\s\']+?)\|([A-Za-z\_\s\']+?)\]\]/','<a href="./$2">$1</a>',$str);
+	$str = preg_replace('/\[\[([A-Za-z\_\s\'\-]+?)\|([A-Za-z\_\s\'\-]+?)\]\]/','<a href="./$2">$1</a>',$str);
 
 	//[[link]]  => <a href="./link">link</a>
-	$str = preg_replace('/\[\[([A-Za-z\_\s\']+?)\]\]/','<a href="./$1">$1</a>',$str);
+	$str = preg_replace('/\[\[([A-Za-z\_\s\'\-]+?)\]\]/','<a href="./$1">$1</a>',$str);
 
 	//<a href="one two three"></a> => <a href="one_two_three"></a>
 	//$str = preg_replace('/\x20(?=[^"]*"\s*>)/','_',$str);

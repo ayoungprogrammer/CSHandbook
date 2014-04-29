@@ -47,7 +47,7 @@ function bfsLinks(){
 			//$content = file_get_contents($path);
 			$content = get_article($article);
 
-			preg_match_all('/\[\[([A-Za-z\_\s\']+?)\]\]/',$content,$matches);
+			preg_match_all('/\[\[([A-Za-z\_\s\'\-]+?)\]\]/',$content,$matches);
 			//print_r($matches);
 			foreach ($matches[1] as $link){
 
