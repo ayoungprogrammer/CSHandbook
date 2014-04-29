@@ -32,35 +32,55 @@ function bfsLinks(){
 		//echo 'pre'.$queue[$head].'<br>';
 
 		$page = substr($queue[$head],strrpos($queue[$head],'/')+1);
-
+		$article = str_replace(" ","_",$page);
 		
 		//echo 'suf'.$page.'<br>';
 
-		$path = 'data/'.$page.'.txt';
-		$path = str_replace(" ","_",$path);
+		//$path = 'data/'.$page.'.txt';
+		//$path = str_replace(" ","_",$path);
 
 		//echo $path.'<br>';
 
 
 		
-		if(file_exists($path)){
-			$content = file_get_contents($path);
+		if(article_exists($article)){
+			//$content = file_get_contents($path);
+			$content = get_article($article);
 
 			preg_match_all('/\[\[([A-Za-z\_\s\']+?)\]\]/',$content,$matches);
 			//print_r($matches);
 			foreach ($matches[1] as $link){
+
+				$new_link = str_replace(" ","_",$link);
 				
-				if(!array_key_exists($link,$map)){
+				if(!array_key_exists($new_link,$map)){
 
 					$queue[$end] = $queue[$head].'/'.$link;
 					// $queue[$end].'<br>';
-					$map[str_replace(" ","_",$link)]  = $queue[$end];
+					$map[$new_link]  = $queue[$end];
+					$end++;
+				}
+			}
+			preg_match_all('/\[\[([A-Za-z\_\s\']+?)\|([A-Za-z\_\s\']+?)\]\]/',$content,$matches);
+			//print_r($matches);
+			//echo '<br>';
+			foreach ($matches[2] as $link){
+				
+				$new_link = str_replace(" ","_",$link);
+				
+				if(!array_key_exists($new_link,$map)){
+
+					$queue[$end] = $queue[$head].'/'.$link;
+					// $queue[$end].'<br>';
+					$map[$new_link]  = $queue[$end];
 					$end++;
 				}
 			}
 		}
 		$head++;
+		
 	}
+	return $map;
 	
 }
 ?>

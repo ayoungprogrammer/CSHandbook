@@ -1,17 +1,28 @@
 /*CONTENT*/
+html,body{
+    top:0;
+    margin:0;
+    padding:0;
+    height:100%;
+}
+
 .container{
     max-width: 970px;
-    padding:0px 0;
-    margin:auto;
+    padding:0px;
+    padding-bottom:50px;
+    margin: 0 auto;
     position:relative;
+    min-height:100%;
 }
 
 .banner{
-    margin-top: 100px;
+    position:relative;
+    margin-top: 80px;
     color: rgb(100,100,100);
     font-size: 1.5em;
     }
     .banner h1{
+        margin: 0;
         font-size: 2em;
         line-height: 1em;
         color: rgb(40,140,200);
@@ -19,6 +30,7 @@
     }
     .banner div{
         max-width:700px;
+        margin: 0 auto;
     }
 
 main{

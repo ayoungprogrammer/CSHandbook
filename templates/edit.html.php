@@ -2,16 +2,15 @@
 <?php require('nav.php'); ?>
 
 
-
-
-
-<div class="banner container">
+<div class="banner">
      <h1><?php echo $title ?></h1>
      <div>
 
      </div>
 </div>
+
 <div class="container">
+
     <main>
         
         <form action = "./<?php echo $page.'&' ?>=submit" method="post">

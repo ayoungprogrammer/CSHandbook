@@ -29,12 +29,18 @@ $data_dir = 'data/';
 $dir = new DirectoryIterator($data_dir);
 foreach($dir as $fileinfo){
 	if(!$fileinfo->isDot() && $fileinfo->getExtension()=='txt'){
-		$title = mysql_real_escape_string($fileinfo->getBasename('.txt'));
+		$title = $fileinfo->getBasename('.txt');
 		$content = file_get_contents($data_dir.$fileinfo->getBasename());
-		$content = mysql_real_escape_string($content);
+		$content = $content;
 		echo $fileinfo->getBasename('.txt')."\n";
-		$mysqli->query("INSERT INTO articles (id,content)
-			VALUES ('".$title."','".$content."')");
+		$stmt = $mysqli->prepare(
+    	    "INSERT INTO articles (id,content)
+			VALUES (?,?)
+			ON DUPLICATE KEY UPDATE
+				   content = VALUES(content)");
+	    $stmt->bind_param('ss',$title,$content);
+	    $stmt->execute();
+	    $stmt->close();
 	}
 }
 
