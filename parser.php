@@ -10,8 +10,8 @@ function parse($str){
 	//$str = preg_replace('/>/','&gt;',$str);
 	$str = htmlspecialchars($str,ENT_NOQUOTES);
 
-	//<<<<CODE>>>> => <pre class="prettyprint linenums">CODE</pre>
-	$str = preg_replace('/\[{4}([\s\S]*?)\]{4}/','<pre class="prettyprint linenums">$1</pre>',$str);
+	//[[[[{lang}CODE]]]] => <pre class="prettyprint linenums lang">CODE</pre>
+	$str = preg_replace('/\[{4}(\{([\s\S]*?)\})?([\s\S]*?)\]{4}/','<pre class="prettyprint linenums $2">$3</pre>',$str);
 
 	//Apply markdown
 	$str = MarkdownExtra::defaultTransform($str);
