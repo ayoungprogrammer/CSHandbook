@@ -1,0 +1,116 @@
+## Introduction
+
+Dynamic programming uses memoization by solving subproblems to solve the more complex problem. 
+
+For example the Fibonacci sequence is determined by f(n) = f(n-1)+f(n-2) where f(0) = 1 and f(1) = 1. 
+
+If we calculate f(5) we have 
+
+
+[[[[
+f(5) 
+= f(4)+f(3) 
+= (f(3)+f(2))+(f(2)+f(1)) 
+= f(2)+f(1) + f(1) + f(0) + f(1)+f(0) + f(1) 
+= f(1)+f(0)+f(1)+f(1)+f(0)+f(1)+f(0)+f(1) 
+= 1+1+1+1+1+1+1
+= 8
+]]]]
+
+However we are computing multiple values more than once. When we compute f(5) we need to compute f(4) and f(3) but f(3) is already computed when we compute f(4) and thus we have to recompute it again. We can avoid this redundancy by "building up". We can calculate f(2), then f(3) then f(4) and finally f(5) and we won't have duplicate calculations. 
+[[[[
+f(0) = 1
+f(1) = 1
+f(2) = f(1)+f(0) = 2
+f(3) = f(2)+f(1) = 3
+f(4) = f(3)+f(2) = 5
+f(5) = f(4)+f(3) = 8
+]]]]
+
+Dynamic programming is very similar to [[recursion|Recursion]] but it solves the subproblems first. It requires two things:
+
+A base case and
+a subproblem that can be reduced into smaller subproblems
+
+For example: 
+
+[[[[{lang-html}
+Fibonacci sequence
+
+Let f(n) be the nth Fibonacci number
+
+Base case:
+f(0) = 1, f(1) = 1
+
+Subproblem:
+f(n) = f(n-1)+f(n-2)
+]]]]
+
+## Knapsack Problem
+
+Imagine you are a robber and you have found a large stash of valuables. Each valuable has a value and a weight. You can only hold 10kg in your bag and you want to find the highest valued haul you can get away with. 
+
+* Necklace: $50, 1kg
+* Stack of cash: $400, 3kg
+* Jewellery: $510, 7kg
+* Rare painting: $900, 10kg
+
+Let's try a greedy approach: we will take the items with the highest value to weight ratio.
+
+* Necklace: $50/kg
+* Stack of cash: $133.33/kg
+* Jewellery: $72.86/kg
+* Rare painting: $90/kg
+
+The greedy approach will choose the rare painting but its weight is 10kg and we make out with $900. However if we take the jewellery and the stack of cash we will get $910 and still fit it into the bag. How can we solve this problem?
+
+The answer is dynamic programming. 
+
+Given n objects, each associated with a weight and value, and a maximum total weight W that we can hold, what is the maximum value we can hold. In the zero/one knapsack problem, there is only one of each object so we either take it or leave it.
+
+We can reduce this problem into a subproblem.
+
+Let's write a more specific version of the problem: we want to find the maximum value that a bag with maximum weight W can hold of N objects which we can either take or not take.
+
+Let's assume that we have solved all the subproblems of bags assessing the objects from 1 to N-1 to fill a knapsack of maximum weight W. This means that we have found the maximum value for all backpacks with weights 0 to W using or not using the objects from 1 to N-1, but we have not seen the Nth object yet. 
+
+Now we want to find the maximum value for a bag of maximum weight W and assessing all N objects. Since we have already assessed up to N-1 objects we only need to assess the Nth object. For the Nth object we can either take it or leave it. 
+
+If we leave it, then it is the same as a bag of maximum weight W with N-1 objects because we are just ignoring the Nth object. 
+
+[[[[{lang-html} max value = maximum value of N-1 objects with weight W
+
+]]]]
+
+If we take it, then we need to find the maximum value thats possible while making room for that object and add that to the value of the object. 
+
+[[[[{lang-html}max value = (maximum value of N-1 objects seen with weight W-weight of object N) + value of object N. 
+
+]]]]
+
+If we want the maximum value of assessing N objects and maximum weight W then we want the max of leaving the Nth object and taking the Nth object so:
+
+[[[[{lang-html}max value = max( maximum value of N-1 objects with weight W, (maximum value of N-1 objects with weight W - weight of N) + value of N))
+
+]]]]
+
+Putting it all together we have:
+
+[[[[{lang-html}
+Let weight[i] be the weight of object i
+Let value[i] be the value of object i
+
+Let knapsack[i][j] be the maximum value that a knapsack of maximum weight j can hold with objects seen from 1 to i
+
+Base case:
+knapsack[0][0] = 0
+
+Subproblem:
+knapsack[i][j] = max(knapsack[i-1][j-weight[i]], knapsack[i-1][j-1])
+]]]]
+
+
+
+
+
+

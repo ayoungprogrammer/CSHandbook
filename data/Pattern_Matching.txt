@@ -4,6 +4,10 @@ Pattern matching is finding if a certain sequence of elements exists in another 
 
 ## [[Knuth Morris Pratt]]
 
+If we have the needle string "abcxabcy" and haystack string "abcyabcxabcy" then our first search will be putting the needle at position 0 as we see the search fails at 'x'. However we note that we do not need to set the needle at position 1 because we have already done the search for the prefix "abc". Thus we can search starting by setting the needle at the next 'a'. 
+
+KMP uses this type of optimization for pattern matching by precomputing a table for the needle string.
+
 ## [[Rabin Karp]]
 
 ## [[Finite State Automata]]

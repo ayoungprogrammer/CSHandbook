@@ -1,0 +1,55 @@
+A depth first search is a transversal of a tree that goes as far down as a branch as possible and then back.
+
+A DFS can also be used on a graph to transverse it by ignoring nodes that have already been visited.
+
+A DFS requires a stack but most the time DFS uses recursion which uses the system stack.
+
+## Implementation
+
+Most of the time, DFS is implemented using recursion and it is very short and simple to code.
+
+### Binary Tree Transversal
+
+This is a DFS implementation for a binary tree
+
+[[[[
+public class Tree {
+	int value;
+	Tree left;
+	Tree right;
+}
+
+/**
+ * Performs a DFS on a binary tree
+ * tree - current tree DFS is at
+ */
+public static void DFS(Tree cur){
+	if(cur==null)return;
+	DFS(cur.left);
+	System.out.println(cur.value);
+	DFS(cur.right);
+}
+]]]]
+
+### Graph Transversal
+
+This is a DFS implementation for transversing a bidirectional graph with positive weights.
+
+[[[[
+/**
+ * Performs a DFS on a graph
+ * adjMatrix - Adjacency matrix for a graph with positive edges. 0 indicates no edge.
+ * cur - Current node the DFS is at
+ * visited - Mutable array which keeps track of which nodes have been visited already
+ */
+public static void DFS_graph(int[][] adjMatrix,int cur,boolean[] visited){
+	if(visited[cur])return;
+	visited[cur] = true;
+	System.out.println(cur);
+	for(int i=0;i<adjMatrix.length;i++){
+		if(adjMatrix[cur][i]>0)DFS_graph(adjMatrix,i,visited);
+	}
+	return;
+}
+
+]]]]
