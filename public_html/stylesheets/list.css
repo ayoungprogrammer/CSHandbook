@@ -97,6 +97,7 @@ main{
         white-space: -moz-pre-wrap;   Mozilla, since 1999 
         word-wrap: break-word;        Internet Explorer 5.5+ */
         padding:10px;
+        padding-bottom:20px;
         border: 8px solid rgb(180,180,180);
         border-radius: 8px;
         overflow-y: scroll;
