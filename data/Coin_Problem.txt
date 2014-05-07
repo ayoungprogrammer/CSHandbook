@@ -1,0 +1,45 @@
+## Introduction
+
+Let's say that you wanted to make change for $51 using the smallest amount of bills ($1, $2, $5, $10, $20). We can use a greedy approach by always taking the highest bill that can be subtracted to find the smallest amount of change. 51 - 20 = 31 - 20 = 11 - 10 = 1. So the smallest amount of change would be comprised of 2 x $20 + 1 x $10 + 1 for a total of 5 bills. This solution seems very easy to implement, but what if the bills were not so nice?
+
+Imagine that an alien currency was in denominations of $3, $5, $7 and $11. What would be the smallest amount of bills to make change for $13? Note that a greedy approach does not work for this alien currency. For example: 13 - 11 = 2. It is impossible to make change using the greedy approach. 
+
+## Solution
+Let's define the problem more formally: Given a list of bills each with a positive denomination d, find the lowest amount of bills required to make C dollars or return impossible if it cannot be done.
+
+The base case 0 for this is very simple. There are 0 bills to make 0 dollars.
+
+We can reduce this problem into subproblems. Let's assume that we have found out the lowest amount of bills required to make all the dollar amounts from 0 to C-1 or determined if it is impossible to do so. Lets take a look at an arbitrary bill b with denomination d. We know the minimum number of bills to make C-d (or if its impossible) based on our assumption that we have solved from 0 to C-1. Thus if use the bill b to make C then it is just the minimum number of bills to make C-d with 1 more bill so we add 1 more to that value. If we take the minimum value for all bills (if its possible to make C-d), we will get the lowest amount of bills required to make C. 
+
+Putting it all together:
+
+[[[[{lang-html}
+Let bills[C] be the smallest amount of bills to make the amount C, or impossible if it is not possible
+
+Base case:
+bills[0] = 0
+
+Subproblem:
+bills[C] = min(bills[C-d]+1) for all bills where d is the denominator of the bill and bills[C-d] is not impossible
+if bill[C-d] = impossible for all bills, then bills[C] is impossible
+]]]]
+
+Example of previous problem where the bills are ($3, $5, $7, $11) and we want to find the minimum number of bills to make 13.
+
+Let -1 be "impossible".
+
+C|0|1|2|3|4|5|6|7|8|9|10|11|12|13
+-|-
+bills[C]|0|-1|-1|1|0|1|2|-1|2|3|2|1|4|3
+
+## Implementation
+
+
+## Exercises
+
+1. Given a list of bills each with unique denomination d, find the number of ways to make C dollars. 
+  * For example given bills: $2, $3, $5, there are 2 ways to make $7 (2+5, 2+2+3)
+2. Given a list of N integers, separate the list into two sets such that the difference is minimized and output the difference.
+  * For example given integers: 1, 4, 10, 12, we can separate them into (4+10=14) and (1+12=13) so the minimum difference is 1.
+3. Given a list of lengths, find the smallest area that can be created if  the lengths are used to make a triangle. 
+  * For example, given lengths: 2,4,6,8,10 we can make a triangle with minimum area 43.3 if we use the sides (2+8=10, 4+6 = 10, 10).

@@ -30,7 +30,7 @@ f(5) = f(4)+f(3) = 8
 Dynamic programming is very similar to [[recursion|Recursion]] but it solves the subproblems first. It requires two things:
 
 A base case and
-a subproblem that can be reduced into smaller subproblems
+a subproblem that can be reduced into smaller subproblems 
 
 For example: 
 
@@ -46,52 +46,85 @@ Subproblem:
 f(n) = f(n-1)+f(n-2)
 ]]]]
 
-## Knapsack Problem
+## [[Coin Problem]]
+
+Let's say that you wanted to make change for $51 using the smallest amount of bills ($1, $2, $5, $10, $20). We can use a greedy approach by always taking the highest bill that can be subtracted to find the smallest amount of change. 51 - 20 = 31 - 20 = 11 - 10 = 1. So the smallest amount of change would be comprised of 2 x $20 + 1 x $10 + 1 for a total of 5 bills. This solution seems very easy to implement, but what if the bills were not so nice?
+
+Imagine that an alien currency was in denominations of $3, $5, $7 and $11. What would be the smallest amount of bills to make change for $13? Note that a greedy approach does not work for this alien currency. For example: 13 - 11 = 2. It is impossible to make change using the greedy approach. 
+
+Let's define the problem more formally: Given a list of bills each with a positive denomination d, find the lowest amount of bills required to make C dollars or return impossible if it cannot be done.
+
+The base case 0 for this is very simple. There are 0 bills to make 0 dollars.
+
+We can reduce this problem into subproblems. Let's assume that we have found out the lowest amount of bills required to make all the dollar amounts from 0 to C-1 or determined if it is impossible to do so. Lets take a look at an arbitrary bill b with denomination d. We know the minimum number of bills to make C-d (or if its impossible) based on our assumption that we have solved from 0 to C-1. Thus if use the bill b to make C then it is just the minimum number of bills to make C-d with 1 more bill so we add 1 more to that value. If we take the minimum value for all bills (if its possible to make C-d), we will get the lowest amount of bills required to make C. 
+
+Putting it all together:
+
+[[[[{lang-html}
+Let bills[C] be the smallest amount of bills to make the amount C, or impossible if it is not possible
+
+Base case:
+bills[0] = 0
+
+Subproblem:
+bills[C] = min(bills[C-d]+1) for all bills where d is the denominator of the bill and bills[C-d] is not impossible
+if bill[C-d] = impossible for all bills, then bills[C] is impossible
+
+]]]]
+
+Example of previous problem where the bills are ($3, $5, $7, $11) and we want to find the minimum number of bills to make 13.
+
+Let -1 be "impossible".
+
+C|0|1|2|3|4|5|6|7|8|9|10|11|12|13
+-|-
+bills[C]|0|-1|-1|1|0|1|2|-1|2|3|2|1|4|3
+
+## [[Knapsack Problem]]
 
 Imagine you are a robber and you have found a large stash of valuables. Each valuable has a value and a weight. You can only hold 10kg in your bag and you want to find the highest valued haul you can get away with. 
 
-* Necklace: $50, 1kg
-* Stack of cash: $400, 3kg
-* Jewellery: $510, 7kg
-* Rare painting: $900, 10kg
+* Necklace: $10, 1kg
+* Stack of cash: $270, 3kg
+* Jewelry: $665, 7kg
+* Rare painting: $900, 9kg
 
 Let's try a greedy approach: we will take the items with the highest value to weight ratio.
 
-* Necklace: $50/kg
-* Stack of cash: $133.33/kg
-* Jewellery: $72.86/kg
-* Rare painting: $90/kg
+* Necklace: $10/kg
+* Stack of cash: $90/kg
+* Jewelry: $95/kg
+* Rare painting: $100/kg
 
-The greedy approach will choose the rare painting but its weight is 10kg and we make out with $900. However if we take the jewellery and the stack of cash we will get $910 and still fit it into the bag. How can we solve this problem?
+The greedy approach will choose the rare painting and the necklace for a total of $910. However if we take the jewelry and the stack of cash we will get $935 and still fit it into the bag. How can we solve this problem? The answer is dynamic programming. 
 
-The answer is dynamic programming. 
+Let's first write a more formal definition of the problem:
 
-Given n objects, each associated with a weight and value, and a maximum total weight W that we can hold, what is the maximum value we can hold. In the zero/one knapsack problem, there is only one of each object so we either take it or leave it.
+Given n objects, each associated with a positive weight and value, and a maximum total weight W that we can hold, what is the maximum value we can hold. In the zero/one knapsack problem, there is only one of each object so we either take it or leave it.
 
-We can reduce this problem into a subproblem.
+Let's write a more specific version of the problem: we want to find the maximum value that a bag with maximum weight W can hold of N objects with positive weight and value which we can either take or not take.
 
-Let's write a more specific version of the problem: we want to find the maximum value that a bag with maximum weight W can hold of N objects which we can either take or not take.
+The base case for this is trivial. With zero weight, the maximum value you can have is 0.
 
-Let's assume that we have solved all the subproblems of bags assessing the objects from 1 to N-1 to fill a knapsack of maximum weight W. This means that we have found the maximum value for all backpacks with weights 0 to W using or not using the objects from 1 to N-1, but we have not seen the Nth object yet. 
+We now have to break this problem down into subproblems.
 
 Now we want to find the maximum value for a bag of maximum weight W and assessing all N objects. Since we have already assessed up to N-1 objects we only need to assess the Nth object. For the Nth object we can either take it or leave it. 
 
 If we leave it, then it is the same as a bag of maximum weight W with N-1 objects because we are just ignoring the Nth object. 
 
-[[[[{lang-html} max value = maximum value of N-1 objects with weight W
-
+[[[[{lang-html} max value leaving = maximum value of N-1 objects with weight W
 ]]]]
 
 If we take it, then we need to find the maximum value thats possible while making room for that object and add that to the value of the object. 
 
-[[[[{lang-html}max value = (maximum value of N-1 objects seen with weight W-weight of object N) + value of object N. 
-
+[[[[{lang-html}max value taking = (maximum value of N-1 objects seen with weight W-weight of object N) + value of object N. 
 ]]]]
 
 If we want the maximum value of assessing N objects and maximum weight W then we want the max of leaving the Nth object and taking the Nth object so:
 
-[[[[{lang-html}max value = max( maximum value of N-1 objects with weight W, (maximum value of N-1 objects with weight W - weight of N) + value of N))
-
+[[[[{lang-html}
+max value = max( maximum value taking, maximum value leaving)
+max value = max( maximum value of N-1 objects with weight W, (maximum value of N-1 objects with weight W - weight of N) + value of N))
 ]]]]
 
 Putting it all together we have:
@@ -109,8 +142,50 @@ Subproblem:
 knapsack[i][j] = max(knapsack[i-1][j-weight[i]], knapsack[i-1][j-1])
 ]]]]
 
+## [[Longest Common Subsequence]]
 
+A subsequence is a subset of the original sequence that is in the same order. For example in the string "abcdefghi", "aeg" is a subsequence but "eaq" is not because it is not in order.
 
+The longest common subsequence between two strings A and B is the longest subsequence in A that is also in B.
 
+For example given A="xyaaaabcdeg", B="bcaaaaefgxy" the longest common subsequence is "aaaaeg"
 
+[[[[{lang-html}
+xyaaaabcde_g
+bcaaaa___efgxy
+]]]]
 
+If we try to use greedy we will see it doesn't work. For example if we use try to take as much as B as we can, we see that we will get BCEG or if we try to take as much as A we get XY. 
+
+Let first write a formal definition of the problem, given two strings A and B each with lengths N and M respectively we want to find the longest common subsequence between them.
+
+**[Note to make reading easier I have used short forms for substring and index. For example A[3] means the 3rd character of A and A[1..4] means the substring of A from the first character to the fourth character inclusive. A[0] represents the null substring of A]**
+
+The base is simple. The LCS of A[1..x] (where x is from 1 to N) and B[0] = 0. The LCS of B[1..x] and A[0] = 0.
+
+We need to break this problem into subproblems. 
+
+If A[N] = B[M] and then the new LCS is the LCS of A[1..N-1] and B[1..M-1]. Note that if two strings have the same character at the end of their string it has to be part of the LCS. Try to prove this to yourself.
+
+[[[[{lang-html}
+LCS of matched = (LCS of A from 1 to N-1, B from 1 to M-1) + A[N]
+]]]]
+
+If A[N] != B[M] then we try to match A[N] with B[M-1] or A[N-1] with B[M]. Thus we take the LCS of A[1..N-1] and B[1..M] and the LCS of A[1..N] and B[1..M-1].
+
+[[[[{lang-html}
+LCS of not matched = max ( (LCS of A[1..N], B[1..M-1]) , (LCS of A[1..N-1],B[1..M]))
+]]]]
+
+Putting it all together we have:
+[[[[{lang-html}
+Let LCS[i][j] be the length of longest common subsequence of A[1..i] and B[1..j] where 0< i ≤ n and 0 < j ≤ m.
+
+Base case:
+LCS[i][0] = 0 where 0< i ≤ n
+LCS[0][j] = 0 where 0< j ≤ m
+
+Subproblem:
+if A[i] == B[j], LCS[i][j] = LCS[i-1][j-1]+1 where 0< i ≤ n and 0 < j ≤ m
+if A[i] != B[j], LCS[i][j] = max( LCS[i-1][j], LCS[i][j-1] ) where 0< i ≤ n and 0 < j ≤ m
+]]]]

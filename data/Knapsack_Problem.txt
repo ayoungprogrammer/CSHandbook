@@ -1,0 +1,70 @@
+## Introduction
+
+Imagine you are a robber and you have found a large stash of valuables. Each valuable has a value and a weight. You can only hold 10kg in your bag and you want to find the highest valued haul you can get away with. 
+
+* Necklace: $10, 1kg
+* Stack of cash: $270, 3kg
+* Jewelry: $665, 7kg
+* Rare painting: $900, 9kg
+
+Let's try a greedy approach: we will take the items with the highest value to weight ratio.
+
+* Necklace: $10/kg
+* Stack of cash: $90/kg
+* Jewelry: $95/kg
+* Rare painting: $100/kg
+
+The greedy approach will choose the rare painting and the necklace for a total of $910. However if we take the jewelry and the stack of cash we will get $935 and still fit it into the bag. How can we solve this problem? The answer is dynamic programming. 
+
+## Solution
+
+Let's first write a more formal definition of the problem:
+
+Given n objects, each associated with a positive weight and value, and a maximum total weight W that we can hold, what is the maximum value we can hold. In the zero/one knapsack problem, there is only one of each object so we either take it or leave it.
+
+Let's write a more specific version of the problem: we want to find the maximum value that a bag with maximum weight W can hold of N objects with positive weight and value which we can either take or not take.
+
+The base case for this is trivial. With zero weight, the maximum value you can have is 0.
+
+We now have to break this problem down into subproblems.
+
+Now we want to find the maximum value for a bag of maximum weight W and assessing all N objects. Since we have already assessed up to N-1 objects we only need to assess the Nth object. For the Nth object we can either take it or leave it. 
+
+If we leave it, then it is the same as a bag of maximum weight W with N-1 objects because we are just ignoring the Nth object. 
+
+[[[[{lang-html} max value leaving = maximum value of N-1 objects with weight W
+]]]]
+
+If we take it, then we need to find the maximum value thats possible while making room for that object and add that to the value of the object. 
+
+[[[[{lang-html}max value taking = (maximum value of N-1 objects seen with weight W-weight of object N) + value of object N. 
+]]]]
+
+If we want the maximum value of assessing N objects and maximum weight W then we want the max of leaving the Nth object and taking the Nth object so:
+
+[[[[{lang-html}
+max value = max( maximum value taking, maximum value leaving)
+max value = max( maximum value of N-1 objects with weight W, (maximum value of N-1 objects with weight W - weight of N) + value of N))
+]]]]
+
+Putting it all together we have:
+
+[[[[{lang-html}
+Let weight[i] be the weight of object i
+Let value[i] be the value of object i
+
+Let knapsack[i][j] be the maximum value that a knapsack of maximum weight j can hold with objects seen from 1 to i
+
+Base case:
+knapsack[0][0] = 0
+
+Subproblem:
+knapsack[i][j] = max(knapsack[i-1][j-weight[i]], knapsack[i-1][j-1])
+]]]]
+
+## Implementation
+
+## Exercises
+
+1. Given a list of n objects with a positive weight and value, find the maximum value that can be obtained with maximum weight W. However, each object can be used more than once.
+2. 
