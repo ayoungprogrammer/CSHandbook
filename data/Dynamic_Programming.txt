@@ -161,7 +161,7 @@ Let first write a formal definition of the problem, given two strings A and B ea
 
 **[Note to make reading easier I have used short forms for substring and index. For example A[3] means the 3rd character of A and A[1..4] means the substring of A from the first character to the fourth character inclusive. A[0] represents the null substring of A]**
 
-The base is simple. The LCS of A[1..x] (where x is from 1 to N) and B[0] = 0. The LCS of B[1..x] and A[0] = 0.
+The base case is simple. The LCS of A[1..x] (where x is from 1 to N) and B[0] = 0. The LCS of B[1..x] and A[0] = 0.
 
 We need to break this problem into subproblems. 
 
@@ -189,3 +189,13 @@ Subproblem:
 if A[i] == B[j], LCS[i][j] = LCS[i-1][j-1]+1 where 0< i ≤ n and 0 < j ≤ m
 if A[i] != B[j], LCS[i][j] = max( LCS[i-1][j], LCS[i][j-1] ) where 0< i ≤ n and 0 < j ≤ m
 ]]]]
+
+
+## Exercises
+
+1. Given a sequence of numbers, find the length of the longest increasing subsequence
+2. Given a sequence of numbers, find the length of the longest increasing continuous subsequence
+3. Given a sequence of numbers, find the length of the continuous subsequence that has the maximum sum
+4. Given a matrix of numbers, find the maximum sum of a submatrix
+5. Given a matrix of 0's and 1's, find the maximum area of a submatrix that has all 1's
+6. Given n x m the dimensions of a chessboard and a starting position on the board of a knight, find the minimum distance to each spot on the board using knight moves from the starting position.

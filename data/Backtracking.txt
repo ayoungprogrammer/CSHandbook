@@ -1,0 +1,36 @@
+## Introduction
+
+Backtracking is a search that find all possible solutions by enumerating on a partial solution. Backtracking can be done using DFS or BFS. In some cases DFS can be better than BFS and in some cases BFS can be better than DFS.
+
+Since backtracking requires enumerating through all solutions, it is usually slow with runtimes usually O(n!) or O(2^n). 
+
+## General Solution
+
+[[[[
+void backtrack(i,candidate){
+   if(reject(candidate))return;
+   if(i>=n){
+      output(candidate);
+      return;
+   }
+   for(j=0;j<m;j++){
+      backtrack(i,candidate);
+   }
+}
+]]]]
+
+## List all subsets
+
+Given a set of numbers S, output all subsets of S.
+
+We want to be able to enumerate all the subsets of S so we need to find a way to 
+
+## N Queen Problem
+
+Find the number of ways to place N queens on a NxN board without any of them attacking each other. 
+
+We can 
+
+## Exercises
+
+1. Given a sequence of numbers, output all increasing subsequences

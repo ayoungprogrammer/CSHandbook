@@ -113,3 +113,7 @@ A connected component is a subgraph where all the vertices in the subgraph conne
 ###[[Strongly Connected Components]]
 
 A strongly connected component is a connected component but has the property that each vertex can visit any other vertex in the strongly connected component from any path.  This can be done using a [[breath first search|Breath First Search]].
+
+## [[Max flow problem]]
+
+### [[Ford-Fulkerson]]

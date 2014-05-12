@@ -1,0 +1,75 @@
+## Introduction
+
+There are many ways to find the solution to problems and we will examine the different types.
+
+## [[Breadth First Search]]
+
+A breadth first search is a search that transverses level by level. For example in a tree, it will transverse everything from the first layer, to the second layer etc. BFS requires a queue to search. BFS memory limitations depends on how wide a layer is. If layers are too wide but the depth is short, then consider using DFS.
+
+[[[[
+void bfs(start){
+
+   Queue q = new Queue();
+   q.push(start);
+   while(q.empty()==false){
+      current = q.pop();
+      print current;
+      foreach child in current.children {
+        q.push(child);
+      } 
+   }
+
+}
+]]]]
+
+## [[Depth First Search]]
+
+A depth first search is a search that transverses as deep as it can. For example in a tree it will reach down as far as possible to the leaf node. DFS requires a stack to search. DFS memory limitation depends on how deep the search is. If the search is too deep but the layers are narrow, then consider using BFS.
+
+Most of the time DFS is implemented using recursion because it can use the function stack call and there is no need to implement our own stack.
+
+[[[[
+void dfs(current){
+   if(current)print current
+   foreach child in current.children {
+       dfs(child);
+   }
+}
+]]]]
+
+## [[Backtracking]]
+
+Backtracking is a search that find all possible solutions by enumerating on a partial solution. Backtracking can be done using DFS or BFS.
+
+[[[[
+void backtrack(i,candidate){
+   if(reject(candidate))return;
+   if(i>=n){
+      output(candidate);
+      return;
+   }
+   for(j=0;j<m;j++){
+      backtrack(i,candidate);
+   }
+}
+]]]]
+
+## [[Flood Fill]]
+
+Flood fill is a search that fills a grid from a start point to find the areas connected to the start point. For example the "bucket fill" in Photoshop or MS Paint uses flood fill to fill in the connecting areas with the same colour.
+
+Flood fill can be implemented using a BFS or DFS.
+
+[[[[
+//marked is initially a n by m boolean array of false
+void floodFill(int i,int j){
+   if(outOfBounds(i,j))return;
+   if(marked[i][j])return;
+   marked[i][j]=true;
+   floodFill(i+1,j);
+   floodFill(i,j+1);
+   floodFill(i-1,j);
+   floodFill(i,j-1);
+}
+]]]]
+
