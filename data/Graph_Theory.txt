@@ -108,12 +108,31 @@ A Hamiltonian cycle is a cycle in a graph that passes through all the nodes and 
 
 ##[[Connected Components]]
 
-A connected component is a subgraph where all the vertices in the subgraph connect to each other. Finding the number of distinct connected components can be done using a [[breadth first search|Breadth First Search]] or a [[depth first search|Depth First Search]]. 
+A connected component is a subgraph where all the vertices in the subgraph can reach each other. Finding the number of distinct connected components can be done using a [[breadth first search|Breadth First Search]] or a [[depth first search|Depth First Search]]. 
 
 ###[[Strongly Connected Components]]
 
 A strongly connected component is a connected component but has the property that each vertex can visit any other vertex in the strongly connected component from any path.  This can be done using a [[breath first search|Breath First Search]].
 
+## [[Topological Sorting]]
+
+A topological sort is the order of vertices in a directed graph such that you don't visit any vertex you have already reached.
+
+
 ## [[Max flow problem]]
 
+Suppose you have a network of pipes with a maximum water carrying capacity from point A to point B and you wanted to find the maximum rate of flow of water from A to B. For example:
+
+* A->C (max 5)
+* C->D (max 4)
+* A->E (max 3)
+* E->B (max 5)
+* D->E (max 5)
+
+There are two paths from A to be B, (A->C->D->E->B) and (A->E->B)
+
+From A->C->D->E, the max flow is 4 because D->E is the limit factor. Even though D->E has a carrying capacity of 5, only 4 units of water will pass from D->E because only 4 units of water passed into D from C. From A->E, the max flow is 3 so at E we have a total of 8 units of water. However the carrying capacity from E->B is only 5 so the max flow from A->B is only 5.
+
 ### [[Ford-Fulkerson]]
+
+Ford-Fulkerson is an algorithm that solves the max-flow problem using residual graphs.
