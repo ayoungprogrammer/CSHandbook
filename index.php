@@ -1,12 +1,11 @@
 <?php
 // the markdown parser and RSS feed builder.
 require 'vendor/autoload.php';
-require 'parser.php';
-require 'breadcrumbs.php';
-require 'db.php';
+require 'src/parser.php';
+require 'src/db.php';
 
 
-
+$db = new DB('./config/local_config.ini');
 
 
 $sections = array(
@@ -20,7 +19,18 @@ $sections = array(
 	'Dynamic Programming'
 	);
 
-
+function breadcrumbs($link){
+	$map = json_decode(file_get_contents('./data/breadcrumbs.txt'),true);
+	//print_r($map);
+	$tok = strtok($map[$link],'/');
+	echo '<ul class="breadcrumbs">';
+	while($tok !== false){
+		$ref = str_replace(' ','_',$tok);
+		echo '<li><a href=./'.$ref.'>'.$tok.'</a></li>';
+		$tok = strtok('/');
+	}
+    echo '</ul>';
+}
 function navBar(){
 	foreach($GLOBALS['sections'] as $section){
 		$section_ref = './'.str_replace(' ','_',$section);
@@ -37,32 +47,20 @@ config([
     ]);
 
 
-	// The front page of the blog.
-	// This will match the root url
+
 	on('GET','/', function () {
-	    //echo "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 	    render("main",[],false);
 	});
     on('GET','/donate', function () {
-        //echo "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
         render("donate",[],false);
     });
-
-	on('GET','/links',function($page){
-		$map = bfsLinks();
-		file_put_contents('breadcrumbs.txt',json_encode($map));
-		foreach ($map as $link){
-			echo $link.'<br>';
-		}
-		print_r($map);
-	});
 
 
 	on('GET','/:page&=edit',function($page){
 		$title = preg_replace('/\_/',' ',$page);
 
-		if (article_exists($page)){
-            $content = get_article($page);
+		if ($GLOBALS['db']->article_exists($page)){
+            $content = $GLOBALS['db']->get_article($page);
 			
 			render("edit",['page'=>$page,'title'=>$title,'body'=>$content],false);
 		}
@@ -76,8 +74,8 @@ config([
 		
 		$title = preg_replace('/\_/',' ',$page);
 
-		if(article_exists($page)){
-			$content = get_article($page);
+		if($GLOBALS['db']->article_exists($page)){
+			$content = $GLOBALS['db']->get_article($page);
 			$content = parse($content);
 			render("list",['page'=>$page,'title'=>$title,'body'=>$content],false);
 		}else {
@@ -88,7 +86,7 @@ config([
 
 	on('POST','/:page&=submit',function($page){
 		$content = params('content');
-		save_article($page,$content);
+		$GLOBALS['db']->save_article($page,$content);
 		redirect('./'.$page);
 	});
 	

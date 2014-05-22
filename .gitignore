@@ -1,3 +1,4 @@
 .idea/*
 .idea
-local_config.ini
+config/local_config.ini
+.htaccess
