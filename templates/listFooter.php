@@ -19,7 +19,7 @@
     })();
 </script>
 
-<script type="text/javascript" src="./vendor/prettify/prettify.js"></script>
+<script type="text/javascript" src="./public_html/vendor/prettify/prettify.js"></script>
 
 <script>
     prettyPrint();
