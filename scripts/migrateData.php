@@ -13,10 +13,9 @@ foreach($dir as $fileinfo){
 		$content = $content;
 		echo $fileinfo->getBasename('.txt')."\n";
 
-		$this->save_article($title,$content);
+		$db->save_article($title,$content);
 	}
 }
 
-$mysqli->close();
 
 ?>

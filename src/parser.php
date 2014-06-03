@@ -27,8 +27,8 @@ function parse($str){
 
 	//[======]   =>     <br><hr><br>
 
-	$str = preg_replace('/\[\=+\]/',"",$str);
-	$str = preg_replace('/<h3>/','<br><hr><br><h3>',$str);
+	//$str = preg_replace('/\[\=+\]/',"",$str);
+	//$str = preg_replace('/<h3>/','<br><hr><br><h3>',$str);
 
 
 	//^^n^^
@@ -45,6 +45,8 @@ function parse($str){
 	$str = preg_replace('~(?>\bhref\s*=\s*["\']|\G(?<!^))[^ "\']*+\K ~','_',$str);
 	//$str = preg_replace('/(?<=href\=")(?=[^"]*")/','_',$str);
 	
+	//{{img_url}} => <img src="./public_html/img/uploads/img_url"
+	$str = preg_replace('/\{\{([A-Za-z0-9\_\-\.]+?)\}\}/','<img src="./public_html/img/uploads/$1">',$str);
 
 	//$str = preg_replace('/<<<<([^>]|>(?!>>>([^>]|$)))*>>>>/,'<pre class="prettyprint linenums">$1</pre>',$str);
 

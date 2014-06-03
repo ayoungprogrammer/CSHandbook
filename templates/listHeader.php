@@ -13,7 +13,7 @@
 
     <link type="text/css" rel="stylesheet" href="./public_html/stylesheets/reset.css">
 
-	<link type="text/css" rel="stylesheet" href="./vendor/prettify/desert.css"/>
+	<link type="text/css" rel="stylesheet" href="./public_html/vendor/prettify/desert.css"/>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 
