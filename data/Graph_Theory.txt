@@ -1,10 +1,16 @@
 ## Introduction
 
+For more advanced topics go to [[advanced graph theory|Advanced Graph Theory]].
+
 Graphs are a set of objects where some pairs of objects  **nodes** are usually connected by links called **edges**. The nodes here can be seen numbered from 1 to 6. There are edges connecting these various nodes.
 
 A **undirected** graph is a graph where the edge from A to B is the same as the edge from B to A
 
+{{graph.png}}
+
 A **directed** or **bidirectional** graph is a graph where edges have direction meaning if there is an edge from A to B then there may not be an edge from B to A. 
+
+{{digraph.png}}
 
 A **subgraph** is a subset of edges and vertices within a graph.
 
@@ -12,15 +18,13 @@ A **directed acyclic graph** (DAG) is a graph with no directed cycles (see topol
 
 A **weighted** graph is a graph that contains weights or values assigned to each edge or node. Usually these weights act as the cost to reach/use that node.
 
-
-
 ## Representations
 
 A graph can be represented as a adjacency matrix or a adjacency list.
 
-
-
 ### [[Adjacency Matrix]]
+
+{{graph.png}}
 
 Adjacency matrixes use a matrix to store the edges between nodes. A 1 means a connection between x and y and a 0 means no connection. The edge weight could also be used instead of a 1. O(n^^2^^) where n is the number of nodes. For example the matrix for graph below is:
 
@@ -34,10 +38,9 @@ Adjacency matrixes use a matrix to store the edges between nodes. A 1 means a co
  5 | 1 | 1 | 0 | 1 | 0 | 0
  6 | 0 | 0 | 0 | 1 | 0 | 0
 
-
-
-
 ### [[Adjacency List]]
+
+{{graph.png}}
 
 Adjacency lists use an array of [[linked lists|Linked Lists]] to store all the edges. At x, you have a linked list of nodes that connect to that node. 1 connects to nodes 2 and 5, 2 connects to 1, 3 and 5 and so forth. O(m) storage where m is number of edges.
 
@@ -58,6 +61,7 @@ A tree is a special graph with n-1 edges with n nodes. It has the special proper
 
 A **subtree** is a child tree of a tree.
 
+Note that trees have two meanings in computer science. It can either refer to a [[tree data structure|Tree]] or it can refer to a tree in graph theory.
 
 ###Spanning Tree
 
@@ -90,21 +94,21 @@ The shortest path is defined as a path from one node to another while trying to 
 |[[Dijkstra's]] | Computes shortest path between a pair of nodes using the Greedy method | O(n log n) | O(n log n) | No
 
 
-## [[Travelling Salesman Problem]]
-
-The [[Travelling salesman]] is the problem where a salesman wants to visit all nodes in path while minimizing the total cost of weights used of edges. 
-
-
-
 ##[[Cycle detection]]
 
 A cycle occurs in a graph when a duplicate node is encountered when traversing a tree using a [[depth first search|Depth First Search]]. Note that [[trees|Trees]] cannot contain cycles.
 
-### [[Hamiltonian Cycle]]
+## [[Topological Sorting]]
 
-A Hamiltonian path is a path in a graph that passes through all the nodes. 
+A topological sort or topological order of a directed graph is an order in which every node will come after its ancestors.
 
-A Hamiltonian cycle is a cycle in a graph that passes through all the nodes and ends back in the starting node.
+{{topsort.png}}
+
+For example topological orders could be:
+* (A,B, C, D, E, F G)
+* (B, A, D, C, F, E, G)
+
+But (B, A, C, F, D, E, G) is not a topological ordering because D is an ancestor of F and it comes after F.
 
 ##[[Connected Components]]
 
@@ -113,3 +117,4 @@ A connected component is a subgraph where all the vertices in the subgraph conne
 ###[[Strongly Connected Components]]
 
 A strongly connected component is a connected component but has the property that each vertex can visit any other vertex in the strongly connected component from any path.  This can be done using a [[breath first search|Breath First Search]].
+

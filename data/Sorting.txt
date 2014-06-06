@@ -25,3 +25,7 @@ If we sort again by the second property we have (1,B) (3, A) (1, G) (3, G) (6,K)
 [[Heap Sort]] | O(nlogn)
 [[Merge Sort]] | O(nlogn)
 [[Quick Sort]] | O(nlogn)
+
+## Exercises
+1. Find the minimum number of swaps to sort an array
+2. Find the minimum number of adjacent swaps to sort an array
