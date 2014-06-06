@@ -28,7 +28,9 @@ function parse($str){
 	//[======]   =>     <br><hr><br>
 
 	//$str = preg_replace('/\[\=+\]/',"",$str);
-	//$str = preg_replace('/<h3>/','<br><hr><br><h3>',$str);
+	
+	//<h3> Add <hr>
+	$str = preg_replace('/<h3>/','<br><hr><br><h3>',$str);
 
 
 	//^^n^^
