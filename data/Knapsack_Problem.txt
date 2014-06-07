@@ -67,4 +67,3 @@ knapsack[i][j] = max(knapsack[i-1][j-weight[i]], knapsack[i-1][j-1])
 ## Exercises
 
 1. Given a list of n objects with a positive weight and value, find the maximum value that can be obtained with maximum weight W. However, each object can be used more than once.
-2. 

@@ -191,3 +191,7 @@ if A[i] != B[j], LCS[i][j] = max( LCS[i-1][j], LCS[i][j-1] ) where 0< i ≤ n an
 ]]]]
 
 ## Exercises
+
+1. Given an array of N integers, find the largest sum that can be using consecutive integers.
+2. Given an array of N integers, find the longest increasing subsequence
+3. Given a matrix of NxN integers, find the maximum sum of a submatrix

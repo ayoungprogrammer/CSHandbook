@@ -1,8 +1,15 @@
-A depth first search is a transversal of a tree that goes as far down as a branch as possible and then back.
+## Introduction
+
+A depth first search on a tree is a traversal of a tree that goes as far down as a branch as possible and then back.
 
 A DFS can also be used on a graph to transverse it by ignoring nodes that have already been visited.
 
 A DFS requires a stack but most the time DFS uses recursion which uses the system stack.
+
+### Prerequisites
+
+* [[Recursion]]
+* [[Stack]]
 
 ## Implementation
 
@@ -33,7 +40,7 @@ public static void DFS(Tree cur){
 
 ### Graph Transversal
 
-This is a DFS implementation for transversing a bidirectional graph with positive weights.
+This is a DFS implementation for traversing a bidirectional graph with positive weights.
 
 [[[[
 /**
@@ -53,3 +60,6 @@ public static void DFS_graph(int[][] adjMatrix,int cur,boolean[] visited){
 }
 
 ]]]]
+
+** Exercises
+1. Given a tree, print the DFS order

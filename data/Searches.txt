@@ -1,9 +1,99 @@
 ## Introduction
 
+Searches are used to find solutions to problems and there many ways to search for a solution. Here are some generic searches that can be applied to many different problems. 
+
 ## [[Depth First Search]]
 
+Depth first search or DFS is a method of search that goes as far as possible before backtracking. DFS is implemented using a stack and most of the time it uses an implicit stack for recursion.
+
+### Implementation
+
+DFS of a binary tree
+
+[[[[
+class node{
+   int num;
+   node left,right;
+}
+function dfs(node cur){
+   if(cur== null)return;
+   dfs(cur.left);
+   print(cur.num);
+   dfs(cur.right);
+}
+]]]]
 ## [[Breadth First Search]]
 
-## [[Floodfill]]
+Breadth first search or BFS is a method of search that takes the closest things first then the farthest. 
+
+### Implementation
+
+BFS of a binary tree
+
+[[[[
+class node{
+   int num;
+   node left,right;
+}
+function bfs(node no){
+   Queue<node> q;
+   q.push(no);
+   while(!q.empty()){
+       node cur = q.pop();
+       print(cur.num);
+       if(cur.left){
+           q.push(cur.left);
+       }
+       if(cur.right){
+           q.push(cur.right);
+       }
+   }
+}
+]]]]
+
+
+## [[Flood Fill]]
+
+Flood fill is a search that fills a grid. It can be implemented with either DFS or BFS. 
+
+### Implementation
+
+Finds the largest area of connected 1's in a grid
+
+[[[[
+int grid[][];
+function int floodFill(int x,int y){
+   if(x<0||y<0||x>=n||y>=m)return 0;
+   if(grid[x][y]!=1)return 0;
+   int sum = 0;
+   sum+=floodFill(x+1,y);
+   sum+=floodFill(x-1,y);
+   sum+=floodFill(x,y+1);
+   sum+=floodFill(x,y-1);
+   return sum+1;
+}
+]]]]
 
 ## [[Backtracking]]
+Backtracking is a search that enumerates every single possible solution by using partial solutions.
+
+### Implementation
+
+Enumerate all subsets of an array
+
+[[[[
+function backtrack(int arr[],bool use[],int i,int n){
+   if(i>=n){
+      for(int i=0;i<n;i++){
+         if(use[i])print(arr[i]+" ");
+      }
+      println();
+      return;
+   }
+   use[i] = false;
+   backtrack(arr,i+1,n);
+   use[i] = true;
+   backtrack(arr,i+1,n);
+}
+backtrack([1,2,3],0,3)
+]]]]

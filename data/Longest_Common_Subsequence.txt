@@ -1,0 +1,61 @@
+## Introduction
+
+A subsequence is a subset of the original sequence that is in the same order. For example in the string "abcdefghi", "aeg" is a subsequence but "eaq" is not because it is not in order.
+
+The longest common subsequence between two strings A and B is the longest subsequence in A that is also in B.
+
+For example given A="xyaaaabcdeg", B="bcaaaaefgxy" the longest common subsequence is "aaaaeg"
+
+[[[[{lang-html}
+xyaaaabcde_g
+bcaaaa___efgxy
+]]]]
+
+If we try to use greedy we will see it doesn't work. For example if we use try to take as much as B as we can, we see that we will get BCEG or if we try to take as much as A we get XY. 
+
+### Prerequisites
+
+* [[Dynamic Programming]]
+
+## Solution
+
+Let first write a formal definition of the problem, given two strings A and B each with lengths N and M respectively we want to find the longest common subsequence between them.
+
+**[Note to make reading easier I have used short forms for substring and index. For example A[3] means the 3rd character of A and A[1..4] means the substring of A from the first character to the fourth character inclusive. A[0] represents the null substring of A]**
+
+The base is simple. The LCS of A[1..x] (where x is from 1 to N) and B[0] = 0. The LCS of B[1..x] and A[0] = 0.
+
+We need to break this problem into subproblems. 
+
+If A[N] = B[M] and then the new LCS is the LCS of A[1..N-1] and B[1..M-1]. Note that if two strings have the same character at the end of their string it has to be part of the LCS. Try to prove this to yourself.
+
+[[[[{lang-html}
+LCS of matched = (LCS of A from 1 to N-1, B from 1 to M-1) + A[N]
+]]]]
+
+If A[N] != B[M] then we try to match A[N] with B[M-1] or A[N-1] with B[M]. Thus we take the LCS of A[1..N-1] and B[1..M] and the LCS of A[1..N] and B[1..M-1].
+
+[[[[{lang-html}
+LCS of not matched = max ( (LCS of A[1..N], B[1..M-1]) , (LCS of A[1..N-1],B[1..M]))
+]]]]
+
+Putting it all together we have:
+[[[[{lang-html}
+Let LCS[i][j] be the length of longest common subsequence of A[1..i] and B[1..j] where 0< i ≤ n and 0 < j ≤ m.
+
+Base case:
+LCS[i][0] = 0 where 0< i ≤ n
+LCS[0][j] = 0 where 0< j ≤ m
+
+Subproblem:
+if A[i] == B[j], LCS[i][j] = LCS[i-1][j-1]+1 where 0< i ≤ n and 0 < j ≤ m
+if A[i] != B[j], LCS[i][j] = max( LCS[i-1][j], LCS[i][j-1] ) where 0< i ≤ n and 0 < j ≤ m
+]]]]
+
+## Implementation
+
+## Exercises
+
+1. Given a string of length N, find the longest palindrome that can be made.
+2. Given three strings of length N, find the longest common subsequence
+3. Given two strings of length N, find the longest common substring (adjacent characters)

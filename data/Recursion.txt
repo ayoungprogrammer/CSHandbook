@@ -1,0 +1,76 @@
+## Introduction
+
+For more advanced recursion go to: [[Advanced Recursion|Advanced Recursion]]
+
+Recursion is process that repeats itself in a similar way. Anything that has its definition nested inside itself is considered to be recursive. For example GNU stands for GNU not Unix!. Expanding this acronym gives us ((GNU not Unix) not Unix!). As you can see this will go on forever and GNU's definition is nested inside itself so it is recursive. The Fibonacci sequence is also recursive: F(n) = F(n-1)+F(n-2). Inside the function F, we see two more F's! 
+
+In computer science infinite looping is bad because computers will not know how to terminate so when we use recursion, we need a base case. A base case is the case where the recursion will stop. For the Fibonacci sequence, the base case is F(0) = 1 and F(1) = 1.
+
+So for something to be recursive in computer science, it needs a recursive definition (contained in itself) and a base case.
+
+## Factorial
+
+Let's look at the factorial function.
+
+n! = 1 * 2 * 3 .... n.
+
+Or we could write it as n! = (n-1)! * n. We now see that in this form, the factorial function is defined within itself and is recursive. We also know that 1! = 1 which is our base case.
+
+[[[[
+int factorial(int n){
+   if(n==1)return 1;
+   return factorial(n-1)*n;
+}
+]]]]
+
+## Sum of an array
+
+We can use recursion in a lot of places and we can apply to simple problems that you have probably not thought about. Summing an array can be implemented using recursion. 
+
+Let's say we have an array of n numbers. The sum of n numbers is just the sum of n-1 numbers plus the nth number so we have our recursive definition.
+
+Sum(array from 1 to n) = Sum(array from 1 to n-1) + array[n]
+
+The sum of an empty array is also 0 so we have base case.
+
+Sum(empty array) = 0
+
+So the function can be written as:
+
+[[[[
+int sum(int arr[],int n){
+   if(n==0)return 0;
+   return sum(arr,n-1)+arr[n];
+}
+sum([1,2,3],2)
+]]]]
+
+## Count
+
+Let's say we have an array of N numbers and we want to find the number of times the number 3 appears. This time there is no pure math form for a recursive function. We can create a recursive definition by putting some logic in. 
+
+The number of times 3 appears in the array of N numbers is the number of times 3 appears in the array of N-1 numbers plus one if the Nth number is a 3. If the Nth number is not a 3, then we don't add 1. 
+
+If the array is empty then the count of 3 is obviously 0.
+
+So now we have our recursive definition and our base case.
+
+[[[[
+int count3(int arr[],int n){
+   //Base Case:
+   if(n==0)return 0;
+   if(arr[n] == 3)return count3(arr,n-1)+1;
+   else return count3(arr,n-1);
+}
+
+
+count3([1,2,3,4,3,1],6)
+
+]]]]
+
+## Exercises
+
+1. Given a positive integer N, write a recursive function to get the sum of it's digits.
+2. 
+
+
