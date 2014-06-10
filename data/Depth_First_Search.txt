@@ -6,6 +6,8 @@ A DFS can also be used on a graph to transverse it by ignoring nodes that have a
 
 A DFS requires a stack but most the time DFS uses recursion which uses the system stack.
 
+{{dfs.png}}
+
 ### Prerequisites
 
 * [[Recursion]]
@@ -61,5 +63,9 @@ public static void DFS_graph(int[][] adjMatrix,int cur,boolean[] visited){
 
 ]]]]
 
-** Exercises
-1. Given a tree, print the DFS order
+## Exercises
+
+1. Given a tree, find the height (the longest path from root to leaf)
+2. Given a graph, determine if it contains a cycle
+3. Given a graph, determine the number of [[strongly connected components|Strongly Connected Compontents]]
+4. Given a grid of squares with walls at certain locations and two locations A and B, find the minimum distance (going up/left/right/down) between the locations or impossible otherwise. For example if A is at (1,1) and B is at (3,1) but there is a wall at (2,1) then the minimum distance would be 4 (down, left, left, up). 

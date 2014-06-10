@@ -105,7 +105,8 @@ A topological sort or topological order of a directed graph is an order in which
 {{topsort.png}}
 
 For example topological orders could be:
-* (A,B, C, D, E, F G)
+
+* (A, B, C, D, E, F G)
 * (B, A, D, C, F, E, G)
 
 But (B, A, C, F, D, E, G) is not a topological ordering because D is an ancestor of F and it comes after F.

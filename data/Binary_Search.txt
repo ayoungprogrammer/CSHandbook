@@ -1,0 +1,49 @@
+## [[Binary Search]]
+
+Binary search is a type of search that is able to find an object in a sorted list in O(log n). In binary search we first start at the middle element and we keep trying to halve the problem until we find the number.
+
+For example if I told you I had a number form 1 to 100 and I told you if your guess was higher or lower than my number you could use binary search to find it.
+
+Eg: my number = 17
+
+* You guess: 50
+* I say lower.
+
+So we know that:1≤number<50. Since the number is <50 then we know we can eliminate all the numbers above 50. We just made the problem half as hard! The reason we picked 50 is important because it is the middle and it tells us the most information. If we picked 80 and the reply was higher it would narrow down the problem a lot, but if the reply was lower it would barely reduce the problem. Picking the middle works best because it tells us the most information if we get a "lower" or "higher" reply. So we should also guess the middle between 1 and 50.
+
+* You guess: 25.
+* I say lower.
+
+So we know that 1≤number<25. Once again we made the problem half as hard again. Note that at every step we will make the problem half as hard. We need to pick the next middle number which is either 12 or 13, but we are indifferent because it will still tell us the most information (unless you get lucky).
+
+* You guess 13.
+* I say higher.
+
+So we know that 13<number<25. 
+
+* You guess 19.
+* I say lower.
+
+So we know that 13<number<19.
+
+* You guess 16.
+* I say higher.
+
+So we know that 16<number<19
+
+* You guess 17.
+* I say correct!
+
+## Implementation
+
+### Generic Binary Search
+[[[[
+void binarySearch(int ans,int minBound,int maxBound){
+    while(maxVal>=minVal){
+       int mid = (minVal+maxVal)/2;
+       if(mid==ans)return;
+       if(mid<ans)minVal = mid;
+       else maxVal = mid;
+    }
+}
+]]]]

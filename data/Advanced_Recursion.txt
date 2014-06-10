@@ -1,0 +1,67 @@
+## Introduction
+
+Recursion can sometimes be very difficult to wrap your head around because when you try to go deeper, it only keeps getting deeper. It is sometimes hard to figure out the recurrence relation, but once you do, the problem becomes simple.
+
+### Prerequisites
+
+* [[Recursion]]
+
+## Number of paths
+
+Let's say we have a grid of N rows and M columns. How many ways are there to get from the bottom left corner to the top right corner using the intersection points and only going upwards or rightwards?
+
+{{recursion_grid.png}}
+
+We see that the only way to reach an intersection is to come from the left intersection or come from the bottom intersection. So the number of ways to reach an intersection is the number of ways to reach the intersection to the left plus the number of ways to reach the intersection on the right. 
+
+So more accurately, the number of ways to get to intersection N x M is the sum of the ways to get to the intersection N-1 x M and the intersection N x M-1. However, the number of ways to reach the intersection N-1 x M is the sum of the number of ways to the intersection N-2 x M and N-1 x M-1. As we can see, it is a recurrence relation. 
+
+The base case is the starting intersection in the bottom left hand corner (the intersection 1x1) which is the only way to reach that intersection. We can also see that there is only one way to reach the intersections on the left side. There is only one way to reach the intersections on the bottom side as well.
+
+[[[[{lang-html}
+Let ways(x,y) be the number of ways to get to the intersection at x and y
+
+Base case:
+ways(0,y) = 1
+ways(x,0) = 1
+
+Recurrence:
+ways(x,y) = ways(x-1,y) + ways(x,y-1)
+]]]]
+
+{{recursion_grid2.png}}
+
+[[[[
+int ways(int n,int m){
+   if(n==0||m==0){
+        return 0;
+   }
+   if(n==1&&m==1){
+       return 1;
+   }
+   return ways(n-1,m) + ways(n,m-1);
+}
+]]]]
+
+## [[Towers of Hanoi]]
+
+There are three poles and N disks where each disk is heaver than the next disk. In the initial configuration, the discs are stacked upon another on the first pole where the lighter discs are above the heavier discs. We want to move all the discs to the last pole with the following conditions:
+
+* The discs can only be moved from one pole to another one at a time.
+* The discs have to be stacked such that all the lighter discs are on top of the heavier ones.
+
+Lets' try to make this problem simpler. To move N discs from the first pole the the last pole we need to move N-1 discs to the middle pole, then move the Nth disc to the last pole, and then move all N-1 discs from the middle pole back on to the last pole.
+
+Step 1:
+{{hanoi.png}}
+
+Step 2:
+{{hanoi2.png}}
+
+Step 3:
+{{hanoi3.png}}
+
+Step 4:
+{{hanoi4.png}}
+
+

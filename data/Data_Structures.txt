@@ -105,9 +105,6 @@ Hash sets are very efficient in all three set operations if a good hashing algor
 |-
 | Time Complexity | O(1) | O(1) | O(1)
 
-
-
-
 ###[[Tree Sets]]
 
 A tree set is a set which stores the values in a [[binary tree|Binary Tree]]. To store elements in a tree set, they must be able to be sorted by a property. To insert an element, it is added to the binary tree. To delete an element, it is removed from the binary tree. To check for membership, we do a binary search for the element in the binary tree.

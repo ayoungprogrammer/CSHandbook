@@ -56,6 +56,9 @@ if A[i] != B[j], LCS[i][j] = max( LCS[i-1][j], LCS[i][j-1] ) where 0< i ≤ n an
 
 ## Exercises
 
-1. Given a string of length N, find the longest palindrome that can be made.
-2. Given three strings of length N, find the longest common subsequence
-3. Given two strings of length N, find the longest common substring (adjacent characters)
+1. Given three strings of length N, find the longest common subsequence
+2. Given two strings of length N, find the longest common substring (adjacent characters)
+3. Given a string S, find the least number of operations (add letter, remove letter) to turn it into a palindrome.
+  * Example: abcdc -> abcdcb -> abcdcba (2 operations)
+4. Given a string A and string B, find the least number of operations (change letter, add letter, remove letter) to turn A into B.
+  * Example: A = abcdefh, B = bcefg, abcdefh->bcdefh->bcefh->bcefg 

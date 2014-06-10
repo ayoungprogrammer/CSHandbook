@@ -1,0 +1,29 @@
+## Introduction
+
+A breadth first search is a search that transverses level by level. For example in a tree, it will transverse everything from the first layer, to the second layer etc. BFS requires a queue to search. BFS memory limitations depends on how wide a layer is. If layers are too wide but the depth is short, then consider using DFS.
+
+{{bfs.png}}
+
+## Implementation
+
+Printing a binary tree using BFS:
+
+[[[[
+void bfs(Node root){
+    Queue<Node> q = new Queue<Node>();
+    q.push(root);
+    while(q.isEmpty()==false){
+        Node cur = q.pop();
+        System.out.println(cur.value);
+        if(cur.left)q.push(cur.left);
+        if(cur.right)q.push(cur.right);
+    }
+}
+]]]]
+
+## Exercises
+
+1. Given a tree of letters (A is the root), output the tree using BFS
+  * Example: A->B, B->D,B->C, C->G will output A | B | C D | G 
+2. Given a tree of letter, and two letters X and Y determine if X is an ancestor of Y or Y is a ancestor of X or neither. An ancestor of a node is another node that is the root of a subtree that contains that node. Or simply parent of the node, grand parent, great grandparents etc.
+  * Example: A->B, B->C, B->D, D->G,  A is a parent of both C and D but G and C are not ancestors of each other

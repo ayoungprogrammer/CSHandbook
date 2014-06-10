@@ -1,8 +1,19 @@
 ## Introduction
 
-Dynamic programming uses memoization by solving subproblems to solve the more complex problem. 
+Dynamic programming uses memoization by solving subproblems to solve the more complex problem. Dynamic programming uses recursion but instead of working backwards, it builds up the answer and reduces the number of duplicate computations. 
 
-For example the Fibonacci sequence is determined by f(n) = f(n-1)+f(n-2) where f(0) = 1 and f(1) = 1. 
+Like [[recursion|Recursion]], dynamic programming requires two things:
+
+* A base case and
+* A subproblem that can be reduced into smaller subproblems 
+
+### Prerequisites
+
+* [[Advanced Recursion]]
+
+## Fibonacci Sequence
+
+The Fibonacci sequence is determined by f(n) = f(n-1)+f(n-2) where f(0) = 1 and f(1) = 1. 
 
 If we calculate f(5) we have 
 
@@ -26,11 +37,6 @@ f(3) = f(2)+f(1) = 3
 f(4) = f(3)+f(2) = 5
 f(5) = f(4)+f(3) = 8
 ]]]]
-
-Dynamic programming is very similar to [[recursion|Recursion]] but it solves the subproblems first. It requires two things:
-
-A base case and
-a subproblem that can be reduced into smaller subproblems 
 
 For example: 
 
