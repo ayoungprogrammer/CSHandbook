@@ -22,8 +22,8 @@ The base case is the starting intersection in the bottom left hand corner (the i
 Let ways(x,y) be the number of ways to get to the intersection at x and y
 
 Base case:
-ways(0,y) = 1
-ways(x,0) = 1
+ways(1,y) = 1
+ways(x,1) = 1
 
 Recurrence:
 ways(x,y) = ways(x-1,y) + ways(x,y-1)
@@ -33,11 +33,8 @@ ways(x,y) = ways(x-1,y) + ways(x,y-1)
 
 [[[[
 int ways(int n,int m){
-   if(n==0||m==0){
-        return 0;
-   }
-   if(n==1&&m==1){
-       return 1;
+   if(n==1||m==1){
+        return 1;
    }
    return ways(n-1,m) + ways(n,m-1);
 }
@@ -47,21 +44,228 @@ int ways(int n,int m){
 
 There are three poles and N disks where each disk is heaver than the next disk. In the initial configuration, the discs are stacked upon another on the first pole where the lighter discs are above the heavier discs. We want to move all the discs to the last pole with the following conditions:
 
-* The discs can only be moved from one pole to another one at a time.
+* Only be moved from one pole to another one at a time.
 * The discs have to be stacked such that all the lighter discs are on top of the heavier ones.
 
 Lets' try to make this problem simpler. To move N discs from the first pole the the last pole we need to move N-1 discs to the middle pole, then move the Nth disc to the last pole, and then move all N-1 discs from the middle pole back on to the last pole.
 
-Step 1:
+Let the starting pole be the first pole, the helper pole be the middle pole and the destination pole the third pole.
+
 {{hanoi.png}}
 
-Step 2:
+To move N discs from the starting pole to the destination pole:
+
+**Step 1:**
+
+We need to move N-1 discs from the starting pole to the helper pole.
 {{hanoi2.png}}
 
-Step 3:
+**Step 2:**
+
+We need to move the Nth disc from the starting pole to the destination pole.
 {{hanoi3.png}}
 
-Step 4:
+**Step 3:**
+
+We need to move N-1 discs from the helper pole to the destination pole.
 {{hanoi4.png}}
 
+We can see that Step 2 is easy, all we have to do is move that one disc. But for Step 1 and Step 3, we have to move N-1 discs. How can we move N-1 discs to the middle pole? 
 
+We see that we can use the same reasoning: we need to move N-2 discs to the third pole. Then we need to move the N-1 disc to the second pole and then move N-2 discs from the third pole to the second pole.
+
+In this case, the start pole is the first pole, the helper pole is the third pole and the destination pole is the middle pole.
+
+{{hanoi.png}}
+
+To move N-1 discs from starting pole to destination pole:
+
+**Step 1:**
+
+We need to move N-2 discs from starting pole to helper pole
+
+{{hanoi5.png}}
+
+**Step 2:**
+
+We move the N-1th disc from the starting pole to the destination pole
+
+{{hanoi6.png}}
+
+**Step 3:**
+
+We move N-2 discs from the helper pole to the destination pole.
+
+{{hanoi2.png}}
+
+As we can see, the steps to move N discs are the exact same as to move N-1 discs! The only difference is that the actual poles are different but if we reassign poles to new roles every time we move down a disc, we can build a recurrence relation. 
+
+In Step 1, when we move N-1 discs from start to helper, the new helper is the old destination and the new destination is the old helper.
+
+In Step 3, when we move N-1 discs from the helper to the destination, the new helper is the start pole, and the new start pole is the helper
+
+[[[[{lang-html}
+Let f(N,start,helper,dest) be the steps to move N discs from the start to dest
+
+Base case:
+f(1,start,helper,dest)= Move from (start) to (dest)
+
+Recurrence:
+f(N,start,helper,dest)
+
+=
+
+f(N-1,start,dest,helper)
+Move from start to dest
+f(N-1,helper,start,dest)
+
+Example:
+Let A, B, C be pole 1, 2, 3
+
+f(4,A,B,C) 
+
+=
+
+f(3,A,C,B)
+Move from A to C
+f(3,B,A,C)
+
+=
+
+f(2,A,B,C)
+Move from A to B
+f(2,C,A,B)
+Move from A to C
+f(2,B,A,C)
+Move from B to C
+f(2,A,B,C)
+
+=
+
+f(1,A,C,B)
+Move from A to C
+f(1,B,A,C)
+Move from A to B
+f(1,C,B,A)
+Move from C to B
+f(1,A,C,B)
+Move from A to C
+f(1,B,C,A)
+Move from B to C
+f(1,A,B,C)
+Move from B to C
+f(1,A,C,B)
+Move from A to C
+f(1,B,A,C)
+
+=
+
+Move from A to B
+Move from A to C
+Move from B to C
+Move from A to B
+Move from C to A
+Move from C to B
+Move from A to B
+Move from A to C
+Move from B to A
+Move from B to C
+Move from A to C
+Move from B to C
+Move from A to B
+Move from A to C
+Move from B to C
+
+]]]]
+
+## Permutations
+
+A permutation is an arrangement of the original set of elements.
+
+For example permutations of A,B,C,D,E,F:
+
+* D,E,F,C,B,A
+* F,C,D,B,A,E
+* B,D,A,E,F,C
+* A,B,C,D,E,F
+
+Given a string S of length N, how can we generate all permutations?
+
+Let's assume that we have a list of permutations for the substring of S of N-1 characters. Then to get the permutations for the string of length N, all we need to do is insert the Nth character in between all the positions of each permutation of N-1 characters. For example permutation of A,B,C,D.
+
+We can manually find the permutations of A,B,C.
+
+* A,B,C
+* A,C,B
+* B,A,C
+* B,C,A
+* C,A,B
+* C,B,A
+
+If we insert the letter D between each letter for every permutation we get:
+
+* D,A,B,C
+* A,D,B,C
+* A,B,D,C
+* A,B,C,D
+* D,A,C,B
+* A,D,C,B
+* A,C,D,B
+* A,C,B,D
+.... etc
+
+And we can guarantee that every new permutation will be unique. (Try to prove that to your self).
+
+But let's look at how we can get the permutation of A,B,C. We can also get all the permutations of the string by taking the permutations of A,B and inserting C in all the positions for all substrings.
+
+Substrings of A,B
+
+* A, B
+* B, A
+
+Insert C for all positions for all permutations
+
+* C,A,B
+* A,C,B
+* A,B,C
+* C,B,A
+* B,C,A
+* C,B,A
+
+We see that we have a recurrence relation. To get the permutations of a string N, we take the substring to N-1 and we insert the Nth character at every position for each permutation of the N-1 substring. The base case of an empty string is simply an empty string. Permutation of '' is an empty list.
+
+For simplicity, S[i..j] will mean the substring from including i to excluding j.
+
+[[[[{lang-html}
+Let P(S) be the list of permutations for the string S of length N
+
+Base case:
+P('') = []
+
+Recurrence:
+Let N = length of string S
+P(S) = list of ps[0..i] + S[N] + ps[i..N] for i in 0..N, for ps in P(S[0..N-1])
+
+]]]]
+
+Implementation
+[[[[
+Vector<String> permutation(String s){
+   int n = s.length;
+   Vector<String> vec = new Vector<String>();
+   if(s.length==0)return vec;
+   Vector<String> subvec = permutation(s.substring(0,n-1));
+   for(int i=0;i<subvec.size();i++){
+      String ps = subvec.get(i);
+      for(int j=0;j<n;j++){
+         vec.push(ps.substring(0,j)+s.charAt(n)+ps.substring(j,n-1));
+      }
+   }
+   return vec;
+}
+]]]]
+
+
+## Exercises
+
+1. Given a string S, write a recursive function to generate all substrings

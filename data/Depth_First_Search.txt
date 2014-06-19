@@ -17,17 +17,19 @@ A DFS requires a stack but most the time DFS uses recursion which uses the syste
 
 Most of the time, DFS is implemented using recursion and it is very short and simple to code.
 
-### Binary Tree Transversal
-
-This is a DFS implementation for a binary tree
-
 [[[[
 public class Tree {
 	int value;
 	Tree left;
 	Tree right;
 }
+]]]]
 
+### Binary Tree Transversal
+
+Implementation for outputting a binary tree in order from left to right using DFS
+
+[[[[
 /**
  * Performs a DFS on a binary tree
  * tree - current tree DFS is at
@@ -37,6 +39,40 @@ public static void DFS(Tree cur){
 	DFS(cur.left);
 	System.out.println(cur.value);
 	DFS(cur.right);
+}
+]]]]
+
+### Binary Tree Preorder
+
+Implementation for outputting a binary tree in DFS pre order
+
+[[[[
+/**
+ * Performs a DFS on a binary tree
+ * tree - current tree DFS is at
+ */
+public static void DFS(Tree cur){
+	if(cur==null)return;
+	System.out.println(cur.value);
+	DFS(cur.left);
+	DFS(cur.right);
+}
+]]]]
+
+### Binary Tree Postorder
+
+Implementation for outputting a binary tree in DFS post order
+
+[[[[
+/**
+ * Performs a DFS on a binary tree
+ * tree - current tree DFS is at
+ */
+public static void DFS(Tree cur){
+	if(cur==null)return;
+	DFS(cur.left);
+	DFS(cur.right);
+	System.out.println(cur.value);
 }
 ]]]]
 

@@ -1,33 +1,41 @@
 ## Introduction
 
-Data structures are a way of storing data such that it can be accessed or changed in a efficient manner. 
+Data structures are a way of storing data such that it can be accessed or changed in a efficient manner. Although many of these data structures are already implemented in various languages, it is important to understand how they work. By understanding the implementations we can have a sense of which data structure to use in different problems as well as determine their efficiencies.
 
 For more intermediate data structures, read the the [[advanced data structures|Advanced Data Structures]] page.
 
 ## [[Arrays]]
 
-An array is the most basic data structure that holds a number of fixed elements of the same type in a block of data. The fact that it is in one block and the same type is important because it allows accessing the element at index i very quickly. 
+Imagine you had a row of parking spaces where each was labelled with a number. If you wanted to know what the license plate of a car at parking space 4 was, all you have to do is go to the parking space and read off the license plate. If you wanted to park you car at parking space 5, you would go to parking space 5 and put your car in there if there was nothing there. Let's say that you had cars at parking spaces 1, 2, and 3. If you wanted to insert a new car at parking space 1 and keep the rest of the cars in the same order, you would have to shift the cars in the parking spaces from 1, 2 and 3 to 2, 3 and 4 by getting in each car and parking them in the new spaces which would take some time. This type of structure is an array.
 
-However if you want to insert an element into an array at index i you will need to move everything past the ith element by 1 and similarly with deletion.
+An **array** is the most basic data structure that stores elements of the same type in a fixed block. The fact that it is in one block and the same type is important because it allows accessing elements very quickly if you have the index. All you have to do is go to the index and retrieve the element. However, inserting elements in the array is slow because you would have to shift all the elements and also if you want to shift past the fixed size you will get an error. (Imagine the parking spaces are full and you wanted to insert a car somewhere, there will still be one car that will have no parking space).
 
-Arrays can be multidimensional meaning you can have an array of array of objects. 
+Arrays can be multidimensional meaning you can have an array of array of objects. (Imagine a parking lot with multiple rows of parking spaces).
 
+| Operation | Create | Get | Set
+|-----------|-----|-----
+| Time Complexity | O(n) | O(1) | O(1)
 
-### [[Vector]]
+## [[Vector]]
 
-Vectors are arrays that are able to be dynamically resized. This allows the features of insertion, removal and deletion. Vectors are implemented as arrays and when more space is required, they are copied to a new array with twice the original size.
+Imagine you had a ???
+
+A **vector** is an array that can be dynamically resized. This allows the features of insertion, removal and deletion. Vectors are implemented as arrays and when more space is required, they are copied to a new array with twice the original size.
 
 
  Operation | Create | Get  | Set | Insert | Delete
 -----------|---------|--
-Time Complexity | O(1) | O(1)  | O(1) | O(n) | O(n)
-### [[Linked List]] 
+Time Complexity | O(n) | O(1)  | O(1) | O(n) | O(n)
 
-A **pointer** holds the memory location of another object.
+## [[Linked List]] 
 
-A linked list is similar to an array but it is different such that it is not stored in one block of data. Each element can be stored in a random place in memory but each element contains a pointer to the next element thus forming a chain of pointers. Since the elements aren't in a block, accessing the ith element must be done by traversing the entire linked list by following each pointer to the next. However, this also allows insertion to be done more quickly by simply changing the point of the previous element and setting to the pointer of the current element to the next element. Deletion is also done by taking the previous element and changing its pointer to two elements ahead. 
+Imagine you had some train cars that were linked together where each was labelled on the inside with a different letter. If you had to find a specific letter you would have to start at the first train car and look inside to check the letter and then walk into the next train car to check the letter and so forth until you found the train car you wanted. If you wanted to insert a train car somewhere all you would have to do it unlink the position where you wanted to insert it and then relink the new train car with the other cars. If you wanted to remove a train car all you would have to do is unlink that car from the other cars and then create a new link to the cars that were adjacent to it. This sort of structure is called a linked list.
 
-A doubly linked list is a linked list that has pointers going backwards as well as forwards.
+A **pointer** is something that holds the memory location of another object.
+
+A **linked list** is similar to an array but it is different such that it is not stored in one block of data. Each element can be stored in a random place in memory but each element contains a pointer to the next element thus forming a chain of pointers. Think of a pointer as a link that links two train cars. Since the elements aren't in a block, accessing an element must be done by traversing the entire linked list by following each pointer to the next. However, this also allows insertion to be done more quickly by simply changing the point of the previous element and setting to the pointer of the current element to the next element. Deletion is also done by taking the previous element and changing its pointer to two elements ahead. In a linked list the links only go forward and you cannot move backward. 
+
+A **doubly linked list** is a linked list that has pointers going backwards as well as forwards.
 
 
 | Operation | Get | Add at node | Delete at node | Add | Delete
@@ -35,41 +43,40 @@ A doubly linked list is a linked list that has pointers going backwards as well 
 | Time Complexity | O(n) | O(1) | O(1) | O(n) | O(n)
 
 
-### [[Queue]]
+## [[Queue]]
 
-A queue is an array but with the property that it can only have removal from the front and insertion from the back (FIFI, first in first out). Removal from the front is called "pop" or "dequeue". Insertion from the back is called "push" or "enqueue". As the name implies queues are the same as those found in every day life, for example a queue for a bus stop. The first person in line for the bus will get on the bus first and the last person in line will get on the bus last.
+Imagine you are standing in line for a restaurant. Whoever is first in line will be served and whoever is last in line will be served last. People can be served while more people join the line and the line may get very long because the time it takes to serve one person is long while more people join the queue. This line is also called a queue.
 
-Queues are often used for buffer systems, for example a text message service. The messages that arrive at the server first are relayed first and the messages that arrive later are relayed later.
+A queue is a structure with the property that it can only have removal from the front and insertion from the back (FIFI, first in first out). Removal from the front is called "pop" or "dequeue". Insertion from the back is called "push" or "enqueue".
 
-Queues are usually implemented as a linked list because its memory size changes as more elements and pushed and popped.
+Queues are usually implemented as a linked list because its memory size changes as more elements and pushed or popped and insertion from the front is more efficient.
 
+Queues are often used for buffer systems, for example a text message service. The messages that arrive at the server first are relayed first and the messages that arrive later are relayed later. If there are too many text messages in the system such that the rate  texts are received overwhelm the number of texts that are sent the buffer may overflow and messages will get dropped. Most of the time this won't happen because the systems are designed to handle large loads, but if there were an emergency that caused everyone to start texting many texts could be dropped.
 
 
 | Operation | Pop | Push
 |-
 | Time Complexity | O(1) | O(1)
 
+## [[Stack]]
 
+Imagine a stack of plates at a buffet, the plates are taken from the top and are also replaced from the top. The first plate to go in will be the last plate to come out. The last plate to go in will be the first to come out. This structure is called a stack.
 
-### [[Stack]]
-
-A stack is an array with the property that it can only have removal and insertion from the back (FILO, first in last out). Remove from the back is called "pop" and insertion from the back is called "push". Imagine a stack of plates at a buffet, the plates are taken from the top and are also replaced from the top. 
+A stack is an array with the property that it can only have removal and insertion from the back (FILO, first in last out). Remove from the back is called "pop" and insertion from the back is called "push". 
 
 Stacks are used for function calls on the memory stack. Whenever a function is called, it is placed on the memory stack with its variables and when it is returning a value, it is popped off the stack.
-
-
 
 | Operation | Pop | Push
 |-----------|-----|-----
 | Time Complexity | O(1) | O(1)
 
-
-
 ## [[Sets]]
 
-Sets are data structures that stores values and are used for testing if an element already exists within the set.  Sets generally have three operations: insertion, deletion and membership test. 
+Imagine you have a grocery list that you use to keep tracking of things you need to buy. You want to make sure there are no duplicate items in the list, you can add items to the list and that you can remove items from your list. This structure is similar to what a set does.
 
-**Membership** test is checking whether an element exists within the set. Insertion places an element into the set and deletion removes an element from the set.
+Sets are data structures that stores values and are used for three operations: insertion, deletion and membership test. 
+
+Insertion places an element into the set, deletion removes an element from the set and a **membership** test is checking whether an element exists within the set.
 
 
 ### [[Hash Sets]]
@@ -105,8 +112,7 @@ Hash sets are very efficient in all three set operations if a good hashing algor
 |-
 | Time Complexity | O(1) | O(1) | O(1)
 
-###[[Tree Sets]]
-
+### [[Tree Sets]]
 A tree set is a set which stores the values in a [[binary tree|Binary Tree]]. To store elements in a tree set, they must be able to be sorted by a property. To insert an element, it is added to the binary tree. To delete an element, it is removed from the binary tree. To check for membership, we do a binary search for the element in the binary tree.
 
 The advantage of tree sets is that they are maintained in a sorted order. 
@@ -167,7 +173,6 @@ Heaps are trees which have the property that a node must either be greater than 
 | Operation       | Insert   | Remove   |
 | --------------- | -------- | -------- |
 | Time Complexity | O(log n) | O(log n) |
-
 
 
 

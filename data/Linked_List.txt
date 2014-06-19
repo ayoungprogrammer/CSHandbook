@@ -1,9 +1,16 @@
 ## Introduction
 
-A linked list is similar to an array but it is different such that it is not stored in one block of data. Each element of the linked list also contains a point to the next element thus forming a chain of pointers. Since the elements aren't in a block, accessing the ith element must be done by traversing the entire linked list by following each pointer to the next. However, this also allows insertion to be done more quickly by simply changing the point of the previous element and setting to the pointer of the current element to the next element. Deletion is also done by taking the previous element and changing its pointer to two elements ahead. 
+Imagine you had some train cars that were linked together where each was labelled on the inside with a different letter. If you had to find a specific letter you would have to start at the first train car and look inside to check the letter and then walk into the next train car to check the letter and so forth until you found the train car you wanted. If you wanted to insert a train car somewhere all you would have to do it unlink the position where you wanted to insert it and then relink the new train car with the other cars. If you wanted to remove a train car all you would have to do is unlink that car from the other cars and then create a new link to the cars that were adjacent to it. This sort of structure is called a linked list.
 
-A doubly linked list is a linked list that has pointers going backwards as well as forwards.
+A **pointer** is something that holds the memory location of another object.
 
+A **linked list** is similar to an array but it is different such that it is not stored in one block of data. Each element can be stored in a random place in memory but each element contains a pointer to the next element thus forming a chain of pointers. Think of a pointer as a link that links two train cars. Since the elements aren't in a block, accessing an element must be done by traversing the entire linked list by following each pointer to the next. However, this also allows insertion to be done more quickly by simply changing the point of the previous element and setting to the pointer of the current element to the next element. Deletion is also done by taking the previous element and changing its pointer to two elements ahead. In a linked list the links only go forward and you cannot move backward. 
+
+A **doubly linked list** is a linked list that has pointers going backwards as well as forwards.
+
+| Operation | Get | Push | Delete at node 
+|-----------|---------|------------|---------
+| Time Complexity | O(n) | O(1) | O(1) 
 
 ## Implementation
 
@@ -26,22 +33,26 @@ class Link{
 }
 ]]]]
 
-### Create
+### Class
 
 Create the linked list by initializing the starting node as null and setting the size to empty.
 [[[[
-public LinkedList(){
-	start = null;
-	size = 0;
+class LinkedList{
+	Link start;
+	int size;
+	public LinkedList(){
+		start = null;
+		size = 0;
+	}
 }
 ]]]]
  
-### Add to Head
+### Push
 
 Create a new node with the value given and add it to the head. We have to set the current head previous node to the new node and the new next next to the last node.
 
 [[[[
-public void addToHead(int value){
+public void push(int value){
 	Link nn = new Link(value);
 	nn.next = start;
 	start.prev = nn;
@@ -86,8 +97,7 @@ public void delete(Link node){
 	size--;
 }
 ]]]]
-## Applications
 
 ## Exercises
 
-
+1. Implement a doubly linked list.

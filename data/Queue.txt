@@ -1,7 +1,38 @@
 ## Introduction
 
-A queue is a data structure with the property that it can only have removal from the front and insertion from the back (FIFI, first in first out). Removal from the front is called "pop" or "dequeue". Insertion from the back is called "push" or "enqueue". As the name implies queues are the same as those found in every day life, for example a queue for a bus stop. The first person in line for the bus will get on the bus first and the last person in line will get on the bus last.
+Imagine you are standing in line for a restaurant. Whoever is first in line will be served and whoever is last in line will be served last. People can be served while more people join the line and the line may get very long because the time it takes to serve one person is long while more people join the queue. This line is also called a queue.
 
-Queues are often used for buffer systems, for example a text message service. The messages that arrive at the server first are relayed first and the messages that arrive later are relayed later.
+A queue is a structure with the property that it can only have removal from the front and insertion from the back (FIFI, first in first out). Removal from the front is called "pop" or "dequeue". Insertion from the back is called "push" or "enqueue".
 
-Queues are usually implemented as a linked list because its memory size changes as more elements and pushed and popped. 
+Queues are usually implemented as a linked list because its memory size changes as more elements and pushed or popped and insertion from the front is more efficient.
+
+Queues are often used for buffer systems, for example a text message service. The messages that arrive at the server first are relayed first and the messages that arrive later are relayed later. If there are too many text messages in the system such that the rate texts are received overwhelm the number of texts that are sent the buffer may overflow and messages will get dropped. Most of the time this won't happen because the systems are designed to handle large loads, but if there were an emergency that caused everyone to start texting many texts could be dropped.
+
+We can 
+
+| Operation | Pop | Push
+|-
+| Time Complexity | O(1) | O(1)
+
+## Prerequisites
+* [[Linked List]]
+
+## Implementation
+We can implement a queue most efficiently using a linked list because it has an efficient memory allocation. 
+
+## Exercises
+
+1. Given a list of letters representing instructions where the first instruction is, output what the final list should look like after N instructions are executed. 
+    * A. Add B to the end of the list of instructions
+    * B. Do nothing
+    * C. Add two A's to the front of the list of instructions
+
+    Example:
+    * ABC
+    * BCB
+    * CB
+    * AAB
+    * ABB
+    * BBB
+    * BB
+    * B

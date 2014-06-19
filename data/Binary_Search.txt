@@ -2,6 +2,7 @@
 
 Binary search is a type of search that is able to find an object in a sorted list in O(log n). In binary search we first start at the middle element and we keep trying to halve the problem until we find the number.
 
+### Example
 For example if I told you I had a number form 1 to 100 and I told you if your guess was higher or lower than my number you could use binary search to find it.
 
 Eg: my number = 17
@@ -36,6 +37,8 @@ So we know that 16<number<19
 
 ## Implementation
 
+This is a generic implementation of a binary search.
+
 ### Generic Binary Search
 [[[[
 void binarySearch(int ans,int minBound,int maxBound){
@@ -47,3 +50,10 @@ void binarySearch(int ans,int minBound,int maxBound){
     }
 }
 ]]]]
+
+## Exercises
+
+1. Given a sorted array, find whether or not the number N exists
+2. Given a sorted array, find the the number of elements between the number A and number B inclusive.
+* Example: 1,2 4, 6, 8, 10, 16, 20. Given A=5 and B=15, the number of elements between A and B is 3 (6, 8, 10)
+3. Given two sorted arrays, find the range of overlapping elements.

@@ -1,0 +1,39 @@
+## Introduction
+
+Imagine a stack of plates at a buffet, the plates are taken from the top and are also replaced from the top. The first plate to go in will be the last plate to come out. The last plate to go in will be the first to come out. This structure is called a stack.
+
+A stack is an array with the property that it can only have removal and insertion from the back (FILO, first in last out). Remove from the back is called "pop" and insertion from the back is called "push".
+
+Stacks are used for function calls on the memory stack. Whenever a function is called, it is placed on the memory stack with its variables and when it is returning a value, it is popped off the stack.
+
+| Operation | Pop | Push
+|-----------|-----|-----
+| Time Complexity | O(1) | O(1)
+
+### Prerequisites
+
+* [[Vector]]
+
+## Exercises
+
+1. Given a string of brackets of (), determine if the bracket syntax is legal (every opening bracket has a closing bracket). 
+
+    Legal syntax: 
+
+    * ()()()
+    * ( ) ( ( ) ) ( ( ) ( ) )
+
+    Illegal syntax: 
+
+    * ( ) ) ( ) ) (
+    * ( ( ) ) )
+
+2. Given a string of brackets of either () or [], determine if the bracket syntax is legal (every opening bracket has a closing bracket from left to right). 
+
+    Legal syntax: 
+    * ( [ ( ) [ ] ] )
+    * ( ) ( ) [ ] ( ) ( )
+
+    Illegal syntax:  
+    * ( ( ) ]
+    * ( ) [ ( ] )

@@ -1,0 +1,116 @@
+## Introduction
+
+A vector is similar to an array but it more flexible in terms of size. In Java, a vector is very similar to an array starts with size N. When more elements are added to the vector and the number of elements > N, then the vector resizes itself and reallocates for 2*N space. When using an vector we can forget about allocating space.
+
+ Operation | Create | Get  | Set | Insert | Delete
+-----------|---------|--
+Time Complexity | O(n) | O(1)  | O(1) | O(n) | O(n)
+### Prerequisites
+
+* [[Arrays]]
+
+## Implementation
+
+There is a builtin Vector class already, but we will go through the implementation of a simple integer vector class.
+
+### Class
+
+In our vector class, we need to store the element and the size of the current vector.
+
+[[[[
+class Vec{
+	private int[] arr; //Storage of elements
+	private int size; //Current size
+}
+
+//Constructor
+publc Vec(int startSize){
+    arr = new int[startSize];
+    this.size = 0;
+}
+
+]]]]
+
+### Resize
+
+Resize will be used to resize the current size of elements. We create a new array of two times the size of the old one and copy the old array over.
+
+[[[[
+public void resize(){
+	int[] newArr = new int[2*arr.length];
+	for(int i=0;i<end;i++){
+		newArr[i] = arr[i];
+	}
+	arr = newArr;
+}
+]]]]
+
+## Add Element
+
+Add element will add elements to the end of the vector. If the array is full, the vector will resize itself.
+[[[[
+public void add(int x){
+        if(size>=arr.length){
+		resize();
+	}
+	arr[size] = x;
+	end++;
+}
+]]]]
+
+## Remove element
+
+Removes element at the index idx. It will throw an exception if the index is out of bounds.
+
+We shift everything to the right of the index to the left by one to fill in the missing element.
+
+[[[[
+public int remove(int idx){
+	if(idx<0||idx>=size){
+		throw new ArrayIndexOutOfBoundsException();
+	}
+	int ret = arr[idx];
+	while(idx+1<size){
+		arr[idx]=arr[idx+1];
+		idx++;
+	}
+	size--;
+	return ret;
+}
+]]]]
+
+## Get Element
+
+Returns the element at the specified index. It will throw an exception if the index is out of bounds. Note this function is exactly as the same as in the [[array|Array]]
+
+[[[[
+public int get(int idx){
+	if(idx<0||idx>=size){
+		throw new ArrayIndexOutOfBoundsException();
+	}	
+	return arr[idx];
+}
+]]]]
+
+## Insert Element
+
+Insert the new number x at the index. We need to make space at the index for the new element so we shift everything to the right of the index by 1.
+
+[[[[
+public void insert(int idx,int x){
+	if(idx<0||idx>size){
+		throw new ArrayIndexOutOfBoundsException();
+	}
+	size++;
+	if(size>=arr.length){
+		resize();
+	}
+	//Shift elements to the right or idx by 1
+	int idx2 = size;
+	while(idx2>idx){
+		arr[idx2]=arr[idx2-1];
+		idx2--;
+	}	
+	arr[idx] = x;
+	}
+]]]]

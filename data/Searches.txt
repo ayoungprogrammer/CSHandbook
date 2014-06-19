@@ -4,7 +4,7 @@ Searches are used to find solutions to problems and there many ways to search fo
 
 ## [[Binary Search]]
 
-Binary search is a type of search that is able to find an object in a sorted list in O(log n). In binary search we first start at the middle element and we keep trying to halve the problem until we find the number.
+Binary search is a type of search that is able to find an object in a sorted list in O(log n). In binary search we first start at the middle element and we keep trying to halve the problem until we find the element we need. 
 
 ### Implementation
 
@@ -75,7 +75,7 @@ function bfs(node no){
 
 ## [[Flood Fill]]
 
-Flood fill is a search that fills a grid. It can be implemented with either DFS or BFS. 
+Flood fill is a search that fills a grid. It can be implemented with either DFS or BFS. We first start at some starting position and then we expand in the directions that we can (eg: up, left, down, right). 
 
 ### Implementation
 

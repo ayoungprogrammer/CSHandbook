@@ -37,7 +37,7 @@ f(4)
 = 24
 ]]]]
 
-
+Implementation:
 [[[[
 int factorial(int n){
    if(n==1)return 1;
@@ -155,7 +155,7 @@ exp(3,10)
 = (243)^2
 = 59049
 ]]]]
-
+Implementation
 [[[[
 int exponent(int b,int n){
    if(n==1)return b;
@@ -173,6 +173,6 @@ int exponent(int b,int n){
 
 ## Exercises
 
-1. Given a positive integer N, write a recursive function to get the sum of it's digits.
-2. Given a string S, determine if it is a palindrome.
-
+1. Given an array of N integers, write a recursive function to get the sum
+2. Given a string S, write a recursive function to determine if it is a palindrome.
+3. Given a number N, write a recursive function to output the number in binary.
