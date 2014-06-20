@@ -6,7 +6,7 @@
         <span>1 website</span>
     </div>
     <div class="row">
-        <span>2 hackers</span>
+        <span>2 programmers</span>
     </div>
     <div class="row">
         <span>200 algorithms</span>
@@ -20,26 +20,35 @@
             <h2>The Computer Science Handbook</h2>
             <hr/>
             <p>
-                Have you ever had trouble searching for a compiled library of the most common computer science algorithms?
-                Maybe it was to supplement material taught in a programming course. Maybe it was to prepare for a
-                programming contest or a technical interview. Or maybe you were just nerdy and awesome enough to want to
-                learn about some CS algorithms in your free time. If any of that sounds like you, then welcome to The
-                CS Handbook.
+                There are many existing resources for computer science algorithms and data structures but they all use complex 
+                terminology and often they are difficult to understand. For example, Wikipedia has many articles on different
+                algorithms but they are full of abstract explainations and the articles are not organized so that they can be
+                searched easily. 
             </p>
             <p>
-                The CS Handbook is an on-going project started by two computer science students from the University of
-                Waterloo. It's a collection of computer science algorithms that range from simple calculations such as the
-                GCD, to the perplexing calculations behind Shortest Path Problems. It's a place for quick reference and
-                intensive learning for both beginningers and experts alike.
+                The Computer Science Handbook is an on-going project started by two computer science students from the University of
+                Waterloo to help others people understand the principles of computer science in a very understandable fashion.
+                We have organized articles on some essential algorithms and data structures such that it is easy to navigate.
+                We strive to make explainations as simple as possible so anyone without a math/programming 
+                background can understand.
+                We have also made the web page as easy to navigate as possible so it is as simple as clicking another link to get to
+                another page. 
+                We provide exercises at the bottom of every article to help you understand the information better.
             </p>
-
-            <p> Again, welcome and enjoy your stay!</p>
-            <p> - Simon and Michael</p>
+            <p>
+                Whether you are a curious student starting to dive into the world of computer science or a job candidate looking
+                for interview help, we hope that we have helped you!
+            <h2>Get started now!</h3>
+            <ul>
+                <li><a href="/Data_Structures">Data Structures</a></li>
+                <li><a href="/Sorting">Sorting</a></li>
+                <li><a href="/Geometry">Geometry</a></li>
+            </ul>
 
             <br/>
 
 
-            <h3>check out our profiles</h3>
+            <h3>Check out our profiles:</h3>
 
             <aside>
                 <a href="http://simon-huang.ca" target="_blank">Simon Huang</a>

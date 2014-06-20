@@ -56,5 +56,19 @@ function parse($str){
 
 	return $str;
 }
+//Generate meta description
+function getDesc($content,$title){
+
+	$searchText = '<h2>Introduction</h2>';
+	$pText = '<p>';
+	$pos = strpos($content,$searchText);
+	if($pos == FALSE)return $title;
+	$pos = strpos($content,$pText,$pos);
+	if($pos == FALSE)return $title;
+	$pos += strlen($pText);
+	$endpos = strpos($content,'.',$pos);
+	if($endpos == FALSE)return $title;
+	return substr($content,$pos,$endpos-$pos);
+}
 
 ?>

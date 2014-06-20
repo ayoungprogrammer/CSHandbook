@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>The CS Handbook</title>
+    <title>The Computer Science Handbook</title>
+    <meta name="Description" content="Reference / handbook for computer science data structures, algorithms on topics such as 
+    graph theory, dynamic programming, recursion and other complex algorithms">
     <link rel="icon" type="image/png" href="./public_html/img/favicon.png">
 
 

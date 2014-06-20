@@ -2,6 +2,7 @@
 <html>
 <head>
     <title><?php echo $title ?></title>
+    <meta name="Description" content="<?php echo $desc ?>">
     <link rel="icon" type="image/png" href="./public_html/img/favicon.png">
 
     <link type="text/css" rel="stylesheet" href="./public_html/stylesheets/header_footer.css">
@@ -18,9 +19,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-
-    <style>
-    </style>
 
 </head>
 

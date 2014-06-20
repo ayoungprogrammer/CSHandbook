@@ -77,7 +77,8 @@ config([
 		if($GLOBALS['db']->article_exists($page)){
 			$content = $GLOBALS['db']->get_article($page);
 			$content = parse($content);
-			render("list",['page'=>$page,'title'=>$title,'body'=>$content],false);
+			$desc = getDesc($content,$title);
+			render("list",['page'=>$page,'title'=>$title,'body'=>$content,'desc'=>$desc],false);
 		}else {
 			redirect('./'.$page.'&=edit');
 		}
