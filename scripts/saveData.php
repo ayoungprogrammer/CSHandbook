@@ -3,7 +3,8 @@
 
 require '../src/db.php';
 
-$db = new DB('../config/local_config.ini');
+$config = parse_ini_file('../config/local_config.ini');
+$db = new DB($config);
 $db->dump_db('../data/');
 
 

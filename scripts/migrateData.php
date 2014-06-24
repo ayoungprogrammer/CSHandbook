@@ -2,7 +2,8 @@
 
 require '../src/db.php';
 
-$db = new DB('../config/local_config.ini');
+$config = parse_ini_file('../config/local_config.ini');
+$db = new DB($config);
 
 $data_dir = '../data/';
 $dir = new DirectoryIterator($data_dir);

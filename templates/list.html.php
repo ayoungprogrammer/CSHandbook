@@ -7,7 +7,15 @@
 <div class="container">
     
     <div class="banner">
-        <h1><?php echo $title?>  [<a href="./<?php echo $page.'&'?>=edit">edit</a>]</h1>
+        <h1><?php echo $title?>  
+
+            <?php if($GLOBALS['cfg']['env']=='stage'): ?>
+
+            [<a href="./<?php echo $page.'&'?>=edit">edit</a>]
+
+            <?php endif; ?>
+
+        </h1>
     </div>
     
     <?php breadcrumbs($page); echo '<hr/>';?>

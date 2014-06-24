@@ -7,7 +7,6 @@ class DB{
 
     public function __construct($config){
 
-        $config = parse_ini_file($config);
         $user = $config['user'];
         $password = $config['password'];
         $db = $config['database'];
@@ -67,7 +66,7 @@ class DB{
         $res = $this->mysqli->query("SELECT * FROM articles");
         while ($row = mysqli_fetch_array($res)){
             $path = $base_path.$row['id'].'.txt';
-
+            echo $row['id']."\n" ;
             file_put_contents($path,$row['content']);
         }
 

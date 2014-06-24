@@ -4,8 +4,9 @@ require 'vendor/autoload.php';
 require 'src/parser.php';
 require 'src/db.php';
 
+$cfg = parse_ini_file('./config/local_config.ini');
 
-$db = new DB('./config/local_config.ini');
+$db = new DB($cfg);
 
 
 $sections = array(
@@ -80,7 +81,10 @@ config([
 			$desc = getDesc($content,$title);
 			render("list",['page'=>$page,'title'=>$title,'body'=>$content,'desc'=>$desc],false);
 		}else {
-			redirect('./'.$page.'&=edit');
+			if($GLOBALS['cfg']['env']=='stage'){
+				redirect('./'.$page.'&=edit');
+			}
+			
 		}
 	
 	});
