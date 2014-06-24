@@ -4,21 +4,10 @@ require 'vendor/autoload.php';
 require 'src/parser.php';
 require 'src/db.php';
 
-$cfg = parse_ini_file('./config/local_config.ini');
+$cfg = parse_ini_file('./config/local_config.ini',true);
 
-$db = new DB($cfg);
+$db = new DB($cfg['db']);
 
-
-$sections = array(
-	'Data Structures',
-	'Sorting',
-	'Geometry',
-	'Graph Theory',
-	'Number Theory',
-	'Pattern Matching',
-	'Searches',
-	'Dynamic Programming'
-	);
 
 function breadcrumbs($link){
 	$map = json_decode(file_get_contents('./data/breadcrumbs.txt'),true);
@@ -33,7 +22,7 @@ function breadcrumbs($link){
     echo '</ul>';
 }
 function navBar(){
-	foreach($GLOBALS['sections'] as $section){
+	foreach($GLOBALS['cfg']['sections'] as $section){
 		$section_ref = './'.str_replace(' ','_',$section);
 		echo '<li><a href="'.$section_ref.'">'.$section.'</a></li>';
 	}

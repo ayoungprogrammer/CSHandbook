@@ -1,6 +1,8 @@
 <?php
 
-$config = parse_ini_file('../config/local_config.ini');
+$cfg = parse_ini_file('../config/local_config.ini',true);
+
+$config = $cfg['db'];
 $user = $config['user'];
 $password = $config['password'];
 $db = $config['database'];

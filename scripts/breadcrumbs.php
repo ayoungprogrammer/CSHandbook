@@ -3,29 +3,23 @@
 
 require "../src/db.php";
 
-$sections = array(
-	'Data Structures',
-	'Sorting',
-	'Geometry',
-	'Graph Theory',
-	'Number Theory',
-	'Pattern Matching',
-	'Searches',
-	'Dynamic Programming'
-	);
 
 function bfsLinks(){
 
+	$cfg = parse_ini_file('../config/local_config.ini',true);
+	print_r ($cfg);
 	$head = 0;
 	$end = 0;
 	$queue = array();
-	foreach($GLOBALS['sections'] as $section){
+	foreach($cfg['sections'] as $section){
+		print $section;
 		$queue[$end]='/'.$section;
 		$map[str_replace(' ','_',$section)] = $queue[$end];
 		$end++;
 	}
 
-	$db = new DB('../config/local_config.ini');
+	
+	$db = new DB($cfg['db']);
 	
 	while($head < $end){
 		
