@@ -46,22 +46,30 @@ config([
     });
 
 
-	on('GET','/:page&=edit',function($page){
-		$title = preg_replace('/\_/',' ',$page);
+    //EDIT and SUBMIT is for stage
+    if($GLOBALS['cfg']['env']=='stage'){
+		on('GET','/:page&=edit',function($page){
+			$title = preg_replace('/\_/',' ',$page);
 
-		if ($GLOBALS['db']->article_exists($page)){
-            $content = $GLOBALS['db']->get_article($page);
-			
-			render("edit",['page'=>$page,'title'=>$title,'body'=>$content],false);
-		}
-		else {
-			render("edit",['page'=>$page,'title'=>$title,'body'=>''],false);
-		}
-	});
+			if ($GLOBALS['db']->article_exists($page)){
+	            $content = $GLOBALS['db']->get_article($page);
+				
+				render("edit",['page'=>$page,'title'=>$title,'body'=>$content],false);
+			}
+			else {
+				render("edit",['page'=>$page,'title'=>$title,'body'=>''],false);
+			}
+		});
+		on('POST','/:page&=submit',function($page){
+			$content = params('content');
+			$GLOBALS['db']->save_article($page,$content);
+			redirect('./'.$page);
+		});
+	}
 
+
+	//Get articles
 	on('GET','/:page',function($page){
-
-		
 		$title = preg_replace('/\_/',' ',$page);
 
 		if($GLOBALS['db']->article_exists($page)){
@@ -70,19 +78,17 @@ config([
 			$desc = getDesc($content,$title);
 			render("list",['page'=>$page,'title'=>$title,'body'=>$content,'desc'=>$desc],false);
 		}else {
+			//Edit for stage
 			if($GLOBALS['cfg']['env']=='stage'){
 				redirect('./'.$page.'&=edit');
+			}else {
+				redirect('/');
 			}
 			
 		}
 	
 	});
 
-	on('POST','/:page&=submit',function($page){
-		$content = params('content');
-		$GLOBALS['db']->save_article($page,$content);
-		redirect('./'.$page);
-	});
 	
 
 	
