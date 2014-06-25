@@ -1,0 +1,129 @@
+## Introduction
+
+Heaps are data structures that are able to pop the maximum or minimum value or push a value very quickly. Heaps are implemented as trees which have the property that a parent node must either be greater than all the elements in its left and right subtrees (a max heap) or less than all the elements in its left and right subtrees (a min heap). [[Priority queue's|Priority Queue]] are most efficiently implemented as heaps. This guarantees that the maximum or minimum element is the root node.
+
+Heaps store their data level by level in a binary tree. This allows us to store heaps in an array. The root index is 0. For every node, the left index can be found by using the formula 2*ind+1 and the right index can be found by using the formula 2*ind + 2. The parent of a node can be found by integer division with (ind-1)/2.
+
+For example this max heap can be represented by:
+
+0|1|2|3|4|5|6|7
+-|-|-|-|-|-|-|-
+10|8|6|3|7|1|5|2
+
+{{MaxHeap.png}}
+
+
+A heap has two operations: push and pop. Pushing an element into a heap adds it into the heap and the heap needs to ensure that the properties of the heap still hold. Popping removes an element from the top of the heap and the heap needs to ensure that the properties of the heap still hold.
+
+ Operation | Push | Pop
+-----------|---------|--
+Time Complexity | O(log n) | O(log n)
+
+### Prerequisites
+
+* [[Queue]]
+
+## Implementation
+
+Here is an implementation of a max heap. A heap needs to be able to resize, push an element and pop an element.
+
+### Class
+
+[[[[
+public class Heap {
+
+	public int[] arr;
+	public int size;
+	
+	public Heap(int startSize){
+		arr = new int[startSize];
+		size = 0;
+	}
+}
+]]]]
+
+### Resize
+
+When the heap gets too full, we can resize it to make it bigger
+
+[[[[
+public void resize(){
+	int[] newArr = new int[arr.length*2];
+	for(int i=0;i<size;i++){
+		newArr[i] = arr[i];
+	}
+	arr = newArr;
+}
+]]]]
+
+### Push
+
+Pushes the number x into the priority queue. We can do this by adding it to the bottom of the heap and then keep swapping it upwards if it is greater than the parent.
+
+[[[[
+public void push(int x){
+		
+	if(size>=arr.length){
+		resize();
+	}
+	arr[size] = x;
+	size++;
+	
+	//Make sure parent is > child from the last element
+	int idx = size-1;
+	int parent = (idx-1)/2;
+	while(idx>0 && arr[parent]<arr[idx]){
+		int swap = arr[parent];
+		arr[parent] = arr[idx];
+		arr[idx] = swap;
+		idx = parent;
+		parent = (idx-1)/2;
+	}
+}
+]]]]
+
+### Pop
+
+Popping removes the greatest element in the priority queue by removing the root which is guaranteed to be the greatest as property of a heap. After removing the root, we replace it with the element at the bottom of the heap and we can keep swapping it with its children until the heap property is satisfied.
+
+[[[[
+public int pop(){
+	if(size==0)return 0;
+	int ret = arr[0];
+	arr[0] = arr[size-1];
+	size--;
+		
+	int idx = 0;
+		
+	while(idx<size){
+		int left = idx*2+1;
+		int right = idx*2+2;
+		if(left<size && arr[left]>arr[idx]){
+		int swap = arr[left];
+		arr[left] = arr[idx];
+		arr[idx] = swap;
+		idx = left;
+		}else if(right<size && arr[right]>arr[idx]){
+		int swap = arr[right];
+		arr[right]=arr[idx];
+		arr[idx] = swap;
+		idx = right;
+		}else {
+		break;
+	}
+}
+]]]]
+
+## Applications
+
+Heaps are very efficient in its opertions O(log n) and it is used in many other algorithms such as:
+
+* [[Dijkstra's]]
+* [[Prim's]]
+* [[Kruskal]]
+* [[Line Sweeping]]
+
+## Exercises
+
+1. Given a list of N numbers, find the M largest numbers where M = sqrt(N). (Note you can do better than O(N log N))
+2. Given N lists of N numbers, find the N largest numbers.

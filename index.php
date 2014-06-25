@@ -54,10 +54,10 @@ config([
 			if ($GLOBALS['db']->article_exists($page)){
 	            $content = $GLOBALS['db']->get_article($page);
 				
-				render("edit",['page'=>$page,'title'=>$title,'body'=>$content],false);
+				render("edit",['page'=>$page,'title'=>$title,'body'=>$content,'desc'=>$page],false);
 			}
 			else {
-				render("edit",['page'=>$page,'title'=>$title,'body'=>''],false);
+				render("edit",['page'=>$page,'title'=>$title,'body'=>'','desc'=>$page],false);
 			}
 		});
 		on('POST','/:page&=submit',function($page){
