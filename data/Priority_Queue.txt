@@ -2,11 +2,9 @@
 
 Consider a waiting list for lung donors. The patients are given a score when they are placed on the waiting list by how much they need a lung based on their whether they smoke, risk factors, age, expected time left etc. When a lung is available, the patient with the highest score will get removed from the waiting list. During this time, more patients could be added to the queue. The behaviour is similar to a queue but instead of the first person getting in the queue getting a lung first, the person with the highest score will get it. This means that if Sam has a score of 60 and gets placed in the queue after Bob who has a score of 40, Sam will get the lung first even though Bob was in the queue before him. 
 
-Priority queues can be implemented using a min or max [[heap|Heap]] to be used most efficiently with only O(log n) time for both operations.
+A **priority queue** is an abstract data structure with two operations: push and pop. Push adds an element into the priority queue and pop removes the highest or lowest element.
 
- Operation | Push | Pop
------------|---------|--
-Time Complexity | O(log n) | O(log n)
+A priority queue is usually implemented as a heap because it is the most efficient because of its structure.
 
 ### Prerequisites
 
@@ -15,94 +13,9 @@ Time Complexity | O(log n) | O(log n)
 
 ## Implementation
 
-Here is an implementation of a max heap priority queue.
-
-### Class
-
-[[[[
-public class PQueue {
-
-	public int[] arr;
-	public int size;
-	
-	public PQueue(int startSize){
-		arr = new int[startSize];
-		size = 0;
-	}
-}
-]]]]
-
-### Resize
-
-When the heap gets too full, we can resize it to make it bigger
-
-[[[[
-public void resize(){
-	int[] newArr = new int[arr.length*2];
-	for(int i=0;i<size;i++){
-		newArr[i] = arr[i];
-	}
-	arr = newArr;
-}
-]]]]
-
-### Push
-
-Pushes the number x into the priority queue. We can do this by adding it to the bottom of the heap and then keep swapping it upwards if it is greater than the parent.
-
-[[[[
-public void push(int x){
-		
-	if(size>=arr.length){
-		resize();
-	}
-	arr[size] = x;
-	size++;
-	
-	//Make sure parent is > child from the last element
-	int idx = size-1;
-	int parent = (idx-1)/2;
-	while(idx>0 && arr[parent]<arr[idx]){
-		int swap = arr[parent];
-		arr[parent] = arr[idx];
-		arr[idx] = swap;
-		idx = parent;
-		parent = (idx-1)/2;
-	}
-}
-]]]]
-
-### Pop
-
-Popping removes the greatest element in the priority queue by removing the root which is guaranteed to be the greatest as property of a heap.
-
-[[[[
-public int pop(){
-	if(size==0)return 0;
-	int ret = arr[0];
-	arr[0] = arr[size-1];
-	size--;
-		
-	int idx = 0;
-		
-	while(idx<size){
-		int left = idx*2+1;
-		int right = idx*2+2;
-	if(left<size && arr[left]>arr[idx]){
-		int swap = arr[left];
-		arr[left] = arr[idx];
-		arr[idx] = swap;
-		idx = left;
-	}else if(right<size && arr[right]>arr[idx]){
-		int swap = arr[right];
-		arr[right]=arr[idx];
-		arr[idx] = swap;
-		idx = right;
-	}else {
-		break;
-	}
-}
-]]]]
+Implementation | Push | Pop
+-----------|---------|--
+[[Heap]]  | O(log n) | O(log n)
 
 ## Applications
 
@@ -115,5 +28,5 @@ Priority queues are very efficient in its opertions O(log n) and it is used in m
 
 ## Exercises
 
-1. Given a list of N numbers, find the M largest numbers where M = sqrt(N). (Note you can do better than O(N log N))
+1. Given a list of N numbers, find the M largest numbers. (Note you can do better than O(N log N))
 2. Given N lists of N numbers, find the N largest numbers.

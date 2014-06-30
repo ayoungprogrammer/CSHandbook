@@ -37,12 +37,17 @@
             </p>
             <p>
                 Whether you are a curious student starting to dive into the world of computer science or a job candidate looking
-                for interview help, we hope that we have helped you!
-            <h2>Get started now!</h3>
+                for interview help, we hope that we can help! We only ask one thing of you: you must learn something
+                before you leave this site!
+            </p>
+            <h2><a href="./Getting_Started">Get started now!</a></h3>
             <ul>
-                <li><a href="/Data_Structures">Data Structures</a></li>
-                <li><a href="/Sorting">Sorting</a></li>
-                <li><a href="/Geometry">Geometry</a></li>
+                <li><a href="./Getting_Started">Getting Started</a></li>
+                <li><a href="./Recursion">Recursion</a></li>
+                <li><a href="./Data_Structures">Data Structures</a></li>
+                <li><a href="./Sorting">Sorting</a></li>
+                <li><a href="./Geometry">Geometry</a></li>
+                <li><a href="./Graph_Theory">Graph Theory</a></li>
             </ul>
 
             <br/>

@@ -125,5 +125,5 @@ Heaps are very efficient in its opertions O(log n) and it is used in many other 
 
 ## Exercises
 
-1. Given a list of N numbers, find the M largest numbers where M = sqrt(N). (Note you can do better than O(N log N))
-2. Given N lists of N numbers, find the N largest numbers.
+1. Implement a min heap
+2. Prove heaps work

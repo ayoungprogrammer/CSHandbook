@@ -1,15 +1,17 @@
 ##Introduction
 
-Sets are data structures that stores values and are used for testing if an element already exists within the set.  Sets generally have three operations: insertion, deletion and membership test. 
+Imagine you have a grocery list that you use to keep tracking of things you need to buy. You want to make sure there are no duplicate items in the list, you can add items to the list and that you can remove items from your list. This structure is similar to what a set does.
 
-**Membership** test is checking whether an element exists within the set. Insertion places an element into the set and deletion removes an element from the set.
+Sets are abstract data structures which are able to store values and are used for three operations: insertion, deletion and membership test. 
 
-## Types
+Insertion places an element into the set, deletion removes an element from the set and a **membership** test is checking whether an element exists within the set.
 
-Type | Operation | Membership | Insertion | Deletion
+## Implementation
+
+Type  | Membership | Insertion | Deletion
 -|-
-[[Tree Set]] | Time Complexity | O(log n) | O(log n) | O(log n)
-[[Hash Set]] | Time Complexity | O(1) | O(1) | O(1)
+[[Tree Set]]  | O(log n) | O(log n) | O(log n)
+[[Hash Set]]  | O(1) | O(1) | O(1)
 
 ## Exercises
 

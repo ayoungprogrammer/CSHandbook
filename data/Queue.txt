@@ -10,15 +10,17 @@ Queues are often used for buffer systems, for example a text message service. Th
 
 We can 
 
-| Operation | Pop | Push
-|-
-| Time Complexity | O(1) | O(1)
 
-## Prerequisites
+
+### Prerequisites
 * [[Linked List]]
 
 ## Implementation
 We can implement a queue most efficiently using a linked list because it has an efficient memory allocation. 
+
+| Implementation | Pop | Push
+|-
+| [[Linked List]] | O(1) | O(1)
 
 ## Exercises
 

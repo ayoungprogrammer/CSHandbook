@@ -30,7 +30,7 @@ function parse($str){
 	//$str = preg_replace('/\[\=+\]/',"",$str);
 	
 	//<h3> Add <hr>
-	$str = preg_replace('/<h3>/','<br><hr><br><h3>',$str);
+	$str = preg_replace('/<h3>/','<hr><h3>',$str);
 
 
 	//^^n^^

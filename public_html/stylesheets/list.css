@@ -114,6 +114,7 @@ main{
         line-height: 1.7em;
         }
         section table{
+            margin-bottom:22px;
             border-spacing: 0;
             text-align: center;
             width: 100%;
