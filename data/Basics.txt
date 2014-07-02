@@ -202,3 +202,38 @@ for(i=1;i<100;i++){
    x = x * 2;
 }
 ]]]]
+
+A while loop is similar to a for loop but simpler:
+
+[[[[
+while(test exp){
+    do something;
+}
+]]]]
+
+While the *test expression* is true, the computer will *do something*.
+
+[[[[
+int n = 10;
+while(n>0){
+   System.out.println(n);
+   n--;
+}
+]]]]
+
+We also have a do while loop which is similar to a while loop but it runs at least once: 
+
+[[[[
+do{
+   do something;
+}while(test expression);
+]]]]
+
+The do-while loop will first *do something* and then as long as *test expression* is true, the computer will *do something*. Do while loops are useful if we need to get the value of something first before we keep looping.
+
+[[[[
+char exit;
+do{
+  exit = getChar();
+}while(exit=='N")
+]]]]

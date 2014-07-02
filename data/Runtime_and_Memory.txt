@@ -7,8 +7,11 @@ Why is it that computers are a lot better at humans at one thing but humans are 
 Memory|2.5 petabytes (3 million hours of tv shows)|16GB RAM
 Processing|
 
+## Limits
 
-There are many different methods of implementing different things but most of the time we care most about implementations that are the fastest and use the least amount of memory. Let's go through some basic benchmarks about computers that you should know. Adding two numbers takes a nanosecond (1 billionth of a second) for an average computer to process. For practical purposes, we'll assume that the average computer program can hold up to 1GB or RAM or about 250 million integers. 
+There are many different methods of implementing different things but most of the time we care most about implementations that are the fastest and use the least amount of memory. Let's go through some basic benchmarks about computers that you should know. Adding two numbers takes a nanosecond (1 billionth of a second) for an average computer to process. For practical purposes, we'll assume that the average computer program can hold up to 1GB or RAM or about 250 million integers. We use RAM because it is flash memory and read/write is super fast in comparison to disk read/writes. 
+
+## Big O Notation
 
 When we compare how efficient algorithms or data structures are to another we use something called Big O notation to describe it. Usually every algorithm and data structure will depend on some inputs and the time it takes to compute something or the storage size needed will depend on that input. The Big O notation takes the largest factor of an input to compare computation times / memory usage. When we take the largest factor, we ignore smaller factors and constants because they do not matter at very large values. 
 
@@ -25,9 +28,9 @@ for(int i=1;i<array.length;i++){
 }
 ]]]]
 
-In addition to the array we store a new variable called maxVal. But this is only 1 number so it uses O(1) more memory. When we 
+In addition to the array we store a new variable called maxVal. But this is only 1 number so it uses O(1) more memory. When we go through the array of N element it will take N steps so it will take O(N) steps.
 
-Here is a list of common Big O notation based on complexity.
+Here is a list of common Big O notation based on complexity:
 
 * O(1)
 * O(log N)
