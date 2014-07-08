@@ -11,6 +11,19 @@ So for something to be recursive in computer science, it needs:
 * a recursive definition (contained in itself) and 
 * a base case that all valid inputs will eventually reach
 
+Template for recursion:
+
+[[[[
+recursion(parameter)
+    if base_case (parameter):
+        stop
+    recursion( operation(parameter) )
+]]]]
+
+* *recursion* is the recursive function
+* *base_case* is the check if the parameter has reached the base case
+* *operation* reduces the parameters towards the base case
+
 ## Factorial
 
 Let's look at the factorial function.
@@ -99,6 +112,7 @@ So now we have our recursive definition and our base case.
 Let count(string) be the number of 'c's in the string
 
 For simplicity let string[0..a] be the substring of the string from 0 to a.
+Let n = len(string)
 
 Base case:
 count(empty) = 0
@@ -118,7 +132,7 @@ count('cacaec')
 = 3
 
 ]]]]
-
+Java implementation:
 [[[[
 int count3(string str){
    if(str.length==0)return 0;
@@ -132,7 +146,11 @@ count3('cacaec');
 
 ## Calculate Exponential
 
-Let's say we wanted to find x^^n^^ and for the sake of this problem we want the last four digits of that number. Note that 267^^4^^ mod 10000 = (267^^3^^ mod 10000) * 267 mod 10000. This is important because it means we can take the last 4 digits in each step instead of having to compute the giant exponent and then taking the last 4 digits. We can do this problem very easily in linear time, but we can do better by using recursion. By definition of exponents, x^^a^^ * x^^a^^ = x^^2a^^. Using this we can see that if n is divisible by 2, then x^^n^^ = x^^n/2^^ * x^^n/2^^. But let's take a look at x^^n/2^^. If it is even we can do the exact same thing! x^^n/2^^ = x^^n/4^^ * x^^n/4^^. We have a recurrence relation and the base case is simple: if x^^1^^ = x. But what if n is odd and not 1? Then we have x^^n^^ = x^^m^^ * x^^m^^ * x and we can now solve this problem using recursion.
+Let's say we wanted to find x^^n^^ and for the sake of this problem we want the last four digits of that number. Note that 267^^4^^ mod 10000 = (267^^3^^ mod 10000) * 267 mod 10000. This is important because it means we can take the last 4 digits in each step instead of having to compute the giant exponent and then taking the last 4 digits. We can do this problem very easily by using a simple loop, but we can do better by using recursion. By definition of exponents, x^^a^^ * x^^a^^ = x^^2a^^. Using this we can see that if n is divisible by 2, then x^^n^^ = x^^n/2^^ * x^^n/2^^. 
+
+But let's take a look at x^^n/2^^. If n is even we can do the exact same thing! x^^n/2^^ = x^^n/4^^ * x^^n/4^^. We have a recurrence relation and the base case is simple: if x^^1^^ = x. 
+
+But what if n is odd and not 1? Then we have x^^n^^ = x^^n/2^^ * x^^n/2^^ * x and we can now solve this problem using recursion.
 
 [[[[{lang-html}
 Let exp(b,n) be b^n

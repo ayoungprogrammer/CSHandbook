@@ -1,0 +1,158 @@
+## Introduction
+
+Hash sets are sets that use hashes to store elements. A hashing algorithm is an algorithm that takes an element and converts it to a smaller chunk called a **hash**. For example let our hashing algorithm be (x mod 10). So the hashes of 232, 217 and 10 be 2,7, and 9 respectively. 
+
+For every element in a hash set, the hash is computed and elements with the same hash are grouped together and stored in a [[linked list|Linked List]]. The linked list is called a **bucket**.
+
+If we want to check if an element already exists within the set, we first compute the hash of the element and then search through the linked list associated with the hash to see if the element is contained.
+
+| Operation | Membership | Insertion | Deletion
+|-
+| Time Complexity | O(1) | O(1) | O(1)
+
+### Prerequisites
+
+* [[Sets]]
+* [[Linked List]]
+
+## Implementation
+
+Let use the example of the hashset of the elements of 3242342, 3523, 123, 815 and 538. The hash set looks like this when computed:
+
+Bucket | List
+-------|-----
+     1 |     
+ 2 | 3242342
+ 3 | 3523, 123
+ 4 |
+ 5 | 815
+ 6 |
+ 7 |
+8 | 538
+9 |
+
+If we wanted to check if 7238 was in the hash set, we would get the hash (7238 mod 10 = 8). So we get the bucket associated with the hash 8 and we get the list of (538). When we iterate through this short list, we see that 7238 is not a member of the set. 
+
+Similarly, if we wanted to insert 7238 into the hash set, we would check if it exists and if it did not we would append the element to the end of the bucket. For deletion we would find 7238 check if it existed in the set and remove it from the bucket. 
+
+Hash sets are very efficient in all three set operations if a good hashing algorithm is used. When the objects are that being stored are large then hash sets are effective as a set.
+
+### Class 
+
+Inside our implementation of a hash set we will store the buckets using an array of linked lists, the number of buckets, and the number of elements in the set. 
+
+The collision chance is the threshold for resizing the hash set. When the ratio of elements in the set to number of buckets is greater than the threshold, then the chance of collision will be high enough that it will slow down the operations. The lower this ratio, the better performing a hash set will be.
+
+[[[[
+public class HashSet {
+
+	public LinkedList<Integer>[] buckets;
+	public int bucketsSize = 10;
+	public int size = 0;
+	public static final double COLLISION_CHANCE = 0.3;
+	
+	public HashSet(){
+		buckets = new LinkedList[10];
+		for(int i=0;i<bucketsSize;i++){
+			buckets[i] = new LinkedList<Integer>();
+		}
+		size = 0;
+	}
+]]]]
+
+### Hash code
+
+The hash code is the result of the hashing algorithm for an element. In our hash set implementation, we will use a simple hash: modulus of the integer by the number of buckets. 
+
+For the most part if the numbers are all random then the hash function is fine. However, if the number of buckets was 10 and we added the elements 20,30,40,50,60,70, they will all end up in the same bucket and results in poor performance.
+
+[[[[
+public int getHash(int x,int hashSize){
+	return x % hashSize;
+}
+]]]]
+
+### Resize
+
+A hash set must be able to resize. When the ratio of number of elements to number of buckets, the chance of collision will increase more and more. So we must able to resize the number of buckets to support the number of elements to lower the chance of collision.
+
+To resize efficiently, we can create two times the number of buckets and set them to empty and then insert all the elements in the old buckets to the new buckets.
+
+[[[[
+public void resize(){
+	int newBucketsSize = bucketsSize*2;
+	LinkedList<Integer>[] newBuckets = new LinkedList[newBucketsSize];
+	for(int i=0;i<newBucketsSize;i++){
+		newBuckets[i] = new LinkedList<Integer>();
+	}
+	for(int i=0;i<bucketsSize;i++){
+		for(Integer y:buckets[i]){
+			int hash = getHash(y,newBucketsSize);
+			newBuckets[hash].push(y);
+		}
+	}
+	buckets = newBuckets;
+	bucketsSize = newBucketsSize;
+}
+]]]]
+
+### Insert
+
+To insert an element in a hash set, we get the hash code from our hashing algorithm and insert the element into the corresponding bucket.
+
+The function will return method or not the operation was successful. If the bucket already contains the element the operation will stop because we do not want to add duplicate elements into the set. If the bucket does not contain the element, we will insert it into the bucket and the operation is successful.
+
+[[[[
+public boolean insert(int x){
+	int hash = getHash(x,bucketsSize);
+		
+	LinkedList<Integer> curBucket = buckets[hash];
+	if(curBucket.contains(x)){
+		return false;
+	}
+	curBucket.push(x);
+	if( (float)size/bucketsSize>COLLISION_CHANCE){
+		resize();
+	}
+	size++;
+	return true;
+}
+]]]]
+
+### Contains
+
+To check if a hash set contains an element, we get the hash code from our hashing algorithm and check if the corresponding bucket contains the element.
+
+[[[[
+public boolean contains(int x){
+	int hash = getHash(x,bucketsSize);
+	LinkedList<Integer> curBucket = buckets[hash];
+	return curBucket.contains(x);
+}
+]]]]
+
+### Remove
+
+To remove an element from a hash set, we get the hash code from our hashing algorithm and remove the element from the corresponding bucket.
+
+The function will return whether or not the operation was successful. If the bucket contains the element we can remove it from the linked list and the operation is successful. If the element is not in the bucket then the operation fails because we cannot remove something that is not there.
+
+[[[[
+public boolean remove(int x){
+	int hash = getHash(x,bucketsSize);
+	
+	LinkedList<Integer> curBucket = buckets[hash];
+	if(curBucket.remove((Integer)x)){
+		return true;
+	}
+	return false;
+}
+]]]]
+
+## Exercises
+
+1. Try to come up with a better hashing algorithm
+2. Calculate the probability of a collision occurring given the number of buckets and number of elements in the hash set
+3. Given an array of numbers, find the number of pairs of numbers that sum to 0.
+4. Given an array of numbers and a number A, find the number of pairs of numbers that sum to A.
+5. Given an array of numbers and a number A, find the number of quadruples that sum to A.

@@ -2,21 +2,39 @@
 
 Backtracking is a search that find all possible solutions by enumerating on a partial solution. Backtracking can be done using DFS or BFS. In some cases DFS can be better than BFS and in some cases BFS can be better than DFS.
 
+Backtracking is similar to recursion, but instead of generating all the solutions, we will generate each solution one by one. In this way, we only need to store the current solution in memory whereas in normal recursion we need to store all the solutions into memory.
+
 Since backtracking requires enumerating through all solutions, it is usually slow with runtimes usually O(n!) or O(2^n). 
 
 ## General Solution
 
-[[[[
-void backtrack(i,candidate){
-   if(reject(candidate))return;
-   if(i>=n){
-      output(candidate);
-      return;
-   }
-   for(j=0;j<m;j++){
-      backtrack(i,candidate);
-   }
-}
+[[[[{lang-html}
+Base case:
+When a solution has been generated
+
+Reject:
+Check if partial solution needs to be rejected
+
+Recurrence:
+Generate next partial solution thats growing to full solution
+
+----------
+
+backtrack(solution):
+    if reject(solution)
+        stop
+
+    if base case
+       stop
+
+    backtrack( next_solution ) for next_solution from solution
+
+
+----------
+
+Initial:
+backtrack( empty_solution)
+
 ]]]]
 
 ## List all sets
@@ -151,19 +169,47 @@ subsets([1,2,3,4],[1,0,0],0);
 
 Find the number of ways to place N queens on a NxN board without any of them attacking each other. Queens attack each other by being along the same row, column or diagonal.
 
-We can place a queen in each row and make sure that each column / diagonals is unfilled.
+First we need to be able to encode a solution. There must be only one queen in each row. We can represent a solution by an array of column numbers of queens. For example: 2,3,1,4 means we have a queen at row 1, at column2, row 2 at column 3, row 3 at column 1 and row 4 at column 4. We can easily check a solution if any queens are in the same column by going through the array and making sure all the numbers are unique. The rows of each queen are just the index and they will be all unique. However, diagonals are harder to check. There are two types of diagonals on a board: / and \. There are 2N-1 "rows" of each diagonal. We can encode the first diagonal using a clever equation. 
 
+d1 = row+column
+
+Every square with the same d1 is in the same diagonal ( / ). For example on a 4x4 board: (1,3),(2,2), (3,1) all have d1 = 4 and are all along the same diagonal.
+
+The second diagonal can also be found using another equation:
+
+d2 = (N-row)+column
+
+Everything with the same d2 will be on the same diagonal. For example on a 4x4 board (1,2),(2,3),3,4) have d2 = 5 and are all along the same diagonal. 
+
+Now that we get can encode rows, columns, and diagonals, we can use it to make checking solutions more easy. We can keep sets that track with rows/columns/diagonals are currently filled and check our solution to make sure we do not have anything in the same row/column/diagonal.
+ 
+We can place a queen in each row and make sure that each column / diagonals is unfilled.
+[[[[
 Let N be a NxN board where we want to place N queens 
 Let queen(n,columns,d1,d2) be a placing of N queens across a board
  
 Base case
 queen(0,cols,d1,d2): print solution
- 
+
+Reject solution
+reject(cols,d1,d2):   { false if duplicates in cols or d1 or d2
+                               { true otherwise
 Recurrence 
-queen(n,cols,d1,d2) = queens(n-1,cols
+queen(row,cols,d1,d2) = queen(row-1,cols with col,d1 with row+col,d2 with N-row+col) for col from 1 to N
  
 Examples
- 
+N=3
+queen(3,[],[],[])
+
+queen(2,[1],[4],[1])
+queen(2,[2],[5],[2])
+queen(2,[3],[6],[3])
+
+queen(1,[1,1],[4,4],[1,1])
+queen(1,[1,2],[4,5],[1,2])
+queen(1,[
+
+]]]]
  
  
 

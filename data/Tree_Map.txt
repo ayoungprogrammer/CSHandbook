@@ -1,0 +1,182 @@
+## Introduction
+
+A tree map is a map that stores the key value pairs in a tree set.
+
+Operation | Membership | Insertion | Deletion
+-|-
+Complexity  | O(log n) | O(log n) | O(log n)
+
+### Prerequisites
+
+* [[Tree Set]]
+* [[Map]]
+
+## Implementation
+
+Here is a Java implementation of a tree map
+
+### Class
+
+
+A pair is a key with a value. In this implementation we will use the value as a string.
+
+[[[[
+class Pair{
+	int key;
+	String value;
+	public Pair(int key,String value){
+		this.key = key;
+		this.value = value;
+	}
+}
+]]]]
+
+A node is a node contained in the binary search tree. The node must store the child nodes and for simplicity of the implementation, we will store the parent node as well. Each node will also have a key value pair associated with it.
+
+[[[[
+class Node{
+	Pair pair;
+	Node left;
+	Node right;
+	Node parent;
+	public Node(Pair p){
+		this.pair = p;
+		this.left = null;
+		this.right = null;
+		this.parent = null;
+	}
+}
+]]]]
+
+In our tree map, we will store the root node (ancestor of all nodes) and the number of numbers.
+
+[[[[
+public class TreeMap {
+
+	int size;
+	Node root;
+	
+	public TreeMap(){
+		size = 0;
+		root = null;
+	}
+}
+]]]]
+
+
+### Insert
+
+To insert a key-value pair into the tree set, we first find where the key should be. If the key already exists, 
+
+[[[[
+public boolean insert(Pair p){
+	if(root==null){
+		root = new Node(p);
+		return true;
+	}
+	Node curTree = root;		
+	while(curTree != null){
+		if(p.key == curTree.pair.key){
+			return false;
+		}else if(p.key < curTree.pair.key){
+			if(curTree.left == null){
+				Node newTree = new Node(p);
+				newTree.parent = curTree;
+				curTree.left = newTree;
+				return true;
+			}
+			curTree = curTree.left;
+		}else {
+			if(curTree.right == null){
+				Node newTree = new Node(p);
+				newTree.parent = curTree;
+				curTree.right = newTree;
+				return true;
+			}
+			curTree = curTree.right;
+		}
+	}
+	return false;
+}
+]]]]
+
+### Get
+
+To get the value from a key stored in a tree set, we binary search for the key and then retrieve the key-value pair located at the node.
+
+[[[[
+public Pair get(int key){
+	Node curTree = root;
+	while(curTree!=null){
+		if(key==curTree.pair.key){
+			return curTree.pair;
+		}else if(key<curTree.pair.key){
+			curTree = curTree.left;
+		}else{
+			curTree = curTree.right;
+		}
+	}
+	return null;
+}
+]]]]
+
+### Remove
+
+Removing an element is a much more complex because we need to maintain the tree structure of the tree set when removing elements. First we locate the element that we want to remove. If the element is not there then the operation failed and we return false. If the element is there then are several cases we should consider. If the element is a leaf (eg no left or right children) then we can simply remove it (remove link from parent node). However, if the element has children then we need to replace that element to maintain the tree structure. Since everything to the left must be less than the current node and everything to the right of the node is greater, we can either pick the leftmost child of the right subtree or the rightmost child of the left subtree. This guarantees that the tree structure will be maintained.
+
+[[[[
+public boolean remove(int key){
+	Node curTree = root;
+	while(curTree!=null){
+		if(key==curTree.pair.key){
+			break;
+		}else if(key<curTree.pair.key){
+			curTree = curTree.left;
+		}else{
+			curTree = curTree.right;
+		}
+	}
+	if(curTree==null){
+		return false;
+	}
+	if(curTree.left==null){
+		if(curTree==root){
+			root = curTree.right;
+			root.parent = null;
+		}else {
+			if(curTree.parent.left==curTree){
+				curTree.right.parent = curTree.parent;
+				curTree.parent.left = curTree.right;
+				
+			}else{
+				curTree.right.parent = curTree.parent;
+				curTree.parent.right = curTree.right;
+			}
+		}
+		size--;
+		return true;
+	}
+	//Get rightmost of left subtree
+	Node rightmost = curTree.left;
+	while(rightmost.right!=null){
+		rightmost = rightmost.right;
+	}
+	if(curTree.parent==null){
+		rightmost.right = root.right;
+		root = rightmost;
+		root.parent = null;
+	}else {
+		curTree.pair = rightmost.pair;
+		if(rightmost.parent.left==rightmost){
+			rightmost.parent.left = null;
+		}else {
+			rightmost.parent.right = null;
+		}
+	}
+	size--;
+	return true;
+}
+]]]]
+
+## Exercises
+

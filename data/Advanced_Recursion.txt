@@ -1,10 +1,15 @@
 ## Introduction
 
-Recursion can sometimes be very difficult to wrap your head around because when you try to go deeper, it only keeps getting deeper. It is sometimes hard to figure out the recurrence relation, but once you do, the problem becomes simple.
+Recursion can sometimes be very difficult to wrap your head around because when you try to go deeper, it only keeps getting deeper. It is sometimes hard to figure out the recurrence relation, but once you do, the problem becomes simple to write.
 
 ### Prerequisites
 
 * [[Recursion]]
+
+### Next Steps
+
+* [[Intermediate Recursion]]
+* [[Backtracking]]
 
 ## Number of paths
 
@@ -214,7 +219,7 @@ If we insert the letter D between each letter for every permutation we get:
 * A,C,B,D
 .... etc
 
-And we can guarantee that every new permutation will be unique. (Try to prove that to your self).
+And we can guarantee that every new permutation will be unique. (Try to prove that to yourself).
 
 But let's look at how we can get the permutation of A,B,C. We can also get all the permutations of the string by taking the permutations of A,B and inserting C in all the positions for all substrings.
 
@@ -232,7 +237,7 @@ Insert C for all positions for all permutations
 * B,C,A
 * C,B,A
 
-We see that we have a recurrence relation. To get the permutations of a string N, we take the substring to N-1 and we insert the Nth character at every position for each permutation of the N-1 substring. The base case of an empty string is simply an empty string. Permutation of '' is an empty list.
+We see that we have a recurrence relation. To get the permutations of a string N, we take the string[1..N-1] and we insert the Nth character at every position for each permutation of the N-1 substring. The base case of an empty string is simply an empty string. Permutation of an empty string is an empty list.
 
 For simplicity, S[i..j] will mean the substring from including i to excluding j.
 
@@ -244,7 +249,11 @@ P('') = []
 
 Recurrence:
 Let N = length of string S
-P(S) = list of ps[0..i] + S[N] + ps[i..N] for i in 0..N, for ps in P(S[0..N-1])
+P(S) = ps[0..i] + S[N] + ps[i..N] for i in 0..N, for ps in P(S[0..N-1])
+
+Example:
+P('ABC')
+=
 
 ]]]]
 
@@ -269,3 +278,4 @@ Vector<String> permutation(String s){
 ## Exercises
 
 1. Given a string S, write a recursive function to generate all substrings
+2. Write a solution for hanoi towers but with the restriction that discs can only be moved from adjacent poles. (You can move a disc from A to B but not A to C because they are not adjacent)

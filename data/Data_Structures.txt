@@ -71,6 +71,22 @@ A **doubly linked list** is a linked list that has pointers going backwards as w
 | Time Complexity | O(n) | O(1) | O(1) | O(n) | O(n)
 
 
+## [[Trees]]
+
+Trees are data structures that follow a hierarchy, each node has exactly one or zero parents and each node has children. Trees are recursive structures meaning that each child of a tree is also a tree. A tree within another tree is called a **subtree**.
+
+A **child** is a node that is below another node. A **parent** is a node that is above another node.
+
+The element at the top of the tree with no parents is called a **root**. The node at the bottom of the tree with no children is called a **leaf**. 
+
+Each node can hold different kinds of information depending on the tree. A node can hold the children it has, the parent it has, a key associated with the node and a value associated with the node. 
+
+### [[Binary Tree]]
+
+A binary tree is a tree where each node has at most two children. 
+
+A [[binary search tree|Binary Search Tree]] is a binary tree with special properties. Each node in a BST holds information about its children and a key. The BST has the property that all the nodes in the left subtree have keys smaller than the key of the parent node and all the nodes in the right subtree have keys greater than the key of the parent node. If we wanted to find if a key existed we could perform a search on the tree, if the key we are looking for is greater than the current node's key we go to the right subtree and if the key we are looking for is smaller, than we go to the left subtree.
+
 
 ## [[Sets]]
 
@@ -81,7 +97,7 @@ Sets are abstract data types which are able to store values and are used for thr
 Insertion places an element into the set, deletion removes an element from the set and a **membership** test is checking whether an element exists within the set.
 
 
-### [[Hash Sets]]
+### [[Hash Set]]
 
 Hash sets are sets that use hashes to store elements. A hashing algorithm is an algorithm that takes an element and converts it to a smaller chunk called a **hash**. For example let our hashing algorithm be (x mod 10). So the hashes of 232, 217 and 10 be 2,7, and 9 respectively. 
 
@@ -114,8 +130,8 @@ Hash sets are very efficient in all three set operations if a good hashing algor
 |-
 | Time Complexity | O(1) | O(1) | O(1)
 
-### [[Tree Sets]]
-A tree set is a set which stores the values in a [[binary tree|Binary Tree]]. To store elements in a tree set, they must be able to be sorted by a property. To insert an element, it is added to the binary tree. To delete an element, it is removed from the binary tree. To check for membership, we do a binary search for the element in the binary tree.
+### [[Tree Set]]
+A tree set is a set which stores the values in a [[binary search tree|Binary Search Tree]]. To store elements in a tree set, they must be able to be sorted by a property. To insert an element, it is added to the binary tree. To delete an element, it is removed from the binary tree. To check for membership, we do a binary search for the element in the binary tree.
 
 The advantage of tree sets is that they are maintained in a sorted order. 
 
@@ -127,8 +143,9 @@ The advantage of tree sets is that they are maintained in a sorted order.
 
 ## [[Maps]]
 
-Maps (also called dictionaries) are abstract data types that store pairs of key-values and are used to retrieve values from the keys. For example an English dictionary is a map, the keys are the words and the values are the definitions. If you were to look up the word "map" you would use the key (the word "map" in the dictionary) to look up the value (definition of "map"). Maps use sets to store the keys which are paired with the values.
+Imagine you had a English dictionary. If you look up a word, you can find it's definition and read it out. For example if you looked up the word 'cat' in the English dictionary, you would look through the dictionary alphabetically until you found the word 'cat' and then you would look at the definition: 'a feline animal'. If you really wanted to, you could also add your own words into the dictionary and the definitions of your words. This type of structure is called a map.
 
+Maps (also called dictionaries) are abstract data types that store pairs of key-values and can be used to look up values from the keys. The keys are like the words in an English dictionary and the definitions can be seen as the values. Maps are able to support insertion of key-value pairs, retrieve values from keys, and delete key-value pairs.
 
 ###[[Hash Map]]
 
@@ -138,8 +155,6 @@ Hash maps use [[hash sets|Hash Set]] to store the keys which then map to their v
 |-
 | Time Complexity | O(1) | O(1) | O(1)
 
-
-
 ### [[Tree Map]]
 
 Tree maps use [[tree sets|Tree Set]] to store the keys which then maps to their values.
@@ -148,22 +163,6 @@ Tree maps use [[tree sets|Tree Set]] to store the keys which then maps to their 
 |-
 | Time Complexity | O(log n) | O(log n) | O(log n)
 
-
-## [[Trees]]
-
-Trees are data structures that follow a hierarchy, each node has exactly one or zero parents and each node has children. Trees are recursive structures meaning that each child of a tree is also a tree. A tree within another tree is called a **subtree**.
-
-A **child** is a node that is below another node. A **parent** is a node that is above another node.
-
-The element at the top of the tree with no parents is called a **root**. The node at the bottom of the tree with no children is called a **leaf**. 
-
-Each node can hold different kinds of information depending on the tree. A node can hold the children it has, the parent it has, a key associated with the node and a value associated with the node. 
-
-### [[Binary Tree]]
-
-A binary tree is a tree where each node has at most two children. 
-
-A [[binary search tree|Binary Search Tree]] is a binary tree with special properties. Each node in a BST holds information about its children and a key. The BST has the property that all the nodes in the left subtree have keys smaller than the key of the parent node and all the nodes in the right subtree have keys greater than the key of the parent node. If we wanted to find if a key existed we could perform a search on the tree, if the key we are looking for is greater than the current node's key we go to the right subtree and if the key we are looking for is smaller, than we go to the left subtree.
 
 ## [[Priority Queue]]
 
