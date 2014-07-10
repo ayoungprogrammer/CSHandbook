@@ -6,115 +6,27 @@ Searches are used to find solutions to problems and there many ways to search fo
 
 Binary search is a type of search that is able to find an object in a sorted list in O(log n). In binary search we first start at the middle element and we keep trying to halve the problem until we find the element we need. 
 
-### Implementation
-
-[[[[
-void binarySearch(int ans,int minBound,int maxBound){
-    while(maxVal>=minVal){
-       int mid = (minVal+maxVal)/2;
-       if(mid==ans)return;
-       if(mid<ans)minVal = mid;
-       else maxVal = mid;
-    }
-}
-]]]]
 
 ## [[Depth First Search]]
 
-Depth first search or DFS is a method of search that goes as far as possible before backtracking. DFS is implemented using a stack and most of the time it uses an implicit stack for recursion.
+Depth first search or DFS is a method of search that goes as far as possible before backtracking. DFS is implemented using a [[stack|Stack]] and most of the time it uses an function stack for recursion.
 
 {{dfs.png}}
 
-### Implementation
 
-DFS of a binary tree
-
-[[[[
-class node{
-   int num;
-   node left,right;
-}
-function dfs(node cur){
-   if(cur== null)return;
-   dfs(cur.left);
-   print(cur.num);
-   dfs(cur.right);
-}
-]]]]
 ## [[Breadth First Search]]
 
-Breadth first search or BFS is a method of search that takes the closest things first then the farthest. 
+Breadth first search or BFS is a method of search that takes the closest things first then the farthest. BFS is implemented with a [[queue|Queue]].
 
 {{bfs.png}}
-
-### Implementation
-
-BFS of a binary tree
-
-[[[[
-class node{
-   int num;
-   node left,right;
-}
-function bfs(node no){
-   Queue<node> q;
-   q.push(no);
-   while(!q.empty()){
-       node cur = q.pop();
-       print(cur.num);
-       if(cur.left){
-           q.push(cur.left);
-       }
-       if(cur.right){
-           q.push(cur.right);
-       }
-   }
-}
-]]]]
-
 
 ## [[Flood Fill]]
 
 Flood fill is a search that fills a grid. It can be implemented with either DFS or BFS. We first start at some starting position and then we expand in the directions that we can (eg: up, left, down, right). 
 
-### Implementation
-
-Finds the largest area of connected 1's in a grid
-
-[[[[
-int grid[][];
-function int floodFill(int x,int y){
-   if(x<0||y<0||x>=n||y>=m)return 0;
-   if(grid[x][y]!=1)return 0;
-   int sum = 0;
-   sum+=floodFill(x+1,y);
-   sum+=floodFill(x-1,y);
-   sum+=floodFill(x,y+1);
-   sum+=floodFill(x,y-1);
-   return sum+1;
-}
-]]]]
+{{floodfill.png}}
 
 ## [[Backtracking]]
 Backtracking is a search that enumerates every single possible solution by using partial solutions.
 
-### Implementation
 
-Enumerate all subsets of an array
-
-[[[[
-function backtrack(int arr[],bool used[],int i,int n){
-   if(i>=n){
-      for(int i=0;i<n;i++){
-         if(used[i])print(arr[i]+" ");
-      }
-      println();
-      return;
-   }
-   used[i] = false;
-   backtrack(arr,i+1,n);
-   used[i] = true;
-   backtrack(arr,i+1,n);
-}
-backtrack([1,2,3],0,3)
-]]]]

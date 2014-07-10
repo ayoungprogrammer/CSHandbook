@@ -4,6 +4,13 @@ Flood fill is a search that fills a grid from a start point to find the areas co
 
 Flood fill can be implemented using a BFS or DFS.
 
+{{floodfill.png}}
+
+### Prerequeistes
+
+* [[Depth First Search]]
+* [[Breadth FIrst Search]]
+
 ## General solution
 
 Most flood fill solutions follow the same basic layout. There is a general [[DFS|Depth First Search]] solution and a general [[BFS|Breadth First Search]] solution.
@@ -38,26 +45,16 @@ void floodFill(int i,int j){
 Given an n x m matrix and a start point and two colors (src and dst), we want to replace all the cells in the matrix that are connected to the start point with the color src and change to color dst as well as output the number of cells changed.
 
 Example:
-Image:
-_ | _ | _ 
--|-|-
-0|0|1
-0|0|1
-1|1|1
-0|0|0
 
-src = 0, dst = 2, start = (0,0)
+{{bucket.png}}
 
-becomes
+{{bucket2.png}}
 
-_ | _ | _ 
--|-|-
-2|2|1
-2|2|1
-1|1|1
-0|0|0
+In a numeric representation of the colors:
 
-4 cells changed.
+{{bucket3.png}}
+
+{{bucket4.png}}
 
 ### DFS Solution
 

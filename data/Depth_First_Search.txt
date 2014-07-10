@@ -27,6 +27,8 @@ public class Tree {
 
 ### Binary Tree Transversal
 
+{{dfs.png}}
+
 Implementation for outputting a binary tree in order from left to right using DFS
 
 [[[[
@@ -44,6 +46,8 @@ public static void DFS(Tree cur){
 
 ### Binary Tree Preorder
 
+{{dfs-preorder.png}}
+
 Implementation for outputting a binary tree in DFS pre order
 
 [[[[
@@ -60,6 +64,8 @@ public static void DFS(Tree cur){
 ]]]]
 
 ### Binary Tree Postorder
+
+{{dfs-postorder.png}}
 
 Implementation for outputting a binary tree in DFS post order
 
@@ -103,5 +109,4 @@ public static void DFS_graph(int[][] adjMatrix,int cur,boolean[] visited){
 
 1. Given a tree, find the height (the longest path from root to leaf)
 2. Given a graph, determine if it contains a cycle
-3. Given a graph, determine the number of [[strongly connected components|Strongly Connected Compontents]]
-4. Given a grid of squares with walls at certain locations and two locations A and B, find the minimum distance (going up/left/right/down) between the locations or impossible otherwise. For example if A is at (1,1) and B is at (3,1) but there is a wall at (2,1) then the minimum distance would be 4 (down, left, left, up). 
+3. Given a node and a binary tree, find the next node for post order, pre order and normal order.

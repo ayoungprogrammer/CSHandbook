@@ -4,7 +4,7 @@ For more advanced recursion go to: [[advanced recursion|Advanced Recursion]].
 
 Recursion is process that repeats itself in a similar way. Anything that has its definition nested inside itself is considered to be recursive. For example GNU stands for GNU not Unix!. Expanding this acronym gives us ((GNU not Unix) not Unix!). As you can see this will go on forever and GNU's definition is nested inside itself so it is recursive. The Fibonacci sequence is also recursive: F(n) = F(n-1)+F(n-2). Inside the function F, we see two more F's! 
 
-In computer science infinite looping is bad because computers do not know how to terminate so we need some way to stop it. A base case is the case where the recursion will stop when the recursive relation reaches the base case. For the Fibonacci sequence, the base case is F(0) = 1 and F(1) = 1 and we can see that for all N>1, the Fibonacci sequence will reach the base case.
+In computer science infinite looping is bad because computers do not know how to terminate so we need some way to stop it. We will call a stopping point the base case. A base case is the case where the recursion will stop. Everything must eventually reduce to a base case. For the Fibonacci sequence, the base case is F(0) = 1 and F(1) = 1 and we can see that for all N>1, the Fibonacci sequence will reach the base case.
 
 So for something to be recursive in computer science, it needs:
 
@@ -24,6 +24,10 @@ recursion(parameter)
 * *base_case* is the check if the parameter has reached the base case
 * *operation* reduces the parameters towards the base case
 
+### Next
+
+* [[Advanced Recursion]]
+
 ## Factorial
 
 Let's look at the factorial function.
@@ -31,6 +35,8 @@ Let's look at the factorial function.
 n! = 1 * 2 * 3 .... n.
 
 Or we could write it as n! = (n-1)! * n. We now see that in this form, the factorial function is defined within itself and is recursive. We also know that 1! = 1 which is our base case.
+
+### Formalization
 
 [[[[{lang-html}
 Let f(n) be the nth factorial number.
@@ -50,7 +56,7 @@ f(4)
 = 24
 ]]]]
 
-Implementation:
+### Implementation
 [[[[
 int factorial(int n){
    if(n==1)return 1;
@@ -62,38 +68,54 @@ int factorial(int n){
 
 We can use recursion in a lot of places and we can apply to simple problems that you have probably not thought about. Summing the digits of a string can be done using simple loop but we can also use recursion to do it.
 
-Let's say we have an string of n digits. The sum of digits of the string is just the sum of substring to n-1 digits plus the nth digit. We can keep reducing the string into smaller parts until it is an empty string. The sum of digits in an emtpy string is simply 0 and we have our base case.
+Let's say we have the string '23528'. The total is equal to the first digit + the sum of the rest of the digits. 2 + '3528'. We can do the exact same thing for the rest of the digits: the second digit + the sum of the rest of the digits and keep doing this until we have no more digits.
+
+* '23528'
+* '3528' + 2
+* '528' + 5
+* '28' + 10
+* '8' + 12
+* '' + 20
+* 20
+
+### Formalization
 
 [[[[{lang-html}
 Let sum(string) be the sum of digits in a string
+Let n be the length of the string
 
-For simplicity let string[0..a] be the substring of the string from 0 to a.
+For simplicity, let string[x..y] be the substring of the string from index x to index y.
+Example: 
+string = 'abcd'.
+string[1..3] = 'bcd'
 
 Base case:
 sum(empty) = 0
 
 Recurrence:
-sum(string) = sum(string[0..n-1])+string[n]
+sum(string) = sum(string[1..n]) + string[n]
 
 Example:
 sum('23528')
-= sum('2352')+8
-= (sum('235')+2)+8
-= ((sum('23')+5)+2)+8
-= (((sum('2')+3)+5)+2)+8
-= ((((sum('')+2)+3)+5)+2)+8
-= ((((0+2)+3)+5)+2)+8) [Base case]
+= sum('3528') + 2
+= (sum('528') + 3) + 2
+= ((sum('28') + 5) + 3) + 2
+= (((sum('8') + 2) + 5) + 3) + 2
+= ((((sum('') + 8) + 2) + 5) + 3) + 2
+= ((((0 + 8) + 2) + 5) + 3) + 2
 = 20
 ]]]]
 
-
-
-So the function can be written as:
+### Implementation
 
 [[[[
 int sum(string str){
-   if(str.length==0)return 0;
-   else return sum(str.substring(0,str.length-1))+(str.charAt(str.length-1)-'0');
+   int n = str.length()
+   if(n==0)return 0;
+   else{
+     int charToNum = (str.charAt(0)-'0');
+     return sum(str.substring(1,n)) + charToNum;
+   }
 }
 sum('23528');
 ]]]]
@@ -102,42 +124,59 @@ sum('23528');
 
 Let's say we have an string of N characters and we want to find the number of times the letter 'c' appears. This time we need to add some logic to the problem. 
 
-The number of times 'c' appears in the string of N numbers is the number of times 'c' appears in the string of N-1 characters plus one if the Nth number is a 3. If the Nth number is not a 'c', then we don't add 1. 
+If the first letter of the string is a 'c', then we can add 1 to the count. Otherwise, we don't add anything. We can do the exact same thing for the substring without the first letter. If the second letter of the string is a 'c', we add 1 other we don't add anything etc.
 
-If the array is empty then the count of 3 is obviously 0.
+For example we have the string 'cacaec'. Since the first letter is a 'c' we add 1 to the count. Then we remove the first letter and get 'acaec', the first letter is not a 'c' so we don't add to the count. We keep reducing this way until we get an empty string and we return the count. 
 
-So now we have our recursive definition and our base case.
+* 'cacaec' + 0
+* 'acaec' +1
+* 'caec' + 1
+* 'aec' + 2
+* 'ec' + 2
+* 'c'  + 2
+* '' + 3
+* 3
+
+
+### Formalization
 
 [[[[{lang-html}
 Let count(string) be the number of 'c's in the string
 
-For simplicity let string[0..a] be the substring of the string from 0 to a.
-Let n = len(string)
+For simplicity, let string[x..y] be the substring of the string from x to y.
+Example: 
+string = 'abcd'.
+string[1..3] = 'bcd'
 
 Base case:
 count(empty) = 0
 
 Recurrence:
-count(string) =  {if string[n]=='c'  count(string[0..n-1])+1
-                 {else               count(string[0..n-1])
+count(string) =  {if string[n]=='c'  count(string[2..n])+1
+                 {else                    count(string[2..n])
+
 Example:
 count('cacaec')
-= count('cacae')+1
-= (count('caca')+0)+1
-= ((count('cac')+0)+0)+1
-= (((count('ca')+1)+0)+0)+1
-= ((((count('c')+0)+1)+0)+0)+1
-= ((((count('')+1)+0)+1)+0)+0)+1
-= ((((0+1)+0)+1)+0)+0)+1
+= count('acaec')+1
+= (count('caec')+0)+1
+= ((count('aec')+1)+0)+1
+= (((count('ec')+0)+1)+0)+1
+= ((((count('c')+0)+0)+1)+0)+1
+= ((((count('')+1)+0)+0)+1)+0)+1
+= ((((0+1)+0)+0)+1)+0)+1
 = 3
-
 ]]]]
-Java implementation:
+### Implementation:
 [[[[
 int count3(string str){
-   if(str.length==0)return 0;
-   if(str.charAt(str.length-1)=='c')return count3(str.substring(0,str.length-1))+1
-   else return count3(str.substring(0,str.length-1));
+   int n = str.length()
+   if(n == 0)return 0;
+   if(str.charAt(0) == 'c'){
+      return count3( str.substring(1, n) ) + 1;
+   }
+   else{
+     return count3( str.substring(1, n) );
+   }
 }
 
 count3('cacaec');
@@ -148,10 +187,13 @@ count3('cacaec');
 
 Let's say we wanted to find x^^n^^ and for the sake of this problem we want the last four digits of that number. Note that 267^^4^^ mod 10000 = (267^^3^^ mod 10000) * 267 mod 10000. This is important because it means we can take the last 4 digits in each step instead of having to compute the giant exponent and then taking the last 4 digits. We can do this problem very easily by using a simple loop, but we can do better by using recursion. By definition of exponents, x^^a^^ * x^^a^^ = x^^2a^^. Using this we can see that if n is divisible by 2, then x^^n^^ = x^^n/2^^ * x^^n/2^^. 
 
+For example 5^^4^^ = 5^^2^^ * 5^^2^^
+
 But let's take a look at x^^n/2^^. If n is even we can do the exact same thing! x^^n/2^^ = x^^n/4^^ * x^^n/4^^. We have a recurrence relation and the base case is simple: if x^^1^^ = x. 
 
 But what if n is odd and not 1? Then we have x^^n^^ = x^^n/2^^ * x^^n/2^^ * x and we can now solve this problem using recursion.
 
+### Formalization
 [[[[{lang-html}
 Let exp(b,n) be b^n
 
@@ -173,7 +215,7 @@ exp(3,10)
 = (243)^2
 = 59049
 ]]]]
-Implementation
+### Implementation
 [[[[
 int exponent(int b,int n){
    if(n==1)return b;
@@ -194,3 +236,4 @@ int exponent(int b,int n){
 1. Given an array of N integers, write a recursive function to get the sum
 2. Given a string S, write a recursive function to determine if it is a palindrome.
 3. Given a number N, write a recursive function to output the number in binary.
+4. Given a string S, write a recursive function to return a reversed string

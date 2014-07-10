@@ -108,7 +108,7 @@ As we can see, the steps to move N discs are the exact same as to move N-1 discs
 In Step 1, when we move N-1 discs from start to helper, the new helper is the old destination and the new destination is the old helper.
 
 In Step 3, when we move N-1 discs from the helper to the destination, the new helper is the start pole, and the new start pole is the helper
-
+### Formalization
 [[[[{lang-html}
 Let f(N,start,helper,dest) be the steps to move N discs from the start to dest
 
@@ -257,7 +257,7 @@ P('ABC')
 
 ]]]]
 
-Implementation
+### Implementation
 [[[[
 Vector<String> permutation(String s){
    int n = s.length;

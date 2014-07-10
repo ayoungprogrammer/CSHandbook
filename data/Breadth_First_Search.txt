@@ -23,7 +23,9 @@ void bfs(Node root){
 
 ## Exercises
 
-1. Given a tree of letters (A is the root), output the tree using BFS
+1. Given a grid of squares with walls at certain locations and two locations A and B, find the minimum distance (going up/left/right/down) between the locations or impossible otherwise. For example if A is at (1,1) and B is at (3,1) but there is a wall at (2,1) then the minimum distance would be 4 (down, left, left, up). 
+2. Given a tree of letters (A is the root), output the tree using BFS with separators between levels
   * Example: A->B, B->D,B->C, C->G will output A | B | C D | G 
-2. Given a tree of letter, and two letters X and Y determine if X is an ancestor of Y or Y is a ancestor of X or neither. An ancestor of a node is another node that is the root of a subtree that contains that node. Or simply parent of the node, grand parent, great grandparents etc.
+3. Given a tree of letters, and two letters X and Y determine if X is an ancestor of Y or Y is a ancestor of X or neither. An ancestor of a node is another node that is the root of a subtree that contains that node. Or simply parent of the node, grand parent, great grandparents etc.
   * Example: A->B, B->C, B->D, D->G,  A is a parent of both C and D but G and C are not ancestors of each other
+4. Given a binary tree and a node in the binary tree, find the next node in BFS order of the tree.
