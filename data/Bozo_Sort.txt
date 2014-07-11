@@ -1,0 +1,34 @@
+## Introduction
+
+Bozo sort is a sort that keeps randomly arranging an array until it is sorted. If you are very lucky bozo sort will be very fast! But for the most part this is a horrible sort.
+
+## Implementation
+
+[[[[
+public void bozoSort(int[] arr){
+   
+   boolean sorted = false;
+   int i = 0;
+
+   while(!sorted){
+       sorted = true;
+       for(i=1;i<arr.length;i++){
+          if(arr[i]<arr[i-1]){
+             sorted = false;
+          }
+       }
+       if(sorted)return;
+
+       for(i=0;i<arr.length;i++){
+           int x = Math.randInt(arr.length);
+           int y = Math.randInt(arr.length);
+           int temp = arr[x];
+           arr[x] = arr[y];
+           arr[y] = temp;
+       }
+
+   }
+}
+
+]]]]
+

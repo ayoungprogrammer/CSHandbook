@@ -81,12 +81,13 @@ The element at the top of the tree with no parents is called a **root**. The nod
 
 Each node can hold different kinds of information depending on the tree. A node can hold the children it has, the parent it has, a key associated with the node and a value associated with the node. 
 
+{{tree.png}}
+
 ### [[Binary Tree]]
 
 A binary tree is a tree where each node has at most two children. 
 
-A [[binary search tree|Binary Search Tree]] is a binary tree with special properties. Each node in a BST holds information about its children and a key. The BST has the property that all the nodes in the left subtree have keys smaller than the key of the parent node and all the nodes in the right subtree have keys greater than the key of the parent node. If we wanted to find if a key existed we could perform a search on the tree, if the key we are looking for is greater than the current node's key we go to the right subtree and if the key we are looking for is smaller, than we go to the left subtree.
-
+{{binarytree.png}}
 
 ## [[Sets]]
 

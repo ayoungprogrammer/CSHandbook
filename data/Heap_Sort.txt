@@ -1,0 +1,21 @@
+## Introduction
+
+Heap sort is a sort that inserts all the element in an array into a min heap and then pops all the element outs. Since a heap guarantees that the root node will be the smallest element, we can store the entire array in a heap and the order that they are popped out of the heap will be in order.
+
+### Prerequisites
+
+* [[Heap]]
+
+### Implementation
+
+[[[[
+public void heapSort(int[] arr){
+    PriorityQueue<Integer> pq; //built in heap
+    for(int i=0;i<arr.length;i++){
+       pq.push(arr[i];
+    }
+    for(int i=0;i<arr.length;i++){
+       arr[i] = pq.pop(i);
+    }
+}
+]]]]

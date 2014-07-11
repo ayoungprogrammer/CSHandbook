@@ -11,7 +11,7 @@ Binary search is a type of search that is able to find an object in a sorted lis
 
 Depth first search or DFS is a method of search that goes as far as possible before backtracking. DFS is implemented using a [[stack|Stack]] and most of the time it uses an function stack for recursion.
 
-{{dfs.png}}
+{{dfs-preorder.png}}
 
 
 ## [[Breadth First Search]]

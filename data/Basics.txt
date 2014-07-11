@@ -232,8 +232,8 @@ do{
 The do-while loop will first *do something* and then as long as *test expression* is true, the computer will *do something*. Do while loops are useful if we need to get the value of something first before we keep looping.
 
 [[[[
-char exit;
+char c;
 do{
-  exit = getChar();
-}while(exit=='N")
+  c = getChar();
+}while(c=='N')
 ]]]]

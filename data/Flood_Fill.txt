@@ -21,8 +21,8 @@ Most flood fill solutions follow the same basic layout. There is a general [[DFS
 //marked is initially a n by m boolean array of false
 void floodFill(int i,int j){
    if(outOfBounds(i,j))return;
-   if(marked[i][j])return;
-   marked[i][j]=true;
+   if(visited(i,j))return;
+   markVisited(i,j);
    floodFill(i+1,j);
    floodFill(i,j+1);
    floodFill(i-1,j);
@@ -36,6 +36,16 @@ void floodFill(int i,int j){
 void floodFill(int i,int j){
    Queue<Point> q;
    q.push(new Point(i,j));
+   while(!q.isEmpty()){
+      Point cur = q.pop();
+      if(outOfBounds(cur))continue;
+      if(visited(cur))continue;
+      markVisited(cur);
+      q.push(new Point(cur.x+1,cur.y));
+      q.push(new Point(cur.x-1,cur.y));
+      q.push(new Point(cur.x,cur.y+1));
+      q.push(new Point(cur.x,cur.y-1));
+   }
    
 }
 ]]]]
@@ -82,7 +92,7 @@ public int FloodFillDFS(int x,int y,int src,int tar){
 	return sum;
 }
 
-floodFillDFS(startx,starty,src,tar);
+floodFillDFS(1,1,1,2);
 ]]]]
 
 ### BFS Solution
@@ -116,7 +126,7 @@ public int FloodFillBFS(int x,int y,int src,int tar){
 	}
 	return total;
 }
-FloodFillBFS(startx,starty,src,tar);
+FloodFillBFS(1,1,1,2);
 ]]]]
 
 ## Exercises
