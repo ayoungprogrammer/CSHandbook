@@ -2,9 +2,9 @@
 
 A vector is similar to an array but it more flexible in terms of size. In Java, a vector is very similar to an array starts with size N. When more elements are added to the vector and the number of elements > N, then the vector resizes itself and reallocates for 2*N space. When using an vector we can forget about allocating space.
 
- Operation | Create | Get  | Set | Insert | Delete
+ Operation | Get  | Push | Pop | Insert | Delete
 -----------|---------|--
-Time Complexity | O(n) | O(1)  | O(1) | O(n) | O(n)
+Time Complexity  | O(1) | O(1) | O(1) | O(1) | O(n) | O(n)
 ### Prerequisites
 
 * [[Arrays]]
@@ -35,6 +35,8 @@ publc Vec(int startSize){
 
 Resize will be used to resize the current size of elements. We create a new array of two times the size of the old one and copy the old array over.
 
+{{vector3.png}}
+
 [[[[
 public void resize(){
 	int[] newArr = new int[2*arr.length];
@@ -48,6 +50,9 @@ public void resize(){
 ## Add Element
 
 Add element will add elements to the end of the vector. If the array is full, the vector will resize itself.
+
+{{vector2.png}}
+
 [[[[
 public void add(int x){
         if(size>=arr.length){
@@ -58,11 +63,29 @@ public void add(int x){
 }
 ]]]]
 
-## Remove element
+## Pop
+
+Removes the element at the end of the vector. We decrease the size of the vector and return the last element.
+
+{{vector4.png}}
+
+[[[[
+public int pop(){
+	if(size==0){
+		throw new NoSuchElementException();
+	}
+	int ret = arr[size];
+	size--;
+	return ret;
+}
+]]]]
+## Remove
 
 Removes element at the index idx. It will throw an exception if the index is out of bounds.
 
 We shift everything to the right of the index to the left by one to fill in the missing element.
+
+{{vector4.png}}
 
 [[[[
 public int remove(int idx){
@@ -83,6 +106,8 @@ public int remove(int idx){
 
 Returns the element at the specified index. It will throw an exception if the index is out of bounds. Note this function is exactly as the same as in the [[array|Array]]
 
+{{vectorget.png}}
+
 [[[[
 public int get(int idx){
 	if(idx<0||idx>=size){
@@ -95,6 +120,10 @@ public int get(int idx){
 ## Insert Element
 
 Insert the new number x at the index. We need to make space at the index for the new element so we shift everything to the right of the index by 1.
+
+{{vectorinsert.png}}
+
+{{vectorinsert2.png}}
 
 [[[[
 public void insert(int idx,int x){

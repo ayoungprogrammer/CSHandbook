@@ -6,15 +6,27 @@ Data structures are a way of storing data such that it can be used in a efficien
 
 An **abstract data type** is a conceptual model for representing data. An abstract data type tells what it should do as opposed to how it should work. It will tell us what operations it should have but should not tell us how to implement them. 
 
-For example, a bottle should be able to hold water and allow us to drink from. This tells us what it should do but we don't need to know how it works or how it is made. A plastic water bottle is an implementation of a bottle. It holds water in its interior and allows us to drink be unscrewing the cap and letting us pour water down our throat. A thermos is also an implementation of the bottle, it holds fluid inside it, but this thermos has a lid that can be popped open and water can come from it. A thermos and plastic water bottle are different implementations as they are made differently and used differently, but they fundamentally do what a bottle is supposed to do: store liquid, and provide a way to drink. 
+For example, a bottle should be able to hold water and allow us to drink from. This tells us what it should do but we don't need to know how it works or how it is made. A plastic water bottle is an implementation of a bottle. It holds water in its interior and allows us to drink by unscrewing the cap and letting us pour water down our throat. A thermos is also an implementation of the bottle, it holds fluid inside it, but this thermos has a lid that can be popped open and water can come from it. A thermos and plastic water bottle are different implementations as they are made differently and used differently, but they fundamentally do what a bottle is supposed to do: store liquid, and provide a way to drink. A bottle does not actually exist, but types of bottles do.
+
+{{bottle.png}}
 
 Some implementations of abstract data types are better than others for implementing. For example plastic water bottles are very cheap whereas a thermos is more expensive but a thermos can hold hot water and keep it warm for a long period of time. When thinking of a implementation for an abstract data type we need to know what we need it for.
+
+{{adt.png}}
 
 For more intermediate data structures, read the the [[advanced data structures|Advanced Data Structures]] page.
 
 ## [[Arrays]]
 
-Imagine you had a row of parking spaces where each was labelled with a number. If you wanted to know what the license plate of a car at parking space 4 was, all you have to do is go to the parking space and read off the license plate. If you wanted to park you car at parking space 5, you would go to parking space 5 and put your car in there if there was nothing there. Let's say that you had cars at parking spaces 1, 2, and 3. If you wanted to insert a new car at parking space 1 and keep the rest of the cars in the same order, you would have to shift the cars in the parking spaces from 1, 2 and 3 to 2, 3 and 4 by getting in each car and parking them in the new spaces which would take some time. This type of structure is an array.
+Imagine you had a row of parking spaces where each was labelled with a number. If you wanted to know what the license plate of a car at parking space 4 was, all you have to do is go to the parking space and read off the license plate. If you wanted to park your car at parking space 5, you would go to parking space 5 and put your car in there only if there was nothing there. 
+
+{{array.png}}
+
+Let's say that you had cars at parking spaces 1, 2, and 3. If you wanted to insert a new car at parking space 1 and keep the rest of the cars in the same order, you would have to shift the cars in the parking spaces from 1, 2 and 3 to 2, 3 and 4 by getting in each car and parking them in the new spaces which would take some time. This type of structure is an array.
+
+{{array2.png}}
+
+{{array3.png}}
 
 An **array** is the most basic data structure that stores elements of the same type in a fixed block. The fact that it is in one block and the same type is important because it allows accessing elements very quickly if you have the index. All you have to do is go to the index and retrieve the element. However, inserting elements in the array is slow because you would have to shift all the elements and also if you want to shift past the fixed size you will get an error. (Imagine the parking spaces are full and you wanted to insert a car somewhere, there will still be one car that will have no parking space).
 
@@ -30,6 +42,10 @@ Imagine a stack of plates at a buffet, the plates are taken from the top and are
 
 A **stack** is an abstract data type with the property that it can only have removal and insertion from the back (FILO, first in last out). Remove from the back is called "pop" and insertion from the back is called "push". 
 
+{{stack.png}}
+
+{{stack2.png}}
+
 Stacks are used for function calls on the memory stack. Whenever a function is called, it is placed on the memory stack with its variables and when it is returning a value, it is popped off the stack.
 
 With an vector implementation, it can be implemented very efficiently.
@@ -40,6 +56,11 @@ Imagine you had a ???
 
 A **vector** is an array that can be dynamically resized. This allows the features of insertion, removal and deletion. Vectors are implemented as arrays and when more space is required, they are copied to a new array with twice the original size.
 
+{{vector.png}}
+
+{{vector2.png}}
+
+{{vector4.png}}
 
  Operation | Create | Get  | Set | Push to back | Delete
 -|-|-
@@ -48,6 +69,10 @@ Time Complexity | O(n) | O(1)  | O(1) | O(1) | O(n)
 ## [[Queue]]
 
 Imagine you are standing in line for a restaurant. Whoever is first in line will be served and whoever is last in line will be served last. People can be served while more people join the line and the line may get very long because the time it takes to serve one person is long while more people join the queue. This line is also called a queue.
+
+{{queue.png}}
+
+{{queue2.png}}
 
 A **queue** is an abstract data type with the property that it can only have removal from the front and insertion from the back (FIFI, first in first out). Removal from the front is called "pop" or "dequeue". Insertion from the back is called "push" or "enqueue".
 
@@ -63,8 +88,11 @@ A **pointer** is something that holds the memory location of another object.
 
 A **linked list** is similar to an array but it is different such that it is not stored in one block of data. Each element can be stored in a random place in memory but each element contains a pointer to the next element thus forming a chain of pointers. Think of a pointer as a link that links two train cars. Since the elements aren't in a block, accessing an element must be done by traversing the entire linked list by following each pointer to the next. However, this also allows insertion to be done more quickly by simply changing the point of the previous element and setting to the pointer of the current element to the next element. Deletion is also done by taking the previous element and changing its pointer to two elements ahead. In a linked list the links only go forward and you cannot move backward. 
 
+{{linkedlist.png}}
+
 A **doubly linked list** is a linked list that has pointers going backwards as well as forwards.
 
+{{doublelinkedlist.png}}
 
 | Operation | Get | Add at node | Delete at node | Add | Delete
 |-----------|---------|------------|---------
@@ -106,19 +134,9 @@ For every element in a hash set, the hash is computed and elements with the same
 
 If we want to check if an element already exists within the set, we first compute the hash of the element and then search through the linked list associated with the hash to see if the element is contained.
 
-Let use the example of the hashset of the elements of 3242342, 3523, 123, 815 and 538. The hash set looks like this when computed:
+Let use the example of the hashset of the elements of 3242, 3523, 123, 235 and 538. The hash set looks like this when computed:
 
-Bucket | List
--------|-----
-     1 |     
- 2 | 3242342
- 3 | 3523, 123
- 4 |
- 5 | 815
- 6 |
- 7 |
-8 | 538
-9 |
+{{hashset.png}}
 
 If we wanted to check if 7238 was in the hash set, we would get the hash (7238 mod 10 = 8). So we get the bucket associated with the hash 8 and we get the list of (538). When we iterate through this short list, we see that 7238 is not a member of the set. 
 

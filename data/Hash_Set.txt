@@ -2,9 +2,13 @@
 
 Hash sets are sets that use hashes to store elements. A hashing algorithm is an algorithm that takes an element and converts it to a smaller chunk called a **hash**. For example let our hashing algorithm be (x mod 10). So the hashes of 232, 217 and 10 be 2,7, and 9 respectively. 
 
+{{hashcode.png}}
+
 For every element in a hash set, the hash is computed and elements with the same hash are grouped together and stored in a [[linked list|Linked List]]. The linked list is called a **bucket**.
 
 If we want to check if an element already exists within the set, we first compute the hash of the element and then search through the linked list associated with the hash to see if the element is contained.
+
+{{hashset.png}}
 
 | Operation | Membership | Insertion | Deletion
 |-
@@ -17,19 +21,9 @@ If we want to check if an element already exists within the set, we first comput
 
 ## Implementation
 
-Let use the example of the hashset of the elements of 3242342, 3523, 123, 815 and 538. The hash set looks like this when computed:
+Let use the example of the hashset of the elements of 3242, 3523, 123, 235 and 538. The hash set looks like this when computed:
 
-Bucket | List
--------|-----
-     1 |     
- 2 | 3242342
- 3 | 3523, 123
- 4 |
- 5 | 815
- 6 |
- 7 |
-8 | 538
-9 |
+{{hashset.png}}
 
 If we wanted to check if 7238 was in the hash set, we would get the hash (7238 mod 10 = 8). So we get the bucket associated with the hash 8 and we get the list of (538). When we iterate through this short list, we see that 7238 is not a member of the set. 
 
@@ -63,6 +57,8 @@ public class HashSet {
 ### Hash code
 
 The hash code is the result of the hashing algorithm for an element. In our hash set implementation, we will use a simple hash: modulus of the integer by the number of buckets. 
+
+{{hashcode.png}}
 
 For the most part if the numbers are all random then the hash function is fine. However, if the number of buckets was 10 and we added the elements 20,30,40,50,60,70, they will all end up in the same bucket and results in poor performance.
 
@@ -100,6 +96,10 @@ public void resize(){
 
 To insert an element in a hash set, we get the hash code from our hashing algorithm and insert the element into the corresponding bucket.
 
+{{hashset.png}}
+
+{{hashsetinsert.png}}
+
 The function will return method or not the operation was successful. If the bucket already contains the element the operation will stop because we do not want to add duplicate elements into the set. If the bucket does not contain the element, we will insert it into the bucket and the operation is successful.
 
 [[[[
@@ -123,6 +123,12 @@ public boolean insert(int x){
 
 To check if a hash set contains an element, we get the hash code from our hashing algorithm and check if the corresponding bucket contains the element.
 
+{{hashsetcontains.png}}
+
+{{hashsetcontains2.png}}
+
+{{hashsetcontains3.png}}
+
 [[[[
 public boolean contains(int x){
 	int hash = getHash(x,bucketsSize);
@@ -136,6 +142,12 @@ public boolean contains(int x){
 To remove an element from a hash set, we get the hash code from our hashing algorithm and remove the element from the corresponding bucket.
 
 The function will return whether or not the operation was successful. If the bucket contains the element we can remove it from the linked list and the operation is successful. If the element is not in the bucket then the operation fails because we cannot remove something that is not there.
+
+{{hashsetrem.png}}
+
+{{hashsetrem2.png}}
+
+{{hashsetrem3.png}}
 
 [[[[
 public boolean remove(int x){

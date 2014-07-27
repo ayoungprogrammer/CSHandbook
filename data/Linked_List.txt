@@ -4,13 +4,17 @@ Imagine you had some train cars that were linked together where each was labelle
 
 A **pointer** is something that holds the memory location of another object.
 
+{{linkedlist.png}}
+
 A **linked list** is similar to an array but it is different such that it is not stored in one block of data. Each element can be stored in a random place in memory but each element contains a pointer to the next element thus forming a chain of pointers. Think of a pointer as a link that links two train cars. Since the elements aren't in a block, accessing an element must be done by traversing the entire linked list by following each pointer to the next. However, this also allows insertion to be done more quickly by simply changing the point of the previous element and setting to the pointer of the current element to the next element. Deletion is also done by taking the previous element and changing its pointer to two elements ahead. In a linked list the links only go forward and you cannot move backward. 
 
 A **doubly linked list** is a linked list that has pointers going backwards as well as forwards.
 
-| Operation | Get | Push | Delete at node 
+{{doublelinkedlist.png}}
+
+| Operation | Get | Push | Delete  | Insert
 |-----------|---------|------------|---------
-| Time Complexity | O(n) | O(1) | O(1) 
+| Time Complexity | O(n) | O(1) | O(1) | O(1)
 
 ## Implementation
 
@@ -24,11 +28,9 @@ The Link class for each "link" in the Linked List. In each Link we only need the
 class Link{
 	int value;
 	Link next;
-	Link prev;
 	public Link(int value){
 		this.value = value;
 		this.next = null;
-		this.prev = null;
 	}
 }
 ]]]]
@@ -38,10 +40,11 @@ class Link{
 Create the linked list by initializing the starting node as null and setting the size to empty.
 [[[[
 class LinkedList{
-	Link start;
+	Link head;
+	Link end;
 	int size;
 	public LinkedList(){
-		start = null;
+		start = end = null;
 		size = 0;
 	}
 }
@@ -51,13 +54,51 @@ class LinkedList{
 
 Create a new node with the value given and add it to the head. We have to set the current head previous node to the new node and the new next next to the last node.
 
+{{linkedlistpush.png}}
+
+{{linkedlistpush2.png}}
+
+{{linkedlistpush3.png}}
+
 [[[[
+/*
+ * Adds new node to head of linked list
+ */
 public void push(int value){
-	Link nn = new Link(value);
-	nn.next = start;
-	start.prev = nn;
-	start = nn;
+	Link newLink = new Link(value);
+	if(size==0){
+		head = end = newLink;
+	}else{
+		end.next = newLink;
+		end = newLink;
+	}
 	size++;
+}
+]]]]
+
+### Pop
+
+Pops off the node at the head.
+
+{{linkedlistpop.png}}
+
+{{linkedlistpop2.png}}
+
+[[[[
+/*
+ * Adds new node to head of linked list
+ */
+public int pop(){
+	if(head==null){
+		throw new NoSuchElementException();
+	}
+	int ret = head.value;
+	head = head.next;
+	size--;
+	if(size==0){
+		end = null;
+	}
+	return ret;
 }
 ]]]]
 
@@ -65,13 +106,19 @@ public void push(int value){
 
 Get retrieves the value at the specified index. We have to loop through the entire list to get the index we want because the nodes are not in the same block of memory.
 
+{{linkedlistget.png}}
+
+{{linkedlistget2.png}}
+
+{{linkedlistget3.png}}
+
 [[[[
 /*
 * Gets the value at index
 */
 public int get(int index){
 	int i = 0;
-	Link curNode = start;
+	Link curNode = head;
 	while(curNode!=null){
 		if(index==i){
 			return curNode.value;
@@ -79,21 +126,27 @@ public int get(int index){
 		curNode = curNode.next;
 		i++;
 	}
-	throw new ArrayIndexOutOfBoundsException();
+	throw new NoSuchElementException();
 }
 ]]]]
 
 ### Delete
 
-To delete the current node we set the previous node next link to the link after and the same for the previous link of the next node.
+To delete the current node we set the previous node next link to the link after.
+
+{{linkedlistrem.png}}
+
+{{linkedlistrem2.png}}
 
 [[[[
 /*
- * Deletes value at current node
+ * Deletes node after specified
  */
-public void delete(Link node){
-	if(node.prev!=null)node.prev.next = node.next;
-	if(node.next!=null)node.next.prev = node.prev;
+public void deleteNext(Link node){
+	if(node.next==end){
+		end = node;
+	}
+	node.next = node.next.next;
 	size--;
 }
 ]]]]

@@ -13,7 +13,9 @@ Complexity  | O(log n) | O(log n) | O(log n)
 
 ## Implementation
 
-Here is a Java implementation of a tree map
+Here is a Java implementation of a tree map:
+
+{{bst.png}}
 
 ### Class
 
@@ -44,6 +46,21 @@ class Node{
 		this.left = null;
 		this.right = null;
 		this.parent = null;
+	}
+	public void replaceChild(Node child,Node replacement){
+		if(left==child){
+			left = replacement;
+				if(replacement!= null){
+					replacement.parent = this;
+				}
+			}
+			if(right==child){
+				right = replacement;
+				if(replacement!= null){
+					replacement.parent = this;
+				}
+			}
+		}
 	}
 }
 ]]]]
@@ -122,61 +139,101 @@ public Pair get(int key){
 
 ### Remove
 
-Removing an element is a much more complex because we need to maintain the tree structure of the tree set when removing elements. First we locate the element that we want to remove. If the element is not there then the operation failed and we return false. If the element is there then are several cases we should consider. If the element is a leaf (eg no left or right children) then we can simply remove it (remove link from parent node). However, if the element has children then we need to replace that element to maintain the tree structure. Since everything to the left must be less than the current node and everything to the right of the node is greater, we can either pick the leftmost child of the right subtree or the rightmost child of the left subtree. This guarantees that the tree structure will be maintained.
+Removing an element is a much more complex because we need to maintain the tree structure of the tree set when removing elements. First we locate the element that we want to remove. If the element is not there then the operation failed and we return false. If the element is there then are three cases we need to consider. 
+
+{{bst-rem.png}}
+
+**Case 1: Node is a leaf node**
+
+{{bst-rem-case11.png}}
+
+If the node we want to remove is the leaf node, we can simply remove it.
+
+{{bst-rem-case12.png}}
+
+**Case 2: Node has one child**
+
+{{bst-rem-case21.png}}
+
+If the node we want to remove has a child, we can replace that node with its' only child.
+
+{{bst-rem-case22.png}}
+
+**Case 3: Node has two children**
+
+{{bst-rem-case31.png}}
+
+We need to replace the node with the **rightmost** of the *left* subtree or the **leftmost** of the *right* subtree to maintain the order.
+
+{{bst-rem-case32.png}}
+
+It does not matter which side we pick so we will use the **rightmost** of the *left* subtree. First we copy the value of the rightmost of the left subtree into the node that will be deleted. 
+
+{{bst-rem-case33.png}}
+
+Then we replace the rightmost of the left subtree with its left subtree.
+
+{{bst-rem-case34.png}}
 
 [[[[
 public boolean remove(int key){
-	Node curTree = root;
-	while(curTree!=null){
-		if(key==curTree.pair.key){
+	//Get node to remove
+	Node curNode = root;
+	while(curNode!=null){
+		if(key==curNode.pair.key){
 			break;
-		}else if(key<curTree.pair.key){
-			curTree = curTree.left;
+		}else if(key<curNode.pair.key){
+			curNode = curNode.left;
 		}else{
-			curTree = curTree.right;
+			curNode = curNode.right;
 		}
 	}
-	if(curTree==null){
+	if(curNode==null){
 		return false;
 	}
-	if(curTree.left==null){
-		if(curTree==root){
-			root = curTree.right;
+	//Case 1: leaf node
+	if(curNode.left==null && curNode.right==null){
+		//if root
+		if(curNode==root){
+			this.root = null;
+		}else{
+			curNode.parent.replaceChild(curNode,null);
+		}
+	}
+	//Case 2: one child
+	else if(curNode.left==null){
+		//If root
+		if(curNode==root){
+			root = curNode.right;
 			root.parent = null;
 		}else {
-			if(curTree.parent.left==curTree){
-				curTree.right.parent = curTree.parent;
-				curTree.parent.left = curTree.right;
-				
-			}else{
-				curTree.right.parent = curTree.parent;
-				curTree.parent.right = curTree.right;
-			}
+			curNode.parent.replaceChild(curNode,curNode.right);
 		}
-		size--;
-		return true;
 	}
-	//Get rightmost of left subtree
-	Node rightmost = curTree.left;
-	while(rightmost.right!=null){
-		rightmost = rightmost.right;
-	}
-	if(curTree.parent==null){
-		rightmost.right = root.right;
-		root = rightmost;
-		root.parent = null;
-	}else {
-		curTree.pair = rightmost.pair;
-		if(rightmost.parent.left==rightmost){
-			rightmost.parent.left = null;
+	else if(curNode.right==null){
+		//If root
+		if(curNode==root){
+			root = curNode.left;
+			root.parent = null;
 		}else {
-			rightmost.parent.right = null;
+			curNode.parent.replaceChild(curNode,curNode.left);
 		}
+	}
+	//Case 3: two children
+	else {
+		//Get rightmost of left subtree
+		Node rightmost = curNode.left;
+		while(rightmost.right!=null){
+			rightmost = rightmost.right;
+		}
+		curNode.pair = rightmost.pair;
+		rightmost.parent.replaceChild(rightmost, rightmost.left);
 	}
 	size--;
 	return true;
 }
 ]]]]
 
-## Exercises
+## Exercises 
 
+1. Given a list of N numbers, output the first M unique numbers.

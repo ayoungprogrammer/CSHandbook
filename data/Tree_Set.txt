@@ -3,6 +3,8 @@ A tree set is a set which stores the values in a [[binary tree|Binary Tree]]. To
 
 The advantage of tree sets is that they are maintained in a sorted order. 
 
+{{bst.png}}
+
 | Operation | Membership | Insertion | Deletion
 |-
 | Time Complexity | O(log n) | O(log n) | O(log n)
@@ -11,183 +13,13 @@ The advantage of tree sets is that they are maintained in a sorted order.
 * [[Set]]
 * [[Binary Search Tree]]
 
+### Next Topics
+
+* [[Tree Map]]
+
 ## Implementation
 
-Tree sets are implemented using a binary search tree. In the tree everything to the left of a node is smaller than that node and everything to the right of that node is greater than that node.
-
-{{bst.png}}
-
-### Class
-
-A tree is a node in our tree set. Each tree will contain a left subtree, a right subtree, the parent of the tree and the value stored at that node. It is unnecessary to store the parent but for this implementation it will be easier to keep track of the parent.
-
-[[[[
-public class Tree {
-	int value;
-	Tree left;
-	Tree right;
-	Tree parent;
-	public Tree(int val){
-		this.value = val;
-		this.left = null;
-		this.right = null;
-		this.parent = null;
-	}
-}
-]]]]
-
-
-[[[
-In our class we will store the number of element in the set and the root of the tree. From the root of the tree we can traverse the rest of the tree.
-
-[[[[
-public class TreeSet {
-
-	int size;
-	Tree root;
-	
-	public TreeSet(){
-		size = 0;
-		root = null;
-	}
-]]]]
-
-### Insert
-
-To insert an element in the tree set we search for the element that we are trying to insert. If it is already there then the operation fails because sets contain unique elements. Otherwise we will insert the new element into the set. 
-
-[[[[
-public boolean insert(int x){
-	if(root==null){
-		root = new Tree(x);
-		return true;
-	}
-	Tree curTree = root;
-	while(curTree != null){
-		if(x == curTree.value){
-			return false;
-		}else if(x < curTree.value){
-			if(curTree.left == null){
-				Tree newTree = new Tree(x);
-				newTree.parent = curTree;
-				curTree.left = newTree;
-				return true;
-			}
-			curTree = curTree.left;
-		}else {
-			if(curTree.right == null){
-				Tree newTree = new Tree(x);
-				newTree.parent = curTree;
-				curTree.right = newTree;
-				return true;
-			}
-			curTree = curTree.right;
-		}
-	}
-	return false;
-}
-]]]]
-
-### Contains
-
-To check if the tree set contains an element, we search for it in the binary tree and return true if it exists and false otherwise.
-
-[[[[
-public boolean contains(int x){
-	Tree curTree = root;
-	while(curTree!=null){
-		if(x==curTree.value){
-			return true;
-		}else if(x<curTree.value){
-			curTree = curTree.left;
-		}else{
-			curTree = curTree.right;
-		}
-	}
-	return false;
-}
-]]]]
-
-### Remove 
-
-Removing an element is a much more complex because we need to maintain the tree structure of the tree set when removing elements. First we locate the element that we want to remove. If the element is not there then the operation failed and we return false. If the element is there then are several cases we should consider. If the element is a leaf (eg no left or right children) then we can simply remove it (remove link from parent node). However, if the element has children then we need to replace that element to maintain the tree structure. Since everything to the left must be less than the current node and everything to the right of the node is greater, we can either pick the leftmost child of the right subtree or the rightmost child of the left subtree. This guarantees that the tree structure will be maintained.
-
-[[[[
-public boolean remove(int x){
-	Tree curTree = root;
-	while(curTree!=null){
-		if(x==curTree.value){
-			break;
-		}else if(x<curTree.value){
-			curTree = curTree.left;
-		}else{
-			curTree = curTree.right;
-		}
-	}
-	if(curTree==null){
-		return false;
-	}
-	if(curTree.left==null){
-		if(curTree==root){
-			root = curTree.right;
-			root.parent = null;
-		}else {
-			if(curTree.parent.left==curTree){
-				curTree.right.parent = curTree.parent;
-				curTree.parent.left = curTree.right;
-					
-			}else{
-				curTree.right.parent = curTree.parent;
-				curTree.parent.right = curTree.right;
-			}
-		}
-		size--;
-		return true;
-	}
-	//Get rightmost of left subtree
-	Tree rightmost = curTree.left;
-	while(rightmost.right!=null){
-		rightmost = rightmost.right;
-	}
-	if(curTree.parent==null){
-		rightmost.right = root.right;
-		root = rightmost;
-		root.parent = null;
-	}else {
-		curTree.value = rightmost.value;
-		if(rightmost.parent.left==rightmost){
-			rightmost.parent.left = null;
-		}else {
-			rightmost.parent.right = null;
-		}
-	}
-	return true;
-}
-]]]]
-
-### Print Tree
-
-Since tree sets are stored as a binary search tree, we can print the elements in order.
-
-[[[[
-public String dfs(Tree curTree){
-	if(curTree == null)return "";
-	String ret = "";
-	ret += dfs(curTree.left);
-	ret += curTree.value;
-	ret += ",";
-	ret += dfs(curTree.right);
-	return ret;
-}
-	
-public String toString(){
-	String ret = "";
-	if(root!=null){
-		ret += dfs(root);
-	}
-	return ret.substring(0,ret.length()-1);
-}
-]]]]
+Tree Sets are implemented using [[binary search trees|Binary Search Tree]].
 
 ### Exercises
 

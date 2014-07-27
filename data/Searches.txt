@@ -6,6 +6,7 @@ Searches are used to find solutions to problems and there many ways to search fo
 
 Binary search is a type of search that is able to find an object in a sorted list in O(log n). In binary search we first start at the middle element and we keep trying to halve the problem until we find the element we need. 
 
+{{binarysearch.png}}
 
 ## [[Depth First Search]]
 
@@ -29,4 +30,4 @@ Flood fill is a search that fills a grid. It can be implemented with either DFS 
 ## [[Backtracking]]
 Backtracking is a search that enumerates every single possible solution by using partial solutions.
 
-
+{{enumerate-sets.png}}

@@ -4,6 +4,10 @@ Imagine a stack of plates at a buffet, the plates are taken from the top and are
 
 A stack is an array with the property that it can only have removal and insertion from the back (FILO, first in last out). Remove from the back is called "pop" and insertion from the back is called "push".
 
+{{stack.png}}
+
+{{stack2.png}}
+
 Stacks are used for function calls on the memory stack. Whenever a function is called, it is placed on the memory stack with its variables and when it is returning a value, it is popped off the stack.
 
 ### Prerequisites
