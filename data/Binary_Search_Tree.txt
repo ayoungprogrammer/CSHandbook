@@ -1,0 +1,267 @@
+## Introduction
+A binary search tree is a  [[binary tree|Binary Tree]] with special properties. The left children of a node will always be less than the node and the right children of a node will always be more than the node.
+
+{{bstcompare.png}}
+
+{{bst.png}}
+
+| Operation | Membership | Insertion | Deletion
+|-
+| Time Complexity | O(log n) | O(log n) | O(log n)
+
+### Prerequisites
+* [[Set]]
+* [[Binary Tree]]
+
+## Implementation
+
+Tree sets are implemented using a binary search tree. In the tree everything to the left of a node is smaller than that node and everything to the right of that node is greater than that node.
+
+{{bst.png}}
+
+### Class
+
+A Node is a node in our tree set. Each node will contain a left subtree, a right subtree, the parent of the tree and the value stored at that node. It is unnecessary to store the parent but for this implementation it will be easier to keep track of the parent.
+
+replaceChild replaces the left or right child node specified with the replacement node. 
+
+[[[[
+public class Node {
+	int value;
+	Node left;
+	Node right;
+	Node parent;
+	public Node(int val,Node parent){
+		this.value = val;
+		this.left = null;
+		this.right = null;
+		this.parent = parent;
+	}
+	public void replaceChild(Node child,Node replacement){
+		if(left==child){
+			left = replacement;
+			if(replacement!= null){
+				replacement.parent = this;
+			}
+		}
+		if(right==child){
+			right = replacement;
+			if(replacement!= null){
+				replacement.parent = this;
+			}
+		}
+	}
+}
+]]]]
+
+In our class we will store the number of element in the set and the root of the tree. From the root of the tree we can traverse the rest of the tree.
+
+[[[[
+public class TreeSet {
+
+	int size;
+	Node root;
+	
+	public TreeSet(){
+		size = 0;
+		root = null;
+	}
+]]]]
+
+### Insert
+
+To insert an element in the tree set we search for the element that we are trying to insert. If it is already there then the operation fails because sets contain unique elements. Otherwise we will insert the new element into the set. 
+
+{{bstinsert.png}}
+
+{{bstinsert2.png}}
+
+{{bstinsert3.png}}
+
+{{bstinsert4.png}}
+
+[[[[
+public boolean insert(int x){
+	if(root==null){
+		root = new Node(x,null);
+		size = 1;
+		return true;
+	}
+	Node curTree = root;
+	while(curTree != null){
+		if(x == curTree.value){
+			return false;
+		}else if(x < curTree.value){
+			if(curTree.left == null){
+				curTree.left =  new Node(x,curTree);
+				size++;
+				return true;
+			}
+			curTree = curTree.left;
+		}else {
+			if(curTree.right == null){
+				curTree.right = new Node(x,curTree);
+				size++;
+				return true;
+			}
+			curTree = curTree.right;
+		}
+	}
+	return false;
+}
+]]]]
+
+### Contains
+
+To check if the tree set contains an element, we search for it in the binary tree by starting at the root. If the number is less than the current, we search the left child. If the number if greater than the current, we search the right child.
+
+{{bstcontains.png}}
+
+{{bstcontains2.png}}
+
+{{bstcontains3.png}}
+
+{{bstcontains4.png}}
+
+We return true if it exists and false otherwise.
+
+[[[[
+public boolean contains(int x){
+	Node curTree = root;
+	while(curTree!=null){
+		if(x==curTree.value){
+			return true;
+		}else if(x<curTree.value){
+			curTree = curTree.left;
+		}else{
+			curTree = curTree.right;
+		}
+	}
+	return false;
+}
+]]]]
+
+### Remove 
+
+Removing an element is a much more complex because we need to maintain the tree structure of the tree set when removing elements. First we locate the element that we want to remove. If the element is not there then the operation failed and we return false. If the element is there then are three cases we need to consider. 
+
+{{bst-rem.png}}
+
+**Case 1: Node is a leaf node**
+
+{{bst-rem-case11.png}}
+
+If the node we want to remove is the leaf node, we can simply remove it.
+
+{{bst-rem-case12.png}}
+
+**Case 2: Node has one child**
+
+{{bst-rem-case21.png}}
+
+If the node we want to remove has a child, we can replace that node with its' only child.
+
+{{bst-rem-case22.png}}
+
+**Case 3: Node has two children**
+
+{{bst-rem-case31.png}}
+
+We need to replace the node with the **rightmost** of the *left* subtree or the **leftmost** of the *right* subtree to maintain the order.
+
+{{bst-rem-case32.png}}
+
+It does not matter which side we pick so we will use the **rightmost** of the *left* subtree. First we copy the value of the rightmost of the left subtree into the node that will be deleted. 
+
+{{bst-rem-case33.png}}
+
+Then we replace the rightmost of the left subtree with its left subtree.
+
+{{bst-rem-case34.png}}
+
+[[[[
+public boolean remove(int x){
+	//Get node to remove
+	Node curNode = root;
+	while(curNode!=null){
+		if(x==curNode.value){
+			break;
+		}else if(x<curNode.value){
+			curNode = curNode.left;
+		}else{
+			curNode = curNode.right;
+		}
+	}
+	if(curNode==null){
+		return false;
+	}
+	//Case 1: leaf node
+	if(curNode.left==null && curNode.right==null){
+		//if root
+		if(curNode==root){
+			this.root = null;
+		}else{
+			curNode.parent.replaceChild(curNode,null);
+		}
+	}
+	//Case 2: one child
+	else if(curNode.left==null){
+		//If root
+		if(curNode==root){
+			root = curNode.right;
+			root.parent = null;
+		}else {
+			curNode.parent.replaceChild(curNode,curNode.right);
+		}
+	}
+	else if(curNode.right==null){
+		//If root
+		if(curNode==root){
+			root = curNode.left;
+			root.parent = null;
+		}else {
+			curNode.parent.replaceChild(curNode,curNode.left);
+		}
+	}
+	//Case 3: two children
+	else {
+		//Get rightmost of left subtree
+		Node rightmost = curNode.left;
+		while(rightmost.right!=null){
+			rightmost = rightmost.right;
+		}
+		curNode.value = rightmost.value;
+		rightmost.parent.replaceChild(rightmost, rightmost.left);
+	}
+	size--;
+	return true;
+}
+]]]]
+
+### Print Tree
+
+Since tree sets are stored as a binary search tree, we can print the elements in order.
+
+[[[[
+public String dfs(Node curTree){
+	if(curTree == null)return "";
+	String ret = "";
+	ret += dfs(curTree.left);
+	ret += curTree.value;
+	ret += ",";
+	ret += dfs(curTree.right);
+	return ret;
+}
+	
+public String toString(){
+	String ret = "";
+	if(root!=null){
+		ret += dfs(root);
+	}
+	return ret.substring(0,ret.length()-1);
+}
+]]]]
+
+## Exercises
+
+1. 
