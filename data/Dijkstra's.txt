@@ -2,7 +2,7 @@
 
 Dijkstra's is a greedy approach to find the shortest path. It has many useful applications in networking and it can be extended to a variety of problems.
 
-Dijkstra works by beginning at the starting node and repeatedly taking the shortest edge that can be used and has not been used yet until the end node is reached.
+Dijkstra works by beginning at the starting node repeatedly picking the next closest node of those already visited.
 
 If Dijkstra's is implemented using a priority queue, the run time is O(n log n). 
 
@@ -14,10 +14,49 @@ A naive fix for negative cycles would be to offset all edges by the largest nega
 
 * [[Graph Theory]]
 * [[Priority Queue]]
+* [[Shortest Path]]
 
 ## Implementation
 
-Implementation of Dijkstra in Java using a [[priority queue|Priority Queue]
+At each node we visit we keep track of the minimum cost it takes to reach to reach that node from the starting node. 
+
+1. Start at the starting node
+2. Find an unvisited node that has the least cost to reach from the visited nodes.
+3. Mark that node as visited
+4. Repeat until all nodes are visited
+
+When we reach a node for the first time, it will be the shortest path to that node (Try to prove this to yourself).
+
+We first start at the starting node. The distance from the starting node to the starting node is obviously 0.
+
+{{djikstra.png}}
+
+From the starting node we have two nodes we can reach. The top node has a cost of 3 to reach and the bottom node has a cost of 5 to reach. 
+
+{{djikstra1.png}}
+
+We pick the smallest node the reach and we mark it as visited. Once we visit a node, we can guarantee that it is the smallest cost to reach it. The next nodes minimum cost to reach is 10, 5 and 5. 
+
+{{djikstra2.png}}
+
+We are indifferent to both 5's as they are both the minimum and we can choose either. We mark the node as visited and we find the minimum costs to other nodes which are 5,10,11.
+
+{{djikstra3.png}}
+
+We take the next smallest which is 5 and we mark the node as visited. The next costs are 10 and 11. 
+
+{{djikstra4.png}}
+
+We take the smallest which is 10 and we now only have one last node to reach at a cost of 11.
+
+{{djikstra5.png}}
+
+At each node we have the minimum cost to get from the start node to each node.
+
+{{djikstra6.png}}
+
+### Java
+Implementation of Dijkstra in Java using a [[priority queue|Priority Queue]].
 
 [[[[
 class node implements Comparable<node>{

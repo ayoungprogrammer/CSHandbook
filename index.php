@@ -44,6 +44,9 @@ config([
     on('GET','/donate', function () {
         render("donate",[],false);
     });
+    on('GET','/about', function () {
+        render("about",[],false);
+    });
 
 
     //EDIT and SUBMIT is for stage

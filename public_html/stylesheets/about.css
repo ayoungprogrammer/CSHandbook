@@ -43,6 +43,9 @@
         background: url('../img/icon_algorithms.png');
     }
 
+#about{
+    margin-top:60px;
+}
 
 .info{
     margin-top:20px;

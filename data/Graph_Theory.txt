@@ -4,9 +4,9 @@ For more advanced topics go to [[advanced graph theory|Advanced Graph Theory]].
 
 Graphs are a set of objects where some pairs of objects  **nodes** are usually connected by links called **edges**. The nodes here can be seen numbered from 1 to 6. There are edges connecting these various nodes.
 
-A **undirected** graph is a graph where the edge from A to B is the same as the edge from B to A
-
 {{graph.png}}
+
+A **undirected** graph is a graph where the edge from A to B is the same as the edge from B to A
 
 A **directed** or **bidirectional** graph is a graph where edges have direction meaning if there is an edge from A to B then there may not be an edge from B to A. 
 
@@ -53,8 +53,6 @@ Node | edges
 5 | 1 2 4
 6 |4
 
-
-
 ##Tree
 
 A tree is a special graph with n-1 edges with n nodes. It has the special property that there will be only one path from one node to another node. Trees follow a recursive structure such that each child of a tree is a tree as well.
@@ -78,11 +76,9 @@ Spanning tree algorithms are essential in networking to ensure no loops occur wh
 |[[Kruskal]] | Using connected components| O(n log n) | O(n^^2^^)
 
 
-##Shortest Path
+## Shortest Path
 
 The shortest path is defined as a path from one node to another while trying to minimize a certain property (least number of nodes, smallest total weight). However, shortest paths may have negative weights leads to cycles. 
-
-
 
 ###Algorithms
 
@@ -96,7 +92,15 @@ The shortest path is defined as a path from one node to another while trying to 
 
 ##[[Cycle detection]]
 
-A cycle occurs in a graph when a duplicate node is encountered when traversing a tree using a [[depth first search|Depth First Search]]. Note that [[trees|Trees]] cannot contain cycles.
+A cycle occurs in a graph when a duplicate node is encountered when traversing a tree using a [[depth first search|Depth First Search]]. 
+
+An **undirected graph** where the number of edges if greater than or equal to the number of nodes will always have cycles.
+
+{{cycle.png}}
+
+{{cycle2.png}}
+
+Note that [[trees|Trees]] cannot contain cycles.
 
 ## [[Topological Sorting]]
 
@@ -111,11 +115,24 @@ For example topological orders could be:
 
 But (B, A, C, F, D, E, G) is not a topological ordering because D is an ancestor of F and it comes after F.
 
+## Strongly Connected
+
+A graph is strongly connected if all nodes in the graph follows the conditions:
+
+* There exists a path from that node to every other node
+* All other nodes can visit that node.
+
+In other words, all nodes in a strongly connected graph can visit each other.
+
+{{strongconnected.png}}
+
+To determine if a graph is strongly connected, we first pick a node and check that we can reach all nodes from it and this checks the first property. To check the second property, we can reverse all the edges of a node (A->B becomes B->A) and then check again that we can reach all nodes from the same node.
+
+
 ##[[Connected Components]]
 
 A connected component is a subgraph where all the vertices in the subgraph connect to each other. Finding the number of distinct connected components can be done using a [[breadth first search|Breadth First Search]] or a [[depth first search|Depth First Search]]. 
 
 ###[[Strongly Connected Components]]
 
-A strongly connected component is a connected component but has the property that each vertex can visit any other vertex in the strongly connected component from any path.  This can be done using a [[breath first search|Breath First Search]].
-
+A strongly connected component is a connected component but has the property that each vertex can visit any other vertex in the strongly connected component from any path. 

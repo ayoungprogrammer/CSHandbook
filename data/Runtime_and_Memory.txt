@@ -4,16 +4,39 @@ Why is it that computers are a lot better at humans at one thing but humans are 
 
 |Brain|Computer
 -|-|-
-Memory|2.5 petabytes (3 million hours of tv shows)|16GB RAM
-Processing|
+Memory|2.5 petabytes (approx. 340 years of TV shows)|16GB RAM
+Processing| 60Hz | 2.7GHz Quad Core (1,000,000,000 times faster than humans)
+
+Brains have trillions of connections between neurons and the estimated storage capacity is about 2.5 petabytes. That is approximately 340 years of TV shows that could watch! Computers on the other hand, have much less memory than human brains. Standard computers have maybe 8GB of RAM and higher end machines may have 16-32GB. We use RAM (flash memory) instead of hard disk memory because it is much faster. Think of RAM as grabbing something in another room whereas disk memory is driving 20 min away to get something. However, human brains are a lot slower compared to computers.
+
+Human processing is also a lot slower than humans. Machines can add two very large numbers much faster than we can. Computer speeds can scale easily by adding more processors when parallelizing tasks, whereas humans only have 1 consciousness and we are unable to parallelize tasks.
 
 ## Limits
 
 There are many different methods of implementing different things but most of the time we care most about implementations that are the fastest and use the least amount of memory. Let's go through some basic benchmarks about computers that you should know. Adding two numbers takes a nanosecond (1 billionth of a second) for an average computer to process. For practical purposes, we'll assume that the average computer program can hold up to 1GB or RAM or about 250 million integers. We use RAM because it is flash memory and read/write is super fast in comparison to disk read/writes. 
 
+Memory| Operations (per seconds)
+-|--
+1 GB (250,000,000 ints) | 1,000,000,000 operations
+
 ## Big O Notation
 
 When we compare how efficient algorithms or data structures are to another we use something called Big O notation to describe it. Usually every algorithm and data structure will depend on some inputs and the time it takes to compute something or the storage size needed will depend on that input. The Big O notation takes the largest factor of an input to compare computation times / memory usage. When we take the largest factor, we ignore smaller factors and constants because they do not matter at very large values. 
+
+Here is a list of common Big O notation based on complexity:
+
+Big O | Limit of N for 1 second
+-|-
+O(1) *Constant Time* | runtime independent of N
+O(log N) *Sublinear time* | a very big number
+O(N) *Linear Time* | 1,000,000,000
+O(N log N) | 10,000
+O(N^^2^^) *Quadractic Time* | 1000
+O(N^^3^^) *Cubic Time* | 100
+O(2^^N^^) *Exponential Time* | 30
+O(N!) *Exponential Time* | 10
+
+## Runtime Analysis
 
 For example we want to store an array of N integers. We will need an array of size of N. We say that it takes O(N) memory. If we wanted to go through this array of N integers and find the greatest element, we keep a current max value and go through the array and if we saw a value greater than the max value we would set the new max value to that. 
 
@@ -29,13 +52,3 @@ for(int i=1;i<array.length;i++){
 ]]]]
 
 In addition to the array we store a new variable called maxVal. But this is only 1 number so it uses O(1) more memory. When we go through the array of N element it will take N steps so it will take O(N) steps.
-
-Here is a list of common Big O notation based on complexity:
-
-* O(1)
-* O(log N)
-* O(N)
-* O(N log N)
-* O(N^^2^^)
-* O(2^^N^^)
-* O(N!)

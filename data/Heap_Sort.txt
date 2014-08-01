@@ -12,7 +12,7 @@ Heap sort is a sort that inserts all the element in an array into a min heap and
 public void heapSort(int[] arr){
     PriorityQueue<Integer> pq; //built in heap
     for(int i=0;i<arr.length;i++){
-       pq.push(arr[i];
+       pq.push(arr[i]);
     }
     for(int i=0;i<arr.length;i++){
        arr[i] = pq.pop(i);

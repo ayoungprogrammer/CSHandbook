@@ -3,7 +3,7 @@
         <div><a href="./"><div id="logo"></div><div id="logoHover"></div></a></div>
         <nav>
             <ul>
-                <li><a href="./">Algorithms</a>
+                <li><a href="./">Topics</a>
                     <div>
                         <ul>
                             <?php 
@@ -19,7 +19,7 @@
                     </div>
                 </li>
                 <li><a href="./donate">Donate</a></li>
-                <li><a href="./">About</a></li>
+                <li><a href="./about">About</a></li>
             </ul>
             <a id="pull" href="#">MENU</a>
         </nav>

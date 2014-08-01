@@ -8,6 +8,16 @@ Binary search is a type of search that is able to find an object in a sorted lis
 
 {{binarysearch.png}}
 
+## [[Ternary Search]]
+
+Ternary search is a type of search that finds the maximum value of a increasing or decreasing function by breaking it into 3 parts.
+
+{{ternarysearch.png}}
+
+{{ternarysearch3.png}}
+
+{{ternarysearch7.png}}
+
 ## [[Depth First Search]]
 
 Depth first search or DFS is a method of search that goes as far as possible before backtracking. DFS is implemented using a [[stack|Stack]] and most of the time it uses an function stack for recursion.

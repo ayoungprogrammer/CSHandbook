@@ -187,11 +187,11 @@ Find the number of ways to place N queens on a NxN board without any of them att
 
 {{nqueen.png}}
 
-First we need to be able to encode a solution. There must be only one queen in each row, each column, each positive diagonal and each negative diagonal. We need a way to encode each row, column and diagonal to make it easy to check that they are all unique
-
-If we guarantee that all rows are unique and we have all columns filled, then we can assume that all the columns are unique as well. We can encode it by using the rows.
+First we need to be able to encode a solution. There must be only one queen in each row, each column, each positive diagonal and each negative diagonal. We need a way to encode each row, column and diagonal to make it easy to check that they are all unique. 
 
 {{nqueen3.png}}
+
+If we guarantee that all rows are unique and we have all columns filled, then we can guarantee that all the columns are unique as well.
 
 To encode a diagonal we can use a clever equation to represent the diagonal. We can notice that every positive diagonal has the same value with row+col.
 
@@ -216,6 +216,9 @@ Everything with the same d2 will be on the same diagonal. For example on a 6x6 b
 Now that we get can encode rows, columns, and diagonals, we can use it to make checking solutions more easy. We can keep sets that track with rows/columns/diagonals are currently filled and check our solution to make sure we do not have anything in the same row/column/diagonal.
  
 We can place a queen in each row and make sure that each column / diagonals is unfilled.
+
+### Formalization
+
 [[[[
 Let N be a NxN board where we want to place N queens 
 Let queen(n,columns,d1,d2) be a placing of N queens across a board

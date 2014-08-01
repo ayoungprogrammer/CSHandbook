@@ -152,6 +152,8 @@ Hash sets are very efficient in all three set operations if a good hashing algor
 ### [[Tree Set]]
 A tree set is a set which stores the values in a [[binary search tree|Binary Search Tree]]. To store elements in a tree set, they must be able to be sorted by a property. To insert an element, it is added to the binary tree. To delete an element, it is removed from the binary tree. To check for membership, we do a binary search for the element in the binary tree.
 
+{{bst.png}}
+
 The advantage of tree sets is that they are maintained in a sorted order. 
 
 
@@ -191,9 +193,17 @@ A **priority queue** is an abstract data type with two operations: push and pop.
 
 A priority queue is usually implemented as a heap because it is the most efficient because of its structure.
 
+{{pqueue.png}}
+
+{{pqueuepop.png}}
+
+{{pqueuepush.png}}
+
 ### [[Heap]]
 
 Heaps are trees which have the property that a parent node must either be greater than all the elements in its left and right subtrees (a max heap) or less than all the elements in its left and right subtrees (a min heap). [[Priority queue's|Priority Queue]] are most efficiently implemented as heaps.
+
+{{maxheap.png}}
 
 
 | Operation       | Push | Pop |
