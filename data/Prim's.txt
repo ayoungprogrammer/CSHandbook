@@ -18,6 +18,8 @@ Prim's algorithm finds the minimum spanning tree using a greedy fashion. It work
 
 The closest node is the node with the lowest cost edge to the already connected nodes.
 
+### Example
+
 {{prim.png}}
 
 {{prim1.png}}
@@ -33,6 +35,8 @@ The closest node is the node with the lowest cost edge to the already connected 
 {{prim6.png}}
 
 {{prim7.png}}
+
+### Java Code
 
 In Java, we need to specify a comparison for the Priority Queue to order. We do this by implementing the Comparable class and overriding the compareTo method. 
 

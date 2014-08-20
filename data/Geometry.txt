@@ -4,6 +4,10 @@ A convex hull is the set of points which creates an outer polygon that encompass
 
 Let n be number of points in set and h be number of points on convex hull.
 
+{{convexhull.png}}
+
+{{convexhull2.png}}
+
  Algorithm | Desc | Time |Space
 -|-|-|-
 [[Gift wrapping]] | Simplest algorithm | O(nh) | O(n)
@@ -20,7 +24,7 @@ Area = 0.5 * (x_1*y_2 + x_2*y_3+ .... + x_n-1*y_n + x_n*y_1 - x_2*y_1 - x_3*y_2 
 
 ##Point Test
 
-To test if a point is in a polygon, we take a random outside of the polygon and draw a line from that point to the testing point. On the line we count the number of times it crosses a line segment from the polygon and if it is even, then the point is not in the polygon and if it is odd, then the point is inside the polygon.
+To test if a point is in a polygon, we take a random point outside of the polygon and draw a line from that point to the testing point. On the line we count the number of times it crosses a line segment from the polygon and if it is even, then the point is not in the polygon and if it is odd, then the point is inside the polygon.
 
 ## [[Line Sweeping]]
 
@@ -36,5 +40,15 @@ void lineSweep(points){
    }
    return sum;
 }
-
 ]]]]
+
+## [[Spacial Partitioning]]
+
+Suppose we have a map with multiple locations that are of interest and we wanted to determine the nearest location to our current position. We can search through all locations and compare the distance to our current location to find the closest one but what if there are millions of locations (eg Google Maps)? What if we wanted to find all the locations within a certain distance from our position? We can do the same thing as before and encounter the same problem. If we are in California and we want to know the closest locations its seems clear that we probably shouldn't search areas in France. We can split locations into different areas. For example all the locations in California would be inside California and everything inside France would be grouped together. If we see that our location is in California instead of checking all the locations we now check the locations grouped under California. However, we also need to check surrounding areas in case our location is close to the border of another region.
+
+This type of problem is called spatial partitioning. We need to be able to partition the space such that the points can be queried faster. 
+
+* [[Bins]]
+* [[K-d Trees]]
+* [[Quad Tree]]
+* [[BSP Tree]]

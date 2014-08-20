@@ -57,6 +57,8 @@ Node | edges
 
 A tree is a special graph with n-1 edges with n nodes. It has the special property that there will be only one path from one node to another node. Trees follow a recursive structure such that each child of a tree is a tree as well.
 
+{{treegraph.png}}
+
 A **subtree** is a child tree of a tree.
 
 Note that trees have two meanings in computer science. It can either refer to a [[tree data structure|Tree]] or it can refer to a tree in graph theory.

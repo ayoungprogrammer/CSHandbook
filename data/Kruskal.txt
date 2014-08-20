@@ -4,14 +4,33 @@ A [[minimum spanning tree|Minimum Spanning Tree]] is a tree in a graph that conn
 
 Kruskal's algorithm finds the [[minimum spanning tree|Minimum Spanning Tree]] using [[connected components|Connected Components]].
 
+If implemented efficiently using a priority queue to get the edges with minimum weight or a sorting the edges, the runtime is O(n log n).
+
+## Implementation
+
 1. Uniquely label each node
 2. Take the edge with the minimum weight
 3. If the edge connects nodes A and B with different labels, all nodes with label B will be labeled with A. Otherwise, throw the edge away
 4. Repeat 2-3 until all the nodes have the same label
 
-If implemented efficiently using a priority queue to get the edges with minimum weight or a sorting the edges, the runtime is O(n log n).
+### Example
 
-## Implementation
+{{kruskal.png}}
+
+{{kruskal2.png}}
+
+{{kruskal3.png}}
+
+{{kruskal4.png}}
+
+{{kruskal5.png}}
+
+{{kruskal6.png}}
+
+{{kruskal7.png}}
+
+### Code
+
 [[[[
 class edge implements Comparable<edge>{
 	int weight,source,dest;
