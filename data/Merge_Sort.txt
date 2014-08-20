@@ -1,0 +1,29 @@
+## Introduction
+
+Merge sort works by breaking down the sorting into smaller pieces. If we want to sort N elements, we can sort the first half of the elements, sort the second half and then merge the results together. To sort the first half, we can do the exact same thing of sorting the first quarter and the second quarter and merging the results.
+
+## Implementation
+
+Merge sort work be breaking down the problem into smaller and smaller parts and then combing those parts to solve the big problem. 
+
+We can keep splitting the list into half until there each piece has 1 element or no elements. We can then combine the results of each piece repeatedly until the entire list is sorted.
+
+Example:
+
+{{mergesort.png}}
+
+[[[[
+
+Let combine(arr1,arr2) combine two sorted arrays into one sorted array
+
+combine(arr1, arr2): { if arr1.length==0:   arr2
+                     { if arr2.length==0:   arr1
+                     { if arr1.first < arr2.first
+                           arr1.first+combine(arr1[1..arr1.length],arr2)
+                     { else: 
+                           arr2.first + combine(arr1[0..arr.length],arr2[1..length])
+
+Let sort(arr) sort an array
+Let middle be (0+arr.length)/2
+sort(arr) : combine(sort(arr[0..middle]) ,sort(arr[middle..arr.length])
+]]]]

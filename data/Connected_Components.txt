@@ -1,0 +1,72 @@
+## Introduction
+
+A connected component is a subgraph where all the vertices in the subgraph connect to each other. 
+
+Finding the number of distinct connected components can be done using a [[breadth first search|Breadth First Search]] or a [[depth first search|Depth First Search]].
+
+## Implementation
+
+1. Set each node's parent to itself
+2. Given an edge from node A to node B, if the parent of A is not the same as parent of B then set all nodes whose parent is B to parents of A
+3. Repeat for all edges
+
+### Example
+
+{{connectedcomponents.png}}
+
+We select a random edge from node 1 and node 2. We set the parent node of 2 to node 1.
+
+{{connectedcomponents2.png}}
+
+We select another random edge from node 5 to node 6.
+
+{{connectedcomponents3.png}}
+
+We pick another random edge and we set the parent to 5.
+
+{{connectedcomponents4.png}}
+
+We take another random edge and we set the parents to 7.
+
+{{connectedcomponents5.png}}
+
+We take another random edge and we have an interesting case, two connected components are to be connected. We take all the nodes whose parent is 1, and we set the new parent to 5.
+
+{{connectedcomponents6.png}}
+
+We take another random edge and set its parent to 1.
+
+{{connectedcomponents7.png}}
+
+We take the last edge and set the last node parent to 7.
+
+{{connectedcomponents8.png}}
+
+### Java Code
+[[[[
+public static int getParent(int x,int[] parent){
+	if(parent[x]==x)return x;
+	parent[x] = getParent(parent[x],parent);
+	return parent[x];
+}
+	
+public static void connected(int adjMatrix[][]){
+	int n = adjMatrix.length;
+	int[] parent = new int[n];
+	int i,j;
+	for(i=0;i<n;i++){
+		parent[i] = i;
+	}
+	for(i=0;i<n;i++){
+		for(j=0;j<n;j++){
+			if(adjMatrix[i][j]>0){
+				int pi = getParent(i,parent);
+				int pj = getParent(j,parent);
+				if(pi!=pj){
+					parent[pj] = pi;
+				}
+			}
+		}
+	}	
+}
+]]]]

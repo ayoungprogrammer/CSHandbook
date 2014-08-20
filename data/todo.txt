@@ -1,0 +1,28 @@
+## Sorts
+
+Quicksort
+Merge sort
+
+## Graph theory
+
+Touch up connected components
+Add more explaination to Bellman Ford and Floyd Warshall
+
+### Advanced Graph Theory
+Ford fulkerson
+
+## Binary search trees
+2-3 trees
+redblack tree
+avl tree
+bk tree
+
+## Pattern Matching
+everything
+
+## Geometry
+Line sweeping
+
+### Advanced geometry
+Grids -> grid, 2d tree, quadtree, bk trees
+
