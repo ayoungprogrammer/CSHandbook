@@ -20,7 +20,7 @@ The applications section will be about real world applications of the concept th
 
 ### Exercises
 
-The exercises section contains practice problems to test if you truly understand the concept. Many of these questions actually come from real interview questions. 
+The exercises section contains practice problems to test if you truly understand the concept. Many of these questions come from real interview questions. 
 
 ## Introductory Topics
 

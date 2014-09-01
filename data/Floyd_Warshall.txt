@@ -5,10 +5,40 @@ Floyd Warshall is a algorithm for finding the shortest distances between all pai
 Description | Time | Space | Detect cycles?
 ----------|----|------|-----|----------
 Computes shortest path between all pairs of nodes | O(n^^3^^) | O(n^^2^^) | Yes
+
+### Prerequisites
+* [[Shortest Path]]
+
 ## Implementation
 
-[[[[
+Floyd-Warshall uses a [[dynamic programming|Dynamic Programming]] approach to finding the shortest path between node A and node B. The shortest path between node A and node B is the shortest path from node A to node C plus the shortest path from node C to node B where node C is the node in between node A and node B that minimizes the total distance. 
 
+{{floydwarshall1.png}}
+
+However, the shortest path from node A to node C is the shortest path from node A to node D plus the shortest path from node D to node C where node D is some node between A and C that minimizes the total distance. As we can see, we have found a recursive definition. 
+
+{{floydwarshall.png}}
+
+### Formalization
+
+Recursion
+
+[[[[
+Given a directed graph with N nodes and edges between nodes:
+Let edge(i,j) be the weight of the edge from node i to node j in the graph
+Let shortestPath(i,j) be the shortest path from i to j
+
+Base Case:
+shortestPath(i,i) = 0
+shortestPath(i,j) = edge(i,j)
+
+Recursion:
+shortestPath(i,j) =  minmum of shortestPath(i,k) + shortestPath(k,j) for all unvisited nodes k
+]]]]
+
+### Code
+
+[[[[
 class edge{
 	int weight,source,dest;
 	public edge(int source,int dest,int weight){

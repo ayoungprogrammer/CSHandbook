@@ -2,7 +2,12 @@
 
 Bellman Ford is an algorithm that finds the shortest path between two nodes from start to end. The running time is O(n^^2^^) and is slower than [[Dijkstra's]] but it is able to find negative cycles. 
 
+### Prerequisites
+* [[Shortest Path]]
+
 ## Implementation
+
+
 
 [[[[
 class edge{

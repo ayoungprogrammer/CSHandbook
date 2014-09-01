@@ -10,6 +10,7 @@ Recursion can sometimes be very difficult to wrap your head around because when 
 
 * [[Intermediate Recursion]]
 * [[Backtracking]]
+* [[Dynamic Programming]]
 
 ## Number of paths
 

@@ -4,11 +4,13 @@ Quick Sort is another fast sorting algorithm that uses divide and conquer. It is
 
 In Quick Sort an element is selected as a "pivot". The list is then divided into two sublists: a list of elements less than (or equal to) the pivot and a list of elements greater than the pivot. Each sublist is sorted (conquered) and then appended together along with the origin pivot.
 
-In the best case (if the pivot that is chosen is exactly the middle element), then the runtime is nlogn. However, in the worst case, the runtime for Quick Sort is n<sup>2</sup>. Despite its worst case behaviour, quick sort is still popular and in widespread use. The average case behaviour is quite good and there are straightforward methods that can be used to improve the selection of the pivot.
+In the best case (if the pivot that is chosen is exactly the middle element), then the runtime is O(n log n). However, in the worst case, the runtime for Quick Sort is n^^2^^. Despite its worst case behaviour, quick sort is still popular and in widespread use. The average case behaviour is quite good and there are straightforward methods that can be used to improve the selection of the pivot.
 
 The sorting algorithms are implemented to sort integer arrays but can be adapted to sort arrays of any data structure that is comparable. 
 
 ## Implementation
+
+{{quicksort.png}}
 
 [[[[
 //sorts integers from smallest to greatest

@@ -13,13 +13,12 @@ Example:
 {{mergesort.png}}
 
 [[[[
-
 Let combine(arr1,arr2) combine two sorted arrays into one sorted array
 
 combine(arr1, arr2): { if arr1.length==0:   arr2
                      { if arr2.length==0:   arr1
                      { if arr1.first < arr2.first
-                           arr1.first+combine(arr1[1..arr1.length],arr2)
+                           arr1.first + combine(arr1[1..arr1.length],arr2)
                      { else: 
                            arr2.first + combine(arr1[0..arr.length],arr2[1..length])
 

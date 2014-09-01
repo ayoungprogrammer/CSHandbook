@@ -17,7 +17,7 @@ Indexes of a heap
 
 Example Heap:
 
-{{MaxHeap.png}}
+{{maxheap.png}}
 
 
 A heap has two operations: push and pop. Pushing an element into a heap adds it into the heap and the heap needs to ensure that the properties of the heap still hold. Popping removes an element from the top of the heap and the heap needs to ensure that the properties of the heap still hold.
