@@ -11,6 +11,9 @@ Like [[recursion|Recursion]], dynamic programming requires two things:
 
 * [[Advanced Recursion]]
 
+### Next
+* [[Advanced Dynamic Programming]]
+
 ## Fibonacci Sequence
 
 The Fibonacci sequence is determined by f(n) = f(n-1)+f(n-2) where f(0) = 1 and f(1) = 1. 
@@ -39,8 +42,6 @@ f(5) = f(4) + f(3) = 8
 ### Formalization
 Recursion
 [[[[{lang-html}
-Fibonacci sequence
-
 Let f(n) be the nth Fibonacci number
 
 Base case:
@@ -48,6 +49,15 @@ fib(0) = 1, fib(1) = 1
 
 Subproblem:
 fib(n) = fib(n-1) + fib(n-2)
+
+Example:
+f(5) 
+= f(4) + f(3) 
+= f(3) + f(2) + f(2) + f(1) 
+= f(2) + f(1) + f(1) + f(0) + f(1) + f(0) + f(1) 
+= f(1) + f(0) + f(1) + f(1) + f(0) + f(1) + f(0) + f(1) 
+= 1 + 1 + 1 + 1 + 1 + 1 + 1
+= 8
 ]]]]
 
 Dynamic Programming
@@ -109,7 +119,7 @@ Let's define the problem more formally: Given a list of bills each with a positi
 
 The base case for 0 dollars is very simple. There are 0 bills to make 0 dollars.
 
-Lets try to simply this problem. Assume we only have one bill worth d dollars. The minimum bills to make C dollars is the minimum number of bills to make (C - d) bills and add 1 for the bill d that we add to it. For example, we want to make 10 dollars and we only have 2 dollar bills. The minimum bills required to make 10 dollars is the minimum number of bills required to make 8 dollars plus one more 2 dollar bill. To find the minimum number of bills required to make 8 dollars, we can find the minimum number of bills to make 6 dollars plus one more 2 dollar bill. As you can see it is the same as before and it is a recursive function!
+Lets try to simply this problem. Assume we only have one bill worth d dollars. If we have C dollars and we want to use the bill, then we will have C-d dollars left. So the minimum bills to make C dollars is the minimum number of bills to make (C - d) bills plus the 1 for the bill we used. For example, we want to make 10 dollars and we only have 2 dollar bills. If we use a 2 dollar bill, then the minimum bills required to make 10 dollars is the minimum number of bills required to make 8 dollars plus that 2 dollar bill. To find the minimum number of bills required to make 8 dollars, we can find the minimum number of bills to make 6 dollars plus one more 2 dollar bill. As you can see it is the same as before and it is a recursive function!
 
 Recursion
 [[[[
@@ -137,9 +147,10 @@ bills(10)
 = 5
 ]]]]
 
-Dynamic Programming Implementation
+We can implement this using dynamic programming but it will not give us much benefit since the recursion has no recalculations.
 [[[[
 bills[0] = 0
+
 for c from 1 to C
      if c-d >= 0 and bills[c-d] is not impossible
          bills[c] = bills[c-d] + 1
@@ -163,7 +174,7 @@ bills[9] = impossible
 bills[10] = 5
 ]]]]
 
-Now let's consider the problem with multiple bills of denominations d1,d2 .... dn and we want to make C dollars. The minimum number of bills to make C dollars is the minimum of bills to make (C-d1) bills plus 1 more d1 bill, (C-d2) plus one more d2 bill ... (C-dn) bills plus 1 more dn bill. For example: 
+Now let's consider the problem with multiple bills of denominations d1,d2 .... dn and we want to make C dollars. If we use a d1 bill, then we will have C-d1 dollars left and similarly if we use a d2 bill then we will have C-d2 dollars left. More generally, if we use a dn bill, then we will have C-dn dollars left. If we want to find the minimum bills to make C dollars we should try to use every bill and see which requires the minimum number of bills. So the minimum bills to make C dollars is the minimum of C - dn bills plus one more dn bill for all bills of denomination dn. For example, if we have $7 and we have bills $3,$4, and $5, the minimum number of bills to make $7 is the minimum of the minimum number of bills to make $4 plus one more $3 bill, minimum number of bills to make $3 plus one more $4 or the minimum number of bills to make $2 plus one more $5 bill. 
 
 [[[[
 Let denom be a list of denominations
@@ -250,94 +261,147 @@ The greedy approach will choose the rare painting and the necklace for a total o
 
 Let's first write a more formal definition of the problem:
 
-Given n objects, each associated with a positive weight and value, and a maximum total weight W that we can hold, what is the maximum value we can hold. In the zero/one knapsack problem, there is only one of each object so we either take it or leave it.
+Given unlimited quantities of N items, each associated with a positive weight and value, and a maximum total weight W that we can hold, what is the maximum value we can hold. 
 
-Let's write a more specific version of the problem: we want to find the maximum value that a bag with maximum weight W can hold of N objects with positive weight and value which we can either take or not take.
+Let's write a more specific version of the problem: we want to find the maximum value that a bag with weight capacity W can carry out of N items of positive values and weights.
 
 The base case for this is trivial. With zero weight, the maximum value you can have is 0.
 
-We now have to break this problem down into subproblems.
+Let's try simplifying the problem by using only one item with weight w and value v and a knapsack with maximum weight capacity W. Suppose we want to add the item into the knapsack then we have W-w capacity remaining and the value of the item. So the maximum value of knapsack with capacity W is the maximum value of W-w plus one more the item's value v. The maximum value of W-w is the maximum value of W-2*w + 2*v. As we can see, its the same subproblem as before and we have found a recursive relation.
 
-Now we want to find the maximum value for a bag of maximum weight W and assessing all N objects. Since we have already assessed up to N-1 objects we only need to assess the Nth object. For the Nth object we can either take it or leave it. 
+For example if we had an item with value $5 and weight 4kg and a knapsack with capacity 9kg. The maximum value that knapsack of 8kg can contain is the maximum value of a knapsack of 5kg plus $5 for the item we put in the bag and so forth.
 
-If we leave it, then it is the same as a bag of maximum weight W with N-1 objects because we are just ignoring the Nth object. 
+[[[[
+Let knapsack(W) be the maximum value of items that can fit into maximum capacity of W.
+Let w be the weight of one item and v be the value of one item.
 
-[[[[{lang-html} max value leaving = maximum value of N-1 objects with weight W
+Base Case:
+knapsack(0) = 0
+knapsack(W) = 0 if W < w
+
+Recursion:
+knapsack(W) = knapsack(W-w) + v
+
+Example:
+v = 5
+w = 4
+knapsack(9)
+= knapsack(5) + 5
+= knapsack(1) + 5 + 5
+= 10
 ]]]]
 
-If we take it, then we need to find the maximum value thats possible while making room for that object and add that to the value of the object. 
+Note that we are recomputing multiple values multiple times. We can avoid this by using dynamic programming and working up with our solution instead of backwards.
 
-[[[[{lang-html}max value taking = (maximum value of N-1 objects seen with weight W-weight of object N) + value of object N. 
+[[[[
+Let knapsack[W] be the maximum value with weight capacity W
+Let w be the weight of an item and v be the value of an item
+
+for k from 0 to w
+    knapsack[k] = 0
+
+for weight from 1 to W
+    knapsack[weight] = knapsack[weight-w]+v
+
+Example:
+W = 9
+w = 4
+v = 4
+
+knapsack[0] = 0     base case
+knapsack[1] = 0     base case
+knapsack[2] = 0     base case
+knapsack[3] = 0     base case
+knapsack[4] = 5      (knapsack[0]+5)
+knapsack[5] = 5     ^
+knapsack[6] = 5     ^
+knapsack[7] = 5     ^
+knapsack[8] = 10    (knapsack[4]+5)
+knapsack[9] = 10    ^
 ]]]]
 
-If we want the maximum value of assessing N objects and maximum weight W then we want the max of leaving the Nth object and taking the Nth object so:
+Now let's go back to the original problem. We have N items each of positive weight and value and we want to find the maximum value to be put into a knapsack of capacity W. 
+
+If no items are left to fit in our remaining capacity, then the maximum value must be $0. This is our base case.
+
+If we use an item, we will have capacity W-wi and the added value will be vi. We want to try all items to place into the knapsack so we try every single item and find the maximum value out of the items. So the maximum value of capacity W is the maximum value of W-wi plus the added value of vi for all items. To find the maximum value of capacity W-wi we can do the exact same thing by trying to place each item and finding the maximum value out of the items.
+
+For example we have a knapsack of capacity 10kg and necklaces worth $30 with weight 3kg, paintings worth $50 with weight 9kg and silver bars worth $60 with weight 7kg. If we choose a necklace, we will have 7kg capacity left with the added value of $30. If we choose a painting, we will have 1kg capacity left and added value of $50. If we choose a silver bar, we will have 3kg capacity left and added value of $60. With the remaining capacity, we can choose another item and do the exact same thing. 
+
+### Formalization
+
+[[[[
+Let knapsack(W) be the maximum value with maximum capacity W
+Let weights be an array of weights where wi is the weight of the ith item.
+Let values be an array of values where vi is the value of the ith item.
+
+knapsack(W) = 0 if wi > W for all items
+
+knapsack(W) = max(knapsack(W-wi) + vi for all items with wi <= W)
+]]]]
+
+[[[[
+Let knapsack[w] be the maximum value with maximum capacity W
+Let weights be an array of weights where wi is the weight of the ith item.
+Let values be an array of values where vi is the value of the ith item.
+
+for w from 0 to W
+    knapsack[w] = 0
+
+for w from 1 to W
+    maxVal = 0
+    for i in items
+        if w-wi >= 0
+            knapsack[w] = max(knapsack[w], knapsack[w-wi] + vi)
+
+Example:
+
+]]]]
+
+### Number of Paths
+
+{{recursion_grid.png}}
+
+We first examined the number of paths problem in [[advanced recursion|Advanced Recursion]]. However, now that we know how to use dynamic programming, we can see that the recursive solution was very inefficient because we were recomputing values many times. 
 
 [[[[{lang-html}
-max value = max( maximum value taking, maximum value leaving)
-max value = max( maximum value of N-1 objects with weight W, (maximum value of N-1 objects with weight W - weight of N) + value of N))
-]]]]
-
-Putting it all together we have:
-
-[[[[{lang-html}
-Let weight[i] be the weight of object i
-Let value[i] be the value of object i
-
-Let knapsack[i][j] be the maximum value that a knapsack of maximum weight j can hold with objects seen from 1 to i
+Let path(x,y) be the number of ways to get to the intersection at x and y
 
 Base case:
-knapsack[0][0] = 0
+paths(1,y) = 1
+paths(x,1) = 1
 
-Subproblem:
-knapsack[i][j] = max(knapsack[i-1][j-weight[i]], knapsack[i-1][j-1])
+Recurrence:
+paths(x,y) = paths(x-1,y) + paths(x,y-1)
+
+Example:
+paths(3,5)
+= paths(2,5) + paths(3,4)
+= paths(1,5) + paths(2,4) + paths(2,4) + paths(3,3)
+= 1 + paths(1,4) + paths(2,3) + paths(1,4) + paths(2,3) + paths(2,3) + paths(3,2)
+= 1 + 1 + paths(1,3) + paths(2,2) + 1 + paths(1,3) + paths(2,2) + paths(1,3) + paths(2,2) + paths(2,2) + paths(3,1)
+= 1 + 1 + 1 + paths(1,2) + paths(2,1) + 1 + 1 + path(1,2) + paths(2,1) + 1 + paths(1,2) + paths(2,1) + ....
+= 15
 ]]]]
 
-## [[Longest Common Subsequence]]
+Instead of recomputing multiple values, we can build our solution upwards starting from 1,1
 
-A subsequence is a subset of the original sequence that is in the same order. For example in the string "abcdefghi", "aeg" is a subsequence but "eaq" is not because it is not in order.
+[[[[
+Let paths[x][y] be the number of ways to get from (1,1) to (x,y). 
 
-The longest common subsequence between two strings A and B is the longest subsequence in A that is also in B.
+paths[1][1] = 1
 
-For example given A="xyaaaabcdeg", B="bcaaaaefgxy" the longest common subsequence is "aaaaeg"
+for x from 1 to N
+    for y from 1 to M
+        paths[x][y] = paths[x-1][y] + paths[x][y-1]
 
-[[[[{lang-html}
-xyaaaabcde_g
-bcaaaa___efgxy
-]]]]
+Example:
+N = 3
+M = 5
 
-If we try to use greedy we will see it doesn't work. For example if we use try to take as much as B as we can, we see that we will get BCEG or if we try to take as much as A we get XY. 
-
-Let first write a formal definition of the problem, given two strings A and B each with lengths N and M respectively we want to find the longest common subsequence between them.
-
-**[Note to make reading easier I have used short forms for substring and index. For example A[3] means the 3rd character of A and A[1..4] means the substring of A from the first character to the fourth character inclusive. A[0] represents the null substring of A]**
-
-The base is simple. The LCS of A[1..x] (where x is from 1 to N) and B[0] = 0. The LCS of B[1..x] and A[0] = 0.
-
-We need to break this problem into subproblems. 
-
-If A[N] = B[M] and then the new LCS is the LCS of A[1..N-1] and B[1..M-1]. Note that if two strings have the same character at the end of their string it has to be part of the LCS. Try to prove this to yourself.
-
-[[[[{lang-html}
-LCS of matched = (LCS of A from 1 to N-1, B from 1 to M-1) + A[N]
-]]]]
-
-If A[N] != B[M] then we try to match A[N] with B[M-1] or A[N-1] with B[M]. Thus we take the LCS of A[1..N-1] and B[1..M] and the LCS of A[1..N] and B[1..M-1].
-
-[[[[{lang-html}
-LCS of not matched = max ( (LCS of A[1..N], B[1..M-1]) , (LCS of A[1..N-1],B[1..M]))
-]]]]
-
-Putting it all together we have:
-[[[[{lang-html}
-Let LCS[i][j] be the length of longest common subsequence of A[1..i] and B[1..j] where 0< i ≤ n and 0 < j ≤ m.
-
-Base case:
-LCS[i][0] = 0 where 0< i ≤ n
-LCS[0][j] = 0 where 0< j ≤ m
-
-Subproblem:
-if A[i] == B[j], LCS[i][j] = LCS[i-1][j-1]+1 where 0< i ≤ n and 0 < j ≤ m
-if A[i] != B[j], LCS[i][j] = max( LCS[i-1][j], LCS[i][j-1] ) where 0< i ≤ n and 0 < j ≤ m
+1 1 1 1  1
+1 2 3 4  5
+1 3 6 10 15
 ]]]]
 
 ## Exercises

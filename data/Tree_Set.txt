@@ -1,5 +1,5 @@
 ## Introduction
-A tree set is a set which stores the values in a [[binary tree|Binary Tree]]. To store elements in a tree set, they must be able to be sorted by a property. To insert an element, it is added to the binary tree. To delete an element, it is removed from the binary tree. To check for membership, we do a binary search for the element in the binary tree.
+A tree set is a set which stores the values in a [[binary search tree|Binary Search Tree]]. To store elements in a tree set, they must be able to be sorted by a property. To insert an element, it is added to the binary tree. To delete an element, it is removed from the binary tree. To check for membership, we do a binary search for the element in the binary tree.
 
 The advantage of tree sets is that they are maintained in a sorted order. 
 
