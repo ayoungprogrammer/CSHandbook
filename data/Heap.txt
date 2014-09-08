@@ -22,9 +22,9 @@ Example Heap:
 
 A heap has two operations: push and pop. Pushing an element into a heap adds it into the heap and the heap needs to ensure that the properties of the heap still hold. Popping removes an element from the top of the heap and the heap needs to ensure that the properties of the heap still hold.
 
- Operation | Push | Pop
+ Operation | Heapify | Resize | Push | Pop | 
 -----------|---------|--
-Time Complexity | O(log n) | O(log n)
+Time Complexity | O(n)| O(n) | O(log n) | O(log n)
 
 ### Prerequisites
 
@@ -46,6 +46,36 @@ public class Heap {
 		arr = new int[startSize];
 		size = 0;
 	}
+}
+]]]]
+
+### Heapify
+
+Heapify takes a random array of N elements and transforms it into a heap. The runtime of heapify is O(N).
+
+[[[[
+public void heapify(int arr[]){
+    this.arr = arr;
+    for(int i=0;i<Math.floor(arr.length/2.0);i++){
+        int idx = i;
+        while(idx<size){
+            int left = idx*2+1;
+            int right = idx*2+2;
+            if(left<size && arr[left]>arr[idx]){
+                int swap = arr[left];
+                arr[left] = arr[idx];
+                arr[idx] = swap;
+                idx = left;
+            }else if(right<size && arr[right]>arr[idx]){
+                int swap = arr[right];
+                arr[right]=arr[idx];
+                arr[idx] = swap;
+                idx = right;
+            }else {
+                break;
+            }
+        }
+    }
 }
 ]]]]
 

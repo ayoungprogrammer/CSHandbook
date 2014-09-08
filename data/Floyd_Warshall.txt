@@ -11,11 +11,11 @@ Computes shortest path between all pairs of nodes | O(n^^3^^) | O(n^^2^^) | Yes
 
 ## Implementation
 
-Floyd-Warshall uses a [[dynamic programming|Dynamic Programming]] approach to finding the shortest path between node A and node B. The shortest path between node A and node B is the shortest path from node A to node C plus the shortest path from node C to node B where node C is the node in between node A and node B that minimizes the total distance. 
+Floyd-Warshall uses a [[dynamic programming|Dynamic Programming]] approach to finding the shortest path between node A and node B. Every path from node A to node B can be rewritten as a path from A to some node in between plus the path from the node in between to node B. The shortest path from A to B, is the shortest total path of the shortest path from A to a node in between plus the shortest path from the node in between to node B.
 
 {{floydwarshall1.png}}
 
-However, the shortest path from node A to node C is the shortest path from node A to node D plus the shortest path from node D to node C where node D is some node between A and C that minimizes the total distance. As we can see, we have found a recursive definition. 
+
 
 {{floydwarshall.png}}
 
