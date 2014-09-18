@@ -8,182 +8,185 @@
 
 <url>
   <loc>http://www.thecshandbook.com/</loc>
-  <changefreq>never</changefreq>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Getting_Started</loc>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Data_Structures</loc>
-  <changefreq>never</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Sorting</loc>
-  <changefreq>never</changefreq>
-</url>
-<url>
-  <loc>http://www.thecshandbook.com/Geometry</loc>
-  <changefreq>never</changefreq>
-</url>
-<url>
-  <loc>http://www.thecshandbook.com/Graph_Theory</loc>
-  <changefreq>never</changefreq>
-</url>
-<url>
-  <loc>http://www.thecshandbook.com/Number_Theory</loc>
-  <changefreq>never</changefreq>
-</url>
-<url>
-  <loc>http://www.thecshandbook.com/Pattern_Matching</loc>
-  <changefreq>never</changefreq>
-</url>
-<url>
-  <loc>http://www.thecshandbook.com/Searches</loc>
-  <changefreq>never</changefreq>
-</url>
-<url>
-  <loc>http://www.thecshandbook.com/Dynamic_Programming</loc>
-  <changefreq>never</changefreq>
-</url>
-<url>
-  <loc>http://www.thecshandbook.com/Data_Structures&amp;=edit</loc>
-  <changefreq>never</changefreq>
-</url>
-<url>
-  <loc>http://www.thecshandbook.com/Advanced_Data_Structures</loc>
-  <changefreq>never</changefreq>
-</url>
-<url>
-  <loc>http://www.thecshandbook.com/Arrays</loc>
-  <changefreq>never</changefreq>
-</url>
-<url>
-  <loc>http://www.thecshandbook.com/Vector</loc>
-  <changefreq>never</changefreq>
-</url>
-<url>
-  <loc>http://www.thecshandbook.com/Linked_List</loc>
-  <changefreq>never</changefreq>
-</url>
-<url>
-  <loc>http://www.thecshandbook.com/Queue</loc>
-  <changefreq>never</changefreq>
-</url>
-<url>
-  <loc>http://www.thecshandbook.com/Stack</loc>
-  <changefreq>never</changefreq>
-</url>
-<url>
-  <loc>http://www.thecshandbook.com/Sets</loc>
-  <changefreq>never</changefreq>
-</url>
-<url>
-  <loc>http://www.thecshandbook.com/Priority_Queue</loc>
-  <changefreq>never</changefreq>
-</url>
-<url>
-  <loc>http://www.thecshandbook.com/Bubble_Sort</loc>
-  <changefreq>never</changefreq>
-</url>
-<url>
-  <loc>http://www.thecshandbook.com/Selection_Sort</loc>
-  <changefreq>never</changefreq>
-</url>
-<url>
-  <loc>http://www.thecshandbook.com/Insertion_Sort</loc>
-  <changefreq>never</changefreq>
-</url>
-<url>
-  <loc>http://www.thecshandbook.com/Quick_Sort</loc>
-  <changefreq>never</changefreq>
-</url>
-<url>
-  <loc>http://www.thecshandbook.com/Gift_wrapping</loc>
-  <changefreq>never</changefreq>
-</url>
-<url>
-  <loc>http://www.thecshandbook.com/Line_Sweeping</loc>
-  <changefreq>never</changefreq>
-</url>
-<url>
-  <loc>http://www.thecshandbook.com/Advanced_Graph_Theory</loc>
-  <changefreq>never</changefreq>
-</url>
-<url>
-  <loc>http://www.thecshandbook.com/Adjacency_Matrix</loc>
-  <changefreq>never</changefreq>
-</url>
-<url>
-  <loc>http://www.thecshandbook.com/Minimum_Spanning_Tree</loc>
-  <changefreq>never</changefreq>
-</url>
-<url>
-  <loc>http://www.thecshandbook.com/Prim's</loc>
-  <changefreq>never</changefreq>
-</url>
-<url>
-  <loc>http://www.thecshandbook.com/Kruskal</loc>
-  <changefreq>never</changefreq>
-</url>
-<url>
-  <loc>http://www.thecshandbook.com/Floyd_Warshall</loc>
-  <changefreq>never</changefreq>
-</url>
-<url>
-  <loc>http://www.thecshandbook.com/Bellman_Ford</loc>
-  <changefreq>never</changefreq>
-</url>
-<url>
-  <loc>http://www.thecshandbook.com/Dijkstra's</loc>
-  <changefreq>never</changefreq>
-</url>
-<url>
-  <loc>http://www.thecshandbook.com/Depth_First_Search</loc>
-  <changefreq>never</changefreq>
-</url>
-<url>
-  <loc>http://www.thecshandbook.com/Topological_Sorting</loc>
-  <changefreq>never</changefreq>
-</url>
-<url>
-  <loc>http://www.thecshandbook.com/Breadth_First_Search</loc>
-  <changefreq>never</changefreq>
-</url>
-<url>
-  <loc>http://www.thecshandbook.com/Breath_First_Search</loc>
-  <changefreq>never</changefreq>
-</url>
-<url>
-  <loc>http://www.thecshandbook.com/Pattern_Matching&amp;=edit</loc>
-  <changefreq>never</changefreq>
-</url>
-<url>
-  <loc>http://www.thecshandbook.com/Binary_Search</loc>
-  <changefreq>never</changefreq>
-</url>
-<url>
-  <loc>http://www.thecshandbook.com/Flood_Fill</loc>
-  <changefreq>never</changefreq>
-</url>
-<url>
-  <loc>http://www.thecshandbook.com/Backtracking</loc>
-  <changefreq>never</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Recursion</loc>
-  <changefreq>never</changefreq>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Searches</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Dynamic_Programming</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Graph_Theory</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/about</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Basics</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Runtime_and_Memory</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Advanced_Data_Structures</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Arrays</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Stack</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Vector</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Queue</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Linked_List</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Trees</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Sets</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Hash_Set</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Tree_Set</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Binary_Search_Tree</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Maps</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Hash_Map</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Tree_Map</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Priority_Queue</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Heap</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Bubble_Sort</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Selection_Sort</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Insertion_Sort</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Heap_Sort</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Merge_Sort</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Quick_Sort</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Bozo_Sort</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Permutation_Sort</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Miracle_Sort</loc>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Advanced_Recursion</loc>
-  <changefreq>never</changefreq>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Binary_Search</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Ternary_Search</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Depth_First_Search</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Breadth_First_Search</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Flood_Fill</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Backtracking</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Advanced_Dynamic_Programming</loc>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Coin_Problem</loc>
-  <changefreq>never</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Knapsack_Problem</loc>
-  <changefreq>never</changefreq>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Adjacency_Matrix</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Minimum_Spanning_Tree</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Prim's</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Kruskal</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Floyd_Warshall</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Bellman_Ford</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Dijkstra's</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Topological_Sorting</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Connected_Components</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/hash_sets</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/hash_set</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Line_Sweeping</loc>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Breadth_FIrst_Search</loc>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Longest_Common_Subsequence</loc>
-  <changefreq>never</changefreq>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Shortest_Path</loc>
 </url>
 </urlset>
