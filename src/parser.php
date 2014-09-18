@@ -36,7 +36,7 @@ function parse($str){
 	//^^n^^
 	$str = preg_replace('/\^\^([A-Za-z0-9\/]+?)\^\^/','<sup>$1</sup>',$str);
 	
-	//[[link | text]] => <ahref="./link">text</a>
+	//[[link | text]] => <a href="./link">text</a>
 	$str = preg_replace('/\[\[([A-Za-z\_\s\'\-]+?)\|([A-Za-z\_\s\'\-]+?)\]\]/','<a href="./$2" target="_blank">$1</a>',$str);
 
 	//[[link]]  => <a href="./link">link</a>
@@ -69,6 +69,11 @@ function getDesc($content,$title){
 	$endpos = strpos($content,'.',$pos);
 	if($endpos == FALSE)return $title;
 	return substr($content,$pos,$endpos-$pos);
+}
+
+//Generate meta tags
+function getTags($content,$title){
+	return $title.', data structures, algorithms';
 }
 
 ?>

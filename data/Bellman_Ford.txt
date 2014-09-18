@@ -1,13 +1,68 @@
 ## Introduction
 
-Bellman Ford is an algorithm that finds the shortest path between two nodes from start to end. The running time is O(n^^2^^) and is slower than [[Dijkstra's]] but it is able to find negative cycles. 
+Bellman Ford is an algorithm that finds the shortest path from one source node to every other node in the graph. The running time is O(n^^2^^) and is slower than [[Dijkstra's]] but it is able to find negative cycles. 
 
 ### Prerequisites
 * [[Shortest Path]]
 
 ## Implementation
 
+Bellman Ford can be done using [[backtracking|Backtracking]] to find the shortest path in a graph. We first start at the starting node with starting cost of 0 and 0 edges used. For each node thats connected to that node, we repeat and add to the cost of the node. 
 
+{{bellmanford.png}}
+
+We will do an example of the Bellman Ford algorithm on the above graph. At each node we have the node index and the current weight to reach that node. We start at node 0 with a weight of 0.
+ 
+{{bellmanford2.png}}
+
+From node 0, we can reach node 1 and node 3. At node 1, we have an accumulative weight of 3. At node , we have an accumulative weight of 5. 
+
+{{bellmanford3.png}}
+
+From node 1, we can reach node 2 and node 4 with respective accumulative weights of 10 and 5. 
+
+From node 3 we can reach node 4 with an accumulative weight of 9.
+
+{{bellmanford4.png}}
+
+From node 2, we can reach node 5 with an accumulative weight of 19.
+
+From node 4, we can reach node 5 with an accumulative weight of 11.
+
+From node 4, we can reach node 5 with an accumulative weight of 15.
+
+{{bellmanford5.png}}
+
+[[[[{lang-html}
+Let N be the number of nodes in the graph
+Let edges an adjacency list of the graph where:
+    edges[source] contains all edges of the graph where source is the source edge
+An edge is represented as an object where:
+    edge.weight is the weight of the edge
+    edge.target is the target node of the edge
+    edge.source is the source node of the edge
+Let start be the starting node
+Let shortestPath[target] be the shortest path from the source node to the target node
+
+Let bellmanFord(target,n,w) be the shortest path from the source node to the target node using n edges and cost of w.
+
+bellmanFord(target, n , w)
+
+Base Case:
+bellmanFord(target, N , w):
+    stop
+
+Recurrence:
+bellmanFord(source, n, w):
+    shortestPath[source] = min(shortestPath[source], w)
+    bellmanFord(edge.dest, n + 1, w + edge.weight) for edge in edges[source]
+
+Init:
+shortestPath = [0] * N
+bellmanFord(start,0,0)
+]]]]
+
+We can rewrite this solution using dynamic programming without recursion.
 
 [[[[
 class edge{

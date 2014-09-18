@@ -2,7 +2,8 @@
 <html>
 <head>
     <title><?php echo $title ?></title>
-    <meta name="Description" content="<?php echo $desc ?>">
+    <meta name="description" content="<?php echo $desc ?>">
+    <meta name="keywords" content="<?php echo $tags ?>">
     <link rel="icon" type="image/png" href="./public_html/img/favicon.png">
 
     <link type="text/css" rel="stylesheet" href="./public_html/stylesheets/header_footer.css">

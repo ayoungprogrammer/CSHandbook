@@ -1,12 +1,10 @@
 ## Introduction
 
-For more advanced topics go to [[advanced graph theory|Advanced Graph Theory]].
-
-Graphs are a set of objects where some pairs of objects  **nodes** are usually connected by links called **edges**. The nodes here can be seen numbered from 1 to 6. There are edges connecting these various nodes.
+Graphs are a set of objects where some pairs of objects  called **nodes** or **verticies** are usually connected by links called **edges**. The nodes here can be seen numbered from 1 to 6. There are edges connecting these various nodes.
 
 {{graph.png}}
 
-A **undirected** graph is a graph where the edge from A to B is the same as the edge from B to A
+A **undirected** graph is a graph where an edge from A to B is the same as the edge from B to A for all edges. The above graph is undirected.
 
 A **directed** or **bidirectional** graph is a graph where edges have direction meaning if there is an edge from A to B then there may not be an edge from B to A. 
 
@@ -55,7 +53,7 @@ Node | edges
 
 ##Tree
 
-A tree is a special graph with n-1 edges with n nodes. It has the special property that there will be only one path from one node to another node. Trees follow a recursive structure such that each child of a tree is a tree as well.
+A tree is a special graph with n-1 edges with n nodes. It has the special property that there will be only one path from one node to another node. 
 
 {{treegraph.png}}
 
@@ -134,6 +132,10 @@ To determine if a graph is strongly connected, we first pick a node and check th
 ##[[Connected Components]]
 
 A connected component is a subgraph where all the vertices in the subgraph connect to each other. Finding the number of distinct connected components can be done using a [[breadth first search|Breadth First Search]] or a [[depth first search|Depth First Search]]. 
+
+{{connectedcomponents.png}}
+
+{{connectedcomponents8.png}}
 
 ###[[Strongly Connected Components]]
 

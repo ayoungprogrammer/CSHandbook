@@ -79,7 +79,12 @@ config([
 			$content = $GLOBALS['db']->get_article($page);
 			$content = parse($content);
 			$desc = getDesc($content,$title);
-			render("list",['page'=>$page,'title'=>$title,'body'=>$content,'desc'=>$desc],false);
+			$tags = getTags($content,$title);
+			render(
+				"list",
+				['page'=>$page,'title'=>$title,'body'=>$content,'desc'=>$desc,'tags'=>$tags],
+				false
+			);
 		}else {
 			//Edit for stage
 			if($GLOBALS['cfg']['env']=='stage'){

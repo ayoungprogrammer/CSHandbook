@@ -237,7 +237,7 @@ bills[2] = impossible
 bills[3] = 1 (bills[0]+1)
 bills[4] = 1 (bills[0]+1)
 bills[5] = 1 (bills[0]+1)
-bills[6] = impossible
+bills[6] = 2 (bills[3]+1)
 bills[7] = 2 (bills[3]+1 or bills[4]+1)
 ]]]]
 

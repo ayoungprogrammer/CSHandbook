@@ -1,6 +1,6 @@
 ## Introduction
 
-Dijkstra's is a greedy approach to find the shortest path. It has many useful applications in networking and it can be extended to a variety of problems.
+Dijkstra's is a greedy approach to find the shortest path in a graph with positive weights. It has many useful applications in networking and it can be extended to a variety of problems.
 
 Dijkstra works by beginning at the starting node repeatedly picking the next closest node of those already visited.
 

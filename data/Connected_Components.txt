@@ -7,7 +7,7 @@ Finding the number of distinct connected components can be done using a [[breadt
 ## Implementation
 
 1. Set each node's parent to itself
-2. Given an edge from node A to node B, if the parent of A is not the same as parent of B then set all nodes whose parent is B to parents of A
+2. Pick an unused edge in the graph that is from node A to node B, if the parent of A is not the same as parent of B then set all nodes whose parent is B to parents of A
 3. Repeat for all edges
 
 ### Example
