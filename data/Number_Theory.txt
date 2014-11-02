@@ -17,3 +17,7 @@ public int gcd(int p,int q){
      return gcd(q,  p % q);
 }
 ]]]]
+
+## Exercises
+
+1. Given two numbers X and Y, how do you divide X by Y without using division?

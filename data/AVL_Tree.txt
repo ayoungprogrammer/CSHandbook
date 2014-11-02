@@ -1,0 +1,3 @@
+## Introduction
+
+An AVL tree is a balanced binary search tree where the left subtree and right subtree of each node differ in height by at most one. The definition is recursive as every subtree in an AVL tree is also a AVL tree.

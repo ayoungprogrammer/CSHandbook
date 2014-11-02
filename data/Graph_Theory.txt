@@ -1,5 +1,7 @@
 ## Introduction
 
+[[Advanced Graph Theory]]
+
 Graphs are a set of objects where some pairs of objects  called **nodes** or **verticies** are usually connected by links called **edges**. The nodes here can be seen numbered from 1 to 6. There are edges connecting these various nodes.
 
 {{graph.png}}
@@ -92,9 +94,9 @@ The shortest path is defined as a path from one node to another while trying to 
 
 ##[[Cycle detection]]
 
-A cycle occurs in a graph when a duplicate node is encountered when traversing a tree using a [[depth first search|Depth First Search]]. 
+A cycle occurs in a graph when a duplicate node is encountered when traversing a tree using a [[depth first search|Depth First Search]]. In other words, a cycle occurs when you can reach the same node again.
 
-An **undirected graph** where the number of edges if greater than or equal to the number of nodes will always have cycles.
+An **undirected graph** where the number of edges is greater than or equal to the number of nodes will always have cycles.
 
 {{cycle.png}}
 

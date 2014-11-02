@@ -12,17 +12,88 @@ Example:
 
 {{mergesort.png}}
 
-[[[[
-Let combine(arr1,arr2) combine two sorted arrays into one sorted array
+### Formalization
 
-combine(arr1, arr2): { if arr1.length==0:   arr2
-                     { if arr2.length==0:   arr1
-                     { if arr1.first < arr2.first
-                           arr1.first + combine(arr1[1..arr1.length],arr2)
-                     { else: 
-                           arr2.first + combine(arr1[0..arr.length],arr2[1..length])
+[[[[{lang-html}
+Let merge(arr1,arr2) combine two sorted arrays into one sorted array
+
+merge(arr1, arr2)= { arr2 if arr1 is empty
+                     { arr1 if arr2 is empty
+                     { arr1.first + merge(arr1[1..arr1.length],arr2) if arr1.first < arr2.first
+                     { arr2.first + merge(arr1[0..arr.length],arr2[1..length]) else
 
 Let sort(arr) sort an array
 Let middle be (0+arr.length)/2
-sort(arr) : combine(sort(arr[0..middle]) ,sort(arr[middle..arr.length])
+sort(arr) = merge(sort(arr[0..middle]) ,sort(arr[middle..arr.length])
 ]]]]
+
+### Code
+
+For our Java implementation, instead of returning a new array every time we merge two arrays, we can create a temporary array to store the merged results and then move it back.
+
+[[[[
+/**
+ * Merges two segments of the same array. The two segments should be adjacent.
+ * @param arr Array containing segments
+ * @param start1 Start index of first segment
+ * @param end1 End index of first segment
+ * @param start2 Start index of second segment
+ * @param end2 End index of second segment
+ */
+
+public static void merge(int arr[],int start1,int end1, int start2,int end2){
+    int arr2[] = new int[end2-start1+1];
+    int begin = start1;
+    int n = 0;
+    
+    //Pick smallest element one by one
+    while(start1 <= end1 && start2 <= end2){
+        if(arr[start1] <= arr[start2]){
+            arr2[n] = arr[start1];
+            start1++;
+        }else{
+            arr2[n] = arr[start2];
+            start2++;
+        }
+        n++;
+    }
+    //If first segment still has elements
+    while(start1 <= end1){
+        arr2[n] = arr[start1];
+        n++;
+        start1++;
+    }
+    //if second segment still has elements
+    while(start2 <= end2){
+        arr2[n] = arr[start2];
+        start2++;
+        n++;
+    }
+    //Copy merged array back
+    for(int i=0;i<n;i++){
+        arr[begin+i]=arr2[i];
+    }
+}
+/**
+ * Sorts an array using merge sort
+ * @param arr Array to be sorted
+ * @param start Index at beginning of array
+ * @param end Index at end of array
+ */
+public static void mergeSort(int arr[],int start,int end){
+    if(end-start<=0){
+        return;
+    }
+    int mid = (start+end)/2;
+    mergeSort(arr,start,mid);
+    mergeSort(arr,mid+1,end);
+    merge(arr,start,mid,mid+1,end);
+}
+
+public static void main(){
+    int arr[] = {5,7,2,6,8,5};
+    mergeSort(arr,0,arr.length-1);
+}
+]]]]
+
+

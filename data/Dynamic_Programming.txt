@@ -295,9 +295,9 @@ Note that we are recomputing multiple values multiple times. We can avoid this b
 
 [[[[
 Let knapsack[W] be the maximum value with weight capacity W
-Let w be the weight of an item and v be the value of an item
+Let w be the positive integer weight of the item and v be the value of an item
 
-for k from 0 to w
+for k from 0 to w-1
     knapsack[k] = 0
 
 for weight from 1 to W
@@ -312,7 +312,7 @@ knapsack[0] = 0     base case
 knapsack[1] = 0     base case
 knapsack[2] = 0     base case
 knapsack[3] = 0     base case
-knapsack[4] = 5      (knapsack[0]+5)
+knapsack[4] = 5     (knapsack[0]+5)
 knapsack[5] = 5     ^
 knapsack[6] = 5     ^
 knapsack[7] = 5     ^
@@ -358,7 +358,7 @@ Example:
 
 ]]]]
 
-### Number of Paths
+## Number of Paths
 
 {{recursion_grid.png}}
 

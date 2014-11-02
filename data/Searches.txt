@@ -14,6 +14,8 @@ Ternary search is a type of search that finds the maximum value of a increasing 
 
 {{ternarysearch.png}}
 
+{{ternarysearch2.png}}
+
 {{ternarysearch3.png}}
 
 {{ternarysearch7.png}}

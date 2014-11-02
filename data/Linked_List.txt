@@ -52,7 +52,7 @@ class LinkedList{
  
 ### Push
 
-Create a new node with the value given and add it to the head. We have to set the current head previous node to the new node and the new next next to the last node.
+Create a new node with the value given and add it to the end. We have to set the current head previous node to the new node and the new next next to the last node.
 
 {{linkedlistpush.png}}
 
@@ -154,3 +154,12 @@ public void deleteNext(Link node){
 ## Exercises
 
 1. Implement a doubly linked list.
+2. A game is player by always eliminating the kth player from the last elimination and played until one player is left. Given N players each assigned to a number, find the number of the last player.
+    
+    For example, you have 5 players (1,2,3,4,5) and the 3rd player is eliminated. 
+    * 1, 2, 3, 4, 5 
+    * 1, 2, 4, 5 (1, 2, 3 is eliminated)
+    * 2, 4, 5 (4, 5, 1 is eliminated)
+    * 2, 4 (2, 4, 5 is eliminated)
+    * 2 (2, 4, 2 is eliminated)
+    * Player 2 is the last one standing.

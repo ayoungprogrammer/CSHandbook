@@ -4,6 +4,11 @@
 
 * [[Graph Theory]]
 
+
+## Bipartite Graph
+
+A bipartite graph is a graph 
+
 ## Special Paths
 
 A path is a certain order of visiting objects. 
@@ -38,11 +43,13 @@ Some graphs may have nodes that have special properties.
 
 ### Root
 
-The node of a directed acyclic graph that has no ancestors is a root.
+A node in a directed acyclic graph that has no ancestors is a root.
+
+{{treeroot.png}}
 
 ### Center
 
-The center of a undirected tree is the node that minimizes the sum of the distance to every other node.  The center can be found be continuously stripping away leaf nodes (nodes with only one edge) until either 1 or 2 nodes remain. The longest path in a tree will contain the center. 
+The center of a undirected tree is the node that minimizes the sum of the distance to every other node.  The center can be found be continuously stripping away leaf nodes (nodes with only one edge) layer by layer until either 1 or 2 nodes remain. The longest path in a tree will contain the center. 
 
 ## Network Flow
 

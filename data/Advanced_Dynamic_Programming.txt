@@ -1,6 +1,10 @@
 ## Introduction
 
-Dynamic programming is very powerful and more efficient than recursion for problems that recompute multiple values. However sometimes it is difficult to find an efficient dynamic programming solution and we will examine 
+Dynamic programming is very powerful and more efficient than recursion for problems that recompute multiple values. However sometimes it is difficult to find an efficient dynamic programming solution and we will examine problems where we will need higher dimensions.
+
+### Prerequistes
+
+* [[Dynamic Programming]]
 
 ## [[Longest Common Subsequence]]
 

@@ -7,9 +7,9 @@ Why is it that computers are a lot better at humans at one thing but humans are 
 Memory|2.5 petabytes (approx. 340 years of TV shows)|16GB RAM
 Processing| 60Hz | 2.7GHz Quad Core (1,000,000,000 times faster than humans)
 
-Brains have trillions of connections between neurons and the estimated storage capacity is about 2.5 petabytes. That is approximately 340 years of TV shows that could watch! Computers on the other hand, have much less memory than human brains. Standard computers have maybe 8GB of RAM and higher end machines may have 16-32GB. We use RAM (flash memory) instead of hard disk memory because it is much faster. Think of RAM as grabbing something in another room whereas disk memory is driving 20 min away to get something. However, human brains are a lot slower compared to computers.
+Brains have trillions of connections between neurons and the estimated storage capacity is about 2.5 petabytes. That is approximately 340 years of TV shows that could watch! Computers on the other hand, have much less memory than human brains. Standard computers have maybe 8GB of RAM and higher end machines may have 16-32GB. We use RAM (flash memory) instead of hard disk memory because it is much faster. Think of RAM as grabbing something in another room whereas disk memory is driving 20 min away to get something. 
 
-Human processing is also a lot slower than humans. Machines can add two very large numbers much faster than we can. Computer speeds can scale easily by adding more processors when parallelizing tasks, whereas humans only have 1 consciousness and we are unable to parallelize tasks.
+However, human brains are a lot slower compared to computers. Machines can add two very large numbers much faster than we can. Computer speeds can scale easily by adding more processors when parallelizing tasks, whereas humans only have 1 consciousness and we are unable to parallelize tasks.
 
 ## Limits
 

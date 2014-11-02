@@ -57,5 +57,6 @@ void binarySearch(int ans,int minBound,int maxBound){
 
 1. Given a sorted array, find whether or not the number N exists
 2. Given a sorted array, find the the number of elements between the number A and number B inclusive.
-* Example: 1,2 4, 6, 8, 10, 16, 20. Given A=5 and B=15, the number of elements between A and B is 3 (6, 8, 10)
-3. Given two sorted arrays, find the range of overlapping elements.
+    Example: 1,2 4, 6, 8, 10, 16, 20. Given A=5 and B=15, the number of elements between A and B is 3 (6, 8, 10)
+3. Given two sorted arrays, find the number of duplicate elements.
+4. Given two decimal numbers A and B, how do you find A/B without using division?

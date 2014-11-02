@@ -135,13 +135,13 @@
     })
     listItems.children('h5').click(function() {
         $('html, body').animate({
-            scrollTop: algsHeight[$(this).parent().index()]-90
+            scrollTop: algsHeight[$(this).parent().index()]-60
         }, 1000);
     });
     subListItems.click(function() {
         console.log($(this).index());
         $('html, body').animate({
-            scrollTop: subAlgsHeight[$(this).index('#sideNav>ul>li>ul>li')]-90
+            scrollTop: subAlgsHeight[$(this).index('#sideNav>ul>li>ul>li')]-60
         }, 1000);
     });
 })();

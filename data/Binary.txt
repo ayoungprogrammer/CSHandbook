@@ -1,0 +1,7 @@
+## Introduction
+
+Computers don't use base 10 like us, they use binary numbers (base 2) to perform their operations. 
+
+## Exercises
+
+* Given a number, determine if it is a power of 2

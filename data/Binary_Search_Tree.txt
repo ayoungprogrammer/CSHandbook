@@ -1,5 +1,5 @@
 ## Introduction
-A binary search tree is a  [[binary tree|Binary Tree]] with special properties. The left children of a node will always be less than the node and the right children of a node will always be more than the node.
+A binary search tree is a  [[binary tree|Binary Tree]] with special properties. The left children of a node will always be less than the node and the right children of a node will always be more than the node. It has a recursive structure such that every subtree is also a binary search tree.
 
 {{bstcompare.png}}
 
@@ -15,9 +15,13 @@ A binary search tree is a  [[binary tree|Binary Tree]] with special properties. 
 
 ## Implementation
 
-Tree sets are implemented using a binary search tree. In the tree everything to the left of a node is smaller than that node and everything to the right of that node is greater than that node.
+In a binary search tree, everything to the left of a node is smaller than that node and everything to the right of that node is greater than that node. 
+
+{{bstcompare.png}}
 
 {{bst.png}}
+
+This implementation of a binary search will be unbalanced. For a balanced binary search tree, see [[AVL trees|AVL Tree]] and [[Red Black trees|Red Black Trees]].
 
 ### Class
 
@@ -262,6 +266,7 @@ public String toString(){
 }
 ]]]]
 
+
 ## Exercises
 
-1. 
+1. Write a function to determine if a binary tree is a binary search tree

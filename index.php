@@ -38,69 +38,95 @@ config([
 
 
 
-	on('GET','/', function () {
-	    render("main",[],false);
-	});
-    on('GET','/donate', function () {
-        render("donate",[],false);
-    });
-    on('GET','/about', function () {
-        render("about",[],false);
-    });
+on('GET','/', function () {
+    render("main",[],false);
+});
+on('GET','/donate', function () {
+    render("donate",[],false);
+});
+on('GET','/about', function () {
+    render("about",[],false);
+});
+
+on('GET','/exercises',function(){
+	$map = json_decode(file_get_contents('./data/breadcrumbs.txt'),true);
 
 
-    //EDIT and SUBMIT is for stage
-    if($GLOBALS['cfg']['env']=='stage'){
-		on('GET','/:page&=edit',function($page){
-			$title = preg_replace('/\_/',' ',$page);
+	$output = "";
 
-			if ($GLOBALS['db']->article_exists($page)){
-	            $content = $GLOBALS['db']->get_article($page);
-				
-				render("edit",['page'=>$page,'title'=>$title,'body'=>$content,'desc'=>$page],false);
-			}
-			else {
-				render("edit",['page'=>$page,'title'=>$title,'body'=>'','desc'=>$page],false);
-			}
-		});
-		on('POST','/:page&=submit',function($page){
-			$content = params('content');
-			$GLOBALS['db']->save_article($page,$content);
-			redirect('./'.$page);
-		});
+	foreach($map as $page => $path){
+		
+		if(!$GLOBALS['db']->article_exists($page)){
+			continue;
+		}
+
+		$contents = $GLOBALS['db']->get_article($page);
+		$contents = parse($contents);
+
+		$res = preg_match('/<section><h2>Exercises<\/h2>(.*)<\/section>/is',$contents,$matches);
+
+		if($res){
+			$output = $output.$matches[1];
+		}
+
 	}
 
+	render("list",['page'=>'Exercises','title'=>'Exercises','body'=>$output,'desc'=>'Exercises','tags'=>'Exercises'],false);
+});
 
-	//Get articles
-	on('GET','/:page',function($page){
+
+//EDIT and SUBMIT is for stage
+if($GLOBALS['cfg']['env']=='stage'){
+	on('GET','/:page&=edit',function($page){
 		$title = preg_replace('/\_/',' ',$page);
 
-		if($GLOBALS['db']->article_exists($page)){
-			$content = $GLOBALS['db']->get_article($page);
-			$content = parse($content);
-			$desc = getDesc($content,$title);
-			$tags = getTags($content,$title);
-			render(
-				"list",
-				['page'=>$page,'title'=>$title,'body'=>$content,'desc'=>$desc,'tags'=>$tags],
-				false
-			);
-		}else {
-			//Edit for stage
-			if($GLOBALS['cfg']['env']=='stage'){
-				redirect('./'.$page.'&=edit');
-			}else {
-				redirect('/');
-			}
+		if ($GLOBALS['db']->article_exists($page)){
+            $content = $GLOBALS['db']->get_article($page);
 			
+			render("edit",['page'=>$page,'title'=>$title,'body'=>$content,'desc'=>$page],false);
 		}
-	
+		else {
+			render("edit",['page'=>$page,'title'=>$title,'body'=>'','desc'=>$page],false);
+		}
 	});
+	on('POST','/:page&=submit',function($page){
+		$content = params('content');
+		$GLOBALS['db']->save_article($page,$content);
+		redirect('./'.$page);
+	});
+}
 
-	
 
-	
-	dispatch();
+//Get articles
+on('GET','/:page',function($page){
+	$title = preg_replace('/\_/',' ',$page);
+
+	if($GLOBALS['db']->article_exists($page)){
+		$content = $GLOBALS['db']->get_article($page);
+		$content = parse($content);
+		$desc = getDesc($content,$title);
+		$tags = getTags($content,$title);
+		render(
+			"list",
+			['page'=>$page,'title'=>$title,'body'=>$content,'desc'=>$desc,'tags'=>$tags],
+			false
+		);
+	}else {
+		//Edit for stage
+		if($GLOBALS['cfg']['env']=='stage'){
+			redirect('./'.$page.'&=edit');
+		}else {
+			redirect('/');
+		}
+		
+	}
+
+});
+
+
+
+
+dispatch();
 
 
 

@@ -304,3 +304,5 @@ queen(0,[3,0,2,3],[6,2,3,3],[3,5,2,0]) x-- reject
 ## Exercises
 
 1. Given a sequence of numbers, output all increasing subsequences
+2. Given a NxN chessboard with certain squares that can have no pieces placed, output the number of configurations that can be made from rooks without attacking each other.
+2. Given a sudoku grid, output a solution for the grid if it exists. Note: this question is popular for technical interviews.

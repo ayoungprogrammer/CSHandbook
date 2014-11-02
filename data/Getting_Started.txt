@@ -26,3 +26,5 @@ The exercises section contains practice problems to test if you truly understand
 
 * [[Basics]]
 * [[Runtime and Memory]]
+* [[Boolean Algebra]]
+* [[Logic]]

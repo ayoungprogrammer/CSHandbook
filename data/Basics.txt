@@ -182,7 +182,7 @@ We could copy and paste this more times but this get very tedious. Most programm
 A for loop structure is as follows:
 [[[[
 for( first exp; test exp; next exp){
-    do something
+    //do something
 }
 ]]]]
 
@@ -207,7 +207,7 @@ A while loop is similar to a for loop but simpler:
 
 [[[[
 while(test exp){
-    do something;
+    //do something
 }
 ]]]]
 
@@ -225,7 +225,7 @@ We also have a do while loop which is similar to a while loop but it runs at lea
 
 [[[[
 do{
-   do something;
+   //do something;
 }while(test expression);
 ]]]]
 

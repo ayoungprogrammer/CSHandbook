@@ -24,7 +24,9 @@ We can implement a queue most efficiently using a linked list because it has an 
 
 ## Exercises
 
-1. Given a list of letters representing instructions where the first instruction is, output what the final list should look like after N instructions are executed. 
+1. Given a list of letters representing instructions where the first instruction is executed, output what the final list should look like after N instructions are executed. 
+
+    First instruction:
     * A. Add B to the end of the list of instructions
     * B. Do nothing
     * C. Add two A's to the front of the list of instructions

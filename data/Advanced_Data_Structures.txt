@@ -1,6 +1,6 @@
 ## Introduction
 
-Advanced data structures are data structures are very specific in performing a single task and they usually require more time to implement.
+Advanced data structures are data structures that are very specific in performing a single task and they usually require more time to implement.
 
 ## [[Trees]]
 
@@ -23,6 +23,8 @@ A B-tree is a tree that keeps data sorted, insertions and deletions in O(log n) 
 ### [[Binary Indexed Tree]]
 
 ### [[AVL Tree]]
+
+An AVL tree is a self balancing [[binary tree|Binary Tree]].
 
 ### [[Red Black Tree]]
 

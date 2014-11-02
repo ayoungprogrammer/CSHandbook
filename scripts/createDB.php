@@ -6,7 +6,7 @@ $config = $cfg['db'];
 $user = $config['user'];
 $password = $config['password'];
 $db = $config['database'];
-$host = $config['host'];
+$host = $config['host']; 
 
 $mysqli = new mysqli($host,$user,$password);
 
@@ -29,3 +29,6 @@ $mysqli->query("CREATE TABLE articles (
     id varchar(100) NOT NULL PRIMARY KEY, 
     content varchar(65000) NOT NULL
     )");
+
+
+abasddsfasda
