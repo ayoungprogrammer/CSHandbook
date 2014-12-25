@@ -7,7 +7,7 @@
 
 ## Bipartite Graph
 
-A bipartite graph is a graph 
+A bipartite graph is a graph which can be partitioned into two sets such that no nodes in a set connect to another node in the same set.
 
 ## Special Paths
 

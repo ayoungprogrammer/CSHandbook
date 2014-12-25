@@ -1,5 +1,7 @@
 ## Introduction
 
+**Preqrequistes**: [[Recursion]]
+
 Merge sort works by breaking down the sorting into smaller pieces. If we want to sort N elements, we can sort the first half of the elements, sort the second half and then merge the results together. To sort the first half, we can do the exact same thing of sorting the first quarter and the second quarter and merging the results.
 
 ## Implementation

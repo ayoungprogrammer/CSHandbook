@@ -10,11 +10,11 @@ For example, a bottle should be able to hold water and allow us to drink from. T
 
 {{bottle.png}}
 
-Some implementations of abstract data types are better than others for implementing. For example plastic water bottles are very cheap whereas a thermos is more expensive but a thermos can hold hot water and keep it warm for a long period of time. When thinking of a implementation for an abstract data type we need to know what we need it for.
+Some implementations of abstract data types are better than others for different purposes. For example plastic water bottles are very cheap whereas a thermos is more expensive but a thermos can hold hot water and keep it warm for a long period of time. When thinking of a implementation for an abstract data type we need to know what we need it for.
 
 {{adt.png}}
 
-For more intermediate data structures, read the the [[advanced data structures|Advanced Data Structures]] page.
+For more intermediate data structures, read the [[advanced data structures|Advanced Data Structures]] page.
 
 ## [[Arrays]]
 
@@ -52,7 +52,7 @@ With an vector implementation, it can be implemented very efficiently.
 
 ### [[Vector]]
 
-Imagine you had a ???
+Imagine you had a parking garage with one floor of 100 parking spots. Cars 
 
 A **vector** is an array that can be dynamically resized. This allows the features of insertion, removal and deletion. Vectors are implemented as arrays and when more space is required, they are copied to a new array with twice the original size.
 
@@ -68,7 +68,7 @@ Time Complexity | O(n) | O(1)  | O(1) | O(1) | O(n)
 
 ## [[Queue]]
 
-Imagine you are standing in line for a restaurant. Whoever is first in line will be served and whoever is last in line will be served last. People can be served while more people join the line and the line may get very long because the time it takes to serve one person is long while more people join the queue. This line is also called a queue.
+Imagine you are standing in line for a restaurant. Whoever is first in line will be served and whoever is last in line will be served last. People can be served while more people join the line and the line may get very long because it takes a while to serve one person while more people join the queue. This line is also called a queue.
 
 {{queue.png}}
 
@@ -82,7 +82,7 @@ Queues are often used for buffer systems, for example a text message service. Th
 
 ### [[Linked List]] 
 
-Imagine you had some train cars that were linked together where each was labelled on the inside with a different letter. If you had to find a specific letter you would have to start at the first train car and look inside to check the letter and then walk into the next train car to check the letter and so forth until you found the train car you wanted. If you wanted to insert a train car somewhere all you would have to do it unlink the position where you wanted to insert it and then relink the new train car with the other cars. If you wanted to remove a train car all you would have to do is unlink that car from the other cars and then create a new link to the cars that were adjacent to it. This sort of structure is called a linked list.
+Imagine you had some train cars that were linked together where each was labelled on the inside with a letter. If you had to find a specific letter you would have to look inside the first train to check and then walk into the next train car to check the letter and so forth until you found the train car you wanted. If you wanted to insert a train car somewhere, all you would have to do it unlink the position where you wanted to insert it and then relink the new train car with the other cars. If you wanted to remove a train car all you would have to do is unlink that car from the other cars and then relink the cars that were adjacent to it. This sort of structure is called a linked list.
 
 A **pointer** is something that holds the memory location of another object.
 

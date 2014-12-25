@@ -1,5 +1,8 @@
 ## Introduction
 
+**Prerequisites**: [[Queue]]
+
+
 Heaps are data structures that are able to pop the maximum or minimum value or push a value very quickly. Heaps are implemented as trees which have the property that a parent node must either be greater than all the elements in its left and right subtrees (a max heap) or less than all the elements in its left and right subtrees (a min heap). [[Priority queue's|Priority Queue]] are most efficiently implemented as heaps. This guarantees that the maximum or minimum element is the root node.
 
 Heaps store their data level by level in a binary tree. This allows us to store heaps in an array. The root index is 0. For every node, the left index can be found by using the formula 2\*ind+1 and the right index can be found by using the formula 2\*ind + 2. The parent of a node can be found by integer division with (ind-1)/2.
@@ -25,10 +28,6 @@ A heap has two operations: push and pop. Pushing an element into a heap adds it 
  Operation | Heapify | Resize | Push | Pop | 
 -----------|---------|--
 Time Complexity | O(n)| O(n) | O(log n) | O(log n)
-
-### Prerequisites
-
-* [[Queue]]
 
 ## Implementation
 

@@ -1,5 +1,7 @@
 ## Introduction
 
+**Prerequisites**:  [[Sorting]], [[Minimum Spanning Tree]]
+
 A [[minimum spanning tree|Minimum Spanning Tree]] is a tree in a graph that connects all the nodes using the smallest cost total cost of edges. 
 
 Kruskal's algorithm finds the [[minimum spanning tree|Minimum Spanning Tree]] using [[connected components|Connected Components]].

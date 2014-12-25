@@ -1,5 +1,7 @@
 ## Introduction
 
+**Prerequisites**:  [[Shortest Path]], [[Priority Queue]], [[Greedy Algorithm]]
+
 Dijkstra's is a greedy approach to find the shortest path in a graph with positive weights. It has many useful applications in networking and it can be extended to a variety of problems.
 
 Dijkstra works by beginning at the starting node repeatedly picking the next closest node of those already visited.
@@ -9,12 +11,6 @@ If Dijkstra's is implemented using a priority queue, the run time is O(n log n).
 If a negative cycle exists within the graph, then the algorithm breaks as it will repeatedly try to take the negative edges. See [[Bellman Ford]] to find negative cycles in a graph. 
 
 A naive fix for negative cycles would be to offset all edges by the largest negative edge and then subtract it from the resulting total but this does not work. Consider an example where you have start node A and end node B. The first route from A->B has length 2 and the second route has lengths 1,1,-2. Clearly the second route has less cost. If we try to make the length positive by adding all costs by 2, we will have the first path of length 4 and the second path of lengths 3,3,0 and the first route becomes the smallest total cost which is wrong.
-
-### Prerequisites
-
-* [[Graph Theory]]
-* [[Priority Queue]]
-* [[Shortest Path]]
 
 ## Implementation
 

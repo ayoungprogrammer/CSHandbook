@@ -1,15 +1,12 @@
 ## Introduction
 
+**Prerequisites**: [[Depth First Search]], [[Breadth First Search]]
+
 Flood fill is a search that fills a grid from a start point to find the areas connected to the start point. For example the "bucket fill" in Photoshop or MS Paint uses flood fill to fill in the connecting areas with the same colour.
 
 Flood fill can be implemented using a BFS or DFS.
 
 {{floodfill.png}}
-
-### Prerequeistes
-
-* [[Depth First Search]]
-* [[Breadth FIrst Search]]
 
 ## General solution
 

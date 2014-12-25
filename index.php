@@ -12,6 +12,8 @@ $db = new DB($cfg['db']);
 function breadcrumbs($link){
 	$map = json_decode(file_get_contents('./data/breadcrumbs.txt'),true);
 	//print_r($map);
+	//if(!$map.contains($link))return;
+
 	$tok = strtok($map[$link],'/');
 	echo '<ul class="breadcrumbs">';
 	while($tok !== false){

@@ -1,6 +1,6 @@
 ## Introduction
 
-Backtracking is a search that find all possible solutions by enumerating on a partial solution. Backtracking can be done using DFS or BFS. In some cases DFS can be better than BFS and in some cases BFS can be better than DFS.
+Backtracking is a search that find all possible solutions by enumerating on a partial solution. Backtracking can be done using [[DFS|Depth First Search]] or [[BFS|Breadth First Search]]. Generally, DFS will be better than BFS because backtracking is used to enumerate a large amount of solution. Since BFS requires storing each "level" of solutions and DFS requires storing each "height" of the solution.
 
 Backtracking is similar to recursion, but instead of generating all the solutions, we will generate each solution one by one. In this way, we only need to store the current solution in memory whereas in normal recursion we need to store all the solutions into memory.
 

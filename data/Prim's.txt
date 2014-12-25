@@ -1,9 +1,6 @@
+**Prerequisites**:  [[Priority Queue]], [[Minimum Spanning Tree]]
+
 A [[minimum spanning tree|Minimum Spanning Tree]] is a tree in a graph that connects all the nodes using the smallest cost total cost of edges. 
-
-### Prerequisites
-
-* [[Priority Queue]]
-* [[Minimum Spanning Tree]]
 
 ## Implementation
 
@@ -83,13 +80,13 @@ public static int Prims(Vector<Vector<node>> adjList){
 }
 ]]]]
 
-### Applications
+## Applications
 
 In networking, if a cable company wanted to connect all the houses with the least amount of wiring, the minimum spanning tree can be found that finds the least total cost of wire. 
 
 Minimum spanning trees can also be used in generating mazes.
 
-### Exercises
+## Exercises
 
 1. Prove that Prim's algorithm works
 2. Extends Prim's to output all the edges used

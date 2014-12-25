@@ -1,13 +1,13 @@
 ## Introduction
 
+**Prerequisites**:  [[Shortest Path]], [[Dynamic Programming]]
+
 Floyd Warshall is a algorithm for finding the shortest distances between all pairs of nodes in a graph. Floyd Warshall can be used to find negative cycles in the graph. 
 
 Description | Time | Space | Detect cycles?
 ----------|----|------|-----|----------
 Computes shortest path between all pairs of nodes | O(n^^3^^) | O(n^^2^^) | Yes
 
-### Prerequisites
-* [[Shortest Path]]
 
 ## Implementation
 

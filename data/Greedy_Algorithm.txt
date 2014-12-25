@@ -1,6 +1,6 @@
 ## Introduction
 
-A greedy algorithm is an algorithm that always selects the optimal next step towards the solution based on some property. Greedy problems are generally straightforward and easy to solve once you determine what property to maximize. However the most difficult part is proving that greedy is the optimal solution for **all** cases.
+A greedy algorithm is an algorithm that always selects the optimal next step towards the solution based on some property. Greedy problems are generally straightforward and easy to solve once you determine what property to maximize. However the most difficult part is proving that greedy is the optimal solution for **all** cases. It is much easier to provide a counter example to a faulty solution than to prove that a solution works for all cases or even to determine if a greedy solution exists.
 
 ## Coin Problem
 
@@ -20,7 +20,7 @@ $5.33 - 2\*$2
 
 = 0
 
-The coin problem can only be solved greedily if the denominations fit nicely inside each other. Otherwise, the solution becomes more complicated.
+The coin problem can only be solved greedily if the denominations fit nicely inside each other. Otherwise, the solution becomes more complicated. (See [[Dynamic Programming]])
 
 [[[[
 int minCoins(int value){
@@ -97,7 +97,27 @@ Assume that we can reach the next stop with an almost empty tank and there's eno
 
 {{gasproblem.png}}
 
-Let's change the problem such that we are not constrained by real life limitations. Instead of paying for the gas as soon as its in our tank, we will pay for the gas as it is used. Also, instead of the gas mixing in the tank, we will be able to distinguish gas with different prices and be able to use different types of gas.
+Let's change the problem such that we are not constrained by real life limitations. Instead of paying for the gas as soon as its in our tank, we will pay for the gas as it is used. Also, instead of the gas mixing in the tank, we will be able to separate the gas by their price. 
+
+We can solve the problem using a greedy approach. As we travel from one stop to the next, we only use the cheapest fuel and pay for it as we go. Every time a gas station is reached, we "dump" out all the gas that is more expensive and then we will the gas tank to the top. We can do this because we *only* pay for gas when we use it so we do not lose anything.
+
+This approach works because when we "dump" the gas, it is equivalent to **not buying** the gas in the first place. We fill the tank with the most efficient gas and dump the rest that we don't need so it is the optimal way to solve the problem.
+
+We start with a full tank of 80L ($0) at 0km. 
+
+{{gasproblem1.png}}
+
+We drive 70km to the next gas station and we use 70L so we use 70L of $0 gas. We refill the tank at the pump and get 10L ($0) and 70L ($10).
+
+{{gasproblem2.png}}
+
+We drive 20km more to the next gas station using 20L. We use the cheapest gas which is 10L ($0) and 10L ($10). So far, the total cost of the trip is $10 from the 10L ($10) we used. In our tank we have 60L ($10) but the current pump is at $5. So we can dump all the gas and fill our tank with 80L ($5). 
+
+{{gasproblem3.png}}
+
+We drive 30km more to the next gas station using 30L. We use and pay for the 30L ($5). Since the pump sells gas higher than any remaining fuel, we refill the remainder of our tank (30L) with the more expensive gas. 
+
+{{gasproblem4.png}}
 
 ## Exercises
 

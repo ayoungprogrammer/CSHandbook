@@ -1,16 +1,10 @@
 ## Introduction
 
+**Prerequisites**: [[Recursion]]
+
+**Next**: [[Intermediate Recursion]], [[Backtracking]], [[Dynamic Programming]]
+
 Recursion can sometimes be very difficult to wrap your head around because when you try to go deeper, it only keeps getting deeper. It is sometimes hard to figure out the recurrence relation, but once you do, the problem becomes simple to solve.
-
-### Prerequisites
-
-* [[Recursion]]
-
-### Next Steps
-
-* [[Intermediate Recursion]]
-* [[Backtracking]]
-* [[Dynamic Programming]]
 
 ## Number of paths
 

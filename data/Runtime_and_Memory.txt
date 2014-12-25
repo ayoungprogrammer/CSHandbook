@@ -1,15 +1,15 @@
 ## Introduction
 
-Why is it that computers are a lot better at humans at one thing but humans are better than other things than computers? It's because computers are super fast at making calculation than computers but humans have much more "memory" than computers currently do. Computers can add two numbers together much more quickly than any human can. However, the human brain has about 100 billion neurons with 100 trillion connections between neurons. The neurons and connections allow us to store lots and lots of information in our brains and allows us to easily recognize patterns much better than computers. For example it is very easy for us to identify different objects around us (eg we can differentiate between an apple and an orange), but it is difficult for a computer to do this. 
+Computers are super fast at making calculations compared to humans, but humans have much more "memory" than computers currently do. For example, computers can add two 100-digit numbers together much more quickly than any human possibly can. However, the human brain can contain much more memory than humans.
+
+Brains have trillions of connections between neurons and the estimated storage capacity is about 2.5 petabytes. That is approximately 340 years of TV shows that you could watch! Computers on the other hand, have much less memory than human brains. Standard computers have around 8GB of RAM and some higher end machines may have 16-32GB. Although hard-disks can store terabytes of memory, we use RAM (flash memory) when analyzing computer memory because it is much faster. As an analogy, RAM can be thought of as grabbing an object in another room whereas disk memory is driving 20 min away to get that object. 
+
+The neurons and connections in our brains allow us to store an immense amount of information in our brains and allows us to easily recognize patterns much better than computers. For example it is very easy for us to identify different objects around us (e.g. we can easily differentiate between an apple and an orange), but it is difficult for a computer to do this for the countless number of objects in the world. However this is currently changing as more research is being done in "deep learning".
 
 |Brain|Computer
 -|-|-
 Memory|2.5 petabytes (approx. 340 years of TV shows)|16GB RAM
 Processing| 60Hz | 2.7GHz Quad Core (1,000,000,000 times faster than humans)
-
-Brains have trillions of connections between neurons and the estimated storage capacity is about 2.5 petabytes. That is approximately 340 years of TV shows that could watch! Computers on the other hand, have much less memory than human brains. Standard computers have maybe 8GB of RAM and higher end machines may have 16-32GB. We use RAM (flash memory) instead of hard disk memory because it is much faster. Think of RAM as grabbing something in another room whereas disk memory is driving 20 min away to get something. 
-
-However, human brains are a lot slower compared to computers. Machines can add two very large numbers much faster than we can. Computer speeds can scale easily by adding more processors when parallelizing tasks, whereas humans only have 1 consciousness and we are unable to parallelize tasks.
 
 ## Limits
 
@@ -17,38 +17,47 @@ There are many different methods of implementing different things but most of th
 
 Memory| Operations (per seconds)
 -|--
-1 GB (250,000,000 ints) | 1,000,000,000 operations
+1 GB (250,000,000 ints) | 100,000,000 operations
 
 ## Big O Notation
 
-When we compare how efficient algorithms or data structures are to another we use something called Big O notation to describe it. Usually every algorithm and data structure will depend on some inputs and the time it takes to compute something or the storage size needed will depend on that input. The Big O notation takes the largest factor of an input to compare computation times / memory usage. When we take the largest factor, we ignore smaller factors and constants because they do not matter at very large values. 
+When we compare how efficient algorithms or data structures are to another, we want to be able to describe them such that they can be quantified. We use something called Big O notation to do this. Many algorithms and data structures will have its time and space complexities depend on the size of the inputs. The Big O notation takes the largest factor of an input to compare computation times / memory usage. When we take the largest factor, we ignore smaller factors, coefficients and constants because they do not matter at very large values. For example: O(3n^^2^^ + 12n + 20) is simply O(n^^2^^) because it is the largest factor.
 
-Here is a list of common Big O notation based on complexity:
+Here is a list of common Big O notations based on complexity:
 
-Big O | Limit of N for 1 second
+Big O | Limit of N for 1 second (Standard processor)
 -|-
 O(1) *Constant Time* | runtime independent of N
 O(log N) *Sublinear time* | a very big number
-O(N) *Linear Time* | 1,000,000,000
-O(N log N) | 10,000
-O(N^^2^^) *Quadractic Time* | 1000
-O(N^^3^^) *Cubic Time* | 100
-O(2^^N^^) *Exponential Time* | 30
-O(N!) *Exponential Time* | 10
+O(N) *Linear Time* | 100,000,000
+O(N log N) | 5,000,000
+O(N^^2^^) *Quadractic Time* | 10000
+O(N^^3^^) *Cubic Time* | 450
+O(2^^N^^) *Exponential Time* | 27
+O(N!) *Factorial Time* | 11
+
+Keep in mind that in a couple of years as technology improves, this chart will be outdated.
 
 ## Runtime Analysis
 
-For example we want to store an array of N integers. We will need an array of size of N. We say that it takes O(N) memory. If we wanted to go through this array of N integers and find the greatest element, we keep a current max value and go through the array and if we saw a value greater than the max value we would set the new max value to that. 
+Let us examine a function that takes in an array of size N and returns the maximum element. In a program we are usually concerned with two complexities: memory and time. 
 
-Example code:
+Code:
 
 [[[[
-int maxVal = array[0];
-for(int i=1;i<array.length;i++){
-   if(maxVal < array[i]){
-       maxVal = array[i];
-   }
+int findMax(int[] array){
+  int maxVal = array[0]; //O(1) memory to store max element, O(1) time for assignment
+  for(int i=1;i<array.length;i++){ //O(n) loop runtime
+      if(maxVal < array[i]){ //O(1) to compare runtime
+         maxVal = array[i]; //O(1) to assign new value runtime
+     }
+  }
 }
 ]]]]
 
-In addition to the array we store a new variable called maxVal. But this is only 1 number so it uses O(1) more memory. When we go through the array of N element it will take N steps so it will take O(N) steps.
+Memory: The array takes O(N) memory and storing the max value is O(1) more memory. but usually when analyzing programs, we ignore the input memory sizes and take into account additional memory that is required to produce the output. So the memory footprint of the function is O(1).
+
+Time: The first assignment of maxVal takes O(1). The loop runs N-1 times and of each of those N-1 times it checks if the current array element is greater than the current max which takes O(1). If it is greater, then we reassign maxVal which is O(1). When analyzing time complexity, we usually take worst case so we have: O(1+(N-1)(2)) and this simplifies to O(N) since it is the largest factor.
+
+
+

@@ -1,9 +1,8 @@
 ## Introduction
 
-Bellman Ford is an algorithm that finds the shortest path from one source node to every other node in the graph. The running time is O(n^^2^^) and is slower than [[Dijkstra's]] but it is able to find negative cycles. 
+**Prerequisites**:  [[Shortest Path]]
 
-### Prerequisites
-* [[Shortest Path]]
+Bellman Ford is an algorithm that finds the shortest path from one source node to every other node in the graph. The running time is O(n^^2^^) and is slower than [[Dijkstra's]] but it is able to find negative cycles. 
 
 ## Implementation
 

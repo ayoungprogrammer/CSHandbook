@@ -1,4 +1,21 @@
 /*CONTENT*/
+.box{
+    max-width: 600px;
+    margin: auto;
+    margin-top:80px;
+    padding: 20px;
+}
+    /*background-color: white;*/
+    .box h1{
+        font-weight: bold;
+    }
+    #emailbox{
+        margin-top: 0px;
+    }
+    #emailbox input{
+        width: 250px;
+    }
+
 .container{
     max-width: 970px;
     padding:20px 0;

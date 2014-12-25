@@ -16,6 +16,8 @@ int x = 3;
 double y = -4.5;
 ]]]]
 
+x is an integer, and we initialize it with the value 3. y is a double floating point number (essentially a decimal number) and we initialize it with -4.5
+
 ### [[Boolean]]
 
 A boolean is stored in a bit that is either true or false. Booleans are usually used as flags to store if something is one one state or the other.
@@ -237,3 +239,16 @@ do{
   c = getChar();
 }while(c=='N')
 ]]]]
+
+## Exercises
+
+1. (FizzBuzz) Print all numbers from 1 to 100. If the number is divisible by 3, print "Fizz". If the number is divisible by 5, print "Buzz". If it is divisible by both, print "FizzBuzz".
+
+    Example (from 10 to 16)
+    * 10 Buzz
+    * 11
+    * 12 Fizz
+    * 13 
+    * 14
+    * 15 FizzBuzz
+    * 16

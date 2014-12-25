@@ -1,6 +1,12 @@
 ## Introduction
 
-A breadth first search is a search that transverses level by level. For example in a tree, it will transverse everything from the first layer, to the second layer etc. BFS requires a queue to search. BFS memory limitations depends on how wide a layer is. If layers are too wide but the depth is short, then consider using DFS.
+**Prerequisites**: [[Recursion]], [[Queue]]
+
+A breadth first search is a search that transverses level by level. For example in a tree, it will transverse everything from the first layer, to the second layer, the third layer and all the way down to the last layer. BFS is implemented with a queue. 
+
+1. Push root into queue
+2. Pop element from queue and push all non visited neighbours
+3. Repeat 2 until queue is empty
 
 {{bfs.png}}
 

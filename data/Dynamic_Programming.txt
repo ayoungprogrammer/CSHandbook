@@ -1,18 +1,15 @@
 ## Introduction
 
+**Prerequisites**: [[Advanced Recursion]]
+
+**Next**: [[Advanced Dynamic Programming]]
+
 Dynamic programming uses memoization by solving subproblems to solve the more complex problem. Dynamic programming uses recursion but instead of working backwards, it builds up the answer and reduces the number of duplicate computations. 
 
 Like [[recursion|Recursion]], dynamic programming requires two things:
 
 * A base case and
 * A subproblem that can be reduced into smaller subproblems 
-
-### Prerequisites
-
-* [[Advanced Recursion]]
-
-### Next
-* [[Advanced Dynamic Programming]]
 
 ## Fibonacci Sequence
 
