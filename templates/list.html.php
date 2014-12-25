@@ -3,13 +3,13 @@
 
 
 <div class="adbox">
-    <p>Ad:<br></p>
+    <p><b>Ad:</b></p>
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- CS Handbook Ad1 -->
+        <!-- CS Handbook Skyscraper -->
         <ins class="adsbygoogle"
-             style="display:inline-block;width:300px;height:600px"
+             style="display:inline-block;width:160px;height:600px"
              data-ad-client="ca-pub-3675316136020357"
-             data-ad-slot="5128446222"></ins>
+             data-ad-slot="3512112222"></ins>
         <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
