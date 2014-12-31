@@ -141,7 +141,7 @@ on('GET','/:page',function($page){
 		);
 	}else {
 		//Edit for stage
-		if($GLOBALS['cfg']['env']=='stages'){
+		if($GLOBALS['cfg']['env']=='stage'){
 			redirect('./'.$page.'&=edit');
 		}else {
 			redirect('./404');

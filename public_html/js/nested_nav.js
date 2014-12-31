@@ -34,8 +34,6 @@
     });
     topics.initialize();
 
-    console.log(topics);
-
     $('#searchBar').typeahead({
         hint: true,
         highlight: true,
@@ -47,13 +45,13 @@
 
     $('#searchBar').keypress(function(e){
         if(e.keyCode == 13){
-            var topic = $('#searchBar').val().replace(" ","_");
+            var topic = $('#searchBar').val().replace(/ /g,"_");
             window.location.href = "./"+topic;
         }
     });
 
     $('#searchBar').on('typeahead:selected',function(e){
-        var topic = $('#searchBar').val().replace(" ","_");
+        var topic = $('#searchBar').val().replace(/ /g,"_");
         window.location.href = "./"+topic;
     });
 
