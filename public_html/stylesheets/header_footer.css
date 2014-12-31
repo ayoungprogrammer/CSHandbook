@@ -114,7 +114,7 @@ header sup{
         height:50px;
         background: url('../img/logo_hover.png') no-repeat;
         position:relative;
-        left: -260px;
+        top: -50px;
         opacity:0;
         z-index: 6;
         }

@@ -1,6 +1,6 @@
 <header>
     <div id="navContainer">
-        <div id="logoContainer"><a href="./"><div id="logo"></div><div id="logoHover"></div></a></div>
+        <div id="logoContainer"><div><a href="./"><div id="logo"></div><div id="logoHover"></div></a></div></div>
         <div id="searchBarContainer">
             <input id="searchBar" class="typeahead" type="text" placeholder="Search"/>
         </div>

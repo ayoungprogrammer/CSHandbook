@@ -6,6 +6,8 @@
     graph theory, dynamic programming, recursion and other complex algorithms">
     <link rel="icon" type="image/png" href="./public_html/img/favicon.png">
 
+    <link type="text/css" rel="stylesheet" href="./public_html/vendor/typeahead/typeahead.css"/>
+
 
     <link type="text/css" rel="stylesheet" href="./public_html/stylesheets/header_footer.css">
     <link type="text/css" rel="stylesheet" href="./public_html/stylesheets/responsive_nav.css">
@@ -21,8 +23,6 @@
     /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
        We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
     </style>
-
-    <link type="text/css" rel="stylesheet" href="./public_html/vendor/typeahead/typeahead.css"/>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 
