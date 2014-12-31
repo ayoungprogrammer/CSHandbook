@@ -1,5 +1,9 @@
 ## Introduction
 
+*Prerequisites*: [[Queue]]
+
+[[Source on Github||https://github.com/ayoungprogrammer/Algorithms/blob/master/src/LinkedList.java]]
+
 Imagine you had some train cars that were linked together where each was labelled on the inside with a different letter. If you had to find a specific letter you would have to start at the first train car and look inside to check the letter and then walk into the next train car to check the letter and so forth until you found the train car you wanted. If you wanted to insert a train car somewhere all you would have to do it unlink the position where you wanted to insert it and then relink the new train car with the other cars. If you wanted to remove a train car all you would have to do is unlink that car from the other cars and then create a new link to the cars that were adjacent to it. This sort of structure is called a linked list.
 
 A **pointer** is something that holds the memory location of another object.

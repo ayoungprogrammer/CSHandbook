@@ -40,7 +40,7 @@ Arrays can be multidimensional meaning you can have an array of array of objects
 
 Imagine a stack of plates at a buffet, the plates are taken from the top and are also replaced from the top. The first plate to go in will be the last plate to come out. The last plate to go in will be the first to come out. This structure is called a stack.
 
-A **stack** is an abstract data type with the property that it can only have removal and insertion from the back (FILO, first in last out). Remove from the back is called "pop" and insertion from the back is called "push". 
+A **stack** is an abstract data type with the property that it can remove and insert elements following a FILO (First In Last Out) structure. The first element to be inserted must be the last element to be removed and the last element to be inserted must be the first element to be removed. Sometimes, removal is called "pop" and insertion is called "push". 
 
 {{stack.png}}
 
@@ -48,13 +48,11 @@ A **stack** is an abstract data type with the property that it can only have rem
 
 Stacks are used for function calls on the memory stack. Whenever a function is called, it is placed on the memory stack with its variables and when it is returning a value, it is popped off the stack.
 
-With an vector implementation, it can be implemented very efficiently.
+A stack is usually implemented as a [[vector|Vector]].
 
 ### [[Vector]]
 
-Imagine you had a parking garage with one floor of 100 parking spots. Cars 
-
-A **vector** is an array that can be dynamically resized. This allows the features of insertion, removal and deletion. Vectors are implemented as arrays and when more space is required, they are copied to a new array with twice the original size.
+A vector is a stack that is implemented as an array. It is very similar to an array, but it is more flexible in terms of size. Elements are added and removed only from the end of the array. When more elements are added to the vector and the vector is at full capacity, the vector resizes itself and reallocates for 2*N space. When using an vector we can keep adding elements and let the data structure handle all the memory allocation.
 
 {{vector.png}}
 
@@ -68,17 +66,19 @@ Time Complexity | O(n) | O(1)  | O(1) | O(1) | O(n)
 
 ## [[Queue]]
 
-Imagine you are standing in line for a restaurant. Whoever is first in line will be served and whoever is last in line will be served last. People can be served while more people join the line and the line may get very long because it takes a while to serve one person while more people join the queue. This line is also called a queue.
+Imagine you are standing in line for a restaurant. Whoever is first in line will be served first and whoever is last in line will be served last. People can be served while more people join the line and the line may get very long because it takes a while to serve one person while more people join the queue. This is called a queue.
+
+A **queue** is an abstract data type with two functions, pop and push. Removal from the front is called "pop" or "dequeue". Insertion from the back is called "push" or "enqueue". A queue follows a First In First Out (FIFO) structure meaning the first element pushed should be the first element popped and the last element pushed should be the last element popped.
+
+Queues are often used for buffer systems, for example a text message service. The messages that arrive at the server first are relayed first and the messages that arrive later are relayed later. If there are too many text messages in the system such that the rate  texts are received overwhelm the number of texts that are sent the buffer may overflow and messages will get dropped. Most of the time this won't happen because the systems are designed to handle large loads, but if there were an emergency that caused everyone to start texting many texts could be dropped.
+
+Example of push:
 
 {{queue.png}}
 
+Example of pop:
+
 {{queue2.png}}
-
-A **queue** is an abstract data type with the property that it can only have removal from the front and insertion from the back (FIFI, first in first out). Removal from the front is called "pop" or "dequeue". Insertion from the back is called "push" or "enqueue".
-
-Queues are usually implemented as a linked list because its memory size changes as more elements and pushed or popped and insertion from the front is more efficient.
-
-Queues are often used for buffer systems, for example a text message service. The messages that arrive at the server first are relayed first and the messages that arrive later are relayed later. If there are too many text messages in the system such that the rate  texts are received overwhelm the number of texts that are sent the buffer may overflow and messages will get dropped. Most of the time this won't happen because the systems are designed to handle large loads, but if there were an emergency that caused everyone to start texting many texts could be dropped.
 
 ### [[Linked List]] 
 

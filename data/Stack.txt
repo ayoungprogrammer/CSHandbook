@@ -2,17 +2,19 @@
 
 Imagine a stack of plates at a buffet, the plates are taken from the top and are also replaced from the top. The first plate to go in will be the last plate to come out. The last plate to go in will be the first to come out. This structure is called a stack.
 
-A stack is an array with the property that it can only have removal and insertion from the back (FILO, first in last out). Remove from the back is called "pop" and insertion from the back is called "push".
+A **stack** is an abstract data type with the property that it can remove and insert elements following a FILO (First In Last Out) structure. The first element to be inserted must be the last element to be removed and the last element to be inserted must be the first element to be removed. Sometimes, removal is called "pop" and insertion is called "push". 
+
+Example of push:
 
 {{stack.png}}
+
+Example of pop:
 
 {{stack2.png}}
 
 Stacks are used for function calls on the memory stack. Whenever a function is called, it is placed on the memory stack with its variables and when it is returning a value, it is popped off the stack.
 
-### Prerequisites
-
-* [[Vector]]
+A stack is usually implemented as a [[vector|Vector]].
 
 ## Implementation
 
@@ -22,19 +24,7 @@ Stacks are used for function calls on the memory stack. Whenever a function is c
 
 ## Exercises
 
-1. Given a string of brackets of (), determine if the bracket syntax is legal (every opening bracket has a closing bracket). 
-
-    Legal syntax: 
-
-    * ()()()
-    * ( ) ( ( ) ) ( ( ) ( ) )
-
-    Illegal syntax: 
-
-    * ( ) ) ( ) ) (
-    * ( ( ) ) )
-
-2. Given a string of brackets of either () or [], determine if the bracket syntax is legal (every opening bracket has a closing bracket from left to right). 
+1. Given a string of brackets of either () or [], determine if the bracket syntax is legal (every opening bracket has a closing bracket from left to right). 
 
     Legal syntax: 
     * ( [ ( ) [ ] ] )

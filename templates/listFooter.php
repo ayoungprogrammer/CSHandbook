@@ -20,10 +20,11 @@
 </script>
 
 <script type="text/javascript" src="./public_html/vendor/prettify/prettify.js"></script>
-
 <script>
     prettyPrint();
 </script>
+
+<script type="text/javascript" src="./public_html/vendor/typeahead/typeahead.js"></script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -36,11 +37,16 @@
 
 </script>
 
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({},{});
+</script>
+
 <script type="text/javascript" src="./public_html/js/responsive_table.js"></script>
 <script type="text/javascript" src="./public_html/js/side_nav.js"> </script>
 <script type="text/javascript" src="./public_html/js/responsive_nav.js"></script>
 <script type="text/javascript" src="./public_html/js/nested_nav.js"></script>
 
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 </body>
 </html>

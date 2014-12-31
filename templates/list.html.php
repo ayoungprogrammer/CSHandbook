@@ -2,17 +2,13 @@
 <?php require('nav.php'); ?>
 
 
-<div class="adbox">
-    <p><b>Ad:</b></p>
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<div class="vertadbox">
+    <!--<p><b>Advertisement:</b></p>-->
         <!-- CS Handbook Skyscraper -->
         <ins class="adsbygoogle"
              style="display:inline-block;width:160px;height:600px"
              data-ad-client="ca-pub-3675316136020357"
              data-ad-slot="3512112222"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
     </div>    
 
 <div class="container">
@@ -28,10 +24,18 @@
 
         </h1>
     </div>
-
-
     
     <?php breadcrumbs($page); echo '<hr/>';?>
+
+    <div class="horzadbox">
+        <!--<p><b>Advertisement:</b></p>-->
+        <!-- CS Handbook Leaderboard -->
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:728px;height:90px"
+             data-ad-client="ca-pub-3675316136020357"
+             data-ad-slot="7523509425"></ins>
+        
+    </div>
 
     <main>
         <?php echo $body; ?>

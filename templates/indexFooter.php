@@ -41,5 +41,7 @@
 <script type="text/javascript" src="./public_html/js/responsive_nav.js"></script>
 <script type="text/javascript" src="./public_html/js/nested_nav.js"></script>
 
+<script type="text/javascript" src="./public_html/vendor/typeahead/typeahead.js"></script>
+
 </body>
 </html>

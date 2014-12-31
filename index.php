@@ -8,13 +8,25 @@ $cfg = parse_ini_file('./config/local_config.ini',true);
 
 $db = new DB($cfg['db']);
 
+$crumbs = file_get_contents('./data/breadcrumbs.txt');
+
+$map = json_decode($crumbs,true);
+
+$topics = [];
+
+foreach($map as $topic=>$value){
+	$topics[] = preg_replace('/\_/',' ',$topic);
+}
+
+$topics = json_encode($topics);
 
 function breadcrumbs($link){
-	$map = json_decode(file_get_contents('./data/breadcrumbs.txt'),true);
+	
 	//print_r($map);
 	//if(!$map.contains($link))return;
+	if(!array_key_exists($link, $GLOBALS['map']))return;
 
-	$tok = strtok($map[$link],'/');
+	$tok = strtok($GLOBALS['map'][$link],'/');
 	echo '<ul class="breadcrumbs">';
 	while($tok !== false){
 		$ref = str_replace(' ','_',$tok);
@@ -43,24 +55,38 @@ config([
 on('GET','/', function () {
     render("main",[],false);
 });
+
+on('GET','/topics',function(){
+	echo $GLOBALS['topics'];
+});
+
+/*
 on('GET','/donate', function () {
     render("donate",[],false);
-});
+});*/
 on('GET','/about', function () {
     render("about",[],false);
 });
 
-on('GET','/exercises',function(){
-	$map = json_decode(file_get_contents('./data/breadcrumbs.txt'),true);
+on('GET','/404',function(){
+	render(
+		"list",
+		['page'=>'Error 404','title'=>'Error 404','body'=>'The page you are looking for could not be found.','desc'=>'','tags'=>''],
+		false	
+	);
+});
 
+on('GET','/(e|E)xercises',function(){
 
-	$output = "";
+	$output = '';
 
-	foreach($map as $page => $path){
+	foreach($GLOBALS['map'] as $page => $path){
 		
 		if(!$GLOBALS['db']->article_exists($page)){
 			continue;
 		}
+
+		$title = preg_replace('/\_/',' ',$page);
 
 		$contents = $GLOBALS['db']->get_article($page);
 		$contents = parse($contents);
@@ -68,7 +94,7 @@ on('GET','/exercises',function(){
 		$res = preg_match('/<section><h2>Exercises<\/h2>(.*)<\/section>/is',$contents,$matches);
 
 		if($res){
-			$output = $output.$matches[1];
+			$output = $output.'<b>'.$title.'</b>'.$matches[1];
 		}
 
 	}
@@ -115,16 +141,15 @@ on('GET','/:page',function($page){
 		);
 	}else {
 		//Edit for stage
-		if($GLOBALS['cfg']['env']=='stage'){
+		if($GLOBALS['cfg']['env']=='stages'){
 			redirect('./'.$page.'&=edit');
 		}else {
-			redirect('/');
+			redirect('./404');
 		}
 		
 	}
 
 });
-
 
 
 

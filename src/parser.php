@@ -17,7 +17,7 @@ function parse($str){
 	$str = MarkdownExtra::defaultTransform($str);
 	
 	//[[==================]]
-	$str = preg_replace('/\[\[\=+\]\]/',"",$str);
+	//$str = preg_replace('/\[\[\=+\]\]/',"",$str);
 
 	$first_h3 = strpos('<h2>',$str);
 	$pre_str = substr($str,0,$first_h3+4);
@@ -36,7 +36,12 @@ function parse($str){
 	//^^n^^
 	$str = preg_replace('/\^\^([A-Za-z0-9\/]+?)\^\^/','<sup>$1</sup>',$str);
 	
-	//[[link | text]] => <a href="./link">text</a>
+	//Abs link
+	//[[text || abs_link]] => <a href="abs_link>text</a>"
+	$str = preg_replace('/\[\[([A-Za-z\_\s\'\-]+?)\|\|([A-Za-z\_\s\'\-\/\.\:]+?)\]\]/','<a href="$2" target="_blank">$1</a>',$str);
+
+	//Rel link
+	//[[text | link]] => <a href="./link">text</a>
 	$str = preg_replace('/\[\[([A-Za-z\_\s\'\-]+?)\|([A-Za-z\_\s\'\-]+?)\]\]/','<a href="./$2" target="_blank">$1</a>',$str);
 
 	//[[link]]  => <a href="./link">link</a>

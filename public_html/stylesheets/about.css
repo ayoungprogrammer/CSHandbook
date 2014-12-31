@@ -1,19 +1,34 @@
 /*CONTENT*/
+.clear{
+    clear: both;
+}
+.box-wrapper{
+    max-width:840px;
+    margin-left: 140px;
+}
 .box{
     max-width: 600px;
-    margin: auto;
-    margin-top:80px;
-    padding: 20px;
+    margin: 0;
+    padding-left: 30px;
+    top: 100px;
+    position: relative;
+    display: inline-block;
 }
     /*background-color: white;*/
     .box h1{
         font-weight: bold;
     }
-    #emailbox{
-        margin-top: 0px;
+    #aboutbox{
+        float:left;
+        /*left: 100px;*/
     }
-    #emailbox input{
-        width: 250px;
+    #emailbox {
+        float:right;
+        width: 355px;
+       /*left: 600px;*/
+    }
+    #emailbox input[type="email"]{
+        width: 100% !important;
     }
 
 .container{

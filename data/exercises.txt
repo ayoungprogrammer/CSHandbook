@@ -1,0 +1,94 @@
+## Interview Preparation
+
+From personal experience, I know that programming interviews can be quite stressful. 
+	It is a much more different environmnet than you are probably used to which can 
+	throw you off your game. I fumbled through easy problems in my first few interviews as
+	I was a nervous wreck from the time pressure as well as the glare of the interviewer. 
+	However, in later interviews, I became more accustomed to the process and became more 
+	comfortable with the interviewer. As you do more interviews in your life, you will be
+	less nervous and become more confident in your abilities. The more prepared you are, the 
+	more likely your chances of success in the interview room. Below you will find a small guide
+	to rocking the interview! 
+
+## Before the Interview
+
+Prepartion is key for interviews. You can be charming and confident as you want, but
+	if you cannot solve their problems, your application will quickly be discarded. When you 
+	are given a problem, there is a chance you have solved or read about a solution to the
+	problem. Hence, the more prepared you are, the more likely you will already have a 
+	solution. The sections in this handbook that come up often are: all of [[Data Structure]],
+	[[Advanced Recursion]], [[Binary Search]] and [[Strings]]. If you cover those topics, you should be set 
+	for most interviews. However, if you are interviewing for higher end companies, you may need to learn
+	a lot more. In some interviews, you will be asked to code your solution, therefore I suggest you 
+	get very familiar with a language and become very profficient in it. You should know how to 
+	do input/output, use the standard library and how to debug properly. Java is a good language to use
+	as it has many built in data structures and has stack traces for debugging.
+
+There are two types of interviews I have encountered: phone/Skype interviews and in person. 
+	If given a choice, in person is always preferrable. When you doing an in person interview, 
+	you are able to better communicate with your interviewer and build a rapport. You will also be 
+	show your thought process on paper which is easier to do than via phone or Skype. Additionally, 
+	depending on the company, if they fly you down to their headquarters for the interview, 
+	you'll get a free trip!
+
+If the company you are interviewing for is a startup, you can dress casually. Otherwise, if the
+	company is more corporate, then you might want to dress a little more formally. 
+
+## During the Interview - Part 1: Behavioural
+
+The interview usually starts with introductions and then the interviewer will usually ask you
+	about projects you've worked on as well as past places you have worked. A common question is:
+	what was the hardest part about that project and how did you solve it. (If you do not already
+	have a personal project, then I highly recommend starting one. If personal projects do not
+	interest you, then this field may not be for you. Hackathons are a good way of starting projects
+	as you are able to dedicate lots of your time towards it). During this first part of the interview,
+	try to build a rapport with the interviewer. You should be passionate about the work you have done
+	and hopefully your interviewer is equally passionate and be able to relate to you. Like any normal
+	interview, try to maintain eye contact and good posture. 
+
+## During the Interview - Part 2: Technical
+
+The second part of the interview usually consists of technical problems. If you are expected to code
+	the solution, you should expect 1 medium to difficult problem (30-45 min) and possibly an easy problem 
+	(5-10 minutes). (Exception of Google, does 3-4 problems). If you are not coding, then you should expect
+	3-4 problems where you need to describe the solution. 
+
+### Step 1 - Analyzing the Problem
+
+*1-2 minutes*
+
+When given the problem, make sure you read through 
+	the problem carefully and that you understand the specifications. Ask your interviewer if you are unsure 
+	of anything. 
+
+### Step 2 - Find a solution
+
+*5-10 minutes*
+
+Now that you understand the problem, ask yourself if you've seen this problem before or 
+	any similar problem. If you have, then you should also remember the solution and you're in luck! 
+	However, if you don't remember the solution or have not seen the problem before, then you will
+	need to think out the solution. First start with the naive solution which is usually bruteforce. 
+	An inefficient solution is better then no solution. Once you have that, start working towards a 
+	more optimal solution. You should be thinking aloud and letting the interviewer see your thought process. 
+	You can write down your solutions on paper so that it can be more clear to the interviewer. You should be able
+	to explain why your solution is more efficient than another and why it works. If your solution 
+	is wrong, the interviewer may stop you and you should quickly find the mistake and determine
+	why it is wrong. Keep going as far as you can without letting the interviewer help you. If you are stuck,
+	the interviewer will likely drop a hint and you should be able to pick up from that. Once you have an optimal
+	solution, you should be confident enough to prove that is optimal. If the interviewer asks if you can do better,
+	then there may be the case that there is a better solution.
+
+### Step 3 - Start coding
+
+*10-20 minutes*
+
+Now that you have a solution, you need to prove to the interviewer that you can implement it. If you are
+	profficient enough, you should be able to code and debug easily enough. You should comment your code
+	and name your variables properly so your interviewer knows whats going on. 
+
+
+## Practice Problems
+
+I have included a mix of real interview problems that are used and some problems that I interesting. 
+	Good luck!

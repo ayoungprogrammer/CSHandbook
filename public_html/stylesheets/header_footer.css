@@ -24,6 +24,69 @@ header{
 header sup{
     vertical-align: top;
 }
+
+#logoContainer{
+    float: left;
+    width: 250px;
+}
+
+#searchBarContainer{
+    float: left;
+    margin-top: 13px;
+}
+
+.typeahead{
+    width: 350px;
+    height: 19px;
+
+    font-size:16px;
+
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    border-radius:5px;
+    border: 1px solid #ccc;
+
+    padding: 5px;
+    font-weight:bold;
+}
+
+.typeahead:focus{
+    box-shadow: 0 0 5px black;
+    border: 1px solid black;
+}
+
+.tt-dropdown-menu{
+    width:100%;
+}
+
+.tt-hint{
+    color: gray;
+}
+
+
+
+.tt-suggestion.tt-cursor{
+    color:red;
+}
+
+.tt-suggestion {
+  padding: 3px 0px;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.tt-suggestion.tt-cursor {
+  color: #fff;
+  background-color: #0097cf;
+
+}
+
+.tt-suggestion p {
+  margin: 0;
+}
+
+
+
 #navContainer{
     max-width:970px;
     margin:auto;

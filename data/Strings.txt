@@ -1,0 +1,15 @@
+## Introduction
+
+String problems are more important than ever before with the enormous amount of text and information that is now available. For example, if we search for keywords on Google out of the millions of articles, how can we do it in such a way that the retrieval is relevant, accurate and efficient? If we misspell the word "shooting" as "sohoting" how can we come up with a list of autocorrected words?
+
+## [[Pattern Matching]]
+
+When we press ctrl+f to search for a word on a page which may contain tens of thousands of words, how can we do it quickly? More formally: if we have two strings A and B, how can we search for instances of A inside B in the quickest way?
+
+## String Distance
+
+Given two strings A and B, how can we tell how similar the strings are? 
+
+[[Levenshtein Distance]]
+
+[[Hamming Distance]]
