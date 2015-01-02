@@ -4,6 +4,7 @@ html,body{
     margin:0;
     padding:0;
     height:100%;
+    min-width: 1250px;
 }
 
 .vertadbox{
@@ -11,6 +12,7 @@ html,body{
     left: 10px;
     top: 300px;
     margin: 10px;
+    /*width: 320px;*/
 }
 
 .horzadbox{
@@ -22,7 +24,9 @@ html,body{
     max-width: 970px;
     padding:0px;
     padding-bottom:50px;
-    margin: 0 auto;
+    margin: 0 130px auto;
+    top: -50px;
+    /*margin: 0 auto;*/
     position:relative;
     min-height:100%;
     left: 65px;
@@ -228,7 +232,7 @@ main{
             color:black;
         }
 
-
+/*
 @media screen and (max-width: 800px) {
     .banner{
         margin-top:120px;
@@ -283,13 +287,13 @@ main{
     }
 
     main pre{
-        white-space: pre-wrap;       /* css-3 */
-        white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-        word-wrap: break-word;       /* Internet Explorer 5.5+ */
+        white-space: pre-wrap;       /* css-3 
+        white-space: -moz-pre-wrap;  /* Mozilla, since 1999 
+        word-wrap: break-word;       /* Internet Explorer 5.5+ 
         padding:0;
         border: none;
         border-radius: 10px;
         height:auto;
         overflow: hidden;
     }
-}
+}*/

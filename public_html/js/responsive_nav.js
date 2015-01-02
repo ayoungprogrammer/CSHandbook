@@ -11,7 +11,7 @@ $(document).ready(function() {
     }
     $(pull).on('click', function(e) {
 
-        console.log(menu.css("height"));
+        //console.log(menu.css("height"));
         if (menu.css("display")=="none"){
             menu.slideDown();
 
@@ -26,11 +26,16 @@ $(document).ready(function() {
         if(w > 320 && menu.is(':hidden')) {
             menu.removeAttr('style');
         }
-    });
-    $(window).resize(function(){
-        var w = $(window).width();
         if(w < 700) {
             menu.slideUp(0);
+        }
+        
+        if(w < 700){
+            $('.vertadbox').hide();
+        }else {
+            if($('.vertadbox').is(':hidden')){
+                $('.vertadbox').show();
+            }
         }
     });
 });

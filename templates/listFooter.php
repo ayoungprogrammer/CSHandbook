@@ -3,7 +3,7 @@
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-
+<!--
 <script>
     (function(){
 
@@ -17,7 +17,7 @@
         }
 
     })();
-</script>
+</script>-->
 
 <script type="text/javascript" src="./public_html/vendor/prettify/prettify.js"></script>
 <script>
@@ -41,9 +41,9 @@
   (adsbygoogle = window.adsbygoogle || []).push({},{});
 </script>
 
-<script type="text/javascript" src="./public_html/js/responsive_table.js"></script>
+<!--<script type="text/javascript" src="./public_html/js/responsive_table.js"></script>-->
 <script type="text/javascript" src="./public_html/js/side_nav.js"> </script>
-<script type="text/javascript" src="./public_html/js/responsive_nav.js"></script>
+<!--<script type="text/javascript" src="./public_html/js/responsive_nav.js"></script>-->
 <script type="text/javascript" src="./public_html/js/nested_nav.js"></script>
 
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

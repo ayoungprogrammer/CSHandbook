@@ -22,7 +22,6 @@ function bfsLinks(){
 	$db = new DB($cfg['db']);
 	
 	while($head < $end){
-		
 
 		$page = substr($queue[$head],strrpos($queue[$head],'/')+1);
 		$article = str_replace(" ","_",$page);

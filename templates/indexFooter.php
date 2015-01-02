@@ -1,7 +1,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script type="text/javascript" src="./public_html/vendor/typeahead/typeahead.js"></script>
 
-
+<!--
 <script>
     (function(){
 
@@ -26,7 +26,7 @@
             logoHover.animate({'opacity': 0},100);
         });
     })();
-</script>
+</script>-->
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -40,7 +40,7 @@
 
 </script>
 
-<script type="text/javascript" src="./public_html/js/responsive_nav.js"></script>
+<!--<script type="text/javascript" src="./public_html/js/responsive_nav.js"></script>-->
 <script type="text/javascript" src="./public_html/js/nested_nav.js"></script>
 
 </body>

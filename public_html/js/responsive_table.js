@@ -6,7 +6,7 @@ function resizeTable (){
             $('section table').wrap('<div></div>');
         }
         var tableWidth = $(window).width() - 70;
-        console.log(tableWidth);
+        //console.log(tableWidth);
         $('section div').css('width', tableWidth);
     } else {
         if (!table.parent().is('div')){

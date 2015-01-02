@@ -1,18 +1,19 @@
 /*CONTENT*/
+body{
+    min-width: 1100px;
+}
+
 .clear{
     clear: both;
 }
 .box-wrapper{
-    max-width:840px;
-    margin-left: 140px;
+    width: 1100px;
+    margin: 20px auto;
 }
 .box{
-    max-width: 600px;
-    margin: 0;
-    padding-left: 30px;
-    top: 100px;
+    width: 400px;
+    left: -150px;
     position: relative;
-    display: inline-block;
 }
     /*background-color: white;*/
     .box h1{
@@ -153,7 +154,7 @@ div.donateInfo{
 div.donateInfo p:first-child{
     font-size: 1.2em;
 }
-
+/*
 @viewport{
     zoom: 1.0;
     width: device-width;
@@ -187,4 +188,4 @@ div.donateInfo p:first-child{
         padding: 8px;
         margin:0;
     }
-}
+}*/

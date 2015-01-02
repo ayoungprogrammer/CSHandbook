@@ -99,5 +99,8 @@ header{
 				height: 30px;
 				float:right;
 			}
+	.container{
+		margin: 0 auto;
+	}
 
 }
