@@ -56,8 +56,33 @@ on('GET','/', function () {
     render("main",[],false);
 });
 
-on('GET','/topics',function(){
+on('GET','/topics.json',function(){
 	echo $GLOBALS['topics'];
+});
+
+on('GET','/topics',function(){
+
+	$output = '';
+
+	$topics = [];
+	$r_map = [];
+
+	foreach($GLOBALS['map'] as $page => $path){
+		$topics[] = $path;
+		$r_map[$path] = $page;
+	}
+
+	sort($topics);
+
+	foreach($topics as $path){
+		$page = $r_map[$path];
+		$title = preg_replace('/\_/',' ',$page);
+		
+		$output = $output.'<a href="'.$page.'">'.$path.'</a><br>';
+
+	}
+
+	render("list",['page'=>'Topics','title'=>'Topics','body'=>$output,'desc'=>'Topics','tags'=>'Topics'],false);
 });
 
 /*

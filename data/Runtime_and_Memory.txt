@@ -59,5 +59,15 @@ Memory: The array takes O(N) memory and storing the max value is O(1) more memor
 
 Time: The first assignment of maxVal takes O(1). The loop runs N-1 times and of each of those N-1 times it checks if the current array element is greater than the current max which takes O(1). If it is greater, then we reassign maxVal which is O(1). When analyzing time complexity, we usually take worst case so we have: O(1+(N-1)(2)) and this simplifies to O(N) since it is the largest factor.
 
+### Example
 
+[[[[
+void zeroArrays(int[][] grid){
+  for(int i=0; i<grid.length;i++){
+    for(int j=0;j<grid[i].length;j++){
+      grid[i][j] = 0;
+    }
+  }
+}
+]]]]
 

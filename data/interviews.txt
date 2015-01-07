@@ -1,9 +1,9 @@
 ## Interview Preparation
 
 From personal experience, I know that programming interviews can be quite stressful. 
-	It is a much more different environment than you are probably used to which can 
-	throw you off your game. I fumbled through easy problems in my first few interviews as
-	I was a nervous wreck from the time pressure as well as the glare of the interviewer. 
+	You will be off your game because it is a much more different environment than 
+	you are probably used to. In my first few interviews, I was a nervous wreck and I fumbled
+	through easy problems.
 	However, in later interviews, I became more accustomed to the process and became more 
 	comfortable with the interviewer. As you do more interviews in your life, you will be
 	less nervous and become more confident in your abilities. The more prepared you are, the 

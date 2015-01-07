@@ -1,11 +1,10 @@
 ## Introduction
 
-Hash maps are maps that use [[hash sets]] to store the keys. 
+*Prerequisites*: [[Map]], [[Hash Set]]
 
-### Prerequisites
+[[Source on GitHub||GITHUB_PATH/HashMap.java]]
 
-* [[Map]]
-* [[Hash Set]]
+Hash maps are maps that use [[hash sets|Hash sets]] to store the keys. 
 
 ## Implementation
 

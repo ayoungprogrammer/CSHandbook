@@ -1,6 +1,10 @@
 ## Introduction
 
-Hash sets are sets that use hashes to store elements. A hashing algorithm is an algorithm that takes an element and converts it to a smaller chunk called a **hash**. For example let our hashing algorithm be (x mod 10). So the hashes of 232, 217 and 10 be 2,7, and 9 respectively. 
+*Prerequisites*: [[Sets]]
+
+[[Source on Github||GITHUB_PATH/HashSet.java]]
+
+Hash sets are sets that use hashes to store elements. A hashing algorithm is an algorithm that takes an element and converts it to a smaller chunk called a **hash**. For example let our hashing algorithm be (x mod 10). So the hashes of 232, 217 and 19 be 2,7, and 9 respectively. 
 
 {{hashcode.png}}
 

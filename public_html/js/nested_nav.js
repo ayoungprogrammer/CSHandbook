@@ -14,7 +14,7 @@
         queryTokenizer: Bloodhound.tokenizers.whitespace,
         limit: 10,
         prefetch: {
-            url: 'topics',
+            url: 'topics.json',
             ttl_ms: 5000,
             filter: function(list){
                 return $.map(list,function(topic){return {name: topic}; });

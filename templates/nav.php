@@ -6,7 +6,7 @@
         </div>
         <nav>
             <ul>
-                <li><a href="./">Topics</a>
+                <li><a>Topics</a>
                     <div>
                         <ul>
                             <?php 

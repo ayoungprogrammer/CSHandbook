@@ -1,9 +1,8 @@
 ## Introduction
 
-### Prerequisites
+*Prerequisites*: [[Graph Theory]]
 
-* [[Graph Theory]]
-
+Advanced topics on graph theory.
 
 ## Bipartite Graph
 
@@ -50,6 +49,8 @@ A node in a directed acyclic graph that has no ancestors is a root.
 ### Center
 
 The center of a undirected tree is the node that minimizes the sum of the distance to every other node.  The center can be found be continuously stripping away leaf nodes (nodes with only one edge) layer by layer until either 1 or 2 nodes remain. The longest path in a tree will contain the center. 
+
+{{centergraph.png}}
 
 ## Network Flow
 

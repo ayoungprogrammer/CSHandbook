@@ -13,3 +13,8 @@ Given two strings A and B, how can we tell how similar the strings are?
 [[Levenshtein Distance]]
 
 [[Hamming Distance]]
+
+## Exercises
+
+1. Given a string, count the number of palindromes greater than 1 character contained in it. E.g. abacca has 3: aba, cc, acca.
+2. Given a sentence, reverse the order of the sentence without using additional memory. For example: There are three blue cows reversed is cows blue three are There

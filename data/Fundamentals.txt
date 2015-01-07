@@ -1,0 +1,15 @@
+## Introduction
+
+There are some fundamental topics about writing computer programs that we must learn before we can move on to the basic theory.
+
+## [[Basics]]
+
+First we must learn how to write a basic Java program with control structures and variables.
+
+## [[Runtime and Memory]]
+
+Next, we analyze how long a program will take to perform a calculation and how much memory a program will used based on the inputs.
+
+## [[Boolean Algebra]]
+
+## [[Logic]]

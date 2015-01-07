@@ -6,18 +6,19 @@
     <h1>A Reference for Data Structures and Algorithms</h1>
     <p>A Perfect Resource For:</p>
     <ul>
-    <li>College Courses!</li>
-    <li>Interview Preparation!</li>
-    <li>An Everyday Reference!</li>
+        <li>College Courses!</li>
+        <li>Interview Preparation!</li>
+        <li>An Everyday Reference!</li>
     </ul>
     <h1>Topics:</h1>
-<ol>
-<?php 
-foreach($GLOBALS['cfg']['sections'] as $section){
-	$section_ref = './'.str_replace(' ','_',$section);
-	echo '<li><a href="'.$section_ref.'">'.$section.'</a></li>';
-}?>
-</ol>
+    <ol>
+        <?php 
+        foreach($GLOBALS['cfg']['sections'] as $section){
+        	$section_ref = './'.str_replace(' ','_',$section);
+        	echo '<li><a href="'.$section_ref.'">'.$section.'</a></li>';
+        }?>
+    </ol>
+    <a href="./topics">List of Topics</a>
 </div>
 
 <div class="box" id="emailbox">

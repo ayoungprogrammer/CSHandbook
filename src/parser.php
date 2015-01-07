@@ -36,6 +36,9 @@ function parse($str){
 	//^^n^^
 	$str = preg_replace('/\^\^([A-Za-z0-9\/]+?)\^\^/','<sup>$1</sup>',$str);
 	
+	//GITHUB_PATH
+	$str = preg_replace('/GITHUB_PATH/','https://github.com/ayoungprogrammer/Algorithms/blob/master/src',$str);
+
 	//Abs link
 	//[[text || abs_link]] => <a href="abs_link>text</a>"
 	$str = preg_replace('/\[\[([A-Za-z\_\s\'\-]+?)\|\|([A-Za-z\_\s\'\-\/\.\:]+?)\]\]/','<a href="$2" target="_blank">$1</a>',$str);

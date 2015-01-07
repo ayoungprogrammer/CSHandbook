@@ -5,5 +5,9 @@ Permutation sort is a sort that keeps permutating the array until it is sorted. 
 ### Implementation
 
 [[[[
-
+void permuteSort(int[] arr){
+  while(!sorted(arr)){
+    permute(arr);
+  }
+}
 ]]]]
