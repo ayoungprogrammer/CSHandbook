@@ -66,16 +66,45 @@ function parse($str){
 }
 //Generate meta description
 function getDesc($content,$title){
-
+	/*
 	$searchText = '<h2>Introduction</h2>';
 	$pText = '<p>';
+	$preqText = 'Prereq';
+	$nextText = 'Next';
+
 	$pos = strpos($content,$searchText);
 	if($pos == FALSE)return $title;
 	$pos = strpos($content,$pText,$pos);
 	if($pos == FALSE)return $title;
 	$pos += strlen($pText);
+
+	$preqPos = strpos($content,$preqText,$pos);
+	if($preqPos != FALSE){
+		$pos = $preqPos;
+		$pos = strpos($content,$pText,$pos);
+		if($pos == FALSE)return $title;
+		$pos += strlen($pText);
+	}
+
+	$nextPos = strpos($content,$nextText,$pos);
+	if($nextPos != FALSE){
+		$pos = $nextPos;
+		$pos = strpos($content,$pText,$pos);
+		if($pos == FALSE)return $title;
+		$pos += strlen($pText);
+	}
+
 	$endpos = strpos($content,'.',$pos);
-	if($endpos == FALSE)return $title;
+	if($endpos == FALSE)return $title;*/
+
+	preg_match('/<h2>Introduction<\/h2>.*?<p>([A-Za-z].*?\.)/s',$content,$matches);
+
+	if(array_key_exists(1,$matches)){
+		return $matches[1];
+	}else{
+		return $title;
+	}
+
 	return substr($content,$pos,$endpos-$pos);
 }
 

@@ -8,185 +8,270 @@
 
 <url>
   <loc>http://www.thecshandbook.com/</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Getting_Started</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Data_Structures</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Sorting</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Recursion</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Searches</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Dynamic_Programming</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Graph_Theory</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Interviews</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/about</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://www.thecshandbook.com/Basics</loc>
-</url>
-<url>
-  <loc>http://www.thecshandbook.com/Runtime_and_Memory</loc>
+  <loc>http://www.thecshandbook.com/topics</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Advanced_Data_Structures</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Arrays</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Stack</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Vector</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Queue</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Linked_List</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Trees</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Binary_Tree</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Sets</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Hash_Set</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Tree_Set</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Binary_Search_Tree</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Maps</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Hash_Map</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Tree_Map</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Priority_Queue</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Heap</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Bubble_Sort</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Selection_Sort</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Insertion_Sort</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Heap_Sort</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Merge_Sort</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Quick_Sort</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Bozo_Sort</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Permutation_Sort</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Miracle_Sort</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Advanced_Recursion</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Binary_Search</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Ternary_Search</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Depth_First_Search</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Breadth_First_Search</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Flood_Fill</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Backtracking</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Advanced_Dynamic_Programming</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Coin_Problem</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Knapsack_Problem</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Advanced_Graph_Theory</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Adjacency_Matrix</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Minimum_Spanning_Tree</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Prim's</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Kruskal</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Floyd_Warshall</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Bellman_Ford</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Dijkstra's</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Topological_Sorting</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Connected_Components</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://www.thecshandbook.com/hash_sets</loc>
+  <loc>http://www.thecshandbook.com/Strings</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Exercises</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/AVL_Tree</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Hash_sets</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/hash_set</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Line_Sweeping</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
-  <loc>http://www.thecshandbook.com/Breadth_FIrst_Search</loc>
+  <loc>http://www.thecshandbook.com/Pattern_Matching</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Longest_Common_Subsequence</loc>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.thecshandbook.com/Greedy_Algorithm</loc>
+  <changefreq>daily</changefreq>
 </url>
 <url>
   <loc>http://www.thecshandbook.com/Shortest_Path</loc>
+  <changefreq>daily</changefreq>
 </url>
 </urlset>
