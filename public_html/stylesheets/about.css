@@ -3,6 +3,10 @@ body{
     min-width: 1100px;
 }
 
+.addthis_container{
+    margin-left: 10px;
+}
+
 .clear{
     clear: both;
 }

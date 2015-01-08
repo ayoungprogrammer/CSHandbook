@@ -34,6 +34,11 @@
     </div>
 </form>
 </div>
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_container">
+<h1>Share on social media!</h1>
+<div class="addthis_sharing_toolbox"></div>
+</div>
 
 <!--End mc_embed_signup-->
 </div>

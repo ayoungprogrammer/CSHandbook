@@ -39,6 +39,12 @@
 
     <main>
         <?php echo $body; ?>
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <div class="addthis_container">
+            <div class="addthis_native_toolbox">
+                
+            </div>
+        </div>
     </main>
 
     <aside id="sideNav">

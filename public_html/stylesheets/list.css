@@ -7,6 +7,14 @@ html,body{
     min-width: 1250px;
 }
 
+.addthis_container{
+    width: 720px;
+}
+
+.addthis_native_toolbox{
+    margin: 20px 150px;
+}
+
 .vertadbox{
     position: absolute;
     left: 10px;

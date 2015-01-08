@@ -43,5 +43,8 @@
 <!--<script type="text/javascript" src="./public_html/js/responsive_nav.js"></script>-->
 <script type="text/javascript" src="./public_html/js/nested_nav.js"></script>
 
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-529b146b608ba8a6" async="async"></script>
+
 </body>
 </html>
