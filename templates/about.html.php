@@ -30,8 +30,8 @@
                 before you leave this site!
             </p>
             <div>    
-            Created by: Michael Young<br>
-            Designed by: Simon Huang
+            Sincerly Yours, <br>
+            Michael Young
             </div>
         </article>
 

@@ -93,7 +93,7 @@ on('GET','/about', function () {
     render("about",[],false);
 });
 
-on('GET','/404',function(){
+error(404,function(){
 	render(
 		"list",
 		['page'=>'Error 404','title'=>'Error 404','body'=>'The page you are looking for could not be found.','desc'=>'','tags'=>''],
@@ -169,7 +169,8 @@ on('GET','/:page',function($page){
 		if($GLOBALS['cfg']['env']=='stage'){
 			redirect('./'.$page.'&=edit');
 		}else {
-			redirect('./404');
+			error(404);
+			//redirect('./404');
 		}
 		
 	}

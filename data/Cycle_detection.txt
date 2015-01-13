@@ -1,0 +1,31 @@
+## Introduction
+
+A cycle occurs in a graph when a duplicate node is encountered when traversing a tree using a [[depth first search|Depth First Search]]. In other words, a cycle occurs when you can reach the same node again.
+
+An undirected graph where the number of edges is greater than or equal to the number of nodes will always have cycles.
+
+## Implementation
+
+[[[[
+public static boolean hasCycle(int [][] adjMatrix){
+        int[] visited = new int[adjMatrix.length];
+        for(int i=0;i<adjMatrix.length;i++)visited[i] = 0;
+        for(int i=0;i<adjMatrix.length;i++){
+            if(hasCycleAt(adjMatrix,i,visited))return true;
+        }
+        return false;
+    }
+    
+    public static boolean hasCycleAt(int[][] adjMatrix,int i, int visited[]){
+        if(visited[i] == 1)return true;
+        visited[i] = 1;
+        for(int j = 0; j < adjMatrix.length;i++){
+            if(adjMatrix[i][j] > 0){
+                if(hasCycleAt(adjMatrix,j,visited))return true;
+                visited[j] = 0;
+            }
+        }
+        visited[i] = 2;
+        return false;
+    }
+]]]]

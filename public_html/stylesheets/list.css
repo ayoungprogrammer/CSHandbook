@@ -12,7 +12,7 @@ html,body{
 }
 
 .addthis_native_toolbox{
-    margin: 20px 150px;
+    margin: 20px 100px;
 }
 
 .vertadbox{
@@ -112,6 +112,9 @@ main{
     main a{
         color: rgb(0,100,180);
         text-decoration: none;
+    }
+    main a:hover{
+        text-decoration: underline;
     }
     h3 a:after, h2 a:after{
         content: url('../img/link.png');

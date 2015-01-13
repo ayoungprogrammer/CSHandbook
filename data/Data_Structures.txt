@@ -128,7 +128,7 @@ Insertion places an element into the set, deletion removes an element from the s
 
 ### [[Hash Set]]
 
-Hash sets are sets that use hashes to store elements. A hashing algorithm is an algorithm that takes an element and converts it to a smaller chunk called a **hash**. For example let our hashing algorithm be (x mod 10). So the hashes of 232, 217 and 10 be 2,7, and 9 respectively. 
+Hash sets are sets that use hashes to store elements. A hashing algorithm is an algorithm that takes an element and converts it to a smaller chunk called a **hash**. For example let our hashing algorithm be (x mod 10). So the hashes of 232, 217 and 19 are 2,7, and 9 respectively. 
 
 For every element in a hash set, the hash is computed and elements with the same hash are grouped together and stored in a [[linked list|Linked List]]. The linked list is called a **bucket**.
 
