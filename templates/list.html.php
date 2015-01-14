@@ -38,17 +38,17 @@
         <?php echo $body; ?>
         <!-- Go to www.addthis.com/dashboard to customize your tools -->
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <div class="addthis_container">
+            <div class="addthis_native_toolbox">
+                
+            </div>
+        </div>
         <div class="endadbox">
           <!-- CS Handbook End -->
           <ins class="adsbygoogle"
                style="display:inline-block;width:300px;height:250px"
                data-ad-client="ca-pub-3675316136020357"
                data-ad-slot="7395961422"></ins>
-        </div>
-        <div class="addthis_container">
-            <div class="addthis_native_toolbox">
-                
-            </div>
         </div>
     </main>
 
