@@ -7,12 +7,10 @@ require "../src/db.php";
 function bfsLinks(){
 
 	$cfg = parse_ini_file('../config/local_config.ini',true);
-	print_r ($cfg);
 	$head = 0;
 	$end = 0;
 	$queue = array();
 	foreach($cfg['sections'] as $section){
-		print $section;
 		$queue[$end]='/'.$section;
 		$map[str_replace(' ','_',$section)] = $queue[$end];
 		$end++;
@@ -56,8 +54,7 @@ function bfsLinks(){
 				}
 			}
 		}
-		$head++;
-		
+		$head++;	
 	}
 	print_r($map);
 	file_put_contents('../data/breadcrumbs.txt',json_encode($map));

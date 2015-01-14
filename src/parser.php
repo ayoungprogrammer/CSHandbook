@@ -22,7 +22,7 @@ function parse($str){
 	$first_h3 = strpos('<h2>',$str);
 	$pre_str = substr($str,0,$first_h3+4);
 	$sub_str = substr($str,$first_h3+4);
-	$str = $pre_str.preg_replace('/<h2>/','</section><br><br><section><h2>',$sub_str);
+	$str = $pre_str.preg_replace('/<h2>/','</section><section><h2>',$sub_str);
 	$str = '<section>'.$str.'</section>';
 
 	//[======]   =>     <br><hr><br>
@@ -31,7 +31,6 @@ function parse($str){
 	
 	//<h3> Add <hr>
 	$str = preg_replace('/<h3>/','<hr><h3>',$str);
-
 
 	//^^n^^
 	$str = preg_replace('/\^\^([A-Za-z0-9\/]+?)\^\^/','<sup>$1</sup>',$str);
@@ -59,8 +58,10 @@ function parse($str){
 	$str = preg_replace('/\{\{([A-Za-z0-9\_\-\.]+?)\}\}/','<img src="./public_html/img/uploads/$1">',$str);
 
 	//$str = preg_replace('/<<<<([^>]|>(?!>>>([^>]|$)))*>>>>/,'<pre class="prettyprint linenums">$1</pre>',$str);
-
-	
+	$str = preg_replace('/<\/section>/','</section><div class="horzadbox"><ins class="adsbygoogle"
+             style="display:inline-block;width:728px;height:90px"
+             data-ad-client="ca-pub-3675316136020357"
+             data-ad-slot="4442495028"></ins></div>',$str,1);
 
 	return $str;
 }

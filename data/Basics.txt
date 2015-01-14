@@ -18,7 +18,7 @@ double y = -4.5;
 
 x is an integer, and we initialize it with the value 3. y is a double floating point number (essentially a decimal number) and we initialize it with -4.5
 
-### [[Boolean]]
+### Boolean
 
 A boolean is stored in a bit that is either true or false. Booleans are usually used as flags to store if something is one one state or the other.
 
@@ -26,7 +26,7 @@ Data type| Number of bits | Range
 -|-|-|-
 bool| 2 bits | true or false
 
-### [[Integer]]
+### Integer
 
 An integer is any number that does not contain decimals. It is stored as binary number in memory. For example: 0, -5, 6 are integers.
 
@@ -37,7 +37,7 @@ short|16 bits | -32,768 to 32,767
 int| 32 bits | −2,147,483,648 to 2,147,483,647
 long| 64 bits | −9,223,372,036,854,775,808 to 9,223,372,036,854,755,807
 
-### [[Character]]
+### Character
 
 A character is any letter or symbol. For example: 'a','B','8','!'.
 
@@ -47,7 +47,7 @@ Data type| Number of bits | Range
 -|-|-|-
 char| 8 bits | 256 bits
 
-### [[Float]]
+### Float
 
 A float is a decimal stored as binary in memory. We use scientific notation to represent the decimal. Scientific notation is a decimal number < 10 times some exponent of 10. For example: 8.23 * 10^^4^^ is in scientific notation. Decimals can be stored in 32 bits or 64 bits. 
 
@@ -61,7 +61,7 @@ float| 32 bits | 3.4e−038 to 3.4e+038
 double| 64 bits| 1.7e−308 to 1.7e+308
 
 
-## [[Operations]]
+## [[Arithmetic Operations]]
 
 Java includes many built in operations for basic operations.
 
