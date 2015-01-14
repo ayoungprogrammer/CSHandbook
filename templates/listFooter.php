@@ -38,7 +38,7 @@
 </script>
 
 <script>
-  (adsbygoogle = window.adsbygoogle || []).push({},{});
+  (adsbygoogle = window.adsbygoogle || []).push({},{},{});
 </script>
 
 <!--<script type="text/javascript" src="./public_html/js/responsive_table.js"></script>-->

@@ -111,7 +111,7 @@ function getDesc($content,$title){
 
 //Generate meta tags
 function getTags($content,$title){
-	return $title.', data structures, algorithms';
+	return $title.', data structures, algorithms, learn, computer science, handbook';
 }
 
 ?>
