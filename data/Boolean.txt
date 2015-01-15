@@ -1,0 +1,16 @@
+## Introduction
+
+A boolean is stored in a bit that is either true or false. Booleans are usually used as flags to store if something is one one state or the other.
+
+Data type| Number of bits | Range
+-|-|-|-
+bool| 2 bits | true or false
+
+## Example
+
+[[[[
+boolean w = false;
+boolean x = true;
+boolean y = (w || x);
+boolean z = (1 == 4);
+]]]]

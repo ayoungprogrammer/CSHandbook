@@ -1,0 +1,19 @@
+## Introduction
+
+A float is a decimal stored as binary in memory. We use scientific notation to represent the decimal. Scientific notation is a decimal number < 10 times some exponent of 10. For example: 8.23 * 10^^4^^ is in scientific notation. Decimals can be stored in 32 bits or 64 bits. 
+
+In a 32bit float, we have 1 bit for the sign (positive or negative), 23 bits for the significant figures (7 digits) and 8 bits for the exponent. 
+
+In a 64bit double we have 1 bit for the sign (positive or negative), 52 bits for the significant figures (16 digits) and 11 bits for the exponent. 
+
+Data type| Number of bits | Range
+-|-|-|-|-
+float| 32 bits | 3.4e−038 to 3.4e+038
+double| 64 bits| 1.7e−308 to 1.7e+308
+
+## Example
+[[[[
+double x = 1.0/4.0;
+double y = 1.78e5;
+double z = -10.535246;
+]]]]

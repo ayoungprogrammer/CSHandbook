@@ -1,0 +1,18 @@
+## Introduction
+
+An integer is any number that does not contain decimals. It is stored as binary number in memory. For example: 0, -5, 6 are integers.
+
+Data type| Number of bits | Range
+-|-|-|-
+byte|8 bits| -128 to 127
+short|16 bits | -32,768 to 32,767
+int| 32 bits | −2,147,483,648 to 2,147,483,647
+long| 64 bits | −9,223,372,036,854,775,808 to 9,223,372,036,854,755,807
+
+## Example
+
+[[[[
+short x = 5;
+int y = 10;
+long z = 100;
+]]]]

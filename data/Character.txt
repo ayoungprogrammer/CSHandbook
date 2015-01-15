@@ -1,0 +1,9 @@
+## Introduction
+
+A character is any letter or symbol. For example: 'a','B','8','!'.
+
+Characters are usually stored as a number and then displayed as a character by the computer. An encoding is a computer translation from a number to a character. We store simple characters such as lower case and upper case letters, numbers and common punctuation, in 8 bits (0-255) and we can use it to encompass the English language. For these 8 bits, we use an encoding called ASCII. For example: '0' is 48 and 'B' is 66. There are other encodings like Unicode which uses more bits to convert to more languages such as Chinese or Russian. For the most part, we will just use ASCII.
+
+Data type| Number of bits | Range
+-|-|-|-
+char| 8 bits | 256 bits
