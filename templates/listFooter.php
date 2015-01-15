@@ -37,16 +37,16 @@
 
 </script>
 
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({},{},{});
-</script>
-
 <!--<script type="text/javascript" src="./public_html/js/responsive_table.js"></script>-->
 <script type="text/javascript" src="./public_html/js/side_nav.js"> </script>
 <!--<script type="text/javascript" src="./public_html/js/responsive_nav.js"></script>-->
 <script type="text/javascript" src="./public_html/js/nested_nav.js"></script>
 
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({},{},{});
+</script>
+
 
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-529b146b608ba8a6" async="async"></script>
