@@ -30,10 +30,15 @@
         <div class="horzadbox">
           <!--<p><b>Advertisement:</b></p>-->
           <!-- CS Handbook Leaderboard -->
+          <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <!-- CS Handbook Leaderboard -->
           <ins class="adsbygoogle"
                style="display:inline-block;width:728px;height:90px"
                data-ad-client="ca-pub-3675316136020357"
                data-ad-slot="7523509425"></ins>
+          <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
       </div>
         <?php echo $body; ?>
         <!-- Go to www.addthis.com/dashboard to customize your tools -->
@@ -49,6 +54,9 @@
                style="display:inline-block;width:300px;height:250px"
                data-ad-client="ca-pub-3675316136020357"
                data-ad-slot="7395961422"></ins>
+          <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
         </div>
     </main>
 

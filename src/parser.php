@@ -61,7 +61,9 @@ function parse($str){
 	$str = preg_replace('/<\/section>/','</section><div class="horzadbox"><ins class="adsbygoogle"
              style="display:inline-block;width:728px;height:90px"
              data-ad-client="ca-pub-3675316136020357"
-             data-ad-slot="4442495028"></ins></div>',$str,1);
+             data-ad-slot="4442495028"></ins></div><script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>',$str,1);
 
 	return $str;
 }

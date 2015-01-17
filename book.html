@@ -1,0 +1,1657 @@
+<section><h2>Introduction</h2>
+
+<p>The Computer Science handbook is a handbook designed to explain algorithms and data structures in way that anyone can understand. Many websites (eg Wikipedia) contain lengthy and wordy explanations that are full of technical jargon. We have tried our hardest to simplify all language to make it easy to read without any math or computer science background. We hope to share our knowledge with you and we ask only one thing from you. You must learn something before you leave!</p>
+
+</section><div class="horzadbox"><ins class="adsbygoogle"
+             style="display:inline-block;width:728px;height:90px"
+             data-ad-client="ca-pub-3675316136020357"
+             data-ad-slot="4442495028"></ins></div><section><h2><a href="./Format" target="_blank">Format</a></h2>
+
+<p>Each article with have multiple sections to help you understand the content.</p>
+
+<hr><h3>Introduction</h3>
+
+<p>The introduction section gives a brief overview of what the article is about. It will usually come with a prerequisite section which will contain topics that will be recommended to have been read before the article.</p>
+
+<hr><h3>Implementation</h3>
+
+<p>The implementation section will be an implementation of the article in Java. It is recommended that you try to implement things yourself first before looking at the implementation. If you truly understand the concept, then you will never have to memorize a single line of code. The code will come from your understanding of how it works.</p>
+
+<hr><h3>Applications</h3>
+
+<p>The applications section will be about real world applications of the concept that show why the concept is important.</p>
+
+<hr><h3>Exercises</h3>
+
+<p>The exercises section contains practice problems to test if you truly understand the concept. Many of these questions come from real interview questions.</p>
+</section><section><h2>Introduction</h2>
+
+<p>There are some fundamental topics about writing computer programs that we must learn before we can move on to the basic theory.</p>
+
+</section><div class="horzadbox"><ins class="adsbygoogle"
+             style="display:inline-block;width:728px;height:90px"
+             data-ad-client="ca-pub-3675316136020357"
+             data-ad-slot="4442495028"></ins></div><section><h2><a href="./Basics" target="_blank">Basics</a></h2>
+
+<p>First we must learn how to write a basic Java program with control structures and variables.</p>
+
+<hr><h3><a href="./Data_Types" target="_blank">Data Types</a></h3>
+
+<p>We use closets or drawers to store our clothes and garages to store our cars. Similarly, we store different types of data in different kinds of data types. Picking the right data type for the type of information is important. Most programming languages will support these data types.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Data type</th>
+  <th>Number of bits</th>
+  <th>Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>boolean</td>
+  <td>1 bit</td>
+  <td>true or false</td>
+</tr>
+<tr>
+  <td>byte</td>
+  <td>8 bits</td>
+  <td>-128 to 127</td>
+</tr>
+<tr>
+  <td>short</td>
+  <td>16 bits</td>
+  <td>-32,768 to 32,767</td>
+</tr>
+<tr>
+  <td>int</td>
+  <td>32 bits</td>
+  <td>−2,147,483,648 to 2,147,483,647</td>
+</tr>
+<tr>
+  <td>long</td>
+  <td>64 bits</td>
+  <td>−9,223,372,036,854,775,808 to 9,223,372,036,854,755,807</td>
+</tr>
+<tr>
+  <td>char</td>
+  <td>8 bits</td>
+  <td>256 bits</td>
+</tr>
+<tr>
+  <td>float</td>
+  <td>32 bits</td>
+  <td>3.4e−038 to 3.4e+038</td>
+</tr>
+<tr>
+  <td>double</td>
+  <td>64 bits</td>
+  <td>1.7e−308 to 1.7e+308</td>
+</tr>
+</tbody>
+</table>
+
+<hr><h3><a href="./Arithmetic_Operations" target="_blank">Arithmetic Operations</a></h3>
+
+<table>
+<thead>
+<tr>
+  <th>Operation</th>
+  <th>Description</th>
+  <th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>z = x + y</td>
+  <td>Addition</td>
+  <td>z = 1 + 2,  z = 3</td>
+</tr>
+<tr>
+  <td>z = x - y</td>
+  <td>Subtraction</td>
+  <td>z = 3 - 1, z = 2</td>
+</tr>
+<tr>
+  <td>z = x * y</td>
+  <td>Multiplication</td>
+  <td>z = 3 * 2, z = 6</td>
+</tr>
+<tr>
+  <td>z = x / y</td>
+  <td>Integer division</td>
+  <td>z = 5 / 2, z = 2 or z = 9 / 3, z = 3</td>
+</tr>
+<tr>
+  <td>z = x % y</td>
+  <td>Modulus (or remainder)</td>
+  <td>z = 5 % 3, z = 2 or z = 6 % 2, z = 0</td>
+</tr>
+<tr>
+  <td>x++</td>
+  <td>Increment by 1</td>
+  <td>x=5, x++, x = 6</td>
+</tr>
+<tr>
+  <td>x--</td>
+  <td>Decrement by 1</td>
+  <td>x=5, x--, x = 4</td>
+</tr>
+</tbody>
+</table>
+
+<hr><h3><a href="./Control_Structures" target="_blank">Control Structures</a></h3>
+
+<p>If statement:</p>
+
+<pre class="prettyprint linenums ">
+if (expression){
+  do action;
+}
+</pre>
+
+<p>Loops:</p>
+
+<pre class="prettyprint linenums ">
+while(expression){
+  do action;
+}
+</pre>
+
+</section><section><h2><a href="./Runtime_and_Memory" target="_blank">Runtime and Memory</a></h2>
+
+<p>Next, we analyze how long a program will take to perform a calculation and how much memory a program will used based on the inputs.</p>
+
+</section><section><h2><a href="./Boolean_Algebra" target="_blank">Boolean Algebra</a></h2>
+
+</section><section><h2><a href="./Logic" target="_blank">Logic</a></h2>
+</section><section><h2>Introduction</h2>
+
+<p><strong>Next</strong>: <a href="./Advanced_Recursion" target="_blank">Advanced Recursion</a></p>
+
+<p>Recursion is process that repeats itself in a similar way. Anything that has its definition nested inside itself is considered to be recursive. For example GNU stands for GNU not Unix!. Expanding this acronym gives us ((GNU not Unix) not Unix!). As you can see this will go on forever and GNU's definition is nested inside itself so it is recursive. The Fibonacci sequence is also recursive: F(n) = F(n-1)+F(n-2). Inside the function F, we see two more F's!</p>
+
+<p>In computer science infinite looping is bad because computers do not know how to terminate so we need some way to stop it. We will call a stopping point the base case. A base case is the case where the recursion will stop. Everything must eventually reduce to a base case. For the Fibonacci sequence, the base case is F(0) = 1 and F(1) = 1 and we can see that for all N&gt;1, the Fibonacci sequence will reach the base case.</p>
+
+<p>So for something to be recursive in computer science, it needs:</p>
+
+<ul>
+<li>a recursive definition (contained in itself) and </li>
+<li>a base case that all valid inputs will eventually reach</li>
+</ul>
+
+<p>Template for recursion:</p>
+
+<pre class="prettyprint linenums ">
+recursion(parameter)
+    if base_case (parameter):
+        stop
+    recursion( operation(parameter) )
+</pre>
+
+<ul>
+<li><em>recursion</em> is the recursive function</li>
+<li><em>base_case</em> is the check if the parameter has reached the base case</li>
+<li><em>operation</em> reduces the parameters towards the base case</li>
+</ul>
+
+</section><div class="horzadbox"><ins class="adsbygoogle"
+             style="display:inline-block;width:728px;height:90px"
+             data-ad-client="ca-pub-3675316136020357"
+             data-ad-slot="4442495028"></ins></div><section><h2>Factorial</h2>
+
+<p>Let's look at a simple recursive function: factorial function.</p>
+
+<p>1! = 1</p>
+
+<p>n! = 1 * 2 * 3 .... n.</p>
+
+<p>Or we could write it as n! = (n-1)! * n. We now see that in this form, the factorial function is defined within itself which makes it recursive. Our base case is 1! = 1.</p>
+
+<p>Example:</p>
+
+<p>4!</p>
+
+<p>= 3! * 4</p>
+
+<p>= 2! * 3 * 4</p>
+
+<p>= 1! * 2 * 3 * 4</p>
+
+<p>= 1 * 2 * 3 * 4</p>
+
+<p>= 24</p>
+
+<hr><h3>Formalization</h3>
+
+<pre class="prettyprint linenums lang-html">
+Let f(n) be the nth factorial number where n is a positive integer.
+
+Base case:
+f(1) = 1
+
+Recurrence:
+f(n) = f(n-1) * n
+
+Example:
+f(4) 
+= f(3) * 4
+= f(2) * 3 * 4
+= f(1) * 2 * 3 * 4  [Base Case]
+= 1 * 2 * 3 * 4
+= 24
+</pre>
+
+<hr><h3>Implementation</h3>
+
+<pre class="prettyprint linenums ">
+int factorial(int n){
+   if(n == 1)return 1;
+   return factorial(n - 1) * n;
+}
+</pre>
+
+</section><section><h2>Sum of digits of a string</h2>
+
+<p>We can use recursion in many places and we can apply it to simple problems that you probably have not thought about. Summing the digits of a string can be done using simple loop but we can also use recursion to do it.</p>
+
+<p>Let's say we have the string '23528'. The total is equal to the first digit + the sum of the rest of the digits. 2 + '3528'. We can do the exact same thing for the rest of the digits: the second digit + the sum of the rest of the digits and keep doing this until we have no more digits.</p>
+
+<ul>
+<li>'23528'</li>
+<li>'3528' + 2</li>
+<li>'528' + 5</li>
+<li>'28' + 10</li>
+<li>'8' + 12</li>
+<li>'' + 20</li>
+<li>20</li>
+</ul>
+
+<hr><h3>Formalization</h3>
+
+<pre class="prettyprint linenums lang-html">
+Let sum(string) be the sum of digits in a string
+Let n be the length of the string
+
+For simplicity, let string[x..y] be the substring of the string from index x to index y. The starting index will be 1.
+Example: 
+string = 'abcd'.
+string[1..3] = 'abc'
+
+Base case:
+sum(empty) = 0
+
+Recurrence:
+sum(string) = sum(string[2..n]) + int(string[1])
+
+Example:
+sum('23528')
+= sum('3528') + 2
+= (sum('528') + 3) + 2
+= ((sum('28') + 5) + 3) + 2
+= (((sum('8') + 2) + 5) + 3) + 2
+= ((((sum('') + 8) + 2) + 5) + 3) + 2
+= ((((0 + 8) + 2) + 5) + 3) + 2
+= 20
+</pre>
+
+<hr><h3>Implementation</h3>
+
+<pre class="prettyprint linenums ">
+int sum(string str){
+   int n = str.length();
+   if(n == 0){
+       return 0;
+    }
+   else{
+     int charToNum = (str.charAt(0)-'0');
+     return sum(str.substring(1,n)) + charToNum;
+   }
+}
+sum('23528');
+</pre>
+
+</section><section><h2>Count</h2>
+
+<p>Let's say we have an string of N characters and we want to find the number of times the letter 'c' appears. This time we need to add some logic to the problem.</p>
+
+<p>If the first letter of the string is a 'c', then we can add 1 to the count. Otherwise, we don't add anything. We can do the exact same thing for the substring without the first letter. If the second letter of the string is a 'c', we add 1 other we don't add anything etc.</p>
+
+<p>For example we have the string 'cacaec'. Since the first letter is a 'c' we add 1 to the count. Then we remove the first letter and get 'acaec', the first letter is not a 'c' so we don't add to the count. We keep reducing this way until we get an empty string and we return the count.</p>
+
+<ul>
+<li>'cacaec'</li>
+<li>'acaec' +1</li>
+<li>'caec' + 1</li>
+<li>'aec' + 2</li>
+<li>'ec' + 2</li>
+<li>'c'  + 2</li>
+<li>'' + 3</li>
+<li>3</li>
+</ul>
+
+<hr><h3>Formalization</h3>
+
+<pre class="prettyprint linenums lang-html">
+Let count(string) be the number of 'c's in the string
+
+For simplicity, let string[x..y] be the substring of the string from x to y.
+Example: 
+string = 'abcd'.
+string[1..3] = 'bcd'
+
+Base case:
+count(empty) = 0
+
+Recurrence:
+count(string) =  {if string[n]=='c'  count(string[2..n])+1
+                 {else                    count(string[2..n])
+
+Example:
+count('cacaec')
+= count('acaec')+1
+= (count('caec')+0)+1
+= ((count('aec')+1)+0)+1
+= (((count('ec')+0)+1)+0)+1
+= ((((count('c')+0)+0)+1)+0)+1
+= ((((count('')+1)+0)+0)+1)+0)+1
+= ((((0+1)+0)+0)+1)+0)+1
+= 3
+</pre>
+
+<hr><h3>Implementation</h3>
+
+<pre class="prettyprint linenums ">
+int count3(string str){
+   int n = str.length()
+   if(n == 0)return 0;
+   if(str.charAt(0) == 'c'){
+      return count3( str.substring(1, n) ) + 1;
+   }
+   else{
+     return count3( str.substring(1, n) );
+   }
+}
+
+count3('cacaec');
+
+</pre>
+
+</section><section><h2>Calculate Exponential</h2>
+
+<p>Let's say we wanted to find x<sup>n</sup> and for the sake of this problem we want the last four digits of that number. Note that 267<sup>4</sup> mod 10000 = (267<sup>3</sup> mod 10000) * 267 mod 10000. This is important because it means we can take the last 4 digits in each step instead of having to compute the giant exponent and then taking the last 4 digits. We can do this problem very easily by using a simple loop, but we can do better by using recursion. By definition of exponents, x<sup>a</sup> * x<sup>a</sup> = x<sup>2a</sup>. Using this we can see that if n is divisible by 2, then x<sup>n</sup> = x<sup>n/2</sup> * x<sup>n/2</sup>.</p>
+
+<p>For example 5<sup>4</sup> = 5<sup>2</sup> * 5<sup>2</sup></p>
+
+<p>But let's take a look at x<sup>n/2</sup>. If n is even we can do the exact same thing! x<sup>n/2</sup> = x<sup>n/4</sup> * x<sup>n/4</sup>. We have a recurrence relation and the base case is simple: if x<sup>1</sup> = x.</p>
+
+<p>But what if n is odd and not 1? Then we have x<sup>n</sup> = x<sup>n/2</sup> * x<sup>n/2</sup> * x and we can now solve this problem using recursion.</p>
+
+<hr><h3>Formalization</h3>
+
+<pre class="prettyprint linenums lang-html">
+Let exp(b,n) be b^n
+
+Base case:
+exp(b,1) = 1  [Since b^1 = b]
+
+Recurrence:
+exp(b,n) = {if n divisible by 2    exp(b,n/2)^2 % 10000
+           {else                   (exp(b,n/2)^2)*b % 10000
+
+Example: (for simplicity, leave out the modulus)
+exp(3,10)
+= exp(3,5)^2
+= (exp(3,2)^2))*3)^2
+= (((exp(3,1)^2)*3)^2) [Base case]
+= (((3^2)^2)*3)^2)
+= ((9^2)*3)^2)
+= (81*3)^2
+= (243)^2
+= 59049
+</pre>
+
+<hr><h3>Implementation</h3>
+
+<pre class="prettyprint linenums ">
+int exponent(int b,int n){
+   if(n==1)return b;
+   if(n%2==0){
+     int x = exponent(b,n/2);
+     return (x * x)%10000;
+   }
+   else{
+     int x = exponent(b,n/2);
+     return (x*x*b)%10000;
+   }
+}
+
+</pre>
+
+</section><section><h2>Exercises</h2>
+
+<ol>
+<li>Given an array of N integers, write a recursive function to get the sum</li>
+<li>Given a string S, write a recursive function to determine if it is a palindrome.</li>
+<li>Given a number N, write a recursive function to output the number in binary.</li>
+<li>Given a string S, write a recursive function to return a reversed string</li>
+</ol>
+</section><section><h2>Introduction</h2>
+
+<p>Sorting is arranging an array of n elements in either increasing or decreasing order by some property. It is very useful in computer science for efficiency in other algorithms that usually require a search.</p>
+
+<p>A stable sort is a sort that can preserve sorting of other properties. For example if we have</p>
+
+<p>(3,G), (1,G), (3, A), (6 K), (1,B)</p>
+
+<p>and we want to sort by the first property in increasing order, we will have:</p>
+
+<p>(1, G) (1,B) (3,G), (3,A) (6 K).</p>
+
+<p>If we sort again by the second property we have (1,B) (3, A) (1, G) (3, G) (6,K) then the sort is stable as the first sort is preserved. However if we had (1,B) (3, A) (3, G) (1, G) (6, K), then the sort would be unstable.</p>
+
+</section><div class="horzadbox"><ins class="adsbygoogle"
+             style="display:inline-block;width:728px;height:90px"
+             data-ad-client="ca-pub-3675316136020357"
+             data-ad-slot="4442495028"></ins></div><section><h2>Slow Sorts</h2>
+
+<p>Slow sorts are sorts that have the runtime of O(n<sup>2</sup>). Although they should almost never be used, it is good to know how to implement a simple sort.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><a href="./Bubble_Sort" target="_blank">Bubble Sort</a></td>
+  <td>O(n<sup>2</sup>)</td>
+</tr>
+<tr>
+  <td><a href="./Selection_Sort" target="_blank">Selection Sort</a></td>
+  <td>O(n<sup>2</sup>)</td>
+</tr>
+<tr>
+  <td><a href="./Insertion_Sort" target="_blank">Insertion Sort</a></td>
+  <td>O(n<sup>2</sup>)</td>
+</tr>
+</tbody>
+</table>
+
+</section><section><h2>Fast Sorts</h2>
+
+<p>Fast sorts are sorts that have a runtime of O(nlogn). They are very fast and you will usually use merge sort or quick sort for sorting in the real world. Most language will have their own implementation of a quick sort or merge sort in their standard libraries. 
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><a href="./Heap_Sort" target="_blank">Heap Sort</a></td>
+  <td>O(nlogn)</td>
+</tr>
+<tr>
+  <td><a href="./Merge_Sort" target="_blank">Merge Sort</a></td>
+  <td>O(nlogn)</td>
+</tr>
+<tr>
+  <td><a href="./Quick_Sort" target="_blank">Quick Sort</a></td>
+  <td>O(nlogn)</td>
+</tr>
+</tbody>
+</table></p>
+
+</section><section><h2>Super Slow Sorts</h2>
+
+<p>Just for fun, these are some silly sorts that you should never use.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><a href="./Bozo_Sort" target="_blank">Bozo Sort</a></td>
+  <td>O(?)</td>
+</tr>
+<tr>
+  <td><a href="./Permutation_Sort" target="_blank">Permutation Sort</a></td>
+  <td>O(n!)</td>
+</tr>
+<tr>
+  <td><a href="./Miracle_Sort" target="_blank">Miracle Sort</a></td>
+  <td>O(?)</td>
+</tr>
+</tbody>
+</table>
+
+</section><section><h2>Exercises</h2>
+
+<ol>
+<li>Given two sorted arrays of N numbers, merge the two arrays into an single array of size 2N.</li>
+<li>Find the minimum number of swaps to sort an array</li>
+<li>Find the minimum number of adjacent swaps to sort an array</li>
+</ol>
+</section><section><h2>Introduction</h2>
+
+<p>Data structures are a way of storing data such that it can be used in an efficient way. Although many of these data structures are already built into various languages, it is important to understand how they work. By understanding the implementations we can have a sense of which data structure to use in different problems as well as determine how efficient they are.</p>
+
+<p>An <strong>abstract data type</strong> is a conceptual model for representing data. An abstract data type tells what it should do as opposed to how it should work. It will tell us what operations it should have but should not tell us how to implement them.</p>
+
+<p>For example, a bottle should be able to hold water and allow us to drink from. This tells us what it should do but we don't need to know how it works or how it is made. A plastic water bottle is an implementation of a bottle. It holds water in its interior and allows us to drink by unscrewing the cap and letting us pour water down our throat. A thermos is also an implementation of the bottle, it holds fluid inside it, but this thermos has a lid that can be popped open and water can come from it. A thermos and plastic water bottle are different implementations as they are made differently and used differently, but they fundamentally do what a bottle is supposed to do: store liquid, and provide a way to drink. A bottle does not actually exist, but types of bottles do.</p>
+
+<p><img src="./public_html/img/uploads/bottle.png"></p>
+
+<p>Some implementations of abstract data types are better than others for different purposes. For example plastic water bottles are very cheap whereas a thermos is more expensive but a thermos can hold hot water and keep it warm for a long period of time. When thinking of a implementation for an abstract data type we need to know what we need it for.</p>
+
+<p><img src="./public_html/img/uploads/adt.png"></p>
+
+<p>For more intermediate data structures, read the <a href="./Advanced_Data_Structures" target="_blank">advanced data structures</a> page.</p>
+
+</section><div class="horzadbox"><ins class="adsbygoogle"
+             style="display:inline-block;width:728px;height:90px"
+             data-ad-client="ca-pub-3675316136020357"
+             data-ad-slot="4442495028"></ins></div><section><h2><a href="./Arrays" target="_blank">Arrays</a></h2>
+
+<p>Imagine you had a row of parking spaces where each was labelled with a number. If you wanted to know what the license plate of a car at parking space 4 was, all you have to do is go to the parking space and read off the license plate. If you wanted to park your car at parking space 5, you would go to parking space 5 and put your car in there only if there was nothing there.</p>
+
+<p><img src="./public_html/img/uploads/array.png"></p>
+
+<p>Let's say that you had cars at parking spaces 1, 2, and 3. If you wanted to insert a new car at parking space 1 and keep the rest of the cars in the same order, you would have to shift the cars in the parking spaces from 1, 2 and 3 to 2, 3 and 4 by getting in each car and parking them in the new spaces which would take some time. This type of structure is an array.</p>
+
+<p><img src="./public_html/img/uploads/array2.png"></p>
+
+<p><img src="./public_html/img/uploads/array3.png"></p>
+
+<p>An <strong>array</strong> is the most basic data structure that stores elements of the same type in a fixed block. The fact that it is in one block and the same type is important because it allows accessing elements very quickly if you have the index. All you have to do is go to the index and retrieve the element. However, inserting elements in the array is slow because you would have to shift all the elements and also if you want to shift past the fixed size you will get an error. (Imagine the parking spaces are full and you wanted to insert a car somewhere, there will still be one car that will have no parking space).</p>
+
+<p>Arrays can be multidimensional meaning you can have an array of array of objects. (Imagine a parking lot with multiple rows of parking spaces).</p>
+
+<table>
+<thead>
+<tr>
+  <th>Operation</th>
+  <th>Create</th>
+  <th>Get</th>
+  <th>Set</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Time Complexity</td>
+  <td>O(n)</td>
+  <td>O(1)</td>
+  <td>O(1)</td>
+</tr>
+</tbody>
+</table>
+
+</section><section><h2><a href="./Stack" target="_blank">Stack</a></h2>
+
+<p>Imagine a stack of plates at a buffet, the plates are taken from the top and are also replaced from the top. The first plate to go in will be the last plate to come out. The last plate to go in will be the first to come out. This structure is called a stack.</p>
+
+<p>A <strong>stack</strong> is an abstract data type with the property that it can remove and insert elements following a FILO (First In Last Out) structure. The first element to be inserted must be the last element to be removed and the last element to be inserted must be the first element to be removed. Sometimes, removal is called "pop" and insertion is called "push".</p>
+
+<p><img src="./public_html/img/uploads/stack.png"></p>
+
+<p><img src="./public_html/img/uploads/stack2.png"></p>
+
+<p>Stacks are used for function calls on the memory stack. Whenever a function is called, it is placed on the memory stack with its variables and when it is returning a value, it is popped off the stack.</p>
+
+<p>A stack is usually implemented as a <a href="./Vector" target="_blank">vector</a>.</p>
+
+<hr><h3><a href="./Vector" target="_blank">Vector</a></h3>
+
+<p>A vector is a stack that is implemented as an array. It is very similar to an array, but it is more flexible in terms of size. Elements are added and removed only from the end of the array. When more elements are added to the vector and the vector is at full capacity, the vector resizes itself and reallocates for 2*N space. When using an vector we can keep adding elements and let the data structure handle all the memory allocation.</p>
+
+<p><img src="./public_html/img/uploads/vector.png"></p>
+
+<p><img src="./public_html/img/uploads/vector2.png"></p>
+
+<p><img src="./public_html/img/uploads/vector4.png"></p>
+
+<table>
+<thead>
+<tr>
+  <th>Operation</th>
+  <th>Create</th>
+  <th>Get</th>
+  <th>Set</th>
+  <th>Push to back</th>
+  <th>Delete</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Time Complexity</td>
+  <td>O(n)</td>
+  <td>O(1)</td>
+  <td>O(1)</td>
+  <td>O(1)</td>
+  <td>O(n)</td>
+</tr>
+</tbody>
+</table>
+
+</section><section><h2><a href="./Queue" target="_blank">Queue</a></h2>
+
+<p>Imagine you are standing in line for a restaurant. Whoever is first in line will be served first and whoever is last in line will be served last. People can be served while more people join the line and the line may get very long because it takes a while to serve one person while more people join the queue. This is called a queue.</p>
+
+<p>A <strong>queue</strong> is an abstract data type with two functions, pop and push. Removal from the front is called "pop" or "dequeue". Insertion from the back is called "push" or "enqueue". A queue follows a First In First Out (FIFO) structure meaning the first element pushed should be the first element popped and the last element pushed should be the last element popped.</p>
+
+<p>Queues are often used for buffer systems, for example a text message service. The messages that arrive at the server first are relayed first and the messages that arrive later are relayed later. If there are too many text messages in the system such that the rate  texts are received overwhelm the number of texts that are sent the buffer may overflow and messages will get dropped. Most of the time this won't happen because the systems are designed to handle large loads, but if there were an emergency that caused everyone to start texting many texts could be dropped.</p>
+
+<p>Example of push:</p>
+
+<p><img src="./public_html/img/uploads/queue.png"></p>
+
+<p>Example of pop:</p>
+
+<p><img src="./public_html/img/uploads/queue2.png"></p>
+
+<hr><h3><a href="./Linked_List" target="_blank">Linked List</a></h3>
+
+<p>Imagine you had some train cars that were linked together where each was labelled on the inside with a letter. If you had to find a specific letter you would have to look inside the first train to check and then walk into the next train car to check the letter and so forth until you found the train car you wanted. If you wanted to insert a train car somewhere, all you would have to do it unlink the position where you wanted to insert it and then relink the new train car with the other cars. If you wanted to remove a train car all you would have to do is unlink that car from the other cars and then relink the cars that were adjacent to it. This sort of structure is called a linked list.</p>
+
+<p>A <strong>pointer</strong> is something that holds the memory location of another object.</p>
+
+<p>A <strong>linked list</strong> is similar to an array but it is different such that it is not stored in one block of data. Each element can be stored in a random place in memory but each element contains a pointer to the next element thus forming a chain of pointers. Think of a pointer as a link that links two train cars. Since the elements aren't in a block, accessing an element must be done by traversing the entire linked list by following each pointer to the next. However, this also allows insertion to be done more quickly by simply changing the point of the previous element and setting to the pointer of the current element to the next element. Deletion is also done by taking the previous element and changing its pointer to two elements ahead. In a linked list the links only go forward and you cannot move backward.</p>
+
+<p><img src="./public_html/img/uploads/linkedlist.png"></p>
+
+<p>A <strong>doubly linked list</strong> is a linked list that has pointers going backwards as well as forwards.</p>
+
+<p><img src="./public_html/img/uploads/doublelinkedlist.png"></p>
+
+<table>
+<thead>
+<tr>
+  <th>Operation</th>
+  <th>Get</th>
+  <th>Add at node</th>
+  <th>Delete at node</th>
+  <th>Add</th>
+  <th>Delete</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Time Complexity</td>
+  <td>O(n)</td>
+  <td>O(1)</td>
+  <td>O(1)</td>
+  <td>O(n)</td>
+  <td>O(n)</td>
+</tr>
+</tbody>
+</table>
+
+</section><section><h2><a href="./Trees" target="_blank">Trees</a></h2>
+
+<p>Trees are data structures that follow a hierarchy, each node has exactly one or zero parents and each node has children. Trees are recursive structures meaning that each child of a tree is also a tree. A tree within another tree is called a <strong>subtree</strong>.</p>
+
+<p>A <strong>child</strong> is a node that is below another node. A <strong>parent</strong> is a node that is above another node.</p>
+
+<p>The element at the top of the tree with no parents is called a <strong>root</strong>. The node at the bottom of the tree with no children is called a <strong>leaf</strong>.</p>
+
+<p>Each node can hold different kinds of information depending on the tree. A node can hold the children it has, the parent it has, a key associated with the node and a value associated with the node.</p>
+
+<p><img src="./public_html/img/uploads/tree.png"></p>
+
+<hr><h3><a href="./Binary_Tree" target="_blank">Binary Tree</a></h3>
+
+<p>A binary tree is a tree where each node has at most two children.</p>
+
+<p><img src="./public_html/img/uploads/binarytree.png"></p>
+
+</section><section><h2><a href="./Sets" target="_blank">Sets</a></h2>
+
+<p>Imagine you have a grocery list that you use to keep tracking of things you need to buy. You want to make sure there are no duplicate items in the list, you can add items to the list and that you can remove items from your list. This structure is similar to what a set does.</p>
+
+<p>Sets are abstract data types which are able to store values and are used for three operations: insertion, deletion and membership test.</p>
+
+<p>Insertion places an element into the set, deletion removes an element from the set and a <strong>membership</strong> test is checking whether an element exists within the set.</p>
+
+<hr><h3><a href="./Hash_Set" target="_blank">Hash Set</a></h3>
+
+<p>Hash sets are sets that use hashes to store elements. A hashing algorithm is an algorithm that takes an element and converts it to a smaller chunk called a <strong>hash</strong>. For example let our hashing algorithm be (x mod 10). So the hashes of 232, 217 and 19 are 2,7, and 9 respectively.</p>
+
+<p>For every element in a hash set, the hash is computed and elements with the same hash are grouped together and stored in a <a href="./Linked_List" target="_blank">linked list</a>. The linked list is called a <strong>bucket</strong>.</p>
+
+<p>If we want to check if an element already exists within the set, we first compute the hash of the element and then search through the linked list associated with the hash to see if the element is contained.</p>
+
+<p>Let use the example of the hashset of the elements of 3242, 3523, 123, 235 and 538. The hash set looks like this when computed:</p>
+
+<p><img src="./public_html/img/uploads/hashset.png"></p>
+
+<p>If we wanted to check if 7238 was in the hash set, we would get the hash (7238 mod 10 = 8). So we get the bucket associated with the hash 8 and we get the list of (538). When we iterate through this short list, we see that 7238 is not a member of the set.</p>
+
+<p>Similarly, if we wanted to insert 7238 into the hash set, we would check if it exists and if it did not we would append the element to the end of the bucket. For deletion we would find 7238 check if it existed in the set and remove it from the bucket.</p>
+
+<p>Hash sets are very efficient in all three set operations if a good hashing algorithm is used. When the objects are that being stored are large then hash sets are effective as a set.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Operation</th>
+  <th>Membership</th>
+  <th>Insertion</th>
+  <th>Deletion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Time Complexity</td>
+  <td>O(1)</td>
+  <td>O(1)</td>
+  <td>O(1)</td>
+</tr>
+</tbody>
+</table>
+
+<hr><h3><a href="./Tree_Set" target="_blank">Tree Set</a></h3>
+
+<p>A tree set is a set which stores the values in a <a href="./Binary_Search_Tree" target="_blank">binary search tree</a>. To store elements in a tree set, they must be able to be sorted by a property. To insert an element, it is added to the binary tree. To delete an element, it is removed from the binary tree. To check for membership, we do a binary search for the element in the binary tree.</p>
+
+<p><img src="./public_html/img/uploads/bst.png"></p>
+
+<p>The advantage of tree sets is that they are maintained in a sorted order.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Operation</th>
+  <th>Membership</th>
+  <th>Insertion</th>
+  <th>Deletion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Time Complexity</td>
+  <td>O(log n)</td>
+  <td>O(log n)</td>
+  <td>O(log n)</td>
+</tr>
+</tbody>
+</table>
+
+</section><section><h2><a href="./Maps" target="_blank">Maps</a></h2>
+
+<p>Imagine you had a English dictionary. If you look up a word, you can find it's definition and read it out. For example if you looked up the word 'cat' in the English dictionary, you would look through the dictionary alphabetically until you found the word 'cat' and then you would look at the definition: 'a feline animal'. If you really wanted to, you could also add your own words into the dictionary and the definitions of your words. This type of structure is called a map.</p>
+
+<p>Maps (also called dictionaries) are abstract data types that store pairs of key-values and can be used to look up values from the keys. The keys are like the words in an English dictionary and the definitions can be seen as the values. Maps are able to support insertion of key-value pairs, retrieve values from keys, and delete key-value pairs.</p>
+
+<hr><h3><a href="./Hash_Map" target="_blank">Hash Map</a></h3>
+
+<p>Hash maps use <a href="./Hash_Set" target="_blank">hash sets</a> to store the keys which then map to their values. The advantage of a hash map is that it is very fast but a disadvantage is that it is not sorted unlike a tree set.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Operation</th>
+  <th>Membership</th>
+  <th>Insertion</th>
+  <th>Deletion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Time Complexity</td>
+  <td>O(1)</td>
+  <td>O(1)</td>
+  <td>O(1)</td>
+</tr>
+</tbody>
+</table>
+
+<hr><h3><a href="./Tree_Map" target="_blank">Tree Map</a></h3>
+
+<p>Tree maps use <a href="./Tree_Set" target="_blank">tree sets</a> to store the keys which then maps to their values.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Operation</th>
+  <th>Membership</th>
+  <th>Insertion</th>
+  <th>Deletion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Time Complexity</td>
+  <td>O(log n)</td>
+  <td>O(log n)</td>
+  <td>O(log n)</td>
+</tr>
+</tbody>
+</table>
+
+</section><section><h2><a href="./Priority_Queue" target="_blank">Priority Queue</a></h2>
+
+<p>Consider a waiting list for lung donors. The patients are given a score when they are placed on the waiting list by how much they need a lung based on their whether they smoke, risk factors, age, expected time left etc. When a lung is available, the patient with the highest score will get removed from the waiting list. During this time, more patients could be added to the queue. The behaviour is similar to a queue but instead of the first person getting in the queue getting a lung first, the person with the highest score will get it. This means that if Sam has a score of 60 and gets placed in the queue after Bob who has a score of 40, Sam will get the lung first even though Bob was in the queue before him.</p>
+
+<p>A <strong>priority queue</strong> is an abstract data type with two operations: push and pop. Push adds an element into the priority queue and pop removes the highest or lowest element.</p>
+
+<p>A priority queue is usually implemented as a heap because it is the most efficient because of its structure.</p>
+
+<p><img src="./public_html/img/uploads/pqueue.png"></p>
+
+<p><img src="./public_html/img/uploads/pqueuepop.png"></p>
+
+<p><img src="./public_html/img/uploads/pqueuepush.png"></p>
+
+<hr><h3><a href="./Heap" target="_blank">Heap</a></h3>
+
+<p>Heaps are trees which have the property that a parent node must either be greater than all the elements in its left and right subtrees (a max heap) or less than all the elements in its left and right subtrees (a min heap). <a href="./Priority_Queue" target="_blank">Priority queue's</a> are most efficiently implemented as heaps.</p>
+
+<p><img src="./public_html/img/uploads/maxheap.png"></p>
+
+<table>
+<thead>
+<tr>
+  <th>Operation</th>
+  <th>Push</th>
+  <th>Pop</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Time Complexity</td>
+  <td>O(log n)</td>
+  <td>O(log n)</td>
+</tr>
+</tbody>
+</table>
+</section><section><h2>Introduction</h2>
+
+<p><strong>Next</strong>: <a href="./Advanced_Graph_Theory" target="_blank">Advanced Graph Theory</a></p>
+
+<p>Graphs are a set of objects where some pairs of objects  called <strong>nodes</strong> or <strong>verticies</strong> are usually connected by links called <strong>edges</strong>. The nodes here can be seen numbered from 1 to 6. There are edges connecting these various nodes.</p>
+
+<p><img src="./public_html/img/uploads/graph.png"></p>
+
+<p>A <strong>undirected</strong> graph is a graph where an edge from A to B is the same as the edge from B to A for all edges. The above graph is undirected.</p>
+
+<p>A <strong>directed</strong> or <strong>bidirectional</strong> graph is a graph where edges have direction meaning if there is an edge from A to B then there may not be an edge from B to A.</p>
+
+<p><img src="./public_html/img/uploads/digraph.png"></p>
+
+<p>A <strong>subgraph</strong> is a subset of edges and vertices within a graph.</p>
+
+<p>A <strong>directed acyclic graph</strong> (DAG) is a graph with no directed cycles (see topological sorting).</p>
+
+<p>A <strong>weighted</strong> graph is a graph that contains weights or values assigned to each edge or node. Usually these weights act as the cost to reach/use that node.</p>
+
+</section><div class="horzadbox"><ins class="adsbygoogle"
+             style="display:inline-block;width:728px;height:90px"
+             data-ad-client="ca-pub-3675316136020357"
+             data-ad-slot="4442495028"></ins></div><section><h2>Representations</h2>
+
+<p>A graph can be represented as a adjacency matrix or a adjacency list.</p>
+
+<hr><h3><a href="./Adjacency_Matrix" target="_blank">Adjacency Matrix</a></h3>
+
+<p><img src="./public_html/img/uploads/graph.png"></p>
+
+<p>Adjacency matrixes use a matrix to store the edges between nodes. A 1 means a connection between x and y and a 0 means no connection. The edge weight could also be used instead of a 1. O(n<sup>2</sup>) where n is the number of nodes. For example the matrix for graph below is:</p>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>1</th>
+  <th>2</th>
+  <th>3</th>
+  <th>4</th>
+  <th>5</th>
+  <th>6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td>0</td>
+  <td>1</td>
+  <td>0</td>
+  <td>0</td>
+  <td>1</td>
+  <td>0</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td>1</td>
+  <td>0</td>
+  <td>1</td>
+  <td>0</td>
+  <td>1</td>
+  <td>0</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td>0</td>
+  <td>1</td>
+  <td>0</td>
+  <td>1</td>
+  <td>0</td>
+  <td>0</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td>0</td>
+  <td>0</td>
+  <td>1</td>
+  <td>0</td>
+  <td>1</td>
+  <td>1</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td>1</td>
+  <td>1</td>
+  <td>0</td>
+  <td>1</td>
+  <td>0</td>
+  <td>0</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td>0</td>
+  <td>0</td>
+  <td>0</td>
+  <td>1</td>
+  <td>0</td>
+  <td>0</td>
+</tr>
+</tbody>
+</table>
+
+<hr><h3><a href="./Adjacency_List" target="_blank">Adjacency List</a></h3>
+
+<p><img src="./public_html/img/uploads/graph.png"></p>
+
+<p>Adjacency lists use an array of <a href="./Linked_Lists" target="_blank">linked lists</a> to store all the edges. At x, you have a linked list of nodes that connect to that node. 1 connects to nodes 2 and 5, 2 connects to 1, 3 and 5 and so forth. O(m) storage where m is number of edges.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Node</th>
+  <th>edges</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td>2, 5</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td>1 3 5</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td>2 4</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td>3 5 6</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td>1 2 4</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td>4</td>
+</tr>
+</tbody>
+</table>
+
+</section><section><h2>Tree</h2>
+
+<p>A tree is a special graph with no cycles. It has the special property that there will be only one path from one node to another node.</p>
+
+<p><img src="./public_html/img/uploads/treegraph.png"></p>
+
+<p>A <strong>subtree</strong> is a child tree of a tree.</p>
+
+<p>Note that trees have two meanings in computer science. It can either refer to a <a href="./Tree" target="_blank">tree data structure</a> or it can refer to a tree in graph theory.</p>
+
+<hr><h3>Spanning Tree</h3>
+
+<p>A spanning tree of a graph is a connected tree that spans all the nodes of the graph.</p>
+
+<p>A <a href="./Minimum_Spanning_Tree" target="_blank">minimum spanning tree</a> is the spanning tree that requires the minimum of some property such as total weight or total edges.</p>
+
+<p>Spanning tree algorithms are essential in networking to ensure no loops occur when sending data through a network.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Algorithm</th>
+  <th>Desc</th>
+  <th>Time</th>
+  <th>Space</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><a href="./Prim's" target="_blank">Prim's</a></td>
+  <td>Using greedy method</td>
+  <td>O(n log n)</td>
+  <td>O(n<sup>2</sup>)</td>
+</tr>
+<tr>
+  <td><a href="./Kruskal" target="_blank">Kruskal</a></td>
+  <td>Using connected components</td>
+  <td>O(n log n)</td>
+  <td>O(n<sup>2</sup>)</td>
+</tr>
+</tbody>
+</table>
+
+</section><section><h2>Shortest Path</h2>
+
+<p>The shortest path is defined as a path from one node to another while trying to minimize a certain property (least number of nodes, smallest total weight). However, shortest paths may have negative weights which leads to cycles.</p>
+
+<hr><h3>Algorithms</h3>
+
+<table>
+<thead>
+<tr>
+  <th>Algorithm</th>
+  <th>Desc</th>
+  <th>Time</th>
+  <th>Space</th>
+  <th>Detect cycles?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><a href="./Floyd_Warshall" target="_blank">Floyd Warshall</a></td>
+  <td>Computes shortest path between all pairs of nodes</td>
+  <td>O(n<sup>3</sup>)</td>
+  <td>O(n<sup>2</sup>)</td>
+  <td>Yes</td>
+</tr>
+<tr>
+  <td><a href="./Bellman_Ford" target="_blank">Bellman Ford</a></td>
+  <td>Computes shortest path between a pairs of nodes</td>
+  <td>O(n<sup>2</sup>)</td>
+  <td>O(n)</td>
+  <td>Yes</td>
+</tr>
+<tr>
+  <td><a href="./Dijkstra's" target="_blank">Dijkstra's</a></td>
+  <td>Computes shortest path between a pair of nodes using the Greedy method</td>
+  <td>O(n log n)</td>
+  <td>O(n log n)</td>
+  <td>No</td>
+</tr>
+</tbody>
+</table>
+
+</section><section><h2><a href="./Cycle_detection" target="_blank">Cycle detection</a></h2>
+
+<p>A cycle occurs when you start at a node and you can reach the same node from a path.</p>
+
+<p><img src="./public_html/img/uploads/cycle.png"></p>
+
+<p><img src="./public_html/img/uploads/cycle2.png"></p>
+
+<p>Note that <a href="./Trees" target="_blank">trees</a> cannot contain cycles.</p>
+
+<p>A cycle can be detected using a <a href="./Depth_First_Search" target="_blank">depth first search</a> on each unvisited node to check if the DFS tree has a backwards edge.</p>
+
+</section><section><h2><a href="./Topological_Sorting" target="_blank">Topological Sorting</a></h2>
+
+<p>A topological sort or topological order of a directed graph is an order in which every node will come after its ancestors.</p>
+
+<p><img src="./public_html/img/uploads/topsort.png"></p>
+
+<p>For example topological orders could be:</p>
+
+<ul>
+<li>(A, B, C, D, E, F G)</li>
+<li>(B, A, D, C, F, E, G)</li>
+</ul>
+
+<p>But (B, A, C, F, D, E, G) is not a topological ordering because D is an ancestor of F and it comes after F.</p>
+
+</section><section><h2>Strongly Connected</h2>
+
+<p>A graph is strongly connected if all nodes in the graph follows the conditions:</p>
+
+<ul>
+<li>There exists a path from that node to every other node</li>
+<li>All other nodes can visit that node.</li>
+</ul>
+
+<p>In other words, all nodes in a strongly connected graph can visit each other.</p>
+
+<p><img src="./public_html/img/uploads/strongconnected.png"></p>
+
+<p>To determine if a graph is strongly connected, we first pick a node and check that we can reach all nodes from it and this checks the first property. To check the second property, we can reverse all the edges of a node (A-&gt;B becomes B-&gt;A) and then check again that we can reach all nodes from the same node.</p>
+
+</section><section><h2><a href="./Connected_Components" target="_blank">Connected Components</a></h2>
+
+<p>A connected component is a subgraph where all the vertices in the subgraph connect to each other. Finding the number of distinct connected components can be done using a <a href="./Breadth_First_Search" target="_blank">breadth first search</a> or a <a href="./Depth_First_Search" target="_blank">depth first search</a>.</p>
+
+<p><img src="./public_html/img/uploads/connectedcomponents.png"></p>
+
+<p><img src="./public_html/img/uploads/connectedcomponents8.png"></p>
+
+<hr><h3><a href="./Strongly_Connected_Components" target="_blank">Strongly Connected Components</a></h3>
+
+<p>A strongly connected component is a connected component but has the property that each vertex can visit any other vertex in the strongly connected component from any path.</p>
+</section><section><h2>Introduction</h2>
+
+<p>Searches are used to find solutions to problems and there many ways to search for a solution. Here are some generic searches that can be applied to many different problems.</p>
+
+</section><div class="horzadbox"><ins class="adsbygoogle"
+             style="display:inline-block;width:728px;height:90px"
+             data-ad-client="ca-pub-3675316136020357"
+             data-ad-slot="4442495028"></ins></div><section><h2><a href="./Binary_Search" target="_blank">Binary Search</a></h2>
+
+<p>Binary search is a type of search that is able to find an object in a sorted list in O(log n). In binary search we first start at the middle element and we keep trying to halve the problem until we find the element we need.</p>
+
+<p><img src="./public_html/img/uploads/binarysearch.png"></p>
+
+</section><section><h2><a href="./Ternary_Search" target="_blank">Ternary Search</a></h2>
+
+<p>Ternary search is a type of search that finds the maximum value of a increasing or decreasing function by breaking it into 3 parts.</p>
+
+<p><img src="./public_html/img/uploads/ternarysearch.png"></p>
+
+<p><img src="./public_html/img/uploads/ternarysearch2.png"></p>
+
+<p><img src="./public_html/img/uploads/ternarysearch3.png"></p>
+
+<p><img src="./public_html/img/uploads/ternarysearch7.png"></p>
+
+</section><section><h2><a href="./Depth_First_Search" target="_blank">Depth First Search</a></h2>
+
+<p>Depth first search or DFS is a method of search that goes as far as possible before backtracking. DFS is implemented using a <a href="./Stack" target="_blank">stack</a> and most of the time it uses an function stack for recursion.</p>
+
+<p><img src="./public_html/img/uploads/dfs-preorder.png"></p>
+
+</section><section><h2><a href="./Breadth_First_Search" target="_blank">Breadth First Search</a></h2>
+
+<p>Breadth first search or BFS is a method of search that takes the closest things first then the farthest. BFS is implemented with a <a href="./Queue" target="_blank">queue</a>.</p>
+
+<p><img src="./public_html/img/uploads/bfs.png"></p>
+
+</section><section><h2><a href="./Flood_Fill" target="_blank">Flood Fill</a></h2>
+
+<p>Flood fill is a search that fills a grid. It can be implemented with either DFS or BFS. We first start at some starting position and then we expand in the directions that we can (eg: up, left, down, right).</p>
+
+<p><img src="./public_html/img/uploads/floodfill.png"></p>
+
+</section><section><h2><a href="./Backtracking" target="_blank">Backtracking</a></h2>
+
+<p>Backtracking is a search that enumerates every single possible solution by using partial solutions.</p>
+
+<p><img src="./public_html/img/uploads/enumerate-sets.png"></p>
+</section><section><h2>Introduction</h2>
+
+<p><strong>Prerequisites</strong>: <a href="./Advanced_Recursion" target="_blank">Advanced Recursion</a></p>
+
+<p><strong>Next</strong>: <a href="./Advanced_Dynamic_Programming" target="_blank">Advanced Dynamic Programming</a></p>
+
+<p>Dynamic programming uses memoization by solving subproblems to solve the more complex problem. Dynamic programming uses recursion but instead of working backwards, it builds up the answer and reduces the number of duplicate computations.</p>
+
+<p>Like <a href="./Recursion" target="_blank">recursion</a>, dynamic programming requires two things:</p>
+
+<ul>
+<li>A base case and</li>
+<li>A subproblem that can be reduced into smaller subproblems </li>
+</ul>
+
+</section><div class="horzadbox"><ins class="adsbygoogle"
+             style="display:inline-block;width:728px;height:90px"
+             data-ad-client="ca-pub-3675316136020357"
+             data-ad-slot="4442495028"></ins></div><section><h2>Fibonacci Sequence</h2>
+
+<p>The Fibonacci sequence is determined by f(n) = f(n-1)+f(n-2) where f(0) = 1 and f(1) = 1.</p>
+
+<p>If we calculate f(5) we have:</p>
+
+<pre class="prettyprint linenums ">
+f(5) 
+= f(4) + f(3) 
+= f(3) + f(2) + f(2) + f(1) 
+= f(2) + f(1) + f(1) + f(0) + f(1) + f(0) + f(1) 
+= f(1) + f(0) + f(1) + f(1) + f(0) + f(1) + f(0) + f(1) 
+= 1 + 1 + 1 + 1 + 1 + 1 + 1
+= 8
+</pre>
+
+<p>However we are computing multiple values more than once. When we compute f(5) we need to compute f(4) and f(3) but f(3) is already computed when we compute f(4) and thus we have to recompute it again. We can avoid this redundancy by "building up". We can calculate f(2), then f(3) then f(4) and finally f(5) and we won't have duplicate calculations.</p>
+
+<pre class="prettyprint linenums ">
+f(0) = 1
+f(1) = 1
+f(2) = f(1) + f(0) = 2
+f(3) = f(2) + f(1) = 3
+f(4) = f(3) + f(2) = 5
+f(5) = f(4) + f(3) = 8
+</pre>
+
+<hr><h3>Formalization</h3>
+
+<p>Recursion</p>
+
+<pre class="prettyprint linenums lang-html">
+Let f(n) be the nth Fibonacci number
+
+Base case:
+fib(0) = 1, fib(1) = 1
+
+Subproblem:
+fib(n) = fib(n-1) + fib(n-2)
+
+Example:
+f(5) 
+= f(4) + f(3) 
+= f(3) + f(2) + f(2) + f(1) 
+= f(2) + f(1) + f(1) + f(0) + f(1) + f(0) + f(1) 
+= f(1) + f(0) + f(1) + f(1) + f(0) + f(1) + f(0) + f(1) 
+= 1 + 1 + 1 + 1 + 1 + 1 + 1
+= 8
+</pre>
+
+<p>Dynamic Programming</p>
+
+<pre class="prettyprint linenums ">
+Let fib[n] be the nth Fibonacci number
+
+Base case
+fib[0] = 1
+fib[1] = 1
+
+for x from 1 to N
+    fib[x] = fib[x-1] + fib[x-2]
+
+Example:
+N = 10
+fib[0] = 1
+fib[1] = 1
+fib[2] = 2
+fib[3] = 3
+fib[4] = 5
+fib[5] = 8
+fib[6] = 13
+fib[7] = 21
+fib[8] = 34
+fib[9] = 55
+fib[10] = 89
+</pre>
+
+<hr><h3>Code</h3>
+
+<p>Recursion</p>
+
+<pre class="prettyprint linenums ">
+public int fib(int n){
+    if(n==0 || n==1) return 1;
+    return fib(n-1) + fib(n-2);
+}
+</pre>
+
+<p>Dynamic Programming</p>
+
+<pre class="prettyprint linenums ">
+public int fib(int n){
+    int fibArr[] = new int[n];
+    fibArr[0] = 1
+    fibArr[1] = 1
+    for(int x=2; x&lt;n; x++){
+         fibArr[x] = fibArr[x-1] + fibArr[x-2];
+    }
+    return fibArr[n];
+}
+</pre>
+
+</section><section><h2><a href="./Coin_Problem" target="_blank">Coin Problem</a></h2>
+
+<p>Let's say that you wanted to make change for $51 using the smallest amount of bills ($1, $2, $5, $10, $20). We can use a greedy approach by always taking the highest bill that can be subtracted to find the smallest amount of change. 51 - 20 = 31 - 20 = 11 - 10 = 1. So the smallest amount of change would be comprised of 2 x $20 + 1 x $10 + 1 for a total of 5 bills. This solution seems very easy to implement, but what if the bills were not so nice?</p>
+
+<p>Imagine that an alien currency was in denominations of $3, $5, $7 and $11. What would be the smallest amount of bills to make change for $13? Note that a greedy approach does not work for this alien currency. For example: 13 - 11 = 2. It is impossible to make change using the greedy approach. Note that we can make change with 2 x $5 + 1 x $3 = $13.</p>
+
+<p>Let's define the problem more formally: Given a list of bills each with a positive denominations, find the lowest amount of bills required to make C dollars or return impossible if it cannot be done.</p>
+
+<p>The base case for 0 dollars is very simple. There are 0 bills to make 0 dollars.</p>
+
+<p>Lets try to simply this problem. Assume we only have one bill worth d dollars. If we have C dollars and we want to use the bill, then we will have C-d dollars left. So the minimum bills to make C dollars is the minimum number of bills to make (C - d) bills plus the 1 for the bill we used. For example, we want to make 10 dollars and we only have 2 dollar bills. If we use a 2 dollar bill, then the minimum bills required to make 10 dollars is the minimum number of bills required to make 8 dollars plus that 2 dollar bill. To find the minimum number of bills required to make 8 dollars, we can find the minimum number of bills to make 6 dollars plus one more 2 dollar bill. As you can see it is the same as before and it is a recursive function!</p>
+
+<p>Recursion</p>
+
+<pre class="prettyprint linenums ">
+Let d be the denomination
+Let bills(C) be the minimum number of bills to make C dollars.
+
+Base Case:
+bills(0) = 0
+bills(C) = impossible if C &lt; 0
+
+Subproblem:
+bills(C) = bills(C-d) + 1 if bills(C-d) is possible
+               impossible if bills(C-d) is impossible
+
+Example:
+C = 10
+d = 2
+
+bills(10) 
+= bills(8) + 1
+= bills(6) + 1 + 1
+= bills(4) + 1 + 1 + 1
+= bills(2) + 1 + 1 + 1 + 1
+= bills(0) + 1 + 1 + 1 + 1 + 1
+= 5
+</pre>
+
+<p>We can implement this using dynamic programming but it will not give us much benefit since the recursion has no recalculations.</p>
+
+<pre class="prettyprint linenums ">
+bills[0] = 0
+
+for c from 1 to C
+     if c-d &gt;= 0 and bills[c-d] is not impossible
+         bills[c] = bills[c-d] + 1
+     else
+         bills[c] = impossible
+
+Example:
+C = 10
+d = 2
+
+bills[0] = 0
+bills[1] = impossible
+bills[2] = 1
+bills[3] = impossible
+bills[4] = 2
+bills[5] = impossible
+bills[6] = 3
+bills[7] = impossible
+bills[8] = 4
+bills[9] = impossible
+bills[10] = 5
+</pre>
+
+<p>Now let's consider the problem with multiple bills of denominations d1,d2 .... dn and we want to make C dollars. If we use a d1 bill, then we will have C-d1 dollars left and similarly if we use a d2 bill then we will have C-d2 dollars left. More generally, if we use a dn bill, then we will have C-dn dollars left. If we want to find the minimum bills to make C dollars we should try to use every bill and see which requires the minimum number of bills. So the minimum bills to make C dollars is the minimum of C - dn bills plus one more dn bill for all bills of denomination dn. For example, if we have $7 and we have bills $3,$4, and $5, the minimum number of bills to make $7 is the minimum of the minimum number of bills to make $4 plus one more $3 bill, minimum number of bills to make $3 plus one more $4 or the minimum number of bills to make $2 plus one more $5 bill.</p>
+
+<pre class="prettyprint linenums ">
+Let denom be a list of denominations
+Let bills(C) be the minimum number of bills from denominations to make C dollars
+
+Base Cases:
+bills(0) = 0
+bills(C) = impossible if C &lt; 0
+
+Subproblem
+bill(C) = {  minimum of bills(C - d)+1 for d in denom if bills(C-d) is possible
+             {  impossible if bills(C - d) is impossible for all d in denom
+
+Example:
+denom = [3,4,5]
+
+bill(7)
+= min(bill(4)+1,bill(3)+1,bill(2)+1))
+= min(min(bill(1)+1,
+           bill(0)+1,
+           bill(-1)+1)+1, 
+       min(bill(0)+1,
+           bill(-1)+1,
+           bill(-2)+1) +1, 
+       min(bill(-1)+1),
+           bill(-2)+1,
+           bill(-3)+1)+1)
+= min( min(impossible, 1, impossible) +1,
+           min(1,impossible,impossible) +1,
+           min(impossible,impossible,impossible)+1)
+= min(2,2,impossible)
+= 2
+
+</pre>
+
+<p>However note, that we are recomputing multiple things. For example we are recomputing bill(0) multiple times and bill(-1) multiple times. If instead we worked the solution up instead of down, we can find bill(C) more efficiently. We can do this by computing bill(c) as c goes from 0 to C. Eg. we compute bill(0) then bill(1) then bill(2) .... until bill(C).</p>
+
+<p>Putting it all together:</p>
+
+<pre class="prettyprint linenums lang-html">
+Let bills[C] be the smallest amount of bills to make the amount C, or impossible if it is not possible
+Let denom be an array of denominations
+
+Base case:
+bills[0] = 0
+
+Subproblem:
+for c from 1 to C
+    bills[c] = impossible
+    for d in denom
+        if c-d &gt;= 0 and bills[c-d] is not impossible:
+            bills[c] = min(bills[c], bills[c-d]+1)
+
+Example:
+denom = [3,4,5]
+C = 7
+bills[0] = 0
+bills[1] = impossible (bills[-2],bills[-3],bills[-4])
+bills[2] = impossible 
+bills[3] = 1 (bills[0]+1)
+bills[4] = 1 (bills[0]+1)
+bills[5] = 1 (bills[0]+1)
+bills[6] = 2 (bills[3]+1)
+bills[7] = 2 (bills[3]+1 or bills[4]+1)
+</pre>
+
+</section><section><h2><a href="./Knapsack_Problem" target="_blank">Knapsack Problem</a></h2>
+
+<p>Imagine you are a robber and you have found a large stash of valuables. Each valuable has a value and a weight. You can only hold 10kg in your bag and you want to find the highest valued haul you can get away with.</p>
+
+<ul>
+<li>Necklace: $10, 1kg</li>
+<li>Stack of cash: $270, 3kg</li>
+<li>Jewelry: $665, 7kg</li>
+<li>Rare painting: $900, 9kg</li>
+</ul>
+
+<p>Let's try a greedy approach: we will take the items with the highest value to weight ratio.</p>
+
+<ul>
+<li>Necklace: $10/kg</li>
+<li>Stack of cash: $90/kg</li>
+<li>Jewelry: $95/kg</li>
+<li>Rare painting: $100/kg</li>
+</ul>
+
+<p>The greedy approach will choose the rare painting and the necklace for a total of $910. However if we take the jewelry and the stack of cash we will get $935 and still fit it into the bag. How can we solve this problem? The answer is dynamic programming.</p>
+
+<p>Let's first write a more formal definition of the problem:</p>
+
+<p>Given unlimited quantities of N items, each associated with a positive weight and value, and a maximum total weight W that we can hold, what is the maximum value we can hold.</p>
+
+<p>Let's write a more specific version of the problem: we want to find the maximum value that a bag with weight capacity W can carry out of N items of positive values and weights.</p>
+
+<p>The base case for this is trivial. With zero weight, the maximum value you can have is 0.</p>
+
+<p>Let's try simplifying the problem by using only one item with weight w and value v and a knapsack with maximum weight capacity W. Suppose we want to add the item into the knapsack then we have W-w capacity remaining and the value of the item. So the maximum value of knapsack with capacity W is the maximum value of W-w plus one more the item's value v. The maximum value of W-w is the maximum value of W-2<em>w + 2</em>v. As we can see, its the same subproblem as before and we have found a recursive relation.</p>
+
+<p>For example if we had an item with value $5 and weight 4kg and a knapsack with capacity 9kg. The maximum value that knapsack of 8kg can contain is the maximum value of a knapsack of 5kg plus $5 for the item we put in the bag and so forth.</p>
+
+<pre class="prettyprint linenums ">
+Let knapsack(W) be the maximum value of items that can fit into maximum capacity of W.
+Let w be the weight of one item and v be the value of one item.
+
+Base Case:
+knapsack(0) = 0
+knapsack(W) = 0 if W &lt; w
+
+Recursion:
+knapsack(W) = knapsack(W-w) + v
+
+Example:
+v = 5
+w = 4
+knapsack(9)
+= knapsack(5) + 5
+= knapsack(1) + 5 + 5
+= 10
+</pre>
+
+<p>Note that we are recomputing multiple values multiple times. We can avoid this by using dynamic programming and working up with our solution instead of backwards.</p>
+
+<pre class="prettyprint linenums ">
+Let knapsack[W] be the maximum value with weight capacity W
+Let w be the positive integer weight of the item and v be the value of an item
+
+for k from 0 to w-1
+    knapsack[k] = 0
+
+for weight from 1 to W
+    knapsack[weight] = knapsack[weight-w]+v
+
+Example:
+W = 9
+w = 4
+v = 4
+
+knapsack[0] = 0     base case
+knapsack[1] = 0     base case
+knapsack[2] = 0     base case
+knapsack[3] = 0     base case
+knapsack[4] = 5     (knapsack[0]+5)
+knapsack[5] = 5     ^
+knapsack[6] = 5     ^
+knapsack[7] = 5     ^
+knapsack[8] = 10    (knapsack[4]+5)
+knapsack[9] = 10    ^
+</pre>
+
+<p>Now let's go back to the original problem. We have N items each of positive weight and value and we want to find the maximum value to be put into a knapsack of capacity W.</p>
+
+<p>If no items are left to fit in our remaining capacity, then the maximum value must be $0. This is our base case.</p>
+
+<p>If we use an item, we will have capacity W-wi and the added value will be vi. We want to try all items to place into the knapsack so we try every single item and find the maximum value out of the items. So the maximum value of capacity W is the maximum value of W-wi plus the added value of vi for all items. To find the maximum value of capacity W-wi we can do the exact same thing by trying to place each item and finding the maximum value out of the items.</p>
+
+<p>For example we have a knapsack of capacity 10kg and necklaces worth $30 with weight 3kg, paintings worth $50 with weight 9kg and silver bars worth $60 with weight 7kg. If we choose a necklace, we will have 7kg capacity left with the added value of $30. If we choose a painting, we will have 1kg capacity left and added value of $50. If we choose a silver bar, we will have 3kg capacity left and added value of $60. With the remaining capacity, we can choose another item and do the exact same thing.</p>
+
+<hr><h3>Formalization</h3>
+
+<pre class="prettyprint linenums ">
+Let knapsack(W) be the maximum value with maximum capacity W
+Let weights be an array of weights where wi is the weight of the ith item.
+Let values be an array of values where vi is the value of the ith item.
+
+knapsack(W) = 0 if wi &gt; W for all items
+
+knapsack(W) = max(knapsack(W-wi) + vi for all items with wi &lt;= W)
+</pre>
+
+<pre class="prettyprint linenums ">
+Let knapsack[w] be the maximum value with maximum capacity W
+Let weights be an array of weights where wi is the weight of the ith item.
+Let values be an array of values where vi is the value of the ith item.
+
+for w from 0 to W
+    knapsack[w] = 0
+
+for w from 1 to W
+    maxVal = 0
+    for i in items
+        if w-wi &gt;= 0
+            knapsack[w] = max(knapsack[w], knapsack[w-wi] + vi)
+
+Example:
+
+</pre>
+
+</section><section><h2>Number of Paths</h2>
+
+<p><img src="./public_html/img/uploads/recursion_grid.png"></p>
+
+<p>We first examined the number of paths problem in <a href="./Advanced_Recursion" target="_blank">advanced recursion</a>. However, now that we know how to use dynamic programming, we can see that the recursive solution was very inefficient because we were recomputing values many times.</p>
+
+<pre class="prettyprint linenums lang-html">
+Let path(x,y) be the number of ways to get to the intersection at x and y
+
+Base case:
+paths(1,y) = 1
+paths(x,1) = 1
+
+Recurrence:
+paths(x,y) = paths(x-1,y) + paths(x,y-1)
+
+Example:
+paths(3,5)
+= paths(2,5) + paths(3,4)
+= paths(1,5) + paths(2,4) + paths(2,4) + paths(3,3)
+= 1 + paths(1,4) + paths(2,3) + paths(1,4) + paths(2,3) + paths(2,3) + paths(3,2)
+= 1 + 1 + paths(1,3) + paths(2,2) + 1 + paths(1,3) + paths(2,2) + paths(1,3) + paths(2,2) + paths(2,2) + paths(3,1)
+= 1 + 1 + 1 + paths(1,2) + paths(2,1) + 1 + 1 + path(1,2) + paths(2,1) + 1 + paths(1,2) + paths(2,1) + ....
+= 15
+</pre>
+
+<p>Instead of recomputing multiple values, we can build our solution upwards starting from 1,1</p>
+
+<pre class="prettyprint linenums ">
+Let paths[x][y] be the number of ways to get from (1,1) to (x,y). 
+
+paths[1][1] = 1
+
+for x from 1 to N
+    for y from 1 to M
+        paths[x][y] = paths[x-1][y] + paths[x][y-1]
+
+Example:
+N = 3
+M = 5
+
+1 1 1 1  1
+1 2 3 4  5
+1 3 6 10 15
+</pre>
+
+</section><section><h2>Exercises</h2>
+
+<ol>
+<li>Given an array of N integers, find the largest sum that can be using consecutive integers.</li>
+<li>Given an array of N integers, find the longest increasing subsequence</li>
+<li>Given a matrix of NxN integers, find the maximum sum of a submatrix</li>
+</ol>
+</section><section><h2>Introduction</h2>
+
+<p>String problems are more important than ever before with the enormous amount of text and information that is now available. For example, if we search for keywords on Google out of the millions of articles, how can we do it in such a way that the retrieval is relevant, accurate and efficient? If we misspell the word "shooting" as "sohoting" how can we come up with a list of autocorrected words?</p>
+
+</section><div class="horzadbox"><ins class="adsbygoogle"
+             style="display:inline-block;width:728px;height:90px"
+             data-ad-client="ca-pub-3675316136020357"
+             data-ad-slot="4442495028"></ins></div><section><h2><a href="./Pattern_Matching" target="_blank">Pattern Matching</a></h2>
+
+<p>When we press ctrl+f to search for a word on a page which may contain tens of thousands of words, how can we do it quickly? More formally: if we have two strings A and B, how can we search for instances of A inside B in the quickest way?</p>
+
+</section><section><h2>String Distance</h2>
+
+<p>Given two strings A and B, how can we tell how similar the strings are?</p>
+
+<p><a href="./Levenshtein_Distance" target="_blank">Levenshtein Distance</a></p>
+
+<p><a href="./Hamming_Distance" target="_blank">Hamming Distance</a></p>
+
+</section><section><h2>Exercises</h2>
+
+<ol>
+<li>Given a string, count the number of palindromes greater than 1 character contained in it. E.g. abacca has 3: aba, cc, acca.</li>
+<li>Given a sentence, reverse the order of the sentence without using additional memory. For example: There are three blue cows reversed is cows blue three are There</li>
+</ol>
+</section>
