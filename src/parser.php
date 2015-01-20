@@ -59,6 +59,31 @@ function parse($str){
 	//{{img_url}} => <img src="./public_html/img/uploads/img_url"
 	$str = preg_replace('/\{\{([A-Za-z0-9\_\-\.]+?)\}\}/','<img src="./public_html/img/uploads/$1">',$str);
 
+
+	// (((((article))))) -> article contents
+	preg_match_all('/\({4}([A-Za-z0-9\_\-\.\']*?)\){4}/',$str, $matches);
+	foreach($matches[1] as $match){
+		$page = preg_replace('/ /','_',$match);
+		if($GLOBALS['db']->article_exists($page)){
+			$content = parse($GLOBALS['db']->get_article($page));
+			$str = preg_replace('/\({4}'.$match.'\){4}/',$content,$str);
+		}
+	}
+
+	// (((((article.section))))) -> article section
+	preg_match_all('/\({4}([A-Za-z0-9\_\-\.\'\s]+?\.[A-Za-z0-9\_\-\']+?)\){4}/',$str, $matches);
+	foreach($matches[1] as $match){
+		$split = explode('.',$match);
+		$page = preg_replace('/ /','_',$split[0]);
+		$section = $split[1];
+		if($GLOBALS['db']->article_exists($page)){
+			$content = parse($GLOBALS['db']->get_article($page));
+			if(preg_match('/<section><h2>'.$section.'<\/h2>(.*?)<\/section>/s',$content,$section_matches)>0){
+				$str = preg_replace('/\({4}'.$split[0].'\.'.$section.'\){4}/',$section_matches[1],$str);
+			}
+		}
+	}
+
 	//$str = preg_replace('/<<<<([^>]|>(?!>>>([^>]|$)))*>>>>/,'<pre class="prettyprint linenums">$1</pre>',$str);
 	/*$str = preg_replace('/<\/section>/','</section><div class="horzadbox"><ins class="adsbygoogle"
              style="display:inline-block;width:728px;height:90px"

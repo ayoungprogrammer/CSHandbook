@@ -1,0 +1,13 @@
+## Introduction
+
+A spanning tree of a graph is a connected tree that spans all the nodes of the graph.
+
+A [[minimum spanning tree|Minimum Spanning Tree]] is the spanning tree that requires the minimum of some property such as total weight or total edges.
+
+Spanning tree algorithms are essential in networking to ensure no loops occur when sending data through a network.
+
+
+| Algorithm | Desc | Time | Space
+|-
+|[[Prim's]] | Using greedy method | O(n log n) | O(n^^2^^)
+|[[Kruskal]] | Using connected components| O(n log n) | O(n^^2^^)

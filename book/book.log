@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  17 JAN 2015 01:05
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  19 JAN 2015 14:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -58,1188 +58,2163 @@ Package: outlines 2012/1/23 1.1 Ch. Pecheur
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
-)) (./book.aux)
+))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count96
+))
+\Gin@req@height=\dimen107
+\Gin@req@width=\dimen108
+)
+(./book.aux)
 \openout1 = `book.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 1.
-LaTeX Font Info:    ... okay on input line 1.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 1.
-LaTeX Font Info:    ... okay on input line 1.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 1.
-LaTeX Font Info:    ... okay on input line 1.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 1.
-LaTeX Font Info:    ... okay on input line 1.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 1.
-LaTeX Font Info:    ... okay on input line 1.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 1.
-LaTeX Font Info:    ... okay on input line 1.
-\c@lstlisting=\count96
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+\c@lstlisting=\count97
+ (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count98
+\scratchdimen=\dimen109
+\scratchbox=\box28
+\nofMPsegments=\count99
+\nofMParguments=\count100
+\everyMPshowfont=\toks16
+\MPscratchCnt=\count101
+\MPscratchDim=\dimen110
+\MPnumerator=\count102
+\makeMPintoPDFobject=\count103
+\everyMPtoPDFconversion=\toks17
+) (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
 
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 Chapter 1.
 [1
 
 
 {/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2]
 Chapter 2.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 36.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 36.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 36.
-Missing character: There is no â in font cmr10!
-Missing character: There is no ˆ in font cmr10!
-Missing character: There is no ’ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no ˆ in font cmr10!
-Missing character: There is no ’ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no ˆ in font cmr10!
-Missing character: There is no ’ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no ˆ in font cmr10!
-Missing character: There is no ’ in font cmr10!
-
-Overfull \hbox (75.27715pt too wide) in paragraph at lines 36--78
-[][] 
- []
-
-
-Overfull \hbox (18.67455pt too wide) in paragraph at lines 81--119
-[] 
- []
-
-[3
-
-]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 125.
-
- (/usr/local/texlive/2013/texmf-dist/tex/latex/base/omscmr.fd
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 25.
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 125.
- [4]
-Overfull \hbox (261.50333pt too wide) in paragraph at lines 153--171
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 25.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 34.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 34.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 34.
+ [2
+
+]
+Missing character: There is no â in font cmr10!
+Missing character: There is no ˆ in font cmr10!
+Missing character: There is no ’ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no ˆ in font cmr10!
+Missing character: There is no ’ in font cmr10!
+
+Overfull \hbox (75.27715pt too wide) in paragraph at lines 62--88
 [][] 
  []
 
-[5]
-Overfull \hbox (17.29495pt too wide) in paragraph at lines 195--228
+[3]
+Missing character: There is no â in font cmr10!
+Missing character: There is no ˆ in font cmr10!
+Missing character: There is no ’ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no ˆ in font cmr10!
+Missing character: There is no ’ in font cmr10!
+
+Overfull \hbox (261.50333pt too wide) in paragraph at lines 144--162
+[][] 
+ []
+
+[4]
+Overfull \hbox (17.29495pt too wide) in paragraph at lines 186--219
 [][] 
  []
 
 
-Overfull \hbox (198.45581pt too wide) in paragraph at lines 239--240
+Overfull \hbox (198.45581pt too wide) in paragraph at lines 230--231
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 240.
+[5]
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 231.
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/base/omlcmr.fd
+ (/usr/local/texlive/2013/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 240.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 231.
 
-Overfull \hbox (47.34424pt too wide) in paragraph at lines 242--243
+Overfull \hbox (47.34424pt too wide) in paragraph at lines 233--234
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 [6]
-Missing character: There is no â in font cmr10!
-Missing character: There is no ˆ in font cmr10!
-Missing character: There is no ’ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no ˆ in font cmr10!
-Missing character: There is no ’ in font cmr10!
-
-Overfull \hbox (75.27715pt too wide) in paragraph at lines 309--335
-[][] 
- []
-
-[7]
-Missing character: There is no â in font cmr10!
-Missing character: There is no ˆ in font cmr10!
-Missing character: There is no ’ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no ˆ in font cmr10!
-Missing character: There is no ’ in font cmr10!
-
-Underfull \vbox (badness 1496) has occurred while \output is active []
-
- [8]
-Missing character: There is no â in font cmr10!
-Missing character: There is no ˆ in font cmr10!
-Missing character: There is no ’ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no ˆ in font cmr10!
-Missing character: There is no ’ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no ˆ in font cmr10!
-Missing character: There is no ’ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no ˆ in font cmr10!
-Missing character: There is no ’ in font cmr10!
-
-Overfull \hbox (75.27715pt too wide) in paragraph at lines 441--467
-[][] 
- []
-
-[9] [10]
-Missing character: There is no â in font cmr10!
-Missing character: There is no ˆ in font cmr10!
-Missing character: There is no ’ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no ˆ in font cmr10!
-Missing character: There is no ’ in font cmr10!
-
-Overfull \hbox (75.27715pt too wide) in paragraph at lines 548--574
-[][] 
- []
-
-[11]
-Missing character: There is no â in font cmr10!
-Missing character: There is no ˆ in font cmr10!
-Missing character: There is no ’ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no ˆ in font cmr10!
-Missing character: There is no ’ in font cmr10!
-
-Overfull \hbox (35.67455pt too wide) in paragraph at lines 627--665
-[][] 
- []
-
-
-Overfull \hbox (318.21516pt too wide) in paragraph at lines 668--718
-[][] 
- []
-
-
-Underfull \vbox (badness 3260) has occurred while \output is active []
-
- [12]
-[13] [14] [15] [16]
 Chapter 3.
-[17
+[7
 
 ]
-Overfull \hbox (80.19458pt too wide) in paragraph at lines 974--976
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[18]
-Overfull \hbox (415.26807pt too wide) in paragraph at lines 1022--1023
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][] 
- []
-
-[19] [20]
-Overfull \hbox (139.3252pt too wide) in paragraph at lines 1084--1085
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (21.06396pt too wide) in paragraph at lines 1093--1094
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (40.77417pt too wide) in paragraph at lines 1094--1096
-[][][][][][][][][][][][][][] 
- []
-
-[21]
-Overfull \hbox (7.92383pt too wide) in paragraph at lines 1145--1146
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (34.2041pt too wide) in paragraph at lines 1146--1148
-[][][][][][][][][][][][][][][][][][][][] 
- []
-
-[22] [23]
-Overfull \hbox (119.61499pt too wide) in paragraph at lines 1206--1208
+<../public_html/img/uploads/recursion_grid.png, id=33, 223.43475pt x 142.73325p
+t>
+File: ../public_html/img/uploads/recursion_grid.png Graphic file (type png)
+ <use ../public_html/img/uploads/recursion_grid.png>
+Package pdftex.def Info: ../public_html/img/uploads/recursion_grid.png used on 
+input line 296.
+(pdftex.def)             Requested size: 223.4342pt x 142.73941pt.
+ [8 <../public_html/img/uploads/recursion_grid.png>]
+Overfull \hbox (119.61499pt too wide) in paragraph at lines 305--307
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (172.17554pt too wide) in paragraph at lines 1219--1220
+Overfull \hbox (172.17554pt too wide) in paragraph at lines 318--319
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (395.55786pt too wide) in paragraph at lines 1220--1221
+Overfull \hbox (395.55786pt too wide) in paragraph at lines 319--320
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (342.99731pt too wide) in paragraph at lines 1221--1222
+Overfull \hbox (342.99731pt too wide) in paragraph at lines 320--321
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][] 
  []
 
-[24] [25]
-Overfull \hbox (152.46533pt too wide) in paragraph at lines 1305--1307
+
+<../public_html/img/uploads/recursion_grid2.png, id=37, 215.6055pt x 137.313pt>
+File: ../public_html/img/uploads/recursion_grid2.png Graphic file (type png)
+<use ../public_html/img/uploads/recursion_grid2.png>
+Package pdftex.def Info: ../public_html/img/uploads/recursion_grid2.png used on
+ input line 324.
+(pdftex.def)             Requested size: 215.60497pt x 137.31892pt.
+ [9 <../public_html/img/uploads/recursion_grid2.png>]
+<../public_html/img/uploads/hanoi.png, id=41, 212.59425pt x 154.77824pt>
+File: ../public_html/img/uploads/hanoi.png Graphic file (type png)
+
+<use ../public_html/img/uploads/hanoi.png>
+Package pdftex.def Info: ../public_html/img/uploads/hanoi.png used on input lin
+e 348.
+(pdftex.def)             Requested size: 212.59372pt x 154.78731pt.
+
+<../public_html/img/uploads/hanoi2.png, id=43, 215.00325pt x 146.34676pt>
+File: ../public_html/img/uploads/hanoi2.png Graphic file (type png)
+
+<use ../public_html/img/uploads/hanoi2.png>
+Package pdftex.def Info: ../public_html/img/uploads/hanoi2.png used on input li
+ne 355.
+(pdftex.def)             Requested size: 215.00272pt x 146.34639pt.
+ [10 <../public_html/img/uploads/hanoi.png>]
+<../public_html/img/uploads/hanoi3.png, id=48, 218.61674pt x 146.34676pt>
+File: ../public_html/img/uploads/hanoi3.png Graphic file (type png)
+
+<use ../public_html/img/uploads/hanoi3.png>
+Package pdftex.def Info: ../public_html/img/uploads/hanoi3.png used on input li
+ne 360.
+(pdftex.def)             Requested size: 218.6162pt x 146.35085pt.
+
+<../public_html/img/uploads/hanoi4.png, id=49, 225.84375pt x 154.77824pt>
+File: ../public_html/img/uploads/hanoi4.png Graphic file (type png)
+
+<use ../public_html/img/uploads/hanoi4.png>
+Package pdftex.def Info: ../public_html/img/uploads/hanoi4.png used on input li
+ne 365.
+(pdftex.def)             Requested size: 225.84319pt x 154.78731pt.
+ [11 <../public_html/img/uploads/hanoi2.png> <../public_html/img/uploads/hanoi3
+.png> <../public_html/img/uploads/hanoi4.png>]
+File: ../public_html/img/uploads/hanoi.png Graphic file (type png)
+ <use ../public_html/img/uploads/hanoi.png>
+Package pdftex.def Info: ../public_html/img/uploads/hanoi.png used on input lin
+e 373.
+(pdftex.def)             Requested size: 212.59372pt x 154.78731pt.
+
+<../public_html/img/uploads/hanoi5.png, id=56, 212.59425pt x 154.77824pt>
+File: ../public_html/img/uploads/hanoi5.png Graphic file (type png)
+
+<use ../public_html/img/uploads/hanoi5.png>
+Package pdftex.def Info: ../public_html/img/uploads/hanoi5.png used on input li
+ne 381.
+(pdftex.def)             Requested size: 212.59372pt x 154.78731pt.
+
+<../public_html/img/uploads/hanoi6.png, id=57, 212.59425pt x 154.77824pt>
+File: ../public_html/img/uploads/hanoi6.png Graphic file (type png)
+
+<use ../public_html/img/uploads/hanoi6.png>
+Package pdftex.def Info: ../public_html/img/uploads/hanoi6.png used on input li
+ne 387.
+(pdftex.def)             Requested size: 212.59372pt x 154.78731pt.
+ [12 <../public_html/img/uploads/hanoi5.png>]
+File: ../public_html/img/uploads/hanoi2.png Graphic file (type png)
+ <use ../public_html/img/uploads/hanoi2.png>
+Package pdftex.def Info: ../public_html/img/uploads/hanoi2.png used on input li
+ne 393.
+(pdftex.def)             Requested size: 215.00272pt x 146.34639pt.
+
+Overfull \hbox (152.46533pt too wide) in paragraph at lines 404--406
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[26] [27] [28]
-Overfull \hbox (67.05444pt too wide) in paragraph at lines 1447--1449
+[13 <../public_html/img/uploads/hanoi6.png>] [14] [15] [16]
+Overfull \hbox (67.05444pt too wide) in paragraph at lines 546--548
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[29]
-Overfull \hbox (106.47485pt too wide) in paragraph at lines 1454--1456
+
+Overfull \hbox (106.47485pt too wide) in paragraph at lines 553--555
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (27.63403pt too wide) in paragraph at lines 1469--1470
+Overfull \hbox (27.63403pt too wide) in paragraph at lines 568--569
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
-
-Overfull \hbox (93.33472pt too wide) in paragraph at lines 1473--1474
+[17]
+Overfull \hbox (93.33472pt too wide) in paragraph at lines 572--573
 [][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[30]
-Overfull \hbox (40.77417pt too wide) in paragraph at lines 1504--1506
+[18]
+Chapter 4.
+[19
+
+]
+Overfull \hbox (93.33472pt too wide) in paragraph at lines 614--615
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (60.48438pt too wide) in paragraph at lines 639--640
 [][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (60.48438pt too wide) in paragraph at lines 1515--1518
-[][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[31] [32]
-Overfull \hbox (27.63403pt too wide) in paragraph at lines 1570--1571
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (172.17554pt too wide) in paragraph at lines 1575--1576
-[][][] 
- []
-
-
-Overfull \hbox (93.33472pt too wide) in paragraph at lines 1583--1585
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][] 
- []
-
-
-Overfull \hbox (244.44629pt too wide) in paragraph at lines 1591--1592
-[][][][] 
- []
-
-
-Overfull \hbox (172.17554pt too wide) in paragraph at lines 1593--1594
-[][][] 
- []
-
-[33] [34] [35]
-Overfull \hbox (73.62451pt too wide) in paragraph at lines 1715--1717
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (53.9143pt too wide) in paragraph at lines 1721--1722
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (323.28711pt too wide) in paragraph at lines 1724--1726
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][] 
- []
-
-[36] [37] [38]
-Chapter 4.
-[39
-
-] [40] [41]
-Overfull \hbox (34.2041pt too wide) in paragraph at lines 1976--1977
-[][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (34.2041pt too wide) in paragraph at lines 1979--1981
-[][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (1.35376pt too wide) in paragraph at lines 1981--1983
+Overfull \hbox (139.3252pt too wide) in paragraph at lines 641--642
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (60.48438pt too wide) in paragraph at lines 1983--1984
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+Overfull \hbox (119.61499pt too wide) in paragraph at lines 642--643
+[][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (113.04492pt too wide) in paragraph at lines 1984--1985
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[42]
-Overfull \hbox (40.77417pt too wide) in paragraph at lines 1987--1988
-[][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (53.9143pt too wide) in paragraph at lines 1990--1991
+Overfull \hbox (172.17554pt too wide) in paragraph at lines 644--645
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (27.63403pt too wide) in paragraph at lines 2001--2002
-[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+Overfull \hbox (47.34424pt too wide) in paragraph at lines 646--647
+[][][][][][][][][][][][][][][][][] 
+ []
+
+[20]
+Overfull \hbox (21.06396pt too wide) in paragraph at lines 649--650
+[][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (93.33472pt too wide) in paragraph at lines 2007--2008
+Overfull \hbox (60.48438pt too wide) in paragraph at lines 670--671
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (60.48438pt too wide) in paragraph at lines 672--673
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (60.48438pt too wide) in paragraph at lines 677--678
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (86.76465pt too wide) in paragraph at lines 680--681
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (86.76465pt too wide) in paragraph at lines 681--682
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
+[21] <../public_html/img/uploads/mergesort.png, id=92, 256.96pt x 264.99pt>
+File: ../public_html/img/uploads/mergesort.png Graphic file (type png)
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [43]
-Overfull \hbox (86.76465pt too wide) in paragraph at lines 2031--2033
+<use ../public_html/img/uploads/mergesort.png>
+Package pdftex.def Info: ../public_html/img/uploads/mergesort.png used on input
+ line 723.
+(pdftex.def)             Requested size: 256.95937pt x 265.00955pt.
+ [22]
+Overfull \hbox (86.76465pt too wide) in paragraph at lines 728--730
 [][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (264.1565pt too wide) in paragraph at lines 2035--2036
+Overfull \hbox (264.1565pt too wide) in paragraph at lines 732--733
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (185.31567pt too wide) in paragraph at lines 2036--2038
+Overfull \hbox (185.31567pt too wide) in paragraph at lines 733--735
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (93.33472pt too wide) in paragraph at lines 2040--2041
+Overfull \hbox (93.33472pt too wide) in paragraph at lines 737--738
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (152.46533pt too wide) in paragraph at lines 2049--2050
+Overfull \hbox (152.46533pt too wide) in paragraph at lines 746--747
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-
-Overfull \hbox (145.89526pt too wide) in paragraph at lines 2057--2058
+[23 <../public_html/img/uploads/mergesort.png>]
+Overfull \hbox (145.89526pt too wide) in paragraph at lines 754--755
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[44]
-Overfull \hbox (21.06396pt too wide) in paragraph at lines 2096--2097
+[24]
+Overfull \hbox (21.06396pt too wide) in paragraph at lines 793--794
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[45] [46] [47]
-Overfull \hbox (21.06396pt too wide) in paragraph at lines 2212--2213
+<../public_html/img/uploads/quicksort.png, id=103, 274.02374pt x 176.66pt>
+File: ../public_html/img/uploads/quicksort.png Graphic file (type png)
+
+<use ../public_html/img/uploads/quicksort.png>
+Package pdftex.def Info: ../public_html/img/uploads/quicksort.png used on input
+ line 820.
+(pdftex.def)             Requested size: 274.02307pt x 176.67303pt.
+ [25]
+Overfull \hbox (34.2041pt too wide) in paragraph at lines 824--825
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (34.2041pt too wide) in paragraph at lines 827--829
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (1.35376pt too wide) in paragraph at lines 829--831
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (60.48438pt too wide) in paragraph at lines 831--832
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (113.04492pt too wide) in paragraph at lines 832--833
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (40.77417pt too wide) in paragraph at lines 835--836
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (53.9143pt too wide) in paragraph at lines 838--839
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[26 <../public_html/img/uploads/quicksort.png>]
+Overfull \hbox (27.63403pt too wide) in paragraph at lines 849--850
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (93.33472pt too wide) in paragraph at lines 855--856
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[27] [28] [29]
+Chapter 5.
+<../public_html/img/uploads/bottle.png, id=121, 494.84875pt x 212.795pt>
+File: ../public_html/img/uploads/bottle.png Graphic file (type png)
+
+<use ../public_html/img/uploads/bottle.png>
+Package pdftex.def Info: ../public_html/img/uploads/bottle.png used on input li
+ne 937.
+(pdftex.def)             Requested size: 360.0pt x 154.80653pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 937--938
+[][] 
+ []
+
+[30
+
+] <../public_html/img/uploads/adt.png, id=125, 560.0925pt x 246.9225pt>
+File: ../public_html/img/uploads/adt.png Graphic file (type png)
+
+<use ../public_html/img/uploads/adt.png>
+Package pdftex.def Info: ../public_html/img/uploads/adt.png used on input line 
+941.
+(pdftex.def)             Requested size: 360.0pt x 158.71556pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 941--942
+[][] 
+ []
+
+[31 <../public_html/img/uploads/bottle.png> <../public_html/img/uploads/adt.png
+>] [32]
+Overfull \hbox (34.2041pt too wide) in paragraph at lines 1005--1006
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+<../public_html/img/uploads/stack.png, id=135, 295.1025pt x 217.81375pt>
+File: ../public_html/img/uploads/stack.png Graphic file (type png)
+
+<use ../public_html/img/uploads/stack.png>
+Package pdftex.def Info: ../public_html/img/uploads/stack.png used on input lin
+e 1027.
+(pdftex.def)             Requested size: 295.10176pt x 217.81651pt.
+ [33]
+<../public_html/img/uploads/stack2.png, id=139, 299.1175pt x 184.69pt>
+File: ../public_html/img/uploads/stack2.png Graphic file (type png)
+
+<use ../public_html/img/uploads/stack2.png>
+Package pdftex.def Info: ../public_html/img/uploads/stack2.png used on input li
+ne 1031.
+(pdftex.def)             Requested size: 299.11676pt x 184.70361pt.
+ [34 <../public_html/img/uploads/stack.png> <../public_html/img/uploads/stack2.
+png>] [35]
+<../public_html/img/uploads/vector3.png, id=148, 417.56pt x 206.7725pt>
+File: ../public_html/img/uploads/vector3.png Graphic file (type png)
+
+<use ../public_html/img/uploads/vector3.png>
+Package pdftex.def Info: ../public_html/img/uploads/vector3.png used on input l
+ine 1128.
+(pdftex.def)             Requested size: 360.0pt x 178.27837pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 1128--1129
+[][] 
+ []
+
+<../public_html/img/uploads/vector2.png, id=149, 426.59375pt x 165.61874pt>
+[36 <../public_html/img/uploads/vector3.png>]
+File: ../public_html/img/uploads/vector2.png Graphic file (type png)
+
+<use ../public_html/img/uploads/vector2.png>
+Package pdftex.def Info: ../public_html/img/uploads/vector2.png used on input l
+ine 1144.
+(pdftex.def)             Requested size: 360.0pt x 139.77332pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 1144--1145
+[][] 
+ []
+
+<../public_html/img/uploads/vector4.png, id=154, 388.45125pt x 129.48375pt>
+File: ../public_html/img/uploads/vector4.png Graphic file (type png)
+
+<use ../public_html/img/uploads/vector4.png>
+Package pdftex.def Info: ../public_html/img/uploads/vector4.png used on input l
+ine 1160.
+(pdftex.def)             Requested size: 360.0pt x 120.00371pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 1160--1161
+[][] 
+ []
+
+[37 <../public_html/img/uploads/vector2.png> <../public_html/img/uploads/vector
+4.png>]
+File: ../public_html/img/uploads/vector4.png Graphic file (type png)
+ <use ../public_html/img/uploads/vector4.png>
+Package pdftex.def Info: ../public_html/img/uploads/vector4.png used on input l
+ine 1179.
+(pdftex.def)             Requested size: 360.0pt x 120.00371pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 1179--1180
+[][] 
+ []
+
+<../public_html/img/uploads/vectorget.png, id=161, 196.735pt x 127.47626pt>
+File: ../public_html/img/uploads/vectorget.png Graphic file (type png)
+
+<use ../public_html/img/uploads/vectorget.png>
+Package pdftex.def Info: ../public_html/img/uploads/vectorget.png used on input
+ line 1200.
+(pdftex.def)             Requested size: 196.7345pt x 127.47594pt.
+ [38]
+<../public_html/img/uploads/vectorinsert.png, id=165, 183.68625pt x 128.48pt>
+File: ../public_html/img/uploads/vectorinsert.png Graphic file (type png)
+
+<use ../public_html/img/uploads/vectorinsert.png>
+Package pdftex.def Info: ../public_html/img/uploads/vectorinsert.png used on in
+put line 1215.
+(pdftex.def)             Requested size: 183.68578pt x 128.4875pt.
+
+<../public_html/img/uploads/vectorinsert2.png, id=166, 198.7425pt x 122.4575pt>
+File: ../public_html/img/uploads/vectorinsert2.png Graphic file (type png)
+<use ../public_html/img/uploads/vectorinsert2.png>
+Package pdftex.def Info: ../public_html/img/uploads/vectorinsert2.png used on i
+nput line 1217.
+(pdftex.def)             Requested size: 198.742pt x 122.4609pt.
+ [39 <../public_html/img/uploads/vectorget.png> <../public_html/img/uploads/vec
+torinsert.png> <../public_html/img/uploads/vectorinsert2.png>] [40]
+<../public_html/img/uploads/queue.png, id=176, 249.93375pt x 167.62625pt>
+File: ../public_html/img/uploads/queue.png Graphic file (type png)
+
+<use ../public_html/img/uploads/queue.png>
+Package pdftex.def Info: ../public_html/img/uploads/queue.png used on input lin
+e 1253.
+(pdftex.def)             Requested size: 249.93314pt x 167.63094pt.
+
+<../public_html/img/uploads/queue2.png, id=177, 250.9375pt x 161.60374pt>
+File: ../public_html/img/uploads/queue2.png Graphic file (type png)
+
+<use ../public_html/img/uploads/queue2.png>
+Package pdftex.def Info: ../public_html/img/uploads/queue2.png used on input li
+ne 1257.
+(pdftex.def)             Requested size: 250.93687pt x 161.61073pt.
+ [41 <../public_html/img/uploads/queue.png> <../public_html/img/uploads/queue2.
+png>]
+<../public_html/img/uploads/linkedlist.png, id=183, 334.24875pt x 91.34125pt>
+File: ../public_html/img/uploads/linkedlist.png Graphic file (type png)
+
+<use ../public_html/img/uploads/linkedlist.png>
+Package pdftex.def Info: ../public_html/img/uploads/linkedlist.png used on inpu
+t line 1314.
+(pdftex.def)             Requested size: 334.24792pt x 91.34798pt.
+ [42]
+<../public_html/img/uploads/doublelinkedlist.png, id=187, 334.24875pt x 92.345p
+t>
+File: ../public_html/img/uploads/doublelinkedlist.png Graphic file (type png)
+ <use ../public_html/img/uploads/doublelinkedlist.png>
+Package pdftex.def Info: ../public_html/img/uploads/doublelinkedlist.png used o
+n input line 1320.
+(pdftex.def)             Requested size: 334.24792pt x 92.35179pt.
+ [43 <../public_html/img/uploads/linkedlist.png> <../public_html/img/uploads/do
+ublelinkedlist.png>]
+<../public_html/img/uploads/linkedlistpush.png, id=194, 419.5675pt x 91.34125pt
+>
+File: ../public_html/img/uploads/linkedlistpush.png Graphic file (type png)
+ <use ../public_html/img/uploads/linkedlistpush.png>
+Package pdftex.def Info: ../public_html/img/uploads/linkedlistpush.png used on 
+input line 1380.
+(pdftex.def)             Requested size: 360.0pt x 78.37354pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 1380--1381
+[][] 
+ []
+
+
+<../public_html/img/uploads/linkedlistpush2.png, id=195, 419.5675pt x 91.34125p
+t>
+File: ../public_html/img/uploads/linkedlistpush2.png Graphic file (type png)
+ <use ../public_html/img/uploads/linkedlistpush2.png>
+Package pdftex.def Info: ../public_html/img/uploads/linkedlistpush2.png used on
+ input line 1382.
+(pdftex.def)             Requested size: 360.0pt x 78.37354pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 1382--1383
+[][] 
+ []
+
+
+<../public_html/img/uploads/linkedlistpush3.png, id=196, 419.5675pt x 91.34125p
+t>
+File: ../public_html/img/uploads/linkedlistpush3.png Graphic file (type png)
+ <use ../public_html/img/uploads/linkedlistpush3.png>
+Package pdftex.def Info: ../public_html/img/uploads/linkedlistpush3.png used on
+ input line 1384.
+(pdftex.def)             Requested size: 360.0pt x 78.37354pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 1384--1385
+[][] 
+ []
+
+[44 <../public_html/img/uploads/linkedlistpush.png> <../public_html/img/uploads
+/linkedlistpush2.png>]
+<../public_html/img/uploads/linkedlistpop.png, id=202, 334.24875pt x 91.34125pt
+>
+File: ../public_html/img/uploads/linkedlistpop.png Graphic file (type png)
+ <use ../public_html/img/uploads/linkedlistpop.png>
+Package pdftex.def Info: ../public_html/img/uploads/linkedlistpop.png used on i
+nput line 1406.
+(pdftex.def)             Requested size: 334.24792pt x 91.34798pt.
+
+<../public_html/img/uploads/linkedlistpop2.png, id=203, 243.91125pt x 91.34125p
+t>
+File: ../public_html/img/uploads/linkedlistpop2.png Graphic file (type png)
+ <use ../public_html/img/uploads/linkedlistpop2.png>
+Package pdftex.def Info: ../public_html/img/uploads/linkedlistpop2.png used on 
+input line 1408.
+(pdftex.def)             Requested size: 243.91064pt x 91.3424pt.
+ [45 <../public_html/img/uploads/linkedlistpush3.png> <../public_html/img/uploa
+ds/linkedlistpop.png> <../public_html/img/uploads/linkedlistpop2.png>]
+<../public_html/img/uploads/linkedlistget.png, id=210, 334.24875pt x 141.52875p
+t>
+File: ../public_html/img/uploads/linkedlistget.png Graphic file (type png)
+ <use ../public_html/img/uploads/linkedlistget.png>
+Package pdftex.def Info: ../public_html/img/uploads/linkedlistget.png used on i
+nput line 1432.
+(pdftex.def)             Requested size: 334.24792pt x 141.53918pt.
+
+<../public_html/img/uploads/linkedlistget2.png, id=211, 334.24875pt x 141.52875
+pt>
+File: ../public_html/img/uploads/linkedlistget2.png Graphic file (type png)
+ <use ../public_html/img/uploads/linkedlistget2.png>
+Package pdftex.def Info: ../public_html/img/uploads/linkedlistget2.png used on 
+input line 1434.
+(pdftex.def)             Requested size: 334.24792pt x 141.53918pt.
+
+<../public_html/img/uploads/linkedlistget3.png, id=212, 334.24875pt x 141.52875
+pt>
+File: ../public_html/img/uploads/linkedlistget3.png Graphic file (type png)
+ <use ../public_html/img/uploads/linkedlistget3.png>
+Package pdftex.def Info: ../public_html/img/uploads/linkedlistget3.png used on 
+input line 1436.
+(pdftex.def)             Requested size: 334.24792pt x 141.53918pt.
+ [46 <../public_html/img/uploads/linkedlistget.png> <../public_html/img/uploads
+/linkedlistget2.png>]
+<../public_html/img/uploads/linkedlistrem.png, id=218, 334.24875pt x 91.34125pt
+>
+File: ../public_html/img/uploads/linkedlistrem.png Graphic file (type png)
+ <use ../public_html/img/uploads/linkedlistrem.png>
+Package pdftex.def Info: ../public_html/img/uploads/linkedlistrem.png used on i
+nput line 1460.
+(pdftex.def)             Requested size: 334.24792pt x 91.34798pt.
+
+<../public_html/img/uploads/linkedlistrem2.png, id=219, 334.24875pt x 91.34125p
+t>
+File: ../public_html/img/uploads/linkedlistrem2.png Graphic file (type png)
+ <use ../public_html/img/uploads/linkedlistrem2.png>
+Package pdftex.def Info: ../public_html/img/uploads/linkedlistrem2.png used on 
+input line 1462.
+(pdftex.def)             Requested size: 334.24792pt x 91.34798pt.
+ [47 <../public_html/img/uploads/linkedlistget3.png> <../public_html/img/upload
+s/linkedlistrem.png>]
+[48 <../public_html/img/uploads/linkedlistrem2.png>]
+<../public_html/img/uploads/tree.png, id=229, 188.705pt x 166.6225pt>
+File: ../public_html/img/uploads/tree.png Graphic file (type png)
+
+<use ../public_html/img/uploads/tree.png>
+Package pdftex.def Info: ../public_html/img/uploads/tree.png used on input line
+ 1507.
+(pdftex.def)             Requested size: 188.70453pt x 166.62209pt.
+
+<../public_html/img/uploads/binarytree.png, id=230, 138.5175pt x 166.6225pt>
+File: ../public_html/img/uploads/binarytree.png Graphic file (type png)
+
+<use ../public_html/img/uploads/binarytree.png>
+Package pdftex.def Info: ../public_html/img/uploads/binarytree.png used on inpu
+t line 1519.
+(pdftex.def)             Requested size: 138.51715pt x 166.62209pt.
+ [49 <../public_html/img/uploads/tree.png>]
+File: ../public_html/img/uploads/binarytree.png Graphic file (type png)
+ <use ../public_html/img/uploads/binarytree.png>
+Package pdftex.def Info: ../public_html/img/uploads/binarytree.png used on inpu
+t line 1524.
+(pdftex.def)             Requested size: 138.51715pt x 166.62209pt.
+
+<../public_html/img/uploads/bst.png, id=236, 253.94875pt x 206.7725pt>
+File: ../public_html/img/uploads/bst.png Graphic file (type png)
+
+<use ../public_html/img/uploads/bst.png>
+Package pdftex.def Info: ../public_html/img/uploads/bst.png used on input line 
+1530.
+(pdftex.def)             Requested size: 253.94812pt x 206.77829pt.
+ [50 <../public_html/img/uploads/binarytree.png>] [51 <../public_html/img/uploa
+ds/bst.png>]
+<../public_html/img/uploads/hashcode.png, id=246, 168.63pt x 86.3225pt>
+File: ../public_html/img/uploads/hashcode.png Graphic file (type png)
+
+<use ../public_html/img/uploads/hashcode.png>
+Package pdftex.def Info: ../public_html/img/uploads/hashcode.png used on input 
+line 1586.
+(pdftex.def)             Requested size: 168.62958pt x 86.32358pt.
+
+<../public_html/img/uploads/hashset.png, id=247, 174.6525pt x 249.93375pt>
+File: ../public_html/img/uploads/hashset.png Graphic file (type png)
+
+<use ../public_html/img/uploads/hashset.png>
+Package pdftex.def Info: ../public_html/img/uploads/hashset.png used on input l
+ine 1592.
+(pdftex.def)             Requested size: 174.65207pt x 249.94838pt.
+ [52 <../public_html/img/uploads/hashcode.png>]
+File: ../public_html/img/uploads/hashset.png Graphic file (type png)
+ <use ../public_html/img/uploads/hashset.png>
+Package pdftex.def Info: ../public_html/img/uploads/hashset.png used on input l
+ine 1622.
+(pdftex.def)             Requested size: 174.65207pt x 249.94838pt.
+ [53 <../public_html/img/uploads/hashset.png>] [54]
+Overfull \hbox (1.35376pt too wide) in paragraph at lines 1642--1644
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+File: ../public_html/img/uploads/hashcode.png Graphic file (type png)
+<use ../public_html/img/uploads/hashcode.png>
+Package pdftex.def Info: ../public_html/img/uploads/hashcode.png used on input 
+line 1657.
+(pdftex.def)             Requested size: 168.62958pt x 86.32358pt.
+ [55]
+Overfull \hbox (99.90479pt too wide) in paragraph at lines 1676--1677
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+File: ../public_html/img/uploads/hashset.png Graphic file (type png)
+<use ../public_html/img/uploads/hashset.png>
+Package pdftex.def Info: ../public_html/img/uploads/hashset.png used on input l
+ine 1695.
+(pdftex.def)             Requested size: 174.65207pt x 249.94838pt.
+
+<../public_html/img/uploads/hashsetinsert.png, id=263, 295.1025pt x 249.93375pt
+> [56]
+File: ../public_html/img/uploads/hashsetinsert.png Graphic file (type png)
+ <use ../public_html/img/uploads/hashsetinsert.png>
+Package pdftex.def Info: ../public_html/img/uploads/hashsetinsert.png used on i
+nput line 1697.
+(pdftex.def)             Requested size: 295.10176pt x 249.93694pt.
+ [57 <../public_html/img/uploads/hashsetinsert.png>]
+<../public_html/img/uploads/hashsetcontains.png, id=271, 295.1025pt x 249.93375
+pt>
+File: ../public_html/img/uploads/hashsetcontains.png Graphic file (type png)
+ <use ../public_html/img/uploads/hashsetcontains.png>
+Package pdftex.def Info: ../public_html/img/uploads/hashsetcontains.png used on
+ input line 1722.
+(pdftex.def)             Requested size: 295.10176pt x 249.93694pt.
+
+<../public_html/img/uploads/hashsetcontains2.png, id=272, 295.1025pt x 249.9337
+5pt> [58]
+File: ../public_html/img/uploads/hashsetcontains2.png Graphic file (type png)
+ <use ../public_html/img/uploads/hashsetcontains2.png>
+Package pdftex.def Info: ../public_html/img/uploads/hashsetcontains2.png used o
+n input line 1724.
+(pdftex.def)             Requested size: 295.10176pt x 249.93694pt.
+
+<../public_html/img/uploads/hashsetcontains3.png, id=276, 305.14pt x 249.93375p
+t>
+File: ../public_html/img/uploads/hashsetcontains3.png Graphic file (type png)
+ <use ../public_html/img/uploads/hashsetcontains3.png>
+Package pdftex.def Info: ../public_html/img/uploads/hashsetcontains3.png used o
+n input line 1726.
+(pdftex.def)             Requested size: 305.13924pt x 249.94456pt.
+ [59 <../public_html/img/uploads/hashsetcontains.png> <../public_html/img/uploa
+ds/hashsetcontains2.png>]
+<../public_html/img/uploads/hashsetrem.png, id=282, 295.1025pt x 249.93375pt>
+File: ../public_html/img/uploads/hashsetrem.png Graphic file (type png)
+
+<use ../public_html/img/uploads/hashsetrem.png>
+Package pdftex.def Info: ../public_html/img/uploads/hashsetrem.png used on inpu
+t line 1742.
+(pdftex.def)             Requested size: 295.10176pt x 249.93694pt.
+
+<../public_html/img/uploads/hashsetrem2.png, id=283, 295.1025pt x 249.93375pt>
+[60 <../public_html/img/uploads/hashsetcontains3.png>]
+File: ../public_html/img/uploads/hashsetrem2.png Graphic file (type png)
+
+<use ../public_html/img/uploads/hashsetrem2.png>
+Package pdftex.def Info: ../public_html/img/uploads/hashsetrem2.png used on inp
+ut line 1744.
+(pdftex.def)             Requested size: 295.10176pt x 249.93694pt.
+
+<../public_html/img/uploads/hashsetrem3.png, id=288, 295.1025pt x 249.93375pt>
+File: ../public_html/img/uploads/hashsetrem3.png Graphic file (type png)
+
+<use ../public_html/img/uploads/hashsetrem3.png>
+Package pdftex.def Info: ../public_html/img/uploads/hashsetrem3.png used on inp
+ut line 1746.
+(pdftex.def)             Requested size: 295.10176pt x 249.93694pt.
+ [61 <../public_html/img/uploads/hashsetrem.png> <../public_html/img/uploads/ha
+shsetrem2.png>] [62 <../public_html/img/uploads/hashsetrem3.png>]
+File: ../public_html/img/uploads/bst.png Graphic file (type png)
+ <use ../public_html/img/uploads/bst.png>
+Package pdftex.def Info: ../public_html/img/uploads/bst.png used on input line 
+1779.
+(pdftex.def)             Requested size: 253.94812pt x 206.77829pt.
+
+[63] [64]
+Overfull \hbox (1.35376pt too wide) in paragraph at lines 1875--1877
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+[65]
+Overfull \hbox (80.19458pt too wide) in paragraph at lines 1908--1909
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+[66] [67]
+File: ../public_html/img/uploads/bst.png Graphic file (type png)
+ <use ../public_html/img/uploads/bst.png>
+Package pdftex.def Info: ../public_html/img/uploads/bst.png used on input line 
+2021.
+(pdftex.def)             Requested size: 253.94812pt x 206.77829pt.
+ [68] [69]
+Overfull \hbox (21.06396pt too wide) in paragraph at lines 2052--2053
+[][][][][][][][][][][][][][][][][] 
+ []
+
+[70] [71]
+<../public_html/img/uploads/bst-rem.png, id=327, 201.75375pt x 201.75375pt>
+File: ../public_html/img/uploads/bst-rem.png Graphic file (type png)
+
+<use ../public_html/img/uploads/bst-rem.png>
+Package pdftex.def Info: ../public_html/img/uploads/bst-rem.png used on input l
+ine 2145.
+(pdftex.def)             Requested size: 201.75325pt x 201.75632pt.
+
+<../public_html/img/uploads/bst-rem-case11.png, id=328, 201.75375pt x 201.75375
+pt>
+File: ../public_html/img/uploads/bst-rem-case11.png Graphic file (type png)
+ <use ../public_html/img/uploads/bst-rem-case11.png>
+Package pdftex.def Info: ../public_html/img/uploads/bst-rem-case11.png used on 
+input line 2149.
+(pdftex.def)             Requested size: 201.75325pt x 201.75632pt.
+ [72 <../public_html/img/uploads/bst-rem.png>]
+<../public_html/img/uploads/bst-rem-case12.png, id=333, 161.60374pt x 201.75375
+pt>
+File: ../public_html/img/uploads/bst-rem-case12.png Graphic file (type png)
+ <use ../public_html/img/uploads/bst-rem-case12.png>
+Package pdftex.def Info: ../public_html/img/uploads/bst-rem-case12.png used on 
+input line 2153.
+(pdftex.def)             Requested size: 161.60335pt x 201.76248pt.
+
+<../public_html/img/uploads/bst-rem-case21.png, id=334, 201.75375pt x 201.75375
+pt>
+File: ../public_html/img/uploads/bst-rem-case21.png Graphic file (type png)
+ <use ../public_html/img/uploads/bst-rem-case21.png>
+Package pdftex.def Info: ../public_html/img/uploads/bst-rem-case21.png used on 
+input line 2157.
+(pdftex.def)             Requested size: 201.75325pt x 201.75632pt.
+ [73 <../public_html/img/uploads/bst-rem-case11.png> <../public_html/img/upload
+s/bst-rem-case12.png>]
+<../public_html/img/uploads/bst-rem-case22.png, id=341, 201.75375pt x 201.75375
+pt>
+File: ../public_html/img/uploads/bst-rem-case22.png Graphic file (type png)
+ <use ../public_html/img/uploads/bst-rem-case22.png>
+Package pdftex.def Info: ../public_html/img/uploads/bst-rem-case22.png used on 
+input line 2161.
+(pdftex.def)             Requested size: 201.75325pt x 201.75632pt.
+
+<../public_html/img/uploads/bst-rem-case31.png, id=342, 201.75375pt x 201.75375
+pt>
+File: ../public_html/img/uploads/bst-rem-case31.png Graphic file (type png)
+ <use ../public_html/img/uploads/bst-rem-case31.png>
+Package pdftex.def Info: ../public_html/img/uploads/bst-rem-case31.png used on 
+input line 2165.
+(pdftex.def)             Requested size: 201.75325pt x 201.75632pt.
+ [74 <../public_html/img/uploads/bst-rem-case21.png> <../public_html/img/upload
+s/bst-rem-case22.png>]
+<../public_html/img/uploads/bst-rem-case32.png, id=348, 201.75375pt x 201.75375
+pt>
+File: ../public_html/img/uploads/bst-rem-case32.png Graphic file (type png)
+ <use ../public_html/img/uploads/bst-rem-case32.png>
+Package pdftex.def Info: ../public_html/img/uploads/bst-rem-case32.png used on 
+input line 2169.
+(pdftex.def)             Requested size: 201.75325pt x 201.75632pt.
+
+<../public_html/img/uploads/bst-rem-case33.png, id=349, 201.75375pt x 201.75375
+pt>
+File: ../public_html/img/uploads/bst-rem-case33.png Graphic file (type png)
+ <use ../public_html/img/uploads/bst-rem-case33.png>
+Package pdftex.def Info: ../public_html/img/uploads/bst-rem-case33.png used on 
+input line 2173.
+(pdftex.def)             Requested size: 201.75325pt x 201.75632pt.
+ [75 <../public_html/img/uploads/bst-rem-case31.png> <../public_html/img/upload
+s/bst-rem-case32.png>]
+<../public_html/img/uploads/bst-rem-case34.png, id=355, 201.75375pt x 201.75375
+pt>
+File: ../public_html/img/uploads/bst-rem-case34.png Graphic file (type png)
+ <use ../public_html/img/uploads/bst-rem-case34.png>
+Package pdftex.def Info: ../public_html/img/uploads/bst-rem-case34.png used on 
+input line 2177.
+(pdftex.def)             Requested size: 201.75325pt x 201.75632pt.
+ [76 <../public_html/img/uploads/bst-rem-case33.png> <../public_html/img/upload
+s/bst-rem-case34.png>]
+Overfull \hbox (53.9143pt too wide) in paragraph at lines 2211--2212
+[][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (47.34424pt too wide) in paragraph at lines 2220--2221
+[][][][][][][][][][][][][][][] 
+ []
+
+[77]
+Overfull \hbox (67.05444pt too wide) in paragraph at lines 2231--2232
+[][][][][][][][][][][][][][][][] 
+ []
+
+[78]
+<../public_html/img/uploads/maxheap2.png, id=367, 197.73875pt x 206.7725pt>
+File: ../public_html/img/uploads/maxheap2.png Graphic file (type png)
+
+<use ../public_html/img/uploads/maxheap2.png>
+Package pdftex.def Info: ../public_html/img/uploads/maxheap2.png used on input 
+line 2306.
+(pdftex.def)             Requested size: 197.73827pt x 206.77513pt.
+ [79]
+<../public_html/img/uploads/maxheap.png, id=372, 426.59375pt x 207.77625pt>
+File: ../public_html/img/uploads/maxheap.png Graphic file (type png)
+
+<use ../public_html/img/uploads/maxheap.png>
+Package pdftex.def Info: ../public_html/img/uploads/maxheap.png used on input l
+ine 2310.
+(pdftex.def)             Requested size: 360.0pt x 175.35197pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 2310--2311
+[][] 
+ []
+
+[80 <../public_html/img/uploads/maxheap2.png> <../public_html/img/uploads/maxhe
+ap.png>]
+Overfull \hbox (21.06396pt too wide) in paragraph at lines 2369--2370
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[48]
-Overfull \hbox (1.35376pt too wide) in paragraph at lines 2260--2261
+[81]
+File: ../public_html/img/uploads/maxheap.png Graphic file (type png)
+ <use ../public_html/img/uploads/maxheap.png>
+Package pdftex.def Info: ../public_html/img/uploads/maxheap.png used on input l
+ine 2400.
+(pdftex.def)             Requested size: 360.0pt x 175.35197pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 2400--2401
+[][] 
+ []
+
+
+<../public_html/img/uploads/maxheappush.png, id=381, 197.73875pt x 207.77625pt>
+File: ../public_html/img/uploads/maxheappush.png Graphic file (type png)
+<use ../public_html/img/uploads/maxheappush.png>
+Package pdftex.def Info: ../public_html/img/uploads/maxheappush.png used on inp
+ut line 2402.
+(pdftex.def)             Requested size: 197.73827pt x 207.77888pt.
+
+<../public_html/img/uploads/maxheappush2.png, id=382, 197.73875pt x 207.77625pt
+> [82]
+File: ../public_html/img/uploads/maxheappush2.png Graphic file (type png)
+ <use ../public_html/img/uploads/maxheappush2.png>
+Package pdftex.def Info: ../public_html/img/uploads/maxheappush2.png used on in
+put line 2404.
+(pdftex.def)             Requested size: 197.73827pt x 207.77888pt.
+
+<../public_html/img/uploads/maxheappush3.png, id=386, 197.73875pt x 207.77625pt
+>
+File: ../public_html/img/uploads/maxheappush3.png Graphic file (type png)
+ <use ../public_html/img/uploads/maxheappush3.png>
+Package pdftex.def Info: ../public_html/img/uploads/maxheappush3.png used on in
+put line 2406.
+(pdftex.def)             Requested size: 197.73827pt x 207.77888pt.
+ [83 <../public_html/img/uploads/maxheappush.png> <../public_html/img/uploads/m
+axheappush2.png>]
+Overfull \hbox (1.35376pt too wide) in paragraph at lines 2417--2418
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[49] [50] [51]
-Overfull \hbox (7.92383pt too wide) in paragraph at lines 2404--2405
-[][][][][][][][][][][][][][][][][][][] 
- []
+[84 <../public_html/img/uploads/maxheappush3.png>]
+<../public_html/img/uploads/maxheappop.png, id=396, 197.73875pt x 206.7725pt>
+File: ../public_html/img/uploads/maxheappop.png Graphic file (type png)
 
+<use ../public_html/img/uploads/maxheappop.png>
+Package pdftex.def Info: ../public_html/img/uploads/maxheappop.png used on inpu
+t line 2434.
+(pdftex.def)             Requested size: 197.73827pt x 206.77513pt.
 
-Overfull \hbox (21.06396pt too wide) in paragraph at lines 2410--2412
+<../public_html/img/uploads/maxheappop1.png, id=397, 177.66376pt x 158.5925pt>
+File: ../public_html/img/uploads/maxheappop1.png Graphic file (type png)
+
+<use ../public_html/img/uploads/maxheappop1.png>
+Package pdftex.def Info: ../public_html/img/uploads/maxheappop1.png used on inp
+ut line 2436.
+(pdftex.def)             Requested size: 177.66331pt x 158.59692pt.
+
+<../public_html/img/uploads/maxheappop2.png, id=398, 177.66376pt x 158.5925pt>
+File: ../public_html/img/uploads/maxheappop2.png Graphic file (type png)
+
+<use ../public_html/img/uploads/maxheappop2.png>
+Package pdftex.def Info: ../public_html/img/uploads/maxheappop2.png used on inp
+ut line 2438.
+(pdftex.def)             Requested size: 177.66331pt x 158.59692pt.
+
+<../public_html/img/uploads/maxheappop3.png, id=399, 177.66376pt x 158.5925pt>
+[85 <../public_html/img/uploads/maxheappop.png> <../public_html/img/uploads/max
+heappop1.png>]
+File: ../public_html/img/uploads/maxheappop3.png Graphic file (type png)
+ <use ../public_html/img/uploads/maxheappop3.png>
+Package pdftex.def Info: ../public_html/img/uploads/maxheappop3.png used on inp
+ut line 2440.
+(pdftex.def)             Requested size: 177.66331pt x 158.59692pt.
+ [86 <../public_html/img/uploads/maxheappop2.png> <../public_html/img/uploads/m
+axheappop3.png>] [87]
+Chapter 6.
+<../public_html/img/uploads/graph.png, id=414, 233.87375pt x 156.585pt>
+File: ../public_html/img/uploads/graph.png Graphic file (type png)
+
+<use ../public_html/img/uploads/graph.png>
+Package pdftex.def Info: ../public_html/img/uploads/graph.png used on input lin
+e 2494.
+(pdftex.def)             Requested size: 233.87315pt x 156.59177pt.
+
+<../public_html/img/uploads/digraph.png, id=415, 153.57375pt x 136.51pt>
+File: ../public_html/img/uploads/digraph.png Graphic file (type png)
+
+<use ../public_html/img/uploads/digraph.png>
+Package pdftex.def Info: ../public_html/img/uploads/digraph.png used on input l
+ine 2500.
+(pdftex.def)             Requested size: 153.57336pt x 136.51799pt.
+ [88
+
+ <../public_html/img/uploads/graph.png>] [89 <../public_html/img/uploads/digrap
+h.png>]
+<../public_html/img/uploads/treeroot.png, id=424, 143.53625pt x 256.96pt>
+File: ../public_html/img/uploads/treeroot.png Graphic file (type png)
+
+<use ../public_html/img/uploads/treeroot.png>
+Package pdftex.def Info: ../public_html/img/uploads/treeroot.png used on input 
+line 2554.
+(pdftex.def)             Requested size: 143.53589pt x 256.9672pt.
+ [90]
+<../public_html/img/uploads/centergraph.png, id=428, 323.2075pt x 189.70876pt>
+File: ../public_html/img/uploads/centergraph.png Graphic file (type png)
+
+<use ../public_html/img/uploads/centergraph.png>
+Package pdftex.def Info: ../public_html/img/uploads/centergraph.png used on inp
+ut line 2560.
+(pdftex.def)             Requested size: 323.20671pt x 189.71696pt.
+ [91 <../public_html/img/uploads/treeroot.png>] [92 <../public_html/img/uploads
+/centergraph.png>]
+Overfull \hbox (1.35376pt too wide) in paragraph at lines 2651--2652
 [][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (80.19458pt too wide) in paragraph at lines 2420--2421
+Overfull \hbox (60.48438pt too wide) in paragraph at lines 2655--2657
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[93] <../public_html/img/uploads/prim.png, id=441, 276.03125pt x 165.61874pt>
+File: ../public_html/img/uploads/prim.png Graphic file (type png)
+
+<use ../public_html/img/uploads/prim.png>
+Package pdftex.def Info: ../public_html/img/uploads/prim.png used on input line
+ 2686.
+(pdftex.def)             Requested size: 276.03056pt x 165.63602pt.
+
+<../public_html/img/uploads/prim1.png, id=442, 276.03125pt x 165.61874pt>
+File: ../public_html/img/uploads/prim1.png Graphic file (type png)
+
+<use ../public_html/img/uploads/prim1.png>
+Package pdftex.def Info: ../public_html/img/uploads/prim1.png used on input lin
+e 2688.
+(pdftex.def)             Requested size: 276.03056pt x 165.63602pt.
+
+<../public_html/img/uploads/prim2.png, id=443, 276.03125pt x 165.61874pt>
+File: ../public_html/img/uploads/prim2.png Graphic file (type png)
+
+<use ../public_html/img/uploads/prim2.png>
+Package pdftex.def Info: ../public_html/img/uploads/prim2.png used on input lin
+e 2690.
+(pdftex.def)             Requested size: 276.03056pt x 165.63602pt.
+
+<../public_html/img/uploads/prim3.png, id=444, 276.03125pt x 165.61874pt>
+[94 <../public_html/img/uploads/prim.png> <../public_html/img/uploads/prim1.png
+>]
+File: ../public_html/img/uploads/prim3.png Graphic file (type png)
+ <use ../public_html/img/uploads/prim3.png>
+Package pdftex.def Info: ../public_html/img/uploads/prim3.png used on input lin
+e 2692.
+(pdftex.def)             Requested size: 276.03056pt x 165.63602pt.
+
+<../public_html/img/uploads/prim4.png, id=450, 276.03125pt x 165.61874pt>
+File: ../public_html/img/uploads/prim4.png Graphic file (type png)
+
+<use ../public_html/img/uploads/prim4.png>
+Package pdftex.def Info: ../public_html/img/uploads/prim4.png used on input lin
+e 2694.
+(pdftex.def)             Requested size: 276.03056pt x 165.63602pt.
+
+<../public_html/img/uploads/prim5.png, id=451, 276.03125pt x 165.61874pt>
+File: ../public_html/img/uploads/prim5.png Graphic file (type png)
+
+<use ../public_html/img/uploads/prim5.png>
+Package pdftex.def Info: ../public_html/img/uploads/prim5.png used on input lin
+e 2696.
+(pdftex.def)             Requested size: 276.03056pt x 165.63602pt.
+
+<../public_html/img/uploads/prim6.png, id=452, 276.03125pt x 165.61874pt>
+[95 <../public_html/img/uploads/prim2.png> <../public_html/img/uploads/prim3.pn
+g> <../public_html/img/uploads/prim4.png>]
+File: ../public_html/img/uploads/prim6.png Graphic file (type png)
+
+<use ../public_html/img/uploads/prim6.png>
+Package pdftex.def Info: ../public_html/img/uploads/prim6.png used on input lin
+e 2698.
+(pdftex.def)             Requested size: 276.03056pt x 165.63602pt.
+
+<../public_html/img/uploads/prim7.png, id=459, 276.03125pt x 166.6225pt>
+File: ../public_html/img/uploads/prim7.png Graphic file (type png)
+
+<use ../public_html/img/uploads/prim7.png>
+Package pdftex.def Info: ../public_html/img/uploads/prim7.png used on input lin
+e 2700.
+(pdftex.def)             Requested size: 276.03056pt x 166.63988pt.
+ [96 <../public_html/img/uploads/prim5.png> <../public_html/img/uploads/prim6.p
+ng> <../public_html/img/uploads/prim7.png>]
+Overfull \hbox (1.35376pt too wide) in paragraph at lines 2723--2724
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (14.4939pt too wide) in paragraph at lines 2739--2740
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[97] [98]
+<../public_html/img/uploads/kruskal.png, id=473, 263.98625pt x 148.555pt>
+File: ../public_html/img/uploads/kruskal.png Graphic file (type png)
+
+<use ../public_html/img/uploads/kruskal.png>
+Package pdftex.def Info: ../public_html/img/uploads/kruskal.png used on input l
+ine 2784.
+(pdftex.def)             Requested size: 263.9856pt x 148.56369pt.
+
+<../public_html/img/uploads/kruskal2.png, id=474, 263.98625pt x 148.555pt>
+File: ../public_html/img/uploads/kruskal2.png Graphic file (type png)
+
+<use ../public_html/img/uploads/kruskal2.png>
+Package pdftex.def Info: ../public_html/img/uploads/kruskal2.png used on input 
+line 2786.
+(pdftex.def)             Requested size: 263.9856pt x 148.56369pt.
+
+<../public_html/img/uploads/kruskal3.png, id=475, 263.98625pt x 148.555pt>
+File: ../public_html/img/uploads/kruskal3.png Graphic file (type png)
+
+<use ../public_html/img/uploads/kruskal3.png>
+Package pdftex.def Info: ../public_html/img/uploads/kruskal3.png used on input 
+line 2788.
+(pdftex.def)             Requested size: 263.9856pt x 148.56369pt.
+
+<../public_html/img/uploads/kruskal4.png, id=476, 263.98625pt x 148.555pt>
+File: ../public_html/img/uploads/kruskal4.png Graphic file (type png)
+
+<use ../public_html/img/uploads/kruskal4.png>
+Package pdftex.def Info: ../public_html/img/uploads/kruskal4.png used on input 
+line 2790.
+(pdftex.def)             Requested size: 263.9856pt x 148.56369pt.
+
+<../public_html/img/uploads/kruskal5.png, id=477, 263.98625pt x 149.55875pt>
+[99 <../public_html/img/uploads/kruskal.png> <../public_html/img/uploads/kruska
+l2.png> <../public_html/img/uploads/kruskal3.png>]
+File: ../public_html/img/uploads/kruskal5.png Graphic file (type png)
+
+<use ../public_html/img/uploads/kruskal5.png>
+Package pdftex.def Info: ../public_html/img/uploads/kruskal5.png used on input 
+line 2792.
+(pdftex.def)             Requested size: 263.9856pt x 149.5675pt.
+
+<../public_html/img/uploads/kruskal6.png, id=484, 263.98625pt x 149.55875pt>
+File: ../public_html/img/uploads/kruskal6.png Graphic file (type png)
+
+<use ../public_html/img/uploads/kruskal6.png>
+Package pdftex.def Info: ../public_html/img/uploads/kruskal6.png used on input 
+line 2794.
+(pdftex.def)             Requested size: 263.9856pt x 149.5675pt.
+
+<../public_html/img/uploads/kruskal7.png, id=485, 263.98625pt x 149.55875pt>
+File: ../public_html/img/uploads/kruskal7.png Graphic file (type png)
+
+<use ../public_html/img/uploads/kruskal7.png>
+Package pdftex.def Info: ../public_html/img/uploads/kruskal7.png used on input 
+line 2796.
+(pdftex.def)             Requested size: 263.9856pt x 149.5675pt.
+ [100 <../public_html/img/uploads/kruskal4.png> <../public_html/img/uploads/kru
+skal5.png> <../public_html/img/uploads/kruskal6.png>]
+Overfull \hbox (7.92383pt too wide) in paragraph at lines 2817--2818
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (21.06396pt too wide) in paragraph at lines 2823--2825
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+[101 <../public_html/img/uploads/kruskal7.png>]
+Overfull \hbox (80.19458pt too wide) in paragraph at lines 2833--2834
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (21.06396pt too wide) in paragraph at lines 2421--2422
+Overfull \hbox (21.06396pt too wide) in paragraph at lines 2834--2835
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
-[52] [53]
-Overfull \hbox (1.35376pt too wide) in paragraph at lines 2538--2539
-[][][][][][][][][][][][][][][][][][] 
+
+Overfull \hbox (71.56187pt too wide) in paragraph at lines 2859--2875
+[][] 
  []
 
-[54]
-Overfull \hbox (14.4939pt too wide) in paragraph at lines 2554--2555
-[][][][][][][][][][][][][][][][][][][][][][][] 
+[102]
+<../public_html/img/uploads/floydwarshall1.png, id=500, 133.49875pt x 131.49126
+pt>
+File: ../public_html/img/uploads/floydwarshall1.png Graphic file (type png)
+ <use ../public_html/img/uploads/floydwarshall1.png>
+Package pdftex.def Info: ../public_html/img/uploads/floydwarshall1.png used on 
+input line 2880.
+(pdftex.def)             Requested size: 133.4984pt x 131.50294pt.
+
+<../public_html/img/uploads/floydwarshall.png, id=501, 183.68625pt x 131.49126p
+t>
+File: ../public_html/img/uploads/floydwarshall.png Graphic file (type png)
+ <use ../public_html/img/uploads/floydwarshall.png>
+Package pdftex.def Info: ../public_html/img/uploads/floydwarshall.png used on i
+nput line 2882.
+(pdftex.def)             Requested size: 183.68578pt x 131.49893pt.
+
+Overfull \hbox (34.2041pt too wide) in paragraph at lines 2889--2890
+[][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[55] [56] [57]
-Overfull \hbox (60.48438pt too wide) in paragraph at lines 2693--2694
-[][][][][][][][][][][][][][][][][][][][][][][] 
+
+Overfull \hbox (126.18506pt too wide) in paragraph at lines 2890--2891
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+] 
+ []
+
+[103 <../public_html/img/uploads/floydwarshall1.png> <../public_html/img/upload
+s/floydwarshall.png>]
+Overfull \hbox (257.58643pt too wide) in paragraph at lines 2898--2899
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][] 
  []
 
 
-Overfull \hbox (7.92383pt too wide) in paragraph at lines 2695--2696
-[][][][][][][][][][][][][][][][][][][] 
+Overfull \hbox (1.35376pt too wide) in paragraph at lines 2912--2914
+[][][][][][][][][][][][][][][][][][][][] 
  []
 
-[58]
-Overfull \hbox (53.9143pt too wide) in paragraph at lines 2708--2709
+
+Overfull \hbox (73.62451pt too wide) in paragraph at lines 2914--2915
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (1.35376pt too wide) in paragraph at lines 2931--2932
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[104]
+Overfull \hbox (178.7456pt too wide) in paragraph at lines 2945--2946
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (80.19458pt too wide) in paragraph at lines 2946--2947
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (132.75513pt too wide) in paragraph at lines 2709--2710
+Overfull \hbox (211.59595pt too wide) in paragraph at lines 2947--2948
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (7.92383pt too wide) in paragraph at lines 2948--2949
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[59]
-Overfull \hbox (172.17554pt too wide) in paragraph at lines 2766--2767
+
+Overfull \hbox (99.90479pt too wide) in paragraph at lines 2949--2950
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[105]
+<../public_html/img/uploads/bellmanford.png, id=514, 253.94875pt x 147.55125pt>
+File: ../public_html/img/uploads/bellmanford.png Graphic file (type png)
+<use ../public_html/img/uploads/bellmanford.png>
+Package pdftex.def Info: ../public_html/img/uploads/bellmanford.png used on inp
+ut line 2986.
+(pdftex.def)             Requested size: 253.94812pt x 147.55537pt.
+
+<../public_html/img/uploads/bellmanford2.png, id=515, 33.12375pt x 36.135pt>
+File: ../public_html/img/uploads/bellmanford2.png Graphic file (type png)
+
+<use ../public_html/img/uploads/bellmanford2.png>
+Package pdftex.def Info: ../public_html/img/uploads/bellmanford2.png used on in
+put line 2990.
+(pdftex.def)             Requested size: 33.12366pt x 36.13763pt.
+
+<../public_html/img/uploads/bellmanford3.png, id=516, 99.37125pt x 127.47626pt>
+File: ../public_html/img/uploads/bellmanford3.png Graphic file (type png)
+<use ../public_html/img/uploads/bellmanford3.png>
+Package pdftex.def Info: ../public_html/img/uploads/bellmanford3.png used on in
+put line 2994.
+(pdftex.def)             Requested size: 99.371pt x 127.47981pt.
+ [106 <../public_html/img/uploads/bellmanford.png> <../public_html/img/uploads/
+bellmanford2.png>]
+<../public_html/img/uploads/bellmanford4.png, id=522, 159.59625pt x 179.67125pt
+>
+File: ../public_html/img/uploads/bellmanford4.png Graphic file (type png)
+ <use ../public_html/img/uploads/bellmanford4.png>
+Package pdftex.def Info: ../public_html/img/uploads/bellmanford4.png used on in
+put line 3000.
+(pdftex.def)             Requested size: 159.59584pt x 179.67079pt.
+
+<../public_html/img/uploads/bellmanford5.png, id=523, 229.85875pt x 189.70876pt
+>
+File: ../public_html/img/uploads/bellmanford5.png Graphic file (type png)
+ <use ../public_html/img/uploads/bellmanford5.png>
+Package pdftex.def Info: ../public_html/img/uploads/bellmanford5.png used on in
+put line 3008.
+(pdftex.def)             Requested size: 229.85817pt x 189.71985pt.
+ [107 <../public_html/img/uploads/bellmanford3.png> <../public_html/img/uploads
+/bellmanford4.png>]
+Overfull \hbox (172.17554pt too wide) in paragraph at lines 3013--3014
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (198.45581pt too wide) in paragraph at lines 2772--2774
+Overfull \hbox (198.45581pt too wide) in paragraph at lines 3019--3021
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (408.698pt too wide) in paragraph at lines 2774--2776
+Overfull \hbox (408.698pt too wide) in paragraph at lines 3021--3023
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (1.35376pt too wide) in paragraph at lines 2784--2785
+Overfull \hbox (1.35376pt too wide) in paragraph at lines 3031--3032
 [][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (139.3252pt too wide) in paragraph at lines 2785--2787
+Overfull \hbox (139.3252pt too wide) in paragraph at lines 3032--3034
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[60]
-Overfull \hbox (205.02588pt too wide) in paragraph at lines 2804--2806
+[108 <../public_html/img/uploads/bellmanford5.png>]
+Overfull \hbox (205.02588pt too wide) in paragraph at lines 3051--3053
 [][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (93.33472pt too wide) in paragraph at lines 2828--2829
+Overfull \hbox (93.33472pt too wide) in paragraph at lines 3075--3076
 [][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (21.06396pt too wide) in paragraph at lines 2829--2830
+Overfull \hbox (21.06396pt too wide) in paragraph at lines 3076--3077
 [][][][][][][][][][][][][][][][][][][] 
  []
 
-[61]
-Overfull \hbox (47.34424pt too wide) in paragraph at lines 2830--2831
+
+Overfull \hbox (47.34424pt too wide) in paragraph at lines 3077--3078
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[109]
+Overfull \hbox (1.35376pt too wide) in paragraph at lines 3090--3091
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (1.35376pt too wide) in paragraph at lines 2843--2844
-[][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (7.92383pt too wide) in paragraph at lines 2851--2852
+Overfull \hbox (7.92383pt too wide) in paragraph at lines 3098--3099
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[62] [63]
-Overfull \hbox (99.90479pt too wide) in paragraph at lines 2971--2972
+[110] [111]
+<../public_html/img/uploads/djikstra.png, id=543, 253.94875pt x 148.555pt>
+File: ../public_html/img/uploads/djikstra.png Graphic file (type png)
+
+<use ../public_html/img/uploads/djikstra.png>
+Package pdftex.def Info: ../public_html/img/uploads/djikstra.png used on input 
+line 3175.
+(pdftex.def)             Requested size: 253.94812pt x 148.55916pt.
+
+<../public_html/img/uploads/djikstra1.png, id=544, 253.94875pt x 175.65625pt>
+File: ../public_html/img/uploads/djikstra1.png Graphic file (type png)
+
+<use ../public_html/img/uploads/djikstra1.png>
+Package pdftex.def Info: ../public_html/img/uploads/djikstra1.png used on input
+ line 3179.
+(pdftex.def)             Requested size: 253.94812pt x 175.66116pt.
+
+<../public_html/img/uploads/djikstra2.png, id=545, 253.94875pt x 184.69pt>
+File: ../public_html/img/uploads/djikstra2.png Graphic file (type png)
+
+<use ../public_html/img/uploads/djikstra2.png>
+Package pdftex.def Info: ../public_html/img/uploads/djikstra2.png used on input
+ line 3183.
+(pdftex.def)             Requested size: 253.94812pt x 184.69516pt.
+ [112 <../public_html/img/uploads/djikstra.png> <../public_html/img/uploads/dji
+kstra1.png>]
+<../public_html/img/uploads/djikstra3.png, id=551, 283.0575pt x 184.69pt>
+File: ../public_html/img/uploads/djikstra3.png Graphic file (type png)
+
+<use ../public_html/img/uploads/djikstra3.png>
+Package pdftex.def Info: ../public_html/img/uploads/djikstra3.png used on input
+ line 3187.
+(pdftex.def)             Requested size: 283.0568pt x 184.70361pt.
+
+<../public_html/img/uploads/djikstra4.png, id=552, 283.0575pt x 167.62625pt>
+File: ../public_html/img/uploads/djikstra4.png Graphic file (type png)
+
+<use ../public_html/img/uploads/djikstra4.png>
+Package pdftex.def Info: ../public_html/img/uploads/djikstra4.png used on input
+ line 3191.
+(pdftex.def)             Requested size: 283.0568pt x 167.63861pt.
+ [113 <../public_html/img/uploads/djikstra2.png> <../public_html/img/uploads/dj
+ikstra3.png>]
+<../public_html/img/uploads/djikstra5.png, id=558, 283.0575pt x 148.555pt>
+File: ../public_html/img/uploads/djikstra5.png Graphic file (type png)
+
+<use ../public_html/img/uploads/djikstra5.png>
+Package pdftex.def Info: ../public_html/img/uploads/djikstra5.png used on input
+ line 3195.
+(pdftex.def)             Requested size: 283.0568pt x 148.56595pt.
+
+<../public_html/img/uploads/djikstra6.png, id=559, 253.94875pt x 148.555pt>
+File: ../public_html/img/uploads/djikstra6.png Graphic file (type png)
+
+<use ../public_html/img/uploads/djikstra6.png>
+Package pdftex.def Info: ../public_html/img/uploads/djikstra6.png used on input
+ line 3199.
+(pdftex.def)             Requested size: 253.94812pt x 148.55916pt.
+ [114 <../public_html/img/uploads/djikstra4.png> <../public_html/img/uploads/dj
+ikstra5.png> <../public_html/img/uploads/djikstra6.png>]
+Overfull \hbox (60.48438pt too wide) in paragraph at lines 3217--3218
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (7.92383pt too wide) in paragraph at lines 3219--3220
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (53.9143pt too wide) in paragraph at lines 3232--3233
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (132.75513pt too wide) in paragraph at lines 3233--3234
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[115]
+Overfull \hbox (21.06396pt too wide) in paragraph at lines 3264--3265
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (27.63403pt too wide) in paragraph at lines 3266--3267
+[][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (145.89526pt too wide) in paragraph at lines 3271--3272
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[116]
+Overfull \hbox (53.9143pt too wide) in paragraph at lines 3276--3277
+[][][][][][][][][][][][][][][][][] 
+ []
+
+<../public_html/img/uploads/topsort.png, id=573, 154.5775pt x 146.5475pt>
+File: ../public_html/img/uploads/topsort.png Graphic file (type png)
+
+<use ../public_html/img/uploads/topsort.png>
+Package pdftex.def Info: ../public_html/img/uploads/topsort.png used on input l
+ine 3288.
+(pdftex.def)             Requested size: 154.5771pt x 146.56053pt.
+ [117 <../public_html/img/uploads/topsort.png>]
+File: ../public_html/img/uploads/topsort.png Graphic file (type png)
+ <use ../public_html/img/uploads/topsort.png>
+Package pdftex.def Info: ../public_html/img/uploads/topsort.png used on input l
+ine 3319.
+(pdftex.def)             Requested size: 154.5771pt x 146.56053pt.
+ [118]
+<../public_html/img/uploads/connectedcomponents.png, id=581, 273.02pt x 151.566
+25pt>
+File: ../public_html/img/uploads/connectedcomponents.png Graphic file (type png
+)
+ <use ../public_html/img/uploads/connectedcomponents.png>
+Package pdftex.def Info: ../public_html/img/uploads/connectedcomponents.png use
+d on input line 3356.
+(pdftex.def)             Requested size: 273.01933pt x 151.57512pt.
+
+<../public_html/img/uploads/connectedcomponents2.png, id=582, 273.02pt x 151.56
+625pt> [119 <../public_html/img/uploads/connectedcomponents.png>]
+File: ../public_html/img/uploads/connectedcomponents2.png Graphic file (type pn
+g)
+
+<use ../public_html/img/uploads/connectedcomponents2.png>
+Package pdftex.def Info: ../public_html/img/uploads/connectedcomponents2.png us
+ed on input line 3360.
+(pdftex.def)             Requested size: 273.01933pt x 151.57512pt.
+
+<../public_html/img/uploads/connectedcomponents3.png, id=587, 273.02pt x 151.56
+625pt>
+File: ../public_html/img/uploads/connectedcomponents3.png Graphic file (type pn
+g)
+ <use ../public_html/img/uploads/connectedcomponents3.png>
+Package pdftex.def Info: ../public_html/img/uploads/connectedcomponents3.png us
+ed on input line 3364.
+(pdftex.def)             Requested size: 273.01933pt x 151.57512pt.
+
+<../public_html/img/uploads/connectedcomponents4.png, id=588, 273.02pt x 151.56
+625pt>
+File: ../public_html/img/uploads/connectedcomponents4.png Graphic file (type pn
+g)
+ <use ../public_html/img/uploads/connectedcomponents4.png>
+Package pdftex.def Info: ../public_html/img/uploads/connectedcomponents4.png us
+ed on input line 3368.
+(pdftex.def)             Requested size: 273.01933pt x 151.57512pt.
+
+<../public_html/img/uploads/connectedcomponents5.png, id=589, 273.02pt x 151.56
+625pt>
+File: ../public_html/img/uploads/connectedcomponents5.png Graphic file (type pn
+g)
+ <use ../public_html/img/uploads/connectedcomponents5.png>
+Package pdftex.def Info: ../public_html/img/uploads/connectedcomponents5.png us
+ed on input line 3372.
+(pdftex.def)             Requested size: 273.01933pt x 151.57512pt.
+ [120 <../public_html/img/uploads/connectedcomponents2.png> <../public_html/img
+/uploads/connectedcomponents3.png> <../public_html/img/uploads/connectedcompone
+nts4.png>]
+<../public_html/img/uploads/connectedcomponents6.png, id=596, 273.02pt x 151.56
+625pt>
+File: ../public_html/img/uploads/connectedcomponents6.png Graphic file (type pn
+g)
+ <use ../public_html/img/uploads/connectedcomponents6.png>
+Package pdftex.def Info: ../public_html/img/uploads/connectedcomponents6.png us
+ed on input line 3376.
+(pdftex.def)             Requested size: 273.01933pt x 151.57512pt.
+
+<../public_html/img/uploads/connectedcomponents7.png, id=597, 273.02pt x 151.56
+625pt>
+File: ../public_html/img/uploads/connectedcomponents7.png Graphic file (type pn
+g)
+ <use ../public_html/img/uploads/connectedcomponents7.png>
+Package pdftex.def Info: ../public_html/img/uploads/connectedcomponents7.png us
+ed on input line 3380.
+(pdftex.def)             Requested size: 273.01933pt x 151.57512pt.
+
+<../public_html/img/uploads/connectedcomponents8.png, id=598, 273.02pt x 151.56
+625pt>
+File: ../public_html/img/uploads/connectedcomponents8.png Graphic file (type pn
+g)
+ <use ../public_html/img/uploads/connectedcomponents8.png>
+Package pdftex.def Info: ../public_html/img/uploads/connectedcomponents8.png us
+ed on input line 3384.
+(pdftex.def)             Requested size: 273.01933pt x 151.57512pt.
+ [121 <../public_html/img/uploads/connectedcomponents5.png> <../public_html/img
+/uploads/connectedcomponents6.png> <../public_html/img/uploads/connectedcompone
+nts7.png>]
+[122 <../public_html/img/uploads/connectedcomponents8.png>]
+Chapter 7.
+<../public_html/img/uploads/binarysearch.png, id=610, 262.9825pt x 116.435pt>
+File: ../public_html/img/uploads/binarysearch.png Graphic file (type png)
+
+<use ../public_html/img/uploads/binarysearch.png>
+Package pdftex.def Info: ../public_html/img/uploads/binarysearch.png used on in
+put line 3423.
+(pdftex.def)             Requested size: 262.98184pt x 116.44003pt.
+ [123
+
+ <../public_html/img/uploads/binarysearch.png>]
+Missing character: There is no â in font cmr10!
+Missing character: There is no ‰ in font cmr10!
+Missing character: There is no ¤ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no ‰ in font cmr10!
+Missing character: There is no ¤ in font cmr10!
+ [124]
+<../public_html/img/uploads/ternarysearch.png, id=618, 277.035pt x 197.73875pt>
+File: ../public_html/img/uploads/ternarysearch.png Graphic file (type png)
+<use ../public_html/img/uploads/ternarysearch.png>
+Package pdftex.def Info: ../public_html/img/uploads/ternarysearch.png used on i
+nput line 3503.
+(pdftex.def)             Requested size: 277.03432pt x 197.73827pt.
+ [125]
+File: ../public_html/img/uploads/ternarysearch.png Graphic file (type png)
+
+<use ../public_html/img/uploads/ternarysearch.png>
+Package pdftex.def Info: ../public_html/img/uploads/ternarysearch.png used on i
+nput line 3511.
+(pdftex.def)             Requested size: 277.03432pt x 197.73827pt.
+
+<../public_html/img/uploads/ternarycase11.png, id=622, 191.71625pt x 132.495pt>
+[126 <../public_html/img/uploads/ternarysearch.png>]
+File: ../public_html/img/uploads/ternarycase11.png Graphic file (type png)
+
+<use ../public_html/img/uploads/ternarycase11.png>
+Package pdftex.def Info: ../public_html/img/uploads/ternarycase11.png used on i
+nput line 3520.
+(pdftex.def)             Requested size: 191.71577pt x 132.50273pt.
+
+<../public_html/img/uploads/ternarycase12.png, id=627, 191.71625pt x 132.495pt>
+File: ../public_html/img/uploads/ternarycase12.png Graphic file (type png)
+<use ../public_html/img/uploads/ternarycase12.png>
+Package pdftex.def Info: ../public_html/img/uploads/ternarycase12.png used on i
+nput line 3523.
+(pdftex.def)             Requested size: 191.71577pt x 132.50273pt.
+
+<../public_html/img/uploads/ternarycase1.png, id=628, 214.8025pt x 145.54375pt>
+File: ../public_html/img/uploads/ternarycase1.png Graphic file (type png)
+<use ../public_html/img/uploads/ternarycase1.png>
+Package pdftex.def Info: ../public_html/img/uploads/ternarycase1.png used on in
+put line 3529.
+(pdftex.def)             Requested size: 214.80197pt x 145.5456pt.
+
+<../public_html/img/uploads/ternarycase21.png, id=629, 188.705pt x 132.495pt>
+[127 <../public_html/img/uploads/ternarycase11.png> <../public_html/img/uploads
+/ternarycase12.png> <../public_html/img/uploads/ternarycase1.png>]
+File: ../public_html/img/uploads/ternarycase21.png Graphic file (type png)
+
+<use ../public_html/img/uploads/ternarycase21.png>
+Package pdftex.def Info: ../public_html/img/uploads/ternarycase21.png used on i
+nput line 3536.
+(pdftex.def)             Requested size: 188.70453pt x 132.49466pt.
+
+<../public_html/img/uploads/ternarycase22.png, id=637, 188.705pt x 132.495pt>
+File: ../public_html/img/uploads/ternarycase22.png Graphic file (type png)
+
+<use ../public_html/img/uploads/ternarycase22.png>
+Package pdftex.def Info: ../public_html/img/uploads/ternarycase22.png used on i
+nput line 3539.
+(pdftex.def)             Requested size: 188.70453pt x 132.49466pt.
+
+<../public_html/img/uploads/ternarycase2.png, id=638, 205.76875pt x 145.54375pt
+>
+File: ../public_html/img/uploads/ternarycase2.png Graphic file (type png)
+ <use ../public_html/img/uploads/ternarycase2.png>
+Package pdftex.def Info: ../public_html/img/uploads/ternarycase2.png used on in
+put line 3545.
+(pdftex.def)             Requested size: 205.76823pt x 145.54338pt.
+ [128 <../public_html/img/uploads/ternarycase21.png> <../public_html/img/upload
+s/ternarycase22.png> <../public_html/img/uploads/ternarycase2.png>]
+File: ../public_html/img/uploads/ternarysearch.png Graphic file (type png)
+
+<use ../public_html/img/uploads/ternarysearch.png>
+Package pdftex.def Info: ../public_html/img/uploads/ternarysearch.png used on i
+nput line 3551.
+(pdftex.def)             Requested size: 277.03432pt x 197.73827pt.
+
+<../public_html/img/uploads/ternarysearch2.png, id=645, 277.035pt x 197.73875pt
+>
+File: ../public_html/img/uploads/ternarysearch2.png Graphic file (type png)
+ <use ../public_html/img/uploads/ternarysearch2.png>
+Package pdftex.def Info: ../public_html/img/uploads/ternarysearch2.png used on 
+input line 3553.
+(pdftex.def)             Requested size: 277.03432pt x 197.73827pt.
+
+<../public_html/img/uploads/ternarysearch3.png, id=646, 269.005pt x 197.73875pt
+>
+File: ../public_html/img/uploads/ternarysearch3.png Graphic file (type png)
+ <use ../public_html/img/uploads/ternarysearch3.png>
+Package pdftex.def Info: ../public_html/img/uploads/ternarysearch3.png used on 
+input line 3555.
+(pdftex.def)             Requested size: 269.00433pt x 197.74127pt.
+
+<../public_html/img/uploads/ternarysearch4.png, id=647, 269.005pt x 197.73875pt
+> [129 <../public_html/img/uploads/ternarysearch2.png>]
+File: ../public_html/img/uploads/ternarysearch4.png Graphic file (type png)
+
+<use ../public_html/img/uploads/ternarysearch4.png>
+Package pdftex.def Info: ../public_html/img/uploads/ternarysearch4.png used on 
+input line 3557.
+(pdftex.def)             Requested size: 269.00433pt x 197.74127pt.
+
+<../public_html/img/uploads/ternarysearch5.png, id=652, 254.9525pt x 197.73875p
+t>
+File: ../public_html/img/uploads/ternarysearch5.png Graphic file (type png)
+ <use ../public_html/img/uploads/ternarysearch5.png>
+Package pdftex.def Info: ../public_html/img/uploads/ternarysearch5.png used on 
+input line 3559.
+(pdftex.def)             Requested size: 254.95186pt x 197.74731pt.
+
+<../public_html/img/uploads/ternarysearch6.png, id=653, 254.9525pt x 195.73125p
+t> [130 <../public_html/img/uploads/ternarysearch3.png> <../public_html/img/upl
+oads/ternarysearch4.png>]
+File: ../public_html/img/uploads/ternarysearch6.png Graphic file (type png)
+ <use ../public_html/img/uploads/ternarysearch6.png>
+Package pdftex.def Info: ../public_html/img/uploads/ternarysearch6.png used on 
+input line 3561.
+(pdftex.def)             Requested size: 254.95186pt x 195.73972pt.
+
+<../public_html/img/uploads/ternarysearch7.png, id=659, 254.9525pt x 185.69376p
+t>
+File: ../public_html/img/uploads/ternarysearch7.png Graphic file (type png)
+ <use ../public_html/img/uploads/ternarysearch7.png>
+Package pdftex.def Info: ../public_html/img/uploads/ternarysearch7.png used on 
+input line 3563.
+(pdftex.def)             Requested size: 254.95186pt x 185.7018pt.
+ [131 <../public_html/img/uploads/ternarysearch5.png> <../public_html/img/uploa
+ds/ternarysearch6.png>]
+[132 <../public_html/img/uploads/ternarysearch7.png>]
+<../public_html/img/uploads/dfs.png, id=669, 158.5925pt x 226.8475pt>
+File: ../public_html/img/uploads/dfs.png Graphic file (type png)
+
+<use ../public_html/img/uploads/dfs.png>
+Package pdftex.def Info: ../public_html/img/uploads/dfs.png used on input line 
+3607.
+(pdftex.def)             Requested size: 158.59209pt x 226.86424pt.
+ [133 <../public_html/img/uploads/dfs.png>]
+File: ../public_html/img/uploads/dfs.png Graphic file (type png)
+ <use ../public_html/img/uploads/dfs.png>
+Package pdftex.def Info: ../public_html/img/uploads/dfs.png used on input line 
+3624.
+(pdftex.def)             Requested size: 158.59209pt x 226.86424pt.
+
+<../public_html/img/uploads/dfs-preorder.png, id=675, 158.5925pt x 226.8475pt>
+File: ../public_html/img/uploads/dfs-preorder.png Graphic file (type png)
+
+<use ../public_html/img/uploads/dfs-preorder.png>
+Package pdftex.def Info: ../public_html/img/uploads/dfs-preorder.png used on in
+put line 3643.
+(pdftex.def)             Requested size: 158.59209pt x 226.86424pt.
+ [134]
+<../public_html/img/uploads/dfs-postorder.png, id=679, 158.5925pt x 226.8475pt>
+File: ../public_html/img/uploads/dfs-postorder.png Graphic file (type png)
+<use ../public_html/img/uploads/dfs-postorder.png>
+Package pdftex.def Info: ../public_html/img/uploads/dfs-postorder.png used on i
+nput line 3662.
+(pdftex.def)             Requested size: 158.59209pt x 226.86424pt.
+ [135 <../public_html/img/uploads/dfs-preorder.png>]
+Overfull \hbox (198.45581pt too wide) in paragraph at lines 3686--3687
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (198.45581pt too wide) in paragraph at lines 3688--3689
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[136 <../public_html/img/uploads/dfs-postorder.png>]
+Overfull \hbox (132.75513pt too wide) in paragraph at lines 3690--3691
 [][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[64]
-Overfull \hbox (0.25244pt too wide) in paragraph at lines 2987--2988
-[]\OT1/cmr/m/n/10.95 We can min-i-mize the av-er-age height dif-fer-ence by sor
-t-ing men and woman
+
+Overfull \hbox (53.9143pt too wide) in paragraph at lines 3695--3696
+[][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[65]
-Overfull \hbox (299.83264pt too wide) in paragraph at lines 3050--3080
-[] 
+<../public_html/img/uploads/bfs.png, id=688, 158.5925pt x 226.8475pt>
+File: ../public_html/img/uploads/bfs.png Graphic file (type png)
+
+<use ../public_html/img/uploads/bfs.png>
+Package pdftex.def Info: ../public_html/img/uploads/bfs.png used on input line 
+3725.
+(pdftex.def)             Requested size: 158.59209pt x 226.86424pt.
+ [137] [138 <../public_html/img/uploads/bfs.png>]
+<../public_html/img/uploads/floodfill.png, id=696, 207.174pt x 207.174pt>
+File: ../public_html/img/uploads/floodfill.png Graphic file (type png)
+
+<use ../public_html/img/uploads/floodfill.png>
+Package pdftex.def Info: ../public_html/img/uploads/floodfill.png used on input
+ line 3768.
+(pdftex.def)             Requested size: 207.17348pt x 207.17348pt.
+ [139 <../public_html/img/uploads/floodfill.png>]
+<../public_html/img/uploads/bucket.png, id=701, 207.174pt x 207.174pt> [140]
+File: ../public_html/img/uploads/bucket.png Graphic file (type png)
+
+<use ../public_html/img/uploads/bucket.png>
+Package pdftex.def Info: ../public_html/img/uploads/bucket.png used on input li
+ne 3815.
+(pdftex.def)             Requested size: 207.17348pt x 207.17348pt.
+
+<../public_html/img/uploads/bucket2.png, id=705, 207.174pt x 207.174pt>
+File: ../public_html/img/uploads/bucket2.png Graphic file (type png)
+
+<use ../public_html/img/uploads/bucket2.png>
+Package pdftex.def Info: ../public_html/img/uploads/bucket2.png used on input l
+ine 3817.
+(pdftex.def)             Requested size: 207.17348pt x 207.17348pt.
+
+<../public_html/img/uploads/bucket3.png, id=706, 207.174pt x 207.174pt>
+File: ../public_html/img/uploads/bucket3.png Graphic file (type png)
+
+<use ../public_html/img/uploads/bucket3.png>
+Package pdftex.def Info: ../public_html/img/uploads/bucket3.png used on input l
+ine 3821.
+(pdftex.def)             Requested size: 207.17348pt x 207.17348pt.
+
+<../public_html/img/uploads/bucket4.png, id=707, 207.174pt x 207.174pt>
+[141 <../public_html/img/uploads/bucket.png> <../public_html/img/uploads/bucket
+2.png>]
+File: ../public_html/img/uploads/bucket4.png Graphic file (type png)
+ <use ../public_html/img/uploads/bucket4.png>
+Package pdftex.def Info: ../public_html/img/uploads/bucket4.png used on input l
+ine 3823.
+(pdftex.def)             Requested size: 207.17348pt x 207.17348pt.
+ [142 <../public_html/img/uploads/bucket3.png> <../public_html/img/uploads/buck
+et4.png>]
+Overfull \hbox (152.46533pt too wide) in paragraph at lines 3836--3837
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[66]
-Overfull \hbox (71.56187pt too wide) in paragraph at lines 3086--3102
+
+Overfull \hbox (152.46533pt too wide) in paragraph at lines 3867--3868
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[143]
+Overfull \hbox (14.4939pt too wide) in paragraph at lines 3876--3877
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[144]
+Overfull \hbox (40.77417pt too wide) in paragraph at lines 3920--3922
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (60.48438pt too wide) in paragraph at lines 3931--3934
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[145] [146]
+Overfull \hbox (27.63403pt too wide) in paragraph at lines 3986--3987
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (172.17554pt too wide) in paragraph at lines 3991--3992
+[][][] 
+ []
+
+
+Overfull \hbox (93.33472pt too wide) in paragraph at lines 3999--4001
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][] 
+ []
+
+
+Overfull \hbox (244.44629pt too wide) in paragraph at lines 4007--4008
+[][][][] 
+ []
+
+
+Overfull \hbox (172.17554pt too wide) in paragraph at lines 4009--4010
+[][][] 
+ []
+
+
+<../public_html/img/uploads/enumerate-sets.png, id=727, 156.585pt x 199.74625pt
+>
+File: ../public_html/img/uploads/enumerate-sets.png Graphic file (type png)
+ <use ../public_html/img/uploads/enumerate-sets.png>
+Package pdftex.def Info: ../public_html/img/uploads/enumerate-sets.png used on 
+input line 4014.
+(pdftex.def)             Requested size: 156.58461pt x 199.75185pt.
+ [147] [148 <../public_html/img/uploads/enumerate-sets.png>] [149]
+<../public_html/img/uploads/nqueen.jpg, id=738, 313.9228pt x 298.86656pt>
+File: ../public_html/img/uploads/nqueen.jpg Graphic file (type jpg)
+
+<use ../public_html/img/uploads/nqueen.jpg>
+Package pdftex.def Info: ../public_html/img/uploads/nqueen.jpg used on input li
+ne 4095.
+(pdftex.def)             Requested size: 313.92203pt x 298.87949pt.
+
+<../public_html/img/uploads/nqueen3.png, id=739, 375.4025pt x 371.3875pt>
+File: ../public_html/img/uploads/nqueen3.png Graphic file (type png)
+
+<use ../public_html/img/uploads/nqueen3.png>
+Package pdftex.def Info: ../public_html/img/uploads/nqueen3.png used on input l
+ine 4099.
+(pdftex.def)             Requested size: 360.0pt x 356.17093pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 4099--4100
 [][] 
  []
 
+[150 <../public_html/img/uploads/nqueen.jpg>]
+<../public_html/img/uploads/nqueen1.png, id=744, 225.2415pt x 226.446pt>
+File: ../public_html/img/uploads/nqueen1.png Graphic file (type png)
 
-Overfull \hbox (34.2041pt too wide) in paragraph at lines 3116--3117
-[][][][][][][][][][][][][][][][][][][][][][][][] 
+<use ../public_html/img/uploads/nqueen1.png>
+Package pdftex.def Info: ../public_html/img/uploads/nqueen1.png used on input l
+ine 4109.
+(pdftex.def)             Requested size: 225.24094pt x 226.44888pt.
+ [151 <../public_html/img/uploads/nqueen3.png>]
+<../public_html/img/uploads/nqueen2.png, id=750, 225.2415pt x 222.8325pt>
+File: ../public_html/img/uploads/nqueen2.png Graphic file (type png)
+
+<use ../public_html/img/uploads/nqueen2.png>
+Package pdftex.def Info: ../public_html/img/uploads/nqueen2.png used on input l
+ine 4119.
+(pdftex.def)             Requested size: 225.24094pt x 222.83534pt.
+ [152 <../public_html/img/uploads/nqueen1.png>]
+Overfull \hbox (73.62451pt too wide) in paragraph at lines 4131--4133
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (126.18506pt too wide) in paragraph at lines 3117--3118
+Overfull \hbox (53.9143pt too wide) in paragraph at lines 4137--4138
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (323.28711pt too wide) in paragraph at lines 4140--4142
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][] 
+ []
+
+[153 <../public_html/img/uploads/nqueen2.png>] [154] [155]
+Chapter 8.
+[156
+
+]
+Overfull \hbox (3.47675pt too wide) in paragraph at lines 4249--4250
+[]\OT1/cmr/m/n/10.95 For ex-am-ple given A="xyaaaabcdeg", B="bcaaaaefgxy" the l
+ongest com-
+ []
+
+
+Overfull \hbox (67.05444pt too wide) in paragraph at lines 4269--4270
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][] 
+ []
+
+
+Overfull \hbox (191.88574pt too wide) in paragraph at lines 4275--4276
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][] 
+ []
+
+Missing character: There is no â in font cmr10!
+Missing character: There is no ‰ in font cmr10!
+Missing character: There is no ¤ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no ‰ in font cmr10!
+Missing character: There is no ¤ in font cmr10!
+
+Overfull \hbox (388.9878pt too wide) in paragraph at lines 4281--4283
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+Missing character: There is no â in font cmr10!
+Missing character: There is no ‰ in font cmr10!
+Missing character: There is no ¤ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no ‰ in font cmr10!
+Missing character: There is no ¤ in font cmr10!
+[157]
+Missing character: There is no â in font cmr10!
+Missing character: There is no ‰ in font cmr10!
+Missing character: There is no ¤ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no ‰ in font cmr10!
+Missing character: There is no ¤ in font cmr10!
+
+Overfull \hbox (145.89526pt too wide) in paragraph at lines 4288--4289
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][] 
+ []
+
+Missing character: There is no â in font cmr10!
+Missing character: There is no ‰ in font cmr10!
+Missing character: There is no ¤ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no ‰ in font cmr10!
+Missing character: There is no ¤ in font cmr10!
+
+Overfull \hbox (251.01636pt too wide) in paragraph at lines 4289--4290
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (270.72656pt too wide) in paragraph at lines 4303--4304
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ] 
  []
 
 
-Overfull \hbox (257.58643pt too wide) in paragraph at lines 3125--3126
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][] 
- []
-
-[67]
-Overfull \hbox (1.35376pt too wide) in paragraph at lines 3139--3141
-[][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (73.62451pt too wide) in paragraph at lines 3141--3142
-[][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (1.35376pt too wide) in paragraph at lines 3158--3159
-[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[68]
-Overfull \hbox (178.7456pt too wide) in paragraph at lines 3172--3173
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (80.19458pt too wide) in paragraph at lines 3173--3174
-[][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (211.59595pt too wide) in paragraph at lines 3174--3175
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (7.92383pt too wide) in paragraph at lines 3175--3176
-[][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (99.90479pt too wide) in paragraph at lines 3176--3177
-[][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[69] [70] [71] [72] [73] [74]
-Overfull \hbox (60.48438pt too wide) in paragraph at lines 3468--3469
-[][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (60.48438pt too wide) in paragraph at lines 3470--3471
-[][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (60.48438pt too wide) in paragraph at lines 3475--3476
-[][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (86.76465pt too wide) in paragraph at lines 3478--3479
-[][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (86.76465pt too wide) in paragraph at lines 3479--3480
-[][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[75]
-Overfull \hbox (60.48438pt too wide) in paragraph at lines 3501--3502
-[][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (139.3252pt too wide) in paragraph at lines 3503--3504
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (119.61499pt too wide) in paragraph at lines 3504--3505
-[][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (172.17554pt too wide) in paragraph at lines 3506--3507
-[][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (47.34424pt too wide) in paragraph at lines 3508--3509
-[][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (21.06396pt too wide) in paragraph at lines 3511--3512
-[][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Underfull \vbox (badness 2418) has occurred while \output is active []
-
- [76]
-Overfull \hbox (93.33472pt too wide) in paragraph at lines 3534--3535
-[][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[77] [78
-
-]
-Chapter 5.
-[79] [80] [81]
-Overfull \hbox (19.47968pt too wide) in paragraph at lines 3670--3690
-[][] 
- []
-
-[82] [83] [84] [85]
-Overfull \hbox (21.06396pt too wide) in paragraph at lines 3922--3923
-[][][][][][][][][][][][][][][][][] 
- []
-
-[86] [87] [88] [89]
-Overfull \hbox (53.9143pt too wide) in paragraph at lines 4081--4082
-[][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (47.34424pt too wide) in paragraph at lines 4090--4091
-[][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (67.05444pt too wide) in paragraph at lines 4101--4102
-[][][][][][][][][][][][][][][][] 
- []
-
-[90]
-Overfull \hbox (1.35376pt too wide) in paragraph at lines 4137--4139
-[][][][][][][][][][][][][][][][][][] 
- []
-
-[91]
-Overfull \hbox (80.19458pt too wide) in paragraph at lines 4170--4171
-[][][][][][][][][][][][][][][][][][] 
- []
-
-[92] [93] [94]
-Overfull \hbox (1.35376pt too wide) in paragraph at lines 4315--4317
-[][][][][][][][][][][][][][][][][][] 
- []
-
-[95]
-Overfull \hbox (99.90479pt too wide) in paragraph at lines 4349--4350
-[][][][][][][][][][][][][][][][][][] 
- []
-
-[96] [97] [98] [99] [100]
-Overfull \hbox (21.06396pt too wide) in paragraph at lines 4584--4585
-[][][][][][][][][][][][][][][][][] 
- []
-
-[101] [102] [103]
-Overfull \hbox (53.9143pt too wide) in paragraph at lines 4758--4759
-[][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (47.34424pt too wide) in paragraph at lines 4767--4768
-[][][][][][][][][][][][][][][] 
- []
-
-[104]
-Overfull \hbox (67.05444pt too wide) in paragraph at lines 4778--4779
-[][][][][][][][][][][][][][][][] 
- []
-
-[105] [106]
-Overfull \hbox (1.35376pt too wide) in paragraph at lines 4878--4880
-[][][][][][][][][][][][][][][][][][] 
- []
-
-[107]
-Overfull \hbox (99.90479pt too wide) in paragraph at lines 4912--4913
-[][][][][][][][][][][][][][][][][][] 
- []
-
-[108] [109] [110] [111] [112] [113] [114] [115] [116] [117]
-Missing character: There is no â in font cmr10!
-Missing character: There is no ‰ in font cmr10!
-Missing character: There is no ¤ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no ‰ in font cmr10!
-Missing character: There is no ¤ in font cmr10!
- [118] [119]
-[120] [121]
-Overfull \hbox (34.2041pt too wide) in paragraph at lines 5543--5544
-[][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[122]
-Chapter 6.
-[123
-
-] [124]
-Overfull \hbox (299.83264pt too wide) in paragraph at lines 5730--5760
-[] 
- []
-
-[125] [126]
-Underfull \vbox (badness 5908) has occurred while \output is active []
-
- [127]
-[128] [129] [130]
-Overfull \hbox (198.45581pt too wide) in paragraph at lines 6034--6035
+Overfull \hbox (113.04492pt too wide) in paragraph at lines 4311--4312
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (198.45581pt too wide) in paragraph at lines 6036--6037
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (132.75513pt too wide) in paragraph at lines 6038--6039
-[][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (53.9143pt too wide) in paragraph at lines 6043--6044
-[][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[131]
-Overfull \hbox (21.06396pt too wide) in paragraph at lines 6072--6073
-[][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (27.63403pt too wide) in paragraph at lines 6074--6075
-[][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (145.89526pt too wide) in paragraph at lines 6079--6080
-[][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (53.9143pt too wide) in paragraph at lines 6084--6085
-[][][][][][][][][][][][][][][][][] 
- []
-
-[132]
-Overfull \hbox (1.35376pt too wide) in paragraph at lines 6174--6175
-[][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (60.48438pt too wide) in paragraph at lines 6178--6180
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[133] [134] [135] [136
-
-]
-Chapter 7.
-[137] [138]
-Overfull \hbox (152.46533pt too wide) in paragraph at lines 6370--6371
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[139]
-Overfull \hbox (152.46533pt too wide) in paragraph at lines 6401--6402
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (14.4939pt too wide) in paragraph at lines 6410--6411
-[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[140] [141] [142] [143] [144]
-Chapter 8.
-
-Overfull \hbox (1.35376pt too wide) in paragraph at lines 6609--6610
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][] 
- []
-
-[145
-
-]
-Overfull \hbox (1.35376pt too wide) in paragraph at lines 6643--6644
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][] 
- []
-
-[146] [147]
-Overfull \hbox (47.34424pt too wide) in paragraph at lines 6716--6718
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[148] [149]
-Overfull \hbox (165.60547pt too wide) in paragraph at lines 6771--6773
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (159.0354pt too wide) in paragraph at lines 6778--6779
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][] 
- []
-
-
-Overfull \hbox (132.75513pt too wide) in paragraph at lines 6779--6781
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[150]
-Overfull \hbox (310.14697pt too wide) in paragraph at lines 6808--6809
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][] 
- []
-
-[151]
-Overfull \hbox (205.02588pt too wide) in paragraph at lines 6869--6870
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (53.9143pt too wide) in paragraph at lines 6870--6872
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[152]
-Overfull \hbox (27.63403pt too wide) in paragraph at lines 6891--6892
-[][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (152.46533pt too wide) in paragraph at lines 6892--6894
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[153]
-Overfull \hbox (34.2041pt too wide) in paragraph at lines 6928--6929
-[][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (126.18506pt too wide) in paragraph at lines 6929--6930
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (106.47485pt too wide) in paragraph at lines 6930--6932
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (67.05444pt too wide) in paragraph at lines 6934--6935
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (34.2041pt too wide) in paragraph at lines 6938--6939
-[][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (126.18506pt too wide) in paragraph at lines 6939--6940
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (106.47485pt too wide) in paragraph at lines 6940--6942
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[154]
-Overfull \hbox (53.9143pt too wide) in paragraph at lines 6949--6951
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (119.61499pt too wide) in paragraph at lines 6962--6964
+Overfull \hbox (264.1565pt too wide) in paragraph at lines 4315--4316
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (172.17554pt too wide) in paragraph at lines 6975--6976
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (395.55786pt too wide) in paragraph at lines 6976--6977
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (342.99731pt too wide) in paragraph at lines 6977--6978
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (67.05444pt too wide) in paragraph at lines 6984--6986
+Overfull \hbox (172.17554pt too wide) in paragraph at lines 4316--4317
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[155] [156]
 
-Package Listings Warning: Text dropped after begin of listing on input line 704
-6.
-
-
-Package Listings Warning: Text dropped after begin of listing on input line 705
-1.
-
-
-Overfull \hbox (40.77417pt too wide) in paragraph at lines 7057--7058
-[][][][][][][][][][][][][][][][][][][][][][][][] 
+Overfull \hbox (145.89526pt too wide) in paragraph at lines 4317--4319
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (520.38916pt too wide) in paragraph at lines 7058--7059
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][] 
+Overfull \hbox (185.31567pt too wide) in paragraph at lines 4325--4326
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-
-Overfull \hbox (388.9878pt too wide) in paragraph at lines 7067--7069
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (86.76465pt too wide) in paragraph at lines 7073--7074
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[157]
-Overfull \hbox (310.14697pt too wide) in paragraph at lines 7100--7102
+[158]
+Overfull \hbox (310.14697pt too wide) in paragraph at lines 4344--4346
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][] 
  []
 
-[158]
-Overfull \hbox (388.9878pt too wide) in paragraph at lines 7106--7107
+
+Overfull \hbox (388.9878pt too wide) in paragraph at lines 4350--4351
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (86.76465pt too wide) in paragraph at lines 7107--7108
+Overfull \hbox (86.76465pt too wide) in paragraph at lines 4351--4352
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[159]
-Overfull \hbox (3.47675pt too wide) in paragraph at lines 7190--7191
-[]\OT1/cmr/m/n/10.95 For ex-am-ple given A="xyaaaabcdeg", B="bcaaaaefgxy" the l
-ongest com-
+[159] [160]
+
+Package Listings Warning: Text dropped after begin of listing on input line 445
+6.
+
+
+Package Listings Warning: Text dropped after begin of listing on input line 446
+1.
+
+
+Overfull \hbox (40.77417pt too wide) in paragraph at lines 4467--4468
+[][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (67.05444pt too wide) in paragraph at lines 7210--7211
+Overfull \hbox (520.38916pt too wide) in paragraph at lines 4468--4469
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][] 
- []
-
-
-Overfull \hbox (191.88574pt too wide) in paragraph at lines 7216--7217
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][] 
- []
-
-[160]
-Missing character: There is no â in font cmr10!
-Missing character: There is no ‰ in font cmr10!
-Missing character: There is no ¤ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no ‰ in font cmr10!
-Missing character: There is no ¤ in font cmr10!
-
-Overfull \hbox (388.9878pt too wide) in paragraph at lines 7222--7224
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-Missing character: There is no â in font cmr10!
-Missing character: There is no ‰ in font cmr10!
-Missing character: There is no ¤ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no ‰ in font cmr10!
-Missing character: There is no ¤ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no ‰ in font cmr10!
-Missing character: There is no ¤ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no ‰ in font cmr10!
-Missing character: There is no ¤ in font cmr10!
-
-Overfull \hbox (145.89526pt too wide) in paragraph at lines 7229--7230
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][] 
- []
-
-Missing character: There is no â in font cmr10!
-Missing character: There is no ‰ in font cmr10!
-Missing character: There is no ¤ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no ‰ in font cmr10!
-Missing character: There is no ¤ in font cmr10!
-
-Overfull \hbox (251.01636pt too wide) in paragraph at lines 7230--7231
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (270.72656pt too wide) in paragraph at lines 7244--7245
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-] 
- []
-
-
-Overfull \hbox (113.04492pt too wide) in paragraph at lines 7252--7253
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (264.1565pt too wide) in paragraph at lines 7256--7257
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (172.17554pt too wide) in paragraph at lines 7257--7258
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (145.89526pt too wide) in paragraph at lines 7258--7260
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 [161]
-Overfull \hbox (185.31567pt too wide) in paragraph at lines 7266--7267
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (3.47675pt too wide) in paragraph at lines 7274--7275
-[]\OT1/cmr/m/n/10.95 For ex-am-ple given A="xyaaaabcdeg", B="bcaaaaefgxy" the l
-ongest com-
- []
-
-
-Overfull \hbox (67.05444pt too wide) in paragraph at lines 7302--7303
+Overfull \hbox (388.9878pt too wide) in paragraph at lines 4477--4479
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][] 
+][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (86.76465pt too wide) in paragraph at lines 4483--4484
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 [162]
-Overfull \hbox (191.88574pt too wide) in paragraph at lines 7308--7309
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][] 
- []
-
-Missing character: There is no â in font cmr10!
-Missing character: There is no ‰ in font cmr10!
-Missing character: There is no ¤ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no ‰ in font cmr10!
-Missing character: There is no ¤ in font cmr10!
-
-Overfull \hbox (388.9878pt too wide) in paragraph at lines 7314--7316
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-Missing character: There is no â in font cmr10!
-Missing character: There is no ‰ in font cmr10!
-Missing character: There is no ¤ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no ‰ in font cmr10!
-Missing character: There is no ¤ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no ‰ in font cmr10!
-Missing character: There is no ¤ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no ‰ in font cmr10!
-Missing character: There is no ¤ in font cmr10!
-
-Overfull \hbox (145.89526pt too wide) in paragraph at lines 7321--7322
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][] 
- []
-
-Missing character: There is no â in font cmr10!
-Missing character: There is no ‰ in font cmr10!
-Missing character: There is no ¤ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no ‰ in font cmr10!
-Missing character: There is no ¤ in font cmr10!
-
-Overfull \hbox (251.01636pt too wide) in paragraph at lines 7322--7323
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (2.50395pt too wide) in paragraph at lines 7340--7341
-[]\OT1/cmr/m/n/10.95 Example: A = abcdefh, B = bcefg, abcdefh->bcdefh->bcefh->b
-cefg 
- []
-
-[163] [164
-
-]
 Chapter 9.
-[165] [166] (./book.aux) ) 
+[163
+
+] [164] (./book.aux) ) 
 Here is how much of TeX's memory you used:
- 1593 strings out of 493315
- 22405 string characters out of 6137904
- 101918 words of memory out of 5000000
- 5091 multiletter control sequences out of 15000+600000
+ 3491 strings out of 493315
+ 67593 string characters out of 6137904
+ 123053 words of memory out of 5000000
+ 6793 multiletter control sequences out of 15000+600000
  9163 words of font info for 32 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 26i,8n,32p,915b,1426s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2013/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmmi10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmmi8.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr8.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmsl10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmsy10.pfb>
-Output written on book.pdf (166 pages, 397808 bytes).
+ 37i,8n,32p,842b,1420s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2013/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmbx10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmbx12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmmi10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmmi8.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr8.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmsl10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy10.pfb>
+Output written on book.pdf (164 pages, 1516784 bytes).
 PDF statistics:
- 571 PDF objects out of 1000 (max. 8388607)
- 391 compressed objects within 4 object streams
+ 825 PDF objects out of 1000 (max. 8388607)
+ 388 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 671 words of extra memory for PDF output out of 10000 (max. 10000000)
 

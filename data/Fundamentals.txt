@@ -4,34 +4,11 @@ There are some fundamental topics about writing computer programs that we must l
 
 ## [[Basics]]
 
-First we must learn how to write a basic Java program with control structures and variables. 
+((((Basics.Introduction))))
 
 ### [[Data Types]]
 
-We use closets or drawers to store our clothes and garages to store our cars. Similarly, we store different types of data in different kinds of data types. Picking the right data type for the type of information is important. Most programming languages will support these data types. 
-
-Data type| Number of bits | Range
--|-|-|-
-boolean | 1 bit | true or false
-byte|8 bits| -128 to 127
-short|16 bits | -32,768 to 32,767
-int| 32 bits | −2,147,483,648 to 2,147,483,647
-long| 64 bits | −9,223,372,036,854,775,808 to 9,223,372,036,854,755,807
-char| 8 bits | 256 bits
-float| 32 bits | 3.4e−038 to 3.4e+038
-double| 64 bits| 1.7e−308 to 1.7e+308
-
-### [[Arithmetic Operations]]
-
-Operation|Description|Example
--|-|-|-|-
-z = x + y|Addition|z = 1 + 2,  z = 3
-z = x - y|Subtraction|z = 3 - 1, z = 2
-z = x * y|Multiplication|z = 3 * 2, z = 6
-z = x / y|Integer division| z = 5 / 2, z = 2 or z = 9 / 3, z = 3
-z = x % y|Modulus (or remainder)|z = 5 % 3, z = 2 or z = 6 % 2, z = 0
-x++|Increment by 1|x=5, x++, x = 6
-x--|Decrement by 1|x=5, x--, x = 4
+((((Data Types.Introduction))))
 
 ### [[Control Structures]]
 
@@ -50,10 +27,17 @@ while(expression){
 }
 ]]]]
 
+## Advanced Control Structures
+
+### [[Arrays]]
+
+Arrays are lists of the same data type.
+
+### [[Functions]]
+
+Functions are reusable pieces of code.
+
 ## [[Runtime and Memory]]
 
-Next, we analyze how long a program will take to perform a calculation and how much memory a program will used based on the inputs.
+Programs requires memory to store data and takes computation time to run. If we have different programs that do the same function, we want to be able to compare how efficient they are. 
 
-## [[Boolean Algebra]]
-
-## [[Logic]]

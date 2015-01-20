@@ -1,64 +1,25 @@
 ## Introduction
 
-[[Source on Github||GITHUB_PATH/Arr.java]]
+Let's say we need to store 10 numbers. We could store the numbers in 10 variables like such:
 
-Imagine you had a row of parking spaces where each was labelled with a number. If you wanted to know what the license plate of a car at parking space 4 was, all you have to do is go to the parking space and read off the license plate. If you wanted to park you car at parking space 5, you would go to parking space 5 and put your car in there if there was nothing there. Let's say that you had cars at parking spaces 1, 2, and 3. If you wanted to insert a new car at parking space 1 and keep the rest of the cars in the same order, you would have to shift the cars in the parking spaces from 1, 2 and 3 to 2, 3 and 4 by getting in each car and parking them in the new spaces which would take some time. This type of structure is an array.
+[[[[
+Scanner scan = new Scanner(System.in);
+int a,b,c,d,e,f,g,h,i,j;
+scan.nextInt(a);
+scan.nextInt(b);
+scan.nextInt(c);
+scan.nextInt(d);
+scan.nextInt(e);
+scan.nextInt(f);
+scan.nextInt(g);
+scan.nextInt(h);
+scan.nextInt(i);
+scan.nextInt(j);
+]]]]
 
-An **array** is the most basic data structure that stores elements of the same type in a fixed block. The fact that it is in one block and the same type is important because it allows accessing elements very quickly if you have the index. All you have to do is go to the index and retrieve the element. However, inserting elements in the array is slow because you would have to shift all the elements and also if you want to shift past the fixed size you will get an error. (Imagine the parking spaces are full and you wanted to insert a car somewhere, there will still be one car that will have no parking space).
+However, if we had to store 100 numbers, this process would be very tedious and annoying. A better way would be to use a block of numbers and treat it as one variable instead of many variables. This is called an array.
+
+An **array** is the most basic data structure that stores elements of the same type in a fixed block. The fact that it is in one block and the same type is important because it allows accessing elements very quickly if you have the index. All you have to do is look at the index and retrieve the element. However, inserting elements in the array is slow because you would have to shift all the elements and also if you want to shift past the fixed size you will get an error. (Imagine the parking spaces are full and you wanted to insert a car somewhere, there will still be one car that will have no parking space).
 
 Arrays can be multidimensional meaning you can have an array of array of objects. (Imagine a parking lot with multiple rows of parking spaces).
-
- Operation | Create | Get i | Set i
------------|---------|--
-Time Complexity | O(n) |  O(1) | O(1) 
-
-## Implementation
-
-Implementation of a very simple array in Java
-
-### Create array
-
-Creating an array allocates a block of memory for us to store the elements. 
-
-
-
-[[[[
-public static int[] createArray(int size){
-     int[] array = new int[size];
-     return array;
-}
-]]]]
-
-### Get
-
-When we want to get the element of an index all we have to do is offset the index by the array. However we need to check that the index is within bounds of the array.
-
-
-[[[[
-public static int getElemenent(int[] arr, int i){
-    if(i<0 || i>=arr.length){
-        throw new ArrayIndexOutOfBoundsException();
-    }
-    return arr[i];
-}
-]]]]
-
-
-### Set
-
-Setting is very similar to getting but instead we change the value in the array.
-
-[[[[
-public static void setElemenent(int[] arr, int i,int value){
-    if(i<0 || i>=arr.length){
-        throw new ArrayIndexOutOfBoundsException();
-    }
-    arr[i] = value;
-}
-]]]]
-
-## See Also
-
-* [[Vector]]
-* [[Stack]]
 

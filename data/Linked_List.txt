@@ -167,3 +167,4 @@ public void deleteNext(Link node){
     * 2, 4 (2, 4, 5 is eliminated)
     * 2 (2, 4, 2 is eliminated)
     * Player 2 is the last one standing.
+3. Given two linked lists which may share tails, determine the point at which they converge.

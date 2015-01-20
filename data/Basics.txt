@@ -1,3 +1,11 @@
+## Introduction
+
+In the most abstract sense, a program takes in input and produces output.
+
+{{basic.png}}
+
+We will learn how to create a basic program by figuring out how to read input, store data and how to use a sequence of control structures to produce output.
+
 ## [[Data Types]]
 
 We use closets or drawers to store our clothes and garages to store our cars. Similarly, we store different types of data in different kinds of data types. Most programming languages will support these data types and picking the right data type is important. 

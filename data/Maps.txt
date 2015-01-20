@@ -1,14 +1,12 @@
 ## Introduction
 
+*Prerequisites*: [[Sets]]
+
 A map is an abstract data type that stores key-value pairs.
 
 Imagine you had a English dictionary. If you look up a word, you can find it's definition and read it out. For example if you looked up the word 'cat' in the English dictionary, you would look through the dictionary alphabetically until you found the word 'cat' and then you would look at the definition: 'a feline animal'. If you really wanted to, you could also add your own words into the dictionary and the definitions of your words. This type of structure is called a map.
 
 Maps (also called dictionaries) are abstract data types that store pairs of key-values and can be used to look up values from the keys. The keys are like the words in an English dictionary and the definitions can be seen as the values. Maps are able to support insertion of key-value pairs, retrieve values from keys, and delete key-value pairs.
-
-### Prerequisites
-
-* [[Sets]]
 
 ## Implementation
 
@@ -20,4 +18,4 @@ Type  | Get | Insertion | Deletion
 ## Exercises
 
 1. Given a list of N strings, output the strings in alphabetical order and the number of times they appear in the list.
-2, Given two list of N strings, output the 
+2. Given a mapping of a id to a name, output the ids in order by lexicographical name.

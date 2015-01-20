@@ -1,6 +1,6 @@
 ## Introduction
 
-**Next**: [[Advanced Graph Theory]]
+*Next*: [[Advanced Graph Theory]]
 
 Graphs are a set of objects where some pairs of objects  called **nodes** or **verticies** are usually connected by links called **edges**. The nodes here can be seen numbered from 1 to 6. There are edges connecting these various nodes.
 
@@ -24,59 +24,19 @@ A graph can be represented as a adjacency matrix or a adjacency list.
 
 ### [[Adjacency Matrix]]
 
-{{graph.png}}
-
-Adjacency matrixes use a matrix to store the edges between nodes. A 1 means a connection between x and y and a 0 means no connection. The edge weight could also be used instead of a 1. O(n^^2^^) where n is the number of nodes. For example the matrix for graph below is:
-
-
-  |1|2|3|4|5|6
--|-|-|-|-|-|-
-1 | 0 | 1 | 0 | 0 | 1 | 0
- 2 | 1 | 0 | 1 | 0 | 1 | 0
- 3 |0 | 1 | 0 | 1 | 0 | 0
- 4 | 0 | 0 | 1 | 0 | 1 |1
- 5 | 1 | 1 | 0 | 1 | 0 | 0
- 6 | 0 | 0 | 0 | 1 | 0 | 0
+((((Adjacency Matrix.Introduction))))
 
 ### [[Adjacency List]]
 
-{{graph.png}}
+((((Adjacency List.Introduction))))
 
-Adjacency lists use an array of [[linked lists|Linked Lists]] to store all the edges. At x, you have a linked list of nodes that connect to that node. 1 connects to nodes 2 and 5, 2 connects to 1, 3 and 5 and so forth. O(m) storage where m is number of edges.
+## [[Tree]]
 
-Node | edges
----|-----
- 1 | 2, 5
-2 | 1 3 5
-3 | 2 4
-4 | 3 5 6
-5 | 1 2 4
-6 |4
+((((Tree.Introduction))))
 
-##Tree
+### [[Spanning Tree]]
 
-A tree is a special graph with no cycles. It has the special property that there will be only one path from one node to another node. 
-
-{{treegraph.png}}
-
-A **subtree** is a child tree of a tree.
-
-Note that trees have two meanings in computer science. It can either refer to a [[tree data structure|Tree]] or it can refer to a tree in graph theory.
-
-###Spanning Tree
-
-A spanning tree of a graph is a connected tree that spans all the nodes of the graph.
-
-A [[minimum spanning tree|Minimum Spanning Tree]] is the spanning tree that requires the minimum of some property such as total weight or total edges.
-
-Spanning tree algorithms are essential in networking to ensure no loops occur when sending data through a network.
-
-
-| Algorithm | Desc | Time | Space
-|-
-|[[Prim's]] | Using greedy method | O(n log n) | O(n^^2^^)
-|[[Kruskal]] | Using connected components| O(n log n) | O(n^^2^^)
-
+((((Spanning Tree.Introduction))))
 
 ## Shortest Path
 

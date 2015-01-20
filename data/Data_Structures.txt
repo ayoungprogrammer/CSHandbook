@@ -16,197 +16,64 @@ Some implementations of abstract data types are better than others for different
 
 For more intermediate data structures, read the [[advanced data structures|Advanced Data Structures]] page.
 
-## [[Arrays]]
-
-Imagine you had a row of parking spaces where each was labelled with a number. If you wanted to know what the license plate of a car at parking space 4 was, all you have to do is go to the parking space and read off the license plate. If you wanted to park your car at parking space 5, you would go to parking space 5 and put your car in there only if there was nothing there. 
-
-{{array.png}}
-
-Let's say that you had cars at parking spaces 1, 2, and 3. If you wanted to insert a new car at parking space 1 and keep the rest of the cars in the same order, you would have to shift the cars in the parking spaces from 1, 2 and 3 to 2, 3 and 4 by getting in each car and parking them in the new spaces which would take some time. This type of structure is an array.
-
-{{array2.png}}
-
-{{array3.png}}
-
-An **array** is the most basic data structure that stores elements of the same type in a fixed block. The fact that it is in one block and the same type is important because it allows accessing elements very quickly if you have the index. All you have to do is go to the index and retrieve the element. However, inserting elements in the array is slow because you would have to shift all the elements and also if you want to shift past the fixed size you will get an error. (Imagine the parking spaces are full and you wanted to insert a car somewhere, there will still be one car that will have no parking space).
-
-Arrays can be multidimensional meaning you can have an array of array of objects. (Imagine a parking lot with multiple rows of parking spaces).
-
-| Operation | Create | Get | Set
-|-----------|-----|-----
-| Time Complexity | O(n) | O(1) | O(1)
-
 ## [[Stack]]
 
-Imagine a stack of plates at a buffet, the plates are taken from the top and are also replaced from the top. The first plate to go in will be the last plate to come out. The last plate to go in will be the first to come out. This structure is called a stack.
-
-A **stack** is an abstract data type with the property that it can remove and insert elements following a FILO (First In Last Out) structure. The first element to be inserted must be the last element to be removed and the last element to be inserted must be the first element to be removed. Sometimes, removal is called "pop" and insertion is called "push". 
-
-{{stack.png}}
-
-{{stack2.png}}
-
-Stacks are used for function calls on the memory stack. Whenever a function is called, it is placed on the memory stack with its variables and when it is returning a value, it is popped off the stack.
-
-A stack is usually implemented as a [[vector|Vector]].
+((((Stack.Introduction))))
 
 ### [[Vector]]
 
-A vector is a stack that is implemented as an array. It is very similar to an array, but it is more flexible in terms of size. Elements are added and removed only from the end of the array. When more elements are added to the vector and the vector is at full capacity, the vector resizes itself and reallocates for 2*N space. When using an vector we can keep adding elements and let the data structure handle all the memory allocation.
-
-{{vector.png}}
-
-{{vector2.png}}
-
-{{vector4.png}}
-
- Operation | Create | Get  | Set | Push to back | Delete
--|-|-
-Time Complexity | O(n) | O(1)  | O(1) | O(1) | O(n)
+((((Vector.Introduction))))
 
 ## [[Queue]]
 
-Imagine you are standing in line for a restaurant. Whoever is first in line will be served first and whoever is last in line will be served last. People can be served while more people join the line and the line may get very long because it takes a while to serve one person while more people join the queue. This is called a queue.
-
-A **queue** is an abstract data type with two functions, pop and push. Removal from the front is called "pop" or "dequeue". Insertion from the back is called "push" or "enqueue". A queue follows a First In First Out (FIFO) structure meaning the first element pushed should be the first element popped and the last element pushed should be the last element popped.
-
-Queues are often used for buffer systems, for example a text message service. The messages that arrive at the server first are relayed first and the messages that arrive later are relayed later. If there are too many text messages in the system such that the rate  texts are received overwhelm the number of texts that are sent the buffer may overflow and messages will get dropped. Most of the time this won't happen because the systems are designed to handle large loads, but if there were an emergency that caused everyone to start texting many texts could be dropped.
-
-Example of push:
-
-{{queue.png}}
-
-Example of pop:
-
-{{queue2.png}}
+((((Queue.Introduction))))
 
 ### [[Linked List]] 
 
-Imagine you had some train cars that were linked together where each was labelled on the inside with a letter. If you had to find a specific letter you would have to look inside the first train to check and then walk into the next train car to check the letter and so forth until you found the train car you wanted. If you wanted to insert a train car somewhere, all you would have to do it unlink the position where you wanted to insert it and then relink the new train car with the other cars. If you wanted to remove a train car all you would have to do is unlink that car from the other cars and then relink the cars that were adjacent to it. This sort of structure is called a linked list.
-
-A **pointer** is something that holds the memory location of another object.
-
-A **linked list** is similar to an array but it is different such that it is not stored in one block of data. Each element can be stored in a random place in memory but each element contains a pointer to the next element thus forming a chain of pointers. Think of a pointer as a link that links two train cars. Since the elements aren't in a block, accessing an element must be done by traversing the entire linked list by following each pointer to the next. However, this also allows insertion to be done more quickly by simply changing the point of the previous element and setting to the pointer of the current element to the next element. Deletion is also done by taking the previous element and changing its pointer to two elements ahead. In a linked list the links only go forward and you cannot move backward. 
-
-{{linkedlist.png}}
-
-A **doubly linked list** is a linked list that has pointers going backwards as well as forwards.
-
-{{doublelinkedlist.png}}
-
-| Operation | Get | Add at node | Delete at node | Add | Delete
-|-----------|---------|------------|---------
-| Time Complexity | O(n) | O(1) | O(1) | O(n) | O(n)
+((((Linked List.Introduction))))
 
 
 ## [[Trees]]
 
-Trees are data structures that follow a hierarchy, each node has exactly one or zero parents and each node has children. Trees are recursive structures meaning that each child of a tree is also a tree. A tree within another tree is called a **subtree**.
-
-A **child** is a node that is below another node. A **parent** is a node that is above another node.
-
-The element at the top of the tree with no parents is called a **root**. The node at the bottom of the tree with no children is called a **leaf**. 
-
-Each node can hold different kinds of information depending on the tree. A node can hold the children it has, the parent it has, a key associated with the node and a value associated with the node. 
-
-{{tree.png}}
+((((Trees.Introduction))))
 
 ### [[Binary Tree]]
 
-A binary tree is a tree where each node has at most two children. 
+((((Binary Tree.Introduction))))
 
 {{binarytree.png}}
 
 ## [[Sets]]
 
-Imagine you have a grocery list that you use to keep tracking of things you need to buy. You want to make sure there are no duplicate items in the list, you can add items to the list and that you can remove items from your list. This structure is similar to what a set does.
-
-Sets are abstract data types which are able to store values and are used for three operations: insertion, deletion and membership test. 
-
-Insertion places an element into the set, deletion removes an element from the set and a **membership** test is checking whether an element exists within the set.
+((((Sets.Introduction))))
 
 
 ### [[Hash Set]]
 
-Hash sets are sets that use hashes to store elements. A hashing algorithm is an algorithm that takes an element and converts it to a smaller chunk called a **hash**. For example let our hashing algorithm be (x mod 10). So the hashes of 232, 217 and 19 are 2,7, and 9 respectively. 
-
-For every element in a hash set, the hash is computed and elements with the same hash are grouped together and stored in a [[linked list|Linked List]]. The linked list is called a **bucket**.
-
-If we want to check if an element already exists within the set, we first compute the hash of the element and then search through the linked list associated with the hash to see if the element is contained.
-
-Let use the example of the hashset of the elements of 3242, 3523, 123, 235 and 538. The hash set looks like this when computed:
-
-{{hashset.png}}
-
-If we wanted to check if 7238 was in the hash set, we would get the hash (7238 mod 10 = 8). So we get the bucket associated with the hash 8 and we get the list of (538). When we iterate through this short list, we see that 7238 is not a member of the set. 
-
-Similarly, if we wanted to insert 7238 into the hash set, we would check if it exists and if it did not we would append the element to the end of the bucket. For deletion we would find 7238 check if it existed in the set and remove it from the bucket. 
-
-Hash sets are very efficient in all three set operations if a good hashing algorithm is used. When the objects are that being stored are large then hash sets are effective as a set.
-
-
-| Operation | Membership | Insertion | Deletion
-|-
-| Time Complexity | O(1) | O(1) | O(1)
+((((Hash Set.Introduction))))
 
 ### [[Tree Set]]
-A tree set is a set which stores the values in a [[binary search tree|Binary Search Tree]]. To store elements in a tree set, they must be able to be sorted by a property. To insert an element, it is added to the binary tree. To delete an element, it is removed from the binary tree. To check for membership, we do a binary search for the element in the binary tree.
 
-{{bst.png}}
-
-The advantage of tree sets is that they are maintained in a sorted order. 
-
-
-| Operation | Membership | Insertion | Deletion
-|-
-| Time Complexity | O(log n) | O(log n) | O(log n)
+((((Tree Set.Introduction))))
 
 
 ## [[Maps]]
 
-Imagine you had a English dictionary. If you look up a word, you can find it's definition and read it out. For example if you looked up the word 'cat' in the English dictionary, you would look through the dictionary alphabetically until you found the word 'cat' and then you would look at the definition: 'a feline animal'. If you really wanted to, you could also add your own words into the dictionary and the definitions of your words. This type of structure is called a map.
-
-Maps (also called dictionaries) are abstract data types that store pairs of key-values and can be used to look up values from the keys. The keys are like the words in an English dictionary and the definitions can be seen as the values. Maps are able to support insertion of key-value pairs, retrieve values from keys, and delete key-value pairs.
+((((Maps.Introduction))))
 
 ###[[Hash Map]]
 
-Hash maps use [[hash sets|Hash Set]] to store the keys which then map to their values. The advantage of a hash map is that it is very fast but a disadvantage is that it is not sorted unlike a tree set.
-
-| Operation | Membership | Insertion | Deletion
-|-
-| Time Complexity | O(1) | O(1) | O(1)
+((((Hash Map.Introduction))))
 
 ### [[Tree Map]]
 
-Tree maps use [[tree sets|Tree Set]] to store the keys which then maps to their values.
-
-| Operation | Membership | Insertion | Deletion
-|-
-| Time Complexity | O(log n) | O(log n) | O(log n)
-
+((((Tree Map.Introduction))))
 
 ## [[Priority Queue]]
 
-Consider a waiting list for lung donors. The patients are given a score when they are placed on the waiting list by how much they need a lung based on their whether they smoke, risk factors, age, expected time left etc. When a lung is available, the patient with the highest score will get removed from the waiting list. During this time, more patients could be added to the queue. The behaviour is similar to a queue but instead of the first person getting in the queue getting a lung first, the person with the highest score will get it. This means that if Sam has a score of 60 and gets placed in the queue after Bob who has a score of 40, Sam will get the lung first even though Bob was in the queue before him. 
-
-A **priority queue** is an abstract data type with two operations: push and pop. Push adds an element into the priority queue and pop removes the highest or lowest element.
-
-A priority queue is usually implemented as a heap because it is the most efficient because of its structure.
-
-{{pqueue.png}}
-
-{{pqueuepop.png}}
-
-{{pqueuepush.png}}
+((((Priority Queue.Introduction))))
 
 ### [[Heap]]
 
-Heaps are trees which have the property that a parent node must either be greater than all the elements in its left and right subtrees (a max heap) or less than all the elements in its left and right subtrees (a min heap). [[Priority queue's|Priority Queue]] are most efficiently implemented as heaps.
-
-{{maxheap.png}}
-
-
-| Operation       | Push | Pop |
-| --------------- | -------- | -------- |
-| Time Complexity | O(log n) | O(log n) |
+((((Heap.Introduction))))
 

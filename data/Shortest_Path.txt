@@ -1,10 +1,9 @@
 ## Introduction
 
+*Prerequisites*: [[Graph Theory]]
+
 The shortest path is defined as a path from one node to another while trying to minimize a certain property (least number of nodes, smallest total weight). However, shortest paths may have negative weights leads to cycles. 
 
-### Prerequisites
-
-* [[Graph Theory]]
 ## Algorithms
 
 

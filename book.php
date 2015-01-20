@@ -19,6 +19,9 @@ function latexParse($str){
 	// <div>whatever</div> -> 
 	$str = preg_replace('/<div.*?><\/div>/s','',$str);
 
+	// Source on Github -> 
+	$str = preg_replace('/Source on GitHub/','',$str);
+
 	// <pre>code</pre> 
 	$str = preg_replace('/<pre(.*?)>(.*?)<\/pre>/s','\begin{lstlisting}$2\end{lstlisting}',$str);
 
@@ -37,17 +40,24 @@ function latexParse($str){
 	// <h3>header3</h3> -> \subsection{header3}
 	$str = preg_replace('/<h3>(.*?)<\/h3>/','\subsubsection{$1}',$str);
 
+	// <img src = "\.\/pubicsrc">
+	$str = preg_replace('/<img src="\.\/public_html\/img\/uploads\/(.*?)">/',
+		'\includegraphics[width=\maxwidth{\textwidth}]{$1}',$str);
+
 	// _ -> \_
 	$str = preg_replace('/_/','\_',$str);
+
+	$str = preg_replace('/\\\\includegraphics\\[width=\\\\maxwidth{\\\\textwidth}\\]{(.*?)\\\\_(.*?)}/',
+		'\includegraphics[width=\maxwidth{\textwidth}]{$1_$2}',$str);
 
 	// $ -> \$
 	$str = preg_replace('/\$/','\\\$',$str);
 
 	// <table> ... </table> -> \begin{tabular} ... \end{tabular}
-	$str = preg_replace('/<table>/','\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline',$str);
+	$str = preg_replace('/<table>/','\vspace{10pt} \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline',$str);
 	$str = preg_replace('/<thead>.*?<tr>/','{',$str);
 	$str = preg_replace('/<\/thead>/','\hline',$str);
-	$str = preg_Replace('/<\/t(d|h)>\s*<\/tr>/','\\\\\\',$str);
+	$str = preg_replace('/<\/t(d|h)>\s*<\/tr>/','\\\\\\',$str);
 	$str = preg_replace('/<\/t(d|h)>/',' &',$str);
 	$str = preg_replace('/<\/table>/','\hline\end{tabular}',$str);
 
@@ -72,7 +82,14 @@ function latexParse($str){
 
 	$str = str_replace(['&#42;','&gt;','&lt;','&amp;','&#124;','%'],['=','>','<','\&','|','\%'],$str);
 
-	$tex = '\documentclass[11pt]{book}\usepackage{listings}\usepackage{outlines}\begin{document}'.$str.'\end{document}';
+	$tex = '\documentclass[11pt,oneside]{book}
+		\usepackage{listings}
+		\usepackage{outlines}
+		\usepackage{graphicx}
+		\graphicspath{ {../public_html/img/uploads/} }
+		\makeatletter
+		\def\maxwidth#1{\ifdim\Gin@nat@width>#1 #1\else\Gin@nat@width\fi}
+		\begin{document}'.$str.'\end{document}';
 
 	return $tex;
 }
@@ -108,23 +125,21 @@ function makeBook(){
 
 			preg_match_all('/\[\[([A-Za-z\_\s\'\-]+?)\]\]/',$content,$matches);
 
+			$rev = $end;
 			foreach ($matches[1] as $link){
-				$rev = $end;
-				if(!array_key_exists($link,$map)){
+				if(!array_key_exists($link,$map) && $map[$article]<2){
 					$map[$link] = $map[$article]+1;
 					$end++;
 					$queue[$end] = $link;
 				}
-				$queue = reverse($queue, $rev, $end);
-				/*
-				for($i = $rev; $i < $end; $i++){
-					$tmp = $queue[$i];
-					$queue[$i] = $queue[$end-$i+$rev];
-					$queue[$end-$i+$tmp];
-				}*/
 			}
+			$queue = reverse($queue, $rev, $end);
 			if($map[$article] == 1){
-				$content = '<h0>'.$article.'</h0>'.parse($content);
+				$content = parse($content);
+				preg_match('/<section>.*?<\/section>/s',$content,$matches);
+				//print_r($matches);
+				$content = $matches[0];
+				$content = '<h0>'.$article.'</h0>'.$content;
 				$content = preg_replace('/<h2>/','<h3>',$content);
 				$content = preg_replace('/<\/h2>/','</h3>',$content);
 			}else{

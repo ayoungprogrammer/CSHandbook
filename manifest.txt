@@ -1,0 +1,8 @@
+Getting Started
+Fundamentals
+	Basics
+		Data Types
+		Arithmetic Operations
+		Control Structures
+	Runtime and Memory
+

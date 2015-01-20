@@ -1,0 +1,9 @@
+## Introduction
+
+A tree is a special graph with no cycles. It has the special property that there will be only one path from one node to another node. 
+
+{{treegraph.png}}
+
+A **subtree** is a child tree of a tree.
+
+Note that trees have two meanings in computer science. It can either refer to a [[tree data structure|Trees]] or it can refer to a tree in graph theory.

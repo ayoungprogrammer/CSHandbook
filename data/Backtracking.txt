@@ -4,7 +4,7 @@ Backtracking is a search that find all possible solutions by enumerating on a pa
 
 Backtracking is similar to recursion, but instead of generating all the solutions, we will generate each solution one by one. In this way, we only need to store the current solution in memory whereas in normal recursion we need to store all the solutions into memory.
 
-Since backtracking requires enumerating through all solutions, it is usually slow with runtimes usually O(n!) or O(2^n). 
+Since backtracking requires enumerating through all solutions, it is usually slow with runtimes usually O(n!) or O(2^^n^^). 
 
 ## General Solution
 
@@ -185,7 +185,7 @@ Permutation can be
 
 Find the number of ways to place N queens on a NxN board without any of them attacking each other. Queens attack each other by being along the same row, column or diagonal.
 
-{{nqueen.png}}
+{{nqueen.jpg}}
 
 First we need to be able to encode a solution. There must be only one queen in each row, each column, each positive diagonal and each negative diagonal. We need a way to encode each row, column and diagonal to make it easy to check that they are all unique. 
 

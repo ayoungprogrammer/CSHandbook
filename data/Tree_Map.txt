@@ -1,15 +1,12 @@
 ## Introduction
 
+*Prerequisites:* [[Tree Set]], [[Map]]
+
 A tree map is a map that stores the key value pairs in a tree set.
 
 Operation | Membership | Insertion | Deletion
 -|-
 Complexity  | O(log n) | O(log n) | O(log n)
-
-### Prerequisites
-
-* [[Tree Set]]
-* [[Map]]
 
 ## Implementation
 

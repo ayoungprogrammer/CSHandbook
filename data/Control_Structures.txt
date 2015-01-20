@@ -1,0 +1,7 @@
+## Introduction
+
+Once we have data, we need a way to add logic to use that data. For example, we want to output "even" if a number is even and "odd" if a number is odd. We will need a way of using logic to perform a separate action. This is called a control structure.
+
+A control structure allows the program to change flows based on conditions. For example:
+
+{{controlstruct.png}}

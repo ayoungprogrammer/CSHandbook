@@ -4,7 +4,7 @@
 
 [[Source on Github||GITHUB_PATH/Vec.java]]
 
-A vector is a stack that is implemented as an [[array|Array]]. It is very similar to an [[array|Array]], but it is more flexible in terms of size. Elements are added and removed only from the end of the array. When more elements are added to the vector and the vector is at full capacity, the vector resizes itself and reallocates for 2*N space. When using an vector we can keep adding elements and let the data structure handle all the memory allocation. 
+A vector is a stack that is implemented as an array. It is very similar to an array, but it is more flexible in terms of size. Elements are added and removed only from the end of the array. When more elements are added to the vector and the vector is at full capacity, the vector resizes itself and reallocates for 2*N space. When using an vector we can keep adding elements and let the data structure handle all the memory allocation. 
 
  Operation | Get  | Push | Pop | Insert | Delete
 -----------|---------|--
