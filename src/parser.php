@@ -5,7 +5,6 @@ use \Michelf\MarkdownExtra;
 function parse($str){
 
 	// < > -> &lt; , %gt;
-
 	//$str = preg_replace('/</','&lt;',$str);
 	//$str = preg_replace('/>/','&gt;',$str);
 	$str = htmlspecialchars($str,ENT_NOQUOTES);
@@ -61,7 +60,7 @@ function parse($str){
 
 
 	// (((((article))))) -> article contents
-	preg_match_all('/\({4}([A-Za-z0-9\_\-\.\']*?)\){4}/',$str, $matches);
+	preg_match_all('/\({4}([A-Za-z0-9\_\-\'\s]+?)\){4}/',$str, $matches);
 	foreach($matches[1] as $match){
 		$page = preg_replace('/ /','_',$match);
 		if($GLOBALS['db']->article_exists($page)){
@@ -71,15 +70,16 @@ function parse($str){
 	}
 
 	// (((((article.section))))) -> article section
-	preg_match_all('/\({4}([A-Za-z0-9\_\-\.\'\s]+?\.[A-Za-z0-9\_\-\']+?)\){4}/',$str, $matches);
+	preg_match_all('/\({4}([A-Za-z0-9\_\-\'\s]+?\.[A-Za-z0-9\_\-\'\s]+?)\){4}/',$str, $matches);
 	foreach($matches[1] as $match){
 		$split = explode('.',$match);
 		$page = preg_replace('/ /','_',$split[0]);
 		$section = $split[1];
 		if($GLOBALS['db']->article_exists($page)){
 			$content = parse($GLOBALS['db']->get_article($page));
-			if(preg_match('/<section><h2>'.$section.'<\/h2>(.*?)<\/section>/s',$content,$section_matches)>0){
-				$str = preg_replace('/\({4}'.$split[0].'\.'.$section.'\){4}/',$section_matches[1],$str);
+
+			if(preg_match('/<section><h2>(<a.*?>)?'.$section.'(<\/a>)?<\/h2>(.*?)<\/section>/s',$content,$section_matches)>0){
+				$str = preg_replace('/\({4}'.$split[0].'\.'.$section.'\){4}/',$section_matches[3],$str);
 			}
 		}
 	}

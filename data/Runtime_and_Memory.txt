@@ -2,15 +2,16 @@
 
 Computers are super fast at making calculations compared to humans, but humans have much more "memory" than computers currently do. For example, computers can add two 100-digit numbers together much more quickly than any human possibly can. However, the human brain can contain much more memory than humans.
 
-Brains have trillions of connections between neurons and the estimated storage capacity is about 2.5 petabytes. That is approximately 340 years of TV shows that you could watch! Computers on the other hand, have much less memory than human brains. Standard computers have around 8GB of RAM and some higher end machines may have 16-32GB. Although hard-disks can store terabytes of memory, we use RAM (flash memory) when analyzing computer memory because it is much faster. As an analogy, RAM can be thought of as grabbing an object in another room whereas disk memory is driving 20 min away to get that object. 
+Brains have trillions of connections between neurons and the estimated storage capacity is about 2.5 petabytes. That is approximately 340 years of TV shows that you could watch! Computers on the other hand, have much less memory than human brains. Standard computers have around 8GB of RAM and some higher end machines may have 16-32GB. Although hard-disks can store terabytes of memory, we use RAM (flash memory) when analyzing computer memory because it is much faster than disk storage. As an analogy, RAM can be thought of as grabbing an object in another room whereas disk memory is driving 20 min away to get that object. 
 
 The neurons and connections in our brains allow us to store an immense amount of information in our brains and allows us to easily recognize patterns much better than computers. For example it is very easy for us to identify different objects around us (e.g. we can easily differentiate between an apple and an orange), but it is difficult for a computer to do this for the countless number of objects in the world. However this is currently changing as more research is being done in "deep learning".
 
 |Brain|Computer
 -|-|-
-Memory|2.5 petabytes (approx. 340 years of TV shows)|16GB RAM
-Processing| 60Hz | 2.7GHz Quad Core (1,000,000,000 times faster than humans)
+Memory|2.5 petabytes |16GB RAM
+Processing| 60Hz | 2.7GHz Quad Core 
 
+Note that a computer is 1,000,000,000 times faster than humans but humans can store 100,000 more information (approx. 340 years of TV shows).
 ## Limits
 
 There are many different methods of implementing different things but most of the time we care most about implementations that are the fastest and use the least amount of memory. Let's go through some basic benchmarks about computers that you should know. Adding two numbers takes a nanosecond (1 billionth of a second) for an average computer to process. For practical purposes, we'll assume that the average computer program can hold up to 1GB or RAM or about 250 million integers. We use RAM because it is flash memory and read/write is super fast in comparison to disk read/writes. 

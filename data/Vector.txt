@@ -10,11 +10,8 @@ A vector is a stack that is implemented as an array. It is very similar to an ar
 -----------|---------|--
 Time Complexity  | O(1) | O(1) | O(1) | O(n) | O(n)
 
-## Implementation
-
+## Class
 There is a builtin Vector class already, but we will go through the implementation of a simple integer vector class to understand how the data structure works.
-
-### Class
 
 In our vector class, we need to store the element and the size of the current vector.
 
@@ -32,7 +29,7 @@ publc Vec(int startSize){
 
 ]]]]
 
-### Resize
+## Resize
 
 Resize will be used to resize the current size of elements. We create a new array of two times the size of the old one and copy the old array over.
 
@@ -145,6 +142,6 @@ public void insert(int idx,int x){
 	}
 ]]]]
 
-## [[Exercises]]
+## Exercises
 
 1. Implement removeAtIndex(int index) for Vector

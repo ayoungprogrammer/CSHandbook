@@ -1,12 +1,41 @@
-<h0>Getting Started</h0><section><h3>Introduction</h3>
+<section><p>\chapter{ Getting Started }
+<section><h2>Introduction</h2>
 
 <p>The Computer Science handbook is a handbook designed to explain algorithms and data structures in a way that anyone can understand. Many websites (eg Wikipedia) contain lengthy and wordy explanations that are full of technical jargon. We have tried our hardest to simplify all language to make it easy to read without any math or computer science background. We hope to share our knowledge with you and we ask only one thing from you. You must learn something before you leave!</p>
 
-</section><h0>Fundamentals</h0><section><h3>Introduction</h3>
+</section><section><h2>Format</h2>
 
-<p>There are some fundamental topics about writing computer programs that we must learn before we can move on to the basic theory.</p>
+<p>Each article with have multiple sections to help you understand the content.</p>
 
-</section><h1>Data Types</h1><section><h2>Introduction</h2>
+<hr><h3>Introduction</h3>
+
+<p>The introduction section gives a brief overview of what the article is about. It will usually come with a prerequisite section which will contain topics that will be recommended to have been read before the article.</p>
+
+<hr><h3>Implementation</h3>
+
+<p>The implementation section will be an implementation of the article in Java. It is recommended that you try to implement things yourself first before looking at the implementation. If you truly understand the concept, then you will never have to memorize a single line of code. The code will come from your understanding of how it works.</p>
+
+<hr><h3>Applications</h3>
+
+<p>The applications section will be about real world applications of the concept that show why the concept is important.</p>
+
+<hr><h3>Exercises</h3>
+
+<p>The exercises section contains practice problems to test if you truly understand the concept. Many of these questions come from real interview questions.</p>
+</section>
+\part{ Fundamentals }
+\chapter{` Basics }
+    
+
+<p>In the most abstract sense, a program takes in input and produces output.</p>
+
+<p><img src="./public_html/img/uploads/basic.png"></p>
+
+<p>We will learn how to create a basic program by figuring out how to read input, store data and how to use a sequence of control structures to produce output.</p>
+
+
+    \section{ Data Types }
+    <section><h2>Introduction</h2>
 
 <p>We use closets or drawers to store our clothes and garages to store our cars. Similarly, we store different types of data in different kinds of data types. Most programming languages will support these data types and picking the right data type is important.</p>
 
@@ -27,9 +56,19 @@ int x = 3;
 double y = -4.5;
 </pre>
 
-<p>x is an integer, and we initialize it with the value 3. y is a double floating point number (essentially a decimal number) and we initialize it with -4.5</p>
+<p>x is an integer, and we initialize it with the value 3. y is a double floating point number (essentially a decimal number) and we initialize it with -4.5.</p>
+
+<p>There are 4 main types of data types:</p>
+
+<ul>
+<li>Boolean: Binary bit</li>
+<li>Integer: Stores an integer</li>
+<li>Float: Stores a decimal</li>
+</ul>
 
 </section><section><h2><a href="./Boolean" target="_blank">Boolean</a></h2>
+
+<p>
 
 <p>A boolean is stored in a bit that is either true or false. Booleans are usually used as flags to store if something is one one state or the other.</p>
 
@@ -50,7 +89,11 @@ double y = -4.5;
 </tbody>
 </table>
 
+</p>
+
 </section><section><h2><a href="./Integer" target="_blank">Integer</a></h2>
+
+<p>
 
 <p>An integer is any number that does not contain decimals. It is stored as binary number in memory. For example: 0, -5, 6 are integers.</p>
 
@@ -86,7 +129,11 @@ double y = -4.5;
 </tbody>
 </table>
 
+</p>
+
 </section><section><h2><a href="./Character" target="_blank">Character</a></h2>
+
+<p>
 
 <p>A character is any letter or symbol. For example: 'a','B','8','!'.</p>
 
@@ -108,8 +155,11 @@ double y = -4.5;
 </tr>
 </tbody>
 </table>
+</p>
 
 </section><section><h2><a href="./Float" target="_blank">Float</a></h2>
+
+<p>
 
 <p>A float is a decimal stored as binary in memory. We use scientific notation to represent the decimal. Scientific notation is a decimal number &lt; 10 times some exponent of 10. For example: 8.23 * 10<sup>4</sup> is in scientific notation. Decimals can be stored in 32 bits or 64 bits.</p>
 
@@ -138,7 +188,185 @@ double y = -4.5;
 </tr>
 </tbody>
 </table>
-</section><h1>Runtime and Memory</h1><section><h2>Introduction</h2>
+
+</p>
+</section>
+    \section{ Arithmetic Operations }
+    
+
+<p>Java includes many built in operations for basic operations.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Operation</th>
+  <th>Description</th>
+  <th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>z = x + y</td>
+  <td>Addition</td>
+  <td>z = 1 + 2,  z = 3</td>
+</tr>
+<tr>
+  <td>z = x - y</td>
+  <td>Subtraction</td>
+  <td>z = 3 - 1, z = 2</td>
+</tr>
+<tr>
+  <td>z = x * y</td>
+  <td>Multiplication</td>
+  <td>z = 3 * 2, z = 6</td>
+</tr>
+<tr>
+  <td>z = x / y</td>
+  <td>Integer division</td>
+  <td>z = 5 / 2, z = 2 or z = 9 / 3, z = 3</td>
+</tr>
+<tr>
+  <td>z = x % y</td>
+  <td>Modulus (or remainder)</td>
+  <td>z = 5 % 3, z = 2 or z = 6 % 2, z = 0</td>
+</tr>
+<tr>
+  <td>x++</td>
+  <td>Increment by 1</td>
+  <td>x=5, x++, x = 6</td>
+</tr>
+<tr>
+  <td>x--</td>
+  <td>Decrement by 1</td>
+  <td>x=5, x--, x = 4</td>
+</tr>
+</tbody>
+</table>
+
+<p>Boolean operators are operations between two booleans (true or false). Boolean operators:</p>
+
+<table>
+<thead>
+<tr>
+  <th>Operation</th>
+  <th>Description</th>
+  <th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>x &#124;&#124; y</td>
+  <td>Or</td>
+  <td>T &#124;&#124; F = T, T &#124;&#124; T = T, F &#124;&#124; F = F</td>
+</tr>
+<tr>
+  <td>x &amp;&amp; y</td>
+  <td>And</td>
+  <td>T &amp;&amp; T = T, T &amp;&amp; F = F, F &amp;&amp; F = F</td>
+</tr>
+<tr>
+  <td>!x</td>
+  <td>Not</td>
+  <td>!F = T, !T = F</td>
+</tr>
+<tr>
+  <td>x == y</td>
+  <td>Equality</td>
+  <td>1 == 1 = T, 1 == 3 = F</td>
+</tr>
+<tr>
+  <td>x != y</td>
+  <td>Inequality</td>
+  <td>1 != 1 = F, 1 != 3 = T</td>
+</tr>
+<tr>
+  <td>x &lt; y</td>
+  <td>Less than</td>
+  <td>2 &lt; 3 = T, 2 &lt; 2 = F, 2 &lt; 1 = F</td>
+</tr>
+<tr>
+  <td>x &lt;= y</td>
+  <td>Less than or equal to</td>
+  <td>2 &lt;= 3 = T, 2 &lt;= 2 = T, 2 &lt;= 1 = F</td>
+</tr>
+<tr>
+  <td>x &gt; y</td>
+  <td>Greater than</td>
+  <td>3 &gt; 2 = T ,3 &gt; 3 = F, 3 &gt; 4 = F</td>
+</tr>
+<tr>
+  <td>x &gt;= y</td>
+  <td>Greater than or equal to</td>
+  <td>3 &gt;= 2 = T,3 &gt;= 3 = T, 3 &gt;= 4 = F</td>
+</tr>
+<tr>
+  <td>exp ? x : y</td>
+  <td>Ternary</td>
+  <td>true ? 3 : 4 = 3, (1 &gt; 2) ? 3 : 4 = 4</td>
+</tr>
+</tbody>
+</table>
+
+<p>Assignment assigns a value to a variable.</p>
+
+<pre class="prettyprint linenums ">
+int x = 3;
+</pre>
+
+<table>
+<thead>
+<tr>
+  <th>Operation</th>
+  <th>Description</th>
+  <th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>x = y</td>
+  <td>Set x to y</td>
+  <td>x = 4 (x = 4)</td>
+</tr>
+<tr>
+  <td>x += y</td>
+  <td>Addition</td>
+  <td>x += 4 (x = 7)</td>
+</tr>
+<tr>
+  <td>x -= y</td>
+  <td>Subtraction</td>
+  <td>x -= 3 (x = 0)</td>
+</tr>
+<tr>
+  <td>x *= y</td>
+  <td>Multiplication</td>
+  <td>x *= 3 (x = 9)</td>
+</tr>
+<tr>
+  <td>x /= y</td>
+  <td>Division</td>
+  <td>x /= 2 (x = 1)</td>
+</tr>
+<tr>
+  <td>x %= y</td>
+  <td>Modulus</td>
+  <td>x %= 2 (x = 1)</td>
+</tr>
+</tbody>
+</table>
+
+
+    \section{ Control Structures }
+    <section><h2>Introduction</h2>
+
+<p>Once we have data, we need a way to add logic to use that data. For example, we want to output "even" if a number is even and "odd" if a number is odd. We will need a way of using logic to perform a separate action. This is called a control structure.</p>
+
+<p>A control structure allows the program to change flows based on conditions. For example:</p>
+
+<p><img src="./public_html/img/uploads/controlstruct.png"></p>
+</section>
+    \section{ Runtime and Memory }
+    <section><h2>Introduction</h2>
 
 <p>Computers are super fast at making calculations compared to humans, but humans have much more "memory" than computers currently do. For example, computers can add two 100-digit numbers together much more quickly than any human possibly can. However, the human brain can contain much more memory than humans.</p>
 
@@ -163,10 +391,12 @@ double y = -4.5;
 <tr>
   <td>Processing</td>
   <td>60Hz</td>
-  <td>2.7GHz Quad Core (1,000,000,000 times faster than humans)</td>
+  <td>2.7GHz Quad Core</td>
 </tr>
 </tbody>
 </table>
+
+<p>Note that a computer is 1,000,000,000 times faster than humans but humans can store 100,000 more.</p>
 
 </section><section><h2>Limits</h2>
 
@@ -270,7 +500,11 @@ void zeroArrays(int[][] grid){
   }
 }
 </pre>
-</section><h0>Recursion</h0><section><h3>Introduction</h3>
+</section>
+\part{ Recursion }
+    \chapter{ Recursion }
+        \section{ Recursion }
+        <section><h2>Introduction</h2>
 
 <p><strong>Next</strong>: <a href="./Advanced_Recursion" target="_blank">Advanced Recursion</a></p>
 
@@ -300,7 +534,247 @@ recursion(parameter)
 <li><em>operation</em> reduces the parameters towards the base case</li>
 </ul>
 
-</section><h1>Advanced Recursion</h1><section><h2>Introduction</h2>
+</section><section><h2>Factorial</h2>
+
+<p>Let's look at a simple recursive function: factorial function.</p>
+
+<p>1! = 1</p>
+
+<p>n! = 1 * 2 * 3 .... n.</p>
+
+<p>Or we could write it as n! = (n-1)! * n. We now see that in this form, the factorial function is defined within itself which makes it recursive. Our base case is 1! = 1.</p>
+
+<p>Example:</p>
+
+<p>4!</p>
+
+<p>= 3! * 4</p>
+
+<p>= 2! * 3 * 4</p>
+
+<p>= 1! * 2 * 3 * 4</p>
+
+<p>= 1 * 2 * 3 * 4</p>
+
+<p>= 24</p>
+
+<hr><h3>Formalization</h3>
+
+<pre class="prettyprint linenums lang-html">
+Let f(n) be the nth factorial number where n is a positive integer.
+
+Base case:
+f(1) = 1
+
+Recurrence:
+f(n) = f(n-1) * n
+
+Example:
+f(4) 
+= f(3) * 4
+= f(2) * 3 * 4
+= f(1) * 2 * 3 * 4  [Base Case]
+= 1 * 2 * 3 * 4
+= 24
+</pre>
+
+<hr><h3>Implementation</h3>
+
+<pre class="prettyprint linenums ">
+int factorial(int n){
+   if(n == 1)return 1;
+   return factorial(n - 1) * n;
+}
+</pre>
+
+</section><section><h2>Sum of digits of a string</h2>
+
+<p>We can use recursion in many places and we can apply it to simple problems that you probably have not thought about. Summing the digits of a string can be done using simple loop but we can also use recursion to do it.</p>
+
+<p>Let's say we have the string '23528'. The total is equal to the first digit + the sum of the rest of the digits. 2 + '3528'. We can do the exact same thing for the rest of the digits: the second digit + the sum of the rest of the digits and keep doing this until we have no more digits.</p>
+
+<ul>
+<li>'23528'</li>
+<li>'3528' + 2</li>
+<li>'528' + 5</li>
+<li>'28' + 10</li>
+<li>'8' + 12</li>
+<li>'' + 20</li>
+<li>20</li>
+</ul>
+
+<hr><h3>Formalization</h3>
+
+<pre class="prettyprint linenums lang-html">
+Let sum(string) be the sum of digits in a string
+Let n be the length of the string
+
+For simplicity, let string[x..y] be the substring of the string from index x to index y. The starting index will be 1.
+Example: 
+string = 'abcd'.
+string[1..3] = 'abc'
+
+Base case:
+sum(empty) = 0
+
+Recurrence:
+sum(string) = sum(string[2..n]) + int(string[1])
+
+Example:
+sum('23528')
+= sum('3528') + 2
+= (sum('528') + 3) + 2
+= ((sum('28') + 5) + 3) + 2
+= (((sum('8') + 2) + 5) + 3) + 2
+= ((((sum('') + 8) + 2) + 5) + 3) + 2
+= ((((0 + 8) + 2) + 5) + 3) + 2
+= 20
+</pre>
+
+<hr><h3>Implementation</h3>
+
+<pre class="prettyprint linenums ">
+int sum(string str){
+   int n = str.length();
+   if(n == 0){
+       return 0;
+    }
+   else{
+     int charToNum = (str.charAt(0)-'0');
+     return sum(str.substring(1,n)) + charToNum;
+   }
+}
+sum('23528');
+</pre>
+
+</section><section><h2>Count</h2>
+
+<p>Let's say we have an string of N characters and we want to find the number of times the letter 'c' appears. This time we need to add some logic to the problem.</p>
+
+<p>If the first letter of the string is a 'c', then we can add 1 to the count. Otherwise, we don't add anything. We can do the exact same thing for the substring without the first letter. If the second letter of the string is a 'c', we add 1 other we don't add anything etc.</p>
+
+<p>For example we have the string 'cacaec'. Since the first letter is a 'c' we add 1 to the count. Then we remove the first letter and get 'acaec', the first letter is not a 'c' so we don't add to the count. We keep reducing this way until we get an empty string and we return the count.</p>
+
+<ul>
+<li>'cacaec'</li>
+<li>'acaec' +1</li>
+<li>'caec' + 1</li>
+<li>'aec' + 2</li>
+<li>'ec' + 2</li>
+<li>'c'  + 2</li>
+<li>'' + 3</li>
+<li>3</li>
+</ul>
+
+<hr><h3>Formalization</h3>
+
+<pre class="prettyprint linenums lang-html">
+Let count(string) be the number of 'c's in the string
+
+For simplicity, let string[x..y] be the substring of the string from x to y.
+Example: 
+string = 'abcd'.
+string[1..3] = 'bcd'
+
+Base case:
+count(empty) = 0
+
+Recurrence:
+count(string) =  {if string[n]=='c'  count(string[2..n])+1
+                 {else                    count(string[2..n])
+
+Example:
+count('cacaec')
+= count('acaec')+1
+= (count('caec')+0)+1
+= ((count('aec')+1)+0)+1
+= (((count('ec')+0)+1)+0)+1
+= ((((count('c')+0)+0)+1)+0)+1
+= ((((count('')+1)+0)+0)+1)+0)+1
+= ((((0+1)+0)+0)+1)+0)+1
+= 3
+</pre>
+
+<hr><h3>Implementation</h3>
+
+<pre class="prettyprint linenums ">
+int count3(string str){
+   int n = str.length()
+   if(n == 0)return 0;
+   if(str.charAt(0) == 'c'){
+      return count3( str.substring(1, n) ) + 1;
+   }
+   else{
+     return count3( str.substring(1, n) );
+   }
+}
+
+count3('cacaec');
+
+</pre>
+
+</section><section><h2>Calculate Exponential</h2>
+
+<p>Let's say we wanted to find x<sup>n</sup> and for the sake of this problem we want the last four digits of that number. Note that 267<sup>4</sup> mod 10000 = (267<sup>3</sup> mod 10000) * 267 mod 10000. This is important because it means we can take the last 4 digits in each step instead of having to compute the giant exponent and then taking the last 4 digits. We can do this problem very easily by using a simple loop, but we can do better by using recursion. By definition of exponents, x<sup>a</sup> * x<sup>a</sup> = x<sup>2a</sup>. Using this we can see that if n is divisible by 2, then x<sup>n</sup> = x<sup>n/2</sup> * x<sup>n/2</sup>.</p>
+
+<p>For example 5<sup>4</sup> = 5<sup>2</sup> * 5<sup>2</sup></p>
+
+<p>But let's take a look at x<sup>n/2</sup>. If n is even we can do the exact same thing! x<sup>n/2</sup> = x<sup>n/4</sup> * x<sup>n/4</sup>. We have a recurrence relation and the base case is simple: if x<sup>1</sup> = x.</p>
+
+<p>But what if n is odd and not 1? Then we have x<sup>n</sup> = x<sup>n/2</sup> * x<sup>n/2</sup> * x and we can now solve this problem using recursion.</p>
+
+<hr><h3>Formalization</h3>
+
+<pre class="prettyprint linenums lang-html">
+Let exp(b,n) be b^n
+
+Base case:
+exp(b,1) = 1  [Since b^1 = b]
+
+Recurrence:
+exp(b,n) = {if n divisible by 2    exp(b,n/2)^2 % 10000
+           {else                   (exp(b,n/2)^2)*b % 10000
+
+Example: (for simplicity, leave out the modulus)
+exp(3,10)
+= exp(3,5)^2
+= (exp(3,2)^2))*3)^2
+= (((exp(3,1)^2)*3)^2) [Base case]
+= (((3^2)^2)*3)^2)
+= ((9^2)*3)^2)
+= (81*3)^2
+= (243)^2
+= 59049
+</pre>
+
+<hr><h3>Implementation</h3>
+
+<pre class="prettyprint linenums ">
+int exponent(int b,int n){
+   if(n==1)return b;
+   if(n%2==0){
+     int x = exponent(b,n/2);
+     return (x * x)%10000;
+   }
+   else{
+     int x = exponent(b,n/2);
+     return (x*x*b)%10000;
+   }
+}
+
+</pre>
+
+</section><section><h2>Exercises</h2>
+
+<ol>
+<li>Given an array of N integers, write a recursive function to get the sum</li>
+<li>Given a string S, write a recursive function to determine if it is a palindrome.</li>
+<li>Given a number N, write a recursive function to output the number in binary.</li>
+<li>Given a string S, write a recursive function to return a reversed string</li>
+</ol>
+</section>
+        \section{ Advanced Recursion }
+        <section><h2>Introduction</h2>
 
 <p><strong>Prerequisites</strong>: <a href="./Recursion" target="_blank">Recursion</a></p>
 
@@ -601,351 +1075,11 @@ Vector&lt;String&gt; permutation(String s){
 <li>Given a string S, write a recursive function to generate all substrings</li>
 <li>Write a solution for hanoi towers but with the restriction that discs can only be moved from adjacent poles. (You can move a disc from A to B but not A to C because they are not adjacent)</li>
 </ol>
-</section><h0>Sorting</h0><section><h3>Introduction</h3>
-
-<p>Sorting is arranging an array of n elements in either increasing or decreasing order by some property. It is very useful in computer science for efficiency in other algorithms that usually require a search.</p>
-
-<p>A stable sort is a sort that can preserve sorting of other properties. For example if we have</p>
-
-<p>(3,G), (1,G), (3, A), (6 K), (1,B)</p>
-
-<p>and we want to sort by the first property in increasing order, we will have:</p>
-
-<p>(1, G) (1,B) (3,G), (3,A) (6 K).</p>
-
-<p>If we sort again by the second property we have (1,B) (3, A) (1, G) (3, G) (6,K) then the sort is stable as the first sort is preserved. However if we had (1,B) (3, A) (3, G) (1, G) (6, K), then the sort would be unstable.</p>
-
-</section><h1>Bubble Sort</h1><section><h2>Introduction</h2>
-
-<p>Bubble sort is one of the most basic sorting algorithms, one of the first you should learn.</p>
-
-<p>Its name describes how the algorithm works: bigger bubbles float to the top. This will become more clear when we see the implmentation.</p>
-
-<p>The sorting algorithms are implemented to sort integer arrays but can be adapted to sort arrays of any data structure that is comparable.</p>
-
-</section><section><h2>Implementation</h2>
-
-<pre class="prettyprint linenums ">
-//sorts integers from smallest to greatest
-public static void BubbleSort (int a[]){
-    for (int i=0;i&lt;a.length;i++){
-        for (int j=1;j&lt;a.length;j++){
-            //if the current bubble is smaller than the bubble that's 
-            //below then the bigger bubble floats up
-            if (a[j]&lt;a[j-1]){
-                //swap the bubbles
-                int temp = a[j];
-                a[j] = a[j-1];
-                a[j-1] = temp;
-            }
-        }
-    }
-}
-</pre>
-</section><h1>Selection Sort</h1><section><h2>Introduction</h2>
-
-<p>Selection Sort is similar to Bubble Sort in terms of complexity and arguably more intuitive.</p>
-
-<p>Selection Sort works by selecting the smallest element and setting it as the first item in the array, then selecting the second element and setting that as the second item in the array and so on. This process repeats until the least smallest element (the largest element) is set as the last item in the array.</p>
-
-<p>The sorting algorithms are implemented to sort integer arrays but can be adapted to sort arrays of any data structure that is comparable.</p>
-
-</section><section><h2>Implementation</h2>
-
-<pre class="prettyprint linenums ">
-//sorts integers from smallest to greatest
-public static void SelectionSort (int a[]){
-    //iterates through the array selecting the smallest elements
-    for (int i=0;i&lt;a.length-1;i++){
-        int minIndex = i;//var for storing where the ith smallest element is
-        //iterates through the array looking for the ith smallest element
-        for (int j=i+1;j&lt;a.length;j++){
-            //if the current element is smaller than the current smallest element
-            if (a[j]&lt;a[minIndex]){
-                //updated the location of the smallest element
-                minIndex = j;
-            }
-            //swap the current i with the smallest element
-            int temp = a[i];
-            a[i] = a[minIndex];
-            a[minIndex] = temp;
-        }
-    }
-}
-</pre>
-</section><h1>Insertion Sort</h1><section><h2>Introduction</h2>
-
-<p>Insertion Sort is the another n&lt;sup&gt;2&lt;/sup&gt; sorting algorithm.</p>
-
-<p>It works by starting with an empty sorted sequence of numbers and then inserting every element in the array into the sorted sequence maintaining the order after each insert.</p>
-
-<p>The sorting algorithms are implemented to sort integer arrays but can be adapted to sort arrays of any data structure that is comparable.</p>
-
-</section><section><h2>Implementation</h2>
-
-<pre class="prettyprint linenums ">
-//sorts integers from smallest to greatest
-public static void InsertionSort (int a[]){
-    //iterates through the array selecting the smallest elements
-    for (int i=0;i&lt;a.length;i++){
-        //element that needs to be inserted into the sorted list
-        int val = a[i]; 
-        //keeps track of where to insert the element
-        int index = i; 
-        
-        //loops through the already sorted list to find where to 
-        //insert the current element
-        while (index &gt; 0 &amp;&amp; a[index-1] &gt; val){
-            //switches the current item at index with the one before 
-            //to check if the element that needs to be inserted will 
-            //go in the next spot
-            a[index] = a[index-1];
-            index--;
-        }
-        a[index] = val;
-    }
-}
-</pre>
-</section><h1>Heap Sort</h1><section><h2>Introduction</h2>
-
-<p><em>Prerequisites</em>: <a href="./Heap" target="_blank">Heap</a></p>
-
-<p>Heap sort is a sort that inserts all the element in an array into a min heap and then pops all the element outs. Since a heap guarantees that the root node will be the smallest element, we can store the entire array in a heap and the order that they are popped out of the heap will be in order.</p>
-
-<hr><h3>Implementation</h3>
-
-<pre class="prettyprint linenums ">
-public void heapSort(int[] arr){
-    PriorityQueue&lt;Integer&gt; pq; //built in heap
-    for(int i=0;i&lt;arr.length;i++){
-       pq.push(arr[i]);
-    }
-    for(int i=0;i&lt;arr.length;i++){
-       arr[i] = pq.pop(i);
-    }
-}
-</pre>
-</section><h1>Merge Sort</h1><section><h2>Introduction</h2>
-
-<p><strong>Preqrequistes</strong>: <a href="./Recursion" target="_blank">Recursion</a></p>
-
-<p>Merge sort works by breaking down the sorting into smaller pieces. If we want to sort N elements, we can sort the first half of the elements, sort the second half and then merge the results together. To sort the first half, we can do the exact same thing of sorting the first quarter and the second quarter and merging the results.</p>
-
-</section><section><h2>Implementation</h2>
-
-<p>Merge sort work be breaking down the problem into smaller and smaller parts and then combing those parts to solve the big problem.</p>
-
-<p>We can keep splitting the list into half until there each piece has 1 element or no elements. We can then combine the results of each piece repeatedly until the entire list is sorted.</p>
-
-<p>Example:</p>
-
-<p><img src="./public_html/img/uploads/mergesort.png"></p>
-
-<hr><h3>Formalization</h3>
-
-<pre class="prettyprint linenums lang-html">
-Let merge(arr1,arr2) combine two sorted arrays into one sorted array
-
-merge(arr1, arr2)= { arr2 if arr1 is empty
-                     { arr1 if arr2 is empty
-                     { arr1.first + merge(arr1[1..arr1.length],arr2) if arr1.first &lt; arr2.first
-                     { arr2.first + merge(arr1[0..arr.length],arr2[1..length]) else
-
-Let sort(arr) sort an array
-Let middle be (0+arr.length)/2
-sort(arr) = merge(sort(arr[0..middle]) ,sort(arr[middle..arr.length])
-</pre>
-
-<hr><h3>Code</h3>
-
-<p>For our Java implementation, instead of returning a new array every time we merge two arrays, we can create a temporary array to store the merged results and then move it back.</p>
-
-<pre class="prettyprint linenums ">
-/**
- * Merges two segments of the same array. The two segments should be adjacent.
- * @param arr Array containing segments
- * @param start1 Start index of first segment
- * @param end1 End index of first segment
- * @param start2 Start index of second segment
- * @param end2 End index of second segment
- */
-
-public static void merge(int arr[],int start1,int end1, int start2,int end2){
-    int arr2[] = new int[end2-start1+1];
-    int begin = start1;
-    int n = 0;
+</section>
+        \section{ Intermediate Recursion }
+        ((((Intermediate Recursion))))
+\part{ Data Structures }
     
-    //Pick smallest element one by one
-    while(start1 &lt;= end1 &amp;&amp; start2 &lt;= end2){
-        if(arr[start1] &lt;= arr[start2]){
-            arr2[n] = arr[start1];
-            start1++;
-        }else{
-            arr2[n] = arr[start2];
-            start2++;
-        }
-        n++;
-    }
-    //If first segment still has elements
-    while(start1 &lt;= end1){
-        arr2[n] = arr[start1];
-        n++;
-        start1++;
-    }
-    //if second segment still has elements
-    while(start2 &lt;= end2){
-        arr2[n] = arr[start2];
-        start2++;
-        n++;
-    }
-    //Copy merged array back
-    for(int i=0;i&lt;n;i++){
-        arr[begin+i]=arr2[i];
-    }
-}
-/**
- * Sorts an array using merge sort
- * @param arr Array to be sorted
- * @param start Index at beginning of array
- * @param end Index at end of array
- */
-public static void mergeSort(int arr[],int start,int end){
-    if(end-start&lt;=0){
-        return;
-    }
-    int mid = (start+end)/2;
-    mergeSort(arr,start,mid);
-    mergeSort(arr,mid+1,end);
-    merge(arr,start,mid,mid+1,end);
-}
-
-public static void main(){
-    int arr[] = {5,7,2,6,8,5};
-    mergeSort(arr,0,arr.length-1);
-}
-</pre>
-</section><h1>Quick Sort</h1><section><h2>Introduction</h2>
-
-<p>Quick Sort is another fast sorting algorithm that uses divide and conquer. It is also known as partition-exchange sort or as Hoare's quicksort (named after the author).</p>
-
-<p>In Quick Sort an element is selected as a "pivot". The list is then divided into two sublists: a list of elements less than (or equal to) the pivot and a list of elements greater than the pivot. Each sublist is sorted (conquered) and then appended together along with the origin pivot.</p>
-
-<p>In the best case (if the pivot that is chosen is exactly the middle element), then the runtime is O(n log n). However, in the worst case, the runtime for Quick Sort is n<sup>2</sup>. Despite its worst case behaviour, quick sort is still popular and in widespread use. The average case behaviour is quite good and there are straightforward methods that can be used to improve the selection of the pivot.</p>
-
-<p>The sorting algorithms are implemented to sort integer arrays but can be adapted to sort arrays of any data structure that is comparable.</p>
-
-</section><section><h2>Implementation</h2>
-
-<p><img src="./public_html/img/uploads/quicksort.png"></p>
-
-<pre class="prettyprint linenums ">
-//sorts integers from smallest to greatest
-public static void QuickSort (int a[], int first, int last){
-    //first is the starting index of the list
-    //last is the last index of the list
-    //QuickSort can be called by QuickSort(a, 0, a.length-1)
-    
-    if (last &lt;= first) return; //if the array size &lt;= 1
-    
-    int pivot = a[first]; //picks the first element as the pivot
-    // the location to put the next integer that's larger than the pivot
-    int index = last;  
-    
-    //iterate through the list, sorting it by the first pivot
-    for (int i=last;i&gt;=first+1;i--){
-        if (a[i]&gt;=pivot){
-            //swap the current element to be on the side that's 
-            //larger than the pivot
-            int temp = a[index];
-            a[index] = a[i];
-            a[i] = temp;
-            
-            //decrements index for the next switch
-            index--;
-        }
-    }
-    
-    //swap the element at index with the pivot so that it's 
-    //in the right place
-    int temp = pivot;
-    a[first] = a[index];
-    a[index] = pivot;
-    
-    //recursively sort the lists less than and greater than the pivot
-    QuickSort (a, first, index-1);
-    QuickSort (a, index+1, last);
-}
-</pre>
-</section><h1>Bozo Sort</h1><section><h2>Introduction</h2>
-
-<p>Bozo sort is a sort that keeps randomly arranging an array until it is sorted. If you are very lucky bozo sort will be very fast! But for the most part this is a horrible sort.</p>
-
-</section><section><h2>Implementation</h2>
-
-<pre class="prettyprint linenums ">
-public void bozoSort(int[] arr){
-   
-   boolean sorted = false;
-   int i = 0;
-
-   while(!sorted){
-       sorted = true;
-       for(i=1;i&lt;arr.length;i++){
-          if(arr[i]&lt;arr[i-1]){
-             sorted = false;
-             break;
-          }
-       }
-       if(sorted)return;
-
-       for(i=0;i&lt;arr.length;i++){
-           int x = Math.randInt(arr.length);
-           int y = Math.randInt(arr.length);
-           int temp = arr[x];
-           arr[x] = arr[y];
-           arr[y] = temp;
-       }
-
-   }
-}
-
-</pre>
-</section><h1>Permutation Sort</h1><section><h2>Introduction</h2>
-
-<p>Permutation sort is a sort that keeps permutating the array until it is sorted. It is the slowest sort that will guarantee that the array will be sorted.</p>
-
-<hr><h3>Implementation</h3>
-
-<pre class="prettyprint linenums ">
-void permuteSort(int[] arr){
-  while(!sorted(arr)){
-    permute(arr);
-  }
-}
-</pre>
-</section><h1>Miracle Sort</h1><section><h2>Introduction</h2>
-
-<p><em>Prerequisites</em>: Miracles, Sense of Humour</p>
-
-<p>Miracle sort is a sort that truly requires a miracle. We keep checking the array until it is sorted. It requires that some external force (a miracle?) changes some bits in the computer in a way that it becomes sorted.</p>
-
-</section><section><h2>Implementation</h2>
-
-<pre class="prettyprint linenums ">
-public void miracleSort(int[] arr){
-   boolean sorted = false;
-   do{
-      sorted = true;
-      for(int i=1;i&lt;arr.length;i++){
-         if(arr[i]&lt;arr[i-1]){
-             sorted = false;
-             break;
-         }
-      }
-   }while(!sorted);
-}
-</pre>
-</section><h0>Data Structures</h0><section><h3>Introduction</h3>
 
 <p>Data structures are a way of storing data such that it can be used in an efficient way. Although many of these data structures are already built into various languages, it is important to understand how they work. By understanding the implementations we can have a sense of which data structure to use in different problems as well as determine how efficient they are.</p>
 
@@ -961,83 +1095,10 @@ public void miracleSort(int[] arr){
 
 <p>For more intermediate data structures, read the <a href="./Advanced_Data_Structures" target="_blank">advanced data structures</a> page.</p>
 
-</section><h1>Arrays</h1><section><h2>Introduction</h2>
 
-<p><a href="https://github.com/ayoungprogrammer/Algorithms/blob/master/src/Arr.java" target="_blank">Source on Github</a></p>
-
-<p>Imagine you had a row of parking spaces where each was labelled with a number. If you wanted to know what the license plate of a car at parking space 4 was, all you have to do is go to the parking space and read off the license plate. If you wanted to park you car at parking space 5, you would go to parking space 5 and put your car in there if there was nothing there. Let's say that you had cars at parking spaces 1, 2, and 3. If you wanted to insert a new car at parking space 1 and keep the rest of the cars in the same order, you would have to shift the cars in the parking spaces from 1, 2 and 3 to 2, 3 and 4 by getting in each car and parking them in the new spaces which would take some time. This type of structure is an array.</p>
-
-<p>An <strong>array</strong> is the most basic data structure that stores elements of the same type in a fixed block. The fact that it is in one block and the same type is important because it allows accessing elements very quickly if you have the index. All you have to do is go to the index and retrieve the element. However, inserting elements in the array is slow because you would have to shift all the elements and also if you want to shift past the fixed size you will get an error. (Imagine the parking spaces are full and you wanted to insert a car somewhere, there will still be one car that will have no parking space).</p>
-
-<p>Arrays can be multidimensional meaning you can have an array of array of objects. (Imagine a parking lot with multiple rows of parking spaces).</p>
-
-<table>
-<thead>
-<tr>
-  <th>Operation</th>
-  <th>Create</th>
-  <th>Get i</th>
-  <th>Set i</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>Time Complexity</td>
-  <td>O(n)</td>
-  <td>O(1)</td>
-  <td>O(1)</td>
-</tr>
-</tbody>
-</table>
-
-</section><section><h2>Implementation</h2>
-
-<p>Implementation of a very simple array in Java</p>
-
-<hr><h3>Create array</h3>
-
-<p>Creating an array allocates a block of memory for us to store the elements.</p>
-
-<pre class="prettyprint linenums ">
-public static int[] createArray(int size){
-     int[] array = new int[size];
-     return array;
-}
-</pre>
-
-<hr><h3>Get</h3>
-
-<p>When we want to get the element of an index all we have to do is offset the index by the array. However we need to check that the index is within bounds of the array.</p>
-
-<pre class="prettyprint linenums ">
-public static int getElemenent(int[] arr, int i){
-    if(i&lt;0 || i&gt;=arr.length){
-        throw new ArrayIndexOutOfBoundsException();
-    }
-    return arr[i];
-}
-</pre>
-
-<hr><h3>Set</h3>
-
-<p>Setting is very similar to getting but instead we change the value in the array.</p>
-
-<pre class="prettyprint linenums ">
-public static void setElemenent(int[] arr, int i,int value){
-    if(i&lt;0 || i&gt;=arr.length){
-        throw new ArrayIndexOutOfBoundsException();
-    }
-    arr[i] = value;
-}
-</pre>
-
-</section><section><h2>See Also</h2>
-
-<ul>
-<li><a href="./Vector" target="_blank">Vector</a></li>
-<li><a href="./Stack" target="_blank">Stack</a></li>
-</ul>
-</section><h1>Stack</h1><section><h2>Introduction</h2>
+    \chapter{ Stack }
+        \section{ Stack }
+        <section><h2>Introduction</h2>
 
 <p>Imagine a stack of plates at a buffet, the plates are taken from the top and are also replaced from the top. The first plate to go in will be the last plate to come out. The last plate to go in will be the first to come out. This structure is called a stack.</p>
 
@@ -1093,13 +1154,15 @@ public static void setElemenent(int[] arr, int i,int value){
 <li>( ) [ ( ] )</li>
 </ul></li>
 </ol>
-</section><h1>Vector</h1><section><h2>Introduction</h2>
+</section>
+        \section{ Vector }
+        <section><h2>Introduction</h2>
 
 <p><em>Prerequisites</em>: <a href="./Arrays" target="_blank">Arrays</a>, <a href="./Stack" target="_blank">Stack</a></p>
 
 <p><a href="https://github.com/ayoungprogrammer/Algorithms/blob/master/src/Vec.java" target="_blank">Source on Github</a></p>
 
-<p>A vector is a stack that is implemented as an <a href="./Array" target="_blank">array</a>. It is very similar to an <a href="./Array" target="_blank">array</a>, but it is more flexible in terms of size. Elements are added and removed only from the end of the array. When more elements are added to the vector and the vector is at full capacity, the vector resizes itself and reallocates for 2*N space. When using an vector we can keep adding elements and let the data structure handle all the memory allocation.</p>
+<p>A vector is a stack that is implemented as an array. It is very similar to an array, but it is more flexible in terms of size. Elements are added and removed only from the end of the array. When more elements are added to the vector and the vector is at full capacity, the vector resizes itself and reallocates for 2*N space. When using an vector we can keep adding elements and let the data structure handle all the memory allocation.</p>
 
 <table>
 <thead>
@@ -1124,11 +1187,9 @@ public static void setElemenent(int[] arr, int i,int value){
 </tbody>
 </table>
 
-</section><section><h2>Implementation</h2>
+</section><section><h2>Class</h2>
 
 <p>There is a builtin Vector class already, but we will go through the implementation of a simple integer vector class to understand how the data structure works.</p>
-
-<hr><h3>Class</h3>
 
 <p>In our vector class, we need to store the element and the size of the current vector.</p>
 
@@ -1146,7 +1207,7 @@ publc Vec(int startSize){
 
 </pre>
 
-<hr><h3>Resize</h3>
+</section><section><h2>Resize</h2>
 
 <p>Resize will be used to resize the current size of elements. We create a new array of two times the size of the old one and copy the old array over.</p>
 
@@ -1260,12 +1321,15 @@ public void insert(int idx,int x){
     }
 </pre>
 
-</section><section><h2><a href="./Exercises" target="_blank">Exercises</a></h2>
+</section><section><h2>Exercises</h2>
 
 <ol>
 <li>Implement removeAtIndex(int index) for Vector</li>
 </ol>
-</section><h1>Queue</h1><section><h2>Introduction</h2>
+</section>
+    \chapter{ Queue }
+        \section{ Queue }
+        <section><h2>Introduction</h2>
 
 <p>Imagine you are standing in line for a restaurant. Whoever is first in line will be served first and whoever is last in line will be served last. People can be served while more people join the line and the line may get very long because it takes a while to serve one person while more people join the queue. This is called a queue.</p>
 
@@ -1328,7 +1392,9 @@ public void insert(int idx,int x){
 <li>B</li>
 </ul></li>
 </ol>
-</section><h1>Linked List</h1><section><h2>Introduction</h2>
+</section>
+        \section{ Linked List }
+        <section><h2>Introduction</h2>
 
 <p><em>Prerequisites</em>: <a href="./Queue" target="_blank">Queue</a></p>
 
@@ -1367,11 +1433,9 @@ public void insert(int idx,int x){
 </tbody>
 </table>
 
-</section><section><h2>Implementation</h2>
+</section><section><h2>Link Class</h2>
 
 <p>In Java, there already exists a LinkedList class but we will implement our own.</p>
-
-<hr><h3>Link Class</h3>
 
 <p>The Link class for each "link" in the Linked List. In each Link we only need the value and location of the previous and next node.</p>
 
@@ -1386,7 +1450,7 @@ class Link{
 }
 </pre>
 
-<hr><h3>Class</h3>
+</section><section><h2>LinkedList Class</h2>
 
 <p>Create the linked list by initializing the starting node as null and setting the size to empty.</p>
 
@@ -1402,7 +1466,7 @@ class LinkedList{
 }
 </pre>
 
-<hr><h3>Push</h3>
+</section><section><h2>Push</h2>
 
 <p>Create a new node with the value given and add it to the end. We have to set the current head previous node to the new node and the new next next to the last node.</p>
 
@@ -1428,7 +1492,7 @@ public void push(int value){
 }
 </pre>
 
-<hr><h3>Pop</h3>
+</section><section><h2>Pop</h2>
 
 <p>Pops off the node at the head.</p>
 
@@ -1454,7 +1518,7 @@ public int pop(){
 }
 </pre>
 
-<hr><h3>Get</h3>
+</section><section><h2>Get</h2>
 
 <p>Get retrieves the value at the specified index. We have to loop through the entire list to get the index we want because the nodes are not in the same block of memory.</p>
 
@@ -1482,7 +1546,7 @@ public int get(int index){
 }
 </pre>
 
-<hr><h3>Delete</h3>
+</section><section><h2>Delete</h2>
 
 <p>To delete the current node we set the previous node next link to the link after.</p>
 
@@ -1521,43 +1585,10 @@ public void deleteNext(Link node){
 </ul></li>
 <li>Given two linked lists which may share tails, determine the point at which they converge.</li>
 </ol>
-</section><h1>Trees</h1><section><h2>Introduction</h2>
-
-<p>Trees are data structures that follow a hierarchy, each node has exactly one or zero parents and each node has children. Trees are recursive structures meaning that each child of a tree is also a tree. A tree within another tree is called a <strong>subtree</strong>.</p>
-
-<p>A <strong>child</strong> is a node that is below another node.</p>
-
-<p>A <strong>parent</strong> is a node that is above another node.</p>
-
-<p>The element at the top of the tree with no parents is called a <strong>root</strong>. The node at the bottom of the tree with no children is called a <strong>leaf</strong>.</p>
-
-<p>Each node can hold different kinds of information depending on the tree. A node can hold the children it has, the parent it has, a key associated with the node and a value associated with the node.</p>
-
-<p><img src="./public_html/img/uploads/tree.png"></p>
-
-<ul>
-<li>A is the root of the tree and E,F,G,H are leaves. </li>
-<li>The parent of E is B. </li>
-<li>C,F,G is a subtree of the original tree.</li>
-</ul>
-
-</section><section><h2><a href="./Binary_Tree" target="_blank">Binary Tree</a></h2>
-
-<p>A binary tree is a tree where every node has at max two children.</p>
-
-<p><img src="./public_html/img/uploads/binarytree.png"></p>
-</section><h1>Binary Tree</h1><section><h2>Introduction</h2>
-
-<p>A binary tree is a tree such that each node has at most 2 children.</p>
-
-<p><img src="./public_html/img/uploads/binarytree.png"></p>
-
-</section><section><h2><a href="./Binary_Search_Tree" target="_blank">Binary Search Tree</a></h2>
-
-<p>A binary search tree is a type of binary tree where all the nodes in a left subtree will be smaller than the node and all the nodes in a right subtree will be greater than the node. It has a recursive structure such that each subtree is also a binary search tree.</p>
-
-<p><img src="./public_html/img/uploads/bst.png"></p>
-</section><h1>Sets</h1><section><h2>Introduction</h2>
+</section>
+    \chapter{ Sets }
+        \section{ Sets }
+        <section><h2>Introduction</h2>
 
 <p>Imagine you have a grocery list that you use to keep tracking of things you need to buy. You want to make sure there are no duplicate items in the list, you can add items to the list and that you can remove items from your list. This structure is similar to what a set does.</p>
 
@@ -1607,9 +1638,11 @@ public void deleteNext(Link node){
 <li>For example in the list (10,5,-1, 3, 4, -6) the tuple of size 4 (-1,3,4-6) adds to 0.</li>
 </ul></li>
 </ol>
-</section><h1>Hash Set</h1><section><h2>Introduction</h2>
+</section>
+        \section{ Hash Set }
+        <section><h2>Introduction</h2>
 
-<p><em>Prerequisites</em>: <a href="./Sets" target="_blank">Sets</a></p>
+<p><em>Prerequisites</em>: <a href="./Sets" target="_blank">Sets</a>, <a href="./Linked_List" target="_blank">Linked List</a></p>
 
 <p><a href="https://github.com/ayoungprogrammer/Algorithms/blob/master/src/HashSet.java" target="_blank">Source on Github</a></p>
 
@@ -1641,13 +1674,6 @@ public void deleteNext(Link node){
 </tr>
 </tbody>
 </table>
-
-<hr><h3>Prerequisites</h3>
-
-<ul>
-<li><a href="./Sets" target="_blank">Sets</a></li>
-<li><a href="./Linked_List" target="_blank">Linked List</a></li>
-</ul>
 
 </section><section><h2>Implementation</h2>
 
@@ -1800,7 +1826,303 @@ public boolean remove(int x){
 <li>Given an array of numbers and a number A, find the number of pairs of numbers that sum to A.</li>
 <li>Given an array of numbers and a number A, find the number of quadruples that sum to A.</li>
 </ol>
-</section><h1>Tree Set</h1><section><h2>Introduction</h2>
+</section>
+        \section{ Binary Search Tree }
+        <section><h2>Introduction</h2>
+
+<p>A binary search tree is a  <a href="./Binary_Tree" target="_blank">binary tree</a> with special properties. The left children of a node will always be less than the node and the right children of a node will always be more than the node. It has a recursive structure such that every subtree is also a binary search tree.</p>
+
+<p><img src="./public_html/img/uploads/bstcompare.png"></p>
+
+<p><img src="./public_html/img/uploads/bst.png"></p>
+
+<table>
+<thead>
+<tr>
+  <th>Operation</th>
+  <th>Membership</th>
+  <th>Insertion</th>
+  <th>Deletion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Time Complexity</td>
+  <td>O(log n)</td>
+  <td>O(log n)</td>
+  <td>O(log n)</td>
+</tr>
+</tbody>
+</table>
+
+<hr><h3>Prerequisites</h3>
+
+<ul>
+<li><a href="./Set" target="_blank">Set</a></li>
+<li><a href="./Binary_Tree" target="_blank">Binary Tree</a></li>
+</ul>
+
+</section><section><h2>Implementation</h2>
+
+<p>In a binary search tree, everything to the left of a node is smaller than that node and everything to the right of that node is greater than that node.</p>
+
+<p><img src="./public_html/img/uploads/bstcompare.png"></p>
+
+<p><img src="./public_html/img/uploads/bst.png"></p>
+
+<p>This implementation of a binary search will be unbalanced. For a balanced binary search tree, see <a href="./AVL_Tree" target="_blank">AVL trees</a> and <a href="./Red_Black_Trees" target="_blank">Red Black trees</a>.</p>
+
+<hr><h3>Class</h3>
+
+<p>A Node is a node in our tree set. Each node will contain a left subtree, a right subtree, the parent of the tree and the value stored at that node. It is unnecessary to store the parent but for this implementation it will be easier to keep track of the parent.</p>
+
+<p>replaceChild replaces the left or right child node specified with the replacement node.</p>
+
+<pre class="prettyprint linenums ">
+public class Node {
+    int value;
+    Node left;
+    Node right;
+    Node parent;
+    public Node(int val,Node parent){
+        this.value = val;
+        this.left = null;
+        this.right = null;
+        this.parent = parent;
+    }
+    public void replaceChild(Node child,Node replacement){
+        if(left==child){
+            left = replacement;
+            if(replacement!= null){
+                replacement.parent = this;
+            }
+        }
+        if(right==child){
+            right = replacement;
+            if(replacement!= null){
+                replacement.parent = this;
+            }
+        }
+    }
+}
+</pre>
+
+<p>In our class we will store the number of element in the set and the root of the tree. From the root of the tree we can traverse the rest of the tree.</p>
+
+<pre class="prettyprint linenums ">
+public class TreeSet {
+
+    int size;
+    Node root;
+    
+    public TreeSet(){
+        size = 0;
+        root = null;
+    }
+</pre>
+
+<hr><h3>Insert</h3>
+
+<p>To insert an element in the tree set we search for the element that we are trying to insert. If it is already there then the operation fails because sets contain unique elements. Otherwise we will insert the new element into the set.</p>
+
+<p><img src="./public_html/img/uploads/bstinsert.png"></p>
+
+<p><img src="./public_html/img/uploads/bstinsert2.png"></p>
+
+<p><img src="./public_html/img/uploads/bstinsert3.png"></p>
+
+<p><img src="./public_html/img/uploads/bstinsert4.png"></p>
+
+<pre class="prettyprint linenums ">
+public boolean insert(int x){
+    if(root==null){
+        root = new Node(x,null);
+        size = 1;
+        return true;
+    }
+    Node curTree = root;
+    while(curTree != null){
+        if(x == curTree.value){
+            return false;
+        }else if(x &lt; curTree.value){
+            if(curTree.left == null){
+                curTree.left =  new Node(x,curTree);
+                size++;
+                return true;
+            }
+            curTree = curTree.left;
+        }else {
+            if(curTree.right == null){
+                curTree.right = new Node(x,curTree);
+                size++;
+                return true;
+            }
+            curTree = curTree.right;
+        }
+    }
+    return false;
+}
+</pre>
+
+<hr><h3>Contains</h3>
+
+<p>To check if the tree set contains an element, we search for it in the binary tree by starting at the root. If the number is less than the current, we search the left child. If the number if greater than the current, we search the right child.</p>
+
+<p><img src="./public_html/img/uploads/bstcontains.png"></p>
+
+<p><img src="./public_html/img/uploads/bstcontains2.png"></p>
+
+<p><img src="./public_html/img/uploads/bstcontains3.png"></p>
+
+<p><img src="./public_html/img/uploads/bstcontains4.png"></p>
+
+<p>We return true if it exists and false otherwise.</p>
+
+<pre class="prettyprint linenums ">
+public boolean contains(int x){
+    Node curTree = root;
+    while(curTree!=null){
+        if(x==curTree.value){
+            return true;
+        }else if(x&lt;curTree.value){
+            curTree = curTree.left;
+        }else{
+            curTree = curTree.right;
+        }
+    }
+    return false;
+}
+</pre>
+
+<hr><h3>Remove</h3>
+
+<p>Removing an element is a much more complex because we need to maintain the tree structure of the tree set when removing elements. First we locate the element that we want to remove. If the element is not there then the operation failed and we return false. If the element is there then are three cases we need to consider.</p>
+
+<p><img src="./public_html/img/uploads/bst-rem.png"></p>
+
+<p><strong>Case 1: Node is a leaf node</strong></p>
+
+<p><img src="./public_html/img/uploads/bst-rem-case11.png"></p>
+
+<p>If the node we want to remove is the leaf node, we can simply remove it.</p>
+
+<p><img src="./public_html/img/uploads/bst-rem-case12.png"></p>
+
+<p><strong>Case 2: Node has one child</strong></p>
+
+<p><img src="./public_html/img/uploads/bst-rem-case21.png"></p>
+
+<p>If the node we want to remove has a child, we can replace that node with its' only child.</p>
+
+<p><img src="./public_html/img/uploads/bst-rem-case22.png"></p>
+
+<p><strong>Case 3: Node has two children</strong></p>
+
+<p><img src="./public_html/img/uploads/bst-rem-case31.png"></p>
+
+<p>We need to replace the node with the <strong>rightmost</strong> of the <em>left</em> subtree or the <strong>leftmost</strong> of the <em>right</em> subtree to maintain the order.</p>
+
+<p><img src="./public_html/img/uploads/bst-rem-case32.png"></p>
+
+<p>It does not matter which side we pick so we will use the <strong>rightmost</strong> of the <em>left</em> subtree. First we copy the value of the rightmost of the left subtree into the node that will be deleted.</p>
+
+<p><img src="./public_html/img/uploads/bst-rem-case33.png"></p>
+
+<p>Then we replace the rightmost of the left subtree with its left subtree.</p>
+
+<p><img src="./public_html/img/uploads/bst-rem-case34.png"></p>
+
+<pre class="prettyprint linenums ">
+public boolean remove(int x){
+    //Get node to remove
+    Node curNode = root;
+    while(curNode!=null){
+        if(x==curNode.value){
+            break;
+        }else if(x&lt;curNode.value){
+            curNode = curNode.left;
+        }else{
+            curNode = curNode.right;
+        }
+    }
+    if(curNode==null){
+        return false;
+    }
+    //Case 1: leaf node
+    if(curNode.left==null &amp;&amp; curNode.right==null){
+        //if root
+        if(curNode==root){
+            this.root = null;
+        }else{
+            curNode.parent.replaceChild(curNode,null);
+        }
+    }
+    //Case 2: one child
+    else if(curNode.left==null){
+        //If root
+        if(curNode==root){
+            root = curNode.right;
+            root.parent = null;
+        }else {
+            curNode.parent.replaceChild(curNode,curNode.right);
+        }
+    }
+    else if(curNode.right==null){
+        //If root
+        if(curNode==root){
+            root = curNode.left;
+            root.parent = null;
+        }else {
+            curNode.parent.replaceChild(curNode,curNode.left);
+        }
+    }
+    //Case 3: two children
+    else {
+        //Get rightmost of left subtree
+        Node rightmost = curNode.left;
+        while(rightmost.right!=null){
+            rightmost = rightmost.right;
+        }
+        curNode.value = rightmost.value;
+        rightmost.parent.replaceChild(rightmost, rightmost.left);
+    }
+    size--;
+    return true;
+}
+</pre>
+
+<hr><h3>Print Tree</h3>
+
+<p>Since tree sets are stored as a binary search tree, we can print the elements in order.</p>
+
+<pre class="prettyprint linenums ">
+public String dfs(Node curTree){
+    if(curTree == null)return "";
+    String ret = "";
+    ret += dfs(curTree.left);
+    ret += curTree.value;
+    ret += ",";
+    ret += dfs(curTree.right);
+    return ret;
+}
+    
+public String toString(){
+    String ret = "";
+    if(root!=null){
+        ret += dfs(root);
+    }
+    return ret.substring(0,ret.length()-1);
+}
+</pre>
+
+</section><section><h2>Exercises</h2>
+
+<ol>
+<li>Write a function to determine if a binary tree is a binary search tree</li>
+</ol>
+</section>
+        \section{ Tree Set }
+        <section><h2>Introduction</h2>
 
 <p><em>Prerequeisites</em>: <a href="./Sets" target="_blank">Sets</a>, <a href="./Binary_Search_Tree" target="_blank">Binary Search Tree</a></p>
 
@@ -1840,19 +2162,18 @@ public boolean remove(int x){
 <ol>
 <li>Given a list of names, output all the unique names in alphabetical order</li>
 </ol>
-</section><h1>Maps</h1><section><h2>Introduction</h2>
+</section>
+    \chapter{ Maps }
+        \section{ Maps }
+        <section><h2>Introduction</h2>
+
+<p><em>Prerequisites</em>: <a href="./Sets" target="_blank">Sets</a></p>
 
 <p>A map is an abstract data type that stores key-value pairs.</p>
 
 <p>Imagine you had a English dictionary. If you look up a word, you can find it's definition and read it out. For example if you looked up the word 'cat' in the English dictionary, you would look through the dictionary alphabetically until you found the word 'cat' and then you would look at the definition: 'a feline animal'. If you really wanted to, you could also add your own words into the dictionary and the definitions of your words. This type of structure is called a map.</p>
 
 <p>Maps (also called dictionaries) are abstract data types that store pairs of key-values and can be used to look up values from the keys. The keys are like the words in an English dictionary and the definitions can be seen as the values. Maps are able to support insertion of key-value pairs, retrieve values from keys, and delete key-value pairs.</p>
-
-<hr><h3>Prerequisites</h3>
-
-<ul>
-<li><a href="./Sets" target="_blank">Sets</a></li>
-</ul>
 
 </section><section><h2>Implementation</h2>
 
@@ -1884,10 +2205,12 @@ public boolean remove(int x){
 </section><section><h2>Exercises</h2>
 
 <ol>
-<li>Given a list of N strings, output the strings in alphabetical order and the number of times they appear in the list.
-2, Given two list of N strings, output the </li>
+<li>Given a list of N strings, output the strings in alphabetical order and the number of times they appear in the list.</li>
+<li>Given a mapping of a id to a name, output the ids in order by lexicographical name.</li>
 </ol>
-</section><h1>Hash Map</h1><section><h2>Introduction</h2>
+</section>
+        \section{ Hash Map }
+        <section><h2>Introduction</h2>
 
 <p><em>Prerequisites</em>: <a href="./Map" target="_blank">Map</a>, <a href="./Hash_Set" target="_blank">Hash Set</a></p>
 
@@ -2025,7 +2348,11 @@ public boolean remove(int key){
 <ol>
 <li>Create a hash map for the English dictionary (word as keys, definition as value). You will need to create a hash function for strings.</li>
 </ol>
-</section><h1>Tree Map</h1><section><h2>Introduction</h2>
+</section>
+        \section{ Tree Map }
+        <section><h2>Introduction</h2>
+
+<p><em>Prerequisites:</em> <a href="./Tree_Set" target="_blank">Tree Set</a>, <a href="./Map" target="_blank">Map</a></p>
 
 <p>A tree map is a map that stores the key value pairs in a tree set.</p>
 
@@ -2047,13 +2374,6 @@ public boolean remove(int key){
 </tr>
 </tbody>
 </table>
-
-<hr><h3>Prerequisites</h3>
-
-<ul>
-<li><a href="./Tree_Set" target="_blank">Tree Set</a></li>
-<li><a href="./Map" target="_blank">Map</a></li>
-</ul>
 
 </section><section><h2>Implementation</h2>
 
@@ -2281,7 +2601,9 @@ public boolean remove(int key){
 <ol>
 <li>Given a list of N numbers, output the first M unique numbers.</li>
 </ol>
-</section><h1>Priority Queue</h1><section><h2>Introduction</h2>
+</section>
+    \chapter{ Priority Queue }
+        <section><h2>Introduction</h2>
 
 <p><em>Prerequisites</em>: <a href="./Queue" target="_blank">Queue</a>, <a href="./Heap" target="_blank">Heap</a></p>
 
@@ -2327,7 +2649,9 @@ public boolean remove(int key){
 <li>Given a list of N numbers, find the M largest numbers. (Note you can do better than O(N log N))</li>
 <li>Given N lists of N numbers, find the N largest numbers.</li>
 </ol>
-</section><h1>Heap</h1><section><h2>Introduction</h2>
+</section>
+        \section{ Heap }
+        <section><h2>Introduction</h2>
 
 <p><strong>Prerequisites</strong>: <a href="./Queue" target="_blank">Queue</a></p>
 
@@ -2530,9 +2854,11 @@ public int pop(){
 <li>Implement a min heap</li>
 <li>Prove heaps work</li>
 </ol>
-</section><h0>Graph Theory</h0><section><h3>Introduction</h3>
+</section>
+\part{ Graph Theory }
+    
 
-<p><strong>Next</strong>: <a href="./Advanced_Graph_Theory" target="_blank">Advanced Graph Theory</a></p>
+<p><em>Next</em>: <a href="./Advanced_Graph_Theory" target="_blank">Advanced Graph Theory</a></p>
 
 <p>Graphs are a set of objects where some pairs of objects  called <strong>nodes</strong> or <strong>verticies</strong> are usually connected by links called <strong>edges</strong>. The nodes here can be seen numbered from 1 to 6. There are edges connecting these various nodes.</p>
 
@@ -2550,68 +2876,142 @@ public int pop(){
 
 <p>A <strong>weighted</strong> graph is a graph that contains weights or values assigned to each edge or node. Usually these weights act as the cost to reach/use that node.</p>
 
-</section><h1>Advanced Graph Theory</h1><section><h2>Introduction</h2>
 
-<p><em>Prerequisites</em>: <a href="./Graph_Theory" target="_blank">Graph Theory</a></p>
+    \chapter{ Representation }
+        
 
-<p>Advanced topics on graph theory.</p>
+<p>A graph can be represented as a adjacency matrix or a adjacency list.</p>
 
-</section><section><h2>Bipartite Graph</h2>
+<hr><h3><a href="./Adjacency_Matrix" target="_blank">Adjacency Matrix</a></h3>
 
-<p>A bipartite graph is a graph which can be partitioned into two sets such that no nodes in a set connect to another node in the same set.</p>
+<p>
 
-</section><section><h2>Special Paths</h2>
+<p>An adjacency matrix is a method of storing a graph using a two dimensional array. Given n nodes, the adjacency matrix can be stored in a n x n matrix.</p>
 
-<p>A path is a certain order of visiting objects.</p>
+<p>Array[i][j] represents the weight between the node i and node j.</p>
 
-<hr><h3><a href="./Hamiltonian_Path" target="_blank">Hamiltonian Path</a></h3>
+<p>Example</p>
 
-<p>A <a href="./Hamiltonian_Path" target="_blank">Hamiltonian Path</a> is a path that visits every node exactly once.</p>
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>1</th>
+  <th>2</th>
+  <th>3</th>
+  <th>4</th>
+  <th>5</th>
+  <th>6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td>0</td>
+  <td>1</td>
+  <td>0</td>
+  <td>0</td>
+  <td>1</td>
+  <td>0</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td>1</td>
+  <td>0</td>
+  <td>1</td>
+  <td>0</td>
+  <td>1</td>
+  <td>0</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td>0</td>
+  <td>1</td>
+  <td>0</td>
+  <td>1</td>
+  <td>0</td>
+  <td>0</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td>0</td>
+  <td>0</td>
+  <td>1</td>
+  <td>0</td>
+  <td>1</td>
+  <td>1</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td>1</td>
+  <td>1</td>
+  <td>0</td>
+  <td>1</td>
+  <td>0</td>
+  <td>0</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td>0</td>
+  <td>0</td>
+  <td>0</td>
+  <td>1</td>
+  <td>0</td>
+  <td>0</td>
+</tr>
+</tbody>
+</table>
 
-<hr><h3><a href="./Eulerian_Path" target="_blank">Eulerian Path</a></h3>
+</p>
 
-<p>A <a href="./Eulerian_Path" target="_blank">Eulerian Path</a> is a path that visited every edge exactly once.</p>
+<hr><h3><a href="./Adjacency_List" target="_blank">Adjacency List</a></h3>
 
-</section><section><h2>Special Cycles</h2>
+<p>
 
-<p>A cycle is a path that ends up at the same starting position.</p>
+<p>Adjacency lists use an array of <a href="./Linked_Lists" target="_blank">linked lists</a> to store all the edges. At x, you have a linked list of nodes that connect to 
+that node. 1 connects to nodes 2 and 5, 2 connects to 1, 3 and 5 and so forth. O(m) storage where m is number of edges.</p>
 
-<hr><h3><a href="./Hamiltonian_Cycle" target="_blank">Hamiltonian Cycle</a></h3>
+<p><img src="./public_html/img/uploads/graph.png"></p>
 
-<p>A <a href="./Hamiltonian_cycle" target="_blank">Hamiltonian cycle</a> is a cycle that visits every node exactly once at ends back at the start.</p>
+<table>
+<thead>
+<tr>
+  <th>Node</th>
+  <th>edges</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td>2, 5</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td>1 3 5</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td>2 4</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td>3 5 6</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td>1 2 4</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td>4</td>
+</tr>
+</tbody>
+</table>
+</p>
 
-<hr><h3><a href="./Eulerian_Cycle" target="_blank">Eulerian Cycle</a></h3>
 
-<p>A <a href="./Eulerian_Cycle" target="_blank">Eulerian Cycle</a> is a cycle that visited every edge exactly once at ends back at the start.</p>
-
-<hr><h3><a href="./Travelling_Salesman_Problem" target="_blank">Travelling Salesman Problem</a></h3>
-
-<p>The <a href="./Travelling_salesman" target="_blank">Travelling salesman</a> is the problem where a salesman wants to find a cycle that minimizes the total cost of weights used of edges.</p>
-
-</section><section><h2>Special Nodes</h2>
-
-<p>Some graphs may have nodes that have special properties.</p>
-
-<hr><h3>Root</h3>
-
-<p>A node in a directed acyclic graph that has no ancestors is a root.</p>
-
-<p><img src="./public_html/img/uploads/treeroot.png"></p>
-
-<hr><h3>Center</h3>
-
-<p>The center of a undirected tree is the node that minimizes the sum of the distance to every other node.  The center can be found be continuously stripping away leaf nodes (nodes with only one edge) layer by layer until either 1 or 2 nodes remain. The longest path in a tree will contain the center.</p>
-
-<p><img src="./public_html/img/uploads/centergraph.png"></p>
-
-</section><section><h2>Network Flow</h2>
-
-<hr><h3>Max Flow Problem</h3>
-
-<hr><h3>Min Cut Problem</h3>
-
-<hr><h3>Ford-Fulkerson</h3>
-</section><h1>Adjacency Matrix</h1><section><h2>Introduction</h2>
+        \section{ Adjacency Matrix }
+        <section><h2>Introduction</h2>
 
 <p>An adjacency matrix is a method of storing a graph using a two dimensional array. Given n nodes, the adjacency matrix can be stored in a n x n matrix.</p>
 
@@ -2714,7 +3114,103 @@ public static int[][] getAdjMatrix(Vector&lt;edge&gt; edges){
     return adjMatrix;
 }
 </pre>
-</section><h1>Prim's</h1><section><p><strong>Prerequisites</strong>:  <a href="./Priority_Queue" target="_blank">Priority Queue</a>, <a href="./Minimum_Spanning_Tree" target="_blank">Minimum Spanning Tree</a></p>
+</section>
+        `` Adjacency List))))
+        <section><h2>Introduction</h2>
+
+<p>Adjacency lists use an array of <a href="./Linked_Lists" target="_blank">linked lists</a> to store all the edges. At x, you have a linked list of nodes that connect to 
+that node. 1 connects to nodes 2 and 5, 2 connects to 1, 3 and 5 and so forth. O(m) storage where m is number of edges.</p>
+
+<p><img src="./public_html/img/uploads/graph.png"></p>
+
+<table>
+<thead>
+<tr>
+  <th>Node</th>
+  <th>edges</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td>2, 5</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td>1 3 5</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td>2 4</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td>3 5 6</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td>1 2 4</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td>4</td>
+</tr>
+</tbody>
+</table>
+</section>
+    \chapter{ Tree }
+        
+
+<p>
+
+<p>A tree is a special graph with no cycles. It has the special property that there will be only one path from one node to another node.</p>
+
+<p><img src="./public_html/img/uploads/treegraph.png"></p>
+
+<p>A <strong>subtree</strong> is a child tree of a tree.</p>
+
+<p>Note that trees have two meanings in computer science. It can either refer to a <a href="./Trees" target="_blank">tree data structure</a> or it can refer to a tree in graph theory.</p>
+</p>
+
+<hr><h3><a href="./Spanning_Tree" target="_blank">Spanning Tree</a></h3>
+
+<p>
+
+<p>A spanning tree of a graph is a connected tree that spans all the nodes of the graph.</p>
+
+<p>A <a href="./Minimum_Spanning_Tree" target="_blank">minimum spanning tree</a> is the spanning tree that requires the minimum of some property such as total weight or total edges.</p>
+
+<p>Spanning tree algorithms are essential in networking to ensure no loops occur when sending data through a network.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Algorithm</th>
+  <th>Desc</th>
+  <th>Time</th>
+  <th>Space</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><a href="./Prim's" target="_blank">Prim's</a></td>
+  <td>Using greedy method</td>
+  <td>O(n log n)</td>
+  <td>O(n<sup>2</sup>)</td>
+</tr>
+<tr>
+  <td><a href="./Kruskal" target="_blank">Kruskal</a></td>
+  <td>Using connected components</td>
+  <td>O(n log n)</td>
+  <td>O(n<sup>2</sup>)</td>
+</tr>
+</tbody>
+</table>
+</p>
+
+
+        \section{ Prim's }
+        <section><p><strong>Prerequisites</strong>:  <a href="./Priority_Queue" target="_blank">Priority Queue</a>, <a href="./Minimum_Spanning_Tree" target="_blank">Minimum Spanning Tree</a></p>
 
 <p>A <a href="./Minimum_Spanning_Tree" target="_blank">minimum spanning tree</a> is a tree in a graph that connects all the nodes using the smallest cost total cost of edges.</p>
 
@@ -2812,106 +3308,21 @@ public static int Prims(Vector&lt;Vector&lt;node&gt;&gt; adjList){
 <li>Given a weighted graph with n nodes, find the smallest total cost to connect all nodes into 3 separate groups. (A single node can be a group)</li>
 <li>Same as 3, but a group must contain at least 3 other nodes.</li>
 </ol>
-</section><h1>Kruskal</h1><section><h2>Introduction</h2>
+</section>
+        \section{ Kruskal's }
+        ((((Kruskal's))))
+    \chapter{ Shortest Path }
+        
 
-<p><strong>Prerequisites</strong>:  <a href="./Sorting" target="_blank">Sorting</a>, <a href="./Minimum_Spanning_Tree" target="_blank">Minimum Spanning Tree</a></p>
+<p>The shortest path is defined as a path from one node to another while trying to minimize a certain property (least number of nodes, smallest total weight). However, shortest paths may have negative weights which leads to cycles.</p>
 
-<p>A <a href="./Minimum_Spanning_Tree" target="_blank">minimum spanning tree</a> is a tree in a graph that connects all the nodes using the smallest cost total cost of edges.</p>
-
-<p>Kruskal's algorithm finds the <a href="./Minimum_Spanning_Tree" target="_blank">minimum spanning tree</a> using <a href="./Connected_Components" target="_blank">connected components</a>.</p>
-
-<p>If implemented efficiently using a priority queue to get the edges with minimum weight or a sorting the edges, the runtime is O(n log n).</p>
-
-</section><section><h2>Implementation</h2>
-
-<ol>
-<li>Uniquely label each node</li>
-<li>Take the edge with the minimum weight</li>
-<li>If the edge connects nodes A and B with different labels, all nodes with label B will be labeled with A. Otherwise, throw the edge away</li>
-<li>Repeat 2-3 until all the nodes have the same label</li>
-</ol>
-
-<hr><h3>Example</h3>
-
-<p><img src="./public_html/img/uploads/kruskal.png"></p>
-
-<p><img src="./public_html/img/uploads/kruskal2.png"></p>
-
-<p><img src="./public_html/img/uploads/kruskal3.png"></p>
-
-<p><img src="./public_html/img/uploads/kruskal4.png"></p>
-
-<p><img src="./public_html/img/uploads/kruskal5.png"></p>
-
-<p><img src="./public_html/img/uploads/kruskal6.png"></p>
-
-<p><img src="./public_html/img/uploads/kruskal7.png"></p>
-
-<hr><h3>Code</h3>
-
-<pre class="prettyprint linenums ">
-class edge implements Comparable&lt;edge&gt;{
-    int weight,source,dest;
-    public edge(int source,int dest,int weight){
-        this.source = source;
-        this.dest = dest;
-        this.weight = weight;
-    }
-    public int compareTo(edge e){
-        return weight-e.weight;
-    }
-}
-public static int getParent(int parents[],int x){
-    if(parents[x]==x)return x;
-    parents[x] = getParent(parents,parents[x]);
-    return parents[x];
-}
-public static int Kruskal(Vector&lt;Vector&lt;edge&gt;&gt; adjList){
-    int n = adjList.size();
-    int parents[] = new int[n];
-    for(int i=0;i&lt;n;i++)parents[i] = i;
-    int sum = 0;
-    
-    PriorityQueue&lt;edge&gt; edges = new PriorityQueue&lt;edge&gt;();
-    
-    for(int i=0;i&lt;n;i++){
-        for(int j=0;j&lt;adjList.get(i).size();j++){
-            edges.add(adjList.get(i).get(j));
-        }
-    }
-    
-    while(!edges.isEmpty()){
-        edge e = edges.poll();
-        if(getParent(parents,e.source)!=getParent(parents,e.dest)){
-            parents[e.source] = getParent(parents,e.dest);
-            sum+=e.weight;
-        }
-    }
-    
-    return sum;
-}
-</pre>
-
-</section><section><h2>Applications</h2>
-
-</section><section><h2>Exercises</h2>
-
-<ol>
-<li>Prove Kruskal's Algorithm works</li>
-<li>Extends Kruskals's to output all the edges used</li>
-<li>Given a weighted graph with n nodes, find the smallest total cost to connect all nodes into 3 separate groups. (A single node can be a group)</li>
-<li>Same as 3, but a group must contain at least 3 other nodes.</li>
-</ol>
-</section><h1>Floyd Warshall</h1><section><h2>Introduction</h2>
-
-<p><strong>Prerequisites</strong>:  <a href="./Shortest_Path" target="_blank">Shortest Path</a>, <a href="./Dynamic_Programming" target="_blank">Dynamic Programming</a></p>
-
-<p>Floyd Warshall is a algorithm for finding the shortest distances between all pairs of nodes in a graph. Floyd Warshall can be used to find negative cycles in the graph.</p>
+<hr><h3>Algorithms</h3>
 
 <table>
 <thead>
 <tr>
-  <th>Description</th>
+  <th>Algorithm</th>
+  <th>Desc</th>
   <th>Time</th>
   <th>Space</th>
   <th>Detect cycles?</th>
@@ -2919,115 +3330,141 @@ public static int Kruskal(Vector&lt;Vector&lt;edge&gt;&gt; adjList){
 </thead>
 <tbody>
 <tr>
+  <td><a href="./Floyd_Warshall" target="_blank">Floyd Warshall</a></td>
   <td>Computes shortest path between all pairs of nodes</td>
   <td>O(n<sup>3</sup>)</td>
   <td>O(n<sup>2</sup>)</td>
   <td>Yes</td>
 </tr>
+<tr>
+  <td><a href="./Bellman_Ford" target="_blank">Bellman Ford</a></td>
+  <td>Computes shortest path between a pairs of nodes</td>
+  <td>O(n<sup>2</sup>)</td>
+  <td>O(n)</td>
+  <td>Yes</td>
+</tr>
+<tr>
+  <td><a href="./Dijkstra's" target="_blank">Dijkstra's</a></td>
+  <td>Computes shortest path between a pair of nodes using the Greedy method</td>
+  <td>O(n log n)</td>
+  <td>O(n log n)</td>
+  <td>No</td>
+</tr>
 </tbody>
 </table>
 
+
+        \section{ Dijkstra's }
+        <section><h2>Introduction</h2>
+
+<p><strong>Prerequisites</strong>:  <a href="./Shortest_Path" target="_blank">Shortest Path</a>, <a href="./Priority_Queue" target="_blank">Priority Queue</a>, <a href="./Greedy_Algorithm" target="_blank">Greedy Algorithm</a></p>
+
+<p>Dijkstra's is a greedy approach to find the shortest path in a graph with positive weights. It has many useful applications in networking and it can be extended to a variety of problems.</p>
+
+<p>Dijkstra works by beginning at the starting node repeatedly picking the next closest node of those already visited.</p>
+
+<p>If Dijkstra's is implemented using a priority queue, the run time is O(n log n).</p>
+
+<p>If a negative cycle exists within the graph, then the algorithm breaks as it will repeatedly try to take the negative edges. See <a href="./Bellman_Ford" target="_blank">Bellman Ford</a> to find negative cycles in a graph.</p>
+
+<p>A naive fix for negative cycles would be to offset all edges by the largest negative edge and then subtract it from the resulting total but this does not work. Consider an example where you have start node A and end node B. The first route from A-&gt;B has length 2 and the second route has lengths 1,1,-2. Clearly the second route has less cost. If we try to make the length positive by adding all costs by 2, we will have the first path of length 4 and the second path of lengths 3,3,0 and the first route becomes the smallest total cost which is wrong.</p>
+
 </section><section><h2>Implementation</h2>
 
-<p>Floyd-Warshall uses a <a href="./Dynamic_Programming" target="_blank">dynamic programming</a> approach to finding the shortest path between node A and node B. Every path from node A to node B can be rewritten as a path from A to some node in between plus the path from the node in between to node B. The shortest path from A to B can be found by finding a node C such the shortest path from A to C plus the shortest path from C to B is minimized.</p>
+<p>At each node we visit we keep track of the minimum cost it takes to reach to reach that node from the starting node.</p>
 
-<p><img src="./public_html/img/uploads/floydwarshall1.png"></p>
+<ol>
+<li>Start at the starting node</li>
+<li>Find an unvisited node that has the least cost to reach from the visited nodes.</li>
+<li>Mark that node as visited</li>
+<li>Repeat until all nodes are visited</li>
+</ol>
 
-<p><img src="./public_html/img/uploads/floydwarshall.png"></p>
+<p>When we reach a node for the first time, it will be the shortest path to that node (Try to prove this to yourself).</p>
 
-<hr><h3>Formalization</h3>
+<p>We first start at the starting node. The distance from the starting node to the starting node is obviously 0.</p>
 
-<p>Recursion</p>
+<p><img src="./public_html/img/uploads/djikstra.png"></p>
+
+<p>From the starting node we have two nodes we can reach. The top node has a cost of 3 to reach and the bottom node has a cost of 5 to reach.</p>
+
+<p><img src="./public_html/img/uploads/djikstra1.png"></p>
+
+<p>We pick the smallest node the reach and we mark it as visited. Once we visit a node, we can guarantee that it is the smallest cost to reach it. The next nodes minimum cost to reach is 10, 5 and 5.</p>
+
+<p><img src="./public_html/img/uploads/djikstra2.png"></p>
+
+<p>We are indifferent to both 5's as they are both the minimum and we can choose either. We mark the node as visited and we find the minimum costs to other nodes which are 5,10,11.</p>
+
+<p><img src="./public_html/img/uploads/djikstra3.png"></p>
+
+<p>We take the next smallest which is 5 and we mark the node as visited. The next costs are 10 and 11.</p>
+
+<p><img src="./public_html/img/uploads/djikstra4.png"></p>
+
+<p>We take the smallest which is 10 and we now only have one last node to reach at a cost of 11.</p>
+
+<p><img src="./public_html/img/uploads/djikstra5.png"></p>
+
+<p>At each node we have the minimum cost to get from the start node to each node.</p>
+
+<p><img src="./public_html/img/uploads/djikstra6.png"></p>
+
+<hr><h3>Java</h3>
+
+<p>Implementation of Dijkstra in Java using a <a href="./Priority_Queue" target="_blank">priority queue</a>.</p>
 
 <pre class="prettyprint linenums ">
-Given a directed graph with N nodes and edges between nodes:
-Let edge(i,j) be the weight of the edge from node i to node j in the graph
-Let shortestPath(i,j) be the shortest path from i to j
-
-Base Case:
-shortestPath(i,i) = 0
-shortestPath(i,j) = edge(i,j)
-
-Recursion:
-shortestPath(i,j) =  minmum of shortestPath(i,k) + shortestPath(k,j) for all unvisited nodes k
-</pre>
-
-<hr><h3>Code</h3>
-
-<pre class="prettyprint linenums ">
-class edge{
-    int weight,source,dest;
-    public edge(int source,int dest,int weight){
-        this.source = source;
-        this.dest = dest;
+class node implements Comparable&lt;node&gt;{
+    int weight,index;
+    public node(int weight,int index){
         this.weight = weight;
+        this.index = index;
+    }
+    public int compareTo(node e){
+        return weight-e.weight;
     }
 }
-public static final int UNDEFINED = Integer.MIN_VALUE;
+
+public static int dijkstra(int[][] adjMatrix,int start,int end){
+    int n = adjMatrix.length;
+    PriorityQueue &lt;node&gt; pq = new PriorityQueue&lt;node&gt;();
+    boolean visited[] = new boolean[n];
+    for(int i=0;i&lt;n;i++)visited[i] = false;
+    pq.add(new node(0,start));
+    while(!visited[end] &amp;&amp; !pq.isEmpty()){
+        node curNode = pq.poll();
     
-public static int[][] FloydWarshall(Vector&lt;Vector&lt;edge&gt;&gt; adjList){
-    int n = adjList.size();
-    //dist[i][j] is the minimum distance from i to j
-    int[][] dist = new int[n][n];
-    
-    //initialize dist[i][j]
-    for(int i=0;i&lt;n;i++){
-        for(int j=0;j&lt;n;j++){
-            dist[i][j] = UNDEFINED;
+        if(visited[curNode.index])continue;
+        visited[curNode.index] = true;
+        if(curNode.index==end){
+            return curNode.weight;
         }
-    }
-    
-    //dist[i][i] = 0
-    for(int i=0;i&lt;n;i++){
-        dist[i][i]=0;
-    }
-    
-    //initialize weights, dist[i][j] = edge from i to j
-    for(int i=0;i&lt;n;i++){
-        for(int j=0;j&lt;adjList.get(i).size();j++){
-            
-            edge e = adjList.get(i).get(j);
-            dist[e.source][e.dest] = e.weight;
-            
-            System.out.println(e.source+" "+e.dest);
-        }
-    }
-    
-    for(int k=0;k&lt;n;k++){
         for(int i=0;i&lt;n;i++){
-            for(int j=0;j&lt;n;j++){
-                //If dist[i][k] and dist[k][j] have been set then use those values
-                if(dist[i][k]!=UNDEFINED&amp;&amp;dist[k][j]!=UNDEFINED){
-                    //If the new distance is less than current or not used, then update
-                    int newDist = dist[i][k]+dist[k][j];
-                    if(dist[i][j] &gt; newDist || dist[i][j]==UNDEFINED){
-                        dist[i][j] = newDist;
-                    }
-                }
+            if(adjMatrix[curNode.index][i]&gt;0 &amp;&amp; !visited[i]){
+                int newWeight = curNode.weight+adjMatrix[curNode.index][i];
+                pq.add(new node(newWeight,i));
             }
         }
     }
-    for(int i=0;i&lt;n;i++){
-        if(dist[i][i]&lt;0){
-            System.out.println("negative cycle");
-        }
-    }
-    
-    return dist;
+    return -1;
 }
 </pre>
 
 </section><section><h2>Applications</h2>
 
-<p>Floyd Warshall is useful when you want to find the shortest distance between all possible pairs of nodes.</p>
+<p>In general, Dijkstra is usually the goto method for finding the minimum cost between two nodes in any kind of network. For example, Dijkstra can be used in networking to find the shortest path between two hosts. It can also be used in flight networking to find the cheapest cost to get from one airport to another airport.</p>
 
-</section><section><h2>Exercises</h2>
+</section><section><h2>Practice Exercises</h2>
 
 <ol>
-<li>Prove Floyd Warshall works</li>
-<li>Extend Floyd Warshall to reconstruct the paths from each pair of nodes</li>
+<li>Extend Dijkstra's to find the exact path from start to end (the order of nodes of the shortest path A-&gt;B-&gt;C)</li>
+<li>Extend Dijkstra's to find the best three minimal costs with unique paths from the start node to the end node</li>
+<li>Prove that Dijkstra's algorithm works</li>
 </ol>
-</section><h1>Bellman Ford</h1><section><h2>Introduction</h2>
+</section>
+        \section{ Bellman Ford }
+        <section><h2>Introduction</h2>
 
 <p><strong>Prerequisites</strong>:  <a href="./Shortest_Path" target="_blank">Shortest Path</a></p>
 
@@ -3201,114 +3638,136 @@ public static int BellmanFord(Vector&lt;Vector&lt;edge&gt;&gt; adjList,int start
 <li>Write a program that detects a path for arbitrage to occur</li>
 <li>Prove Bellmand-Ford works</li>
 </ol>
-</section><h1>Dijkstra's</h1><section><h2>Introduction</h2>
+</section>
+        \section{ Floyd Warsahll }
+        <section><h2>Introduction</h2>
 
-<p><strong>Prerequisites</strong>:  <a href="./Shortest_Path" target="_blank">Shortest Path</a>, <a href="./Priority_Queue" target="_blank">Priority Queue</a>, <a href="./Greedy_Algorithm" target="_blank">Greedy Algorithm</a></p>
+<p><strong>Prerequisites</strong>:  <a href="./Shortest_Path" target="_blank">Shortest Path</a>, <a href="./Dynamic_Programming" target="_blank">Dynamic Programming</a></p>
 
-<p>Dijkstra's is a greedy approach to find the shortest path in a graph with positive weights. It has many useful applications in networking and it can be extended to a variety of problems.</p>
+<p>Floyd Warshall is a algorithm for finding the shortest distances between all pairs of nodes in a graph. Floyd Warshall can be used to find negative cycles in the graph.</p>
 
-<p>Dijkstra works by beginning at the starting node repeatedly picking the next closest node of those already visited.</p>
-
-<p>If Dijkstra's is implemented using a priority queue, the run time is O(n log n).</p>
-
-<p>If a negative cycle exists within the graph, then the algorithm breaks as it will repeatedly try to take the negative edges. See <a href="./Bellman_Ford" target="_blank">Bellman Ford</a> to find negative cycles in a graph.</p>
-
-<p>A naive fix for negative cycles would be to offset all edges by the largest negative edge and then subtract it from the resulting total but this does not work. Consider an example where you have start node A and end node B. The first route from A-&gt;B has length 2 and the second route has lengths 1,1,-2. Clearly the second route has less cost. If we try to make the length positive by adding all costs by 2, we will have the first path of length 4 and the second path of lengths 3,3,0 and the first route becomes the smallest total cost which is wrong.</p>
+<table>
+<thead>
+<tr>
+  <th>Description</th>
+  <th>Time</th>
+  <th>Space</th>
+  <th>Detect cycles?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Computes shortest path between all pairs of nodes</td>
+  <td>O(n<sup>3</sup>)</td>
+  <td>O(n<sup>2</sup>)</td>
+  <td>Yes</td>
+</tr>
+</tbody>
+</table>
 
 </section><section><h2>Implementation</h2>
 
-<p>At each node we visit we keep track of the minimum cost it takes to reach to reach that node from the starting node.</p>
+<p>Floyd-Warshall uses a <a href="./Dynamic_Programming" target="_blank">dynamic programming</a> approach to finding the shortest path between node A and node B. Every path from node A to node B can be rewritten as a path from A to some node in between plus the path from the node in between to node B. The shortest path from A to B can be found by finding a node C such the shortest path from A to C plus the shortest path from C to B is minimized.</p>
 
-<ol>
-<li>Start at the starting node</li>
-<li>Find an unvisited node that has the least cost to reach from the visited nodes.</li>
-<li>Mark that node as visited</li>
-<li>Repeat until all nodes are visited</li>
-</ol>
+<p><img src="./public_html/img/uploads/floydwarshall1.png"></p>
 
-<p>When we reach a node for the first time, it will be the shortest path to that node (Try to prove this to yourself).</p>
+<p><img src="./public_html/img/uploads/floydwarshall.png"></p>
 
-<p>We first start at the starting node. The distance from the starting node to the starting node is obviously 0.</p>
+<hr><h3>Formalization</h3>
 
-<p><img src="./public_html/img/uploads/djikstra.png"></p>
-
-<p>From the starting node we have two nodes we can reach. The top node has a cost of 3 to reach and the bottom node has a cost of 5 to reach.</p>
-
-<p><img src="./public_html/img/uploads/djikstra1.png"></p>
-
-<p>We pick the smallest node the reach and we mark it as visited. Once we visit a node, we can guarantee that it is the smallest cost to reach it. The next nodes minimum cost to reach is 10, 5 and 5.</p>
-
-<p><img src="./public_html/img/uploads/djikstra2.png"></p>
-
-<p>We are indifferent to both 5's as they are both the minimum and we can choose either. We mark the node as visited and we find the minimum costs to other nodes which are 5,10,11.</p>
-
-<p><img src="./public_html/img/uploads/djikstra3.png"></p>
-
-<p>We take the next smallest which is 5 and we mark the node as visited. The next costs are 10 and 11.</p>
-
-<p><img src="./public_html/img/uploads/djikstra4.png"></p>
-
-<p>We take the smallest which is 10 and we now only have one last node to reach at a cost of 11.</p>
-
-<p><img src="./public_html/img/uploads/djikstra5.png"></p>
-
-<p>At each node we have the minimum cost to get from the start node to each node.</p>
-
-<p><img src="./public_html/img/uploads/djikstra6.png"></p>
-
-<hr><h3>Java</h3>
-
-<p>Implementation of Dijkstra in Java using a <a href="./Priority_Queue" target="_blank">priority queue</a>.</p>
+<p>Recursion</p>
 
 <pre class="prettyprint linenums ">
-class node implements Comparable&lt;node&gt;{
-    int weight,index;
-    public node(int weight,int index){
+Given a directed graph with N nodes and edges between nodes:
+Let edge(i,j) be the weight of the edge from node i to node j in the graph
+Let shortestPath(i,j) be the shortest path from i to j
+
+Base Case:
+shortestPath(i,i) = 0
+shortestPath(i,j) = edge(i,j)
+
+Recursion:
+shortestPath(i,j) =  minmum of shortestPath(i,k) + shortestPath(k,j) for all unvisited nodes k
+</pre>
+
+<hr><h3>Code</h3>
+
+<pre class="prettyprint linenums ">
+class edge{
+    int weight,source,dest;
+    public edge(int source,int dest,int weight){
+        this.source = source;
+        this.dest = dest;
         this.weight = weight;
-        this.index = index;
-    }
-    public int compareTo(node e){
-        return weight-e.weight;
     }
 }
-
-public static int dijkstra(int[][] adjMatrix,int start,int end){
-    int n = adjMatrix.length;
-    PriorityQueue &lt;node&gt; pq = new PriorityQueue&lt;node&gt;();
-    boolean visited[] = new boolean[n];
-    for(int i=0;i&lt;n;i++)visited[i] = false;
-    pq.add(new node(0,start));
-    while(!visited[end] &amp;&amp; !pq.isEmpty()){
-        node curNode = pq.poll();
+public static final int UNDEFINED = Integer.MIN_VALUE;
     
-        if(visited[curNode.index])continue;
-        visited[curNode.index] = true;
-        if(curNode.index==end){
-            return curNode.weight;
+public static int[][] FloydWarshall(Vector&lt;Vector&lt;edge&gt;&gt; adjList){
+    int n = adjList.size();
+    //dist[i][j] is the minimum distance from i to j
+    int[][] dist = new int[n][n];
+    
+    //initialize dist[i][j]
+    for(int i=0;i&lt;n;i++){
+        for(int j=0;j&lt;n;j++){
+            dist[i][j] = UNDEFINED;
         }
+    }
+    
+    //dist[i][i] = 0
+    for(int i=0;i&lt;n;i++){
+        dist[i][i]=0;
+    }
+    
+    //initialize weights, dist[i][j] = edge from i to j
+    for(int i=0;i&lt;n;i++){
+        for(int j=0;j&lt;adjList.get(i).size();j++){
+            
+            edge e = adjList.get(i).get(j);
+            dist[e.source][e.dest] = e.weight;
+            
+            System.out.println(e.source+" "+e.dest);
+        }
+    }
+    
+    for(int k=0;k&lt;n;k++){
         for(int i=0;i&lt;n;i++){
-            if(adjMatrix[curNode.index][i]&gt;0 &amp;&amp; !visited[i]){
-                int newWeight = curNode.weight+adjMatrix[curNode.index][i];
-                pq.add(new node(newWeight,i));
+            for(int j=0;j&lt;n;j++){
+                //If dist[i][k] and dist[k][j] have been set then use those values
+                if(dist[i][k]!=UNDEFINED&amp;&amp;dist[k][j]!=UNDEFINED){
+                    //If the new distance is less than current or not used, then update
+                    int newDist = dist[i][k]+dist[k][j];
+                    if(dist[i][j] &gt; newDist || dist[i][j]==UNDEFINED){
+                        dist[i][j] = newDist;
+                    }
+                }
             }
         }
     }
-    return -1;
+    for(int i=0;i&lt;n;i++){
+        if(dist[i][i]&lt;0){
+            System.out.println("negative cycle");
+        }
+    }
+    
+    return dist;
 }
 </pre>
 
 </section><section><h2>Applications</h2>
 
-<p>In general, Dijkstra is usually the goto method for finding the minimum cost between two nodes in any kind of network. For example, Dijkstra can be used in networking to find the shortest path between two hosts. It can also be used in flight networking to find the cheapest cost to get from one airport to another airport.</p>
+<p>Floyd Warshall is useful when you want to find the shortest distance between all possible pairs of nodes.</p>
 
-</section><section><h2>Practice Exercises</h2>
+</section><section><h2>Exercises</h2>
 
 <ol>
-<li>Extend Dijkstra's to find the exact path from start to end (the order of nodes of the shortest path A-&gt;B-&gt;C)</li>
-<li>Extend Dijkstra's to find the best three minimal costs with unique paths from the start node to the end node</li>
-<li>Prove that Dijkstra's algorithm works</li>
+<li>Prove Floyd Warshall works</li>
+<li>Extend Floyd Warshall to reconstruct the paths from each pair of nodes</li>
 </ol>
-</section><h1>Cycle detection</h1><section><h2>Introduction</h2>
+</section>
+    \chapter{ Cycle Detection }
+    <section><h2>Introduction</h2>
 
 <p>A cycle occurs in a graph when a duplicate node is encountered when traversing a tree using a <a href="./Depth_First_Search" target="_blank">depth first search</a>. In other words, a cycle occurs when you can reach the same node again.</p>
 
@@ -3339,142 +3798,16 @@ public static boolean hasCycle(int [][] adjMatrix){
         return false;
     }
 </pre>
-</section><h1>Topological Sorting</h1><section><h2>Introduction</h2>
-
-<p>A topological sort or topological order of a directed graph is an order in which every node will come after its ancestors.</p>
-
-<p><img src="./public_html/img/uploads/topsort.png"></p>
-
-<p>For example topological orders could be:</p>
-
-<ul>
-<li>(A, B, C, D, E, F, G)</li>
-<li>(B, A, D, C, F, E, G)</li>
-<li>(B, A, D, G, F, C, E)</li>
-</ul>
-
-<p>But (B, A, C, F, D, E, G) is not a topological ordering because D is an ancestor of F and it comes after F.</p>
-
-<hr><h3>Prerequisites</h3>
-
-<ul>
-<li><a href="./Graph_Theory" target="_blank">Graph Theory</a></li>
-<li><a href="./Depth_First_Search" target="_blank">Depth First Search</a></li>
-</ul>
-
-</section><section><h2>Implementation</h2>
-
-<p>Topological sort can implemented in O(n) time using DFS for a directed acyclic graph (a digraph with no cycles). How it works:</p>
-
-<ol>
-<li>Start with an empty top order</li>
-<li>Pick any unmarked node</li>
-<li>Get the DFS preordering from that node for unvisited nodes </li>
-<li>Add the DFS to the head of the current order</li>
-<li>Mark every node that has been visited</li>
-</ol>
-
-<p><img src="./public_html/img/uploads/topsort.png"></p>
-
-<p>Example:</p>
-
-<ul>
-<li>Pick C</li>
-<li>DFS preorder from C is (C,E)</li>
-<li>Add DFS preorder to head [C,E]</li>
-<li>Pick F</li>
-<li>DFS preorder from F is (F)</li>
-<li>Add DFS preorder from F to head [F,C,E]</li>
-<li>Pick B</li>
-<li>DFS preorder from B is (B,D,G)</li>
-<li>Add DFS preorder from B to head [B,D,G,F,C,E]</li>
-<li>Pick A</li>
-<li>DFS preorder from A is (A)</li>
-<li>Add DFS preorder from A to head [A,B,D,G,F,C,E]</li>
-<li>Done, all nodes visited</li>
-</ul>
-
-<p>A DFS order from a node is guaranteed to be a topological order. Since we add everything to the head of the order, a child of a node cannot appear before it.</p>
-</section><h1>Connected Components</h1><section><h2>Introduction</h2>
-
-<p>A connected component is a subgraph where all the vertices in the subgraph connect to each other.</p>
-
-<p>Finding the number of distinct connected components can be done using a <a href="./Breadth_First_Search" target="_blank">breadth first search</a> or a <a href="./Depth_First_Search" target="_blank">depth first search</a>.</p>
-
-</section><section><h2>Implementation</h2>
-
-<ol>
-<li>Set each node's parent to itself</li>
-<li>Pick an unused edge in the graph that is from node A to node B, if the parent of A is not the same as parent of B then set all nodes whose parent is B to parents of A</li>
-<li>Repeat for all edges</li>
-</ol>
-
-<hr><h3>Example</h3>
-
-<p><img src="./public_html/img/uploads/connectedcomponents.png"></p>
-
-<p>We select a random edge from node 1 and node 2. We set the parent node of 2 to node 1.</p>
-
-<p><img src="./public_html/img/uploads/connectedcomponents2.png"></p>
-
-<p>We select another random edge from node 5 to node 6.</p>
-
-<p><img src="./public_html/img/uploads/connectedcomponents3.png"></p>
-
-<p>We pick another random edge and we set the parent to 5.</p>
-
-<p><img src="./public_html/img/uploads/connectedcomponents4.png"></p>
-
-<p>We take another random edge and we set the parents to 7.</p>
-
-<p><img src="./public_html/img/uploads/connectedcomponents5.png"></p>
-
-<p>We take another random edge and we have an interesting case, two connected components are to be connected. We take all the nodes whose parent is 1, and we set the new parent to 5.</p>
-
-<p><img src="./public_html/img/uploads/connectedcomponents6.png"></p>
-
-<p>We take another random edge and set its parent to 1.</p>
-
-<p><img src="./public_html/img/uploads/connectedcomponents7.png"></p>
-
-<p>We take the last edge and set the last node parent to 7.</p>
-
-<p><img src="./public_html/img/uploads/connectedcomponents8.png"></p>
-
-<hr><h3>Java Code</h3>
-
-<pre class="prettyprint linenums ">
-public static int getParent(int x,int[] parent){
-    if(parent[x]==x)return x;
-    parent[x] = getParent(parent[x],parent);
-    return parent[x];
-}
-    
-public static void connected(int adjMatrix[][]){
-    int n = adjMatrix.length;
-    int[] parent = new int[n];
-    int i,j;
-    for(i=0;i&lt;n;i++){
-        parent[i] = i;
-    }
-    for(i=0;i&lt;n;i++){
-        for(j=0;j&lt;n;j++){
-            if(adjMatrix[i][j]&gt;0){
-                int pi = getParent(i,parent);
-                int pj = getParent(j,parent);
-                if(pi!=pj){
-                    parent[pj] = pi;
-                }
-            }
-        }
-    }   
-}
-</pre>
-</section><h0>Searches</h0><section><h3>Introduction</h3>
+</section>
+\part{ Searches }
+    \chapter{ Searches }
+        
 
 <p>Searches are used to find solutions to problems and there many ways to search for a solution. Here are some generic searches that can be applied to many different problems.</p>
 
-</section><h1>Binary Search</h1><section><h2><a href="./Binary_Search" target="_blank">Binary Search</a></h2>
+
+        \section{ Binary Search }
+        <section><h2><a href="./Binary_Search" target="_blank">Binary Search</a></h2>
 
 <p>Binary search is a type of search that is able to find an object in a sorted list in O(log n). In binary search we first start at the middle element and we keep trying to halve the problem until we find the number.</p>
 
@@ -3552,7 +3885,9 @@ Example: 1,2 4, 6, 8, 10, 16, 20. Given A=5 and B=15, the number of elements bet
 <li>Given two sorted arrays, find the number of duplicate elements.</li>
 <li>Given two decimal numbers A and B, how do you find A/B without using division?</li>
 </ol>
-</section><h1>Ternary Search</h1><section><h2>Introduction</h2>
+</section>
+        \section{ Ternary Search }
+        <section><h2>Introduction</h2>
 
 <p>Ternary search is a search that find local minimum or maximum values in a function given the interval between A and B.</p>
 
@@ -3652,7 +3987,9 @@ public double tern(double a,double b){
     }
 }
 </pre>
-</section><h1>Depth First Search</h1><section><h2>Introduction</h2>
+</section>
+        \section{ Depth First Search }
+        <section><h2>Introduction</h2>
 
 <p><strong>Prerequisites</strong>: <a href="./Recursion" target="_blank">Recursion</a>, <a href="./Stack" target="_blank">Stack</a></p>
 
@@ -3768,7 +4105,9 @@ public static void DFS_graph(int[][] adjMatrix,int cur,boolean[] visited){
 <li>Given a graph, determine if it contains a cycle.</li>
 <li>Given a node and a binary tree, find the next node for post order, pre order and normal order.</li>
 </ol>
-</section><h1>Breadth First Search</h1><section><h2>Introduction</h2>
+</section>
+        \section{ Breadth First Search }
+        <section><h2>Introduction</h2>
 
 <p><strong>Prerequisites</strong>: <a href="./Recursion" target="_blank">Recursion</a>, <a href="./Queue" target="_blank">Queue</a></p>
 
@@ -3815,7 +4154,9 @@ void bfs(Node root){
 </ul></li>
 <li>Given a binary tree and a node in the binary tree, find the next node in BFS order of the tree.</li>
 </ol>
-</section><h1>Flood Fill</h1><section><h2>Introduction</h2>
+</section>
+        \section{ Flood Fill }
+        <section><h2>Introduction</h2>
 
 <p><strong>Prerequisites</strong>: <a href="./Depth_First_Search" target="_blank">Depth First Search</a>, <a href="./Breadth_First_Search" target="_blank">Breadth First Search</a></p>
 
@@ -3957,7 +4298,9 @@ FloodFillBFS(1,1,1,2);
 <li>Example: a single cell has a perimeter of 4, two cells joined side by side have a perimeter of 6</li>
 </ul></li>
 </ol>
-</section><h1>Backtracking</h1><section><h2>Introduction</h2>
+</section>
+        \section{ Backtracking }
+        <section><h2>Introduction</h2>
 
 <p>Backtracking is a search that find all possible solutions by enumerating on a partial solution. Backtracking can be done using <a href="./Depth_First_Search" target="_blank">DFS</a> or <a href="./Breadth_First_Search" target="_blank">BFS</a>. Generally, DFS will be better than BFS because backtracking is used to enumerate a large amount of solution. Since BFS requires storing each "level" of solutions and DFS requires storing each "height" of the solution.</p>
 
@@ -4273,7 +4616,11 @@ queen(0,[3,0,2,3],[6,2,3,3],[3,5,2,0]) x-- reject
 <li>Given a NxN chessboard with certain squares that can have no pieces placed, output the number of configurations that can be made from rooks without attacking each other.</li>
 <li>Given a sudoku grid, output a solution for the grid if it exists. Note: this question is popular for technical interviews.</li>
 </ol>
-</section><h0>Dynamic Programming</h0><section><h3>Introduction</h3>
+</section>
+\part{ Dynamic Programming }
+    \chapter{ Dynamic Programming }
+        \section{ Dynamic Programming }
+        <section><h2>Introduction</h2>
 
 <p><strong>Prerequisites</strong>: <a href="./Advanced_Recursion" target="_blank">Advanced Recursion</a></p>
 
@@ -4288,7 +4635,419 @@ queen(0,[3,0,2,3],[6,2,3,3],[3,5,2,0]) x-- reject
 <li>A subproblem that can be reduced into smaller subproblems </li>
 </ul>
 
-</section><h1>Advanced Dynamic Programming</h1><section><h2>Introduction</h2>
+</section><section><h2>Fibonacci Sequence</h2>
+
+<p>The Fibonacci sequence is determined by f(n) = f(n-1)+f(n-2) where f(0) = 1 and f(1) = 1.</p>
+
+<p>If we calculate f(5) we have:</p>
+
+<pre class="prettyprint linenums ">
+f(5) 
+= f(4) + f(3) 
+= f(3) + f(2) + f(2) + f(1) 
+= f(2) + f(1) + f(1) + f(0) + f(1) + f(0) + f(1) 
+= f(1) + f(0) + f(1) + f(1) + f(0) + f(1) + f(0) + f(1) 
+= 1 + 1 + 1 + 1 + 1 + 1 + 1
+= 8
+</pre>
+
+<p>However we are computing multiple values more than once. When we compute f(5) we need to compute f(4) and f(3) but f(3) is already computed when we compute f(4) and thus we have to recompute it again. We can avoid this redundancy by "building up". We can calculate f(2), then f(3) then f(4) and finally f(5) and we won't have duplicate calculations.</p>
+
+<pre class="prettyprint linenums ">
+f(0) = 1
+f(1) = 1
+f(2) = f(1) + f(0) = 2
+f(3) = f(2) + f(1) = 3
+f(4) = f(3) + f(2) = 5
+f(5) = f(4) + f(3) = 8
+</pre>
+
+<hr><h3>Formalization</h3>
+
+<p>Recursion</p>
+
+<pre class="prettyprint linenums lang-html">
+Let f(n) be the nth Fibonacci number
+
+Base case:
+fib(0) = 1, fib(1) = 1
+
+Subproblem:
+fib(n) = fib(n-1) + fib(n-2)
+
+Example:
+f(5) 
+= f(4) + f(3) 
+= f(3) + f(2) + f(2) + f(1) 
+= f(2) + f(1) + f(1) + f(0) + f(1) + f(0) + f(1) 
+= f(1) + f(0) + f(1) + f(1) + f(0) + f(1) + f(0) + f(1) 
+= 1 + 1 + 1 + 1 + 1 + 1 + 1
+= 8
+</pre>
+
+<p>Dynamic Programming</p>
+
+<pre class="prettyprint linenums ">
+Let fib[n] be the nth Fibonacci number
+
+Base case
+fib[0] = 1
+fib[1] = 1
+
+for x from 1 to N
+    fib[x] = fib[x-1] + fib[x-2]
+
+Example:
+N = 10
+fib[0] = 1
+fib[1] = 1
+fib[2] = 2
+fib[3] = 3
+fib[4] = 5
+fib[5] = 8
+fib[6] = 13
+fib[7] = 21
+fib[8] = 34
+fib[9] = 55
+fib[10] = 89
+</pre>
+
+<hr><h3>Code</h3>
+
+<p>Recursion</p>
+
+<pre class="prettyprint linenums ">
+public int fib(int n){
+    if(n==0 || n==1) return 1;
+    return fib(n-1) + fib(n-2);
+}
+</pre>
+
+<p>Dynamic Programming</p>
+
+<pre class="prettyprint linenums ">
+public int fib(int n){
+    int fibArr[] = new int[n];
+    fibArr[0] = 1
+    fibArr[1] = 1
+    for(int x=2; x&lt;n; x++){
+         fibArr[x] = fibArr[x-1] + fibArr[x-2];
+    }
+    return fibArr[n];
+}
+</pre>
+
+</section><section><h2><a href="./Coin_Problem" target="_blank">Coin Problem</a></h2>
+
+<p>Let's say that you wanted to make change for  using the smallest amount of bills (, , , , ). We can use a greedy approach by always taking the highest bill that can be subtracted to find the smallest amount of change. 51 - 20 = 31 - 20 = 11 - 10 = 1. So the smallest amount of change would be comprised of 2 x  + 1 x  + 1 for a total of 5 bills. This solution seems very easy to implement, but what if the bills were not so nice?</p>
+
+<p>Imagine that an alien currency was in denominations of , ,  and . What would be the smallest amount of bills to make change for ? Note that a greedy approach does not work for this alien currency. For example: 13 - 11 = 2. It is impossible to make change using the greedy approach. Note that we can make change with 2 x  + 1 x  = .</p>
+
+<p>Let's define the problem more formally: Given a list of bills each with a positive denominations, find the lowest amount of bills required to make C dollars or return impossible if it cannot be done.</p>
+
+<p>The base case for 0 dollars is very simple. There are 0 bills to make 0 dollars.</p>
+
+<p>Lets try to simply this problem. Assume we only have one bill worth d dollars. If we have C dollars and we want to use the bill, then we will have C-d dollars left. So the minimum bills to make C dollars is the minimum number of bills to make (C - d) bills plus the 1 for the bill we used. For example, we want to make 10 dollars and we only have 2 dollar bills. If we use a 2 dollar bill, then the minimum bills required to make 10 dollars is the minimum number of bills required to make 8 dollars plus that 2 dollar bill. To find the minimum number of bills required to make 8 dollars, we can find the minimum number of bills to make 6 dollars plus one more 2 dollar bill. As you can see it is the same as before and it is a recursive function!</p>
+
+<p>Recursion</p>
+
+<pre class="prettyprint linenums ">
+Let d be the denomination
+Let bills(C) be the minimum number of bills to make C dollars.
+
+Base Case:
+bills(0) = 0
+bills(C) = impossible if C &lt; 0
+
+Subproblem:
+bills(C) = bills(C-d) + 1 if bills(C-d) is possible
+               impossible if bills(C-d) is impossible
+
+Example:
+C = 10
+d = 2
+
+bills(10) 
+= bills(8) + 1
+= bills(6) + 1 + 1
+= bills(4) + 1 + 1 + 1
+= bills(2) + 1 + 1 + 1 + 1
+= bills(0) + 1 + 1 + 1 + 1 + 1
+= 5
+</pre>
+
+<p>We can implement this using dynamic programming but it will not give us much benefit since the recursion has no recalculations.</p>
+
+<pre class="prettyprint linenums ">
+bills[0] = 0
+
+for c from 1 to C
+     if c-d &gt;= 0 and bills[c-d] is not impossible
+         bills[c] = bills[c-d] + 1
+     else
+         bills[c] = impossible
+
+Example:
+C = 10
+d = 2
+
+bills[0] = 0
+bills[1] = impossible
+bills[2] = 1
+bills[3] = impossible
+bills[4] = 2
+bills[5] = impossible
+bills[6] = 3
+bills[7] = impossible
+bills[8] = 4
+bills[9] = impossible
+bills[10] = 5
+</pre>
+
+<p>Now let's consider the problem with multiple bills of denominations d1,d2 .... dn and we want to make C dollars. If we use a d1 bill, then we will have C-d1 dollars left and similarly if we use a d2 bill then we will have C-d2 dollars left. More generally, if we use a dn bill, then we will have C-dn dollars left. If we want to find the minimum bills to make C dollars we should try to use every bill and see which requires the minimum number of bills. So the minimum bills to make C dollars is the minimum of C - dn bills plus one more dn bill for all bills of denomination dn. For example, if we have  and we have bills ,, and , the minimum number of bills to make  is the minimum of the minimum number of bills to make  plus one more  bill, minimum number of bills to make  plus one more  or the minimum number of bills to make  plus one more  bill.</p>
+
+<pre class="prettyprint linenums ">
+Let denom be a list of denominations
+Let bills(C) be the minimum number of bills from denominations to make C dollars
+
+Base Cases:
+bills(0) = 0
+bills(C) = impossible if C &lt; 0
+
+Subproblem
+bill(C) = {  minimum of bills(C - d)+1 for d in denom if bills(C-d) is possible
+             {  impossible if bills(C - d) is impossible for all d in denom
+
+Example:
+denom = [3,4,5]
+
+bill(7)
+= min(bill(4)+1,bill(3)+1,bill(2)+1))
+= min(min(bill(1)+1,
+           bill(0)+1,
+           bill(-1)+1)+1, 
+       min(bill(0)+1,
+           bill(-1)+1,
+           bill(-2)+1) +1, 
+       min(bill(-1)+1),
+           bill(-2)+1,
+           bill(-3)+1)+1)
+= min( min(impossible, 1, impossible) +1,
+           min(1,impossible,impossible) +1,
+           min(impossible,impossible,impossible)+1)
+= min(2,2,impossible)
+= 2
+
+</pre>
+
+<p>However note, that we are recomputing multiple things. For example we are recomputing bill(0) multiple times and bill(-1) multiple times. If instead we worked the solution up instead of down, we can find bill(C) more efficiently. We can do this by computing bill(c) as c goes from 0 to C. Eg. we compute bill(0) then bill(1) then bill(2) .... until bill(C).</p>
+
+<p>Putting it all together:</p>
+
+<pre class="prettyprint linenums lang-html">
+Let bills[C] be the smallest amount of bills to make the amount C, or impossible if it is not possible
+Let denom be an array of denominations
+
+Base case:
+bills[0] = 0
+
+Subproblem:
+for c from 1 to C
+    bills[c] = impossible
+    for d in denom
+        if c-d &gt;= 0 and bills[c-d] is not impossible:
+            bills[c] = min(bills[c], bills[c-d]+1)
+
+Example:
+denom = [3,4,5]
+C = 7
+bills[0] = 0
+bills[1] = impossible (bills[-2],bills[-3],bills[-4])
+bills[2] = impossible 
+bills[3] = 1 (bills[0]+1)
+bills[4] = 1 (bills[0]+1)
+bills[5] = 1 (bills[0]+1)
+bills[6] = 2 (bills[3]+1)
+bills[7] = 2 (bills[3]+1 or bills[4]+1)
+</pre>
+
+</section><section><h2><a href="./Knapsack_Problem" target="_blank">Knapsack Problem</a></h2>
+
+<p>Imagine you are a robber and you have found a large stash of valuables. Each valuable has a value and a weight. You can only hold 10kg in your bag and you want to find the highest valued haul you can get away with.</p>
+
+<ul>
+<li>Necklace: , 1kg</li>
+<li>Stack of cash: 0, 3kg</li>
+<li>Jewelry: 5, 7kg</li>
+<li>Rare painting: 0, 9kg</li>
+</ul>
+
+<p>Let's try a greedy approach: we will take the items with the highest value to weight ratio.</p>
+
+<ul>
+<li>Necklace: /kg</li>
+<li>Stack of cash: /kg</li>
+<li>Jewelry: /kg</li>
+<li>Rare painting: 0/kg</li>
+</ul>
+
+<p>The greedy approach will choose the rare painting and the necklace for a total of 0. However if we take the jewelry and the stack of cash we will get 5 and still fit it into the bag. How can we solve this problem? The answer is dynamic programming.</p>
+
+<p>Let's first write a more formal definition of the problem:</p>
+
+<p>Given unlimited quantities of N items, each associated with a positive weight and value, and a maximum total weight W that we can hold, what is the maximum value we can hold.</p>
+
+<p>Let's write a more specific version of the problem: we want to find the maximum value that a bag with weight capacity W can carry out of N items of positive values and weights.</p>
+
+<p>The base case for this is trivial. With zero weight, the maximum value you can have is 0.</p>
+
+<p>Let's try simplifying the problem by using only one item with weight w and value v and a knapsack with maximum weight capacity W. Suppose we want to add the item into the knapsack then we have W-w capacity remaining and the value of the item. So the maximum value of knapsack with capacity W is the maximum value of W-w plus one more the item's value v. The maximum value of W-w is the maximum value of W-2<em>w + 2</em>v. As we can see, its the same subproblem as before and we have found a recursive relation.</p>
+
+<p>For example if we had an item with value  and weight 4kg and a knapsack with capacity 9kg. The maximum value that knapsack of 8kg can contain is the maximum value of a knapsack of 5kg plus  for the item we put in the bag and so forth.</p>
+
+<pre class="prettyprint linenums ">
+Let knapsack(W) be the maximum value of items that can fit into maximum capacity of W.
+Let w be the weight of one item and v be the value of one item.
+
+Base Case:
+knapsack(0) = 0
+knapsack(W) = 0 if W &lt; w
+
+Recursion:
+knapsack(W) = knapsack(W-w) + v
+
+Example:
+v = 5
+w = 4
+knapsack(9)
+= knapsack(5) + 5
+= knapsack(1) + 5 + 5
+= 10
+</pre>
+
+<p>Note that we are recomputing multiple values multiple times. We can avoid this by using dynamic programming and working up with our solution instead of backwards.</p>
+
+<pre class="prettyprint linenums ">
+Let knapsack[W] be the maximum value with weight capacity W
+Let w be the positive integer weight of the item and v be the value of an item
+
+for k from 0 to w-1
+    knapsack[k] = 0
+
+for weight from 1 to W
+    knapsack[weight] = knapsack[weight-w]+v
+
+Example:
+W = 9
+w = 4
+v = 4
+
+knapsack[0] = 0     base case
+knapsack[1] = 0     base case
+knapsack[2] = 0     base case
+knapsack[3] = 0     base case
+knapsack[4] = 5     (knapsack[0]+5)
+knapsack[5] = 5     ^
+knapsack[6] = 5     ^
+knapsack[7] = 5     ^
+knapsack[8] = 10    (knapsack[4]+5)
+knapsack[9] = 10    ^
+</pre>
+
+<p>Now let's go back to the original problem. We have N items each of positive weight and value and we want to find the maximum value to be put into a knapsack of capacity W.</p>
+
+<p>If no items are left to fit in our remaining capacity, then the maximum value must be ((((Dynamic Programming)))). This is our base case.</p>
+
+<p>If we use an item, we will have capacity W-wi and the added value will be vi. We want to try all items to place into the knapsack so we try every single item and find the maximum value out of the items. So the maximum value of capacity W is the maximum value of W-wi plus the added value of vi for all items. To find the maximum value of capacity W-wi we can do the exact same thing by trying to place each item and finding the maximum value out of the items.</p>
+
+<p>For example we have a knapsack of capacity 10kg and necklaces worth  with weight 3kg, paintings worth  with weight 9kg and silver bars worth  with weight 7kg. If we choose a necklace, we will have 7kg capacity left with the added value of . If we choose a painting, we will have 1kg capacity left and added value of . If we choose a silver bar, we will have 3kg capacity left and added value of . With the remaining capacity, we can choose another item and do the exact same thing.</p>
+
+<hr><h3>Formalization</h3>
+
+<pre class="prettyprint linenums ">
+Let knapsack(W) be the maximum value with maximum capacity W
+Let weights be an array of weights where wi is the weight of the ith item.
+Let values be an array of values where vi is the value of the ith item.
+
+knapsack(W) = 0 if wi &gt; W for all items
+
+knapsack(W) = max(knapsack(W-wi) + vi for all items with wi &lt;= W)
+</pre>
+
+<pre class="prettyprint linenums ">
+Let knapsack[w] be the maximum value with maximum capacity W
+Let weights be an array of weights where wi is the weight of the ith item.
+Let values be an array of values where vi is the value of the ith item.
+
+for w from 0 to W
+    knapsack[w] = 0
+
+for w from 1 to W
+    maxVal = 0
+    for i in items
+        if w-wi &gt;= 0
+            knapsack[w] = max(knapsack[w], knapsack[w-wi] + vi)
+
+Example:
+
+</pre>
+
+</section><section><h2>Number of Paths</h2>
+
+<p><img src="./public_html/img/uploads/recursion_grid.png"></p>
+
+<p>We first examined the number of paths problem in <a href="./Advanced_Recursion" target="_blank">advanced recursion</a>. However, now that we know how to use dynamic programming, we can see that the recursive solution was very inefficient because we were recomputing values many times.</p>
+
+<pre class="prettyprint linenums lang-html">
+Let path(x,y) be the number of ways to get to the intersection at x and y
+
+Base case:
+paths(1,y) = 1
+paths(x,1) = 1
+
+Recurrence:
+paths(x,y) = paths(x-1,y) + paths(x,y-1)
+
+Example:
+paths(3,5)
+= paths(2,5) + paths(3,4)
+= paths(1,5) + paths(2,4) + paths(2,4) + paths(3,3)
+= 1 + paths(1,4) + paths(2,3) + paths(1,4) + paths(2,3) + paths(2,3) + paths(3,2)
+= 1 + 1 + paths(1,3) + paths(2,2) + 1 + paths(1,3) + paths(2,2) + paths(1,3) + paths(2,2) + paths(2,2) + paths(3,1)
+= 1 + 1 + 1 + paths(1,2) + paths(2,1) + 1 + 1 + path(1,2) + paths(2,1) + 1 + paths(1,2) + paths(2,1) + ....
+= 15
+</pre>
+
+<p>Instead of recomputing multiple values, we can build our solution upwards starting from 1,1</p>
+
+<pre class="prettyprint linenums ">
+Let paths[x][y] be the number of ways to get from (1,1) to (x,y). 
+
+paths[1][1] = 1
+
+for x from 1 to N
+    for y from 1 to M
+        paths[x][y] = paths[x-1][y] + paths[x][y-1]
+
+Example:
+N = 3
+M = 5
+
+1 1 1 1  1
+1 2 3 4  5
+1 3 6 10 15
+</pre>
+
+</section><section><h2>Exercises</h2>
+
+<ol>
+<li>Given an array of N integers, find the largest sum that can be using consecutive integers.</li>
+<li>Given an array of N integers, find the longest increasing subsequence</li>
+<li>Given a matrix of NxN integers, find the maximum sum of a submatrix</li>
+</ol>
+</section>
+        \section{ Advanced Dynamic Programming }
+        <section><h2>Introduction</h2>
 
 <p>Dynamic programming is very powerful and more efficient than recursion for problems that recompute multiple values. However sometimes it is difficult to find an efficient dynamic programming solution and we will examine problems where we will need higher dimensions.</p>
 
@@ -4382,191 +5141,5 @@ for n from 1 to N
     for w from 1 to W
         knapsack[n][w] = max(knapsack[n-1][w-weight[n]]+value[n], knapsack[n-1][w])
 </pre>
-</section><h1>Coin Problem</h1><section><h2>Introduction</h2>
-
-<p>Let's say that you wanted to make change for $51 using the smallest amount of bills ($1, $2, $5, $10, $20). We can use a greedy approach by always taking the highest bill that can be subtracted to find the smallest amount of change. 51 - 20 = 31 - 20 = 11 - 10 = 1. So the smallest amount of change would be comprised of 2 x $20 + 1 x $10 + 1 for a total of 5 bills. This solution seems very easy to implement, but what if the bills were not so nice?</p>
-
-<p>Imagine that an alien currency was in denominations of $3, $5, $7 and $11. What would be the smallest amount of bills to make change for $13? Note that a greedy approach does not work for this alien currency. For example: 13 - 11 = 2. It is impossible to make change using the greedy approach.</p>
-
-</section><section><h2>Solution</h2>
-
-<p>Let's define the problem more formally: Given a list of bills each with a positive denomination d, find the lowest amount of bills required to make C dollars or return impossible if it cannot be done.</p>
-
-<p>The base case 0 for this is very simple. There are 0 bills to make 0 dollars.</p>
-
-<p>We can reduce this problem into subproblems. Let's assume that we have found out the lowest amount of bills required to make all the dollar amounts from 0 to C-1 or determined if it is impossible to do so. Lets take a look at an arbitrary bill b with denomination d. We know the minimum number of bills to make C-d (or if its impossible) based on our assumption that we have solved from 0 to C-1. Thus if use the bill b to make C then it is just the minimum number of bills to make C-d with 1 more bill so we add 1 more to that value. If we take the minimum value for all bills (if its possible to make C-d), we will get the lowest amount of bills required to make C.</p>
-
-<p>Putting it all together:</p>
-
-<pre class="prettyprint linenums lang-html">
-Let bills[C] be the smallest amount of bills to make the amount C, or impossible if it is not possible
-
-Base case:
-bills[0] = 0
-
-Subproblem:
-bills[C] = min(bills[C-d]+1) for all bills where d is the denominator of the bill and bills[C-d] is not impossible
-if bill[C-d] = impossible for all bills, then bills[C] is impossible
-</pre>
-
-<p>Example of previous problem where the bills are ($3, $5, $7, $11) and we want to find the minimum number of bills to make 13.</p>
-
-<p>Let -1 be "impossible".</p>
-
-<table>
-<thead>
-<tr>
-  <th>C</th>
-  <th>0</th>
-  <th>1</th>
-  <th>2</th>
-  <th>3</th>
-  <th>4</th>
-  <th>5</th>
-  <th>6</th>
-  <th>7</th>
-  <th>8</th>
-  <th>9</th>
-  <th>10</th>
-  <th>11</th>
-  <th>12</th>
-  <th>13</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>bills[C]</td>
-  <td>0</td>
-  <td>-1</td>
-  <td>-1</td>
-  <td>1</td>
-  <td>0</td>
-  <td>1</td>
-  <td>2</td>
-  <td>-1</td>
-  <td>2</td>
-  <td>3</td>
-  <td>2</td>
-  <td>1</td>
-  <td>4</td>
-  <td>3</td>
-</tr>
-</tbody>
-</table>
-
-</section><section><h2>Implementation</h2>
-
-</section><section><h2>Exercises</h2>
-
-<ol>
-<li>Given a list of bills each with unique denomination d, find the number of ways to make C dollars. 
-
-<ul>
-<li>For example given bills: $2, $3, $5, there are 2 ways to make $7 (2+5, 2+2+3)</li>
-</ul></li>
-<li>Given a list of N integers, separate the list into two sets such that the difference is minimized and output the difference.
-
-<ul>
-<li>For example given integers: 1, 4, 10, 12, we can separate them into (4+10=14) and (1+12=13) so the minimum difference is 1.</li>
-</ul></li>
-<li>Given a list of lengths, find the smallest area that can be created if  the lengths are used to make a triangle. 
-
-<ul>
-<li>For example, given lengths: 2,4,6,8,10 we can make a triangle with minimum area 43.3 if we use the sides (2+8=10, 4+6 = 10, 10).</li>
-</ul></li>
-</ol>
-</section><h1>Knapsack Problem</h1><section><h2>Introduction</h2>
-
-<p>Imagine you are a robber and you have found a large stash of valuables. Each valuable has a value and a weight. You can only hold 10kg in your bag and you want to find the highest valued haul you can get away with.</p>
-
-<ul>
-<li>Necklace: $10, 1kg</li>
-<li>Stack of cash: $270, 3kg</li>
-<li>Jewelry: $665, 7kg</li>
-<li>Rare painting: $900, 9kg</li>
-</ul>
-
-<p>Let's try a greedy approach: we will take the items with the highest value to weight ratio.</p>
-
-<ul>
-<li>Necklace: $10/kg</li>
-<li>Stack of cash: $90/kg</li>
-<li>Jewelry: $95/kg</li>
-<li>Rare painting: $100/kg</li>
-</ul>
-
-<p>The greedy approach will choose the rare painting and the necklace for a total of $910. However if we take the jewelry and the stack of cash we will get $935 and still fit it into the bag. How can we solve this problem? The answer is dynamic programming.</p>
-
-</section><section><h2>Solution</h2>
-
-<p>Let's first write a more formal definition of the problem:</p>
-
-<p>Given n objects, each associated with a positive weight and value, and a maximum total weight W that we can hold, what is the maximum value we can hold. In the zero/one knapsack problem, there is only one of each object so we either take it or leave it.</p>
-
-<p>Let's write a more specific version of the problem: we want to find the maximum value that a bag with maximum weight W can hold of N objects with positive weight and value which we can either take or not take.</p>
-
-<p>The base case for this is trivial. With zero weight, the maximum value you can have is 0.</p>
-
-<p>We now have to break this problem down into subproblems.</p>
-
-<p>Now we want to find the maximum value for a bag of maximum weight W and assessing all N objects. Since we have already assessed up to N-1 objects we only need to assess the Nth object. For the Nth object we can either take it or leave it.</p>
-
-<p>If we leave it, then it is the same as a bag of maximum weight W with N-1 objects because we are just ignoring the Nth object.</p>
-
-<pre class="prettyprint linenums lang-html"> max value leaving = maximum value of N-1 objects with weight W
-</pre>
-
-<p>If we take it, then we need to find the maximum value thats possible while making room for that object and add that to the value of the object.</p>
-
-<pre class="prettyprint linenums lang-html">max value taking = (maximum value of N-1 objects seen with weight W-weight of object N) + value of object N. 
-</pre>
-
-<p>If we want the maximum value of assessing N objects and maximum weight W then we want the max of leaving the Nth object and taking the Nth object so:</p>
-
-<pre class="prettyprint linenums lang-html">
-max value = max( maximum value taking, maximum value leaving)
-max value = max( maximum value of N-1 objects with weight W, (maximum value of N-1 objects with weight W - weight of N) + value of N))
-</pre>
-
-<p>Putting it all together we have:</p>
-
-<pre class="prettyprint linenums lang-html">
-Let weight[i] be the weight of object i
-Let value[i] be the value of object i
-
-Let knapsack[i][j] be the maximum value that a knapsack of maximum weight j can hold with objects seen from 1 to i
-
-Base case:
-knapsack[0][0] = 0
-
-Subproblem:
-knapsack[i][j] = max(knapsack[i-1][j-weight[i]], knapsack[i-1][j-1])
-</pre>
-
-</section><section><h2>Implementation</h2>
-
-</section><section><h2>Exercises</h2>
-
-<ol>
-<li>Given a list of n objects with a positive weight and value, find the maximum value that can be obtained with maximum weight W. However, each object can be used more than once.</li>
-</ol>
-</section><h0>Strings</h0><section><h3>Introduction</h3>
-
-<p>String problems are more important than ever before with the enormous amount of text and information that is now available. For example, if we search for keywords on Google out of the millions of articles, how can we do it in such a way that the retrieval is relevant, accurate and efficient? If we misspell the word "shooting" as "sohoting" how can we come up with a list of autocorrected words?</p>
-
-</section><h1>Pattern Matching</h1><section><h2>Introduction</h2>
-
-<p>Pattern matching is finding if a certain sequence of elements exists in another larger sequence of elements. For example we want to find if the string "abc" is in the string "abdabdbdacbaabcasd" (which the answer is yes).</p>
-
-</section><section><h2><a href="./Knuth_Morris_Pratt" target="_blank">Knuth Morris Pratt</a></h2>
-
-<p>If we have the needle string "abcxabcy" and haystack string "abcyabcxabcy" then our first search will be putting the needle at position 0 as we see the search fails at 'x'. However we note that we do not need to set the needle at position 1 because we have already done the search for the prefix "abc". Thus we can search starting by setting the needle at the next 'a'.</p>
-
-<p>KMP uses this type of optimization for pattern matching by precomputing a table for the needle string.</p>
-
-</section><section><h2><a href="./Rabin_Karp" target="_blank">Rabin Karp</a></h2>
-
-</section><section><h2><a href="./Finite_State_Automata" target="_blank">Finite State Automata</a></h2>
-
-</section><section><h2><a href="./Boyer_Moore" target="_blank">Boyer Moore</a></h2>
+</section></p>
 </section>

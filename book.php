@@ -54,12 +54,12 @@ function latexParse($str){
 	$str = preg_replace('/\$/','\\\$',$str);
 
 	// <table> ... </table> -> \begin{tabular} ... \end{tabular}
-	$str = preg_replace('/<table>/','\vspace{10pt} \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline',$str);
+	$str = preg_replace('/<table>/','\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline',$str);
 	$str = preg_replace('/<thead>.*?<tr>/','{',$str);
 	$str = preg_replace('/<\/thead>/','\hline',$str);
 	$str = preg_replace('/<\/t(d|h)>\s*<\/tr>/','\\\\\\',$str);
 	$str = preg_replace('/<\/t(d|h)>/',' &',$str);
-	$str = preg_replace('/<\/table>/','\hline\end{tabular}',$str);
+	$str = preg_replace('/<\/table>/','\hline\end{tabulary}',$str);
 
 	// <ol> ... <\ol> -> \begin{enumerate} ... \end{enumerate}
 	$str = preg_replace('/<ol>/','\begin{enumerate}',$str);
@@ -80,18 +80,76 @@ function latexParse($str){
 	// <tag> -> 
 	$str = preg_replace('/<.*?>/','',$str);
 
-	$str = str_replace(['&#42;','&gt;','&lt;','&amp;','&#124;','%'],['=','>','<','\&','|','\%'],$str);
+	$str = str_replace(['&#42;','&gt;','&lt;','&amp;','&#124;','%'],['=','$>$','$<$','\&','$|$','\%'],$str);
+	/*
+	$str = preg_replace_callback(
+		'/\\\\begin{lstlisting}.*?\\\\end{lstlisting}/s',
+		function($matches){
+			$ret = preg_replace('/\$<\$/','<',$matches[0]);
+			$ret = preg_replace('/\$>\$/','>',$ret);
+			$ret = preg_replace('/\\\_/','_',$ret);
+			return $ret;
+		},
+		$str
+	);*/
+
 
 	$tex = '\documentclass[11pt,oneside]{book}
 		\usepackage{listings}
 		\usepackage{outlines}
 		\usepackage{graphicx}
+		\usepackage{tabulary}
+		\usepackage{color}
+		\usepackage[numbered]{bookmark}
+
+		\title{The Computer Science Handbook}
+		\author{Michael Young}
+
+		\definecolor{dkgreen}{rgb}{0,0.6,0}
+		\definecolor{gray}{rgb}{0.5,0.5,0.5}
+		\definecolor{mauve}{rgb}{0.58,0,0.82}
+		\lstset{
+		  language=Java,
+		  aboveskip=3mm,
+		  belowskip=3mm,
+		  showstringspaces=false,
+		  columns=flexible,
+		  basicstyle={\small\ttfamily},
+		  numbers=none,
+		  numberstyle=\tiny\color{gray},
+		  keywordstyle=\color{blue},
+		  commentstyle=\color{dkgreen},
+		  stringstyle=\color{mauve},
+		  breaklines=true,
+		  breakatwhitespace=true,
+		  tabsize=3
+		}
 		\graphicspath{ {../public_html/img/uploads/} }
 		\makeatletter
 		\def\maxwidth#1{\ifdim\Gin@nat@width>#1 #1\else\Gin@nat@width\fi}
-		\begin{document}'.$str.'\end{document}';
+		\begin{document}
+		\maketitle
+		\tableofcontents
+		'.$str.'\end{document}';
 
 	return $tex;
+}
+
+
+function makeManifest(){
+
+	$manifest = file_get_contents('manifest.txt');
+
+	$manifest = preg_replace('/``(.+?)``/', '\section{$1}', $manifest);
+	$manifest = preg_replace('/`(.+?)`/', '\chapter{$1}', $manifest);
+	$manifest = preg_replace('/~(.+?)~/', '\part{$1}', $manifest);
+
+	$book = parse($manifest);
+
+
+	file_put_contents('book/book.html',$book);
+
+	file_put_contents('book/book.tex',latexParse($book));
 }
 
 function makeBook(){
@@ -154,5 +212,9 @@ function makeBook(){
 
 	file_put_contents('book/book.tex',latexParse($book));
 }
-makeBook();
+
+$cfg = parse_ini_file('config/local_config.ini',true);
+$db = new DB($cfg['db']);
+
+makeManifest();
 ?>

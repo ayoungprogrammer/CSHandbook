@@ -40,6 +40,7 @@ function bfsLinks(){
 					$end++;
 				}
 			}
+			
 			preg_match_all('/\[\[([A-Za-z\_\s\']+?)\|([A-Za-z\_\s\']+?)\]\]/',$content,$matches);
 
 			foreach ($matches[2] as $link){

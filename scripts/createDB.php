@@ -29,6 +29,3 @@ $mysqli->query("CREATE TABLE articles (
     id varchar(100) NOT NULL PRIMARY KEY, 
     content varchar(65000) NOT NULL
     )");
-
-
-abasddsfasda

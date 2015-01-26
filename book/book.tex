@@ -2,18 +2,76 @@
 		\usepackage{listings}
 		\usepackage{outlines}
 		\usepackage{graphicx}
+		\usepackage{tabulary}
+		\usepackage{color}
+		\usepackage[numbered]{bookmark}
+
+		\title{The Computer Science Handbook}
+		\author{Michael Young}
+
+		\definecolor{dkgreen}{rgb}{0,0.6,0}
+		\definecolor{gray}{rgb}{0.5,0.5,0.5}
+		\definecolor{mauve}{rgb}{0.58,0,0.82}
+		\lstset{
+		  language=Java,
+		  aboveskip=3mm,
+		  belowskip=3mm,
+		  showstringspaces=false,
+		  columns=flexible,
+		  basicstyle={\small\ttfamily},
+		  numbers=none,
+		  numberstyle=\tiny\color{gray},
+		  keywordstyle=\color{blue},
+		  commentstyle=\color{dkgreen},
+		  stringstyle=\color{mauve},
+		  breaklines=true,
+		  breakatwhitespace=true,
+		  tabsize=3
+		}
 		\graphicspath{ {../public_html/img/uploads/} }
 		\makeatletter
 		\def\maxwidth#1{\ifdim\Gin@nat@width>#1 #1\else\Gin@nat@width\fi}
-		\begin{document}\chapter{Getting Started}\subsubsection{Introduction}
+		\begin{document}
+		\maketitle
+		\tableofcontents
+		\chapter{ Getting Started }
+
 
 The Computer Science handbook is a handbook designed to explain algorithms and data structures in a way that anyone can understand. Many websites (eg Wikipedia) contain lengthy and wordy explanations that are full of technical jargon. We have tried our hardest to simplify all language to make it easy to read without any math or computer science background. We hope to share our knowledge with you and we ask only one thing from you. You must learn something before you leave!
 
-\chapter{Fundamentals}\subsubsection{Introduction}
+\subsection{Format}
 
-There are some fundamental topics about writing computer programs that we must learn before we can move on to the basic theory.
+Each article with have multiple sections to help you understand the content.
 
-\section{Data Types}
+\subsubsection{Introduction}
+
+The introduction section gives a brief overview of what the article is about. It will usually come with a prerequisite section which will contain topics that will be recommended to have been read before the article.
+
+\subsubsection{Implementation}
+
+The implementation section will be an implementation of the article in Java. It is recommended that you try to implement things yourself first before looking at the implementation. If you truly understand the concept, then you will never have to memorize a single line of code. The code will come from your understanding of how it works.
+
+\subsubsection{Applications}
+
+The applications section will be about real world applications of the concept that show why the concept is important.
+
+\subsubsection{Exercises}
+
+The exercises section contains practice problems to test if you truly understand the concept. Many of these questions come from real interview questions.
+
+\part{ Fundamentals }
+\chapter{` Basics }
+    
+
+In the most abstract sense, a program takes in input and produces output.
+
+\includegraphics[width=\maxwidth{\textwidth}]{basic.png}
+
+We will learn how to create a basic program by figuring out how to read input, store data and how to use a sequence of control structures to produce output.
+
+
+    \section{ Data Types }
+    
 
 We use closets or drawers to store our clothes and garages to store our cars. Similarly, we store different types of data in different kinds of data types. Most programming languages will support these data types and picking the right data type is important.
 
@@ -34,13 +92,23 @@ int x = 3;
 double y = -4.5;
 \end{lstlisting}
 
-x is an integer, and we initialize it with the value 3. y is a double floating point number (essentially a decimal number) and we initialize it with -4.5
+x is an integer, and we initialize it with the value 3. y is a double floating point number (essentially a decimal number) and we initialize it with -4.5.
+
+There are 4 main types of data types:
+
+\begin{itemize}
+\item Boolean: Binary bit
+\item Integer: Stores an integer
+\item Float: Stores a decimal
+\end{itemize}
 
 \subsection{Boolean}
 
+
+
 A boolean is stored in a bit that is either true or false. Booleans are usually used as flags to store if something is one one state or the other.
 
-\vspace{10pt} \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Data type &
@@ -53,13 +121,17 @@ A boolean is stored in a bit that is either true or false. Booleans are usually 
   2 bits &
   true or false\\
 
-\hline\end{tabular}
+\hline\end{tabulary}
+
+
 
 \subsection{Integer}
 
+
+
 An integer is any number that does not contain decimals. It is stored as binary number in memory. For example: 0, -5, 6 are integers.
 
-\vspace{10pt} \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Data type &
@@ -84,15 +156,19 @@ An integer is any number that does not contain decimals. It is stored as binary 
   64 bits &
   −9,223,372,036,854,775,808 to 9,223,372,036,854,755,807\\
 
-\hline\end{tabular}
+\hline\end{tabulary}
+
+
 
 \subsection{Character}
+
+
 
 A character is any letter or symbol. For example: 'a','B','8','!'.
 
 Characters are usually stored as a number and then displayed as a character by the computer. An encoding is a computer translation from a number to a character. We store simple characters such as lower case and upper case letters, numbers and common punctuation, in 8 bits (0-255) and we can use it to encompass the English language. For these 8 bits, we use an encoding called ASCII. For example: '0' is 48 and 'B' is 66. There are other encodings like Unicode which uses more bits to convert to more languages such as Chinese or Russian. For the most part, we will just use ASCII.
 
-\vspace{10pt} \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Data type &
@@ -105,17 +181,20 @@ Characters are usually stored as a number and then displayed as a character by t
   8 bits &
   256 bits\\
 
-\hline\end{tabular}
+\hline\end{tabulary}
+
 
 \subsection{Float}
 
-A float is a decimal stored as binary in memory. We use scientific notation to represent the decimal. Scientific notation is a decimal number < 10 times some exponent of 10. For example: 8.23 * 10$^{4}$ is in scientific notation. Decimals can be stored in 32 bits or 64 bits.
+
+
+A float is a decimal stored as binary in memory. We use scientific notation to represent the decimal. Scientific notation is a decimal number $<$ 10 times some exponent of 10. For example: 8.23 * 10$^{4}$ is in scientific notation. Decimals can be stored in 32 bits or 64 bits.
 
 In a 32bit float, we have 1 bit for the sign (positive or negative), 23 bits for the significant figures (7 digits) and 8 bits for the exponent.
 
 In a 64bit double we have 1 bit for the sign (positive or negative), 52 bits for the significant figures (16 digits) and 11 bits for the exponent.
 
-\vspace{10pt} \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Data type &
@@ -132,8 +211,160 @@ In a 64bit double we have 1 bit for the sign (positive or negative), 52 bits for
   64 bits &
   1.7e−308 to 1.7e+308\\
 
-\hline\end{tabular}
-\section{Runtime and Memory}
+\hline\end{tabulary}
+
+
+
+    \section{ Arithmetic Operations }
+    
+
+Java includes many built in operations for basic operations.
+
+\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+
+
+  Operation &
+  Description &
+  Example\\
+\hline
+
+
+  z = x + y &
+  Addition &
+  z = 1 + 2,  z = 3\\
+
+  z = x - y &
+  Subtraction &
+  z = 3 - 1, z = 2\\
+
+  z = x * y &
+  Multiplication &
+  z = 3 * 2, z = 6\\
+
+  z = x / y &
+  Integer division &
+  z = 5 / 2, z = 2 or z = 9 / 3, z = 3\\
+
+  z = x \% y &
+  Modulus (or remainder) &
+  z = 5 \% 3, z = 2 or z = 6 \% 2, z = 0\\
+
+  x++ &
+  Increment by 1 &
+  x=5, x++, x = 6\\
+
+  x-- &
+  Decrement by 1 &
+  x=5, x--, x = 4\\
+
+\hline\end{tabulary}
+
+Boolean operators are operations between two booleans (true or false). Boolean operators:
+
+\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+
+
+  Operation &
+  Description &
+  Example\\
+\hline
+
+
+  x $|$$|$ y &
+  Or &
+  T $|$$|$ F = T, T $|$$|$ T = T, F $|$$|$ F = F\\
+
+  x \&\& y &
+  And &
+  T \&\& T = T, T \&\& F = F, F \&\& F = F\\
+
+  !x &
+  Not &
+  !F = T, !T = F\\
+
+  x == y &
+  Equality &
+  1 == 1 = T, 1 == 3 = F\\
+
+  x != y &
+  Inequality &
+  1 != 1 = F, 1 != 3 = T\\
+
+  x $<$ y &
+  Less than &
+  2 $<$ 3 = T, 2 $<$ 2 = F, 2 $<$ 1 = F\\
+
+  x $<$= y &
+  Less than or equal to &
+  2 $<$= 3 = T, 2 $<$= 2 = T, 2 $<$= 1 = F\\
+
+  x $>$ y &
+  Greater than &
+  3 $>$ 2 = T ,3 $>$ 3 = F, 3 $>$ 4 = F\\
+
+  x $>$= y &
+  Greater than or equal to &
+  3 $>$= 2 = T,3 $>$= 3 = T, 3 $>$= 4 = F\\
+
+  exp ? x : y &
+  Ternary &
+  true ? 3 : 4 = 3, (1 $>$ 2) ? 3 : 4 = 4\\
+
+\hline\end{tabulary}
+
+Assignment assigns a value to a variable.
+
+\begin{lstlisting}
+int x = 3;
+\end{lstlisting}
+
+\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+
+
+  Operation &
+  Description &
+  Example\\
+\hline
+
+
+  x = y &
+  Set x to y &
+  x = 4 (x = 4)\\
+
+  x += y &
+  Addition &
+  x += 4 (x = 7)\\
+
+  x -= y &
+  Subtraction &
+  x -= 3 (x = 0)\\
+
+  x *= y &
+  Multiplication &
+  x *= 3 (x = 9)\\
+
+  x /= y &
+  Division &
+  x /= 2 (x = 1)\\
+
+  x \%= y &
+  Modulus &
+  x \%= 2 (x = 1)\\
+
+\hline\end{tabulary}
+
+
+    \section{ Control Structures }
+    
+
+Once we have data, we need a way to add logic to use that data. For example, we want to output "even" if a number is even and "odd" if a number is odd. We will need a way of using logic to perform a separate action. This is called a control structure.
+
+A control structure allows the program to change flows based on conditions. For example:
+
+\includegraphics[width=\maxwidth{\textwidth}]{controlstruct.png}
+
+    \section{ Runtime and Memory }
+    
 
 Computers are super fast at making calculations compared to humans, but humans have much more "memory" than computers currently do. For example, computers can add two 100-digit numbers together much more quickly than any human possibly can. However, the human brain can contain much more memory than humans.
 
@@ -141,7 +372,7 @@ Brains have trillions of connections between neurons and the estimated storage c
 
 The neurons and connections in our brains allow us to store an immense amount of information in our brains and allows us to easily recognize patterns much better than computers. For example it is very easy for us to identify different objects around us (e.g. we can easily differentiate between an apple and an orange), but it is difficult for a computer to do this for the countless number of objects in the world. However this is currently changing as more research is being done in "deep learning".
 
-\vspace{10pt} \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
    &
@@ -156,15 +387,17 @@ The neurons and connections in our brains allow us to store an immense amount of
 
   Processing &
   60Hz &
-  2.7GHz Quad Core (1,000,000,000 times faster than humans)\\
+  2.7GHz Quad Core\\
 
-\hline\end{tabular}
+\hline\end{tabulary}
+
+Note that a computer is 1,000,000,000 times faster than humans but humans can store 100,000 more.
 
 \subsection{Limits}
 
 There are many different methods of implementing different things but most of the time we care most about implementations that are the fastest and use the least amount of memory. Let's go through some basic benchmarks about computers that you should know. Adding two numbers takes a nanosecond (1 billionth of a second) for an average computer to process. For practical purposes, we'll assume that the average computer program can hold up to 1GB or RAM or about 250 million integers. We use RAM because it is flash memory and read/write is super fast in comparison to disk read/writes.
 
-\vspace{10pt} \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Memory &
@@ -175,7 +408,7 @@ There are many different methods of implementing different things but most of th
   1 GB (250,000,000 ints) &
   100,000,000 operations\\
 
-\hline\end{tabular}
+\hline\end{tabulary}
 
 \subsection{Big O Notation}
 
@@ -183,7 +416,7 @@ When we compare how efficient algorithms or data structures are to another, we w
 
 Here is a list of common Big O notations based on complexity:
 
-\vspace{10pt} \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Big O &
@@ -215,7 +448,7 @@ Here is a list of common Big O notations based on complexity:
   O(N!) Factorial Time &
   11\\
 
-\hline\end{tabular}
+\hline\end{tabulary}
 
 Keep in mind that in a couple of years as technology improves, this chart will be outdated.
 
@@ -228,8 +461,8 @@ Code:
 \begin{lstlisting}
 int findMax(int[] array){
   int maxVal = array[0]; //O(1) memory to store max element, O(1) time for assignment
-  for(int i=1;i<array.length;i++){ //O(n) loop runtime
-      if(maxVal < array[i]){ //O(1) to compare runtime
+  for(int i=1;i$<$array.length;i++){ //O(n) loop runtime
+      if(maxVal $<$ array[i]){ //O(1) to compare runtime
          maxVal = array[i]; //O(1) to assign new value runtime
      }
   }
@@ -244,20 +477,24 @@ Time: The first assignment of maxVal takes O(1). The loop runs N-1 times and of 
 
 \begin{lstlisting}
 void zeroArrays(int[][] grid){
-  for(int i=0; i<grid.length;i++){
-    for(int j=0;j<grid[i].length;j++){
+  for(int i=0; i$<$grid.length;i++){
+    for(int j=0;j$<$grid[i].length;j++){
       grid[i][j] = 0;
     }
   }
 }
 \end{lstlisting}
-\chapter{Recursion}\subsubsection{Introduction}
+
+\part{ Recursion }
+    \chapter{ Recursion }
+        \section{ Recursion }
+        
 
 Next: Advanced Recursion
 
 Recursion is process that repeats itself in a similar way. Anything that has its definition nested inside itself is considered to be recursive. For example GNU stands for GNU not Unix!. Expanding this acronym gives us ((GNU not Unix) not Unix!). As you can see this will go on forever and GNU's definition is nested inside itself so it is recursive. The Fibonacci sequence is also recursive: F(n) = F(n-1)+F(n-2). Inside the function F, we see two more F's!
 
-In computer science infinite looping is bad because computers do not know how to terminate so we need some way to stop it. We will call a stopping point the base case. A base case is the case where the recursion will stop. Everything must eventually reduce to a base case. For the Fibonacci sequence, the base case is F(0) = 1 and F(1) = 1 and we can see that for all N>1, the Fibonacci sequence will reach the base case.
+In computer science infinite looping is bad because computers do not know how to terminate so we need some way to stop it. We will call a stopping point the base case. A base case is the case where the recursion will stop. Everything must eventually reduce to a base case. For the Fibonacci sequence, the base case is F(0) = 1 and F(1) = 1 and we can see that for all N$>$1, the Fibonacci sequence will reach the base case.
 
 So for something to be recursive in computer science, it needs:
 
@@ -281,7 +518,247 @@ recursion(parameter)
 \item operation reduces the parameters towards the base case
 \end{itemize}
 
-\section{Advanced Recursion}
+\subsection{Factorial}
+
+Let's look at a simple recursive function: factorial function.
+
+1! = 1
+
+n! = 1 * 2 * 3 .... n.
+
+Or we could write it as n! = (n-1)! * n. We now see that in this form, the factorial function is defined within itself which makes it recursive. Our base case is 1! = 1.
+
+Example:
+
+4!
+
+= 3! * 4
+
+= 2! * 3 * 4
+
+= 1! * 2 * 3 * 4
+
+= 1 * 2 * 3 * 4
+
+= 24
+
+\subsubsection{Formalization}
+
+\begin{lstlisting}
+Let f(n) be the nth factorial number where n is a positive integer.
+
+Base case:
+f(1) = 1
+
+Recurrence:
+f(n) = f(n-1) * n
+
+Example:
+f(4) 
+= f(3) * 4
+= f(2) * 3 * 4
+= f(1) * 2 * 3 * 4  [Base Case]
+= 1 * 2 * 3 * 4
+= 24
+\end{lstlisting}
+
+\subsubsection{Implementation}
+
+\begin{lstlisting}
+int factorial(int n){
+   if(n == 1)return 1;
+   return factorial(n - 1) * n;
+}
+\end{lstlisting}
+
+\subsection{Sum of digits of a string}
+
+We can use recursion in many places and we can apply it to simple problems that you probably have not thought about. Summing the digits of a string can be done using simple loop but we can also use recursion to do it.
+
+Let's say we have the string '23528'. The total is equal to the first digit + the sum of the rest of the digits. 2 + '3528'. We can do the exact same thing for the rest of the digits: the second digit + the sum of the rest of the digits and keep doing this until we have no more digits.
+
+\begin{itemize}
+\item '23528'
+\item '3528' + 2
+\item '528' + 5
+\item '28' + 10
+\item '8' + 12
+\item '' + 20
+\item 20
+\end{itemize}
+
+\subsubsection{Formalization}
+
+\begin{lstlisting}
+Let sum(string) be the sum of digits in a string
+Let n be the length of the string
+
+For simplicity, let string[x..y] be the substring of the string from index x to index y. The starting index will be 1.
+Example: 
+string = 'abcd'.
+string[1..3] = 'abc'
+
+Base case:
+sum(empty) = 0
+
+Recurrence:
+sum(string) = sum(string[2..n]) + int(string[1])
+
+Example:
+sum('23528')
+= sum('3528') + 2
+= (sum('528') + 3) + 2
+= ((sum('28') + 5) + 3) + 2
+= (((sum('8') + 2) + 5) + 3) + 2
+= ((((sum('') + 8) + 2) + 5) + 3) + 2
+= ((((0 + 8) + 2) + 5) + 3) + 2
+= 20
+\end{lstlisting}
+
+\subsubsection{Implementation}
+
+\begin{lstlisting}
+int sum(string str){
+   int n = str.length();
+   if(n == 0){
+       return 0;
+    }
+   else{
+     int charToNum = (str.charAt(0)-'0');
+     return sum(str.substring(1,n)) + charToNum;
+   }
+}
+sum('23528');
+\end{lstlisting}
+
+\subsection{Count}
+
+Let's say we have an string of N characters and we want to find the number of times the letter 'c' appears. This time we need to add some logic to the problem.
+
+If the first letter of the string is a 'c', then we can add 1 to the count. Otherwise, we don't add anything. We can do the exact same thing for the substring without the first letter. If the second letter of the string is a 'c', we add 1 other we don't add anything etc.
+
+For example we have the string 'cacaec'. Since the first letter is a 'c' we add 1 to the count. Then we remove the first letter and get 'acaec', the first letter is not a 'c' so we don't add to the count. We keep reducing this way until we get an empty string and we return the count.
+
+\begin{itemize}
+\item 'cacaec'
+\item 'acaec' +1
+\item 'caec' + 1
+\item 'aec' + 2
+\item 'ec' + 2
+\item 'c'  + 2
+\item '' + 3
+\item 3
+\end{itemize}
+
+\subsubsection{Formalization}
+
+\begin{lstlisting}
+Let count(string) be the number of 'c's in the string
+
+For simplicity, let string[x..y] be the substring of the string from x to y.
+Example: 
+string = 'abcd'.
+string[1..3] = 'bcd'
+
+Base case:
+count(empty) = 0
+
+Recurrence:
+count(string) =  {if string[n]=='c'  count(string[2..n])+1
+                 {else                    count(string[2..n])
+
+Example:
+count('cacaec')
+= count('acaec')+1
+= (count('caec')+0)+1
+= ((count('aec')+1)+0)+1
+= (((count('ec')+0)+1)+0)+1
+= ((((count('c')+0)+0)+1)+0)+1
+= ((((count('')+1)+0)+0)+1)+0)+1
+= ((((0+1)+0)+0)+1)+0)+1
+= 3
+\end{lstlisting}
+
+\subsubsection{Implementation}
+
+\begin{lstlisting}
+int count3(string str){
+   int n = str.length()
+   if(n == 0)return 0;
+   if(str.charAt(0) == 'c'){
+      return count3( str.substring(1, n) ) + 1;
+   }
+   else{
+     return count3( str.substring(1, n) );
+   }
+}
+
+count3('cacaec');
+
+\end{lstlisting}
+
+\subsection{Calculate Exponential}
+
+Let's say we wanted to find x$^{n}$ and for the sake of this problem we want the last four digits of that number. Note that 267$^{4}$ mod 10000 = (267$^{3}$ mod 10000) * 267 mod 10000. This is important because it means we can take the last 4 digits in each step instead of having to compute the giant exponent and then taking the last 4 digits. We can do this problem very easily by using a simple loop, but we can do better by using recursion. By definition of exponents, x$^{a}$ * x$^{a}$ = x$^{2a}$. Using this we can see that if n is divisible by 2, then x$^{n}$ = x$^{n/2}$ * x$^{n/2}$.
+
+For example 5$^{4}$ = 5$^{2}$ * 5$^{2}$
+
+But let's take a look at x$^{n/2}$. If n is even we can do the exact same thing! x$^{n/2}$ = x$^{n/4}$ * x$^{n/4}$. We have a recurrence relation and the base case is simple: if x$^{1}$ = x.
+
+But what if n is odd and not 1? Then we have x$^{n}$ = x$^{n/2}$ * x$^{n/2}$ * x and we can now solve this problem using recursion.
+
+\subsubsection{Formalization}
+
+\begin{lstlisting}
+Let exp(b,n) be b^n
+
+Base case:
+exp(b,1) = 1  [Since b^1 = b]
+
+Recurrence:
+exp(b,n) = {if n divisible by 2    exp(b,n/2)^2 \% 10000
+           {else                   (exp(b,n/2)^2)*b \% 10000
+
+Example: (for simplicity, leave out the modulus)
+exp(3,10)
+= exp(3,5)^2
+= (exp(3,2)^2))*3)^2
+= (((exp(3,1)^2)*3)^2) [Base case]
+= (((3^2)^2)*3)^2)
+= ((9^2)*3)^2)
+= (81*3)^2
+= (243)^2
+= 59049
+\end{lstlisting}
+
+\subsubsection{Implementation}
+
+\begin{lstlisting}
+int exponent(int b,int n){
+   if(n==1)return b;
+   if(n\%2==0){
+     int x = exponent(b,n/2);
+     return (x * x)\%10000;
+   }
+   else{
+     int x = exponent(b,n/2);
+     return (x*x*b)\%10000;
+   }
+}
+
+\end{lstlisting}
+
+\subsection{Exercises}
+
+\begin{enumerate}
+\item Given an array of N integers, write a recursive function to get the sum
+\item Given a string S, write a recursive function to determine if it is a palindrome.
+\item Given a number N, write a recursive function to output the number in binary.
+\item Given a string S, write a recursive function to return a reversed string
+\end{enumerate}
+
+        \section{ Advanced Recursion }
+        
 
 Prerequisites: Recursion
 
@@ -561,14 +1038,14 @@ P('ABC')
 \subsubsection{Implementation}
 
 \begin{lstlisting}
-Vector<String> permutation(String s){
+Vector$<$String$>$ permutation(String s){
    int n = s.length;
-   Vector<String> vec = new Vector<String>();
+   Vector$<$String$>$ vec = new Vector$<$String$>$();
    if(s.length==0)return vec;
-   Vector<String> subvec = permutation(s.substring(0,n-1));
-   for(int i=0;i<subvec.size();i++){
+   Vector$<$String$>$ subvec = permutation(s.substring(0,n-1));
+   for(int i=0;i$<$subvec.size();i++){
       String ps = subvec.get(i);
-      for(int j=0;j<n;j++){
+      for(int j=0;j$<$n;j++){
          vec.push(ps.substring(0,j)+s.charAt(n)+ps.substring(j,n-1));
       }
    }
@@ -582,351 +1059,11 @@ Vector<String> permutation(String s){
 \item Given a string S, write a recursive function to generate all substrings
 \item Write a solution for hanoi towers but with the restriction that discs can only be moved from adjacent poles. (You can move a disc from A to B but not A to C because they are not adjacent)
 \end{enumerate}
-\chapter{Sorting}\subsubsection{Introduction}
 
-Sorting is arranging an array of n elements in either increasing or decreasing order by some property. It is very useful in computer science for efficiency in other algorithms that usually require a search.
-
-A stable sort is a sort that can preserve sorting of other properties. For example if we have
-
-(3,G), (1,G), (3, A), (6 K), (1,B)
-
-and we want to sort by the first property in increasing order, we will have:
-
-(1, G) (1,B) (3,G), (3,A) (6 K).
-
-If we sort again by the second property we have (1,B) (3, A) (1, G) (3, G) (6,K) then the sort is stable as the first sort is preserved. However if we had (1,B) (3, A) (3, G) (1, G) (6, K), then the sort would be unstable.
-
-\section{Bubble Sort}
-
-Bubble sort is one of the most basic sorting algorithms, one of the first you should learn.
-
-Its name describes how the algorithm works: bigger bubbles float to the top. This will become more clear when we see the implmentation.
-
-The sorting algorithms are implemented to sort integer arrays but can be adapted to sort arrays of any data structure that is comparable.
-
-\subsection{Implementation}
-
-\begin{lstlisting}
-//sorts integers from smallest to greatest
-public static void BubbleSort (int a[]){
-    for (int i=0;i<a.length;i++){
-        for (int j=1;j<a.length;j++){
-            //if the current bubble is smaller than the bubble that's 
-            //below then the bigger bubble floats up
-            if (a[j]<a[j-1]){
-                //swap the bubbles
-                int temp = a[j];
-                a[j] = a[j-1];
-                a[j-1] = temp;
-            }
-        }
-    }
-}
-\end{lstlisting}
-\section{Selection Sort}
-
-Selection Sort is similar to Bubble Sort in terms of complexity and arguably more intuitive.
-
-Selection Sort works by selecting the smallest element and setting it as the first item in the array, then selecting the second element and setting that as the second item in the array and so on. This process repeats until the least smallest element (the largest element) is set as the last item in the array.
-
-The sorting algorithms are implemented to sort integer arrays but can be adapted to sort arrays of any data structure that is comparable.
-
-\subsection{Implementation}
-
-\begin{lstlisting}
-//sorts integers from smallest to greatest
-public static void SelectionSort (int a[]){
-    //iterates through the array selecting the smallest elements
-    for (int i=0;i<a.length-1;i++){
-        int minIndex = i;//var for storing where the ith smallest element is
-        //iterates through the array looking for the ith smallest element
-        for (int j=i+1;j<a.length;j++){
-            //if the current element is smaller than the current smallest element
-            if (a[j]<a[minIndex]){
-                //updated the location of the smallest element
-                minIndex = j;
-            }
-            //swap the current i with the smallest element
-            int temp = a[i];
-            a[i] = a[minIndex];
-            a[minIndex] = temp;
-        }
-    }
-}
-\end{lstlisting}
-\section{Insertion Sort}
-
-Insertion Sort is the another n<sup>2</sup> sorting algorithm.
-
-It works by starting with an empty sorted sequence of numbers and then inserting every element in the array into the sorted sequence maintaining the order after each insert.
-
-The sorting algorithms are implemented to sort integer arrays but can be adapted to sort arrays of any data structure that is comparable.
-
-\subsection{Implementation}
-
-\begin{lstlisting}
-//sorts integers from smallest to greatest
-public static void InsertionSort (int a[]){
-    //iterates through the array selecting the smallest elements
-    for (int i=0;i<a.length;i++){
-        //element that needs to be inserted into the sorted list
-        int val = a[i]; 
-        //keeps track of where to insert the element
-        int index = i; 
-        
-        //loops through the already sorted list to find where to 
-        //insert the current element
-        while (index > 0 \&\& a[index-1] > val){
-            //switches the current item at index with the one before 
-            //to check if the element that needs to be inserted will 
-            //go in the next spot
-            a[index] = a[index-1];
-            index--;
-        }
-        a[index] = val;
-    }
-}
-\end{lstlisting}
-\section{Heap Sort}
-
-Prerequisites: Heap
-
-Heap sort is a sort that inserts all the element in an array into a min heap and then pops all the element outs. Since a heap guarantees that the root node will be the smallest element, we can store the entire array in a heap and the order that they are popped out of the heap will be in order.
-
-\subsubsection{Implementation}
-
-\begin{lstlisting}
-public void heapSort(int[] arr){
-    PriorityQueue<Integer> pq; //built in heap
-    for(int i=0;i<arr.length;i++){
-       pq.push(arr[i]);
-    }
-    for(int i=0;i<arr.length;i++){
-       arr[i] = pq.pop(i);
-    }
-}
-\end{lstlisting}
-\section{Merge Sort}
-
-Preqrequistes: Recursion
-
-Merge sort works by breaking down the sorting into smaller pieces. If we want to sort N elements, we can sort the first half of the elements, sort the second half and then merge the results together. To sort the first half, we can do the exact same thing of sorting the first quarter and the second quarter and merging the results.
-
-\subsection{Implementation}
-
-Merge sort work be breaking down the problem into smaller and smaller parts and then combing those parts to solve the big problem.
-
-We can keep splitting the list into half until there each piece has 1 element or no elements. We can then combine the results of each piece repeatedly until the entire list is sorted.
-
-Example:
-
-\includegraphics[width=\maxwidth{\textwidth}]{mergesort.png}
-
-\subsubsection{Formalization}
-
-\begin{lstlisting}
-Let merge(arr1,arr2) combine two sorted arrays into one sorted array
-
-merge(arr1, arr2)= { arr2 if arr1 is empty
-                     { arr1 if arr2 is empty
-                     { arr1.first + merge(arr1[1..arr1.length],arr2) if arr1.first < arr2.first
-                     { arr2.first + merge(arr1[0..arr.length],arr2[1..length]) else
-
-Let sort(arr) sort an array
-Let middle be (0+arr.length)/2
-sort(arr) = merge(sort(arr[0..middle]) ,sort(arr[middle..arr.length])
-\end{lstlisting}
-
-\subsubsection{Code}
-
-For our Java implementation, instead of returning a new array every time we merge two arrays, we can create a temporary array to store the merged results and then move it back.
-
-\begin{lstlisting}
-/**
- * Merges two segments of the same array. The two segments should be adjacent.
- * @param arr Array containing segments
- * @param start1 Start index of first segment
- * @param end1 End index of first segment
- * @param start2 Start index of second segment
- * @param end2 End index of second segment
- */
-
-public static void merge(int arr[],int start1,int end1, int start2,int end2){
-    int arr2[] = new int[end2-start1+1];
-    int begin = start1;
-    int n = 0;
+        \section{ Intermediate Recursion }
+        ((((Intermediate Recursion))))
+\part{ Data Structures }
     
-    //Pick smallest element one by one
-    while(start1 <= end1 \&\& start2 <= end2){
-        if(arr[start1] <= arr[start2]){
-            arr2[n] = arr[start1];
-            start1++;
-        }else{
-            arr2[n] = arr[start2];
-            start2++;
-        }
-        n++;
-    }
-    //If first segment still has elements
-    while(start1 <= end1){
-        arr2[n] = arr[start1];
-        n++;
-        start1++;
-    }
-    //if second segment still has elements
-    while(start2 <= end2){
-        arr2[n] = arr[start2];
-        start2++;
-        n++;
-    }
-    //Copy merged array back
-    for(int i=0;i<n;i++){
-        arr[begin+i]=arr2[i];
-    }
-}
-/**
- * Sorts an array using merge sort
- * @param arr Array to be sorted
- * @param start Index at beginning of array
- * @param end Index at end of array
- */
-public static void mergeSort(int arr[],int start,int end){
-    if(end-start<=0){
-        return;
-    }
-    int mid = (start+end)/2;
-    mergeSort(arr,start,mid);
-    mergeSort(arr,mid+1,end);
-    merge(arr,start,mid,mid+1,end);
-}
-
-public static void main(){
-    int arr[] = {5,7,2,6,8,5};
-    mergeSort(arr,0,arr.length-1);
-}
-\end{lstlisting}
-\section{Quick Sort}
-
-Quick Sort is another fast sorting algorithm that uses divide and conquer. It is also known as partition-exchange sort or as Hoare's quicksort (named after the author).
-
-In Quick Sort an element is selected as a "pivot". The list is then divided into two sublists: a list of elements less than (or equal to) the pivot and a list of elements greater than the pivot. Each sublist is sorted (conquered) and then appended together along with the origin pivot.
-
-In the best case (if the pivot that is chosen is exactly the middle element), then the runtime is O(n log n). However, in the worst case, the runtime for Quick Sort is n$^{2}$. Despite its worst case behaviour, quick sort is still popular and in widespread use. The average case behaviour is quite good and there are straightforward methods that can be used to improve the selection of the pivot.
-
-The sorting algorithms are implemented to sort integer arrays but can be adapted to sort arrays of any data structure that is comparable.
-
-\subsection{Implementation}
-
-\includegraphics[width=\maxwidth{\textwidth}]{quicksort.png}
-
-\begin{lstlisting}
-//sorts integers from smallest to greatest
-public static void QuickSort (int a[], int first, int last){
-    //first is the starting index of the list
-    //last is the last index of the list
-    //QuickSort can be called by QuickSort(a, 0, a.length-1)
-    
-    if (last <= first) return; //if the array size <= 1
-    
-    int pivot = a[first]; //picks the first element as the pivot
-    // the location to put the next integer that's larger than the pivot
-    int index = last;  
-    
-    //iterate through the list, sorting it by the first pivot
-    for (int i=last;i>=first+1;i--){
-        if (a[i]>=pivot){
-            //swap the current element to be on the side that's 
-            //larger than the pivot
-            int temp = a[index];
-            a[index] = a[i];
-            a[i] = temp;
-            
-            //decrements index for the next switch
-            index--;
-        }
-    }
-    
-    //swap the element at index with the pivot so that it's 
-    //in the right place
-    int temp = pivot;
-    a[first] = a[index];
-    a[index] = pivot;
-    
-    //recursively sort the lists less than and greater than the pivot
-    QuickSort (a, first, index-1);
-    QuickSort (a, index+1, last);
-}
-\end{lstlisting}
-\section{Bozo Sort}
-
-Bozo sort is a sort that keeps randomly arranging an array until it is sorted. If you are very lucky bozo sort will be very fast! But for the most part this is a horrible sort.
-
-\subsection{Implementation}
-
-\begin{lstlisting}
-public void bozoSort(int[] arr){
-   
-   boolean sorted = false;
-   int i = 0;
-
-   while(!sorted){
-       sorted = true;
-       for(i=1;i<arr.length;i++){
-          if(arr[i]<arr[i-1]){
-             sorted = false;
-             break;
-          }
-       }
-       if(sorted)return;
-
-       for(i=0;i<arr.length;i++){
-           int x = Math.randInt(arr.length);
-           int y = Math.randInt(arr.length);
-           int temp = arr[x];
-           arr[x] = arr[y];
-           arr[y] = temp;
-       }
-
-   }
-}
-
-\end{lstlisting}
-\section{Permutation Sort}
-
-Permutation sort is a sort that keeps permutating the array until it is sorted. It is the slowest sort that will guarantee that the array will be sorted.
-
-\subsubsection{Implementation}
-
-\begin{lstlisting}
-void permuteSort(int[] arr){
-  while(!sorted(arr)){
-    permute(arr);
-  }
-}
-\end{lstlisting}
-\section{Miracle Sort}
-
-Prerequisites: Miracles, Sense of Humour
-
-Miracle sort is a sort that truly requires a miracle. We keep checking the array until it is sorted. It requires that some external force (a miracle?) changes some bits in the computer in a way that it becomes sorted.
-
-\subsection{Implementation}
-
-\begin{lstlisting}
-public void miracleSort(int[] arr){
-   boolean sorted = false;
-   do{
-      sorted = true;
-      for(int i=1;i<arr.length;i++){
-         if(arr[i]<arr[i-1]){
-             sorted = false;
-             break;
-         }
-      }
-   }while(!sorted);
-}
-\end{lstlisting}
-\chapter{Data Structures}\subsubsection{Introduction}
 
 Data structures are a way of storing data such that it can be used in an efficient way. Although many of these data structures are already built into various languages, it is important to understand how they work. By understanding the implementations we can have a sense of which data structure to use in different problems as well as determine how efficient they are.
 
@@ -942,81 +1079,10 @@ Some implementations of abstract data types are better than others for different
 
 For more intermediate data structures, read the advanced data structures page.
 
-\section{Arrays}
 
-Source on Github
-
-Imagine you had a row of parking spaces where each was labelled with a number. If you wanted to know what the license plate of a car at parking space 4 was, all you have to do is go to the parking space and read off the license plate. If you wanted to park you car at parking space 5, you would go to parking space 5 and put your car in there if there was nothing there. Let's say that you had cars at parking spaces 1, 2, and 3. If you wanted to insert a new car at parking space 1 and keep the rest of the cars in the same order, you would have to shift the cars in the parking spaces from 1, 2 and 3 to 2, 3 and 4 by getting in each car and parking them in the new spaces which would take some time. This type of structure is an array.
-
-An array is the most basic data structure that stores elements of the same type in a fixed block. The fact that it is in one block and the same type is important because it allows accessing elements very quickly if you have the index. All you have to do is go to the index and retrieve the element. However, inserting elements in the array is slow because you would have to shift all the elements and also if you want to shift past the fixed size you will get an error. (Imagine the parking spaces are full and you wanted to insert a car somewhere, there will still be one car that will have no parking space).
-
-Arrays can be multidimensional meaning you can have an array of array of objects. (Imagine a parking lot with multiple rows of parking spaces).
-
-\vspace{10pt} \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
-
-
-  Operation &
-  Create &
-  Get i &
-  Set i\\
-\hline
-
-
-  Time Complexity &
-  O(n) &
-  O(1) &
-  O(1)\\
-
-\hline\end{tabular}
-
-\subsection{Implementation}
-
-Implementation of a very simple array in Java
-
-\subsubsection{Create array}
-
-Creating an array allocates a block of memory for us to store the elements.
-
-\begin{lstlisting}
-public static int[] createArray(int size){
-     int[] array = new int[size];
-     return array;
-}
-\end{lstlisting}
-
-\subsubsection{Get}
-
-When we want to get the element of an index all we have to do is offset the index by the array. However we need to check that the index is within bounds of the array.
-
-\begin{lstlisting}
-public static int getElemenent(int[] arr, int i){
-    if(i<0 || i>=arr.length){
-        throw new ArrayIndexOutOfBoundsException();
-    }
-    return arr[i];
-}
-\end{lstlisting}
-
-\subsubsection{Set}
-
-Setting is very similar to getting but instead we change the value in the array.
-
-\begin{lstlisting}
-public static void setElemenent(int[] arr, int i,int value){
-    if(i<0 || i>=arr.length){
-        throw new ArrayIndexOutOfBoundsException();
-    }
-    arr[i] = value;
-}
-\end{lstlisting}
-
-\subsection{See Also}
-
-\begin{itemize}
-\item Vector
-\item Stack
-\end{itemize}
-\section{Stack}
+    \chapter{ Stack }
+        \section{ Stack }
+        
 
 Imagine a stack of plates at a buffet, the plates are taken from the top and are also replaced from the top. The first plate to go in will be the last plate to come out. The last plate to go in will be the first to come out. This structure is called a stack.
 
@@ -1036,7 +1102,7 @@ A stack is usually implemented as a vector.
 
 \subsection{Implementation}
 
-\vspace{10pt} \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Implementation &
@@ -1049,7 +1115,7 @@ A stack is usually implemented as a vector.
   O(1) &
   O(1)\\
 
-\hline\end{tabular}
+\hline\end{tabulary}
 
 \subsection{Exercises}
 
@@ -1070,7 +1136,9 @@ Illegal syntax:
 \item ( ) [ ( ] )
 \end{itemize}
 \end{enumerate}
-\section{Vector}
+
+        \section{ Vector }
+        
 
 Prerequisites: Arrays, Stack
 
@@ -1078,7 +1146,7 @@ Source on Github
 
 A vector is a stack that is implemented as an array. It is very similar to an array, but it is more flexible in terms of size. Elements are added and removed only from the end of the array. When more elements are added to the vector and the vector is at full capacity, the vector resizes itself and reallocates for 2*N space. When using an vector we can keep adding elements and let the data structure handle all the memory allocation.
 
-\vspace{10pt} \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Operation &
@@ -1097,13 +1165,11 @@ A vector is a stack that is implemented as an array. It is very similar to an ar
   O(n) &
   O(n)\\
 
-\hline\end{tabular}
+\hline\end{tabulary}
 
-\subsection{Implementation}
+\subsection{Class}
 
 There is a builtin Vector class already, but we will go through the implementation of a simple integer vector class to understand how the data structure works.
-
-\subsubsection{Class}
 
 In our vector class, we need to store the element and the size of the current vector.
 
@@ -1121,7 +1187,7 @@ publc Vec(int startSize){
 
 \end{lstlisting}
 
-\subsubsection{Resize}
+\subsection{Resize}
 
 Resize will be used to resize the current size of elements. We create a new array of two times the size of the old one and copy the old array over.
 
@@ -1130,7 +1196,7 @@ Resize will be used to resize the current size of elements. We create a new arra
 \begin{lstlisting}
 public void resize(){
     int[] newArr = new int[2*arr.length];
-    for(int i=0;i<end;i++){
+    for(int i=0;i$<$end;i++){
         newArr[i] = arr[i];
     }
     arr = newArr;
@@ -1145,7 +1211,7 @@ Add element will add elements to the end of the vector. If the array is full, th
 
 \begin{lstlisting}
 public void add(int x){
-        if(size>=arr.length){
+        if(size$>$=arr.length){
         resize();
     }
     arr[size] = x;
@@ -1180,11 +1246,11 @@ We shift everything to the right of the index to the left by one to fill in the 
 
 \begin{lstlisting}
 public int remove(int idx){
-    if(idx<0||idx>=size){
+    if(idx$<$0||idx$>$=size){
         throw new ArrayIndexOutOfBoundsException();
     }
     int ret = arr[idx];
-    while(idx+1<size){
+    while(idx+1$<$size){
         arr[idx]=arr[idx+1];
         idx++;
     }
@@ -1201,7 +1267,7 @@ Returns the element at the specified index. It will throw an exception if the in
 
 \begin{lstlisting}
 public int get(int idx){
-    if(idx<0||idx>=size){
+    if(idx$<$0||idx$>$=size){
         throw new ArrayIndexOutOfBoundsException();
     }   
     return arr[idx];
@@ -1218,16 +1284,16 @@ Insert the new number x at the index. We need to make space at the index for the
 
 \begin{lstlisting}
 public void insert(int idx,int x){
-    if(idx<0||idx>size){
+    if(idx$<$0||idx$>$size){
         throw new ArrayIndexOutOfBoundsException();
     }
     size++;
-    if(size>=arr.length){
+    if(size$>$=arr.length){
         resize();
     }
     //Shift elements to the right or idx by 1
     int idx2 = size;
-    while(idx2>idx){
+    while(idx2$>$idx){
         arr[idx2]=arr[idx2-1];
         idx2--;
     }   
@@ -1240,7 +1306,10 @@ public void insert(int idx,int x){
 \begin{enumerate}
 \item Implement removeAtIndex(int index) for Vector
 \end{enumerate}
-\section{Queue}
+
+    \chapter{ Queue }
+        \section{ Queue }
+        
 
 Imagine you are standing in line for a restaurant. Whoever is first in line will be served first and whoever is last in line will be served last. People can be served while more people join the line and the line may get very long because it takes a while to serve one person while more people join the queue. This is called a queue.
 
@@ -1260,7 +1329,7 @@ Example of pop:
 
 We can implement a queue most efficiently using a linked list because it has an efficient memory allocation.
 
-\vspace{10pt} \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Implementation &
@@ -1273,7 +1342,7 @@ We can implement a queue most efficiently using a linked list because it has an 
   O(1) &
   O(1)\\
 
-\hline\end{tabular}
+\hline\end{tabulary}
 
 \subsection{Exercises}
 
@@ -1301,7 +1370,9 @@ Example:
 \item B
 \end{itemize}
 \end{enumerate}
-\section{Linked List}
+
+        \section{ Linked List }
+        
 
 Prerequisites: Queue
 
@@ -1319,7 +1390,7 @@ A doubly linked list is a linked list that has pointers going backwards as well 
 
 \includegraphics[width=\maxwidth{\textwidth}]{doublelinkedlist.png}
 
-\vspace{10pt} \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Operation &
@@ -1336,13 +1407,11 @@ A doubly linked list is a linked list that has pointers going backwards as well 
   O(1) &
   O(1)\\
 
-\hline\end{tabular}
+\hline\end{tabulary}
 
-\subsection{Implementation}
+\subsection{Link Class}
 
 In Java, there already exists a LinkedList class but we will implement our own.
-
-\subsubsection{Link Class}
 
 The Link class for each "link" in the Linked List. In each Link we only need the value and location of the previous and next node.
 
@@ -1357,7 +1426,7 @@ class Link{
 }
 \end{lstlisting}
 
-\subsubsection{Class}
+\subsection{LinkedList Class}
 
 Create the linked list by initializing the starting node as null and setting the size to empty.
 
@@ -1373,7 +1442,7 @@ class LinkedList{
 }
 \end{lstlisting}
 
-\subsubsection{Push}
+\subsection{Push}
 
 Create a new node with the value given and add it to the end. We have to set the current head previous node to the new node and the new next next to the last node.
 
@@ -1399,7 +1468,7 @@ public void push(int value){
 }
 \end{lstlisting}
 
-\subsubsection{Pop}
+\subsection{Pop}
 
 Pops off the node at the head.
 
@@ -1425,7 +1494,7 @@ public int pop(){
 }
 \end{lstlisting}
 
-\subsubsection{Get}
+\subsection{Get}
 
 Get retrieves the value at the specified index. We have to loop through the entire list to get the index we want because the nodes are not in the same block of memory.
 
@@ -1453,7 +1522,7 @@ public int get(int index){
 }
 \end{lstlisting}
 
-\subsubsection{Delete}
+\subsection{Delete}
 
 To delete the current node we set the previous node next link to the link after.
 
@@ -1492,43 +1561,10 @@ For example, you have 5 players (1,2,3,4,5) and the 3rd player is eliminated.
 \end{itemize}
 \item Given two linked lists which may share tails, determine the point at which they converge.
 \end{enumerate}
-\section{Trees}
 
-Trees are data structures that follow a hierarchy, each node has exactly one or zero parents and each node has children. Trees are recursive structures meaning that each child of a tree is also a tree. A tree within another tree is called a subtree.
-
-A child is a node that is below another node.
-
-A parent is a node that is above another node.
-
-The element at the top of the tree with no parents is called a root. The node at the bottom of the tree with no children is called a leaf.
-
-Each node can hold different kinds of information depending on the tree. A node can hold the children it has, the parent it has, a key associated with the node and a value associated with the node.
-
-\includegraphics[width=\maxwidth{\textwidth}]{tree.png}
-
-\begin{itemize}
-\item A is the root of the tree and E,F,G,H are leaves. 
-\item The parent of E is B. 
-\item C,F,G is a subtree of the original tree.
-\end{itemize}
-
-\subsection{Binary Tree}
-
-A binary tree is a tree where every node has at max two children.
-
-\includegraphics[width=\maxwidth{\textwidth}]{binarytree.png}
-\section{Binary Tree}
-
-A binary tree is a tree such that each node has at most 2 children.
-
-\includegraphics[width=\maxwidth{\textwidth}]{binarytree.png}
-
-\subsection{Binary Search Tree}
-
-A binary search tree is a type of binary tree where all the nodes in a left subtree will be smaller than the node and all the nodes in a right subtree will be greater than the node. It has a recursive structure such that each subtree is also a binary search tree.
-
-\includegraphics[width=\maxwidth{\textwidth}]{bst.png}
-\section{Sets}
+    \chapter{ Sets }
+        \section{ Sets }
+        
 
 Imagine you have a grocery list that you use to keep tracking of things you need to buy. You want to make sure there are no duplicate items in the list, you can add items to the list and that you can remove items from your list. This structure is similar to what a set does.
 
@@ -1538,7 +1574,7 @@ Insertion places an element into the set, deletion removes an element from the s
 
 \subsection{Implementation}
 
-\vspace{10pt} \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Type &
@@ -1558,7 +1594,7 @@ Insertion places an element into the set, deletion removes an element from the s
   O(1) &
   O(1)\\
 
-\hline\end{tabular}
+\hline\end{tabulary}
 
 \subsection{Exercises}
 
@@ -1575,9 +1611,11 @@ Insertion places an element into the set, deletion removes an element from the s
 \item For example in the list (10,5,-1, 3, 4, -6) the tuple of size 4 (-1,3,4-6) adds to 0.
 \end{itemize}
 \end{enumerate}
-\section{Hash Set}
 
-Prerequisites: Sets
+        \section{ Hash Set }
+        
+
+Prerequisites: Sets, Linked List
 
 Source on Github
 
@@ -1591,7 +1629,7 @@ If we want to check if an element already exists within the set, we first comput
 
 \includegraphics[width=\maxwidth{\textwidth}]{hashset.png}
 
-\vspace{10pt} \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Operation &
@@ -1606,14 +1644,7 @@ If we want to check if an element already exists within the set, we first comput
   O(1) &
   O(1)\\
 
-\hline\end{tabular}
-
-\subsubsection{Prerequisites}
-
-\begin{itemize}
-\item Sets
-\item Linked List
-\end{itemize}
+\hline\end{tabulary}
 
 \subsection{Implementation}
 
@@ -1636,15 +1667,15 @@ The collision chance is the threshold for resizing the hash set. When the ratio 
 \begin{lstlisting}
 public class HashSet {
 
-    public LinkedList<Integer>[] buckets;
+    public LinkedList$<$Integer$>$[] buckets;
     public int bucketsSize = 10;
     public int size = 0;
     public static final double COLLISION\_CHANCE = 0.3;
     
     public HashSet(){
         buckets = new LinkedList[10];
-        for(int i=0;i<bucketsSize;i++){
-            buckets[i] = new LinkedList<Integer>();
+        for(int i=0;i$<$bucketsSize;i++){
+            buckets[i] = new LinkedList$<$Integer$>$();
         }
         size = 0;
     }
@@ -1673,11 +1704,11 @@ To resize efficiently, we can create two times the number of buckets and set the
 \begin{lstlisting}
 public void resize(){
     int newBucketsSize = bucketsSize*2;
-    LinkedList<Integer>[] newBuckets = new LinkedList[newBucketsSize];
-    for(int i=0;i<newBucketsSize;i++){
-        newBuckets[i] = new LinkedList<Integer>();
+    LinkedList$<$Integer$>$[] newBuckets = new LinkedList[newBucketsSize];
+    for(int i=0;i$<$newBucketsSize;i++){
+        newBuckets[i] = new LinkedList$<$Integer$>$();
     }
-    for(int i=0;i<bucketsSize;i++){
+    for(int i=0;i$<$bucketsSize;i++){
         for(Integer y:buckets[i]){
             int hash = getHash(y,newBucketsSize);
             newBuckets[hash].push(y);
@@ -1702,12 +1733,12 @@ The function will return method or not the operation was successful. If the buck
 public boolean insert(int x){
     int hash = getHash(x,bucketsSize);
         
-    LinkedList<Integer> curBucket = buckets[hash];
+    LinkedList$<$Integer$>$ curBucket = buckets[hash];
     if(curBucket.contains(x)){
         return false;
     }
     curBucket.push(x);
-    if( (float)size/bucketsSize>COLLISION\_CHANCE){
+    if( (float)size/bucketsSize$>$COLLISION\_CHANCE){
         resize();
     }
     size++;
@@ -1728,7 +1759,7 @@ To check if a hash set contains an element, we get the hash code from our hashin
 \begin{lstlisting}
 public boolean contains(int x){
     int hash = getHash(x,bucketsSize);
-    LinkedList<Integer> curBucket = buckets[hash];
+    LinkedList$<$Integer$>$ curBucket = buckets[hash];
     return curBucket.contains(x);
 }
 \end{lstlisting}
@@ -1749,7 +1780,7 @@ The function will return whether or not the operation was successful. If the buc
 public boolean remove(int x){
     int hash = getHash(x,bucketsSize);
     
-    LinkedList<Integer> curBucket = buckets[hash];
+    LinkedList$<$Integer$>$ curBucket = buckets[hash];
     if(curBucket.remove((Integer)x)){
         return true;
     }
@@ -1766,19 +1797,17 @@ public boolean remove(int x){
 \item Given an array of numbers and a number A, find the number of pairs of numbers that sum to A.
 \item Given an array of numbers and a number A, find the number of quadruples that sum to A.
 \end{enumerate}
-\section{Tree Set}
 
-Prerequeisites: Sets, Binary Search Tree
+        \section{ Binary Search Tree }
+        
 
-Source on Github
+A binary search tree is a  binary tree with special properties. The left children of a node will always be less than the node and the right children of a node will always be more than the node. It has a recursive structure such that every subtree is also a binary search tree.
 
-A tree set is a set which stores the values in a binary search tree. To store elements in a tree set, they must be able to be sorted by a property. To insert an element, it is added to the binary tree. To delete an element, it is removed from the binary tree. To check for membership, we do a binary search for the element in the binary tree.
-
-The advantage of tree sets is that they are maintained in a sorted order.
+\includegraphics[width=\maxwidth{\textwidth}]{bstcompare.png}
 
 \includegraphics[width=\maxwidth{\textwidth}]{bst.png}
 
-\vspace{10pt} \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Operation &
@@ -1793,7 +1822,303 @@ The advantage of tree sets is that they are maintained in a sorted order.
   O(log n) &
   O(log n)\\
 
-\hline\end{tabular}
+\hline\end{tabulary}
+
+\subsubsection{Prerequisites}
+
+\begin{itemize}
+\item Set
+\item Binary Tree
+\end{itemize}
+
+\subsection{Implementation}
+
+In a binary search tree, everything to the left of a node is smaller than that node and everything to the right of that node is greater than that node.
+
+\includegraphics[width=\maxwidth{\textwidth}]{bstcompare.png}
+
+\includegraphics[width=\maxwidth{\textwidth}]{bst.png}
+
+This implementation of a binary search will be unbalanced. For a balanced binary search tree, see AVL trees and Red Black trees.
+
+\subsubsection{Class}
+
+A Node is a node in our tree set. Each node will contain a left subtree, a right subtree, the parent of the tree and the value stored at that node. It is unnecessary to store the parent but for this implementation it will be easier to keep track of the parent.
+
+replaceChild replaces the left or right child node specified with the replacement node.
+
+\begin{lstlisting}
+public class Node {
+    int value;
+    Node left;
+    Node right;
+    Node parent;
+    public Node(int val,Node parent){
+        this.value = val;
+        this.left = null;
+        this.right = null;
+        this.parent = parent;
+    }
+    public void replaceChild(Node child,Node replacement){
+        if(left==child){
+            left = replacement;
+            if(replacement!= null){
+                replacement.parent = this;
+            }
+        }
+        if(right==child){
+            right = replacement;
+            if(replacement!= null){
+                replacement.parent = this;
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+In our class we will store the number of element in the set and the root of the tree. From the root of the tree we can traverse the rest of the tree.
+
+\begin{lstlisting}
+public class TreeSet {
+
+    int size;
+    Node root;
+    
+    public TreeSet(){
+        size = 0;
+        root = null;
+    }
+\end{lstlisting}
+
+\subsubsection{Insert}
+
+To insert an element in the tree set we search for the element that we are trying to insert. If it is already there then the operation fails because sets contain unique elements. Otherwise we will insert the new element into the set.
+
+\includegraphics[width=\maxwidth{\textwidth}]{bstinsert.png}
+
+\includegraphics[width=\maxwidth{\textwidth}]{bstinsert2.png}
+
+\includegraphics[width=\maxwidth{\textwidth}]{bstinsert3.png}
+
+\includegraphics[width=\maxwidth{\textwidth}]{bstinsert4.png}
+
+\begin{lstlisting}
+public boolean insert(int x){
+    if(root==null){
+        root = new Node(x,null);
+        size = 1;
+        return true;
+    }
+    Node curTree = root;
+    while(curTree != null){
+        if(x == curTree.value){
+            return false;
+        }else if(x $<$ curTree.value){
+            if(curTree.left == null){
+                curTree.left =  new Node(x,curTree);
+                size++;
+                return true;
+            }
+            curTree = curTree.left;
+        }else {
+            if(curTree.right == null){
+                curTree.right = new Node(x,curTree);
+                size++;
+                return true;
+            }
+            curTree = curTree.right;
+        }
+    }
+    return false;
+}
+\end{lstlisting}
+
+\subsubsection{Contains}
+
+To check if the tree set contains an element, we search for it in the binary tree by starting at the root. If the number is less than the current, we search the left child. If the number if greater than the current, we search the right child.
+
+\includegraphics[width=\maxwidth{\textwidth}]{bstcontains.png}
+
+\includegraphics[width=\maxwidth{\textwidth}]{bstcontains2.png}
+
+\includegraphics[width=\maxwidth{\textwidth}]{bstcontains3.png}
+
+\includegraphics[width=\maxwidth{\textwidth}]{bstcontains4.png}
+
+We return true if it exists and false otherwise.
+
+\begin{lstlisting}
+public boolean contains(int x){
+    Node curTree = root;
+    while(curTree!=null){
+        if(x==curTree.value){
+            return true;
+        }else if(x$<$curTree.value){
+            curTree = curTree.left;
+        }else{
+            curTree = curTree.right;
+        }
+    }
+    return false;
+}
+\end{lstlisting}
+
+\subsubsection{Remove}
+
+Removing an element is a much more complex because we need to maintain the tree structure of the tree set when removing elements. First we locate the element that we want to remove. If the element is not there then the operation failed and we return false. If the element is there then are three cases we need to consider.
+
+\includegraphics[width=\maxwidth{\textwidth}]{bst-rem.png}
+
+Case 1: Node is a leaf node
+
+\includegraphics[width=\maxwidth{\textwidth}]{bst-rem-case11.png}
+
+If the node we want to remove is the leaf node, we can simply remove it.
+
+\includegraphics[width=\maxwidth{\textwidth}]{bst-rem-case12.png}
+
+Case 2: Node has one child
+
+\includegraphics[width=\maxwidth{\textwidth}]{bst-rem-case21.png}
+
+If the node we want to remove has a child, we can replace that node with its' only child.
+
+\includegraphics[width=\maxwidth{\textwidth}]{bst-rem-case22.png}
+
+Case 3: Node has two children
+
+\includegraphics[width=\maxwidth{\textwidth}]{bst-rem-case31.png}
+
+We need to replace the node with the rightmost of the left subtree or the leftmost of the right subtree to maintain the order.
+
+\includegraphics[width=\maxwidth{\textwidth}]{bst-rem-case32.png}
+
+It does not matter which side we pick so we will use the rightmost of the left subtree. First we copy the value of the rightmost of the left subtree into the node that will be deleted.
+
+\includegraphics[width=\maxwidth{\textwidth}]{bst-rem-case33.png}
+
+Then we replace the rightmost of the left subtree with its left subtree.
+
+\includegraphics[width=\maxwidth{\textwidth}]{bst-rem-case34.png}
+
+\begin{lstlisting}
+public boolean remove(int x){
+    //Get node to remove
+    Node curNode = root;
+    while(curNode!=null){
+        if(x==curNode.value){
+            break;
+        }else if(x$<$curNode.value){
+            curNode = curNode.left;
+        }else{
+            curNode = curNode.right;
+        }
+    }
+    if(curNode==null){
+        return false;
+    }
+    //Case 1: leaf node
+    if(curNode.left==null \&\& curNode.right==null){
+        //if root
+        if(curNode==root){
+            this.root = null;
+        }else{
+            curNode.parent.replaceChild(curNode,null);
+        }
+    }
+    //Case 2: one child
+    else if(curNode.left==null){
+        //If root
+        if(curNode==root){
+            root = curNode.right;
+            root.parent = null;
+        }else {
+            curNode.parent.replaceChild(curNode,curNode.right);
+        }
+    }
+    else if(curNode.right==null){
+        //If root
+        if(curNode==root){
+            root = curNode.left;
+            root.parent = null;
+        }else {
+            curNode.parent.replaceChild(curNode,curNode.left);
+        }
+    }
+    //Case 3: two children
+    else {
+        //Get rightmost of left subtree
+        Node rightmost = curNode.left;
+        while(rightmost.right!=null){
+            rightmost = rightmost.right;
+        }
+        curNode.value = rightmost.value;
+        rightmost.parent.replaceChild(rightmost, rightmost.left);
+    }
+    size--;
+    return true;
+}
+\end{lstlisting}
+
+\subsubsection{Print Tree}
+
+Since tree sets are stored as a binary search tree, we can print the elements in order.
+
+\begin{lstlisting}
+public String dfs(Node curTree){
+    if(curTree == null)return "";
+    String ret = "";
+    ret += dfs(curTree.left);
+    ret += curTree.value;
+    ret += ",";
+    ret += dfs(curTree.right);
+    return ret;
+}
+    
+public String toString(){
+    String ret = "";
+    if(root!=null){
+        ret += dfs(root);
+    }
+    return ret.substring(0,ret.length()-1);
+}
+\end{lstlisting}
+
+\subsection{Exercises}
+
+\begin{enumerate}
+\item Write a function to determine if a binary tree is a binary search tree
+\end{enumerate}
+
+        \section{ Tree Set }
+        
+
+Prerequeisites: Sets, Binary Search Tree
+
+Source on Github
+
+A tree set is a set which stores the values in a binary search tree. To store elements in a tree set, they must be able to be sorted by a property. To insert an element, it is added to the binary tree. To delete an element, it is removed from the binary tree. To check for membership, we do a binary search for the element in the binary tree.
+
+The advantage of tree sets is that they are maintained in a sorted order.
+
+\includegraphics[width=\maxwidth{\textwidth}]{bst.png}
+
+\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+
+
+  Operation &
+  Membership &
+  Insertion &
+  Deletion\\
+\hline
+
+
+  Time Complexity &
+  O(log n) &
+  O(log n) &
+  O(log n)\\
+
+\hline\end{tabulary}
 
 \subsection{Implementation}
 
@@ -1804,7 +2129,12 @@ Tree Sets are implemented using binary search trees.
 \begin{enumerate}
 \item Given a list of names, output all the unique names in alphabetical order
 \end{enumerate}
-\section{Maps}
+
+    \chapter{ Maps }
+        \section{ Maps }
+        
+
+Prerequisites: Sets
 
 A map is an abstract data type that stores key-value pairs.
 
@@ -1812,15 +2142,9 @@ Imagine you had a English dictionary. If you look up a word, you can find it's d
 
 Maps (also called dictionaries) are abstract data types that store pairs of key-values and can be used to look up values from the keys. The keys are like the words in an English dictionary and the definitions can be seen as the values. Maps are able to support insertion of key-value pairs, retrieve values from keys, and delete key-value pairs.
 
-\subsubsection{Prerequisites}
-
-\begin{itemize}
-\item Sets
-\end{itemize}
-
 \subsection{Implementation}
 
-\vspace{10pt} \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Type &
@@ -1840,15 +2164,17 @@ Maps (also called dictionaries) are abstract data types that store pairs of key-
   O(1) &
   O(1)\\
 
-\hline\end{tabular}
+\hline\end{tabulary}
 
 \subsection{Exercises}
 
 \begin{enumerate}
 \item Given a list of N strings, output the strings in alphabetical order and the number of times they appear in the list.
-2, Given two list of N strings, output the 
+\item Given a mapping of a id to a name, output the ids in order by lexicographical name.
 \end{enumerate}
-\section{Hash Map}
+
+        \section{ Hash Map }
+        
 
 Prerequisites: Map, Hash Set
 
@@ -1869,15 +2195,15 @@ The collision chance is the threshold for resizing the hash set. When the ratio 
 \begin{lstlisting}
 public class HashMap {
 
-    public LinkedList<Pair>[] buckets;
+    public LinkedList$<$Pair$>$[] buckets;
     public int bucketsSize = 10;
     public int size = 0;
     public static final double COLLISION\_CHANCE = 0.3;
     
     public HashMap(){
         buckets = new LinkedList[10];
-        for(int i=0;i<bucketsSize;i++){
-            buckets[i] = new LinkedList<Pair>();
+        for(int i=0;i$<$bucketsSize;i++){
+            buckets[i] = new LinkedList$<$Pair$>$();
         }
         size = 0;
     }
@@ -1905,11 +2231,11 @@ To resize efficiently, we can create two times the number of buckets and set the
 \begin{lstlisting}
 public void resize(){
     int newBucketsSize = bucketsSize*2;
-    LinkedList<Pair>[] newBuckets = new LinkedList[newBucketsSize];
-    for(int i=0;i<newBucketsSize;i++){
-        newBuckets[i] = new LinkedList<Pair>();
+    LinkedList$<$Pair$>$[] newBuckets = new LinkedList[newBucketsSize];
+    for(int i=0;i$<$newBucketsSize;i++){
+        newBuckets[i] = new LinkedList$<$Pair$>$();
     }
-    for(int i=0;i<bucketsSize;i++){
+    for(int i=0;i$<$bucketsSize;i++){
         for(Pair p:buckets[i]){
             int hash = getHash(p.key,newBucketsSize);
             newBuckets[hash].push(p);
@@ -1930,12 +2256,12 @@ The function will return method or not the operation was successful. If the buck
 public boolean insert(Pair p){
     int hash = getHash(p.key,bucketsSize);
     
-    LinkedList<Pair> curBucket = buckets[hash];
+    LinkedList$<$Pair$>$ curBucket = buckets[hash];
     if(curBucket.contains(p.key)){
         return false;
     }
     curBucket.push(p);
-    if( (float)size/bucketsSize>COLLISION\_CHANCE){
+    if( (float)size/bucketsSize$>$COLLISION\_CHANCE){
         resize();
     }
     size++;
@@ -1950,7 +2276,7 @@ To get the value from a hash set from a key, we get the hash code from our hashi
 \begin{lstlisting}
 public Pair get(int key){
     int hash = getHash(key,bucketsSize);
-    LinkedList<Pair> curBucket = buckets[hash];
+    LinkedList$<$Pair$>$ curBucket = buckets[hash];
     for(Pair p:curBucket){
         if(p.key==key){
             return p;
@@ -1970,7 +2296,7 @@ The function will return whether or not the operation was successful. If the buc
 public boolean remove(int key){
     int hash = getHash(key,bucketsSize);
     
-    LinkedList<Pair> curBucket = buckets[hash];
+    LinkedList$<$Pair$>$ curBucket = buckets[hash];
     for(Pair p: curBucket){
         if(p.key==key){
             curBucket.remove(p);
@@ -1986,11 +2312,15 @@ public boolean remove(int key){
 \begin{enumerate}
 \item Create a hash map for the English dictionary (word as keys, definition as value). You will need to create a hash function for strings.
 \end{enumerate}
-\section{Tree Map}
+
+        \section{ Tree Map }
+        
+
+Prerequisites: Tree Set, Map
 
 A tree map is a map that stores the key value pairs in a tree set.
 
-\vspace{10pt} \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Operation &
@@ -2005,14 +2335,7 @@ A tree map is a map that stores the key value pairs in a tree set.
   O(log n) &
   O(log n)\\
 
-\hline\end{tabular}
-
-\subsubsection{Prerequisites}
-
-\begin{itemize}
-\item Tree Set
-\item Map
-\end{itemize}
+\hline\end{tabulary}
 
 \subsection{Implementation}
 
@@ -2096,7 +2419,7 @@ public boolean insert(Pair p){
     while(curTree != null){
         if(p.key == curTree.pair.key){
             return false;
-        }else if(p.key < curTree.pair.key){
+        }else if(p.key $<$ curTree.pair.key){
             if(curTree.left == null){
                 Node newTree = new Node(p);
                 newTree.parent = curTree;
@@ -2128,7 +2451,7 @@ public Pair get(int key){
     while(curTree!=null){
         if(key==curTree.pair.key){
             return curTree.pair;
-        }else if(key<curTree.pair.key){
+        }else if(key$<$curTree.pair.key){
             curTree = curTree.left;
         }else{
             curTree = curTree.right;
@@ -2183,7 +2506,7 @@ public boolean remove(int key){
     while(curNode!=null){
         if(key==curNode.pair.key){
             break;
-        }else if(key<curNode.pair.key){
+        }else if(key$<$curNode.pair.key){
             curNode = curNode.left;
         }else{
             curNode = curNode.right;
@@ -2240,7 +2563,9 @@ public boolean remove(int key){
 \begin{enumerate}
 \item Given a list of N numbers, output the first M unique numbers.
 \end{enumerate}
-\section{Priority Queue}
+
+    \chapter{ Priority Queue }
+        
 
 Prerequisites: Queue, Heap
 
@@ -2252,7 +2577,7 @@ A priority queue is usually implemented as a heap because it is the most efficie
 
 \subsection{Implementation}
 
-\vspace{10pt} \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Implementation &
@@ -2265,7 +2590,7 @@ A priority queue is usually implemented as a heap because it is the most efficie
   O(log n) &
   O(log n)\\
 
-\hline\end{tabular}
+\hline\end{tabulary}
 
 \subsection{Applications}
 
@@ -2284,7 +2609,9 @@ Priority queues are very efficient in its opertions O(log n) and it is used in m
 \item Given a list of N numbers, find the M largest numbers. (Note you can do better than O(N log N))
 \item Given N lists of N numbers, find the N largest numbers.
 \end{enumerate}
-\section{Heap}
+
+        \section{ Heap }
+        
 
 Prerequisites: Queue
 
@@ -2311,7 +2638,7 @@ Example Heap:
 
 A heap has two operations: push and pop. Pushing an element into a heap adds it into the heap and the heap needs to ensure that the properties of the heap still hold. Popping removes an element from the top of the heap and the heap needs to ensure that the properties of the heap still hold.
 
-\vspace{10pt} \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Operation &
@@ -2328,7 +2655,7 @@ A heap has two operations: push and pop. Pushing an element into a heap adds it 
   O(log n) &
   O(log n)\\
 
-\hline\end{tabular}
+\hline\end{tabulary}
 
 \subsection{Implementation}
 
@@ -2356,17 +2683,17 @@ Heapify takes a random array of N elements and transforms it into a heap. The ru
 \begin{lstlisting}
 public void heapify(int arr[]){
     this.arr = arr;
-    for(int i=0;i<Math.floor(arr.length/2.0);i++){
+    for(int i=0;i$<$Math.floor(arr.length/2.0);i++){
         int idx = i;
-        while(idx<size){
+        while(idx$<$size){
             int left = idx*2+1;
             int right = idx*2+2;
-            if(left<size \&\& arr[left]>arr[idx]){
+            if(left$<$size \&\& arr[left]$>$arr[idx]){
                 int swap = arr[left];
                 arr[left] = arr[idx];
                 arr[idx] = swap;
                 idx = left;
-            }else if(right<size \&\& arr[right]>arr[idx]){
+            }else if(right$<$size \&\& arr[right]$>$arr[idx]){
                 int swap = arr[right];
                 arr[right]=arr[idx];
                 arr[idx] = swap;
@@ -2386,7 +2713,7 @@ When the heap gets too full, we can resize it to make it bigger
 \begin{lstlisting}
 public void resize(){
     int[] newArr = new int[arr.length*2];
-    for(int i=0;i<size;i++){
+    for(int i=0;i$<$size;i++){
         newArr[i] = arr[i];
     }
     arr = newArr;
@@ -2408,16 +2735,16 @@ Pushes the number x into the priority queue. We can do this by adding it to the 
 \begin{lstlisting}
 public void push(int x){
         
-    if(size>=arr.length){
+    if(size$>$=arr.length){
         resize();
     }
     arr[size] = x;
     size++;
     
-    //Make sure parent is > child from the last element
+    //Make sure parent is $>$ child from the last element
     int idx = size-1;
     int parent = (idx-1)/2;
-    while(idx>0 \&\& arr[parent]<arr[idx]){
+    while(idx$>$0 \&\& arr[parent]$<$arr[idx]){
         int swap = arr[parent];
         arr[parent] = arr[idx];
         arr[idx] = swap;
@@ -2448,15 +2775,15 @@ public int pop(){
         
     int idx = 0;
         
-    while(idx<size){
+    while(idx$<$size){
         int left = idx*2+1;
         int right = idx*2+2;
-        if(left<size \&\& arr[left]>arr[idx]){
+        if(left$<$size \&\& arr[left]$>$arr[idx]){
             int swap = arr[left];
             arr[left] = arr[idx];
             arr[idx] = swap;
             idx = left;
-        }else if(right<size \&\& arr[right]>arr[idx]){
+        }else if(right$<$size \&\& arr[right]$>$arr[idx]){
             int swap = arr[right];
             arr[right]=arr[idx];
             arr[idx] = swap;
@@ -2485,7 +2812,9 @@ Heaps are very efficient in its opertions O(log n) and it is used in many other 
 \item Implement a min heap
 \item Prove heaps work
 \end{enumerate}
-\chapter{Graph Theory}\subsubsection{Introduction}
+
+\part{ Graph Theory }
+    
 
 Next: Advanced Graph Theory
 
@@ -2505,68 +2834,15 @@ A directed acyclic graph (DAG) is a graph with no directed cycles (see topologic
 
 A weighted graph is a graph that contains weights or values assigned to each edge or node. Usually these weights act as the cost to reach/use that node.
 
-\section{Advanced Graph Theory}
 
-Prerequisites: Graph Theory
+    \chapter{ Representation }
+        
 
-Advanced topics on graph theory.
+A graph can be represented as a adjacency matrix or a adjacency list.
 
-\subsection{Bipartite Graph}
+\subsubsection{Adjacency Matrix}
 
-A bipartite graph is a graph which can be partitioned into two sets such that no nodes in a set connect to another node in the same set.
 
-\subsection{Special Paths}
-
-A path is a certain order of visiting objects.
-
-\subsubsection{Hamiltonian Path}
-
-A Hamiltonian Path is a path that visits every node exactly once.
-
-\subsubsection{Eulerian Path}
-
-A Eulerian Path is a path that visited every edge exactly once.
-
-\subsection{Special Cycles}
-
-A cycle is a path that ends up at the same starting position.
-
-\subsubsection{Hamiltonian Cycle}
-
-A Hamiltonian cycle is a cycle that visits every node exactly once at ends back at the start.
-
-\subsubsection{Eulerian Cycle}
-
-A Eulerian Cycle is a cycle that visited every edge exactly once at ends back at the start.
-
-\subsubsection{Travelling Salesman Problem}
-
-The Travelling salesman is the problem where a salesman wants to find a cycle that minimizes the total cost of weights used of edges.
-
-\subsection{Special Nodes}
-
-Some graphs may have nodes that have special properties.
-
-\subsubsection{Root}
-
-A node in a directed acyclic graph that has no ancestors is a root.
-
-\includegraphics[width=\maxwidth{\textwidth}]{treeroot.png}
-
-\subsubsection{Center}
-
-The center of a undirected tree is the node that minimizes the sum of the distance to every other node.  The center can be found be continuously stripping away leaf nodes (nodes with only one edge) layer by layer until either 1 or 2 nodes remain. The longest path in a tree will contain the center.
-
-\includegraphics[width=\maxwidth{\textwidth}]{centergraph.png}
-
-\subsection{Network Flow}
-
-\subsubsection{Max Flow Problem}
-
-\subsubsection{Min Cut Problem}
-
-\subsubsection{Ford-Fulkerson}
-\section{Adjacency Matrix}
 
 An adjacency matrix is a method of storing a graph using a two dimensional array. Given n nodes, the adjacency matrix can be stored in a n x n matrix.
 
@@ -2574,7 +2850,7 @@ Array[i][j] represents the weight between the node i and node j.
 
 Example
 
-\vspace{10pt} \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
    &
@@ -2635,7 +2911,120 @@ Example
   0 &
   0\\
 
-\hline\end{tabular}
+\hline\end{tabulary}
+
+
+
+\subsubsection{Adjacency List}
+
+
+
+Adjacency lists use an array of linked lists to store all the edges. At x, you have a linked list of nodes that connect to 
+that node. 1 connects to nodes 2 and 5, 2 connects to 1, 3 and 5 and so forth. O(m) storage where m is number of edges.
+
+\includegraphics[width=\maxwidth{\textwidth}]{graph.png}
+
+\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+
+
+  Node &
+  edges\\
+\hline
+
+
+  1 &
+  2, 5\\
+
+  2 &
+  1 3 5\\
+
+  3 &
+  2 4\\
+
+  4 &
+  3 5 6\\
+
+  5 &
+  1 2 4\\
+
+  6 &
+  4\\
+
+\hline\end{tabulary}
+
+
+
+        \section{ Adjacency Matrix }
+        
+
+An adjacency matrix is a method of storing a graph using a two dimensional array. Given n nodes, the adjacency matrix can be stored in a n x n matrix.
+
+Array[i][j] represents the weight between the node i and node j.
+
+Example
+
+\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+
+
+   &
+  1 &
+  2 &
+  3 &
+  4 &
+  5 &
+  6\\
+\hline
+
+
+  1 &
+  0 &
+  1 &
+  0 &
+  0 &
+  1 &
+  0\\
+
+  2 &
+  1 &
+  0 &
+  1 &
+  0 &
+  1 &
+  0\\
+
+  3 &
+  0 &
+  1 &
+  0 &
+  1 &
+  0 &
+  0\\
+
+  4 &
+  0 &
+  0 &
+  1 &
+  0 &
+  1 &
+  1\\
+
+  5 &
+  1 &
+  1 &
+  0 &
+  1 &
+  0 &
+  0\\
+
+  6 &
+  0 &
+  0 &
+  0 &
+  1 &
+  0 &
+  0\\
+
+\hline\end{tabulary}
 
 \subsection{Implementation}
 
@@ -2648,13 +3037,13 @@ class edge{
         this.weight = weight;
     }
 }
-public static int[][] getAdjMatrix(Vector<edge> edges){
+public static int[][] getAdjMatrix(Vector$<$edge$>$ edges){
     int n = 0;
     int adjMatrix[][] = new int[n][n];
     
-    for(int i=0;i<n;i++)for(int j=0;j<n;j++)adjMatrix[i][j] = 0;
+    for(int i=0;i$<$n;i++)for(int j=0;j$<$n;j++)adjMatrix[i][j] = 0;
     
-    for(int i=0;i<edges.size();i++){
+    for(int i=0;i$<$edges.size();i++){
         edge e = edges.get(i);
         adjMatrix[e.source][e.dest] = e.weight;
         adjMatrix[e.dest][e.source] = e.weight;
@@ -2662,7 +3051,93 @@ public static int[][] getAdjMatrix(Vector<edge> edges){
     return adjMatrix;
 }
 \end{lstlisting}
-\section{Prim's}Prerequisites:  Priority Queue, Minimum Spanning Tree
+
+        `` Adjacency List))))
+        
+
+Adjacency lists use an array of linked lists to store all the edges. At x, you have a linked list of nodes that connect to 
+that node. 1 connects to nodes 2 and 5, 2 connects to 1, 3 and 5 and so forth. O(m) storage where m is number of edges.
+
+\includegraphics[width=\maxwidth{\textwidth}]{graph.png}
+
+\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+
+
+  Node &
+  edges\\
+\hline
+
+
+  1 &
+  2, 5\\
+
+  2 &
+  1 3 5\\
+
+  3 &
+  2 4\\
+
+  4 &
+  3 5 6\\
+
+  5 &
+  1 2 4\\
+
+  6 &
+  4\\
+
+\hline\end{tabulary}
+
+    \chapter{ Tree }
+        
+
+
+
+A tree is a special graph with no cycles. It has the special property that there will be only one path from one node to another node.
+
+\includegraphics[width=\maxwidth{\textwidth}]{treegraph.png}
+
+A subtree is a child tree of a tree.
+
+Note that trees have two meanings in computer science. It can either refer to a tree data structure or it can refer to a tree in graph theory.
+
+
+\subsubsection{Spanning Tree}
+
+
+
+A spanning tree of a graph is a connected tree that spans all the nodes of the graph.
+
+A minimum spanning tree is the spanning tree that requires the minimum of some property such as total weight or total edges.
+
+Spanning tree algorithms are essential in networking to ensure no loops occur when sending data through a network.
+
+\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+
+
+  Algorithm &
+  Desc &
+  Time &
+  Space\\
+\hline
+
+
+  Prim's &
+  Using greedy method &
+  O(n log n) &
+  O(n$^{2}$)\\
+
+  Kruskal &
+  Using connected components &
+  O(n log n) &
+  O(n$^{2}$)\\
+
+\hline\end{tabulary}
+
+
+
+        \section{ Prim's }
+        Prerequisites:  Priority Queue, Minimum Spanning Tree
 
 A minimum spanning tree is a tree in a graph that connects all the nodes using the smallest cost total cost of edges.
 
@@ -2707,7 +3182,7 @@ adjList is an adjacency list that is an array of arrays that store the graph.
 
 \begin{lstlisting}
 
-class node implements Comparable<node>{
+class node implements Comparable$<$node$>${
     int weight,index;
     public node(int weight,int index){
         this.weight = weight;
@@ -2717,31 +3192,31 @@ class node implements Comparable<node>{
         return weight-e.weight;
     }
 }
-public static int Prims(Vector<Vector<node>> adjList){
+public static int Prims(Vector$<$Vector$<$node$>$$>$ adjList){
     int cost = 0;
     int n = adjList.size();
-    PriorityQueue<node> pq = new PriorityQueue<node>();
+    PriorityQueue$<$node$>$ pq = new PriorityQueue$<$node$>$();
     boolean visited[] = new boolean[n];
-    for(int i=0;i<n;i++){
+    for(int i=0;i$<$n;i++){
         visited[i] = false;
     }
     int inTree = 1;
     visited[0] = true;
-    for(int i=0;i<adjList.get(0).size();i++){
+    for(int i=0;i$<$adjList.get(0).size();i++){
         pq.add(adjList.get(0).get(i));
     }
-    while(!pq.isEmpty()\&\&inTree<n){
+    while(!pq.isEmpty()\&\&inTree$<$n){
         node cur = pq.poll();
         if(visited[cur.index])continue;
         inTree++;
         visited[cur.index]=true;
         cost+=cur.weight;
-        for(int i=0;i<adjList.get(cur.index).size();i++){
+        for(int i=0;i$<$adjList.get(cur.index).size();i++){
             pq.add(adjList.get(cur.index).get(i));          
                  }
     }
     //Graph is not connected
-    if(inTree<n)return -1;
+    if(inTree$<$n)return -1;
     return cost;
 }
 \end{lstlisting}
@@ -2760,220 +3235,159 @@ Minimum spanning trees can also be used in generating mazes.
 \item Given a weighted graph with n nodes, find the smallest total cost to connect all nodes into 3 separate groups. (A single node can be a group)
 \item Same as 3, but a group must contain at least 3 other nodes.
 \end{enumerate}
-\section{Kruskal}
 
-Prerequisites:  Sorting, Minimum Spanning Tree
+        \section{ Kruskal's }
+        ((((Kruskal's))))
+    \chapter{ Shortest Path }
+        
 
-A minimum spanning tree is a tree in a graph that connects all the nodes using the smallest cost total cost of edges.
+The shortest path is defined as a path from one node to another while trying to minimize a certain property (least number of nodes, smallest total weight). However, shortest paths may have negative weights which leads to cycles.
 
-Kruskal's algorithm finds the minimum spanning tree using connected components.
+\subsubsection{Algorithms}
 
-If implemented efficiently using a priority queue to get the edges with minimum weight or a sorting the edges, the runtime is O(n log n).
-
-\subsection{Implementation}
-
-\begin{enumerate}
-\item Uniquely label each node
-\item Take the edge with the minimum weight
-\item If the edge connects nodes A and B with different labels, all nodes with label B will be labeled with A. Otherwise, throw the edge away
-\item Repeat 2-3 until all the nodes have the same label
-\end{enumerate}
-
-\subsubsection{Example}
-
-\includegraphics[width=\maxwidth{\textwidth}]{kruskal.png}
-
-\includegraphics[width=\maxwidth{\textwidth}]{kruskal2.png}
-
-\includegraphics[width=\maxwidth{\textwidth}]{kruskal3.png}
-
-\includegraphics[width=\maxwidth{\textwidth}]{kruskal4.png}
-
-\includegraphics[width=\maxwidth{\textwidth}]{kruskal5.png}
-
-\includegraphics[width=\maxwidth{\textwidth}]{kruskal6.png}
-
-\includegraphics[width=\maxwidth{\textwidth}]{kruskal7.png}
-
-\subsubsection{Code}
-
-\begin{lstlisting}
-class edge implements Comparable<edge>{
-    int weight,source,dest;
-    public edge(int source,int dest,int weight){
-        this.source = source;
-        this.dest = dest;
-        this.weight = weight;
-    }
-    public int compareTo(edge e){
-        return weight-e.weight;
-    }
-}
-public static int getParent(int parents[],int x){
-    if(parents[x]==x)return x;
-    parents[x] = getParent(parents,parents[x]);
-    return parents[x];
-}
-public static int Kruskal(Vector<Vector<edge>> adjList){
-    int n = adjList.size();
-    int parents[] = new int[n];
-    for(int i=0;i<n;i++)parents[i] = i;
-    int sum = 0;
-    
-    PriorityQueue<edge> edges = new PriorityQueue<edge>();
-    
-    for(int i=0;i<n;i++){
-        for(int j=0;j<adjList.get(i).size();j++){
-            edges.add(adjList.get(i).get(j));
-        }
-    }
-    
-    while(!edges.isEmpty()){
-        edge e = edges.poll();
-        if(getParent(parents,e.source)!=getParent(parents,e.dest)){
-            parents[e.source] = getParent(parents,e.dest);
-            sum+=e.weight;
-        }
-    }
-    
-    return sum;
-}
-\end{lstlisting}
-
-\subsection{Applications}
-
-\subsection{Exercises}
-
-\begin{enumerate}
-\item Prove Kruskal's Algorithm works
-\item Extends Kruskals's to output all the edges used
-\item Given a weighted graph with n nodes, find the smallest total cost to connect all nodes into 3 separate groups. (A single node can be a group)
-\item Same as 3, but a group must contain at least 3 other nodes.
-\end{enumerate}
-\section{Floyd Warshall}
-
-Prerequisites:  Shortest Path, Dynamic Programming
-
-Floyd Warshall is a algorithm for finding the shortest distances between all pairs of nodes in a graph. Floyd Warshall can be used to find negative cycles in the graph.
-
-\vspace{10pt} \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
-  Description &
+  Algorithm &
+  Desc &
   Time &
   Space &
   Detect cycles?\\
 \hline
 
 
+  Floyd Warshall &
   Computes shortest path between all pairs of nodes &
   O(n$^{3}$) &
   O(n$^{2}$) &
   Yes\\
 
-\hline\end{tabular}
+  Bellman Ford &
+  Computes shortest path between a pairs of nodes &
+  O(n$^{2}$) &
+  O(n) &
+  Yes\\
+
+  Dijkstra's &
+  Computes shortest path between a pair of nodes using the Greedy method &
+  O(n log n) &
+  O(n log n) &
+  No\\
+
+\hline\end{tabulary}
+
+
+        \section{ Dijkstra's }
+        
+
+Prerequisites:  Shortest Path, Priority Queue, Greedy Algorithm
+
+Dijkstra's is a greedy approach to find the shortest path in a graph with positive weights. It has many useful applications in networking and it can be extended to a variety of problems.
+
+Dijkstra works by beginning at the starting node repeatedly picking the next closest node of those already visited.
+
+If Dijkstra's is implemented using a priority queue, the run time is O(n log n).
+
+If a negative cycle exists within the graph, then the algorithm breaks as it will repeatedly try to take the negative edges. See Bellman Ford to find negative cycles in a graph.
+
+A naive fix for negative cycles would be to offset all edges by the largest negative edge and then subtract it from the resulting total but this does not work. Consider an example where you have start node A and end node B. The first route from A-$>$B has length 2 and the second route has lengths 1,1,-2. Clearly the second route has less cost. If we try to make the length positive by adding all costs by 2, we will have the first path of length 4 and the second path of lengths 3,3,0 and the first route becomes the smallest total cost which is wrong.
 
 \subsection{Implementation}
 
-Floyd-Warshall uses a dynamic programming approach to finding the shortest path between node A and node B. Every path from node A to node B can be rewritten as a path from A to some node in between plus the path from the node in between to node B. The shortest path from A to B can be found by finding a node C such the shortest path from A to C plus the shortest path from C to B is minimized.
+At each node we visit we keep track of the minimum cost it takes to reach to reach that node from the starting node.
 
-\includegraphics[width=\maxwidth{\textwidth}]{floydwarshall1.png}
+\begin{enumerate}
+\item Start at the starting node
+\item Find an unvisited node that has the least cost to reach from the visited nodes.
+\item Mark that node as visited
+\item Repeat until all nodes are visited
+\end{enumerate}
 
-\includegraphics[width=\maxwidth{\textwidth}]{floydwarshall.png}
+When we reach a node for the first time, it will be the shortest path to that node (Try to prove this to yourself).
 
-\subsubsection{Formalization}
+We first start at the starting node. The distance from the starting node to the starting node is obviously 0.
 
-Recursion
+\includegraphics[width=\maxwidth{\textwidth}]{djikstra.png}
+
+From the starting node we have two nodes we can reach. The top node has a cost of 3 to reach and the bottom node has a cost of 5 to reach.
+
+\includegraphics[width=\maxwidth{\textwidth}]{djikstra1.png}
+
+We pick the smallest node the reach and we mark it as visited. Once we visit a node, we can guarantee that it is the smallest cost to reach it. The next nodes minimum cost to reach is 10, 5 and 5.
+
+\includegraphics[width=\maxwidth{\textwidth}]{djikstra2.png}
+
+We are indifferent to both 5's as they are both the minimum and we can choose either. We mark the node as visited and we find the minimum costs to other nodes which are 5,10,11.
+
+\includegraphics[width=\maxwidth{\textwidth}]{djikstra3.png}
+
+We take the next smallest which is 5 and we mark the node as visited. The next costs are 10 and 11.
+
+\includegraphics[width=\maxwidth{\textwidth}]{djikstra4.png}
+
+We take the smallest which is 10 and we now only have one last node to reach at a cost of 11.
+
+\includegraphics[width=\maxwidth{\textwidth}]{djikstra5.png}
+
+At each node we have the minimum cost to get from the start node to each node.
+
+\includegraphics[width=\maxwidth{\textwidth}]{djikstra6.png}
+
+\subsubsection{Java}
+
+Implementation of Dijkstra in Java using a priority queue.
 
 \begin{lstlisting}
-Given a directed graph with N nodes and edges between nodes:
-Let edge(i,j) be the weight of the edge from node i to node j in the graph
-Let shortestPath(i,j) be the shortest path from i to j
-
-Base Case:
-shortestPath(i,i) = 0
-shortestPath(i,j) = edge(i,j)
-
-Recursion:
-shortestPath(i,j) =  minmum of shortestPath(i,k) + shortestPath(k,j) for all unvisited nodes k
-\end{lstlisting}
-
-\subsubsection{Code}
-
-\begin{lstlisting}
-class edge{
-    int weight,source,dest;
-    public edge(int source,int dest,int weight){
-        this.source = source;
-        this.dest = dest;
+class node implements Comparable$<$node$>${
+    int weight,index;
+    public node(int weight,int index){
         this.weight = weight;
+        this.index = index;
+    }
+    public int compareTo(node e){
+        return weight-e.weight;
     }
 }
-public static final int UNDEFINED = Integer.MIN\_VALUE;
+
+public static int dijkstra(int[][] adjMatrix,int start,int end){
+    int n = adjMatrix.length;
+    PriorityQueue $<$node$>$ pq = new PriorityQueue$<$node$>$();
+    boolean visited[] = new boolean[n];
+    for(int i=0;i$<$n;i++)visited[i] = false;
+    pq.add(new node(0,start));
+    while(!visited[end] \&\& !pq.isEmpty()){
+        node curNode = pq.poll();
     
-public static int[][] FloydWarshall(Vector<Vector<edge>> adjList){
-    int n = adjList.size();
-    //dist[i][j] is the minimum distance from i to j
-    int[][] dist = new int[n][n];
-    
-    //initialize dist[i][j]
-    for(int i=0;i<n;i++){
-        for(int j=0;j<n;j++){
-            dist[i][j] = UNDEFINED;
+        if(visited[curNode.index])continue;
+        visited[curNode.index] = true;
+        if(curNode.index==end){
+            return curNode.weight;
         }
-    }
-    
-    //dist[i][i] = 0
-    for(int i=0;i<n;i++){
-        dist[i][i]=0;
-    }
-    
-    //initialize weights, dist[i][j] = edge from i to j
-    for(int i=0;i<n;i++){
-        for(int j=0;j<adjList.get(i).size();j++){
-            
-            edge e = adjList.get(i).get(j);
-            dist[e.source][e.dest] = e.weight;
-            
-            System.out.println(e.source+" "+e.dest);
-        }
-    }
-    
-    for(int k=0;k<n;k++){
-        for(int i=0;i<n;i++){
-            for(int j=0;j<n;j++){
-                //If dist[i][k] and dist[k][j] have been set then use those values
-                if(dist[i][k]!=UNDEFINED\&\&dist[k][j]!=UNDEFINED){
-                    //If the new distance is less than current or not used, then update
-                    int newDist = dist[i][k]+dist[k][j];
-                    if(dist[i][j] > newDist || dist[i][j]==UNDEFINED){
-                        dist[i][j] = newDist;
-                    }
-                }
+        for(int i=0;i$<$n;i++){
+            if(adjMatrix[curNode.index][i]$>$0 \&\& !visited[i]){
+                int newWeight = curNode.weight+adjMatrix[curNode.index][i];
+                pq.add(new node(newWeight,i));
             }
         }
     }
-    for(int i=0;i<n;i++){
-        if(dist[i][i]<0){
-            System.out.println("negative cycle");
-        }
-    }
-    
-    return dist;
+    return -1;
 }
 \end{lstlisting}
 
 \subsection{Applications}
 
-Floyd Warshall is useful when you want to find the shortest distance between all possible pairs of nodes.
+In general, Dijkstra is usually the goto method for finding the minimum cost between two nodes in any kind of network. For example, Dijkstra can be used in networking to find the shortest path between two hosts. It can also be used in flight networking to find the cheapest cost to get from one airport to another airport.
 
-\subsection{Exercises}
+\subsection{Practice Exercises}
 
 \begin{enumerate}
-\item Prove Floyd Warshall works
-\item Extend Floyd Warshall to reconstruct the paths from each pair of nodes
+\item Extend Dijkstra's to find the exact path from start to end (the order of nodes of the shortest path A-$>$B-$>$C)
+\item Extend Dijkstra's to find the best three minimal costs with unique paths from the start node to the end node
+\item Prove that Dijkstra's algorithm works
 \end{enumerate}
-\section{Bellman Ford}
+
+        \section{ Bellman Ford }
+        
 
 Prerequisites:  Shortest Path
 
@@ -3048,7 +3462,7 @@ class edge{
     }
 }
 
-public static int BellmanFord(Vector<Vector<edge>> adjList,int startNode,int endNode){
+public static int BellmanFord(Vector$<$Vector$<$edge$>$$>$ adjList,int startNode,int endNode){
     
     int n = adjList.size();
     //dist[i] is minimum distance from start to i
@@ -3058,23 +3472,23 @@ public static int BellmanFord(Vector<Vector<edge>> adjList,int startNode,int end
     boolean[] used = new boolean[n];
     
     //initialize dist[i]=0 and used[i]=false
-    for(int i=0;i<n;i++){
+    for(int i=0;i$<$n;i++){
         dist[i] = 0;
         used[i] = false;
     }
     used[startNode] = true;
     dist[startNode] = 0;
-    for(int i=0;i<n-1;i++){
+    for(int i=0;i$<$n-1;i++){
         //Iterate through adjacency list
-        for(int j=0;j<n;j++){
-            for(int k=0;k<adjList.get(j).size();k++){
+        for(int j=0;j$<$n;j++){
+            for(int k=0;k$<$adjList.get(j).size();k++){
                 if(!used[j])continue;
                 edge e = adjList.get(j).get(k);
                 //If dist[e.source] has been used
                 if(used[e.source]){
-                    //If new dist < cur dist or not used, then update
+                    //If new dist $<$ cur dist or not used, then update
                     int newDist = dist[e.source]+e.weight;
-                    if(newDist<dist[e.dest] || !used[e.dest]){
+                    if(newDist$<$dist[e.dest] || !used[e.dest]){
                         used[e.dest]= true; 
                         dist[e.dest] = newDist;
                     }
@@ -3083,11 +3497,11 @@ public static int BellmanFord(Vector<Vector<edge>> adjList,int startNode,int end
         }
     }
     
-    for(int j=0;j<n;j++){
-        for(int k=0;k<adjList.get(j).size();k++){
+    for(int j=0;j$<$n;j++){
+        for(int k=0;k$<$adjList.get(j).size();k++){
             edge e = adjList.get(j).get(k);
             //If negative cycle
-            if(dist[e.source]+e.weight < dist[e.dest]){
+            if(dist[e.source]+e.weight $<$ dist[e.dest]){
                 System.out.println("Negative cycle");
             }
         }
@@ -3108,7 +3522,7 @@ public static int BellmanFord(Vector<Vector<edge>> adjList,int startNode,int end
 
 Arbitrage occurs when you can exchange currencies for another and make a profit. For example given a currency exchange table:
 
-\vspace{10pt} \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
    &
@@ -3133,9 +3547,9 @@ Arbitrage occurs when you can exchange currencies for another and make a profit.
   1.56 &
   /\\
 
-\hline\end{tabular}
+\hline\end{tabulary}
 
-Notice that 1 USD -> 1.12 CAD -> 1.008 USD. Bellman Ford can be used to find methods of arbitrage by using the vertex as currency and edges as transactions, and the weight as the exchange rate. All that is needed is to find a path that maximizes product of weights and finding a negative cycle.
+Notice that 1 USD -$>$ 1.12 CAD -$>$ 1.008 USD. Bellman Ford can be used to find methods of arbitrage by using the vertex as currency and edges as transactions, and the weight as the exchange rate. All that is needed is to find a path that maximizes product of weights and finding a negative cycle.
 
 \subsection{Exercises}
 
@@ -3143,114 +3557,134 @@ Notice that 1 USD -> 1.12 CAD -> 1.008 USD. Bellman Ford can be used to find met
 \item Write a program that detects a path for arbitrage to occur
 \item Prove Bellmand-Ford works
 \end{enumerate}
-\section{Dijkstra's}
 
-Prerequisites:  Shortest Path, Priority Queue, Greedy Algorithm
+        \section{ Floyd Warsahll }
+        
 
-Dijkstra's is a greedy approach to find the shortest path in a graph with positive weights. It has many useful applications in networking and it can be extended to a variety of problems.
+Prerequisites:  Shortest Path, Dynamic Programming
 
-Dijkstra works by beginning at the starting node repeatedly picking the next closest node of those already visited.
+Floyd Warshall is a algorithm for finding the shortest distances between all pairs of nodes in a graph. Floyd Warshall can be used to find negative cycles in the graph.
 
-If Dijkstra's is implemented using a priority queue, the run time is O(n log n).
+\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
-If a negative cycle exists within the graph, then the algorithm breaks as it will repeatedly try to take the negative edges. See Bellman Ford to find negative cycles in a graph.
 
-A naive fix for negative cycles would be to offset all edges by the largest negative edge and then subtract it from the resulting total but this does not work. Consider an example where you have start node A and end node B. The first route from A->B has length 2 and the second route has lengths 1,1,-2. Clearly the second route has less cost. If we try to make the length positive by adding all costs by 2, we will have the first path of length 4 and the second path of lengths 3,3,0 and the first route becomes the smallest total cost which is wrong.
+  Description &
+  Time &
+  Space &
+  Detect cycles?\\
+\hline
+
+
+  Computes shortest path between all pairs of nodes &
+  O(n$^{3}$) &
+  O(n$^{2}$) &
+  Yes\\
+
+\hline\end{tabulary}
 
 \subsection{Implementation}
 
-At each node we visit we keep track of the minimum cost it takes to reach to reach that node from the starting node.
+Floyd-Warshall uses a dynamic programming approach to finding the shortest path between node A and node B. Every path from node A to node B can be rewritten as a path from A to some node in between plus the path from the node in between to node B. The shortest path from A to B can be found by finding a node C such the shortest path from A to C plus the shortest path from C to B is minimized.
 
-\begin{enumerate}
-\item Start at the starting node
-\item Find an unvisited node that has the least cost to reach from the visited nodes.
-\item Mark that node as visited
-\item Repeat until all nodes are visited
-\end{enumerate}
+\includegraphics[width=\maxwidth{\textwidth}]{floydwarshall1.png}
 
-When we reach a node for the first time, it will be the shortest path to that node (Try to prove this to yourself).
+\includegraphics[width=\maxwidth{\textwidth}]{floydwarshall.png}
 
-We first start at the starting node. The distance from the starting node to the starting node is obviously 0.
+\subsubsection{Formalization}
 
-\includegraphics[width=\maxwidth{\textwidth}]{djikstra.png}
-
-From the starting node we have two nodes we can reach. The top node has a cost of 3 to reach and the bottom node has a cost of 5 to reach.
-
-\includegraphics[width=\maxwidth{\textwidth}]{djikstra1.png}
-
-We pick the smallest node the reach and we mark it as visited. Once we visit a node, we can guarantee that it is the smallest cost to reach it. The next nodes minimum cost to reach is 10, 5 and 5.
-
-\includegraphics[width=\maxwidth{\textwidth}]{djikstra2.png}
-
-We are indifferent to both 5's as they are both the minimum and we can choose either. We mark the node as visited and we find the minimum costs to other nodes which are 5,10,11.
-
-\includegraphics[width=\maxwidth{\textwidth}]{djikstra3.png}
-
-We take the next smallest which is 5 and we mark the node as visited. The next costs are 10 and 11.
-
-\includegraphics[width=\maxwidth{\textwidth}]{djikstra4.png}
-
-We take the smallest which is 10 and we now only have one last node to reach at a cost of 11.
-
-\includegraphics[width=\maxwidth{\textwidth}]{djikstra5.png}
-
-At each node we have the minimum cost to get from the start node to each node.
-
-\includegraphics[width=\maxwidth{\textwidth}]{djikstra6.png}
-
-\subsubsection{Java}
-
-Implementation of Dijkstra in Java using a priority queue.
+Recursion
 
 \begin{lstlisting}
-class node implements Comparable<node>{
-    int weight,index;
-    public node(int weight,int index){
+Given a directed graph with N nodes and edges between nodes:
+Let edge(i,j) be the weight of the edge from node i to node j in the graph
+Let shortestPath(i,j) be the shortest path from i to j
+
+Base Case:
+shortestPath(i,i) = 0
+shortestPath(i,j) = edge(i,j)
+
+Recursion:
+shortestPath(i,j) =  minmum of shortestPath(i,k) + shortestPath(k,j) for all unvisited nodes k
+\end{lstlisting}
+
+\subsubsection{Code}
+
+\begin{lstlisting}
+class edge{
+    int weight,source,dest;
+    public edge(int source,int dest,int weight){
+        this.source = source;
+        this.dest = dest;
         this.weight = weight;
-        this.index = index;
-    }
-    public int compareTo(node e){
-        return weight-e.weight;
     }
 }
-
-public static int dijkstra(int[][] adjMatrix,int start,int end){
-    int n = adjMatrix.length;
-    PriorityQueue <node> pq = new PriorityQueue<node>();
-    boolean visited[] = new boolean[n];
-    for(int i=0;i<n;i++)visited[i] = false;
-    pq.add(new node(0,start));
-    while(!visited[end] \&\& !pq.isEmpty()){
-        node curNode = pq.poll();
+public static final int UNDEFINED = Integer.MIN\_VALUE;
     
-        if(visited[curNode.index])continue;
-        visited[curNode.index] = true;
-        if(curNode.index==end){
-            return curNode.weight;
+public static int[][] FloydWarshall(Vector$<$Vector$<$edge$>$$>$ adjList){
+    int n = adjList.size();
+    //dist[i][j] is the minimum distance from i to j
+    int[][] dist = new int[n][n];
+    
+    //initialize dist[i][j]
+    for(int i=0;i$<$n;i++){
+        for(int j=0;j$<$n;j++){
+            dist[i][j] = UNDEFINED;
         }
-        for(int i=0;i<n;i++){
-            if(adjMatrix[curNode.index][i]>0 \&\& !visited[i]){
-                int newWeight = curNode.weight+adjMatrix[curNode.index][i];
-                pq.add(new node(newWeight,i));
+    }
+    
+    //dist[i][i] = 0
+    for(int i=0;i$<$n;i++){
+        dist[i][i]=0;
+    }
+    
+    //initialize weights, dist[i][j] = edge from i to j
+    for(int i=0;i$<$n;i++){
+        for(int j=0;j$<$adjList.get(i).size();j++){
+            
+            edge e = adjList.get(i).get(j);
+            dist[e.source][e.dest] = e.weight;
+            
+            System.out.println(e.source+" "+e.dest);
+        }
+    }
+    
+    for(int k=0;k$<$n;k++){
+        for(int i=0;i$<$n;i++){
+            for(int j=0;j$<$n;j++){
+                //If dist[i][k] and dist[k][j] have been set then use those values
+                if(dist[i][k]!=UNDEFINED\&\&dist[k][j]!=UNDEFINED){
+                    //If the new distance is less than current or not used, then update
+                    int newDist = dist[i][k]+dist[k][j];
+                    if(dist[i][j] $>$ newDist || dist[i][j]==UNDEFINED){
+                        dist[i][j] = newDist;
+                    }
+                }
             }
         }
     }
-    return -1;
+    for(int i=0;i$<$n;i++){
+        if(dist[i][i]$<$0){
+            System.out.println("negative cycle");
+        }
+    }
+    
+    return dist;
 }
 \end{lstlisting}
 
 \subsection{Applications}
 
-In general, Dijkstra is usually the goto method for finding the minimum cost between two nodes in any kind of network. For example, Dijkstra can be used in networking to find the shortest path between two hosts. It can also be used in flight networking to find the cheapest cost to get from one airport to another airport.
+Floyd Warshall is useful when you want to find the shortest distance between all possible pairs of nodes.
 
-\subsection{Practice Exercises}
+\subsection{Exercises}
 
 \begin{enumerate}
-\item Extend Dijkstra's to find the exact path from start to end (the order of nodes of the shortest path A->B->C)
-\item Extend Dijkstra's to find the best three minimal costs with unique paths from the start node to the end node
-\item Prove that Dijkstra's algorithm works
+\item Prove Floyd Warshall works
+\item Extend Floyd Warshall to reconstruct the paths from each pair of nodes
 \end{enumerate}
-\section{Cycle detection}
+
+    \chapter{ Cycle Detection }
+    
 
 A cycle occurs in a graph when a duplicate node is encountered when traversing a tree using a depth first search. In other words, a cycle occurs when you can reach the same node again.
 
@@ -3261,8 +3695,8 @@ An undirected graph where the number of edges is greater than or equal to the nu
 \begin{lstlisting}
 public static boolean hasCycle(int [][] adjMatrix){
         int[] visited = new int[adjMatrix.length];
-        for(int i=0;i<adjMatrix.length;i++)visited[i] = 0;
-        for(int i=0;i<adjMatrix.length;i++){
+        for(int i=0;i$<$adjMatrix.length;i++)visited[i] = 0;
+        for(int i=0;i$<$adjMatrix.length;i++){
             if(hasCycleAt(adjMatrix,i,visited))return true;
         }
         return false;
@@ -3271,8 +3705,8 @@ public static boolean hasCycle(int [][] adjMatrix){
     public static boolean hasCycleAt(int[][] adjMatrix,int i, int visited[]){
         if(visited[i] == 1)return true;
         visited[i] = 1;
-        for(int j = 0; j < adjMatrix.length;i++){
-            if(adjMatrix[i][j] > 0){
+        for(int j = 0; j $<$ adjMatrix.length;i++){
+            if(adjMatrix[i][j] $>$ 0){
                 if(hasCycleAt(adjMatrix,j,visited))return true;
                 visited[j] = 0;
             }
@@ -3281,142 +3715,16 @@ public static boolean hasCycle(int [][] adjMatrix){
         return false;
     }
 \end{lstlisting}
-\section{Topological Sorting}
 
-A topological sort or topological order of a directed graph is an order in which every node will come after its ancestors.
-
-\includegraphics[width=\maxwidth{\textwidth}]{topsort.png}
-
-For example topological orders could be:
-
-\begin{itemize}
-\item (A, B, C, D, E, F, G)
-\item (B, A, D, C, F, E, G)
-\item (B, A, D, G, F, C, E)
-\end{itemize}
-
-But (B, A, C, F, D, E, G) is not a topological ordering because D is an ancestor of F and it comes after F.
-
-\subsubsection{Prerequisites}
-
-\begin{itemize}
-\item Graph Theory
-\item Depth First Search
-\end{itemize}
-
-\subsection{Implementation}
-
-Topological sort can implemented in O(n) time using DFS for a directed acyclic graph (a digraph with no cycles). How it works:
-
-\begin{enumerate}
-\item Start with an empty top order
-\item Pick any unmarked node
-\item Get the DFS preordering from that node for unvisited nodes 
-\item Add the DFS to the head of the current order
-\item Mark every node that has been visited
-\end{enumerate}
-
-\includegraphics[width=\maxwidth{\textwidth}]{topsort.png}
-
-Example:
-
-\begin{itemize}
-\item Pick C
-\item DFS preorder from C is (C,E)
-\item Add DFS preorder to head [C,E]
-\item Pick F
-\item DFS preorder from F is (F)
-\item Add DFS preorder from F to head [F,C,E]
-\item Pick B
-\item DFS preorder from B is (B,D,G)
-\item Add DFS preorder from B to head [B,D,G,F,C,E]
-\item Pick A
-\item DFS preorder from A is (A)
-\item Add DFS preorder from A to head [A,B,D,G,F,C,E]
-\item Done, all nodes visited
-\end{itemize}
-
-A DFS order from a node is guaranteed to be a topological order. Since we add everything to the head of the order, a child of a node cannot appear before it.
-\section{Connected Components}
-
-A connected component is a subgraph where all the vertices in the subgraph connect to each other.
-
-Finding the number of distinct connected components can be done using a breadth first search or a depth first search.
-
-\subsection{Implementation}
-
-\begin{enumerate}
-\item Set each node's parent to itself
-\item Pick an unused edge in the graph that is from node A to node B, if the parent of A is not the same as parent of B then set all nodes whose parent is B to parents of A
-\item Repeat for all edges
-\end{enumerate}
-
-\subsubsection{Example}
-
-\includegraphics[width=\maxwidth{\textwidth}]{connectedcomponents.png}
-
-We select a random edge from node 1 and node 2. We set the parent node of 2 to node 1.
-
-\includegraphics[width=\maxwidth{\textwidth}]{connectedcomponents2.png}
-
-We select another random edge from node 5 to node 6.
-
-\includegraphics[width=\maxwidth{\textwidth}]{connectedcomponents3.png}
-
-We pick another random edge and we set the parent to 5.
-
-\includegraphics[width=\maxwidth{\textwidth}]{connectedcomponents4.png}
-
-We take another random edge and we set the parents to 7.
-
-\includegraphics[width=\maxwidth{\textwidth}]{connectedcomponents5.png}
-
-We take another random edge and we have an interesting case, two connected components are to be connected. We take all the nodes whose parent is 1, and we set the new parent to 5.
-
-\includegraphics[width=\maxwidth{\textwidth}]{connectedcomponents6.png}
-
-We take another random edge and set its parent to 1.
-
-\includegraphics[width=\maxwidth{\textwidth}]{connectedcomponents7.png}
-
-We take the last edge and set the last node parent to 7.
-
-\includegraphics[width=\maxwidth{\textwidth}]{connectedcomponents8.png}
-
-\subsubsection{Java Code}
-
-\begin{lstlisting}
-public static int getParent(int x,int[] parent){
-    if(parent[x]==x)return x;
-    parent[x] = getParent(parent[x],parent);
-    return parent[x];
-}
-    
-public static void connected(int adjMatrix[][]){
-    int n = adjMatrix.length;
-    int[] parent = new int[n];
-    int i,j;
-    for(i=0;i<n;i++){
-        parent[i] = i;
-    }
-    for(i=0;i<n;i++){
-        for(j=0;j<n;j++){
-            if(adjMatrix[i][j]>0){
-                int pi = getParent(i,parent);
-                int pj = getParent(j,parent);
-                if(pi!=pj){
-                    parent[pj] = pi;
-                }
-            }
-        }
-    }   
-}
-\end{lstlisting}
-\chapter{Searches}\subsubsection{Introduction}
+\part{ Searches }
+    \chapter{ Searches }
+        
 
 Searches are used to find solutions to problems and there many ways to search for a solution. Here are some generic searches that can be applied to many different problems.
 
-\section{Binary Search}\subsection{Binary Search}
+
+        \section{ Binary Search }
+        \subsection{Binary Search}
 
 Binary search is a type of search that is able to find an object in a sorted list in O(log n). In binary search we first start at the middle element and we keep trying to halve the problem until we find the number.
 
@@ -3433,35 +3741,35 @@ Eg: my number = 17
 \item I say lower.
 \end{itemize}
 
-So we know that:1≤number<50. Since the number is <50 then we know we can eliminate all the numbers above 50. We just made the problem half as hard! The reason we picked 50 is important because it is the middle and it tells us the most information. If we picked 80 and the reply was higher it would narrow down the problem a lot, but if the reply was lower it would barely reduce the problem. Picking the middle works best because it tells us the most information if we get a "lower" or "higher" reply. So we should also guess the middle between 1 and 50.
+So we know that:1≤number$<$50. Since the number is $<$50 then we know we can eliminate all the numbers above 50. We just made the problem half as hard! The reason we picked 50 is important because it is the middle and it tells us the most information. If we picked 80 and the reply was higher it would narrow down the problem a lot, but if the reply was lower it would barely reduce the problem. Picking the middle works best because it tells us the most information if we get a "lower" or "higher" reply. So we should also guess the middle between 1 and 50.
 
 \begin{itemize}
 \item You guess: 25.
 \item I say lower.
 \end{itemize}
 
-So we know that 1≤number<25. Once again we made the problem half as hard again. Note that at every step we will make the problem half as hard. We need to pick the next middle number which is either 12 or 13, but we are indifferent because it will still tell us the most information (unless you get lucky).
+So we know that 1≤number$<$25. Once again we made the problem half as hard again. Note that at every step we will make the problem half as hard. We need to pick the next middle number which is either 12 or 13, but we are indifferent because it will still tell us the most information (unless you get lucky).
 
 \begin{itemize}
 \item You guess 13.
 \item I say higher.
 \end{itemize}
 
-So we know that 13<number<25.
+So we know that 13$<$number$<$25.
 
 \begin{itemize}
 \item You guess 19.
 \item I say lower.
 \end{itemize}
 
-So we know that 13<number<19.
+So we know that 13$<$number$<$19.
 
 \begin{itemize}
 \item You guess 16.
 \item I say higher.
 \end{itemize}
 
-So we know that 16<number<19
+So we know that 16$<$number$<$19
 
 \begin{itemize}
 \item You guess 17.
@@ -3476,10 +3784,10 @@ This is a generic implementation of a binary search.
 
 \begin{lstlisting}
 void binarySearch(int ans,int minBound,int maxBound){
-    while(maxVal>=minVal){
+    while(maxVal$>$=minVal){
        int mid = (minVal+maxVal)/2;
        if(mid==ans)return;
-       if(mid<ans)minVal = mid;
+       if(mid$<$ans)minVal = mid;
        else maxVal = mid;
     }
 }
@@ -3494,7 +3802,9 @@ Example: 1,2 4, 6, 8, 10, 16, 20. Given A=5 and B=15, the number of elements bet
 \item Given two sorted arrays, find the number of duplicate elements.
 \item Given two decimal numbers A and B, how do you find A/B without using division?
 \end{enumerate}
-\section{Ternary Search}
+
+        \section{ Ternary Search }
+        
 
 Ternary search is a search that find local minimum or maximum values in a function given the interval between A and B.
 
@@ -3512,35 +3822,35 @@ Let m1 by 1/3 of the way from A and B and let m2 be 2/3 of the way from B.
 
 \subsubsection{Proof}
 
-Case 1 : f(m1) < f(m2)
+Case 1 : f(m1) $<$ f(m2)
 
 \begin{itemize}
-\item Case 1.1:  m1 < m2 < x
+\item Case 1.1:  m1 $<$ m2 $<$ x
 
 \includegraphics[width=\maxwidth{\textwidth}]{ternarycase11.png}
-\item Case 1.2: m1<x<m2
+\item Case 1.2: m1$<$x$<$m2
 
 \includegraphics[width=\maxwidth{\textwidth}]{ternarycase12.png}
-\item x < m1 < m2 is not possible.
+\item x $<$ m1 $<$ m2 is not possible.
 \end{itemize}
 
-If f(m1) < f(m2) then the max point must be in the middle third or last third.
+If f(m1) $<$ f(m2) then the max point must be in the middle third or last third.
 
 \includegraphics[width=\maxwidth{\textwidth}]{ternarycase1.png}
 
-Case 2: f(m1) >= f(m2)
+Case 2: f(m1) $>$= f(m2)
 
 \begin{itemize}
-\item Case 2.1: m1 < x < m2
+\item Case 2.1: m1 $<$ x $<$ m2
 
 \includegraphics[width=\maxwidth{\textwidth}]{ternarycase21.png}
-\item Case 2.2: x < m1 < m2
+\item Case 2.2: x $<$ m1 $<$ m2
 
 \includegraphics[width=\maxwidth{\textwidth}]{ternarycase22.png}
-\item m1 < m2 < x is not possible
+\item m1 $<$ m2 $<$ x is not possible
 \end{itemize}
 
-If f(m1) >= f(m2) then the max point must be in the first third or middle third.
+If f(m1) $>$= f(m2) then the max point must be in the first third or middle third.
 
 \includegraphics[width=\maxwidth{\textwidth}]{ternarycase2.png}
 
@@ -3573,8 +3883,8 @@ Let tern(a,b) return x where f(x) = maximum
 Let m1 = a+(b-a)/3,
 m2 = a+(b-a)*2/3
 
-tern(a,b) = { if |f(a)-f(b)|<epsilon    (a+b)/2 
-            { if f(a) < f(b)             tern(m1,b)
+tern(a,b) = { if |f(a)-f(b)|$<$epsilon    (a+b)/2 
+            { if f(a) $<$ f(b)             tern(m1,b)
             { else                       tern(a,m2)
 \end{lstlisting}
 
@@ -3582,19 +3892,21 @@ tern(a,b) = { if |f(a)-f(b)|<epsilon    (a+b)/2
 
 \begin{lstlisting}
 public double tern(double a,double b){
-    if(Math.abs(f(a)-f(b))<0.0001){
+    if(Math.abs(f(a)-f(b))$<$0.0001){
         return (a+b)/2.0;
     }
     double m1 = a+(b-a)/3.0;
     double m2 = a+(b-a)*2/3;
-    if(f(a)<f(b)){
+    if(f(a)$<$f(b)){
         return tern(m1,b);
     }else {
         return tern(a,m2);
     }
 }
 \end{lstlisting}
-\section{Depth First Search}
+
+        \section{ Depth First Search }
+        
 
 Prerequisites: Recursion, Stack
 
@@ -3691,8 +4003,8 @@ public static void DFS\_graph(int[][] adjMatrix,int cur,boolean[] visited){
     if(visited[cur])return;
     visited[cur] = true;
     System.out.println(cur);
-    for(int i=0;i<adjMatrix.length;i++){
-        if(adjMatrix[cur][i]>0)DFS\_graph(adjMatrix,i,visited);
+    for(int i=0;i$<$adjMatrix.length;i++){
+        if(adjMatrix[cur][i]$>$0)DFS\_graph(adjMatrix,i,visited);
     }
     return;
 }
@@ -3710,7 +4022,9 @@ Since DFS goes as deep as possible before going back, the stack we use will need
 \item Given a graph, determine if it contains a cycle.
 \item Given a node and a binary tree, find the next node for post order, pre order and normal order.
 \end{enumerate}
-\section{Breadth First Search}
+
+        \section{ Breadth First Search }
+        
 
 Prerequisites: Recursion, Queue
 
@@ -3730,7 +4044,7 @@ Printing a binary tree using BFS:
 
 \begin{lstlisting}
 void bfs(Node root){
-    Queue<Node> q = new Queue<Node>();
+    Queue$<$Node$>$ q = new Queue$<$Node$>$();
     q.push(root);
     while(q.isEmpty()==false){
         Node cur = q.pop();
@@ -3748,16 +4062,18 @@ void bfs(Node root){
 \item Given a tree of letters (A is the root), output the tree using BFS with separators between levels
 
 \begin{itemize}
-\item Example: A->B, B->D,B->C, C->G will output A | B | C D | G 
+\item Example: A-$>$B, B-$>$D,B-$>$C, C-$>$G will output A | B | C D | G 
 \end{itemize}
 \item Given a tree of letters, and two letters X and Y determine if X is an ancestor of Y or Y is a ancestor of X or neither. An ancestor of a node is another node that is the root of a subtree that contains that node. Or simply parent of the node, grand parent, great grandparents etc.
 
 \begin{itemize}
-\item Example: A->B, B->C, B->D, D->G,  A is a parent of both C and D but G and C are not ancestors of each other
+\item Example: A-$>$B, B-$>$C, B-$>$D, D-$>$G,  A is a parent of both C and D but G and C are not ancestors of each other
 \end{itemize}
 \item Given a binary tree and a node in the binary tree, find the next node in BFS order of the tree.
 \end{enumerate}
-\section{Flood Fill}
+
+        \section{ Flood Fill }
+        
 
 Prerequisites: Depth First Search, Breadth First Search
 
@@ -3790,7 +4106,7 @@ void floodFill(int i,int j){
 
 \begin{lstlisting}
 void floodFill(int i,int j){
-   Queue<Point> q;
+   Queue$<$Point$>$ q;
    q.push(new Point(i,j));
    while(!q.isEmpty()){
       Point cur = q.pop();
@@ -3837,7 +4153,7 @@ This is the DFS approach to the problem.
  * and returns the number of pixels changed
  */
 public int FloodFillDFS(int x,int y,int src,int tar){
-    if(x<0 || x>=n || y<0 || y>=m)return 0;
+    if(x$<$0 || x$>$=n || y$<$0 || y$>$=m)return 0;
     if(visited[x][y])return 0;
     visited[x][y] = true;
     if(image[x][y]!=src)return 0;
@@ -3868,12 +4184,12 @@ This is the BFS approach to the problem.
  * and returns the number of pixels changes 
  */
 public int FloodFillBFS(int x,int y,int src,int tar){
-    LinkedList<Point> q = new LinkedList<Point>();
+    LinkedList$<$Point$>$ q = new LinkedList$<$Point$>$();
     q.push(new Point(x,y));
     int total = 0;
     while(q.isEmpty()==false){
         Point cur = q.pop();
-        if(cur.x<0||cur.x>=n||cur.y<0||cur.y>=m)continue;
+        if(cur.x$<$0||cur.x$>$=n||cur.y$<$0||cur.y$>$=m)continue;
         if(visited[cur.x][cur.y])continue;
                 visited[cur.x][cur.y] = true;
         if(image[cur.x][cur.y]!=src)continue;
@@ -3899,7 +4215,9 @@ FloodFillBFS(1,1,1,2);
 \item Example: a single cell has a perimeter of 4, two cells joined side by side have a perimeter of 6
 \end{itemize}
 \end{enumerate}
-\section{Backtracking}
+
+        \section{ Backtracking }
+        
 
 Backtracking is a search that find all possible solutions by enumerating on a partial solution. Backtracking can be done using DFS or BFS. Generally, DFS will be better than BFS because backtracking is used to enumerate a large amount of solution. Since BFS requires storing each "level" of solutions and DFS requires storing each "height" of the solution.
 
@@ -4065,8 +4383,8 @@ subset(0,'1111')
 
 \begin{lstlisting}
 void subsets(int arr[],bool use[],int i){
-    if(i>=arr.length){
-         for(int j=0;j<n;j++){
+    if(i$>$=arr.length){
+         for(int j=0;j$<$n;j++){
               System.out.print("\%d ",arr[i]);
          }
          System.out.println();
@@ -4215,7 +4533,11 @@ queen(0,[3,0,2,3],[6,2,3,3],[3,5,2,0]) x-- reject
 \item Given a NxN chessboard with certain squares that can have no pieces placed, output the number of configurations that can be made from rooks without attacking each other.
 \item Given a sudoku grid, output a solution for the grid if it exists. Note: this question is popular for technical interviews.
 \end{enumerate}
-\chapter{Dynamic Programming}\subsubsection{Introduction}
+
+\part{ Dynamic Programming }
+    \chapter{ Dynamic Programming }
+        \section{ Dynamic Programming }
+        
 
 Prerequisites: Advanced Recursion
 
@@ -4230,7 +4552,419 @@ Like recursion, dynamic programming requires two things:
 \item A subproblem that can be reduced into smaller subproblems 
 \end{itemize}
 
-\section{Advanced Dynamic Programming}
+\subsection{Fibonacci Sequence}
+
+The Fibonacci sequence is determined by f(n) = f(n-1)+f(n-2) where f(0) = 1 and f(1) = 1.
+
+If we calculate f(5) we have:
+
+\begin{lstlisting}
+f(5) 
+= f(4) + f(3) 
+= f(3) + f(2) + f(2) + f(1) 
+= f(2) + f(1) + f(1) + f(0) + f(1) + f(0) + f(1) 
+= f(1) + f(0) + f(1) + f(1) + f(0) + f(1) + f(0) + f(1) 
+= 1 + 1 + 1 + 1 + 1 + 1 + 1
+= 8
+\end{lstlisting}
+
+However we are computing multiple values more than once. When we compute f(5) we need to compute f(4) and f(3) but f(3) is already computed when we compute f(4) and thus we have to recompute it again. We can avoid this redundancy by "building up". We can calculate f(2), then f(3) then f(4) and finally f(5) and we won't have duplicate calculations.
+
+\begin{lstlisting}
+f(0) = 1
+f(1) = 1
+f(2) = f(1) + f(0) = 2
+f(3) = f(2) + f(1) = 3
+f(4) = f(3) + f(2) = 5
+f(5) = f(4) + f(3) = 8
+\end{lstlisting}
+
+\subsubsection{Formalization}
+
+Recursion
+
+\begin{lstlisting}
+Let f(n) be the nth Fibonacci number
+
+Base case:
+fib(0) = 1, fib(1) = 1
+
+Subproblem:
+fib(n) = fib(n-1) + fib(n-2)
+
+Example:
+f(5) 
+= f(4) + f(3) 
+= f(3) + f(2) + f(2) + f(1) 
+= f(2) + f(1) + f(1) + f(0) + f(1) + f(0) + f(1) 
+= f(1) + f(0) + f(1) + f(1) + f(0) + f(1) + f(0) + f(1) 
+= 1 + 1 + 1 + 1 + 1 + 1 + 1
+= 8
+\end{lstlisting}
+
+Dynamic Programming
+
+\begin{lstlisting}
+Let fib[n] be the nth Fibonacci number
+
+Base case
+fib[0] = 1
+fib[1] = 1
+
+for x from 1 to N
+    fib[x] = fib[x-1] + fib[x-2]
+
+Example:
+N = 10
+fib[0] = 1
+fib[1] = 1
+fib[2] = 2
+fib[3] = 3
+fib[4] = 5
+fib[5] = 8
+fib[6] = 13
+fib[7] = 21
+fib[8] = 34
+fib[9] = 55
+fib[10] = 89
+\end{lstlisting}
+
+\subsubsection{Code}
+
+Recursion
+
+\begin{lstlisting}
+public int fib(int n){
+    if(n==0 || n==1) return 1;
+    return fib(n-1) + fib(n-2);
+}
+\end{lstlisting}
+
+Dynamic Programming
+
+\begin{lstlisting}
+public int fib(int n){
+    int fibArr[] = new int[n];
+    fibArr[0] = 1
+    fibArr[1] = 1
+    for(int x=2; x$<$n; x++){
+         fibArr[x] = fibArr[x-1] + fibArr[x-2];
+    }
+    return fibArr[n];
+}
+\end{lstlisting}
+
+\subsection{Coin Problem}
+
+Let's say that you wanted to make change for  using the smallest amount of bills (, , , , ). We can use a greedy approach by always taking the highest bill that can be subtracted to find the smallest amount of change. 51 - 20 = 31 - 20 = 11 - 10 = 1. So the smallest amount of change would be comprised of 2 x  + 1 x  + 1 for a total of 5 bills. This solution seems very easy to implement, but what if the bills were not so nice?
+
+Imagine that an alien currency was in denominations of , ,  and . What would be the smallest amount of bills to make change for ? Note that a greedy approach does not work for this alien currency. For example: 13 - 11 = 2. It is impossible to make change using the greedy approach. Note that we can make change with 2 x  + 1 x  = .
+
+Let's define the problem more formally: Given a list of bills each with a positive denominations, find the lowest amount of bills required to make C dollars or return impossible if it cannot be done.
+
+The base case for 0 dollars is very simple. There are 0 bills to make 0 dollars.
+
+Lets try to simply this problem. Assume we only have one bill worth d dollars. If we have C dollars and we want to use the bill, then we will have C-d dollars left. So the minimum bills to make C dollars is the minimum number of bills to make (C - d) bills plus the 1 for the bill we used. For example, we want to make 10 dollars and we only have 2 dollar bills. If we use a 2 dollar bill, then the minimum bills required to make 10 dollars is the minimum number of bills required to make 8 dollars plus that 2 dollar bill. To find the minimum number of bills required to make 8 dollars, we can find the minimum number of bills to make 6 dollars plus one more 2 dollar bill. As you can see it is the same as before and it is a recursive function!
+
+Recursion
+
+\begin{lstlisting}
+Let d be the denomination
+Let bills(C) be the minimum number of bills to make C dollars.
+
+Base Case:
+bills(0) = 0
+bills(C) = impossible if C $<$ 0
+
+Subproblem:
+bills(C) = bills(C-d) + 1 if bills(C-d) is possible
+               impossible if bills(C-d) is impossible
+
+Example:
+C = 10
+d = 2
+
+bills(10) 
+= bills(8) + 1
+= bills(6) + 1 + 1
+= bills(4) + 1 + 1 + 1
+= bills(2) + 1 + 1 + 1 + 1
+= bills(0) + 1 + 1 + 1 + 1 + 1
+= 5
+\end{lstlisting}
+
+We can implement this using dynamic programming but it will not give us much benefit since the recursion has no recalculations.
+
+\begin{lstlisting}
+bills[0] = 0
+
+for c from 1 to C
+     if c-d $>$= 0 and bills[c-d] is not impossible
+         bills[c] = bills[c-d] + 1
+     else
+         bills[c] = impossible
+
+Example:
+C = 10
+d = 2
+
+bills[0] = 0
+bills[1] = impossible
+bills[2] = 1
+bills[3] = impossible
+bills[4] = 2
+bills[5] = impossible
+bills[6] = 3
+bills[7] = impossible
+bills[8] = 4
+bills[9] = impossible
+bills[10] = 5
+\end{lstlisting}
+
+Now let's consider the problem with multiple bills of denominations d1,d2 .... dn and we want to make C dollars. If we use a d1 bill, then we will have C-d1 dollars left and similarly if we use a d2 bill then we will have C-d2 dollars left. More generally, if we use a dn bill, then we will have C-dn dollars left. If we want to find the minimum bills to make C dollars we should try to use every bill and see which requires the minimum number of bills. So the minimum bills to make C dollars is the minimum of C - dn bills plus one more dn bill for all bills of denomination dn. For example, if we have  and we have bills ,, and , the minimum number of bills to make  is the minimum of the minimum number of bills to make  plus one more  bill, minimum number of bills to make  plus one more  or the minimum number of bills to make  plus one more  bill.
+
+\begin{lstlisting}
+Let denom be a list of denominations
+Let bills(C) be the minimum number of bills from denominations to make C dollars
+
+Base Cases:
+bills(0) = 0
+bills(C) = impossible if C $<$ 0
+
+Subproblem
+bill(C) = {  minimum of bills(C - d)+1 for d in denom if bills(C-d) is possible
+             {  impossible if bills(C - d) is impossible for all d in denom
+
+Example:
+denom = [3,4,5]
+
+bill(7)
+= min(bill(4)+1,bill(3)+1,bill(2)+1))
+= min(min(bill(1)+1,
+           bill(0)+1,
+           bill(-1)+1)+1, 
+       min(bill(0)+1,
+           bill(-1)+1,
+           bill(-2)+1) +1, 
+       min(bill(-1)+1),
+           bill(-2)+1,
+           bill(-3)+1)+1)
+= min( min(impossible, 1, impossible) +1,
+           min(1,impossible,impossible) +1,
+           min(impossible,impossible,impossible)+1)
+= min(2,2,impossible)
+= 2
+
+\end{lstlisting}
+
+However note, that we are recomputing multiple things. For example we are recomputing bill(0) multiple times and bill(-1) multiple times. If instead we worked the solution up instead of down, we can find bill(C) more efficiently. We can do this by computing bill(c) as c goes from 0 to C. Eg. we compute bill(0) then bill(1) then bill(2) .... until bill(C).
+
+Putting it all together:
+
+\begin{lstlisting}
+Let bills[C] be the smallest amount of bills to make the amount C, or impossible if it is not possible
+Let denom be an array of denominations
+
+Base case:
+bills[0] = 0
+
+Subproblem:
+for c from 1 to C
+    bills[c] = impossible
+    for d in denom
+        if c-d $>$= 0 and bills[c-d] is not impossible:
+            bills[c] = min(bills[c], bills[c-d]+1)
+
+Example:
+denom = [3,4,5]
+C = 7
+bills[0] = 0
+bills[1] = impossible (bills[-2],bills[-3],bills[-4])
+bills[2] = impossible 
+bills[3] = 1 (bills[0]+1)
+bills[4] = 1 (bills[0]+1)
+bills[5] = 1 (bills[0]+1)
+bills[6] = 2 (bills[3]+1)
+bills[7] = 2 (bills[3]+1 or bills[4]+1)
+\end{lstlisting}
+
+\subsection{Knapsack Problem}
+
+Imagine you are a robber and you have found a large stash of valuables. Each valuable has a value and a weight. You can only hold 10kg in your bag and you want to find the highest valued haul you can get away with.
+
+\begin{itemize}
+\item Necklace: , 1kg
+\item Stack of cash: 0, 3kg
+\item Jewelry: 5, 7kg
+\item Rare painting: 0, 9kg
+\end{itemize}
+
+Let's try a greedy approach: we will take the items with the highest value to weight ratio.
+
+\begin{itemize}
+\item Necklace: /kg
+\item Stack of cash: /kg
+\item Jewelry: /kg
+\item Rare painting: 0/kg
+\end{itemize}
+
+The greedy approach will choose the rare painting and the necklace for a total of 0. However if we take the jewelry and the stack of cash we will get 5 and still fit it into the bag. How can we solve this problem? The answer is dynamic programming.
+
+Let's first write a more formal definition of the problem:
+
+Given unlimited quantities of N items, each associated with a positive weight and value, and a maximum total weight W that we can hold, what is the maximum value we can hold.
+
+Let's write a more specific version of the problem: we want to find the maximum value that a bag with weight capacity W can carry out of N items of positive values and weights.
+
+The base case for this is trivial. With zero weight, the maximum value you can have is 0.
+
+Let's try simplifying the problem by using only one item with weight w and value v and a knapsack with maximum weight capacity W. Suppose we want to add the item into the knapsack then we have W-w capacity remaining and the value of the item. So the maximum value of knapsack with capacity W is the maximum value of W-w plus one more the item's value v. The maximum value of W-w is the maximum value of W-2w + 2v. As we can see, its the same subproblem as before and we have found a recursive relation.
+
+For example if we had an item with value  and weight 4kg and a knapsack with capacity 9kg. The maximum value that knapsack of 8kg can contain is the maximum value of a knapsack of 5kg plus  for the item we put in the bag and so forth.
+
+\begin{lstlisting}
+Let knapsack(W) be the maximum value of items that can fit into maximum capacity of W.
+Let w be the weight of one item and v be the value of one item.
+
+Base Case:
+knapsack(0) = 0
+knapsack(W) = 0 if W $<$ w
+
+Recursion:
+knapsack(W) = knapsack(W-w) + v
+
+Example:
+v = 5
+w = 4
+knapsack(9)
+= knapsack(5) + 5
+= knapsack(1) + 5 + 5
+= 10
+\end{lstlisting}
+
+Note that we are recomputing multiple values multiple times. We can avoid this by using dynamic programming and working up with our solution instead of backwards.
+
+\begin{lstlisting}
+Let knapsack[W] be the maximum value with weight capacity W
+Let w be the positive integer weight of the item and v be the value of an item
+
+for k from 0 to w-1
+    knapsack[k] = 0
+
+for weight from 1 to W
+    knapsack[weight] = knapsack[weight-w]+v
+
+Example:
+W = 9
+w = 4
+v = 4
+
+knapsack[0] = 0     base case
+knapsack[1] = 0     base case
+knapsack[2] = 0     base case
+knapsack[3] = 0     base case
+knapsack[4] = 5     (knapsack[0]+5)
+knapsack[5] = 5     ^
+knapsack[6] = 5     ^
+knapsack[7] = 5     ^
+knapsack[8] = 10    (knapsack[4]+5)
+knapsack[9] = 10    ^
+\end{lstlisting}
+
+Now let's go back to the original problem. We have N items each of positive weight and value and we want to find the maximum value to be put into a knapsack of capacity W.
+
+If no items are left to fit in our remaining capacity, then the maximum value must be ((((Dynamic Programming)))). This is our base case.
+
+If we use an item, we will have capacity W-wi and the added value will be vi. We want to try all items to place into the knapsack so we try every single item and find the maximum value out of the items. So the maximum value of capacity W is the maximum value of W-wi plus the added value of vi for all items. To find the maximum value of capacity W-wi we can do the exact same thing by trying to place each item and finding the maximum value out of the items.
+
+For example we have a knapsack of capacity 10kg and necklaces worth  with weight 3kg, paintings worth  with weight 9kg and silver bars worth  with weight 7kg. If we choose a necklace, we will have 7kg capacity left with the added value of . If we choose a painting, we will have 1kg capacity left and added value of . If we choose a silver bar, we will have 3kg capacity left and added value of . With the remaining capacity, we can choose another item and do the exact same thing.
+
+\subsubsection{Formalization}
+
+\begin{lstlisting}
+Let knapsack(W) be the maximum value with maximum capacity W
+Let weights be an array of weights where wi is the weight of the ith item.
+Let values be an array of values where vi is the value of the ith item.
+
+knapsack(W) = 0 if wi $>$ W for all items
+
+knapsack(W) = max(knapsack(W-wi) + vi for all items with wi $<$= W)
+\end{lstlisting}
+
+\begin{lstlisting}
+Let knapsack[w] be the maximum value with maximum capacity W
+Let weights be an array of weights where wi is the weight of the ith item.
+Let values be an array of values where vi is the value of the ith item.
+
+for w from 0 to W
+    knapsack[w] = 0
+
+for w from 1 to W
+    maxVal = 0
+    for i in items
+        if w-wi $>$= 0
+            knapsack[w] = max(knapsack[w], knapsack[w-wi] + vi)
+
+Example:
+
+\end{lstlisting}
+
+\subsection{Number of Paths}
+
+\includegraphics[width=\maxwidth{\textwidth}]{recursion_grid.png}
+
+We first examined the number of paths problem in advanced recursion. However, now that we know how to use dynamic programming, we can see that the recursive solution was very inefficient because we were recomputing values many times.
+
+\begin{lstlisting}
+Let path(x,y) be the number of ways to get to the intersection at x and y
+
+Base case:
+paths(1,y) = 1
+paths(x,1) = 1
+
+Recurrence:
+paths(x,y) = paths(x-1,y) + paths(x,y-1)
+
+Example:
+paths(3,5)
+= paths(2,5) + paths(3,4)
+= paths(1,5) + paths(2,4) + paths(2,4) + paths(3,3)
+= 1 + paths(1,4) + paths(2,3) + paths(1,4) + paths(2,3) + paths(2,3) + paths(3,2)
+= 1 + 1 + paths(1,3) + paths(2,2) + 1 + paths(1,3) + paths(2,2) + paths(1,3) + paths(2,2) + paths(2,2) + paths(3,1)
+= 1 + 1 + 1 + paths(1,2) + paths(2,1) + 1 + 1 + path(1,2) + paths(2,1) + 1 + paths(1,2) + paths(2,1) + ....
+= 15
+\end{lstlisting}
+
+Instead of recomputing multiple values, we can build our solution upwards starting from 1,1
+
+\begin{lstlisting}
+Let paths[x][y] be the number of ways to get from (1,1) to (x,y). 
+
+paths[1][1] = 1
+
+for x from 1 to N
+    for y from 1 to M
+        paths[x][y] = paths[x-1][y] + paths[x][y-1]
+
+Example:
+N = 3
+M = 5
+
+1 1 1 1  1
+1 2 3 4  5
+1 3 6 10 15
+\end{lstlisting}
+
+\subsection{Exercises}
+
+\begin{enumerate}
+\item Given an array of N integers, find the largest sum that can be using consecutive integers.
+\item Given an array of N integers, find the longest increasing subsequence
+\item Given a matrix of NxN integers, find the maximum sum of a submatrix
+\end{enumerate}
+
+        \section{ Advanced Dynamic Programming }
+        
 
 Dynamic programming is very powerful and more efficient than recursion for problems that recompute multiple values. However sometimes it is difficult to find an efficient dynamic programming solution and we will examine problems where we will need higher dimensions.
 
@@ -4278,15 +5012,15 @@ LCS of not matched = max ( (LCS of A[1..N], B[1..M-1]) , (LCS of A[1..N-1],B[1..
 Putting it all together we have:
 
 \begin{lstlisting}
-Let LCS[i][j] be the length of longest common subsequence of A[1..i] and B[1..j] where 0< i ≤ n and 0 < j ≤ m.
+Let LCS[i][j] be the length of longest common subsequence of A[1..i] and B[1..j] where 0$<$ i ≤ n and 0 $<$ j ≤ m.
 
 Base case:
-LCS[i][0] = 0 where 0< i ≤ n
-LCS[0][j] = 0 where 0< j ≤ m
+LCS[i][0] = 0 where 0$<$ i ≤ n
+LCS[0][j] = 0 where 0$<$ j ≤ m
 
 Subproblem:
-if A[i] == B[j], LCS[i][j] = LCS[i-1][j-1]+1 where 0< i ≤ n and 0 < j ≤ m
-if A[i] != B[j], LCS[i][j] = max( LCS[i-1][j], LCS[i][j-1] ) where 0< i ≤ n and 0 < j ≤ m
+if A[i] == B[j], LCS[i][j] = LCS[i-1][j-1]+1 where 0$<$ i ≤ n and 0 $<$ j ≤ m
+if A[i] != B[j], LCS[i][j] = max( LCS[i-1][j], LCS[i][j-1] ) where 0$<$ i ≤ n and 0 $<$ j ≤ m
 \end{lstlisting}
 
 \subsection{Zero-one Knapsack Problem}
@@ -4306,7 +5040,7 @@ Let values be an array of values
 
 knapsack(i,0) = 0
 knapsack(i,w) = 0 if no items can fit
-knapsack(i,w) = 0 where i <= 0
+knapsack(i,w) = 0 where i $<$= 0
 
 knapsack(n,w) = max(knapsack(n-1,w-weight[n])+value[n], knapsack(n-1,w))
 \end{lstlisting}
@@ -4324,189 +5058,5 @@ for n from 1 to N
     for w from 1 to W
         knapsack[n][w] = max(knapsack[n-1][w-weight[n]]+value[n], knapsack[n-1][w])
 \end{lstlisting}
-\section{Coin Problem}
 
-Let's say that you wanted to make change for \$51 using the smallest amount of bills (\$1, \$2, \$5, \$10, \$20). We can use a greedy approach by always taking the highest bill that can be subtracted to find the smallest amount of change. 51 - 20 = 31 - 20 = 11 - 10 = 1. So the smallest amount of change would be comprised of 2 x \$20 + 1 x \$10 + 1 for a total of 5 bills. This solution seems very easy to implement, but what if the bills were not so nice?
-
-Imagine that an alien currency was in denominations of \$3, \$5, \$7 and \$11. What would be the smallest amount of bills to make change for \$13? Note that a greedy approach does not work for this alien currency. For example: 13 - 11 = 2. It is impossible to make change using the greedy approach.
-
-\subsection{Solution}
-
-Let's define the problem more formally: Given a list of bills each with a positive denomination d, find the lowest amount of bills required to make C dollars or return impossible if it cannot be done.
-
-The base case 0 for this is very simple. There are 0 bills to make 0 dollars.
-
-We can reduce this problem into subproblems. Let's assume that we have found out the lowest amount of bills required to make all the dollar amounts from 0 to C-1 or determined if it is impossible to do so. Lets take a look at an arbitrary bill b with denomination d. We know the minimum number of bills to make C-d (or if its impossible) based on our assumption that we have solved from 0 to C-1. Thus if use the bill b to make C then it is just the minimum number of bills to make C-d with 1 more bill so we add 1 more to that value. If we take the minimum value for all bills (if its possible to make C-d), we will get the lowest amount of bills required to make C.
-
-Putting it all together:
-
-\begin{lstlisting}
-Let bills[C] be the smallest amount of bills to make the amount C, or impossible if it is not possible
-
-Base case:
-bills[0] = 0
-
-Subproblem:
-bills[C] = min(bills[C-d]+1) for all bills where d is the denominator of the bill and bills[C-d] is not impossible
-if bill[C-d] = impossible for all bills, then bills[C] is impossible
-\end{lstlisting}
-
-Example of previous problem where the bills are (\$3, \$5, \$7, \$11) and we want to find the minimum number of bills to make 13.
-
-Let -1 be "impossible".
-
-\vspace{10pt} \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
-
-
-  C &
-  0 &
-  1 &
-  2 &
-  3 &
-  4 &
-  5 &
-  6 &
-  7 &
-  8 &
-  9 &
-  10 &
-  11 &
-  12 &
-  13\\
-\hline
-
-
-  bills[C] &
-  0 &
-  -1 &
-  -1 &
-  1 &
-  0 &
-  1 &
-  2 &
-  -1 &
-  2 &
-  3 &
-  2 &
-  1 &
-  4 &
-  3\\
-
-\hline\end{tabular}
-
-\subsection{Implementation}
-
-\subsection{Exercises}
-
-\begin{enumerate}
-\item Given a list of bills each with unique denomination d, find the number of ways to make C dollars. 
-
-\begin{itemize}
-\item For example given bills: \$2, \$3, \$5, there are 2 ways to make \$7 (2+5, 2+2+3)
-\end{itemize}
-\item Given a list of N integers, separate the list into two sets such that the difference is minimized and output the difference.
-
-\begin{itemize}
-\item For example given integers: 1, 4, 10, 12, we can separate them into (4+10=14) and (1+12=13) so the minimum difference is 1.
-\end{itemize}
-\item Given a list of lengths, find the smallest area that can be created if  the lengths are used to make a triangle. 
-
-\begin{itemize}
-\item For example, given lengths: 2,4,6,8,10 we can make a triangle with minimum area 43.3 if we use the sides (2+8=10, 4+6 = 10, 10).
-\end{itemize}
-\end{enumerate}
-\section{Knapsack Problem}
-
-Imagine you are a robber and you have found a large stash of valuables. Each valuable has a value and a weight. You can only hold 10kg in your bag and you want to find the highest valued haul you can get away with.
-
-\begin{itemize}
-\item Necklace: \$10, 1kg
-\item Stack of cash: \$270, 3kg
-\item Jewelry: \$665, 7kg
-\item Rare painting: \$900, 9kg
-\end{itemize}
-
-Let's try a greedy approach: we will take the items with the highest value to weight ratio.
-
-\begin{itemize}
-\item Necklace: \$10/kg
-\item Stack of cash: \$90/kg
-\item Jewelry: \$95/kg
-\item Rare painting: \$100/kg
-\end{itemize}
-
-The greedy approach will choose the rare painting and the necklace for a total of \$910. However if we take the jewelry and the stack of cash we will get \$935 and still fit it into the bag. How can we solve this problem? The answer is dynamic programming.
-
-\subsection{Solution}
-
-Let's first write a more formal definition of the problem:
-
-Given n objects, each associated with a positive weight and value, and a maximum total weight W that we can hold, what is the maximum value we can hold. In the zero/one knapsack problem, there is only one of each object so we either take it or leave it.
-
-Let's write a more specific version of the problem: we want to find the maximum value that a bag with maximum weight W can hold of N objects with positive weight and value which we can either take or not take.
-
-The base case for this is trivial. With zero weight, the maximum value you can have is 0.
-
-We now have to break this problem down into subproblems.
-
-Now we want to find the maximum value for a bag of maximum weight W and assessing all N objects. Since we have already assessed up to N-1 objects we only need to assess the Nth object. For the Nth object we can either take it or leave it.
-
-If we leave it, then it is the same as a bag of maximum weight W with N-1 objects because we are just ignoring the Nth object.
-
-\begin{lstlisting} max value leaving = maximum value of N-1 objects with weight W
-\end{lstlisting}
-
-If we take it, then we need to find the maximum value thats possible while making room for that object and add that to the value of the object.
-
-\begin{lstlisting}max value taking = (maximum value of N-1 objects seen with weight W-weight of object N) + value of object N. 
-\end{lstlisting}
-
-If we want the maximum value of assessing N objects and maximum weight W then we want the max of leaving the Nth object and taking the Nth object so:
-
-\begin{lstlisting}
-max value = max( maximum value taking, maximum value leaving)
-max value = max( maximum value of N-1 objects with weight W, (maximum value of N-1 objects with weight W - weight of N) + value of N))
-\end{lstlisting}
-
-Putting it all together we have:
-
-\begin{lstlisting}
-Let weight[i] be the weight of object i
-Let value[i] be the value of object i
-
-Let knapsack[i][j] be the maximum value that a knapsack of maximum weight j can hold with objects seen from 1 to i
-
-Base case:
-knapsack[0][0] = 0
-
-Subproblem:
-knapsack[i][j] = max(knapsack[i-1][j-weight[i]], knapsack[i-1][j-1])
-\end{lstlisting}
-
-\subsection{Implementation}
-
-\subsection{Exercises}
-
-\begin{enumerate}
-\item Given a list of n objects with a positive weight and value, find the maximum value that can be obtained with maximum weight W. However, each object can be used more than once.
-\end{enumerate}
-\chapter{Strings}\subsubsection{Introduction}
-
-String problems are more important than ever before with the enormous amount of text and information that is now available. For example, if we search for keywords on Google out of the millions of articles, how can we do it in such a way that the retrieval is relevant, accurate and efficient? If we misspell the word "shooting" as "sohoting" how can we come up with a list of autocorrected words?
-
-\section{Pattern Matching}
-
-Pattern matching is finding if a certain sequence of elements exists in another larger sequence of elements. For example we want to find if the string "abc" is in the string "abdabdbdacbaabcasd" (which the answer is yes).
-
-\subsection{Knuth Morris Pratt}
-
-If we have the needle string "abcxabcy" and haystack string "abcyabcxabcy" then our first search will be putting the needle at position 0 as we see the search fails at 'x'. However we note that we do not need to set the needle at position 1 because we have already done the search for the prefix "abc". Thus we can search starting by setting the needle at the next 'a'.
-
-KMP uses this type of optimization for pattern matching by precomputing a table for the needle string.
-
-\subsection{Rabin Karp}
-
-\subsection{Finite State Automata}
-
-\subsection{Boyer Moore}
 \end{document}

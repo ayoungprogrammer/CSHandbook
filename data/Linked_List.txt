@@ -20,11 +20,9 @@ A **doubly linked list** is a linked list that has pointers going backwards as w
 |-----------|---------|------------|---------
 | Time Complexity | O(n) | O(1) | O(1) | O(1)
 
-## Implementation
+## Link Class
 
 In Java, there already exists a LinkedList class but we will implement our own.
-
-### Link Class
 
 The Link class for each "link" in the Linked List. In each Link we only need the value and location of the previous and next node. 
 
@@ -39,7 +37,7 @@ class Link{
 }
 ]]]]
 
-### Class
+## LinkedList Class
 
 Create the linked list by initializing the starting node as null and setting the size to empty.
 [[[[
@@ -54,7 +52,7 @@ class LinkedList{
 }
 ]]]]
  
-### Push
+## Push
 
 Create a new node with the value given and add it to the end. We have to set the current head previous node to the new node and the new next next to the last node.
 
@@ -80,7 +78,7 @@ public void push(int value){
 }
 ]]]]
 
-### Pop
+## Pop
 
 Pops off the node at the head.
 
@@ -106,7 +104,7 @@ public int pop(){
 }
 ]]]]
 
-### Get 
+## Get 
 
 Get retrieves the value at the specified index. We have to loop through the entire list to get the index we want because the nodes are not in the same block of memory.
 
@@ -134,7 +132,7 @@ public int get(int index){
 }
 ]]]]
 
-### Delete
+## Delete
 
 To delete the current node we set the previous node next link to the link after.
 

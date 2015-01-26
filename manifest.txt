@@ -1,8 +1,99 @@
-Getting Started
-Fundamentals
-	Basics
-		Data Types
-		Arithmetic Operations
-		Control Structures
-	Runtime and Memory
+` Getting Started `
+((((Getting Started))))
+~ Fundamentals ~
+`` Basics `
+	((((Basics.Introduction))))
+	`` Data Types ``
+	((((Data Types))))
+	`` Arithmetic Operations ``
+	((((Basics.Arithmetic Operations))))
+	`` Control Structures ``
+	((((Control Structures))))
+	`` Runtime and Memory ``
+	((((Runtime and Memory))))
+~ Recursion ~
+	` Recursion `
+		`` Recursion ``
+		((((Recursion))))
+		`` Advanced Recursion ``
+		((((Advanced Recursion))))
+		`` Intermediate Recursion ``
+		((((Intermediate Recursion))))
+~ Data Structures ~
+	((((Data Structures.Introduction))))
+	` Stack `
+		`` Stack ``
+		((((Stack))))
+		`` Vector ``
+		((((Vector))))
+	` Queue `
+		`` Queue ``
+		((((Queue))))
+		`` Linked List ``
+		((((Linked List))))
+	` Sets `
+		`` Sets ``
+		((((Sets))))
+		`` Hash Set ``
+		((((Hash Set))))
+		`` Binary Search Tree ``
+		((((Binary Search Tree))))
+		`` Tree Set ``
+		((((Tree Set))))
+	` Maps `
+		`` Maps ``
+		((((Maps))))
+		`` Hash Map ``
+		((((Hash Map))))
+		`` Tree Map ``
+		((((Tree Map))))
+	` Priority Queue `
+		((((Priority Queue))))
+		`` Heap ``
+		((((Heap))))
+~ Graph Theory ~
+	((((Graph Theory.Introduction))))
+	` Representation `
+		((((Graph Theory.Representations))))
+		`` Adjacency Matrix ``
+		((((Adjacency Matrix))))
+		`` Adjacency List))))
+		((((Adjacency List))))
+	` Tree `
+		((((Graph Theory.Tree))))
+		`` Prim's ``
+		((((Prim's))))
+		`` Kruskal's ``
+		((((Kruskal's))))
+	` Shortest Path `
+		((((Graph Theory.Shortest Path))))
+		`` Dijkstra's ``
+		((((Dijkstra's))))
+		`` Bellman Ford ``
+		((((Bellman Ford))))
+		`` Floyd Warsahll ``
+		((((Floyd Warshall))))
+	` Cycle Detection `
+	((((Cycle Detection))))
+~ Searches ~
+	` Searches `
+		((((Searches.Introduction))))
+		`` Binary Search ``
+		((((Binary Search))))
+		`` Ternary Search ``
+		((((Ternary Search))))
+		`` Depth First Search ``
+		((((Depth First Search))))
+		`` Breadth First Search ``
+		((((Breadth First Search))))
+		`` Flood Fill ``
+		((((Flood Fill))))
+		`` Backtracking ``
+		((((Backtracking))))
+~ Dynamic Programming ~
+	` Dynamic Programming `
+		`` Dynamic Programming ``
+		((((Dynamic Programming))))
+		`` Advanced Dynamic Programming ``
+		((((Advanced Dynamic Programming))))
 

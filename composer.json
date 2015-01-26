@@ -2,6 +2,6 @@
     "require": {
     	"php": ">= 5.4.0",
         "michelf/php-markdown": "1.4.0",
-        "dispatch/dispatch":"dev-master"
+        "dispatch/dispatch":"4.x"
     }
 }
