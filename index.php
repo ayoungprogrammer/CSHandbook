@@ -56,6 +56,7 @@ on('GET','/', function () {
     render("main",[],false);
 });
 
+
 on('GET','/topics.json',function(){
 	echo $GLOBALS['topics'];
 });

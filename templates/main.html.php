@@ -3,6 +3,7 @@
 
 <div class="box-wrapper">
 <div class="box" id="aboutbox">
+    <h1>The Computer Science Handbook</h1>
     <h1>A Reference for Data Structures and Algorithms</h1>
     <p>A Perfect Resource For:</p>
     <ul>
@@ -18,7 +19,8 @@
         	echo '<li><a href="'.$section_ref.'">'.$section.'</a></li>';
         }?>
     </ol>
-    <a href="./topics">List of Topics</a>
+    <a href="./topics">List of Topics</a><br>
+    <a href="./public_html/TheComputerScienceHandbook.pdf">Pre-Release Book</a>
 </div>
 
 <div class="box" id="emailbox">

@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>The Computer Science Handbook - Reference for Data Structures and Algorithms</title>
-    <meta name="Description" content="Reference / handbook for computer science data structures and algorithms on topics such as 
+    <meta name="Description" content="The Computer Science Handbook - Reference / handbook for computer science data structures and algorithms on topics such as 
     graph theory, dynamic programming, recursion and other complex algorithms">
     <link rel="icon" type="image/png" href="./public_html/img/favicon.png">
 

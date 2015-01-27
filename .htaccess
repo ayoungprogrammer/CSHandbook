@@ -3,17 +3,5 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
-RewriteCond %{HTTPS} off
-RewriteRule ^donate$ https://www.thecshandbook.com/donate [R=301,L]
-
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{HTTPS} on
-RewriteCond %{REQUEST_URI} !donate
-RewriteRule .* http://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
-
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-
 RewriteCond $1 !^(index\.php)
 RewriteRule ^(.*)$ index.php/$1 [L]
