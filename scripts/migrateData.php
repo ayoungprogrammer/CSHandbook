@@ -2,6 +2,19 @@
 
 require '../src/db.php';
 
+echo "Overwrite ALL data in database? (y/n): ";
+
+$stdin = fopen('php://stdin','r');
+
+do {
+	$ch = fgetc($stdin);
+}while( $ch != 'y' && $ch != 'n');
+
+if($ch == 'n'){
+	echo "Aborting script\n";
+	exit;
+}
+
 $config = parse_ini_file('../config/local_config.ini',true);
 $db = new DB($config['db']);
 

@@ -1,0 +1,8 @@
+.idea/*
+.idea
+config/local_config.ini
+.gitignore
+.cache/*
+.cache
+composer.lock
+vendor/*
