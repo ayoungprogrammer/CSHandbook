@@ -5,3 +5,139 @@ Once we have data, we need a way to add logic to use that data. For example, we 
 A control structure allows the program to change flows based on conditions. For example:
 
 {{controlstruct.png}}
+
+This allows us to incorporate logic into computer programs.
+
+## Conditional Statements
+
+Let's say we wanted to send a greeting to someone depending on the time of day. If it's the morning, we should say 'Good Morning' otherwise we will say 'Hello'. Let's say we have the 24 hour time as an integer. How can we set a condition for morning and night? We use sometime called an "if statement". 
+
+[[[[{lang-html}
+if (test exp){
+    do something;
+else{
+    do something else;
+}
+]]]]
+
+If *test exp* evaluates to true, then the computer will *do something*, otherwise, it will *do something else*. So for example:
+
+[[[[
+if( time < 12){
+   greeting = "Good Morning";
+}else {
+   greeting = "Hello";
+}
+]]]]
+
+If the current time in 24 hour format for hours is less than 12 (noon) then the greeting will be "Good Morning". Otherwise (anything greater than or equal to 12) the greeting will be "Hello".
+
+Let's say we wanted to make this more complex. If the time is morning (7am - 12pm) we should set the greeting to "Good Morning", if the time is in the afternoon (12pm - 5pm), we should say "Good Afternoon", if the time is at night (5pm - 12am) we should set the greeting to "Good Night" and from 12am to 7am we should set the greeting to "Go to sleep!". 
+
+We can do this by using an "else if" which has the following structure:
+
+[[[[{lang-html}
+if (test exp){
+    do something;
+}
+else if(test exp2){
+    do something2;
+}
+else if(test exp3){
+    do something3;
+}else {
+    do something else
+}
+]]]]
+
+If *test exp* is true, the computer will *do something*, otherwise if *test exp2* is true, the computer will *do something2*, otherwise if *test exp3* is true, the computer will *do something3* otherwise the computer will *do something else*. Note that the computer will only execute *one* of the "do somethings". The computer evaluates each of the test expressions from top to bottom. As soon as one of the test expressions evaluate to true, the computer will "do something" and then stop checking the other test expressions.
+
+So for example:
+
+[[[[
+if(time >= 7 && time <= 12){
+    greeting = "Good Morning";
+}
+else if(time >= 13 && time <= 17){
+   greeting = "Good Afternoon";
+}
+else if(time>=18 && time <= 24){
+   greeting = "Good Night";
+}
+else {
+   greeting = "Go to sleep!";
+}
+]]]]
+
+## Loops
+
+Let's say we wanted to calculate the 4th power of two without using the math power function. We can do this easily with code.
+
+[[[[
+int x = 2*2*2*2;
+]]]]
+How about 10?
+[[[[
+int x = 2*2*2*2*2*2*2*2*2*2;
+]]]]
+How about 100?
+We could copy and paste this more times but this get very tedious. Most programming languages have something called a loop which does the same action a number amount of times. 
+
+A for loop structure is as follows:
+[[[[
+for( first exp; test exp; next exp){
+    //do something
+}
+]]]]
+
+Here are the steps for a for loop:
+
+1. Execute *first exp*
+2. Evaluate *test exp*
+3. If *test exp* evaluates to **true**, go to step 4, otherwise break
+4. *do something*
+5. Execute *next exp*
+6. Go back to 3
+
+[[[[
+int i = 0;
+int x = 2;
+for(i=1;i<100;i++){
+   x = x * 2;
+}
+]]]]
+
+A while loop is similar to a for loop but simpler:
+
+[[[[
+while(test exp){
+    //do something
+}
+]]]]
+
+While the *test expression* is true, the computer will *do something*.
+
+[[[[
+int n = 10;
+while(n>0){
+   System.out.println(n);
+   n--;
+}
+]]]]
+
+We also have a do while loop which is similar to a while loop but it runs at least once: 
+
+[[[[
+do{
+   //do something;
+}while(test expression);
+]]]]
+
+The do-while loop will first *do something* and then as long as *test expression* is true, the computer will *do something*. Do while loops are useful if we need to get the value of something first before we keep looping.
+
+[[[[
+char c;
+do{
+  c = getChar();
+}while(c=='N')
+]]]]

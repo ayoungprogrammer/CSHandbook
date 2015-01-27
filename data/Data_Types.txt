@@ -20,9 +20,10 @@ x is an integer, and we initialize it with the value 3. y is a double floating p
 
 There are 4 main types of data types:
 
-* Boolean: Binary bit
-* Integer: Stores an integer
-* Float: Stores a decimal
+* [[Boolean]]: Binary bit
+* [[Integer]]: Stores an integer
+* [[Character]]: Stores a character
+* [[Float]]: Stores a decimal
 
 ## [[Boolean]]
 

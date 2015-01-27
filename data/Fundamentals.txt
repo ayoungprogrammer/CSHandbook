@@ -10,6 +10,10 @@ There are some fundamental topics about writing computer programs that we must l
 
 ((((Data Types.Introduction))))
 
+### [[Input Ouput]]
+
+((((Input Output.Introduction))))
+
 ### [[Control Structures]]
 
 If statement:
@@ -27,15 +31,18 @@ while(expression){
 }
 ]]]]
 
-## Advanced Control Structures
-
 ### [[Arrays]]
 
-Arrays are lists of the same data type.
+((((Arrays.Introduction))))
 
 ### [[Functions]]
 
 Functions are reusable pieces of code.
+
+### First Program
+
+Before we put together everything we have learned to write our first program, we need to know more about Java semantics. Java is an object oriented language and every line of code must be in an object. Essentially this means that we need to create a *class* for the code you want to put in. 
+
 
 ## [[Runtime and Memory]]
 

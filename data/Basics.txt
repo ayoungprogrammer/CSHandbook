@@ -1,75 +1,44 @@
 ## Introduction
 
-In the most abstract sense, a program takes in input and produces output.
+In the most abstract sense, a program takes in input, performs functions on the input and produces output.
 
 {{basic.png}}
 
-We will learn how to create a basic program by figuring out how to read input, store data and how to use a sequence of control structures to produce output.
+We will learn how a basic program in Java works.
+
+[[[[
+public class HelloWorld{
+    public static void main(String[] args){
+        System.out.println("Hello world!");
+    }
+}
+]]]]
 
 ## [[Data Types]]
 
-We use closets or drawers to store our clothes and garages to store our cars. Similarly, we store different types of data in different kinds of data types. Most programming languages will support these data types and picking the right data type is important. 
-
-To define a variable of a data type we use the follow syntax:
-
-**datatype** **variable_name** = **init_val**;
-
-* **datatype** is the type of variable
-* **variable_name** is the name of the variable used
-* **init_val** is the initial value of the variable
-
-Example:
-[[[[
-int x = 3;
-double y = -4.5;
-]]]]
-
-x is an integer, and we initialize it with the value 3. y is a double floating point number (essentially a decimal number) and we initialize it with -4.5
+((((Data Types.Introduction))))
 
 ### [[Boolean]]
 
-A boolean is stored in a bit that is either true or false. Booleans are usually used as flags to store if something is one one state or the other.
-
-Data type| Number of bits | Range
--|-|-|-
-bool| 2 bits | true or false
+((((Boolean.Introduction))))
 
 ### [[Integer]]
 
-An integer is any number that does not contain decimals. It is stored as binary number in memory. For example: 0, -5, 6 are integers.
-
-Data type| Number of bits | Range
--|-|-|-
-byte|8 bits| -128 to 127
-short|16 bits | -32,768 to 32,767
-int| 32 bits | −2,147,483,648 to 2,147,483,647
-long| 64 bits | −9,223,372,036,854,775,808 to 9,223,372,036,854,755,807
+((((Integer.Introduction))))
 
 ### [[Character]]
 
-A character is any letter or symbol. For example: 'a','B','8','!'.
-
-Characters are usually stored as a number and then displayed as a character by the computer. An encoding is a computer translation from a number to a character. We store simple characters such as lower case and upper case letters, numbers and common punctuation, in 8 bits (0-255) and we can use it to encompass the English language. For these 8 bits, we use an encoding called ASCII. For example: '0' is 48 and 'B' is 66. There are other encodings like Unicode which uses more bits to convert to more languages such as Chinese or Russian. For the most part, we will just use ASCII.
-
-Data type| Number of bits | Range
--|-|-|-
-char| 8 bits | 256 bits
+((((Character.Introduction))))
 
 ### [[Float]]
 
-A float is a decimal stored as binary in memory. We use scientific notation to represent the decimal. Scientific notation is a decimal number < 10 times some exponent of 10. For example: 8.23 * 10^^4^^ is in scientific notation. Decimals can be stored in 32 bits or 64 bits. 
+((((Float.Introduction))))
 
-In a 32bit float, we have 1 bit for the sign (positive or negative), 23 bits for the significant figures (7 digits) and 8 bits for the exponent. 
+## [[Input Output]]
 
-In a 64bit double we have 1 bit for the sign (positive or negative), 52 bits for the significant figures (16 digits) and 11 bits for the exponent. 
+((((Input Output.Introduction))))
 
-Data type| Number of bits | Range
--|-|-|-|-
-float| 32 bits | 3.4e−038 to 3.4e+038
-double| 64 bits| 1.7e−308 to 1.7e+308
-
-
-## [[Arithmetic Operations]]
+## Arithmetic Operations
 
 Java includes many built in operations for basic operations.
 
@@ -114,7 +83,11 @@ x /= y | Division | x /= 2 (x = 1)
 x %= y | Modulus | x %= 2 (x = 1)
 
 
-## Conditional Statements
+## [[Control Structures]]
+
+((((Control Structures.Introduction))))
+
+### Conditional Statements
 
 Let's say we wanted to send a greeting to someone depending on the time of day. If it's the morning, we should say 'Good Morning' otherwise we will say 'Hello'. Let's say we have the 24 hour time as an integer. How can we set a condition for morning and night? We use sometime called an "if statement". 
 

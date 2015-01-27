@@ -16,31 +16,31 @@ The element at the top of the tree with no parents is called a **root**. The nod
 
 Each node can hold different kinds of information depending on the tree. A node can hold the children it has, the parent it has, a key associated with the node and a value associated with the node. 
 
-### [[B-tree]]
+### B-tree
 
 A B-tree is a tree that keeps data sorted, insertions and deletions in O(log n) time.
 
-### [[Binary Indexed Tree]]
+### Binary Indexed Tree
 
 ### [[AVL Tree]]
 
 An AVL tree is a self balancing [[binary tree|Binary Tree]].
 
-### [[Red Black Tree]]
+### Red Black Tree
 
-### [[Segment Tree]]
+### Segment Tree
 
-### [[Interval Tree]]
+### Interval Tree
 
-### [[Splay Tree]]
+### Splay Tree
 
 ## [[Heap]]
 
-### [[Fibonacci Heap]]
+### Fibonacci Heap
 
-### [[Binomial Heap]]
+### Binomial Heap
 
-## [[Trie]]
+## Trie
 
 A trie is tree which stores strings by their prefixes. A trie can replace a set for storing strings as it is faster than a hash set and it can the stored strings sorted but it takes more memory.
 

@@ -1,0 +1,26 @@
+## Introduction
+
+Programs need to be able to read data to process and output some kind of information. Your computer uses the keyboard, mouse, microphone or other peripherals for input. It also uses the monitor, printer and any other peripherals as output. Perhaps one day we will be able to integrate input and output so seamlessly that we are able to use our neurological pathways to communicate with computers.
+
+## Input
+
+For Java programs, the easiest form of builtin input is reading from the keyboard (standard input) or reading from a file. 
+
+Examples:
+[[[[
+Scanner s = new Scanner(System.in);      
+int n = s.nextInt(); // Read in an integer
+]]]]
+
+
+## Output
+
+For Java programs, the easiest output method is to console (standard output) or writing to a file. 
+
+Examples:
+
+[[[[
+int x = 30;
+double y = 12.5;
+System.out.println(x + " " + y); //30 12.5
+]]]]
