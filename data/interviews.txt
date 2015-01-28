@@ -8,7 +8,20 @@ From personal experience, I know that programming interviews can be quite stress
 	comfortable with the interviewer. As you do more interviews in your life, you will be
 	less nervous and become more confident in your abilities. The more prepared you are, the 
 	more likely your chances of success in the interview room. Below you will find a small guide
-	to rocking the interview! 
+	to rocking the interview!
+
+## Resume
+
+Resumes are key to getting any interview in the first place and your resume should be able to show off your abilities and talent. Some of the key tips I have for tech companies:
+
+ * Have either one or two pages exactly
+ * GPA doesn't matter unless it's low
+ * Your school is not very important
+ * Interviews will all have varying weights on importance for:
+    * Projects
+    * ACM / TopCoder / Programming Contests
+ * Github with good projects helps to show off your abilities
+ * Put relevant work experience (marketing at a tech company doesn't show anything)
 
 ## Before the Interview
 
@@ -41,10 +54,10 @@ The interview usually starts with introductions and then the interviewer will us
 	what was the hardest part about that project and how did you solve it. (If you do not already
 	have a personal project, then I highly recommend starting one. If personal projects do not
 	interest you, then this field may not be for you. Hackathons are a good way of starting projects
-	as you are able to dedicate lots of your time towards it). During this first part of the interview,
+	as you are able to focus a large chunk of your time on a single project). During this first part of the interview,
 	try to build a better rapport with the interviewer. You should be passionate about the work you have done
-	and hopefully your interviewer is equally passionate and be able to relate to you. Essentially, in this part
-	of the interview, you need to convince your interviewer you are a likeable person. 
+	and hopefully your interviewer is equally passionate about their own work and be able to relate to you. 
+	Essentially, in this part of the interview, you need to convince your interviewer that you are a likeable person. 
 
 Like any normal interview, try to maintain eye contact and good posture. Ask the interviewer some questions about their position and projects they are working on. Be interested in and listen to what they have to say. 
 
@@ -77,9 +90,9 @@ Now that you understand the problem, ask yourself if you've seen this problem be
 	to explain why your solution is more efficient than another and why it works. If your solution 
 	is wrong, the interviewer may stop you and you should quickly find the mistake and determine
 	why it is wrong. Keep going as far as you can without letting the interviewer help you. If you are stuck,
-	the interviewer will likely drop a hint and you should be able to pick up from that. Once you have an optimal
-	solution, you should be confident enough to prove that is optimal. If the interviewer asks if you can do better,
-	then there may be the case that there is a better solution.
+	the interviewer will likely drop a hint and you should be able to pick up from that. Once you have the best
+	solution, you should be confident enough to prove that it is optimal. However, if the interviewer asks if you can do better,
+	then it is more than likely that there is a better solution.
 
 ### Step 3 - Start coding
 

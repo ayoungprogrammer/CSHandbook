@@ -44,4 +44,23 @@
         window.location.href = "./"+topic;
     });
 
+    $('textarea').on('keydown', function (e) {
+        var keyCode = e.keyCode || e.which;
+
+        if (keyCode === 9) {
+            e.preventDefault();
+            var start = this.selectionStart;
+            var end = this.selectionEnd;
+            var val = this.value;
+            var selected = val.substring(start, end);
+            var re = /^/gm;
+            var count = selected.match(re).length;
+
+
+            this.value = val.substring(0, start) + selected.replace(re, '\t') + val.substring(end);
+            this.selectionStart = start;
+            this.selectionEnd = end + count;
+        }
+    });
+
 })();

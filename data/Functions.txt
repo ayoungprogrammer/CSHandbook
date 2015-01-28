@@ -1,0 +1,59 @@
+## Introduction
+
+Functions are reusable pieces of code that can take arguments and can be used anywhere. They allow us to make code more readable and reduce duplication. 
+
+For example, if we had the program that outputs volumes of two spheres:
+[[[[
+public static main void(String args[]){
+    double r1, r2;
+    Scanner s = new Scanner(System.in);
+    System.out.println("Radius of first sphere: ");
+    r1 = s.nextDouble();
+    System.out.println("Radius of second sphere: ");
+    r2 = s.nextDouble();
+
+    double v1 = 4.0/3.0 * 3.141692 * r1 * r1 * r1;
+    double v2 = 4.0/3.0 * 3.141692 * r2 * r2 * r2;
+    System.out.println("Volumes are: "+v1+" "+v2);
+}
+]]]]
+
+The code for calculating volume is the same except for the variables so we can create a volume with variables as arguments:
+
+[[[[
+public static double getVolume(int radius){
+    return 4.0/3.0 * 3.141692 * radius * radius * radius;
+}
+
+
+public static main(String args[]){
+    double r1, r2;
+    Scanner s = new Scanner(System.in);
+    System.out.println("Radius of first sphere: ");
+    r1 = s.nextDouble();
+    System.out.println("Radius of second sphere: ");
+    r2 = s.nextDouble();
+
+    double v1 = 4.0/3.0 * 3.141692 * r1 * r1 * r1;
+    double v2 = 4.0/3.0 * 3.141692 * r2 * r2 * r2;
+    System.out.println("Volumes are: "+v1+" "+v2);
+}
+]]]]
+
+
+Functions have many different attributes:
+
+* Functions can be private meaning they can only be called in that class or public meaning any class can call that function.
+
+* Functions can be static meaning any other static method can call them or be not static meaning only instances of a class can call them.
+
+* Functions can only return at most one variable of any type that must be specified with the function or not return anything (void).
+
+* Functions can have as many arguments as you want that are specified
+
+Template:
+[[[[
+public/private [static] return_type function_name( arguments ){
+    function body
+}
+]]]]

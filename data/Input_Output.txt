@@ -1,0 +1,48 @@
+## Introduction
+
+Programs need to be able to read data to process and output some kind of information. Your computer uses the keyboard, mouse, microphone or other peripherals for input. It also uses the monitor, printer and any other peripherals as output. Perhaps one day we will be able to integrate input and output so seamlessly that we are able to use our neurological pathways to communicate with computers.
+
+## Input
+
+For Java programs, the easiest form of builtin input is reading from the keyboard (standard input) or reading from a file. The built in Scanner allows us to read in a datatype from input.
+
+Function | Returns
+-|-
+s.nextInt() | Integer
+s.nextDouble() | Double
+s.nextLine() | String up to '\n'
+s.next() | String up to space
+
+Since Scanner is not automatically included, we need to import it to at the top of any file we use it in:
+
+[[[[
+import java.util.Scanner;
+]]]]
+
+Examples:
+[[[[
+Scanner s = new Scanner(System.in);      
+int n = s.nextInt(); // Read in an integer
+]]]]
+
+
+## Output
+
+For Java programs, the easiest output method is to console (standard output) or writing to a file. For Java there are two console output functions that we will primarily use:
+
+[[[[
+//prints object of any type
+System.out.print(object); 
+
+//prints object of any type and a newline
+System.out.println(object); 
+]]]]
+Examples:
+
+[[[[
+int x = 30;
+double y = 12.5;
+
+System.out.println(x); //30
+System.out.println(y); //12.5
+]]]]

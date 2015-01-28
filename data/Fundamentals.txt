@@ -1,50 +1,9 @@
 ## Introduction
 
-There are some fundamental topics about writing computer programs that we must learn before we can move on to the basic theory.
+Before we can learn about algorithms and data structures we must first learn how to analyze algorithms and data structures so we can apply them to the right needs.
 
-## [[Basics]]
-
-((((Basics.Introduction))))
-
-### [[Data Types]]
-
-((((Data Types.Introduction))))
-
-### [[Input Ouput]]
-
-((((Input Output.Introduction))))
-
-### [[Control Structures]]
-
-If statement:
-
-[[[[
-if (expression){
-  do action;
-}
-]]]]
-
-Loops:
-[[[[
-while(expression){
-  do action;
-}
-]]]]
-
-### [[Arrays]]
-
-((((Arrays.Introduction))))
-
-### [[Functions]]
-
-Functions are reusable pieces of code.
-
-### First Program
-
-Before we put together everything we have learned to write our first program, we need to know more about Java semantics. Java is an object oriented language and every line of code must be in an object. Essentially this means that we need to create a *class* for the code you want to put in. 
-
+It is highly recommended that you understand syntax for Java / C++ before you continue.
 
 ## [[Runtime and Memory]]
 
-Programs requires memory to store data and takes computation time to run. If we have different programs that do the same function, we want to be able to compare how efficient they are. 
-
+((((Runtime and Memory.Introduction))))

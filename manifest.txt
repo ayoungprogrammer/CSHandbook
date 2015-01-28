@@ -1,24 +1,17 @@
 ` Getting Started `
-((((Getting Started))))
+	`` Getting Started ``
+	((((Getting Started))))
 ~ Fundamentals ~
-`` Basics `
-	((((Basics.Introduction))))
-	`` Data Types ``
-	((((Data Types))))
-	`` Arithmetic Operations ``
-	((((Basics.Arithmetic Operations))))
-	`` Control Structures ``
-	((((Control Structures))))
-	`` Runtime and Memory ``
-	((((Runtime and Memory))))
+	` Fundamentals `
+		((((Fundamentals.Introduction))))
+		`` Runtime and Memory ``
+		((((Runtime and Memory))))
 ~ Recursion ~
 	` Recursion `
 		`` Recursion ``
 		((((Recursion))))
 		`` Advanced Recursion ``
 		((((Advanced Recursion))))
-		`` Intermediate Recursion ``
-		((((Intermediate Recursion))))
 ~ Data Structures ~
 	((((Data Structures.Introduction))))
 	` Stack `
@@ -63,8 +56,8 @@
 		((((Graph Theory.Tree))))
 		`` Prim's ``
 		((((Prim's))))
-		`` Kruskal's ``
-		((((Kruskal's))))
+		`` Kruskal ``
+		((((Kruskal))))
 	` Shortest Path `
 		((((Graph Theory.Shortest Path))))
 		`` Dijkstra's ``
@@ -96,4 +89,8 @@
 		((((Dynamic Programming))))
 		`` Advanced Dynamic Programming ``
 		((((Advanced Dynamic Programming))))
+~ Interviews ~
+	` Interviews `
+		`` Interviews ``
+		((((Interviews))))
 

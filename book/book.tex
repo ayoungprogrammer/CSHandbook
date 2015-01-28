@@ -35,9 +35,12 @@
 		\maketitle
 		\tableofcontents
 		\chapter{ Getting Started }
-
+    \section{ Getting Started }
+    
 
 The Computer Science handbook is a handbook designed to explain algorithms and data structures in a way that anyone can understand. Many websites (eg Wikipedia) contain lengthy and wordy explanations that are full of technical jargon. We have tried our hardest to simplify all language to make it easy to read without any math or computer science background. We hope to share our knowledge with you and we ask only one thing from you. You must learn something before you leave!
+
+Before you get started with this handbook, it is highly recommended that you are already familiar with Java or C++ syntax. This handbook is not meaning for learning programming basics as other resources are better suited for that task.
 
 \subsection{Format}
 
@@ -60,315 +63,20 @@ The applications section will be about real world applications of the concept th
 The exercises section contains practice problems to test if you truly understand the concept. Many of these questions come from real interview questions.
 
 \part{ Fundamentals }
-\chapter{` Basics }
-    
+    \chapter{ Fundamentals }
+        
 
-In the most abstract sense, a program takes in input and produces output.
+Before we can learn about algorithms and data structures we must first learn how to analyze algorithms and data structures so we can apply them to the right needs.
 
-\includegraphics[width=\maxwidth{\textwidth}]{basic.png}
+It is highly recommended that you understand syntax for Java / C++ before you continue.
 
-We will learn how to create a basic program by figuring out how to read input, store data and how to use a sequence of control structures to produce output.
 
+        \section{ Runtime and Memory }
+        
 
-    \section{ Data Types }
-    
+Processing time and memory are two primary resources that computer programs use and it is important to understand to analyze the limits we have. Computers are super fast at making calculations compared to humans, but humans have much more "memory" than computers currently do. For example, computers can add two 100-digit numbers together much more quickly than any human possibly can. However, the human brain can contain much more memory than humans.
 
-We use closets or drawers to store our clothes and garages to store our cars. Similarly, we store different types of data in different kinds of data types. Most programming languages will support these data types and picking the right data type is important.
-
-To define a variable of a data type we use the follow syntax:
-
-datatype variable\_name = init\_val;
-
-\begin{itemize}
-\item datatype is the type of variable
-\item variable\_name is the name of the variable used
-\item init\_val is the initial value of the variable
-\end{itemize}
-
-Example:
-
-\begin{lstlisting}
-int x = 3;
-double y = -4.5;
-\end{lstlisting}
-
-x is an integer, and we initialize it with the value 3. y is a double floating point number (essentially a decimal number) and we initialize it with -4.5.
-
-There are 4 main types of data types:
-
-\begin{itemize}
-\item Boolean: Binary bit
-\item Integer: Stores an integer
-\item Float: Stores a decimal
-\end{itemize}
-
-\subsection{Boolean}
-
-
-
-A boolean is stored in a bit that is either true or false. Booleans are usually used as flags to store if something is one one state or the other.
-
-\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
-
-
-  Data type &
-  Number of bits &
-  Range\\
-\hline
-
-
-  bool &
-  2 bits &
-  true or false\\
-
-\hline\end{tabulary}
-
-
-
-\subsection{Integer}
-
-
-
-An integer is any number that does not contain decimals. It is stored as binary number in memory. For example: 0, -5, 6 are integers.
-
-\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
-
-
-  Data type &
-  Number of bits &
-  Range\\
-\hline
-
-
-  byte &
-  8 bits &
-  -128 to 127\\
-
-  short &
-  16 bits &
-  -32,768 to 32,767\\
-
-  int &
-  32 bits &
-  −2,147,483,648 to 2,147,483,647\\
-
-  long &
-  64 bits &
-  −9,223,372,036,854,775,808 to 9,223,372,036,854,755,807\\
-
-\hline\end{tabulary}
-
-
-
-\subsection{Character}
-
-
-
-A character is any letter or symbol. For example: 'a','B','8','!'.
-
-Characters are usually stored as a number and then displayed as a character by the computer. An encoding is a computer translation from a number to a character. We store simple characters such as lower case and upper case letters, numbers and common punctuation, in 8 bits (0-255) and we can use it to encompass the English language. For these 8 bits, we use an encoding called ASCII. For example: '0' is 48 and 'B' is 66. There are other encodings like Unicode which uses more bits to convert to more languages such as Chinese or Russian. For the most part, we will just use ASCII.
-
-\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
-
-
-  Data type &
-  Number of bits &
-  Range\\
-\hline
-
-
-  char &
-  8 bits &
-  256 bits\\
-
-\hline\end{tabulary}
-
-
-\subsection{Float}
-
-
-
-A float is a decimal stored as binary in memory. We use scientific notation to represent the decimal. Scientific notation is a decimal number $<$ 10 times some exponent of 10. For example: 8.23 * 10$^{4}$ is in scientific notation. Decimals can be stored in 32 bits or 64 bits.
-
-In a 32bit float, we have 1 bit for the sign (positive or negative), 23 bits for the significant figures (7 digits) and 8 bits for the exponent.
-
-In a 64bit double we have 1 bit for the sign (positive or negative), 52 bits for the significant figures (16 digits) and 11 bits for the exponent.
-
-\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
-
-
-  Data type &
-  Number of bits &
-  Range\\
-\hline
-
-
-  float &
-  32 bits &
-  3.4e−038 to 3.4e+038\\
-
-  double &
-  64 bits &
-  1.7e−308 to 1.7e+308\\
-
-\hline\end{tabulary}
-
-
-
-    \section{ Arithmetic Operations }
-    
-
-Java includes many built in operations for basic operations.
-
-\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
-
-
-  Operation &
-  Description &
-  Example\\
-\hline
-
-
-  z = x + y &
-  Addition &
-  z = 1 + 2,  z = 3\\
-
-  z = x - y &
-  Subtraction &
-  z = 3 - 1, z = 2\\
-
-  z = x * y &
-  Multiplication &
-  z = 3 * 2, z = 6\\
-
-  z = x / y &
-  Integer division &
-  z = 5 / 2, z = 2 or z = 9 / 3, z = 3\\
-
-  z = x \% y &
-  Modulus (or remainder) &
-  z = 5 \% 3, z = 2 or z = 6 \% 2, z = 0\\
-
-  x++ &
-  Increment by 1 &
-  x=5, x++, x = 6\\
-
-  x-- &
-  Decrement by 1 &
-  x=5, x--, x = 4\\
-
-\hline\end{tabulary}
-
-Boolean operators are operations between two booleans (true or false). Boolean operators:
-
-\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
-
-
-  Operation &
-  Description &
-  Example\\
-\hline
-
-
-  x $|$$|$ y &
-  Or &
-  T $|$$|$ F = T, T $|$$|$ T = T, F $|$$|$ F = F\\
-
-  x \&\& y &
-  And &
-  T \&\& T = T, T \&\& F = F, F \&\& F = F\\
-
-  !x &
-  Not &
-  !F = T, !T = F\\
-
-  x == y &
-  Equality &
-  1 == 1 = T, 1 == 3 = F\\
-
-  x != y &
-  Inequality &
-  1 != 1 = F, 1 != 3 = T\\
-
-  x $<$ y &
-  Less than &
-  2 $<$ 3 = T, 2 $<$ 2 = F, 2 $<$ 1 = F\\
-
-  x $<$= y &
-  Less than or equal to &
-  2 $<$= 3 = T, 2 $<$= 2 = T, 2 $<$= 1 = F\\
-
-  x $>$ y &
-  Greater than &
-  3 $>$ 2 = T ,3 $>$ 3 = F, 3 $>$ 4 = F\\
-
-  x $>$= y &
-  Greater than or equal to &
-  3 $>$= 2 = T,3 $>$= 3 = T, 3 $>$= 4 = F\\
-
-  exp ? x : y &
-  Ternary &
-  true ? 3 : 4 = 3, (1 $>$ 2) ? 3 : 4 = 4\\
-
-\hline\end{tabulary}
-
-Assignment assigns a value to a variable.
-
-\begin{lstlisting}
-int x = 3;
-\end{lstlisting}
-
-\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
-
-
-  Operation &
-  Description &
-  Example\\
-\hline
-
-
-  x = y &
-  Set x to y &
-  x = 4 (x = 4)\\
-
-  x += y &
-  Addition &
-  x += 4 (x = 7)\\
-
-  x -= y &
-  Subtraction &
-  x -= 3 (x = 0)\\
-
-  x *= y &
-  Multiplication &
-  x *= 3 (x = 9)\\
-
-  x /= y &
-  Division &
-  x /= 2 (x = 1)\\
-
-  x \%= y &
-  Modulus &
-  x \%= 2 (x = 1)\\
-
-\hline\end{tabulary}
-
-
-    \section{ Control Structures }
-    
-
-Once we have data, we need a way to add logic to use that data. For example, we want to output "even" if a number is even and "odd" if a number is odd. We will need a way of using logic to perform a separate action. This is called a control structure.
-
-A control structure allows the program to change flows based on conditions. For example:
-
-\includegraphics[width=\maxwidth{\textwidth}]{controlstruct.png}
-
-    \section{ Runtime and Memory }
-    
-
-Computers are super fast at making calculations compared to humans, but humans have much more "memory" than computers currently do. For example, computers can add two 100-digit numbers together much more quickly than any human possibly can. However, the human brain can contain much more memory than humans.
-
-Brains have trillions of connections between neurons and the estimated storage capacity is about 2.5 petabytes. That is approximately 340 years of TV shows that you could watch! Computers on the other hand, have much less memory than human brains. Standard computers have around 8GB of RAM and some higher end machines may have 16-32GB. Although hard-disks can store terabytes of memory, we use RAM (flash memory) when analyzing computer memory because it is much faster. As an analogy, RAM can be thought of as grabbing an object in another room whereas disk memory is driving 20 min away to get that object.
+Brains have trillions of connections between neurons and the estimated storage capacity is about 2.5 petabytes. That is approximately 340 years of TV shows that you could watch! Computers on the other hand, have much less memory than human brains. Standard computers have around 8GB of RAM and some higher end machines may have 16-32GB. Although hard-disks can store terabytes of memory, we use RAM (flash memory) when analyzing computer memory because it is much faster than disk storage. As an analogy, RAM can be thought of as grabbing an object in another room whereas disk memory is driving 20 min away to get that object.
 
 The neurons and connections in our brains allow us to store an immense amount of information in our brains and allows us to easily recognize patterns much better than computers. For example it is very easy for us to identify different objects around us (e.g. we can easily differentiate between an apple and an orange), but it is difficult for a computer to do this for the countless number of objects in the world. However this is currently changing as more research is being done in "deep learning".
 
@@ -382,7 +90,7 @@ The neurons and connections in our brains allow us to store an immense amount of
 
 
   Memory &
-  2.5 petabytes (approx. 340 years of TV shows) &
+  2.5 petabytes &
   16GB RAM\\
 
   Processing &
@@ -391,7 +99,7 @@ The neurons and connections in our brains allow us to store an immense amount of
 
 \hline\end{tabulary}
 
-Note that a computer is 1,000,000,000 times faster than humans but humans can store 100,000 more.
+Note that a computer is 1,000,000,000 times faster than humans but humans can store 100,000 more information (approx. 340 years of TV shows).
 
 \subsection{Limits}
 
@@ -494,7 +202,7 @@ Next: Advanced Recursion
 
 Recursion is process that repeats itself in a similar way. Anything that has its definition nested inside itself is considered to be recursive. For example GNU stands for GNU not Unix!. Expanding this acronym gives us ((GNU not Unix) not Unix!). As you can see this will go on forever and GNU's definition is nested inside itself so it is recursive. The Fibonacci sequence is also recursive: F(n) = F(n-1)+F(n-2). Inside the function F, we see two more F's!
 
-In computer science infinite looping is bad because computers do not know how to terminate so we need some way to stop it. We will call a stopping point the base case. A base case is the case where the recursion will stop. Everything must eventually reduce to a base case. For the Fibonacci sequence, the base case is F(0) = 1 and F(1) = 1 and we can see that for all N$>$1, the Fibonacci sequence will reach the base case.
+In computer science infinite looping is not good because computers do not know how to terminate so we need some way to terminate it. We will call a stopping point the base case. A base case is the case where the function will stop and everything should eventually reduce to a base case. For the Fibonacci sequence, the base case is F(0) = 1 and F(1) = 1 and we can see that for all N$>$1, the Fibonacci sequence will reach the base case.
 
 So for something to be recursive in computer science, it needs:
 
@@ -520,7 +228,7 @@ recursion(parameter)
 
 \subsection{Factorial}
 
-Let's look at a simple recursive function: factorial function.
+Let's look at a simple recursive function: factorial.
 
 1! = 1
 
@@ -1060,8 +768,6 @@ Vector$<$String$>$ permutation(String s){
 \item Write a solution for hanoi towers but with the restriction that discs can only be moved from adjacent poles. (You can move a disc from A to B but not A to C because they are not adjacent)
 \end{enumerate}
 
-        \section{ Intermediate Recursion }
-        ((((Intermediate Recursion))))
 \part{ Data Structures }
     
 
@@ -2569,6 +2275,8 @@ public boolean remove(int key){
 
 Prerequisites: Queue, Heap
 
+A priority queue is a queue that pops elements that are the maximum or minimum of a property and are usually implemented as heaps.
+
 Consider a waiting list for lung donors. The patients are given a score when they are placed on the waiting list by how much they need a lung based on their whether they smoke, risk factors, age, expected time left etc. When a lung is available, the patient with the highest score will get removed from the waiting list. During this time, more patients could be added to the queue. The behaviour is similar to a queue but instead of the first person getting in the queue getting a lung first, the person with the highest score will get it. This means that if Sam has a score of 60 and gets placed in the queue after Bob who has a score of 40, Sam will get the lung first even though Bob was in the queue before him.
 
 A priority queue is an abstract data structure with two operations: push and pop. Push adds an element into the priority queue and pop removes the highest or lowest element.
@@ -3236,8 +2944,98 @@ Minimum spanning trees can also be used in generating mazes.
 \item Same as 3, but a group must contain at least 3 other nodes.
 \end{enumerate}
 
-        \section{ Kruskal's }
-        ((((Kruskal's))))
+        \section{ Kruskal }
+        
+
+Prerequisites:  Sorting, Minimum Spanning Tree
+
+A minimum spanning tree is a tree in a graph that connects all the nodes using the smallest cost total cost of edges.
+
+Kruskal's algorithm finds the minimum spanning tree using connected components.
+
+If implemented efficiently using a priority queue to get the edges with minimum weight or a sorting the edges, the runtime is O(n log n).
+
+\subsection{Implementation}
+
+\begin{enumerate}
+\item Uniquely label each node
+\item Take the edge with the minimum weight
+\item If the edge connects nodes A and B with different labels, all nodes with label B will be labeled with A. Otherwise, throw the edge away
+\item Repeat 2-3 until all the nodes have the same label
+\end{enumerate}
+
+\subsubsection{Example}
+
+\includegraphics[width=\maxwidth{\textwidth}]{kruskal.png}
+
+\includegraphics[width=\maxwidth{\textwidth}]{kruskal2.png}
+
+\includegraphics[width=\maxwidth{\textwidth}]{kruskal3.png}
+
+\includegraphics[width=\maxwidth{\textwidth}]{kruskal4.png}
+
+\includegraphics[width=\maxwidth{\textwidth}]{kruskal5.png}
+
+\includegraphics[width=\maxwidth{\textwidth}]{kruskal6.png}
+
+\includegraphics[width=\maxwidth{\textwidth}]{kruskal7.png}
+
+\subsubsection{Code}
+
+\begin{lstlisting}
+class edge implements Comparable$<$edge$>${
+    int weight,source,dest;
+    public edge(int source,int dest,int weight){
+        this.source = source;
+        this.dest = dest;
+        this.weight = weight;
+    }
+    public int compareTo(edge e){
+        return weight-e.weight;
+    }
+}
+public static int getParent(int parents[],int x){
+    if(parents[x]==x)return x;
+    parents[x] = getParent(parents,parents[x]);
+    return parents[x];
+}
+public static int Kruskal(Vector$<$Vector$<$edge$>$$>$ adjList){
+    int n = adjList.size();
+    int parents[] = new int[n];
+    for(int i=0;i$<$n;i++)parents[i] = i;
+    int sum = 0;
+    
+    PriorityQueue$<$edge$>$ edges = new PriorityQueue$<$edge$>$();
+    
+    for(int i=0;i$<$n;i++){
+        for(int j=0;j$<$adjList.get(i).size();j++){
+            edges.add(adjList.get(i).get(j));
+        }
+    }
+    
+    while(!edges.isEmpty()){
+        edge e = edges.poll();
+        if(getParent(parents,e.source)!=getParent(parents,e.dest)){
+            parents[e.source] = getParent(parents,e.dest);
+            sum+=e.weight;
+        }
+    }
+    
+    return sum;
+}
+\end{lstlisting}
+
+\subsection{Applications}
+
+\subsection{Exercises}
+
+\begin{enumerate}
+\item Prove Kruskal's Algorithm works
+\item Extends Kruskals's to output all the edges used
+\item Given a weighted graph with n nodes, find the smallest total cost to connect all nodes into 3 separate groups. (A single node can be a group)
+\item Same as 3, but a group must contain at least 3 other nodes.
+\end{enumerate}
+
     \chapter{ Shortest Path }
         
 
@@ -5058,5 +4856,125 @@ for n from 1 to N
     for w from 1 to W
         knapsack[n][w] = max(knapsack[n-1][w-weight[n]]+value[n], knapsack[n-1][w])
 \end{lstlisting}
+
+\part{ Interviews }
+    \chapter{ Interviews }
+        \section{ Interviews }
+        \subsection{Interview Preparation}
+
+From personal experience, I know that programming interviews can be quite stressful. 
+    You will be off your game because it is a much more different environment than 
+    you are probably used to. In my first few interviews, I was a nervous wreck and I fumbled
+    through easy problems.
+    However, in later interviews, I became more accustomed to the process and became more 
+    comfortable with the interviewer. As you do more interviews in your life, you will be
+    less nervous and become more confident in your abilities. The more prepared you are, the 
+    more likely your chances of success in the interview room. Below you will find a small guide
+    to rocking the interview!
+
+\subsection{Resume}
+
+Resumes are key to getting any interview in the first place and your resume should be able to show off your abilities and talent. Some of the key tips I have for tech companies:
+
+\begin{itemize}
+\item Have either one or two pages exactly
+\item GPA doesn't matter unless it's low
+\item Your school is not very important
+\item Interviews will all have varying weights on importance for:
+
+\begin{itemize}
+\item Projects
+\item ACM / TopCoder / Programming Contests
+\end{itemize}
+\item Github with good projects helps to show off your abilities
+\item Put relevant work experience (marketing at a tech company doesn't show anything)
+\end{itemize}
+
+\subsection{Before the Interview}
+
+Preparation is key for interviews. You can be as charming and confident as you want, but
+    if you cannot solve their problems, your application will quickly be discarded. When you 
+    are given a problem, there is a chance you have solved or read about a solution to the
+    problem. Hence, the more prepared you are, the more likely you will already have a 
+    solution. The sections in this handbook that come up often are: all of Data Structure,
+    Advanced Recursion, Binary Search and Strings. If you cover those topics, you should be set 
+    for most interviews. However, if you are interviewing for higher end companies, you may need to learn
+    a lot more. In some interviews, you will be asked to code your solution, therefore I suggest you 
+    get very familiar with a language and become very proficient in it. You should know how to 
+    do input/output, use the standard library and how to debug properly. Java is a good language to use
+    as it has many built in data structures and has stack traces for debugging.
+
+There are two types of interviews I have encountered: phone/Skype interviews and in person. 
+    If given a choice, in person is always preferable. When you doing an in person interview, 
+    you are able to better communicate with your interviewer and build a rapport. You will also be 
+    show your thought process on paper which is easier to do than via phone or Skype. Additionally, 
+    depending on the company, if they fly you down to their headquarters for the interview, 
+    you'll get a free trip!
+
+If the company you are interviewing for is a startup, you can dress casually. Otherwise, if the
+    company is more corporate, then you might want to dress a little more formally.
+
+\subsection{During the Interview - Part 1: Behavioural}
+
+The interview usually starts with introductions and then the interviewer will usually ask you
+    about projects you've worked on as well as past places you have worked. A common question is:
+    what was the hardest part about that project and how did you solve it. (If you do not already
+    have a personal project, then I highly recommend starting one. If personal projects do not
+    interest you, then this field may not be for you. Hackathons are a good way of starting projects
+    as you are able to focus a large chunk of your time on a single project). During this first part of the interview,
+    try to build a better rapport with the interviewer. You should be passionate about the work you have done
+    and hopefully your interviewer is equally passionate about their own work and be able to relate to you. 
+    Essentially, in this part of the interview, you need to convince your interviewer that you are a likeable person.
+
+Like any normal interview, try to maintain eye contact and good posture. Ask the interviewer some questions about their position and projects they are working on. Be interested in and listen to what they have to say.
+
+\subsection{During the Interview - Part 2: Technical}
+
+The second part of the interview usually consists of technical problems. If you are expected to code
+    the solution, you should expect 1 medium to difficult problem (30-45 min) and possibly an easy problem 
+    (5-10 minutes). (Exception of Google, does 3-4 problems). If you are not coding, then you should expect
+    3-4 problems where you need to describe the solution.
+
+\subsubsection{Step 1 - Analyzing the Problem}
+
+1-2 minutes
+
+When given the problem, make sure you read through 
+    the problem carefully and that you understand the specifications. Ask your interviewer if you are unsure 
+    of anything.
+
+\subsubsection{Step 2 - Find a solution}
+
+5-10 minutes
+
+Now that you understand the problem, ask yourself if you've seen this problem before or 
+    any similar problem. If you have, then you should also remember the solution and you're in luck! 
+    However, if you don't remember the solution or have not seen the problem before, then you will
+    need to think out the solution. First start with the naive solution which is usually bruteforce. 
+    An inefficient solution is better then no solution. Once you have that, start working towards a 
+    more optimal solution. You should be thinking aloud and letting the interviewer see your thought process. 
+    You can write down your solutions on paper so that it can be more clear to the interviewer. You should be able
+    to explain why your solution is more efficient than another and why it works. If your solution 
+    is wrong, the interviewer may stop you and you should quickly find the mistake and determine
+    why it is wrong. Keep going as far as you can without letting the interviewer help you. If you are stuck,
+    the interviewer will likely drop a hint and you should be able to pick up from that. Once you have the best
+    solution, you should be confident enough to prove that it is optimal. However, if the interviewer asks if you can do better,
+    then it is more than likely that there is a better solution.
+
+\subsubsection{Step 3 - Start coding}
+
+10-20 minutes
+
+Now that you have a solution, you need to prove to the interviewer that you can implement it. If you are
+    proficient enough, you should be able to code and debug easily enough. You should comment your code
+    and name your variables properly so your interviewer knows whats going on.
+
+\subsection{End Interview}
+
+Hopefully you have time left before the interview (otherwise, you took too long for the technical part). Ask your interviewer about projects at the company to get a feel of what will interest you. Ask them any other questions you have about the position like any other interview. When you leave, thank the interviewer for their time, put on a smile and shake their hand. Ultimately, the outcome of the interview is determined by the amount of rapport you built with the interviewer, how capable you were at the technical problems and how enthusiastic you are. If all goes well, you will get the job, or you will get a second round of interviews meaning you get to repeat the same process with another interviewer! Good luck!
+
+\subsection{Practice Problems}
+
+Exercises
 
 \end{document}
