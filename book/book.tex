@@ -5,7 +5,6 @@
 		\usepackage{tabulary}
 		\usepackage{color}
 		\usepackage[numbered]{bookmark}
-		
 
 		\title{The Computer Science Handbook}
 		\author{Michael Young}
@@ -69,7 +68,7 @@ The exercises section contains practice problems to test if you truly understand
 
 Before we can learn about algorithms and data structures we must first learn how to analyze algorithms and data structures so we can apply them to the right needs.
 
-It is highly recommended that you understand syntax for Java / C++ before you continue.
+It is highly recommended that you understand syntax for Java or C++ before you continue.
 
 
         \section{ Runtime and Memory }
@@ -81,7 +80,7 @@ Brains have trillions of connections between neurons and the estimated storage c
 
 The neurons and connections in our brains allow us to store an immense amount of information in our brains and allows us to easily recognize patterns much better than computers. For example it is very easy for us to identify different objects around us (e.g. we can easily differentiate between an apple and an orange), but it is difficult for a computer to do this for the countless number of objects in the world. However this is currently changing as more research is being done in "deep learning".
 
-\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
    &
@@ -106,7 +105,7 @@ Note that a computer is 1,000,000,000 times faster than humans but humans can st
 
 There are many different methods of implementing different things but most of the time we care most about implementations that are the fastest and use the least amount of memory. Let's go through some basic benchmarks about computers that you should know. Adding two numbers takes a nanosecond (1 billionth of a second) for an average computer to process. For practical purposes, we'll assume that the average computer program can hold up to 1GB or RAM or about 250 million integers. We use RAM because it is flash memory and read/write is super fast in comparison to disk read/writes.
 
-\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Memory &
@@ -125,7 +124,7 @@ When we compare how efficient algorithms or data structures are to another, we w
 
 Here is a list of common Big O notations based on complexity:
 
-\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Big O &
@@ -199,7 +198,7 @@ void zeroArrays(int[][] grid){
 }
 \end{lstlisting}
 
-There are NxN cells we need to set to 0 so we need O(N$^2$) operations. We can also think of it as another way. There are two nested loop and each loop is O(n) so we multiply them and O(n) x O(n) = O(n$^2$). Generally, when we have nested loops, we multiple their complexities.
+There are NxN cells we need to set to 0 so we need O(N$^{2}$) operations. We can also think of it as another way. There are two nested loop and each loop is O(n) so we multiply them and O(n) x O(n) = O(n$^{2}$). Generally, when we have nested loops, we multiple their complexities.
 
 \subsubsection{Example}
 
@@ -512,7 +511,7 @@ Recursion can sometimes be very difficult to wrap your head around because when 
 
 Suppose we have a grid of N rows and M columns. How many ways are there to get from the bottom left corner to the top right corner using the intersection points and only going upwards or rightwards?
 
-\includegraphics[width=\maxwidth{\textwidth}]{recursion_grid.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{recursion_grid.png}
 
 We see that the only way to reach an intersection is to come from the left or from the bottom. So the number of ways to reach an intersection is the number of ways to reach the intersection to the left plus the number of ways to reach the intersection on the bottom.
 
@@ -544,7 +543,7 @@ paths(3,5)
 
 Example of what the grid should look like
 
-\includegraphics[width=\maxwidth{\textwidth}]{recursion_grid2.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{recursion_grid2.png}
 
 \subsubsection{Implementation}
 
@@ -570,24 +569,24 @@ Lets' try to make this problem simpler. To move N discs from the first pole the 
 
 Let the starting pole be the first pole, the helper pole be the middle pole and the destination pole the third pole.
 
-\includegraphics[width=\maxwidth{\textwidth}]{hanoi.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{hanoi.png}
 
 To move N discs from the starting pole to the destination pole:
 
 Step 1:
 
 We need to move N-1 discs from the starting pole to the helper pole.
-\includegraphics[width=\maxwidth{\textwidth}]{hanoi2.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{hanoi2.png}
 
 Step 2:
 
 We need to move the Nth disc from the starting pole to the destination pole.
-\includegraphics[width=\maxwidth{\textwidth}]{hanoi3.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{hanoi3.png}
 
 Step 3:
 
 We need to move N-1 discs from the helper pole to the destination pole.
-\includegraphics[width=\maxwidth{\textwidth}]{hanoi4.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{hanoi4.png}
 
 We can see that Step 2 is easy, all we have to do is move that one disc. But for Step 1 and Step 3, we have to move N-1 discs. How can we move N-1 discs to the middle pole?
 
@@ -595,7 +594,7 @@ We see that we can use the same reasoning: we need to move N-2 discs to the thir
 
 In this case, the starting pole is the first pole, the helper pole is the third pole and the destination pole is the middle pole.
 
-\includegraphics[width=\maxwidth{\textwidth}]{hanoi.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{hanoi.png}
 
 To move N-1 discs from starting pole to destination pole:
 
@@ -603,19 +602,19 @@ Step 1:
 
 We need to move N-2 discs from starting pole to helper pole
 
-\includegraphics[width=\maxwidth{\textwidth}]{hanoi5.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{hanoi5.png}
 
 Step 2:
 
 We move the N-1th disc from the starting pole to the destination pole
 
-\includegraphics[width=\maxwidth{\textwidth}]{hanoi6.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{hanoi6.png}
 
 Step 3:
 
 We move N-2 discs from the helper pole to the destination pole.
 
-\includegraphics[width=\maxwidth{\textwidth}]{hanoi2.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{hanoi2.png}
 
 As we can see, the steps to move N discs are the exact same as to move N-1 discs! The only difference is that the actual poles are different but we the steps are the same relative to their roles (starting, helper and destination). We are solving a reduced version of the same problem and so have a recurrence.
 
@@ -838,11 +837,11 @@ An abstract data type is a conceptual model for representing data. An abstract d
 
 For example, a bottle should be able to hold water and allow us to drink from. This tells us what it should do but we don't need to know how it works or how it is made. A plastic water bottle is an implementation of a bottle. It holds water in its interior and allows us to drink by unscrewing the cap and letting us pour water down our throat. A thermos is also an implementation of the bottle, it holds fluid inside it, but this thermos has a lid that can be popped open and water can come from it. A thermos and plastic water bottle are different implementations as they are made differently and used differently, but they fundamentally do what a bottle is supposed to do: store liquid, and provide a way to drink. A bottle does not actually exist, but types of bottles do.
 
-\includegraphics[width=\maxwidth{\textwidth}]{bottle.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bottle.png}
 
 Some implementations of abstract data types are better than others for different purposes. For example plastic water bottles are very cheap whereas a thermos is more expensive but a thermos can hold hot water and keep it warm for a long period of time. When selecting a data structure, we should analyze the efficiencies of data operations that we will do most often.
 
-\includegraphics[width=\maxwidth{\textwidth}]{adt.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{adt.png}
 
 For more intermediate data structures, read the advanced data structures page.
 
@@ -857,11 +856,11 @@ A stack is an abstract data type with the property that it can remove and insert
 
 Example of push:
 
-\includegraphics[width=\maxwidth{\textwidth}]{stack.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{stack.png}
 
 Example of pop:
 
-\includegraphics[width=\maxwidth{\textwidth}]{stack2.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{stack2.png}
 
 Stacks are used for function calls on the memory stack. Whenever a function is called, it is placed on the memory stack with its variables and when it is returning a value, it is popped off the stack.
 
@@ -869,7 +868,7 @@ A stack is usually implemented as a vector.
 
 \subsection{Implementation}
 
-\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Implementation &
@@ -913,7 +912,7 @@ Source on Github
 
 A vector is a stack that is implemented as an array. It is very similar to an array, but it is more flexible in terms of size. Elements are added and removed only from the end of the array. When more elements are added to the vector and the vector is at full capacity, the vector resizes itself and reallocates for 2*N space. When using an vector we can keep adding elements and let the data structure handle all the memory allocation.
 
-\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Operation &
@@ -958,7 +957,7 @@ publc Vec(int startSize){
 
 Resize will be used to resize the current size of elements. We create a new array of two times the size of the old one and copy the old array over.
 
-\includegraphics[width=\maxwidth{\textwidth}]{vector3.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{vector3.png}
 
 \begin{lstlisting}
 public void resize(){
@@ -974,7 +973,7 @@ public void resize(){
 
 Add element will add elements to the end of the vector. If the array is full, the vector will resize itself.
 
-\includegraphics[width=\maxwidth{\textwidth}]{vector2.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{vector2.png}
 
 \begin{lstlisting}
 public void add(int x){
@@ -990,7 +989,7 @@ public void add(int x){
 
 Removes the element at the end of the vector. We decrease the size of the vector and return the last element.
 
-\includegraphics[width=\maxwidth{\textwidth}]{vector4.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{vector4.png}
 
 \begin{lstlisting}
 public int pop(){
@@ -1009,7 +1008,7 @@ Removes element at the index idx. It will throw an exception if the index is out
 
 We shift everything to the right of the index to the left by one to fill in the missing element.
 
-\includegraphics[width=\maxwidth{\textwidth}]{vector4.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{vector4.png}
 
 \begin{lstlisting}
 public int remove(int idx){
@@ -1030,7 +1029,7 @@ public int remove(int idx){
 
 Returns the element at the specified index. It will throw an exception if the index is out of bounds. Note this function is exactly as the same as in the array
 
-\includegraphics[width=\maxwidth{\textwidth}]{vectorget.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{vectorget.png}
 
 \begin{lstlisting}
 public int get(int idx){
@@ -1045,9 +1044,9 @@ public int get(int idx){
 
 Insert the new number x at the index. We need to make space at the index for the new element so we shift everything to the right of the index by 1.
 
-\includegraphics[width=\maxwidth{\textwidth}]{vectorinsert.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{vectorinsert.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{vectorinsert2.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{vectorinsert2.png}
 
 \begin{lstlisting}
 public void insert(int idx,int x){
@@ -1086,17 +1085,17 @@ Queues are often used for buffer systems, for example a text message service. Th
 
 Example of push:
 
-\includegraphics[width=\maxwidth{\textwidth}]{queue.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{queue.png}
 
 Example of pop:
 
-\includegraphics[width=\maxwidth{\textwidth}]{queue2.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{queue2.png}
 
 \subsection{Implementation}
 
 We can implement a queue most efficiently using a linked list because it has an efficient memory allocation.
 
-\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Implementation &
@@ -1149,15 +1148,15 @@ A linked list is an implementation of a queue that uses a chain of pointers. Ins
 
 Imagine you were on a scavenger hunt with lots of treasure chests. You start with a clue to the first chest. Each chest contains a lot of gold (data) but it also contains a clue to the next treasure chest. To get to the fifth chest, you need to visit the first, second, third and fourth chest. This is essentially how a linked list works.
 
-\includegraphics[width=\maxwidth{\textwidth}]{linkedlist.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{linkedlist.png}
 
 A linked list is similar to an array but it is different such that it is not stored in one block of data. Each element can be stored in a random place in memory but each element contains a pointer to the next element thus forming a chain of pointers. Think of a pointer as a clue to the next chest. Since the elements aren't in a block, accessing an element must be done by traversing the entire linked list by following each pointer to the next. However, this also allows insertion to be done more quickly by simply changing the point of the previous element and setting to the pointer of the current element to the next element. Deletion is also done by taking the previous element and changing its pointer to two elements ahead. In a linked list the links only go forward and you cannot move backward.
 
 A doubly linked list is a linked list that has pointers going backwards as well as forwards.
 
-\includegraphics[width=\maxwidth{\textwidth}]{doublelinkedlist.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{doublelinkedlist.png}
 
-\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Operation &
@@ -1213,11 +1212,11 @@ class LinkedList{
 
 Create a new node with the value given and add it to the end. We have to set the current head previous node to the new node and the new next next to the last node.
 
-\includegraphics[width=\maxwidth{\textwidth}]{linkedlistpush.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{linkedlistpush.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{linkedlistpush2.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{linkedlistpush2.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{linkedlistpush3.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{linkedlistpush3.png}
 
 \begin{lstlisting}
 /*
@@ -1239,9 +1238,9 @@ public void push(int value){
 
 Pops off the node at the head.
 
-\includegraphics[width=\maxwidth{\textwidth}]{linkedlistpop.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{linkedlistpop.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{linkedlistpop2.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{linkedlistpop2.png}
 
 \begin{lstlisting}
 /*
@@ -1265,11 +1264,11 @@ public int pop(){
 
 Get retrieves the value at the specified index. We have to loop through the entire list to get the index we want because the nodes are not in the same block of memory.
 
-\includegraphics[width=\maxwidth{\textwidth}]{linkedlistget.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{linkedlistget.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{linkedlistget2.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{linkedlistget2.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{linkedlistget3.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{linkedlistget3.png}
 
 \begin{lstlisting}
 /*
@@ -1293,9 +1292,9 @@ public int get(int index){
 
 To delete the current node we set the previous node next link to the link after.
 
-\includegraphics[width=\maxwidth{\textwidth}]{linkedlistrem.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{linkedlistrem.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{linkedlistrem2.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{linkedlistrem2.png}
 
 \begin{lstlisting}
 /*
@@ -1342,7 +1341,7 @@ Sets have three operations: insertion, deletion and a membership test. Insertion
 
 \subsection{Implementation}
 
-\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Type &
@@ -1389,15 +1388,15 @@ Source on Github
 
 Hash sets are sets that use hashes to store elements. A hashing algorithm is an algorithm that takes an element and converts it to a smaller chunk called a hash. For example let our hashing algorithm be (x mod 10). So the hashes of 232, 217 and 19 are 2,7, and 9 respectively.
 
-\includegraphics[width=\maxwidth{\textwidth}]{hashcode.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{hashcode.png}
 
 For every element in a hash set, the hash is computed and elements with the same hash are grouped together and stored in a linked list. The linked list is called a bucket.
 
 If we want to check if an element already exists within the set, we first compute the hash of the element and then search through the linked list associated with the hash to see if the element is contained.
 
-\includegraphics[width=\maxwidth{\textwidth}]{hashset.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{hashset.png}
 
-\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Operation &
@@ -1418,7 +1417,7 @@ If we want to check if an element already exists within the set, we first comput
 
 Let use the example of the hashset of the elements of 3242, 3523, 123, 235 and 538. The hash set looks like this when computed:
 
-\includegraphics[width=\maxwidth{\textwidth}]{hashset.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{hashset.png}
 
 If we wanted to check if 7238 was in the hash set, we would get the hash (7238 mod 10 = 8). So we get the bucket associated with the hash 8 and we get the list of (538). When we iterate through this short list, we see that 7238 is not a member of the set.
 
@@ -1453,7 +1452,7 @@ public class HashSet {
 
 The hash code is the result of the hashing algorithm for an element. In our hash set implementation, we will use a simple hash: modulus of the integer by the number of buckets.
 
-\includegraphics[width=\maxwidth{\textwidth}]{hashcode.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{hashcode.png}
 
 For the most part if the numbers are all random then the hash function is fine. However, if the number of buckets was 10 and we added the elements 20,30,40,50,60,70, they will all end up in the same bucket and results in poor performance.
 
@@ -1491,9 +1490,9 @@ public void resize(){
 
 To insert an element in a hash set, we get the hash code from our hashing algorithm and insert the element into the corresponding bucket.
 
-\includegraphics[width=\maxwidth{\textwidth}]{hashset.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{hashset.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{hashsetinsert.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{hashsetinsert.png}
 
 The function will return method or not the operation was successful. If the bucket already contains the element the operation will stop because we do not want to add duplicate elements into the set. If the bucket does not contain the element, we will insert it into the bucket and the operation is successful.
 
@@ -1518,11 +1517,11 @@ public boolean insert(int x){
 
 To check if a hash set contains an element, we get the hash code from our hashing algorithm and check if the corresponding bucket contains the element.
 
-\includegraphics[width=\maxwidth{\textwidth}]{hashsetcontains.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{hashsetcontains.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{hashsetcontains2.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{hashsetcontains2.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{hashsetcontains3.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{hashsetcontains3.png}
 
 \begin{lstlisting}
 public boolean contains(int x){
@@ -1538,11 +1537,11 @@ To remove an element from a hash set, we get the hash code from our hashing algo
 
 The function will return whether or not the operation was successful. If the bucket contains the element we can remove it from the linked list and the operation is successful. If the element is not in the bucket then the operation fails because we cannot remove something that is not there.
 
-\includegraphics[width=\maxwidth{\textwidth}]{hashsetrem.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{hashsetrem.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{hashsetrem2.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{hashsetrem2.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{hashsetrem3.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{hashsetrem3.png}
 
 \begin{lstlisting}
 public boolean remove(int x){
@@ -1571,13 +1570,13 @@ public boolean remove(int x){
 
 A binary search tree is a  binary tree with special properties. The left children of a node will always be less than the node and the right children of a node will always be more than the node. It has a recursive structure such that every subtree is also a binary search tree.
 
-\includegraphics[width=\maxwidth{\textwidth}]{bstcompare.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bstcompare.png}
 
 Example:
 
-\includegraphics[width=\maxwidth{\textwidth}]{bst.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bst.png}
 
-\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Operation &
@@ -1605,9 +1604,9 @@ Example:
 
 In a binary search tree, everything to the left of a node is smaller than that node and everything to the right of that node is greater than that node.
 
-\includegraphics[width=\maxwidth{\textwidth}]{bstcompare.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bstcompare.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{bst.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bst.png}
 
 This implementation of a binary search will be unbalanced. For a balanced binary search tree, see AVL trees and Red Black trees.
 
@@ -1664,13 +1663,13 @@ public class TreeSet {
 
 To insert an element in the tree set we search for the element that we are trying to insert. If it is already there then the operation fails because sets contain unique elements. Otherwise we will insert the new element into the set.
 
-\includegraphics[width=\maxwidth{\textwidth}]{bstinsert.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bstinsert.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{bstinsert2.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bstinsert2.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{bstinsert3.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bstinsert3.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{bstinsert4.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bstinsert4.png}
 
 \begin{lstlisting}
 public boolean insert(int x){
@@ -1707,13 +1706,13 @@ public boolean insert(int x){
 
 To check if the tree set contains an element, we search for it in the binary tree by starting at the root. If the number is less than the current, we search the left child. If the number if greater than the current, we search the right child.
 
-\includegraphics[width=\maxwidth{\textwidth}]{bstcontains.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bstcontains.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{bstcontains2.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bstcontains2.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{bstcontains3.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bstcontains3.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{bstcontains4.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bstcontains4.png}
 
 We return true if it exists and false otherwise.
 
@@ -1737,39 +1736,39 @@ public boolean contains(int x){
 
 Removing an element is a much more complex because we need to maintain the tree structure of the tree set when removing elements. First we locate the element that we want to remove. If the element is not there then the operation failed and we return false. If the element is there then are three cases we need to consider.
 
-\includegraphics[width=\maxwidth{\textwidth}]{bst-rem.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bst-rem.png}
 
 Case 1: Node is a leaf node
 
-\includegraphics[width=\maxwidth{\textwidth}]{bst-rem-case11.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bst-rem-case11.png}
 
 If the node we want to remove is the leaf node, we can simply remove it.
 
-\includegraphics[width=\maxwidth{\textwidth}]{bst-rem-case12.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bst-rem-case12.png}
 
 Case 2: Node has one child
 
-\includegraphics[width=\maxwidth{\textwidth}]{bst-rem-case21.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bst-rem-case21.png}
 
 If the node we want to remove has a child, we can replace that node with its' only child.
 
-\includegraphics[width=\maxwidth{\textwidth}]{bst-rem-case22.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bst-rem-case22.png}
 
 Case 3: Node has two children
 
-\includegraphics[width=\maxwidth{\textwidth}]{bst-rem-case31.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bst-rem-case31.png}
 
 We need to replace the node with the rightmost of the left subtree or the leftmost of the right subtree to maintain the order.
 
-\includegraphics[width=\maxwidth{\textwidth}]{bst-rem-case32.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bst-rem-case32.png}
 
 It does not matter which side we pick so we will use the rightmost of the left subtree. First we copy the value of the rightmost of the left subtree into the node that will be deleted.
 
-\includegraphics[width=\maxwidth{\textwidth}]{bst-rem-case33.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bst-rem-case33.png}
 
 Then we replace the rightmost of the left subtree with its left subtree.
 
-\includegraphics[width=\maxwidth{\textwidth}]{bst-rem-case34.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bst-rem-case34.png}
 
 \begin{lstlisting}
 public boolean remove(int x){
@@ -1871,9 +1870,9 @@ A tree set is a set which stores the values in a binary search tree. To store el
 
 The advantage of tree sets is that they are maintained in a sorted order.
 
-\includegraphics[width=\maxwidth{\textwidth}]{bst.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bst.png}
 
-\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Operation &
@@ -1914,7 +1913,7 @@ Maps (also called dictionaries) are abstract data types that store pairs of key-
 
 \subsection{Implementation}
 
-\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Type &
@@ -2090,7 +2089,7 @@ Prerequisites: Tree Set, Map
 
 A tree map is a map that stores the key value pairs in a tree set.
 
-\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Operation &
@@ -2111,7 +2110,7 @@ A tree map is a map that stores the key value pairs in a tree set.
 
 Here is a Java implementation of a tree map:
 
-\includegraphics[width=\maxwidth{\textwidth}]{bst.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bst.png}
 
 \subsubsection{Class}
 
@@ -2235,39 +2234,39 @@ public Pair get(int key){
 
 Removing an element is a much more complex because we need to maintain the tree structure of the tree set when removing elements. First we locate the element that we want to remove. If the element is not there then the operation failed and we return false. If the element is there then are three cases we need to consider.
 
-\includegraphics[width=\maxwidth{\textwidth}]{bst-rem.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bst-rem.png}
 
 Case 1: Node is a leaf node
 
-\includegraphics[width=\maxwidth{\textwidth}]{bst-rem-case11.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bst-rem-case11.png}
 
 If the node we want to remove is the leaf node, we can simply remove it.
 
-\includegraphics[width=\maxwidth{\textwidth}]{bst-rem-case12.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bst-rem-case12.png}
 
 Case 2: Node has one child
 
-\includegraphics[width=\maxwidth{\textwidth}]{bst-rem-case21.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bst-rem-case21.png}
 
 If the node we want to remove has a child, we can replace that node with its' only child.
 
-\includegraphics[width=\maxwidth{\textwidth}]{bst-rem-case22.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bst-rem-case22.png}
 
 Case 3: Node has two children
 
-\includegraphics[width=\maxwidth{\textwidth}]{bst-rem-case31.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bst-rem-case31.png}
 
 We need to replace the node with the rightmost of the left subtree or the leftmost of the right subtree to maintain the order.
 
-\includegraphics[width=\maxwidth{\textwidth}]{bst-rem-case32.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bst-rem-case32.png}
 
 It does not matter which side we pick so we will use the rightmost of the left subtree. First we copy the value of the rightmost of the left subtree into the node that will be deleted.
 
-\includegraphics[width=\maxwidth{\textwidth}]{bst-rem-case33.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bst-rem-case33.png}
 
 Then we replace the rightmost of the left subtree with its left subtree.
 
-\includegraphics[width=\maxwidth{\textwidth}]{bst-rem-case34.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bst-rem-case34.png}
 
 \begin{lstlisting}
 public boolean remove(int key){
@@ -2349,7 +2348,7 @@ A priority queue is usually implemented as a heap because it is the most efficie
 
 \subsection{Implementation}
 
-\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Implementation &
@@ -2402,15 +2401,15 @@ parent = (index-1)/2
 
 Indexes of a heap
 
-\includegraphics[width=\maxwidth{\textwidth}]{maxheap2.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{maxheap2.png}
 
 Example Heap:
 
-\includegraphics[width=\maxwidth{\textwidth}]{maxheap.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{maxheap.png}
 
 A heap has two operations: push and pop. Pushing an element into a heap adds it into the heap and the heap needs to ensure that the properties of the heap still hold. Popping removes an element from the top of the heap and the heap needs to ensure that the properties of the heap still hold.
 
-\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Operation &
@@ -2496,13 +2495,13 @@ public void resize(){
 
 Pushes the number x into the priority queue. We can do this by adding it to the bottom of the heap and then keep swapping it upwards if it is greater than the parent.
 
-\includegraphics[width=\maxwidth{\textwidth}]{maxheap.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{maxheap.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{maxheappush.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{maxheappush.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{maxheappush2.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{maxheappush2.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{maxheappush3.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{maxheappush3.png}
 
 \begin{lstlisting}
 public void push(int x){
@@ -2530,13 +2529,13 @@ public void push(int x){
 
 Popping removes the greatest element in the priority queue by removing the root which is guaranteed to be the greatest as property of a heap. After removing the root, we replace it with the element at the bottom of the heap and we can keep swapping it with its children until the heap property is satisfied.
 
-\includegraphics[width=\maxwidth{\textwidth}]{maxheappop.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{maxheappop.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{maxheappop1.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{maxheappop1.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{maxheappop2.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{maxheappop2.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{maxheappop3.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{maxheappop3.png}
 
 \begin{lstlisting}
 public int pop(){
@@ -2592,13 +2591,13 @@ Next: Advanced Graph Theory
 
 Graphs are a set of objects where some pairs of objects  called nodes or verticies are usually connected by links called edges. The nodes here can be seen numbered from 1 to 6. There are edges connecting these various nodes.
 
-\includegraphics[width=\maxwidth{\textwidth}]{graph.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{graph.png}
 
 A undirected graph is a graph where an edge from A to B is the same as the edge from B to A for all edges. The above graph is undirected.
 
 A directed or bidirectional graph is a graph where edges have direction meaning if there is an edge from A to B then there may not be an edge from B to A.
 
-\includegraphics[width=\maxwidth{\textwidth}]{digraph.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{digraph.png}
 
 A subgraph is a subset of edges and vertices within a graph.
 
@@ -2622,7 +2621,7 @@ Array[i][j] represents the weight between the node i and node j.
 
 Example
 
-\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
    &
@@ -2694,9 +2693,9 @@ Example
 Adjacency lists use an array of linked lists to store all the edges. At x, you have a linked list of nodes that connect to 
 that node. 1 connects to nodes 2 and 5, 2 connects to 1, 3 and 5 and so forth. O(m) storage where m is number of edges.
 
-\includegraphics[width=\maxwidth{\textwidth}]{graph.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{graph.png}
 
-\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Node &
@@ -2735,7 +2734,7 @@ Array[i][j] represents the weight between the node i and node j.
 
 Example
 
-\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
    &
@@ -2824,15 +2823,15 @@ public static int[][] getAdjMatrix(Vector<edge> edges){
 }
 \end{lstlisting}
 
-        `` Adjacency List))))
+        \section{ Adjacency List }
         
 
 Adjacency lists use an array of linked lists to store all the edges. At x, you have a linked list of nodes that connect to 
 that node. 1 connects to nodes 2 and 5, 2 connects to 1, 3 and 5 and so forth. O(m) storage where m is number of edges.
 
-\includegraphics[width=\maxwidth{\textwidth}]{graph.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{graph.png}
 
-\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Node &
@@ -2867,7 +2866,7 @@ that node. 1 connects to nodes 2 and 5, 2 connects to 1, 3 and 5 and so forth. O
 
 A tree is a special graph with no cycles. It has the special property that there will be only one path from one node to another node.
 
-\includegraphics[width=\maxwidth{\textwidth}]{treegraph.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{treegraph.png}
 
 A subtree is a child tree of a tree.
 
@@ -2884,7 +2883,7 @@ A minimum spanning tree is the spanning tree that requires the minimum of some p
 
 Spanning tree algorithms are essential in networking to ensure no loops occur when sending data through a network.
 
-\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Algorithm &
@@ -2930,21 +2929,21 @@ The closest node is the node with the lowest cost edge to the already connected 
 
 \subsubsection{Example}
 
-\includegraphics[width=\maxwidth{\textwidth}]{prim.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{prim.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{prim1.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{prim1.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{prim2.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{prim2.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{prim3.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{prim3.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{prim4.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{prim4.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{prim5.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{prim5.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{prim6.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{prim6.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{prim7.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{prim7.png}
 
 \subsubsection{Java Code}
 
@@ -3030,19 +3029,19 @@ If implemented efficiently using a priority queue to get the edges with minimum 
 
 \subsubsection{Example}
 
-\includegraphics[width=\maxwidth{\textwidth}]{kruskal.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{kruskal.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{kruskal2.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{kruskal2.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{kruskal3.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{kruskal3.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{kruskal4.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{kruskal4.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{kruskal5.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{kruskal5.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{kruskal6.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{kruskal6.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{kruskal7.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{kruskal7.png}
 
 \subsubsection{Code}
 
@@ -3107,7 +3106,7 @@ The shortest path is defined as a path from one node to another while trying to 
 
 \subsubsection{Algorithms}
 
-\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Algorithm &
@@ -3169,31 +3168,31 @@ When we reach a node for the first time, it will be the shortest path to that no
 
 We first start at the starting node. The distance from the starting node to the starting node is obviously 0.
 
-\includegraphics[width=\maxwidth{\textwidth}]{djikstra.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{djikstra.png}
 
 From the starting node we have two nodes we can reach. The top node has a cost of 3 to reach and the bottom node has a cost of 5 to reach.
 
-\includegraphics[width=\maxwidth{\textwidth}]{djikstra1.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{djikstra1.png}
 
 We pick the smallest node the reach and we mark it as visited. Once we visit a node, we can guarantee that it is the smallest cost to reach it. The next nodes minimum cost to reach is 10, 5 and 5.
 
-\includegraphics[width=\maxwidth{\textwidth}]{djikstra2.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{djikstra2.png}
 
 We are indifferent to both 5's as they are both the minimum and we can choose either. We mark the node as visited and we find the minimum costs to other nodes which are 5,10,11.
 
-\includegraphics[width=\maxwidth{\textwidth}]{djikstra3.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{djikstra3.png}
 
 We take the next smallest which is 5 and we mark the node as visited. The next costs are 10 and 11.
 
-\includegraphics[width=\maxwidth{\textwidth}]{djikstra4.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{djikstra4.png}
 
 We take the smallest which is 10 and we now only have one last node to reach at a cost of 11.
 
-\includegraphics[width=\maxwidth{\textwidth}]{djikstra5.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{djikstra5.png}
 
 At each node we have the minimum cost to get from the start node to each node.
 
-\includegraphics[width=\maxwidth{\textwidth}]{djikstra6.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{djikstra6.png}
 
 \subsubsection{Java}
 
@@ -3259,21 +3258,21 @@ Bellman Ford is an algorithm that finds the shortest path from one source node t
 
 Bellman Ford can be done using backtracking to find the shortest path in a graph. We first start at the starting node with starting cost of 0 and 0 edges used. For each node thats connected to that node, we repeat and add to the cost of the node.
 
-\includegraphics[width=\maxwidth{\textwidth}]{bellmanford.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bellmanford.png}
 
 We will do an example of the Bellman Ford algorithm on the above graph. At each node we have the node index and the current weight to reach that node. We start at node 0 with a weight of 0.
 
-\includegraphics[width=\maxwidth{\textwidth}]{bellmanford2.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bellmanford2.png}
 
 From node 0, we can reach node 1 and node 3. At node 1, we have an accumulative weight of 3. At node , we have an accumulative weight of 5.
 
-\includegraphics[width=\maxwidth{\textwidth}]{bellmanford3.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bellmanford3.png}
 
 From node 1, we can reach node 2 and node 4 with respective accumulative weights of 10 and 5.
 
 From node 3 we can reach node 4 with an accumulative weight of 9.
 
-\includegraphics[width=\maxwidth{\textwidth}]{bellmanford4.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bellmanford4.png}
 
 From node 2, we can reach node 5 with an accumulative weight of 19.
 
@@ -3281,7 +3280,7 @@ From node 4, we can reach node 5 with an accumulative weight of 11.
 
 From node 4, we can reach node 5 with an accumulative weight of 15.
 
-\includegraphics[width=\maxwidth{\textwidth}]{bellmanford5.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bellmanford5.png}
 
 \begin{lstlisting}
 Let N be the number of nodes in the graph
@@ -3384,7 +3383,7 @@ public static int BellmanFord(Vector<Vector<edge>> adjList,int startNode,int end
 
 Arbitrage occurs when you can exchange currencies for another and make a profit. For example given a currency exchange table:
 
-\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
    &
@@ -3427,7 +3426,7 @@ Prerequisites:  Shortest Path, Dynamic Programming
 
 Floyd Warshall is a algorithm for finding the shortest distances between all pairs of nodes in a graph. Floyd Warshall can be used to find negative cycles in the graph.
 
-\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Description &
@@ -3448,9 +3447,9 @@ Floyd Warshall is a algorithm for finding the shortest distances between all pai
 
 Floyd-Warshall uses a dynamic programming approach to finding the shortest path between node A and node B. Every path from node A to node B can be rewritten as a path from A to some node in between plus the path from the node in between to node B. The shortest path from A to B can be found by finding a node C such the shortest path from A to C plus the shortest path from C to B is minimized.
 
-\includegraphics[width=\maxwidth{\textwidth}]{floydwarshall1.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{floydwarshall1.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{floydwarshall.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{floydwarshall.png}
 
 \subsubsection{Formalization}
 
@@ -3590,7 +3589,7 @@ Searches are used to find solutions to problems and there many ways to search fo
 
 Binary search is a type of search that is able to find an object in a sorted list in O(log n). In binary search we first start at the middle element and we keep trying to halve the problem until we find the number.
 
-\includegraphics[width=\maxwidth{\textwidth}]{binarysearch.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{binarysearch.png}
 
 \subsubsection{Example}
 
@@ -3672,7 +3671,7 @@ Ternary search is a search that find local minimum or maximum values in a functi
 
 If there are multiple local minimum and maximum values, ternary search will find one of them but not necessarily the maximum value of all points.
 
-\includegraphics[width=\maxwidth{\textwidth}]{ternarysearch.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{ternarysearch.png}
 
 \subsection{Implementation}
 
@@ -3680,7 +3679,7 @@ Let's say we have a function f(x) with only one max point between A and B.
 
 Let m1 by 1/3 of the way from A and B and let m2 be 2/3 of the way from B.
 
-\includegraphics[width=\maxwidth{\textwidth}]{ternarysearch.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{ternarysearch.png}
 
 \subsubsection{Proof}
 
@@ -3689,50 +3688,50 @@ Case 1 : f(m1) $<$ f(m2)
 \begin{itemize}
 \item Case 1.1:  m1 $<$ m2 $<$ x
 
-\includegraphics[width=\maxwidth{\textwidth}]{ternarycase11.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{ternarycase11.png}
 \item Case 1.2: m1$<$x$<$m2
 
-\includegraphics[width=\maxwidth{\textwidth}]{ternarycase12.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{ternarycase12.png}
 \item x $<$ m1 $<$ m2 is not possible.
 \end{itemize}
 
 If f(m1) $<$ f(m2) then the max point must be in the middle third or last third.
 
-\includegraphics[width=\maxwidth{\textwidth}]{ternarycase1.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{ternarycase1.png}
 
 Case 2: f(m1) $>$= f(m2)
 
 \begin{itemize}
 \item Case 2.1: m1 $<$ x $<$ m2
 
-\includegraphics[width=\maxwidth{\textwidth}]{ternarycase21.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{ternarycase21.png}
 \item Case 2.2: x $<$ m1 $<$ m2
 
-\includegraphics[width=\maxwidth{\textwidth}]{ternarycase22.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{ternarycase22.png}
 \item m1 $<$ m2 $<$ x is not possible
 \end{itemize}
 
 If f(m1) $>$= f(m2) then the max point must be in the first third or middle third.
 
-\includegraphics[width=\maxwidth{\textwidth}]{ternarycase2.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{ternarycase2.png}
 
 \subsubsection{Example}
 
 Using the above proof, we can use ternary search to find the maximum point.
 
-\includegraphics[width=\maxwidth{\textwidth}]{ternarysearch.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{ternarysearch.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{ternarysearch2.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{ternarysearch2.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{ternarysearch3.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{ternarysearch3.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{ternarysearch4.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{ternarysearch4.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{ternarysearch5.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{ternarysearch5.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{ternarysearch6.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{ternarysearch6.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{ternarysearch7.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{ternarysearch7.png}
 
 \subsubsection{Formalization}
 
@@ -3778,7 +3777,7 @@ A DFS can also be used on a graph to transverse it by ignoring nodes that have a
 
 A DFS requires a stack but most the time DFS is implemented with recursion which uses the system stack. So most of the time you do not need an explicit stack.
 
-\includegraphics[width=\maxwidth{\textwidth}]{dfs.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{dfs.png}
 
 \subsection{Implementation}
 
@@ -3795,7 +3794,7 @@ public class Tree {
 
 \subsubsection{Binary Tree Transversal}
 
-\includegraphics[width=\maxwidth{\textwidth}]{dfs.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{dfs.png}
 
 Implementation for outputting a binary tree in order from left to right using DFS
 
@@ -3814,7 +3813,7 @@ public static void DFS(Tree cur){
 
 \subsubsection{Binary Tree Preorder}
 
-\includegraphics[width=\maxwidth{\textwidth}]{dfs-preorder.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{dfs-preorder.png}
 
 Implementation for outputting a binary tree in DFS pre order
 
@@ -3833,7 +3832,7 @@ public static void DFS(Tree cur){
 
 \subsubsection{Binary Tree Postorder}
 
-\includegraphics[width=\maxwidth{\textwidth}]{dfs-postorder.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{dfs-postorder.png}
 
 Implementation for outputting a binary tree in DFS post order
 
@@ -3898,7 +3897,7 @@ A breadth first search is a search that transverses level by level. For example 
 \item Repeat 2 until queue is empty
 \end{enumerate}
 
-\includegraphics[width=\maxwidth{\textwidth}]{bfs.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bfs.png}
 
 \subsection{Implementation}
 
@@ -3943,7 +3942,7 @@ Flood fill is a search that fills a grid from a start point to find the areas co
 
 Flood fill can be implemented using a BFS or DFS.
 
-\includegraphics[width=\maxwidth{\textwidth}]{floodfill.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{floodfill.png}
 
 \subsection{General solution}
 
@@ -3990,15 +3989,15 @@ Given an n x m matrix and a start point and two colors (src and dst), we want to
 
 Example:
 
-\includegraphics[width=\maxwidth{\textwidth}]{bucket.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bucket.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{bucket2.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bucket2.png}
 
 In a numeric representation of the colors:
 
-\includegraphics[width=\maxwidth{\textwidth}]{bucket3.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bucket3.png}
 
-\includegraphics[width=\maxwidth{\textwidth}]{bucket4.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bucket4.png}
 
 \subsubsection{DFS Solution}
 
@@ -4087,7 +4086,7 @@ Backtracking is similar to recursion, but instead of generating all the solution
 
 Since backtracking requires enumerating through all solutions, it is usually slow with runtimes usually O(n!) or O(2$^{n}$).
 
-\includegraphics[width=\maxwidth{\textwidth}]{backtracking.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{backtracking.png}
 
 \subsection{General Solution}
 
@@ -4193,7 +4192,7 @@ subsets([0000,0001,0010,0011,0100,0101,0110,0111,1000,1001,1010,1011,1100,1101,1
 
 Here is the way we would do this problem with backtracking, however it takes a lot of memory to store ALL the solutions. Instead of building all the solutions, we can build each solution one by one.
 
-\includegraphics[width=\maxwidth{\textwidth}]{enumerate-sets.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{enumerate-sets.png}
 
 \subsubsection{Formalization}
 
@@ -4270,11 +4269,11 @@ subsets([1,2,3,4],[1,0,0],0);
 
 Find the number of ways to place N queens on a NxN board without any of them attacking each other. Queens attack each other by being along the same row, column or diagonal.
 
-\includegraphics[width=\maxwidth{\textwidth}]{nqueen.jpg}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{nqueen.jpg}
 
 First we need to be able to encode a solution. There must be only one queen in each row, each column, each positive diagonal and each negative diagonal. We need a way to encode each row, column and diagonal to make it easy to check that they are all unique.
 
-\includegraphics[width=\maxwidth{\textwidth}]{nqueen3.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{nqueen3.png}
 
 If we guarantee that all rows are unique and we have all columns filled, then we can guarantee that all the columns are unique as well.
 
@@ -4284,7 +4283,7 @@ d1 = row+column
 
 N=6:
 
-\includegraphics[width=\maxwidth{\textwidth}]{nqueen1.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{nqueen1.png}
 
 Every square with the same d1 is in the same diagonal ( / ). For example on a 6x6 board: (0,2), (1,1), (2,0) all have d1 = 2 and are all along the same diagonal.
 
@@ -4294,7 +4293,7 @@ d2 = (N-row-1)+column
 
 N=6:
 
-\includegraphics[width=\maxwidth{\textwidth}]{nqueen2.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{nqueen2.png}
 
 Everything with the same d2 will be on the same diagonal. For example on a 6x6 board (0,0),(1,1),(2,2) have d2 = 5 and are all along the same diagonal.
 
@@ -4777,7 +4776,7 @@ Example:
 
 \subsection{Number of Paths}
 
-\includegraphics[width=\maxwidth{\textwidth}]{recursion_grid.png}
+\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{recursion_grid.png}
 
 We first examined the number of paths problem in advanced recursion. However, now that we know how to use dynamic programming, we can see that the recursive solution was very inefficient because we were recomputing values many times.
 

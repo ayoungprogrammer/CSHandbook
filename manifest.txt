@@ -50,7 +50,7 @@
 		((((Graph Theory.Representations))))
 		`` Adjacency Matrix ``
 		((((Adjacency Matrix))))
-		`` Adjacency List))))
+		`` Adjacency List ``
 		((((Adjacency List))))
 	` Tree `
 		((((Graph Theory.Tree))))

@@ -42,7 +42,7 @@ function latexParse($str){
 
 	// <img src = "\.\/pubicsrc">
 	$str = preg_replace('/<img src="\.\/public_html\/img\/uploads\/(.*?)">/',
-		'\includegraphics[width=\maxwidth{\textwidth}]{$1}',$str);
+		'\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{$1}',$str);
 
 	// _ -> \_
 	$str = preg_replace('/_/','\_',$str);
@@ -54,7 +54,7 @@ function latexParse($str){
 	$str = preg_replace('/\$/','\\\$',$str);
 
 	// <table> ... </table> -> \begin{tabular} ... \end{tabular}
-	$str = preg_replace('/<table>/','\vspace{10pt} \begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline',$str);
+	$str = preg_replace('/<table>/','\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline',$str);
 	$str = preg_replace('/<thead>.*?<tr>/','{',$str);
 	$str = preg_replace('/<\/thead>/','\hline',$str);
 	$str = preg_replace('/<\/t(d|h)>\s*<\/tr>/','\\\\\\',$str);

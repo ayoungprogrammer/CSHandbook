@@ -59,7 +59,7 @@
 \contentsline {subsection}{\numberline {5.1.2}Exercises}{44}{subsection.5.1.2}
 \contentsline {section}{\numberline {5.2} Linked List }{45}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}Link Class}{46}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}LinkedList Class}{46}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.2}LinkedList Class}{47}{subsection.5.2.2}
 \contentsline {subsection}{\numberline {5.2.3}Push}{47}{subsection.5.2.3}
 \contentsline {subsection}{\numberline {5.2.4}Pop}{48}{subsection.5.2.4}
 \contentsline {subsection}{\numberline {5.2.5}Get}{49}{subsection.5.2.5}
@@ -129,6 +129,7 @@
 \contentsline {subsubsection}{Adjacency List}{105}{section*.49}
 \contentsline {section}{\numberline {9.1} Adjacency Matrix }{106}{section.9.1}
 \contentsline {subsection}{\numberline {9.1.1}Implementation}{106}{subsection.9.1.1}
+\contentsline {section}{\numberline {9.2} Adjacency List }{107}{section.9.2}
 \contentsline {chapter}{\numberline {10} Tree }{109}{chapter.10}
 \contentsline {subsubsection}{Spanning Tree}{109}{section*.50}
 \contentsline {section}{\numberline {10.1} Prim's }{110}{section.10.1}

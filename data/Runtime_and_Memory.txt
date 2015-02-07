@@ -77,7 +77,7 @@ void zeroArrays(int[][] grid){
 }
 ]]]]
 
-There are NxN cells we need to set to 0 so we need O(N^2) operations. We can also think of it as another way. There are two nested loop and each loop is O(n) so we multiply them and O(n) x O(n) = O(n^2). Generally, when we have nested loops, we multiple their complexities. 
+There are NxN cells we need to set to 0 so we need O(N^^2^^) operations. We can also think of it as another way. There are two nested loop and each loop is O(n) so we multiply them and O(n) x O(n) = O(n^^2^^). Generally, when we have nested loops, we multiple their complexities. 
 
 ### Example
 
