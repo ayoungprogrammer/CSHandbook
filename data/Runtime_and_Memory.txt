@@ -1,6 +1,6 @@
 ## Introduction
 
-Processing time and memory are two primary resources that computer programs use and it is important to understand to analyze the limits we have. Computers are super fast at making calculations compared to humans, but humans have much more "memory" than computers currently do. For example, computers can add two 100-digit numbers together much more quickly than any human possibly can. However, the human brain can contain much more memory than humans.
+Processing time and memory are two primary resources that computer programs use and it is important to analyze the limits we have. Computers are super fast at making calculations compared to humans, but humans have much more "memory" than computers currently do. For example, computers can add two 100-digit numbers together much more quickly than any human possibly can. However, the human brain can contain much more memory than humans.
 
 Brains have trillions of connections between neurons and the estimated storage capacity is about 2.5 petabytes. That is approximately 340 years of TV shows that you could watch! Computers on the other hand, have much less memory than human brains. Standard computers have around 8GB of RAM and some higher end machines may have 16-32GB. Although hard-disks can store terabytes of memory, we use RAM (flash memory) when analyzing computer memory because it is much faster than disk storage. As an analogy, RAM can be thought of as grabbing an object in another room whereas disk memory is driving 20 min away to get that object. 
 
@@ -62,13 +62,38 @@ Time: The first assignment of maxVal takes O(1). The loop runs N-1 times and of 
 
 ### Example
 
+Suppose we have a function that zeroes a 2D NxN array.
+
 [[[[
 void zeroArrays(int[][] grid){
+  //O(n) loop
   for(int i=0; i<grid.length;i++){
+    //O(n) loop
     for(int j=0;j<grid[i].length;j++){
+      //O(1)
       grid[i][j] = 0;
     }
   }
 }
 ]]]]
 
+There are NxN cells we need to set to 0 so we need O(N^2) operations. We can also think of it as another way. There are two nested loop and each loop is O(n) so we multiply them and O(n) x O(n) = O(n^2). Generally, when we have nested loops, we multiple their complexities. 
+
+### Example
+
+Suppose we have another function that prints out the binary backwards for each number from 1 to N.
+
+[[[[
+void binaryNumbers(int n){
+    for(int x = 1; x < n; x++){
+        int bin = x;
+        while(bin > 0){
+            System.out.print(bin % 2);
+            bin = bin / 2;
+        }
+        System.out.println();
+    }
+}
+]]]]
+
+For each number x, it will take O(log x) to convert the number to binary and we do this N times so the runtime is: O(n log n).

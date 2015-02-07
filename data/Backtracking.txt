@@ -1,10 +1,12 @@
 ## Introduction
 
-Backtracking is a search that find all possible solutions by enumerating on a partial solution. Backtracking can be done using [[DFS|Depth First Search]] or [[BFS|Breadth First Search]]. Generally, DFS will be better than BFS because backtracking is used to enumerate a large amount of solution. Since BFS requires storing each "level" of solutions and DFS requires storing each "height" of the solution.
+Backtracking is a search that find all possible solutions by enumerating on partial solutions. Backtracking can be done using [[DFS|Depth First Search]] or [[BFS|Breadth First Search]]. Generally, DFS will be better than BFS because backtracking is used to enumerate a large amount of solution. Since BFS requires storing each "level" of solutions and DFS requires storing each "height" of the solution.
 
 Backtracking is similar to recursion, but instead of generating all the solutions, we will generate each solution one by one. In this way, we only need to store the current solution in memory whereas in normal recursion we need to store all the solutions into memory.
 
 Since backtracking requires enumerating through all solutions, it is usually slow with runtimes usually O(n!) or O(2^^n^^). 
+
+{{backtracking.png}}
 
 ## General Solution
 
@@ -176,10 +178,6 @@ subsets([1,2,3,4],[0,0,0],0);
  
 subsets([1,2,3,4],[1,0,0],0);
 ]]]]
-
-## [[Permutation]]
-
-Permutation can be 
 
 ## [[N Queen Problem]]
 

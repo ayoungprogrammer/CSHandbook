@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Data structures are a way of storing data such that it can be used in an efficient way. Although many of these data structures are already built into various languages, it is important to understand how they work. By understanding the implementations we can have a sense of which data structure to use in different problems as well as determine how efficient they are.
+Data structures are different ways of storing data such that they optimize certain data operations such as retrieval and insertion. Although many of these data structures are already built into various languages, it is important to understand how they work. By understanding the implementations, we can have a sense of which data structure to use for different scenarios.
 
 An **abstract data type** is a conceptual model for representing data. An abstract data type tells what it should do as opposed to how it should work. It will tell us what operations it should have but should not tell us how to implement them. 
 
@@ -10,7 +10,7 @@ For example, a bottle should be able to hold water and allow us to drink from. T
 
 {{bottle.png}}
 
-Some implementations of abstract data types are better than others for different purposes. For example plastic water bottles are very cheap whereas a thermos is more expensive but a thermos can hold hot water and keep it warm for a long period of time. When thinking of a implementation for an abstract data type we need to know what we need it for.
+Some implementations of abstract data types are better than others for different purposes. For example plastic water bottles are very cheap whereas a thermos is more expensive but a thermos can hold hot water and keep it warm for a long period of time. When selecting a data structure, we should analyze the efficiencies of data operations that we will do most often.
 
 {{adt.png}}
 
@@ -31,7 +31,6 @@ For more intermediate data structures, read the [[advanced data structures|Advan
 ### [[Linked List]] 
 
 ((((Linked List.Introduction))))
-
 
 ## [[Trees]]
 

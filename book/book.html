@@ -161,15 +161,41 @@ int findMax(int[] array){
 
 <hr><h3>Example</h3>
 
+<p>Suppose we have a function that zeroes a 2D NxN array.</p>
+
 <pre class="prettyprint linenums ">
 void zeroArrays(int[][] grid){
+  //O(n) loop
   for(int i=0; i&lt;grid.length;i++){
+    //O(n) loop
     for(int j=0;j&lt;grid[i].length;j++){
+      //O(1)
       grid[i][j] = 0;
     }
   }
 }
 </pre>
+
+<p>There are NxN cells we need to set to 0 so we need O(N^2) operations. We can also think of it as another way. There are two nested loop and each loop is O(n) so we multiply them and O(n) x O(n) = O(n^2). Generally, when we have nested loops, we multiple their complexities.</p>
+
+<hr><h3>Example</h3>
+
+<p>Suppose we have another function that prints out the binary backwards for each number from 1 to N.</p>
+
+<pre class="prettyprint linenums ">
+void binaryNumbers(int n){
+    for(int x = 1; x &lt; n; x++){
+        int bin = x;
+        while(bin &gt; 0){
+            System.out.print(bin % 2);
+            bin = bin / 2;
+        }
+        System.out.println();
+    }
+}
+</pre>
+
+<p>For each number x, it will take O(log x) to convert the number to binary and we do this N times so the runtime is: O(n log n).</p>
 </section>
 \part{ Recursion }
     \chapter{ Recursion }
@@ -264,12 +290,13 @@ int factorial(int n){
 <p>Let's say we have the string '23528'. The total is equal to the first digit + the sum of the rest of the digits. 2 + '3528'. We can do the exact same thing for the rest of the digits: the second digit + the sum of the rest of the digits and keep doing this until we have no more digits.</p>
 
 <ul>
-<li>'23528'</li>
-<li>'3528' + 2</li>
-<li>'528' + 5</li>
-<li>'28' + 10</li>
-<li>'8' + 12</li>
-<li>'' + 20</li>
+<li>f('23528')</li>
+<li>f('3528') + 2</li>
+<li>f('528') + 3 + 2</li>
+<li>f('28') + 5 + 3 + 2</li>
+<li>f('8') + 2 + 5 + 3 + 2</li>
+<li>f('') + 8 + 2 + 5 + 3 + 2</li>
+<li>0 + 8 + 2 + 5 + 3 + 2</li>
 <li>20</li>
 </ul>
 
@@ -285,6 +312,8 @@ The starting index will be 1.
 Example: 
 string = 'abcd'.
 string[1..3] = 'abc'
+string[1..1] = ''
+string[1] = 'a'
 
 Base case:
 sum(empty) = 0
@@ -316,6 +345,7 @@ int sum(string str){
      return sum(str.substring(1, n)) + charToNum;
    }
 }
+
 sum('23528');
 </pre>
 
@@ -330,11 +360,12 @@ sum('23528');
 <ul>
 <li>'cacaec'</li>
 <li>'acaec' +1</li>
-<li>'caec' + 1</li>
-<li>'aec' + 2</li>
-<li>'ec' + 2</li>
-<li>'c'  + 2</li>
-<li>'' + 3</li>
+<li>'caec' + 0 + 1</li>
+<li>'aec' + 1 + 0 + 1</li>
+<li>'ec' + 0 + 1 + 0 + 1</li>
+<li>'c'  + 0 + 0 + 1 + 0 +1</li>
+<li>'' + 1 + 0 + 0 + 1 + 0 + 1</li>
+<li>0 + 1 + 0 + 0 + 1 + 0 + 1</li>
 <li>3</li>
 </ul>
 
@@ -353,7 +384,7 @@ count(empty) = 0
 
 Recurrence:
 count(string) =  {if string[n]=='c'  count(string[2..n])+1
-                 {else                    count(string[2..n])
+                 {else               count(string[2..n])
 
 Example:
 count('cacaec')
@@ -371,13 +402,13 @@ count('cacaec')
 
 <pre class="prettyprint linenums ">
 int count3(string str){
-   int n = str.length()
+   int n = str.length();
    if(n == 0)return 0;
    if(str.charAt(0) == 'c'){
-      return count3( str.substring(1, n) ) + 1;
+      return count3(str.substring(1, n)) + 1;
    }
    else{
-     return count3( str.substring(1, n) );
+     return count3(str.substring(1, n));
    }
 }
 
@@ -391,9 +422,9 @@ count3('cacaec');
 
 <p>For example 5<sup>4</sup> = 5<sup>2</sup> * 5<sup>2</sup></p>
 
-<p>But let's take a look at x<sup>n/2</sup>. If n is even we can do the exact same thing! x<sup>n/2</sup> = x<sup>n/4</sup> * x<sup>n/4</sup>. We have a recurrence relation and the base case is simple: if x<sup>1</sup> = x.</p>
+<p>But let's take a look at x<sup>n/2</sup>. If n is even we can do the exact same thing! x<sup>n/2</sup> = x<sup>n/4</sup> * x<sup>n/4</sup>. We are solving a reduced version of the same problem so we have a recurrence relation. The base case is simple: x<sup>1</sup> = x.</p>
 
-<p>But what if n is odd and not 1? Then we have x<sup>n</sup> = x<sup>n/2</sup> * x<sup>n/2</sup> * x and we can now solve this problem using recursion.</p>
+<p>But what if n is odd and not 1? Then we have x<sup>n</sup> = x<sup>n/2</sup> * x<sup>n/2</sup> * x. Thus our recursive function has 3 different cases: the base case, even case and odd case.</p>
 
 <hr><h3>Formalization</h3>
 
@@ -425,7 +456,7 @@ exp(3,10)
 int exponent(int b, int n){
    if(n == 1)return b;
    if(n % 2 == 0){
-     int x = exponent(b, n/2);
+     int x = exponent(b, n / 2);
      return (x * x) % 10000;
    }
    else{
@@ -456,15 +487,17 @@ int exponent(int b, int n){
 
 </section><section><h2>Number of paths</h2>
 
-<p>Let's say we have a grid of N rows and M columns. How many ways are there to get from the bottom left corner to the top right corner using the intersection points and only going upwards or rightwards?</p>
+<p>Suppose we have a grid of N rows and M columns. How many ways are there to get from the bottom left corner to the top right corner using the intersection points and only going upwards or rightwards?</p>
 
 <p><img src="./public_html/img/uploads/recursion_grid.png"></p>
 
-<p>We see that the only way to reach an intersection is to come from the left intersection or come from the bottom intersection. So the number of ways to reach an intersection is the number of ways to reach the intersection to the left plus the number of ways to reach the intersection on the bottom.</p>
+<p>We see that the only way to reach an intersection is to come from the left or from the bottom. So the number of ways to reach an intersection is the number of ways to reach the intersection to the left plus the number of ways to reach the intersection on the bottom.</p>
 
-<p>So more accurately, the number of ways to get to intersection N x M is the sum of the ways to get to the intersection N-1 x M and the intersection N x M-1. However, the number of ways to reach the intersection N-1 x M is the sum of the number of ways to the intersection N-2 x M and N-1 x M-1. As we can see, it is a recurrence relation.</p>
+<p>So more accurately, the number of ways to get to intersection N x M is the sum of the ways to get to the intersection N-1 x M and the intersection N x M-1. However, the number of ways to reach the intersection N-1 x M is the sum of the number of ways to the intersection N-2 x M and N-1 x M-1. As we can see, we are solving a reduced version of the same problem. Thus we have a recurrence relation.</p>
 
-<p>The base case is the starting intersection in the bottom left hand corner (the intersection 1x1) which is the only way to reach that intersection. We can also see that there is only one way to reach the intersections on the left side. There is only one way to reach the intersections on the bottom side as well.</p>
+<p>The base case is any intersection on the left side or bottom side. There is only one way to reach the intersections by either going only up or only going right.</p>
+
+<hr><h3>Formalization</h3>
 
 <pre class="prettyprint linenums lang-html">
 Let path(x,y) be the number of ways to get to the intersection at x and y
@@ -483,17 +516,21 @@ paths(3,5)
 = 1 + paths(1,4) + paths(2,3) + paths(1,4) + paths(2,3) + paths(2,3) + paths(3,2)
 = 1 + 1 + paths(1,3) + paths(2,2) + 1 + paths(1,3) + paths(2,2) + paths(1,3) + paths(2,2) + paths(2,2) + paths(3,1)
 = 1 + 1 + 1 + paths(1,2) + paths(2,1) + 1 + 1 + path(1,2) + paths(2,1) + 1 + paths(1,2) + paths(2,1) + ....
-= 
+= 15
 </pre>
+
+<p>Example of what the grid should look like</p>
 
 <p><img src="./public_html/img/uploads/recursion_grid2.png"></p>
 
+<hr><h3>Implementation</h3>
+
 <pre class="prettyprint linenums ">
 int paths(int n,int m){
-   if(n==1||m==1){
+   if(n == 1 || m == 1){
         return 1;
    }
-   return ways(n-1,m) + ways(n,m-1);
+   return paths(n - 1, m) + paths(n, m - 1);
 }
 </pre>
 
@@ -502,7 +539,7 @@ int paths(int n,int m){
 <p>There are three poles and N disks where each disk is heaver than the next disk. In the initial configuration, the discs are stacked upon another on the first pole where the lighter discs are above the heavier discs. We want to move all the discs to the last pole with the following conditions:</p>
 
 <ul>
-<li>Only be moved from one pole to another one at a time.</li>
+<li>Only one disc can be moved from one pole to another at a time.</li>
 <li>The discs have to be stacked such that all the lighter discs are on top of the heavier ones.</li>
 </ul>
 
@@ -531,9 +568,9 @@ int paths(int n,int m){
 
 <p>We can see that Step 2 is easy, all we have to do is move that one disc. But for Step 1 and Step 3, we have to move N-1 discs. How can we move N-1 discs to the middle pole?</p>
 
-<p>We see that we can use the same reasoning: we need to move N-2 discs to the third pole. Then we need to move the N-1 disc to the second pole and then move N-2 discs from the third pole to the second pole.</p>
+<p>We see that we can use the same reasoning: we need to move N-2 discs to the third pole. Then we need to move the N-1 disc to the second pole and then move N-2 discs from the third pole to the second pole. Note that the Nth disc does not matter at all in this case since we can move any disc on top of it and we can pretend as if it doesn't exist.</p>
 
-<p>In this case, the start pole is the first pole, the helper pole is the third pole and the destination pole is the middle pole.</p>
+<p>In this case, the starting pole is the first pole, the helper pole is the third pole and the destination pole is the middle pole.</p>
 
 <p><img src="./public_html/img/uploads/hanoi.png"></p>
 
@@ -557,7 +594,7 @@ int paths(int n,int m){
 
 <p><img src="./public_html/img/uploads/hanoi2.png"></p>
 
-<p>As we can see, the steps to move N discs are the exact same as to move N-1 discs! The only difference is that the actual poles are different but if we reassign poles to new roles every time we move down a disc, we can build a recurrence relation.</p>
+<p>As we can see, the steps to move N discs are the exact same as to move N-1 discs! The only difference is that the actual poles are different but we the steps are the same relative to their roles (starting, helper and destination). We are solving a reduced version of the same problem and so have a recurrence.</p>
 
 <p>In Step 1, when we move N-1 discs from start to helper, the new helper is the old destination and the new destination is the old helper.</p>
 
@@ -569,16 +606,16 @@ int paths(int n,int m){
 Let f(N,start,helper,dest) be the steps to move N discs from the start to dest
 
 Base case:
-f(1,start,helper,dest)= Move from (start) to (dest)
+f(1,start,helper,dest) = Move from (start) to (dest)
 
 Recurrence:
 f(N,start,helper,dest)
 
 =
 
-f(N-1,start,dest,helper)
+f(N - 1, start, dest, helper)
 Move from start to dest
-f(N-1,helper,start,dest)
+f(N - 1, helper, start, dest)
 
 Example:
 Let A, B, C be pole 1, 2, 3
@@ -639,6 +676,27 @@ Move from B to C
 
 </pre>
 
+<hr><h3>Implementation</h3>
+
+<pre class="prettyprint linenums ">
+void hanoi(int N, int start, int helper, int destination){
+    if(N == 1){
+        System.out.println("Move " + start + " to " + destination);
+    }else{
+
+        //Move N-1 disks from start to helper
+        hanoi(N-1, start, destination, helper);
+
+        //Move 1 disk from start to end
+        hanoi(1, start, helper, destination);
+
+        //Move N-1 disks from helper to end
+        hanoi(N - 1, helper, start, destination);
+    }
+}
+hanoi(4, 1, 2, 3);
+</pre>
+
 </section><section><h2>Permutations</h2>
 
 <p>A permutation is an arrangement of the original set of elements.</p>
@@ -667,7 +725,7 @@ Move from B to C
 <li>C,B,A</li>
 </ul>
 
-<p>If we insert the letter D between each letter for every permutation we get:</p>
+<p>If we insert the letter D between each letter for every permutation in N-1 letters, we get:</p>
 
 <ul>
 <li>D,A,B,C</li>
@@ -703,7 +761,7 @@ Move from B to C
 <li>C,B,A</li>
 </ul>
 
-<p>We see that we have a recurrence relation. To get the permutations of a string N, we take the string[1..N-1] and we insert the Nth character at every position for each permutation of the N-1 substring. The base case of an empty string is simply an empty string. Permutation of an empty string is an empty list.</p>
+<p>We see that we are solving the same reduced problem thus we have a recurrence relation. To get the permutations of a string N, we take the string[1..N-1] and we insert the Nth character at every position for each permutation of the N-1 substring. The base case of an empty string is simply an empty string. Permutation of an empty string is an empty list.</p>
 
 <p>For simplicity, S[i..j] will mean the substring from including i to excluding j.</p>
 
@@ -1261,11 +1319,11 @@ public void deleteNext(Link node){
         \section{ Sets }
         <section><h2>Introduction</h2>
 
+<p>Sets are abstract data structures which are able to store and keep track of unique values.</p>
+
 <p>Imagine you have a grocery list that you use to keep tracking of things you need to buy. You want to make sure there are no duplicate items in the list, you can add items to the list and that you can remove items from your list. This structure is similar to what a set does.</p>
 
-<p>Sets are abstract data structures which are able to store values and are used for three operations: insertion, deletion and membership test.</p>
-
-<p>Insertion places an element into the set, deletion removes an element from the set and a <strong>membership</strong> test is checking whether an element exists within the set.</p>
+<p>Sets have three operations: insertion, deletion and a membership test. Insertion places an element into the set, deletion removes an element from the set and a <strong>membership</strong> test is checking whether an element exists within the set.</p>
 
 </section><section><h2>Implementation</h2>
 
@@ -2280,7 +2338,7 @@ public boolean remove(int key){
 
 <p><em>Prerequisites</em>: <a href="./Queue" target="_blank">Queue</a>, <a href="./Heap" target="_blank">Heap</a></p>
 
-<p>A priority queue is a queue that pops elements that are the maximum or minimum of a property and are usually implemented as heaps.</p>
+<p>A priority queue is a queue that takes elements which have the highest priority first. This is either the maximum or minimum property for all elements.</p>
 
 <p>Consider a waiting list for lung donors. The patients are given a score when they are placed on the waiting list by how much they need a lung based on their whether they smoke, risk factors, age, expected time left etc. When a lung is available, the patient with the highest score will get removed from the waiting list. During this time, more patients could be added to the queue. The behaviour is similar to a queue but instead of the first person getting in the queue getting a lung first, the person with the highest score will get it. This means that if Sam has a score of 60 and gets placed in the queue after Bob who has a score of 40, Sam will get the lung first even though Bob was in the queue before him.</p>
 
@@ -4067,11 +4125,13 @@ FloodFillBFS(1,1,1,2);
         \section{ Backtracking }
         <section><h2>Introduction</h2>
 
-<p>Backtracking is a search that find all possible solutions by enumerating on a partial solution. Backtracking can be done using <a href="./Depth_First_Search" target="_blank">DFS</a> or <a href="./Breadth_First_Search" target="_blank">BFS</a>. Generally, DFS will be better than BFS because backtracking is used to enumerate a large amount of solution. Since BFS requires storing each "level" of solutions and DFS requires storing each "height" of the solution.</p>
+<p>Backtracking is a search that find all possible solutions by enumerating on partial solutions. Backtracking can be done using <a href="./Depth_First_Search" target="_blank">DFS</a> or <a href="./Breadth_First_Search" target="_blank">BFS</a>. Generally, DFS will be better than BFS because backtracking is used to enumerate a large amount of solution. Since BFS requires storing each "level" of solutions and DFS requires storing each "height" of the solution.</p>
 
 <p>Backtracking is similar to recursion, but instead of generating all the solutions, we will generate each solution one by one. In this way, we only need to store the current solution in memory whereas in normal recursion we need to store all the solutions into memory.</p>
 
 <p>Since backtracking requires enumerating through all solutions, it is usually slow with runtimes usually O(n!) or O(2<sup>n</sup>).</p>
+
+<p><img src="./public_html/img/uploads/backtracking.png"></p>
 
 </section><section><h2>General Solution</h2>
 
@@ -4249,10 +4309,6 @@ subsets([1,2,3,4],[0,0,0],0);
  
 subsets([1,2,3,4],[1,0,0],0);
 </pre>
-
-</section><section><h2><a href="./Permutation" target="_blank">Permutation</a></h2>
-
-<p>Permutation can be</p>
 
 </section><section><h2><a href="./N_Queen_Problem" target="_blank">N Queen Problem</a></h2>
 
@@ -4812,21 +4868,17 @@ M = 5
 </section><section><h2>Exercises</h2>
 
 <ol>
-<li>Given an array of N integers, find the largest sum that can be using consecutive integers.</li>
-<li>Given an array of N integers, find the longest increasing subsequence</li>
+<li>Given an array of N integers, find the largest sum that can be found using consecutive integers.</li>
+<li>Given an array of N integers, find the length of the longest increasing subsequence. For example, given [1, -5, 4, 5, 10, -1, -5, 7], the longest increasing subsequence is length 4 [1,4,5,10].</li>
 <li>Given a matrix of NxN integers, find the maximum sum of a submatrix</li>
 </ol>
 </section>
         \section{ Advanced Dynamic Programming }
         <section><h2>Introduction</h2>
 
+<p><em>Prerequisites</em>: <a href="./Dynamic_Programming" target="_blank">Dynamic Programming</a></p>
+
 <p>Dynamic programming is very powerful and more efficient than recursion for problems that recompute multiple values. However sometimes it is difficult to find an efficient dynamic programming solution and we will examine problems where we will need higher dimensions.</p>
-
-<hr><h3>Prerequistes</h3>
-
-<ul>
-<li><a href="./Dynamic_Programming" target="_blank">Dynamic Programming</a></li>
-</ul>
 
 </section><section><h2><a href="./Longest_Common_Subsequence" target="_blank">Longest Common Subsequence</a></h2>
 
@@ -4877,26 +4929,25 @@ if A[i] == B[j], LCS[i][j] = LCS[i-1][j-1]+1 where 0&lt; i ≤ n and 0 &lt; j �
 if A[i] != B[j], LCS[i][j] = max( LCS[i-1][j], LCS[i][j-1] ) where 0&lt; i ≤ n and 0 &lt; j ≤ m
 </pre>
 
-</section><section><h2><a href="./Zero-one_Knapsack_Problem" target="_blank">Zero-one Knapsack Problem</a></h2>
+</section><section><h2><a href="./Zero-One_Knapsack_Problem" target="_blank">Zero-One Knapsack Problem</a></h2>
 
 <p>In the <a href="./Dynamic_Programming" target="_blank">Dynamic Programming</a> section, we examined the knapsack problem:</p>
 
 <p>Given an unlimited amount of N items with positive weights and values, we want to find the maximum value we can hold with a capacity.</p>
 
-<p>Let's change the problem slightly such that there is only one of each object. The problem becomes slightly more difficult because we to take into account whether or not we have used an object before.</p>
+<p>Let's change the problem slightly such that there is only one of each object. The problem becomes slightly more difficult because we need to take into account whether or not we have used an object before.</p>
 
 <p>Given one of each N items with positive weights and values, we want to find the maximum value we can hold with a capacity W.</p>
 
+<p>For every object, we have two options: we can take it or not take it. Thus for every option we need to make this binary decisions and thus we will have 2<sup>n</sup> options.</p>
+
 <pre class="prettyprint linenums ">
-Let knapsack(N,W) be the maximum value of iterating through N items with a maximum capacity of W
-Let weights be an array of weights
-Let values be an array of values
+Let knapsack(N,W) be maximum value of N items with capacity of W
+Let weights be array of weights
+Let values be array of values
+knapsack(i, 0) = 0
 
-knapsack(i,0) = 0
-knapsack(i,w) = 0 if no items can fit
-knapsack(i,w) = 0 where i &lt;= 0
-
-knapsack(n,w) = max(knapsack(n-1,w-weight[n])+value[n], knapsack(n-1,w))
+knapsack(i, w) = max(knapsack(i + 1, w - weights[i]) + values[i], knapsack(i-1,w))
 </pre>
 
 <pre class="prettyprint linenums ">

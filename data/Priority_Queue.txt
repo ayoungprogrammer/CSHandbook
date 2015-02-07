@@ -2,7 +2,7 @@
 
 *Prerequisites*: [[Queue]], [[Heap]]
 
-A priority queue is a queue that pops elements that are the maximum or minimum of a property and are usually implemented as heaps.
+A priority queue is a queue that takes elements which have the highest priority first. This is either the maximum or minimum property for all elements.
 
 Consider a waiting list for lung donors. The patients are given a score when they are placed on the waiting list by how much they need a lung based on their whether they smoke, risk factors, age, expected time left etc. When a lung is available, the patient with the highest score will get removed from the waiting list. During this time, more patients could be added to the queue. The behaviour is similar to a queue but instead of the first person getting in the queue getting a lung first, the person with the highest score will get it. This means that if Sam has a score of 60 and gets placed in the queue after Bob who has a score of 40, Sam will get the lung first even though Bob was in the queue before him. 
 

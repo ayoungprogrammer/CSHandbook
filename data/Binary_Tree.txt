@@ -1,6 +1,6 @@
 ## Introduction
 
-A binary tree is a tree such that each node has at most 2 children.
+A binary tree is a [[tree|Tree]] such that each node has at most 2 children.
 
 {{binarytree.png}}
 

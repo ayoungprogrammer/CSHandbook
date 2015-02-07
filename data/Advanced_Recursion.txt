@@ -8,15 +8,17 @@ Recursion can sometimes be very difficult to wrap your head around because when 
 
 ## Number of paths
 
-Let's say we have a grid of N rows and M columns. How many ways are there to get from the bottom left corner to the top right corner using the intersection points and only going upwards or rightwards?
+Suppose we have a grid of N rows and M columns. How many ways are there to get from the bottom left corner to the top right corner using the intersection points and only going upwards or rightwards?
 
 {{recursion_grid.png}}
 
-We see that the only way to reach an intersection is to come from the left intersection or come from the bottom intersection. So the number of ways to reach an intersection is the number of ways to reach the intersection to the left plus the number of ways to reach the intersection on the bottom. 
+We see that the only way to reach an intersection is to come from the left or from the bottom. So the number of ways to reach an intersection is the number of ways to reach the intersection to the left plus the number of ways to reach the intersection on the bottom. 
 
-So more accurately, the number of ways to get to intersection N x M is the sum of the ways to get to the intersection N-1 x M and the intersection N x M-1. However, the number of ways to reach the intersection N-1 x M is the sum of the number of ways to the intersection N-2 x M and N-1 x M-1. As we can see, it is a recurrence relation. 
+So more accurately, the number of ways to get to intersection N x M is the sum of the ways to get to the intersection N-1 x M and the intersection N x M-1. However, the number of ways to reach the intersection N-1 x M is the sum of the number of ways to the intersection N-2 x M and N-1 x M-1. As we can see, we are solving a reduced version of the same problem. Thus we have a recurrence relation.
 
-The base case is the starting intersection in the bottom left hand corner (the intersection 1x1) which is the only way to reach that intersection. We can also see that there is only one way to reach the intersections on the left side. There is only one way to reach the intersections on the bottom side as well.
+The base case is any intersection on the left side or bottom side. There is only one way to reach the intersections by either going only up or only going right.
+
+### Formalization
 
 [[[[{lang-html}
 Let path(x,y) be the number of ways to get to the intersection at x and y
@@ -35,17 +37,21 @@ paths(3,5)
 = 1 + paths(1,4) + paths(2,3) + paths(1,4) + paths(2,3) + paths(2,3) + paths(3,2)
 = 1 + 1 + paths(1,3) + paths(2,2) + 1 + paths(1,3) + paths(2,2) + paths(1,3) + paths(2,2) + paths(2,2) + paths(3,1)
 = 1 + 1 + 1 + paths(1,2) + paths(2,1) + 1 + 1 + path(1,2) + paths(2,1) + 1 + paths(1,2) + paths(2,1) + ....
-= 
+= 15
 ]]]]
+
+Example of what the grid should look like
 
 {{recursion_grid2.png}}
 
+### Implementation
+
 [[[[
 int paths(int n,int m){
-   if(n==1||m==1){
+   if(n == 1 || m == 1){
         return 1;
    }
-   return ways(n-1,m) + ways(n,m-1);
+   return paths(n - 1, m) + paths(n, m - 1);
 }
 ]]]]
 
@@ -53,7 +59,7 @@ int paths(int n,int m){
 
 There are three poles and N disks where each disk is heaver than the next disk. In the initial configuration, the discs are stacked upon another on the first pole where the lighter discs are above the heavier discs. We want to move all the discs to the last pole with the following conditions:
 
-* Only be moved from one pole to another one at a time.
+* Only one disc can be moved from one pole to another at a time.
 * The discs have to be stacked such that all the lighter discs are on top of the heavier ones.
 
 Lets' try to make this problem simpler. To move N discs from the first pole the the last pole we need to move N-1 discs to the middle pole, then move the Nth disc to the last pole, and then move all N-1 discs from the middle pole back on to the last pole.
@@ -81,9 +87,9 @@ We need to move N-1 discs from the helper pole to the destination pole.
 
 We can see that Step 2 is easy, all we have to do is move that one disc. But for Step 1 and Step 3, we have to move N-1 discs. How can we move N-1 discs to the middle pole? 
 
-We see that we can use the same reasoning: we need to move N-2 discs to the third pole. Then we need to move the N-1 disc to the second pole and then move N-2 discs from the third pole to the second pole.
+We see that we can use the same reasoning: we need to move N-2 discs to the third pole. Then we need to move the N-1 disc to the second pole and then move N-2 discs from the third pole to the second pole. Note that the Nth disc does not matter at all in this case since we can move any disc on top of it and we can pretend as if it doesn't exist.
 
-In this case, the start pole is the first pole, the helper pole is the third pole and the destination pole is the middle pole.
+In this case, the starting pole is the first pole, the helper pole is the third pole and the destination pole is the middle pole.
 
 {{hanoi.png}}
 
@@ -107,26 +113,27 @@ We move N-2 discs from the helper pole to the destination pole.
 
 {{hanoi2.png}}
 
-As we can see, the steps to move N discs are the exact same as to move N-1 discs! The only difference is that the actual poles are different but if we reassign poles to new roles every time we move down a disc, we can build a recurrence relation. 
+As we can see, the steps to move N discs are the exact same as to move N-1 discs! The only difference is that the actual poles are different but we the steps are the same relative to their roles (starting, helper and destination). We are solving a reduced version of the same problem and so have a recurrence. 
 
 In Step 1, when we move N-1 discs from start to helper, the new helper is the old destination and the new destination is the old helper.
 
 In Step 3, when we move N-1 discs from the helper to the destination, the new helper is the start pole, and the new start pole is the helper
+
 ### Formalization
 [[[[{lang-html}
 Let f(N,start,helper,dest) be the steps to move N discs from the start to dest
 
 Base case:
-f(1,start,helper,dest)= Move from (start) to (dest)
+f(1,start,helper,dest) = Move from (start) to (dest)
 
 Recurrence:
 f(N,start,helper,dest)
 
 =
 
-f(N-1,start,dest,helper)
+f(N - 1, start, dest, helper)
 Move from start to dest
-f(N-1,helper,start,dest)
+f(N - 1, helper, start, dest)
 
 Example:
 Let A, B, C be pole 1, 2, 3
@@ -187,6 +194,28 @@ Move from B to C
 
 ]]]]
 
+
+### Implementation
+
+[[[[
+void hanoi(int N, int start, int helper, int destination){
+    if(N == 1){
+        System.out.println("Move " + start + " to " + destination);
+    }else{
+
+        //Move N-1 disks from start to helper
+        hanoi(N-1, start, destination, helper);
+
+        //Move 1 disk from start to end
+        hanoi(1, start, helper, destination);
+
+        //Move N-1 disks from helper to end
+        hanoi(N - 1, helper, start, destination);
+    }
+}
+hanoi(4, 1, 2, 3);
+]]]]
+
 ## Permutations
 
 A permutation is an arrangement of the original set of elements.
@@ -211,7 +240,7 @@ We can manually find the permutations of A,B,C.
 * C,A,B
 * C,B,A
 
-If we insert the letter D between each letter for every permutation we get:
+If we insert the letter D between each letter for every permutation in N-1 letters, we get:
 
 * D,A,B,C
 * A,D,B,C
@@ -241,7 +270,7 @@ Insert C for all positions for all permutations
 * B,C,A
 * C,B,A
 
-We see that we have a recurrence relation. To get the permutations of a string N, we take the string[1..N-1] and we insert the Nth character at every position for each permutation of the N-1 substring. The base case of an empty string is simply an empty string. Permutation of an empty string is an empty list.
+We see that we are solving the same reduced problem thus we have a recurrence relation. To get the permutations of a string N, we take the string[1..N-1] and we insert the Nth character at every position for each permutation of the N-1 substring. The base case of an empty string is simply an empty string. Permutation of an empty string is an empty list.
 
 For simplicity, S[i..j] will mean the substring from including i to excluding j.
 

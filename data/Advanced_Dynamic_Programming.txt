@@ -1,10 +1,8 @@
 ## Introduction
 
+*Prerequisites*: [[Dynamic Programming]]
+
 Dynamic programming is very powerful and more efficient than recursion for problems that recompute multiple values. However sometimes it is difficult to find an efficient dynamic programming solution and we will examine problems where we will need higher dimensions.
-
-### Prerequistes
-
-* [[Dynamic Programming]]
 
 ## [[Longest Common Subsequence]]
 
@@ -54,26 +52,25 @@ if A[i] == B[j], LCS[i][j] = LCS[i-1][j-1]+1 where 0< i ≤ n and 0 < j ≤ m
 if A[i] != B[j], LCS[i][j] = max( LCS[i-1][j], LCS[i][j-1] ) where 0< i ≤ n and 0 < j ≤ m
 ]]]]
 
-## [[Zero-one Knapsack Problem]]
+## [[Zero-One Knapsack Problem]]
 
 In the [[Dynamic Programming]] section, we examined the knapsack problem:
 
 Given an unlimited amount of N items with positive weights and values, we want to find the maximum value we can hold with a capacity.
 
-Let's change the problem slightly such that there is only one of each object. The problem becomes slightly more difficult because we to take into account whether or not we have used an object before. 
+Let's change the problem slightly such that there is only one of each object. The problem becomes slightly more difficult because we need to take into account whether or not we have used an object before. 
 
 Given one of each N items with positive weights and values, we want to find the maximum value we can hold with a capacity W.
 
+For every object, we have two options: we can take it or not take it. Thus for every option we need to make this binary decisions and thus we will have 2^^n^^ options.
+
 [[[[
-Let knapsack(N,W) be the maximum value of iterating through N items with a maximum capacity of W
-Let weights be an array of weights
-Let values be an array of values
+Let knapsack(N,W) be maximum value of N items with capacity of W
+Let weights be array of weights
+Let values be array of values
+knapsack(i, 0) = 0
 
-knapsack(i,0) = 0
-knapsack(i,w) = 0 if no items can fit
-knapsack(i,w) = 0 where i <= 0
-
-knapsack(n,w) = max(knapsack(n-1,w-weight[n])+value[n], knapsack(n-1,w))
+knapsack(i, w) = max(knapsack(i + 1, w - weights[i]) + values[i], knapsack(i-1,w))
 ]]]]
 
 [[[[

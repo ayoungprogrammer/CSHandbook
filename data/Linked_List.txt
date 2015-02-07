@@ -4,13 +4,13 @@
 
 [[Source on Github||GITHUB_PATH/LinkedList.java]]
 
-Imagine you had some train cars that were linked together where each was labelled on the inside with a different letter. If you had to find a specific letter you would have to start at the first train car and look inside to check the letter and then walk into the next train car to check the letter and so forth until you found the train car you wanted. If you wanted to insert a train car somewhere all you would have to do it unlink the position where you wanted to insert it and then relink the new train car with the other cars. If you wanted to remove a train car all you would have to do is unlink that car from the other cars and then create a new link to the cars that were adjacent to it. This sort of structure is called a linked list.
+A linked list is an implementation of a queue that uses a chain of pointers. Instead of storing all the data in a fixed set of memory, we can store each element by itself but have a pointer from each element to the next element. A **pointer** is something that holds the memory location of another object.
 
-A **pointer** is something that holds the memory location of another object.
+Imagine you were on a scavenger hunt with lots of treasure chests. You start with a clue to the first chest. Each chest contains a lot of gold (data) but it also contains a clue to the next treasure chest. To get to the fifth chest, you need to visit the first, second, third and fourth chest. This is essentially how a linked list works.
 
 {{linkedlist.png}}
 
-A **linked list** is similar to an array but it is different such that it is not stored in one block of data. Each element can be stored in a random place in memory but each element contains a pointer to the next element thus forming a chain of pointers. Think of a pointer as a link that links two train cars. Since the elements aren't in a block, accessing an element must be done by traversing the entire linked list by following each pointer to the next. However, this also allows insertion to be done more quickly by simply changing the point of the previous element and setting to the pointer of the current element to the next element. Deletion is also done by taking the previous element and changing its pointer to two elements ahead. In a linked list the links only go forward and you cannot move backward. 
+A linked list is similar to an array but it is different such that it is not stored in one block of data. Each element can be stored in a random place in memory but each element contains a pointer to the next element thus forming a chain of pointers. Think of a pointer as a clue to the next chest. Since the elements aren't in a block, accessing an element must be done by traversing the entire linked list by following each pointer to the next. However, this also allows insertion to be done more quickly by simply changing the point of the previous element and setting to the pointer of the current element to the next element. Deletion is also done by taking the previous element and changing its pointer to two elements ahead. In a linked list the links only go forward and you cannot move backward. 
 
 A **doubly linked list** is a linked list that has pointers going backwards as well as forwards.
 
@@ -166,3 +166,4 @@ public void deleteNext(Link node){
     * 2 (2, 4, 2 is eliminated)
     * Player 2 is the last one standing.
 3. Given two linked lists which may share tails, determine the point at which they converge.
+4. Given a node in a doubly linked list, write a function that removes the node from the list. 

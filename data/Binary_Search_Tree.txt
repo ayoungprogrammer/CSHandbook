@@ -3,6 +3,8 @@ A binary search tree is a  [[binary tree|Binary Tree]] with special properties. 
 
 {{bstcompare.png}}
 
+Example:
+
 {{bst.png}}
 
 | Operation | Membership | Insertion | Deletion

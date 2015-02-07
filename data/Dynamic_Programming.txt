@@ -45,7 +45,7 @@ Base case:
 fib(0) = 1, fib(1) = 1
 
 Subproblem:
-fib(n) = fib(n-1) + fib(n-2)
+fib(n) = fib(n - 1) + fib(n - 2)
 
 Example:
 f(5) 
@@ -65,8 +65,8 @@ Base case
 fib[0] = 1
 fib[1] = 1
 
-for x from 1 to N
-    fib[x] = fib[x-1] + fib[x-2]
+for x from 2 to N
+    fib[x] = fib[x - 1] + fib[x - 2]
 
 Example:
 N = 10
@@ -88,8 +88,8 @@ fib[10] = 89
 Recursion
 [[[[
 public int fib(int n){
-    if(n==0 || n==1) return 1;
-    return fib(n-1) + fib(n-2);
+    if(n == 0 || n == 1) return 1;
+    return fib(n - 1) + fib(n - 2);
 }
 ]]]]
 
@@ -99,8 +99,8 @@ public int fib(int n){
     int fibArr[] = new int[n];
     fibArr[0] = 1
     fibArr[1] = 1
-    for(int x=2; x<n; x++){
-         fibArr[x] = fibArr[x-1] + fibArr[x-2];
+    for(int x=2; x < n; x++){
+         fibArr[x] = fibArr[x - 1] + fibArr[x - 2];
     }
     return fibArr[n];
 }
@@ -116,7 +116,7 @@ Let's define the problem more formally: Given a list of bills each with a positi
 
 The base case for 0 dollars is very simple. There are 0 bills to make 0 dollars.
 
-Lets try to simply this problem. Assume we only have one bill worth d dollars. If we have C dollars and we want to use the bill, then we will have C-d dollars left. So the minimum bills to make C dollars is the minimum number of bills to make (C - d) bills plus the 1 for the bill we used. For example, we want to make 10 dollars and we only have 2 dollar bills. If we use a 2 dollar bill, then the minimum bills required to make 10 dollars is the minimum number of bills required to make 8 dollars plus that 2 dollar bill. To find the minimum number of bills required to make 8 dollars, we can find the minimum number of bills to make 6 dollars plus one more 2 dollar bill. As you can see it is the same as before and it is a recursive function!
+Lets try to simply this problem. Assume we only have one bill worth d dollars. If we have C dollars and we want to use the bill, then we will have C-d dollars left. So the minimum bills to make C dollars is the minimum number of bills to make (C - d) bills plus the 1 for the bill we used. For example, we want to make 10 dollars and we only have 2 dollar bills. If we use a 2 dollar bill, then the minimum bills required to make 10 dollars is the minimum number of bills required to make 8 dollars plus that 2 dollar bill. To find the minimum number of bills required to make 8 dollars, is the same problem as finding the minimum number of bills required to make 10 dollars. As you can see it is the same as before and it is a recursive function!
 
 Recursion
 [[[[
@@ -128,8 +128,8 @@ bills(0) = 0
 bills(C) = impossible if C < 0
 
 Subproblem:
-bills(C) = bills(C-d) + 1 if bills(C-d) is possible
-               impossible if bills(C-d) is impossible
+bills(C) = bills(C - d) + 1 if bills(C-d) is possible
+           impossible       if bills(C-d) is impossible
 
 Example:
 C = 10
@@ -144,7 +144,9 @@ bills(10)
 = 5
 ]]]]
 
-We can implement this using dynamic programming but it will not give us much benefit since the recursion has no recalculations.
+We could implement this using dynamic programming but it will not give us much benefit since the recursion has no recalculations.
+
+Formalization:
 [[[[
 bills[0] = 0
 
@@ -171,7 +173,9 @@ bills[9] = impossible
 bills[10] = 5
 ]]]]
 
-Now let's consider the problem with multiple bills of denominations d1,d2 .... dn and we want to make C dollars. If we use a d1 bill, then we will have C-d1 dollars left and similarly if we use a d2 bill then we will have C-d2 dollars left. More generally, if we use a dn bill, then we will have C-dn dollars left. If we want to find the minimum bills to make C dollars we should try to use every bill and see which requires the minimum number of bills. So the minimum bills to make C dollars is the minimum of C - dn bills plus one more dn bill for all bills of denomination dn. For example, if we have $7 and we have bills $3,$4, and $5, the minimum number of bills to make $7 is the minimum of the minimum number of bills to make $4 plus one more $3 bill, minimum number of bills to make $3 plus one more $4 or the minimum number of bills to make $2 plus one more $5 bill. 
+Now let's consider the problem with multiple bills of denominations d1, d2 .... dn and we want to make C dollars. If we use a d1 bill, then we will have C-d1 dollars left and similarly if we use a d2 bill then we will have C-d2 dollars left. More generally, if we use a dn bill, then we will have C-dn dollars left. If we want to find the minimum bills to make C dollars we should try to use every bill and see which requires the minimum number of bills. So the minimum bills to make C dollars is the minimum of C - dn dollars plus one more dn bill for all denominations. However, finding the minimum number of bills to make C-dn dollars is the same problem as finding the number of C dollars! Thus we found the subproblem and a recursive formula.
+
+For example, if we have $7 and we have bills $3,$4, and $5, the minimum number of bills to make $7 is the minimum of the minimum number of bills to make $4 plus one more $3 bill, minimum number of bills to make $3 plus one more $4 or the minimum number of bills to make $2 plus one more $5 bill. 
 
 [[[[
 Let denom be a list of denominations
@@ -189,19 +193,19 @@ Example:
 denom = [3,4,5]
 
 bill(7)
-= min(bill(4)+1,bill(3)+1,bill(2)+1))
-= min(min(bill(1)+1,
-           bill(0)+1,
-           bill(-1)+1)+1, 
-       min(bill(0)+1,
-           bill(-1)+1,
-           bill(-2)+1) +1, 
-       min(bill(-1)+1),
-           bill(-2)+1,
-           bill(-3)+1)+1)
+= min(bill(4) + 1, bill(3) + 1, bill(2) + 1))
+= min(min(bill(1) + 1,
+           bill(0) + 1,
+           bill(-1) + 1) + 1, 
+       min(bill(0) + 1,
+           bill(-1) + 1,
+           bill(-2) + 1) + 1, 
+       min(bill(-1) + 1),
+           bill(-2) + 1,
+           bill(-3) + 1) + 1)
 = min( min(impossible, 1, impossible) +1,
-           min(1,impossible,impossible) +1,
-           min(impossible,impossible,impossible)+1)
+           min(1, impossible, impossible) +1,
+           min(impossible, impossible, impossible) + 1)
 = min(2,2,impossible)
 = 2
 
@@ -262,26 +266,26 @@ Given unlimited quantities of N items, each associated with a positive weight an
 
 Let's write a more specific version of the problem: we want to find the maximum value that a bag with weight capacity W can carry out of N items of positive values and weights.
 
-The base case for this is trivial. With zero weight, the maximum value you can have is 0.
+The base case for this is trivial. With zero weight, the maximum value you can have is 0. 
 
-Let's try simplifying the problem by using only one item with weight w and value v and a knapsack with maximum weight capacity W. Suppose we want to add the item into the knapsack then we have W-w capacity remaining and the value of the item. So the maximum value of knapsack with capacity W is the maximum value of W-w plus one more the item's value v. The maximum value of W-w is the maximum value of W-2*w + 2*v. As we can see, its the same subproblem as before and we have found a recursive relation.
+Let's try simplifying the problem by using only one item with weight w1 and value v1 and a knapsack with maximum weight capacity W. Suppose we want to add the item into the knapsack then we have (W-w1) capacity remaining and the item. So the maximum value of knapsack with capacity W is the maximum value of (W-w1) plus v1 the value of the item we have. The maximum value of (W-w1) is the same problem as finding the maximum value of W. As we can see, its the same subproblem as before and we have found a recursive relation. 
 
 For example if we had an item with value $5 and weight 4kg and a knapsack with capacity 9kg. The maximum value that knapsack of 8kg can contain is the maximum value of a knapsack of 5kg plus $5 for the item we put in the bag and so forth.
 
 [[[[
 Let knapsack(W) be the maximum value of items that can fit into maximum capacity of W.
-Let w be the weight of one item and v be the value of one item.
+Let w1 be the weight of one item and v1 be the value of one item.
 
 Base Case:
 knapsack(0) = 0
-knapsack(W) = 0 if W < w
+knapsack(W) = 0 if W < w1
 
 Recursion:
-knapsack(W) = knapsack(W-w) + v
+knapsack(W) = knapsack(W - w1) + v1
 
 Example:
-v = 5
-w = 4
+v1 = 5
+w1 = 4
 knapsack(9)
 = knapsack(5) + 5
 = knapsack(1) + 5 + 5
@@ -332,10 +336,12 @@ Let knapsack(W) be the maximum value with maximum capacity W
 Let weights be an array of weights where wi is the weight of the ith item.
 Let values be an array of values where vi is the value of the ith item.
 
-knapsack(W) = 0 if wi > W for all items
+knapsack(W) = 0 if W < wi for all items
 
 knapsack(W) = max(knapsack(W-wi) + vi for all items with wi <= W)
 ]]]]
+
+Since we are recomputing 
 
 [[[[
 Let knapsack[w] be the maximum value with maximum capacity W
@@ -403,6 +409,6 @@ M = 5
 
 ## Exercises
 
-1. Given an array of N integers, find the largest sum that can be using consecutive integers.
-2. Given an array of N integers, find the longest increasing subsequence
+1. Given an array of N integers, find the largest sum that can be found using consecutive integers.
+2. Given an array of N integers, find the length of the longest increasing subsequence. For example, given [1, -5, 4, 5, 10, -1, -5, 7], the longest increasing subsequence is length 4 [1,4,5,10].
 3. Given a matrix of NxN integers, find the maximum sum of a submatrix
