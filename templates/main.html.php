@@ -20,7 +20,7 @@
         }?>
     </ol>
     <a href="./topics">List of Topics</a><br>
-    <a href="./public_html/TheComputerScienceHandbook.pdf">Pre-Release Book</a>
+    <a href="./public_html/TheComputerScienceHandbook.pdf">Free E-Book (First Draft)</a>
 </div>
 
 <div class="box" id="emailbox">

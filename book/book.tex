@@ -5,6 +5,7 @@
 		\usepackage{tabulary}
 		\usepackage{color}
 		\usepackage[numbered]{bookmark}
+		\usepackage[paperwidth=6.125in, paperheight=9.250in]{geometry}
 
 		\title{The Computer Science Handbook}
 		\author{Michael Young}
@@ -40,7 +41,7 @@
 
 The Computer Science handbook is a handbook designed to explain algorithms and data structures in a way that anyone can understand. Many websites (eg Wikipedia) contain lengthy and wordy explanations that are full of technical jargon. We have tried our hardest to simplify all language to make it easy to read without any math or computer science background. We hope to share our knowledge with you and we ask only one thing from you. You must learn something before you leave!
 
-Before you get started with this handbook, it is highly recommended that you are already familiar with Java or C++ syntax. This handbook is not meaning for learning programming basics as other resources are better suited for that task.
+Before you get started with this handbook, it is highly recommended that you are already familiar with Java or C++ syntax. This handbook is not meaning for learning programming basics since there are other resources better suited for that task.
 
 \subsection{Format}
 
@@ -74,7 +75,7 @@ It is highly recommended that you understand syntax for Java / C++ before you co
         \section{ Runtime and Memory }
         
 
-Processing time and memory are two primary resources that computer programs use and it is important to understand to analyze the limits we have. Computers are super fast at making calculations compared to humans, but humans have much more "memory" than computers currently do. For example, computers can add two 100-digit numbers together much more quickly than any human possibly can. However, the human brain can contain much more memory than humans.
+Processing time and memory are two primary resources that computer programs use and it is important to analyze the limits we have. Computers are super fast at making calculations compared to humans, but humans have much more "memory" than computers currently do. For example, computers can add two 100-digit numbers together much more quickly than any human possibly can. However, the human brain can contain much more memory than humans.
 
 Brains have trillions of connections between neurons and the estimated storage capacity is about 2.5 petabytes. That is approximately 340 years of TV shows that you could watch! Computers on the other hand, have much less memory than human brains. Standard computers have around 8GB of RAM and some higher end machines may have 16-32GB. Although hard-disks can store terabytes of memory, we use RAM (flash memory) when analyzing computer memory because it is much faster than disk storage. As an analogy, RAM can be thought of as grabbing an object in another room whereas disk memory is driving 20 min away to get that object.
 
@@ -169,8 +170,8 @@ Code:
 \begin{lstlisting}
 int findMax(int[] array){
   int maxVal = array[0]; //O(1) memory to store max element, O(1) time for assignment
-  for(int i=1;i$<$array.length;i++){ //O(n) loop runtime
-      if(maxVal $<$ array[i]){ //O(1) to compare runtime
+  for(int i=1;i<array.length;i++){ //O(n) loop runtime
+      if(maxVal < array[i]){ //O(1) to compare runtime
          maxVal = array[i]; //O(1) to assign new value runtime
      }
   }
@@ -185,8 +186,8 @@ Time: The first assignment of maxVal takes O(1). The loop runs N-1 times and of 
 
 \begin{lstlisting}
 void zeroArrays(int[][] grid){
-  for(int i=0; i$<$grid.length;i++){
-    for(int j=0;j$<$grid[i].length;j++){
+  for(int i=0; i<grid.length;i++){
+    for(int j=0;j<grid[i].length;j++){
       grid[i][j] = 0;
     }
   }
@@ -215,7 +216,7 @@ Template for recursion:
 
 \begin{lstlisting}
 recursion(parameter)
-    if base\_case (parameter):
+    if base_case (parameter):
         stop
     recursion( operation(parameter) )
 \end{lstlisting}
@@ -301,7 +302,9 @@ Let's say we have the string '23528'. The total is equal to the first digit + th
 Let sum(string) be the sum of digits in a string
 Let n be the length of the string
 
-For simplicity, let string[x..y] be the substring of the string from index x to index y. The starting index will be 1.
+For simplicity, let string[x..y] be the substring of the string from index x to index y. 
+The starting index will be 1.
+
 Example: 
 string = 'abcd'.
 string[1..3] = 'abc'
@@ -332,8 +335,8 @@ int sum(string str){
        return 0;
     }
    else{
-     int charToNum = (str.charAt(0)-'0');
-     return sum(str.substring(1,n)) + charToNum;
+     int charToNum = (str.charAt(0) - '0');
+     return sum(str.substring(1, n)) + charToNum;
    }
 }
 sum('23528');
@@ -377,13 +380,13 @@ count(string) =  {if string[n]=='c'  count(string[2..n])+1
 
 Example:
 count('cacaec')
-= count('acaec')+1
-= (count('caec')+0)+1
-= ((count('aec')+1)+0)+1
-= (((count('ec')+0)+1)+0)+1
-= ((((count('c')+0)+0)+1)+0)+1
-= ((((count('')+1)+0)+0)+1)+0)+1
-= ((((0+1)+0)+0)+1)+0)+1
+= count('acaec') + 1
+= (count('caec') + 0) + 1
+= ((count('aec')+ 1) + 0) + 1
+= (((count('ec') + 0) + 1) + 0) +1
+= ((((count('c') + 0) + 0) + 1) + 0)+1
+= ((((count('') + 1) + 0) + 0) + 1) + 0) + 1
+= ((((0 + 1) + 0) + 0) + 1) + 0) + 1
 = 3
 \end{lstlisting}
 
@@ -424,33 +427,33 @@ Base case:
 exp(b,1) = 1  [Since b^1 = b]
 
 Recurrence:
-exp(b,n) = {if n divisible by 2    exp(b,n/2)^2 \% 10000
-           {else                   (exp(b,n/2)^2)*b \% 10000
+exp(b,n) = {if n divisible by 2    exp(b,n/2)^2 % 10000
+           {else                   (exp(b,n/2)^2)*b % 10000
 
 Example: (for simplicity, leave out the modulus)
 exp(3,10)
-= exp(3,5)^2
-= (exp(3,2)^2))*3)^2
-= (((exp(3,1)^2)*3)^2) [Base case]
-= (((3^2)^2)*3)^2)
-= ((9^2)*3)^2)
-= (81*3)^2
-= (243)^2
+= exp(3, 5) ^ 2
+= (exp(3, 2) ^ 2)) * 3) ^ 2
+= (((exp(3, 1) ^ 2) * 3) ^ 2) [Base case]
+= (((3 ^ 2) ^ 2) * 3) ^ 2)
+= ((9 ^ 2) * 3) ^ 2)
+= (81 * 3) ^ 2
+= (243) ^ 2
 = 59049
 \end{lstlisting}
 
 \subsubsection{Implementation}
 
 \begin{lstlisting}
-int exponent(int b,int n){
-   if(n==1)return b;
-   if(n\%2==0){
-     int x = exponent(b,n/2);
-     return (x * x)\%10000;
+int exponent(int b, int n){
+   if(n == 1)return b;
+   if(n % 2 == 0){
+     int x = exponent(b, n/2);
+     return (x * x) % 10000;
    }
    else{
-     int x = exponent(b,n/2);
-     return (x*x*b)\%10000;
+     int x = exponent(b, n / 2);
+     return (x * x * b) % 10000;
    }
 }
 
@@ -746,14 +749,14 @@ P('ABC')
 \subsubsection{Implementation}
 
 \begin{lstlisting}
-Vector$<$String$>$ permutation(String s){
+Vector<String> permutation(String s){
    int n = s.length;
-   Vector$<$String$>$ vec = new Vector$<$String$>$();
+   Vector<String> vec = new Vector<String>();
    if(s.length==0)return vec;
-   Vector$<$String$>$ subvec = permutation(s.substring(0,n-1));
-   for(int i=0;i$<$subvec.size();i++){
+   Vector<String> subvec = permutation(s.substring(0,n-1));
+   for(int i=0;i<subvec.size();i++){
       String ps = subvec.get(i);
-      for(int j=0;j$<$n;j++){
+      for(int j=0;j<n;j++){
          vec.push(ps.substring(0,j)+s.charAt(n)+ps.substring(j,n-1));
       }
    }
@@ -771,7 +774,7 @@ Vector$<$String$>$ permutation(String s){
 \part{ Data Structures }
     
 
-Data structures are a way of storing data such that it can be used in an efficient way. Although many of these data structures are already built into various languages, it is important to understand how they work. By understanding the implementations we can have a sense of which data structure to use in different problems as well as determine how efficient they are.
+Data structures are different ways of storing data such that they optimize certain data operations such as retrieval and insertion. Although many of these data structures are already built into various languages, it is important to understand how they work. By understanding the implementations, we can have a sense of which data structure to use for different scenarios.
 
 An abstract data type is a conceptual model for representing data. An abstract data type tells what it should do as opposed to how it should work. It will tell us what operations it should have but should not tell us how to implement them.
 
@@ -779,7 +782,7 @@ For example, a bottle should be able to hold water and allow us to drink from. T
 
 \includegraphics[width=\maxwidth{\textwidth}]{bottle.png}
 
-Some implementations of abstract data types are better than others for different purposes. For example plastic water bottles are very cheap whereas a thermos is more expensive but a thermos can hold hot water and keep it warm for a long period of time. When thinking of a implementation for an abstract data type we need to know what we need it for.
+Some implementations of abstract data types are better than others for different purposes. For example plastic water bottles are very cheap whereas a thermos is more expensive but a thermos can hold hot water and keep it warm for a long period of time. When selecting a data structure, we should analyze the efficiencies of data operations that we will do most often.
 
 \includegraphics[width=\maxwidth{\textwidth}]{adt.png}
 
@@ -902,7 +905,7 @@ Resize will be used to resize the current size of elements. We create a new arra
 \begin{lstlisting}
 public void resize(){
     int[] newArr = new int[2*arr.length];
-    for(int i=0;i$<$end;i++){
+    for(int i=0;i<end;i++){
         newArr[i] = arr[i];
     }
     arr = newArr;
@@ -917,7 +920,7 @@ Add element will add elements to the end of the vector. If the array is full, th
 
 \begin{lstlisting}
 public void add(int x){
-        if(size$>$=arr.length){
+        if(size>=arr.length){
         resize();
     }
     arr[size] = x;
@@ -952,11 +955,11 @@ We shift everything to the right of the index to the left by one to fill in the 
 
 \begin{lstlisting}
 public int remove(int idx){
-    if(idx$<$0||idx$>$=size){
+    if(idx<0||idx>=size){
         throw new ArrayIndexOutOfBoundsException();
     }
     int ret = arr[idx];
-    while(idx+1$<$size){
+    while(idx+1<size){
         arr[idx]=arr[idx+1];
         idx++;
     }
@@ -973,7 +976,7 @@ Returns the element at the specified index. It will throw an exception if the in
 
 \begin{lstlisting}
 public int get(int idx){
-    if(idx$<$0||idx$>$=size){
+    if(idx<0||idx>=size){
         throw new ArrayIndexOutOfBoundsException();
     }   
     return arr[idx];
@@ -990,16 +993,16 @@ Insert the new number x at the index. We need to make space at the index for the
 
 \begin{lstlisting}
 public void insert(int idx,int x){
-    if(idx$<$0||idx$>$size){
+    if(idx<0||idx>size){
         throw new ArrayIndexOutOfBoundsException();
     }
     size++;
-    if(size$>$=arr.length){
+    if(size>=arr.length){
         resize();
     }
     //Shift elements to the right or idx by 1
     int idx2 = size;
-    while(idx2$>$idx){
+    while(idx2>idx){
         arr[idx2]=arr[idx2-1];
         idx2--;
     }   
@@ -1017,9 +1020,9 @@ public void insert(int idx,int x){
         \section{ Queue }
         
 
-Imagine you are standing in line for a restaurant. Whoever is first in line will be served first and whoever is last in line will be served last. People can be served while more people join the line and the line may get very long because it takes a while to serve one person while more people join the queue. This is called a queue.
-
 A queue is an abstract data type with two functions, pop and push. Removal from the front is called "pop" or "dequeue". Insertion from the back is called "push" or "enqueue". A queue follows a First In First Out (FIFO) structure meaning the first element pushed should be the first element popped and the last element pushed should be the last element popped.
+
+Imagine you are standing in line for a restaurant. Whoever is first in line will be served first and whoever is last in line will be served last. People can be served while more people join the line and the line may get very long because it takes a while to serve one person while more people join the queue. This is called a queue.
 
 Queues are often used for buffer systems, for example a text message service. The messages that arrive at the server first are relayed first and the messages that arrive later are relayed later. If there are too many text messages in the system such that the rate  texts are received overwhelm the number of texts that are sent the buffer may overflow and messages will get dropped. Most of the time this won't happen because the systems are designed to handle large loads, but if there were an emergency that caused everyone to start texting many texts could be dropped.
 
@@ -1084,13 +1087,13 @@ Prerequisites: Queue
 
 Source on Github
 
-Imagine you had some train cars that were linked together where each was labelled on the inside with a different letter. If you had to find a specific letter you would have to start at the first train car and look inside to check the letter and then walk into the next train car to check the letter and so forth until you found the train car you wanted. If you wanted to insert a train car somewhere all you would have to do it unlink the position where you wanted to insert it and then relink the new train car with the other cars. If you wanted to remove a train car all you would have to do is unlink that car from the other cars and then create a new link to the cars that were adjacent to it. This sort of structure is called a linked list.
+A linked list is an implementation of a queue that uses a chain of pointers. Instead of storing all the data in a fixed set of memory, we can store each element by itself but have a pointer from each element to the next element. A pointer is something that holds the memory location of another object.
 
-A pointer is something that holds the memory location of another object.
+Imagine you were on a scavenger hunt with lots of treasure chests. You start with a clue to the first chest. Each chest contains a lot of gold (data) but it also contains a clue to the next treasure chest. To get to the fifth chest, you need to visit the first, second, third and fourth chest. This is essentially how a linked list works.
 
 \includegraphics[width=\maxwidth{\textwidth}]{linkedlist.png}
 
-A linked list is similar to an array but it is different such that it is not stored in one block of data. Each element can be stored in a random place in memory but each element contains a pointer to the next element thus forming a chain of pointers. Think of a pointer as a link that links two train cars. Since the elements aren't in a block, accessing an element must be done by traversing the entire linked list by following each pointer to the next. However, this also allows insertion to be done more quickly by simply changing the point of the previous element and setting to the pointer of the current element to the next element. Deletion is also done by taking the previous element and changing its pointer to two elements ahead. In a linked list the links only go forward and you cannot move backward.
+A linked list is similar to an array but it is different such that it is not stored in one block of data. Each element can be stored in a random place in memory but each element contains a pointer to the next element thus forming a chain of pointers. Think of a pointer as a clue to the next chest. Since the elements aren't in a block, accessing an element must be done by traversing the entire linked list by following each pointer to the next. However, this also allows insertion to be done more quickly by simply changing the point of the previous element and setting to the pointer of the current element to the next element. Deletion is also done by taking the previous element and changing its pointer to two elements ahead. In a linked list the links only go forward and you cannot move backward.
 
 A doubly linked list is a linked list that has pointers going backwards as well as forwards.
 
@@ -1266,6 +1269,7 @@ For example, you have 5 players (1,2,3,4,5) and the 3rd player is eliminated.
 \item Player 2 is the last one standing.
 \end{itemize}
 \item Given two linked lists which may share tails, determine the point at which they converge.
+\item Given a node in a doubly linked list, write a function that removes the node from the list. 
 \end{enumerate}
 
     \chapter{ Sets }
@@ -1373,15 +1377,15 @@ The collision chance is the threshold for resizing the hash set. When the ratio 
 \begin{lstlisting}
 public class HashSet {
 
-    public LinkedList$<$Integer$>$[] buckets;
+    public LinkedList<Integer>[] buckets;
     public int bucketsSize = 10;
     public int size = 0;
-    public static final double COLLISION\_CHANCE = 0.3;
+    public static final double COLLISION_CHANCE = 0.3;
     
     public HashSet(){
         buckets = new LinkedList[10];
-        for(int i=0;i$<$bucketsSize;i++){
-            buckets[i] = new LinkedList$<$Integer$>$();
+        for(int i=0;i<bucketsSize;i++){
+            buckets[i] = new LinkedList<Integer>();
         }
         size = 0;
     }
@@ -1397,7 +1401,7 @@ For the most part if the numbers are all random then the hash function is fine. 
 
 \begin{lstlisting}
 public int getHash(int x,int hashSize){
-    return x \% hashSize;
+    return x % hashSize;
 }
 \end{lstlisting}
 
@@ -1410,11 +1414,11 @@ To resize efficiently, we can create two times the number of buckets and set the
 \begin{lstlisting}
 public void resize(){
     int newBucketsSize = bucketsSize*2;
-    LinkedList$<$Integer$>$[] newBuckets = new LinkedList[newBucketsSize];
-    for(int i=0;i$<$newBucketsSize;i++){
-        newBuckets[i] = new LinkedList$<$Integer$>$();
+    LinkedList<Integer>[] newBuckets = new LinkedList[newBucketsSize];
+    for(int i=0;i<newBucketsSize;i++){
+        newBuckets[i] = new LinkedList<Integer>();
     }
-    for(int i=0;i$<$bucketsSize;i++){
+    for(int i=0;i<bucketsSize;i++){
         for(Integer y:buckets[i]){
             int hash = getHash(y,newBucketsSize);
             newBuckets[hash].push(y);
@@ -1439,12 +1443,12 @@ The function will return method or not the operation was successful. If the buck
 public boolean insert(int x){
     int hash = getHash(x,bucketsSize);
         
-    LinkedList$<$Integer$>$ curBucket = buckets[hash];
+    LinkedList<Integer> curBucket = buckets[hash];
     if(curBucket.contains(x)){
         return false;
     }
     curBucket.push(x);
-    if( (float)size/bucketsSize$>$COLLISION\_CHANCE){
+    if( (float)size/bucketsSize>COLLISION_CHANCE){
         resize();
     }
     size++;
@@ -1465,7 +1469,7 @@ To check if a hash set contains an element, we get the hash code from our hashin
 \begin{lstlisting}
 public boolean contains(int x){
     int hash = getHash(x,bucketsSize);
-    LinkedList$<$Integer$>$ curBucket = buckets[hash];
+    LinkedList<Integer> curBucket = buckets[hash];
     return curBucket.contains(x);
 }
 \end{lstlisting}
@@ -1486,7 +1490,7 @@ The function will return whether or not the operation was successful. If the buc
 public boolean remove(int x){
     int hash = getHash(x,bucketsSize);
     
-    LinkedList$<$Integer$>$ curBucket = buckets[hash];
+    LinkedList<Integer> curBucket = buckets[hash];
     if(curBucket.remove((Integer)x)){
         return true;
     }
@@ -1510,6 +1514,8 @@ public boolean remove(int x){
 A binary search tree is a  binary tree with special properties. The left children of a node will always be less than the node and the right children of a node will always be more than the node. It has a recursive structure such that every subtree is also a binary search tree.
 
 \includegraphics[width=\maxwidth{\textwidth}]{bstcompare.png}
+
+Example:
 
 \includegraphics[width=\maxwidth{\textwidth}]{bst.png}
 
@@ -1619,7 +1625,7 @@ public boolean insert(int x){
     while(curTree != null){
         if(x == curTree.value){
             return false;
-        }else if(x $<$ curTree.value){
+        }else if(x < curTree.value){
             if(curTree.left == null){
                 curTree.left =  new Node(x,curTree);
                 size++;
@@ -1659,7 +1665,7 @@ public boolean contains(int x){
     while(curTree!=null){
         if(x==curTree.value){
             return true;
-        }else if(x$<$curTree.value){
+        }else if(x<curTree.value){
             curTree = curTree.left;
         }else{
             curTree = curTree.right;
@@ -1714,7 +1720,7 @@ public boolean remove(int x){
     while(curNode!=null){
         if(x==curNode.value){
             break;
-        }else if(x$<$curNode.value){
+        }else if(x<curNode.value){
             curNode = curNode.left;
         }else{
             curNode = curNode.right;
@@ -1901,15 +1907,15 @@ The collision chance is the threshold for resizing the hash set. When the ratio 
 \begin{lstlisting}
 public class HashMap {
 
-    public LinkedList$<$Pair$>$[] buckets;
+    public LinkedList<Pair>[] buckets;
     public int bucketsSize = 10;
     public int size = 0;
-    public static final double COLLISION\_CHANCE = 0.3;
+    public static final double COLLISION_CHANCE = 0.3;
     
     public HashMap(){
         buckets = new LinkedList[10];
-        for(int i=0;i$<$bucketsSize;i++){
-            buckets[i] = new LinkedList$<$Pair$>$();
+        for(int i=0;i<bucketsSize;i++){
+            buckets[i] = new LinkedList<Pair>();
         }
         size = 0;
     }
@@ -1924,7 +1930,7 @@ For the most part if the numbers are all random then the hash function is fine. 
 
 \begin{lstlisting}
 public int getHash(int x,int hashSize){
-    return x \% hashSize;
+    return x % hashSize;
 }
 \end{lstlisting}
 
@@ -1937,11 +1943,11 @@ To resize efficiently, we can create two times the number of buckets and set the
 \begin{lstlisting}
 public void resize(){
     int newBucketsSize = bucketsSize*2;
-    LinkedList$<$Pair$>$[] newBuckets = new LinkedList[newBucketsSize];
-    for(int i=0;i$<$newBucketsSize;i++){
-        newBuckets[i] = new LinkedList$<$Pair$>$();
+    LinkedList<Pair>[] newBuckets = new LinkedList[newBucketsSize];
+    for(int i=0;i<newBucketsSize;i++){
+        newBuckets[i] = new LinkedList<Pair>();
     }
-    for(int i=0;i$<$bucketsSize;i++){
+    for(int i=0;i<bucketsSize;i++){
         for(Pair p:buckets[i]){
             int hash = getHash(p.key,newBucketsSize);
             newBuckets[hash].push(p);
@@ -1962,12 +1968,12 @@ The function will return method or not the operation was successful. If the buck
 public boolean insert(Pair p){
     int hash = getHash(p.key,bucketsSize);
     
-    LinkedList$<$Pair$>$ curBucket = buckets[hash];
+    LinkedList<Pair> curBucket = buckets[hash];
     if(curBucket.contains(p.key)){
         return false;
     }
     curBucket.push(p);
-    if( (float)size/bucketsSize$>$COLLISION\_CHANCE){
+    if( (float)size/bucketsSize>COLLISION_CHANCE){
         resize();
     }
     size++;
@@ -1982,7 +1988,7 @@ To get the value from a hash set from a key, we get the hash code from our hashi
 \begin{lstlisting}
 public Pair get(int key){
     int hash = getHash(key,bucketsSize);
-    LinkedList$<$Pair$>$ curBucket = buckets[hash];
+    LinkedList<Pair> curBucket = buckets[hash];
     for(Pair p:curBucket){
         if(p.key==key){
             return p;
@@ -2002,7 +2008,7 @@ The function will return whether or not the operation was successful. If the buc
 public boolean remove(int key){
     int hash = getHash(key,bucketsSize);
     
-    LinkedList$<$Pair$>$ curBucket = buckets[hash];
+    LinkedList<Pair> curBucket = buckets[hash];
     for(Pair p: curBucket){
         if(p.key==key){
             curBucket.remove(p);
@@ -2125,7 +2131,7 @@ public boolean insert(Pair p){
     while(curTree != null){
         if(p.key == curTree.pair.key){
             return false;
-        }else if(p.key $<$ curTree.pair.key){
+        }else if(p.key < curTree.pair.key){
             if(curTree.left == null){
                 Node newTree = new Node(p);
                 newTree.parent = curTree;
@@ -2157,7 +2163,7 @@ public Pair get(int key){
     while(curTree!=null){
         if(key==curTree.pair.key){
             return curTree.pair;
-        }else if(key$<$curTree.pair.key){
+        }else if(key<curTree.pair.key){
             curTree = curTree.left;
         }else{
             curTree = curTree.right;
@@ -2212,7 +2218,7 @@ public boolean remove(int key){
     while(curNode!=null){
         if(key==curNode.pair.key){
             break;
-        }else if(key$<$curNode.pair.key){
+        }else if(key<curNode.pair.key){
             curNode = curNode.left;
         }else{
             curNode = curNode.right;
@@ -2391,17 +2397,17 @@ Heapify takes a random array of N elements and transforms it into a heap. The ru
 \begin{lstlisting}
 public void heapify(int arr[]){
     this.arr = arr;
-    for(int i=0;i$<$Math.floor(arr.length/2.0);i++){
+    for(int i=0;i<Math.floor(arr.length/2.0);i++){
         int idx = i;
-        while(idx$<$size){
+        while(idx<size){
             int left = idx*2+1;
             int right = idx*2+2;
-            if(left$<$size \&\& arr[left]$>$arr[idx]){
+            if(left<size \&\& arr[left]>arr[idx]){
                 int swap = arr[left];
                 arr[left] = arr[idx];
                 arr[idx] = swap;
                 idx = left;
-            }else if(right$<$size \&\& arr[right]$>$arr[idx]){
+            }else if(right<size \&\& arr[right]>arr[idx]){
                 int swap = arr[right];
                 arr[right]=arr[idx];
                 arr[idx] = swap;
@@ -2421,7 +2427,7 @@ When the heap gets too full, we can resize it to make it bigger
 \begin{lstlisting}
 public void resize(){
     int[] newArr = new int[arr.length*2];
-    for(int i=0;i$<$size;i++){
+    for(int i=0;i<size;i++){
         newArr[i] = arr[i];
     }
     arr = newArr;
@@ -2443,16 +2449,16 @@ Pushes the number x into the priority queue. We can do this by adding it to the 
 \begin{lstlisting}
 public void push(int x){
         
-    if(size$>$=arr.length){
+    if(size>=arr.length){
         resize();
     }
     arr[size] = x;
     size++;
     
-    //Make sure parent is $>$ child from the last element
+    //Make sure parent is > child from the last element
     int idx = size-1;
     int parent = (idx-1)/2;
-    while(idx$>$0 \&\& arr[parent]$<$arr[idx]){
+    while(idx>0 \&\& arr[parent]<arr[idx]){
         int swap = arr[parent];
         arr[parent] = arr[idx];
         arr[idx] = swap;
@@ -2483,15 +2489,15 @@ public int pop(){
         
     int idx = 0;
         
-    while(idx$<$size){
+    while(idx<size){
         int left = idx*2+1;
         int right = idx*2+2;
-        if(left$<$size \&\& arr[left]$>$arr[idx]){
+        if(left<size \&\& arr[left]>arr[idx]){
             int swap = arr[left];
             arr[left] = arr[idx];
             arr[idx] = swap;
             idx = left;
-        }else if(right$<$size \&\& arr[right]$>$arr[idx]){
+        }else if(right<size \&\& arr[right]>arr[idx]){
             int swap = arr[right];
             arr[right]=arr[idx];
             arr[idx] = swap;
@@ -2745,13 +2751,13 @@ class edge{
         this.weight = weight;
     }
 }
-public static int[][] getAdjMatrix(Vector$<$edge$>$ edges){
+public static int[][] getAdjMatrix(Vector<edge> edges){
     int n = 0;
     int adjMatrix[][] = new int[n][n];
     
-    for(int i=0;i$<$n;i++)for(int j=0;j$<$n;j++)adjMatrix[i][j] = 0;
+    for(int i=0;i<n;i++)for(int j=0;j<n;j++)adjMatrix[i][j] = 0;
     
-    for(int i=0;i$<$edges.size();i++){
+    for(int i=0;i<edges.size();i++){
         edge e = edges.get(i);
         adjMatrix[e.source][e.dest] = e.weight;
         adjMatrix[e.dest][e.source] = e.weight;
@@ -2890,7 +2896,7 @@ adjList is an adjacency list that is an array of arrays that store the graph.
 
 \begin{lstlisting}
 
-class node implements Comparable$<$node$>${
+class node implements Comparable<node>{
     int weight,index;
     public node(int weight,int index){
         this.weight = weight;
@@ -2900,31 +2906,31 @@ class node implements Comparable$<$node$>${
         return weight-e.weight;
     }
 }
-public static int Prims(Vector$<$Vector$<$node$>$$>$ adjList){
+public static int Prims(Vector<Vector<node>> adjList){
     int cost = 0;
     int n = adjList.size();
-    PriorityQueue$<$node$>$ pq = new PriorityQueue$<$node$>$();
+    PriorityQueue<node> pq = new PriorityQueue<node>();
     boolean visited[] = new boolean[n];
-    for(int i=0;i$<$n;i++){
+    for(int i=0;i<n;i++){
         visited[i] = false;
     }
     int inTree = 1;
     visited[0] = true;
-    for(int i=0;i$<$adjList.get(0).size();i++){
+    for(int i=0;i<adjList.get(0).size();i++){
         pq.add(adjList.get(0).get(i));
     }
-    while(!pq.isEmpty()\&\&inTree$<$n){
+    while(!pq.isEmpty()\&\&inTree<n){
         node cur = pq.poll();
         if(visited[cur.index])continue;
         inTree++;
         visited[cur.index]=true;
         cost+=cur.weight;
-        for(int i=0;i$<$adjList.get(cur.index).size();i++){
+        for(int i=0;i<adjList.get(cur.index).size();i++){
             pq.add(adjList.get(cur.index).get(i));          
                  }
     }
     //Graph is not connected
-    if(inTree$<$n)return -1;
+    if(inTree<n)return -1;
     return cost;
 }
 \end{lstlisting}
@@ -2983,7 +2989,7 @@ If implemented efficiently using a priority queue to get the edges with minimum 
 \subsubsection{Code}
 
 \begin{lstlisting}
-class edge implements Comparable$<$edge$>${
+class edge implements Comparable<edge>{
     int weight,source,dest;
     public edge(int source,int dest,int weight){
         this.source = source;
@@ -2999,16 +3005,16 @@ public static int getParent(int parents[],int x){
     parents[x] = getParent(parents,parents[x]);
     return parents[x];
 }
-public static int Kruskal(Vector$<$Vector$<$edge$>$$>$ adjList){
+public static int Kruskal(Vector<Vector<edge>> adjList){
     int n = adjList.size();
     int parents[] = new int[n];
-    for(int i=0;i$<$n;i++)parents[i] = i;
+    for(int i=0;i<n;i++)parents[i] = i;
     int sum = 0;
     
-    PriorityQueue$<$edge$>$ edges = new PriorityQueue$<$edge$>$();
+    PriorityQueue<edge> edges = new PriorityQueue<edge>();
     
-    for(int i=0;i$<$n;i++){
-        for(int j=0;j$<$adjList.get(i).size();j++){
+    for(int i=0;i<n;i++){
+        for(int j=0;j<adjList.get(i).size();j++){
             edges.add(adjList.get(i).get(j));
         }
     }
@@ -3136,7 +3142,7 @@ At each node we have the minimum cost to get from the start node to each node.
 Implementation of Dijkstra in Java using a priority queue.
 
 \begin{lstlisting}
-class node implements Comparable$<$node$>${
+class node implements Comparable<node>{
     int weight,index;
     public node(int weight,int index){
         this.weight = weight;
@@ -3149,9 +3155,9 @@ class node implements Comparable$<$node$>${
 
 public static int dijkstra(int[][] adjMatrix,int start,int end){
     int n = adjMatrix.length;
-    PriorityQueue $<$node$>$ pq = new PriorityQueue$<$node$>$();
+    PriorityQueue <node> pq = new PriorityQueue<node>();
     boolean visited[] = new boolean[n];
-    for(int i=0;i$<$n;i++)visited[i] = false;
+    for(int i=0;i<n;i++)visited[i] = false;
     pq.add(new node(0,start));
     while(!visited[end] \&\& !pq.isEmpty()){
         node curNode = pq.poll();
@@ -3161,8 +3167,8 @@ public static int dijkstra(int[][] adjMatrix,int start,int end){
         if(curNode.index==end){
             return curNode.weight;
         }
-        for(int i=0;i$<$n;i++){
-            if(adjMatrix[curNode.index][i]$>$0 \&\& !visited[i]){
+        for(int i=0;i<n;i++){
+            if(adjMatrix[curNode.index][i]>0 \&\& !visited[i]){
                 int newWeight = curNode.weight+adjMatrix[curNode.index][i];
                 pq.add(new node(newWeight,i));
             }
@@ -3260,7 +3266,7 @@ class edge{
     }
 }
 
-public static int BellmanFord(Vector$<$Vector$<$edge$>$$>$ adjList,int startNode,int endNode){
+public static int BellmanFord(Vector<Vector<edge>> adjList,int startNode,int endNode){
     
     int n = adjList.size();
     //dist[i] is minimum distance from start to i
@@ -3270,23 +3276,23 @@ public static int BellmanFord(Vector$<$Vector$<$edge$>$$>$ adjList,int startNode
     boolean[] used = new boolean[n];
     
     //initialize dist[i]=0 and used[i]=false
-    for(int i=0;i$<$n;i++){
+    for(int i=0;i<n;i++){
         dist[i] = 0;
         used[i] = false;
     }
     used[startNode] = true;
     dist[startNode] = 0;
-    for(int i=0;i$<$n-1;i++){
+    for(int i=0;i<n-1;i++){
         //Iterate through adjacency list
-        for(int j=0;j$<$n;j++){
-            for(int k=0;k$<$adjList.get(j).size();k++){
+        for(int j=0;j<n;j++){
+            for(int k=0;k<adjList.get(j).size();k++){
                 if(!used[j])continue;
                 edge e = adjList.get(j).get(k);
                 //If dist[e.source] has been used
                 if(used[e.source]){
-                    //If new dist $<$ cur dist or not used, then update
+                    //If new dist < cur dist or not used, then update
                     int newDist = dist[e.source]+e.weight;
-                    if(newDist$<$dist[e.dest] || !used[e.dest]){
+                    if(newDist<dist[e.dest] || !used[e.dest]){
                         used[e.dest]= true; 
                         dist[e.dest] = newDist;
                     }
@@ -3295,11 +3301,11 @@ public static int BellmanFord(Vector$<$Vector$<$edge$>$$>$ adjList,int startNode
         }
     }
     
-    for(int j=0;j$<$n;j++){
-        for(int k=0;k$<$adjList.get(j).size();k++){
+    for(int j=0;j<n;j++){
+        for(int k=0;k<adjList.get(j).size();k++){
             edge e = adjList.get(j).get(k);
             //If negative cycle
-            if(dist[e.source]+e.weight $<$ dist[e.dest]){
+            if(dist[e.source]+e.weight < dist[e.dest]){
                 System.out.println("Negative cycle");
             }
         }
@@ -3416,28 +3422,28 @@ class edge{
         this.weight = weight;
     }
 }
-public static final int UNDEFINED = Integer.MIN\_VALUE;
+public static final int UNDEFINED = Integer.MIN_VALUE;
     
-public static int[][] FloydWarshall(Vector$<$Vector$<$edge$>$$>$ adjList){
+public static int[][] FloydWarshall(Vector<Vector<edge>> adjList){
     int n = adjList.size();
     //dist[i][j] is the minimum distance from i to j
     int[][] dist = new int[n][n];
     
     //initialize dist[i][j]
-    for(int i=0;i$<$n;i++){
-        for(int j=0;j$<$n;j++){
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
             dist[i][j] = UNDEFINED;
         }
     }
     
     //dist[i][i] = 0
-    for(int i=0;i$<$n;i++){
+    for(int i=0;i<n;i++){
         dist[i][i]=0;
     }
     
     //initialize weights, dist[i][j] = edge from i to j
-    for(int i=0;i$<$n;i++){
-        for(int j=0;j$<$adjList.get(i).size();j++){
+    for(int i=0;i<n;i++){
+        for(int j=0;j<adjList.get(i).size();j++){
             
             edge e = adjList.get(i).get(j);
             dist[e.source][e.dest] = e.weight;
@@ -3446,22 +3452,22 @@ public static int[][] FloydWarshall(Vector$<$Vector$<$edge$>$$>$ adjList){
         }
     }
     
-    for(int k=0;k$<$n;k++){
-        for(int i=0;i$<$n;i++){
-            for(int j=0;j$<$n;j++){
+    for(int k=0;k<n;k++){
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
                 //If dist[i][k] and dist[k][j] have been set then use those values
                 if(dist[i][k]!=UNDEFINED\&\&dist[k][j]!=UNDEFINED){
                     //If the new distance is less than current or not used, then update
                     int newDist = dist[i][k]+dist[k][j];
-                    if(dist[i][j] $>$ newDist || dist[i][j]==UNDEFINED){
+                    if(dist[i][j] > newDist || dist[i][j]==UNDEFINED){
                         dist[i][j] = newDist;
                     }
                 }
             }
         }
     }
-    for(int i=0;i$<$n;i++){
-        if(dist[i][i]$<$0){
+    for(int i=0;i<n;i++){
+        if(dist[i][i]<0){
             System.out.println("negative cycle");
         }
     }
@@ -3493,8 +3499,8 @@ An undirected graph where the number of edges is greater than or equal to the nu
 \begin{lstlisting}
 public static boolean hasCycle(int [][] adjMatrix){
         int[] visited = new int[adjMatrix.length];
-        for(int i=0;i$<$adjMatrix.length;i++)visited[i] = 0;
-        for(int i=0;i$<$adjMatrix.length;i++){
+        for(int i=0;i<adjMatrix.length;i++)visited[i] = 0;
+        for(int i=0;i<adjMatrix.length;i++){
             if(hasCycleAt(adjMatrix,i,visited))return true;
         }
         return false;
@@ -3503,8 +3509,8 @@ public static boolean hasCycle(int [][] adjMatrix){
     public static boolean hasCycleAt(int[][] adjMatrix,int i, int visited[]){
         if(visited[i] == 1)return true;
         visited[i] = 1;
-        for(int j = 0; j $<$ adjMatrix.length;i++){
-            if(adjMatrix[i][j] $>$ 0){
+        for(int j = 0; j < adjMatrix.length;i++){
+            if(adjMatrix[i][j] > 0){
                 if(hasCycleAt(adjMatrix,j,visited))return true;
                 visited[j] = 0;
             }
@@ -3582,10 +3588,10 @@ This is a generic implementation of a binary search.
 
 \begin{lstlisting}
 void binarySearch(int ans,int minBound,int maxBound){
-    while(maxVal$>$=minVal){
+    while(maxVal>=minVal){
        int mid = (minVal+maxVal)/2;
        if(mid==ans)return;
-       if(mid$<$ans)minVal = mid;
+       if(mid<ans)minVal = mid;
        else maxVal = mid;
     }
 }
@@ -3681,8 +3687,8 @@ Let tern(a,b) return x where f(x) = maximum
 Let m1 = a+(b-a)/3,
 m2 = a+(b-a)*2/3
 
-tern(a,b) = { if |f(a)-f(b)|$<$epsilon    (a+b)/2 
-            { if f(a) $<$ f(b)             tern(m1,b)
+tern(a,b) = { if |f(a)-f(b)|<epsilon    (a+b)/2 
+            { if f(a) < f(b)             tern(m1,b)
             { else                       tern(a,m2)
 \end{lstlisting}
 
@@ -3690,12 +3696,12 @@ tern(a,b) = { if |f(a)-f(b)|$<$epsilon    (a+b)/2
 
 \begin{lstlisting}
 public double tern(double a,double b){
-    if(Math.abs(f(a)-f(b))$<$0.0001){
+    if(Math.abs(f(a)-f(b))<0.0001){
         return (a+b)/2.0;
     }
     double m1 = a+(b-a)/3.0;
     double m2 = a+(b-a)*2/3;
-    if(f(a)$<$f(b)){
+    if(f(a)<f(b)){
         return tern(m1,b);
     }else {
         return tern(a,m2);
@@ -3797,12 +3803,12 @@ This is a DFS implementation for traversing a bidirectional graph with positive 
  * cur - Current node the DFS is at
  * visited - Mutable array which keeps track of which nodes have been visited already
  */
-public static void DFS\_graph(int[][] adjMatrix,int cur,boolean[] visited){
+public static void DFS_graph(int[][] adjMatrix,int cur,boolean[] visited){
     if(visited[cur])return;
     visited[cur] = true;
     System.out.println(cur);
-    for(int i=0;i$<$adjMatrix.length;i++){
-        if(adjMatrix[cur][i]$>$0)DFS\_graph(adjMatrix,i,visited);
+    for(int i=0;i<adjMatrix.length;i++){
+        if(adjMatrix[cur][i]>0)DFS_graph(adjMatrix,i,visited);
     }
     return;
 }
@@ -3842,7 +3848,7 @@ Printing a binary tree using BFS:
 
 \begin{lstlisting}
 void bfs(Node root){
-    Queue$<$Node$>$ q = new Queue$<$Node$>$();
+    Queue<Node> q = new Queue<Node>();
     q.push(root);
     while(q.isEmpty()==false){
         Node cur = q.pop();
@@ -3904,7 +3910,7 @@ void floodFill(int i,int j){
 
 \begin{lstlisting}
 void floodFill(int i,int j){
-   Queue$<$Point$>$ q;
+   Queue<Point> q;
    q.push(new Point(i,j));
    while(!q.isEmpty()){
       Point cur = q.pop();
@@ -3951,7 +3957,7 @@ This is the DFS approach to the problem.
  * and returns the number of pixels changed
  */
 public int FloodFillDFS(int x,int y,int src,int tar){
-    if(x$<$0 || x$>$=n || y$<$0 || y$>$=m)return 0;
+    if(x<0 || x>=n || y<0 || y>=m)return 0;
     if(visited[x][y])return 0;
     visited[x][y] = true;
     if(image[x][y]!=src)return 0;
@@ -3982,12 +3988,12 @@ This is the BFS approach to the problem.
  * and returns the number of pixels changes 
  */
 public int FloodFillBFS(int x,int y,int src,int tar){
-    LinkedList$<$Point$>$ q = new LinkedList$<$Point$>$();
+    LinkedList<Point> q = new LinkedList<Point>();
     q.push(new Point(x,y));
     int total = 0;
     while(q.isEmpty()==false){
         Point cur = q.pop();
-        if(cur.x$<$0||cur.x$>$=n||cur.y$<$0||cur.y$>$=m)continue;
+        if(cur.x<0||cur.x>=n||cur.y<0||cur.y>=m)continue;
         if(visited[cur.x][cur.y])continue;
                 visited[cur.x][cur.y] = true;
         if(image[cur.x][cur.y]!=src)continue;
@@ -4044,13 +4050,13 @@ backtrack(solution):
     if base case
        stop
 
-    backtrack( next\_solution ) for next\_solution from solution
+    backtrack( next_solution ) for next_solution from solution
 
 
 ----------
 
 Initial:
-backtrack( empty\_solution)
+backtrack( empty_solution)
 
 \end{lstlisting}
 
@@ -4181,9 +4187,9 @@ subset(0,'1111')
 
 \begin{lstlisting}
 void subsets(int arr[],bool use[],int i){
-    if(i$>$=arr.length){
-         for(int j=0;j$<$n;j++){
-              System.out.print("\%d ",arr[i]);
+    if(i>=arr.length){
+         for(int j=0;j<n;j++){
+              System.out.print("%d ",arr[i]);
          }
          System.out.println();
          return;
@@ -4388,7 +4394,7 @@ Base case:
 fib(0) = 1, fib(1) = 1
 
 Subproblem:
-fib(n) = fib(n-1) + fib(n-2)
+fib(n) = fib(n - 1) + fib(n - 2)
 
 Example:
 f(5) 
@@ -4409,8 +4415,8 @@ Base case
 fib[0] = 1
 fib[1] = 1
 
-for x from 1 to N
-    fib[x] = fib[x-1] + fib[x-2]
+for x from 2 to N
+    fib[x] = fib[x - 1] + fib[x - 2]
 
 Example:
 N = 10
@@ -4433,8 +4439,8 @@ Recursion
 
 \begin{lstlisting}
 public int fib(int n){
-    if(n==0 || n==1) return 1;
-    return fib(n-1) + fib(n-2);
+    if(n == 0 || n == 1) return 1;
+    return fib(n - 1) + fib(n - 2);
 }
 \end{lstlisting}
 
@@ -4445,8 +4451,8 @@ public int fib(int n){
     int fibArr[] = new int[n];
     fibArr[0] = 1
     fibArr[1] = 1
-    for(int x=2; x$<$n; x++){
-         fibArr[x] = fibArr[x-1] + fibArr[x-2];
+    for(int x=2; x < n; x++){
+         fibArr[x] = fibArr[x - 1] + fibArr[x - 2];
     }
     return fibArr[n];
 }
@@ -4462,7 +4468,7 @@ Let's define the problem more formally: Given a list of bills each with a positi
 
 The base case for 0 dollars is very simple. There are 0 bills to make 0 dollars.
 
-Lets try to simply this problem. Assume we only have one bill worth d dollars. If we have C dollars and we want to use the bill, then we will have C-d dollars left. So the minimum bills to make C dollars is the minimum number of bills to make (C - d) bills plus the 1 for the bill we used. For example, we want to make 10 dollars and we only have 2 dollar bills. If we use a 2 dollar bill, then the minimum bills required to make 10 dollars is the minimum number of bills required to make 8 dollars plus that 2 dollar bill. To find the minimum number of bills required to make 8 dollars, we can find the minimum number of bills to make 6 dollars plus one more 2 dollar bill. As you can see it is the same as before and it is a recursive function!
+Lets try to simply this problem. Assume we only have one bill worth d dollars. If we have C dollars and we want to use the bill, then we will have C-d dollars left. So the minimum bills to make C dollars is the minimum number of bills to make (C - d) bills plus the 1 for the bill we used. For example, we want to make 10 dollars and we only have 2 dollar bills. If we use a 2 dollar bill, then the minimum bills required to make 10 dollars is the minimum number of bills required to make 8 dollars plus that 2 dollar bill. To find the minimum number of bills required to make 8 dollars, is the same problem as finding the minimum number of bills required to make 10 dollars. As you can see it is the same as before and it is a recursive function!
 
 Recursion
 
@@ -4472,11 +4478,11 @@ Let bills(C) be the minimum number of bills to make C dollars.
 
 Base Case:
 bills(0) = 0
-bills(C) = impossible if C $<$ 0
+bills(C) = impossible if C < 0
 
 Subproblem:
-bills(C) = bills(C-d) + 1 if bills(C-d) is possible
-               impossible if bills(C-d) is impossible
+bills(C) = bills(C - d) + 1 if bills(C-d) is possible
+           impossible       if bills(C-d) is impossible
 
 Example:
 C = 10
@@ -4491,13 +4497,15 @@ bills(10)
 = 5
 \end{lstlisting}
 
-We can implement this using dynamic programming but it will not give us much benefit since the recursion has no recalculations.
+We could implement this using dynamic programming but it will not give us much benefit since the recursion has no recalculations.
+
+Formalization:
 
 \begin{lstlisting}
 bills[0] = 0
 
 for c from 1 to C
-     if c-d $>$= 0 and bills[c-d] is not impossible
+     if c-d >= 0 and bills[c-d] is not impossible
          bills[c] = bills[c-d] + 1
      else
          bills[c] = impossible
@@ -4519,7 +4527,9 @@ bills[9] = impossible
 bills[10] = 5
 \end{lstlisting}
 
-Now let's consider the problem with multiple bills of denominations d1,d2 .... dn and we want to make C dollars. If we use a d1 bill, then we will have C-d1 dollars left and similarly if we use a d2 bill then we will have C-d2 dollars left. More generally, if we use a dn bill, then we will have C-dn dollars left. If we want to find the minimum bills to make C dollars we should try to use every bill and see which requires the minimum number of bills. So the minimum bills to make C dollars is the minimum of C - dn bills plus one more dn bill for all bills of denomination dn. For example, if we have  and we have bills ,, and , the minimum number of bills to make  is the minimum of the minimum number of bills to make  plus one more  bill, minimum number of bills to make  plus one more  or the minimum number of bills to make  plus one more  bill.
+Now let's consider the problem with multiple bills of denominations d1, d2 .... dn and we want to make C dollars. If we use a d1 bill, then we will have C-d1 dollars left and similarly if we use a d2 bill then we will have C-d2 dollars left. More generally, if we use a dn bill, then we will have C-dn dollars left. If we want to find the minimum bills to make C dollars we should try to use every bill and see which requires the minimum number of bills. So the minimum bills to make C dollars is the minimum of C - dn dollars plus one more dn bill for all denominations. However, finding the minimum number of bills to make C-dn dollars is the same problem as finding the number of C dollars! Thus we found the subproblem and a recursive formula.
+
+For example, if we have  and we have bills ,, and , the minimum number of bills to make  is the minimum of the minimum number of bills to make  plus one more  bill, minimum number of bills to make  plus one more  or the minimum number of bills to make  plus one more  bill.
 
 \begin{lstlisting}
 Let denom be a list of denominations
@@ -4527,7 +4537,7 @@ Let bills(C) be the minimum number of bills from denominations to make C dollars
 
 Base Cases:
 bills(0) = 0
-bills(C) = impossible if C $<$ 0
+bills(C) = impossible if C < 0
 
 Subproblem
 bill(C) = {  minimum of bills(C - d)+1 for d in denom if bills(C-d) is possible
@@ -4537,19 +4547,19 @@ Example:
 denom = [3,4,5]
 
 bill(7)
-= min(bill(4)+1,bill(3)+1,bill(2)+1))
-= min(min(bill(1)+1,
-           bill(0)+1,
-           bill(-1)+1)+1, 
-       min(bill(0)+1,
-           bill(-1)+1,
-           bill(-2)+1) +1, 
-       min(bill(-1)+1),
-           bill(-2)+1,
-           bill(-3)+1)+1)
+= min(bill(4) + 1, bill(3) + 1, bill(2) + 1))
+= min(min(bill(1) + 1,
+           bill(0) + 1,
+           bill(-1) + 1) + 1, 
+       min(bill(0) + 1,
+           bill(-1) + 1,
+           bill(-2) + 1) + 1, 
+       min(bill(-1) + 1),
+           bill(-2) + 1,
+           bill(-3) + 1) + 1)
 = min( min(impossible, 1, impossible) +1,
-           min(1,impossible,impossible) +1,
-           min(impossible,impossible,impossible)+1)
+           min(1, impossible, impossible) +1,
+           min(impossible, impossible, impossible) + 1)
 = min(2,2,impossible)
 = 2
 
@@ -4570,7 +4580,7 @@ Subproblem:
 for c from 1 to C
     bills[c] = impossible
     for d in denom
-        if c-d $>$= 0 and bills[c-d] is not impossible:
+        if c-d >= 0 and bills[c-d] is not impossible:
             bills[c] = min(bills[c], bills[c-d]+1)
 
 Example:
@@ -4616,24 +4626,24 @@ Let's write a more specific version of the problem: we want to find the maximum 
 
 The base case for this is trivial. With zero weight, the maximum value you can have is 0.
 
-Let's try simplifying the problem by using only one item with weight w and value v and a knapsack with maximum weight capacity W. Suppose we want to add the item into the knapsack then we have W-w capacity remaining and the value of the item. So the maximum value of knapsack with capacity W is the maximum value of W-w plus one more the item's value v. The maximum value of W-w is the maximum value of W-2w + 2v. As we can see, its the same subproblem as before and we have found a recursive relation.
+Let's try simplifying the problem by using only one item with weight w1 and value v1 and a knapsack with maximum weight capacity W. Suppose we want to add the item into the knapsack then we have (W-w1) capacity remaining and the item. So the maximum value of knapsack with capacity W is the maximum value of (W-w1) plus v1 the value of the item we have. The maximum value of (W-w1) is the same problem as finding the maximum value of W. As we can see, its the same subproblem as before and we have found a recursive relation.
 
 For example if we had an item with value  and weight 4kg and a knapsack with capacity 9kg. The maximum value that knapsack of 8kg can contain is the maximum value of a knapsack of 5kg plus  for the item we put in the bag and so forth.
 
 \begin{lstlisting}
 Let knapsack(W) be the maximum value of items that can fit into maximum capacity of W.
-Let w be the weight of one item and v be the value of one item.
+Let w1 be the weight of one item and v1 be the value of one item.
 
 Base Case:
 knapsack(0) = 0
-knapsack(W) = 0 if W $<$ w
+knapsack(W) = 0 if W < w1
 
 Recursion:
-knapsack(W) = knapsack(W-w) + v
+knapsack(W) = knapsack(W - w1) + v1
 
 Example:
-v = 5
-w = 4
+v1 = 5
+w1 = 4
 knapsack(9)
 = knapsack(5) + 5
 = knapsack(1) + 5 + 5
@@ -4684,10 +4694,12 @@ Let knapsack(W) be the maximum value with maximum capacity W
 Let weights be an array of weights where wi is the weight of the ith item.
 Let values be an array of values where vi is the value of the ith item.
 
-knapsack(W) = 0 if wi $>$ W for all items
+knapsack(W) = 0 if W < wi for all items
 
-knapsack(W) = max(knapsack(W-wi) + vi for all items with wi $<$= W)
+knapsack(W) = max(knapsack(W-wi) + vi for all items with wi <= W)
 \end{lstlisting}
+
+Since we are recomputing
 
 \begin{lstlisting}
 Let knapsack[w] be the maximum value with maximum capacity W
@@ -4700,7 +4712,7 @@ for w from 0 to W
 for w from 1 to W
     maxVal = 0
     for i in items
-        if w-wi $>$= 0
+        if w-wi >= 0
             knapsack[w] = max(knapsack[w], knapsack[w-wi] + vi)
 
 Example:
@@ -4781,8 +4793,8 @@ The longest common subsequence between two strings A and B is the longest subseq
 For example given A="xyaaaabcdeg", B="bcaaaaefgxy" the longest common subsequence is "aaaaeg"
 
 \begin{lstlisting}
-xyaaaabcde\_g
-bcaaaa\_\_\_efgxy
+xyaaaabcde_g
+bcaaaa___efgxy
 \end{lstlisting}
 
 If we try to use greedy we will see it doesn't work. For example if we use try to take as much as B as we can, we see that we will get BCEG or if we try to take as much as A we get XY.
@@ -4810,15 +4822,15 @@ LCS of not matched = max ( (LCS of A[1..N], B[1..M-1]) , (LCS of A[1..N-1],B[1..
 Putting it all together we have:
 
 \begin{lstlisting}
-Let LCS[i][j] be the length of longest common subsequence of A[1..i] and B[1..j] where 0$<$ i ≤ n and 0 $<$ j ≤ m.
+Let LCS[i][j] be the length of longest common subsequence of A[1..i] and B[1..j] where 0< i ≤ n and 0 < j ≤ m.
 
 Base case:
-LCS[i][0] = 0 where 0$<$ i ≤ n
-LCS[0][j] = 0 where 0$<$ j ≤ m
+LCS[i][0] = 0 where 0< i ≤ n
+LCS[0][j] = 0 where 0< j ≤ m
 
 Subproblem:
-if A[i] == B[j], LCS[i][j] = LCS[i-1][j-1]+1 where 0$<$ i ≤ n and 0 $<$ j ≤ m
-if A[i] != B[j], LCS[i][j] = max( LCS[i-1][j], LCS[i][j-1] ) where 0$<$ i ≤ n and 0 $<$ j ≤ m
+if A[i] == B[j], LCS[i][j] = LCS[i-1][j-1]+1 where 0< i ≤ n and 0 < j ≤ m
+if A[i] != B[j], LCS[i][j] = max( LCS[i-1][j], LCS[i][j-1] ) where 0< i ≤ n and 0 < j ≤ m
 \end{lstlisting}
 
 \subsection{Zero-one Knapsack Problem}
@@ -4838,7 +4850,7 @@ Let values be an array of values
 
 knapsack(i,0) = 0
 knapsack(i,w) = 0 if no items can fit
-knapsack(i,w) = 0 where i $<$= 0
+knapsack(i,w) = 0 where i <= 0
 
 knapsack(n,w) = max(knapsack(n-1,w-weight[n])+value[n], knapsack(n-1,w))
 \end{lstlisting}

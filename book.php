@@ -81,17 +81,18 @@ function latexParse($str){
 	$str = preg_replace('/<.*?>/','',$str);
 
 	$str = str_replace(['&#42;','&gt;','&lt;','&amp;','&#124;','%'],['=','$>$','$<$','\&','$|$','\%'],$str);
-	/*
+	
 	$str = preg_replace_callback(
 		'/\\\\begin{lstlisting}.*?\\\\end{lstlisting}/s',
 		function($matches){
 			$ret = preg_replace('/\$<\$/','<',$matches[0]);
 			$ret = preg_replace('/\$>\$/','>',$ret);
 			$ret = preg_replace('/\\\_/','_',$ret);
+			$ret = preg_replace('/\\\%/','%',$ret);
 			return $ret;
 		},
 		$str
-	);*/
+	);
 
 
 	$tex = '\documentclass[11pt,oneside]{book}
@@ -101,6 +102,7 @@ function latexParse($str){
 		\usepackage{tabulary}
 		\usepackage{color}
 		\usepackage[numbered]{bookmark}
+		\usepackage[paperwidth=6.125in, paperheight=9.250in]{geometry}
 
 		\title{The Computer Science Handbook}
 		\author{Michael Young}

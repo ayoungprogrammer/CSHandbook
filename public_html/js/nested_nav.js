@@ -57,9 +57,9 @@
             var count = selected.match(re).length;
 
 
-            this.value = val.substring(0, start) + selected.replace(re, '\t') + val.substring(end);
+            this.value = val.substring(0, start) + selected.replace(re, '    ') + val.substring(end);
             this.selectionStart = start;
-            this.selectionEnd = end + count;
+            this.selectionEnd = end + 4;
         }
     });
 
