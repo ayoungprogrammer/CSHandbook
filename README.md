@@ -1,6 +1,6 @@
 ## Introduction
 
-The CS Handbook is a online reference guide written by me (Michael Young) and Simon Huang (simonhuang989). We hope that we can share our expertise in algorithms and data structures.
+The CS Handbook is a online reference guide for learning algorithms and data structures in a way that could be understood without a strong math background.
 
 ## Home page
 
