@@ -32,7 +32,7 @@ O(1) *Constant Time* | runtime independent of N
 O(log N) *Sublinear time* | a very big number
 O(N) *Linear Time* | 100,000,000
 O(N log N) | 5,000,000
-O(N^^2^^) *Quadractic Time* | 10000
+O(N^^2^^) *Quadratic Time* | 10000
 O(N^^3^^) *Cubic Time* | 450
 O(2^^N^^) *Exponential Time* | 27
 O(N!) *Factorial Time* | 11
