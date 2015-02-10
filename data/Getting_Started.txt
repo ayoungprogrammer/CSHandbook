@@ -6,7 +6,7 @@ Before you get started with this handbook, it is highly recommended that you are
 
 ## Format
 
-Each article with have multiple sections to help you understand the content.
+Each article will have multiple sections to help you understand the content.
 
 ### Introduction
 
