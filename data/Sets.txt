@@ -2,7 +2,7 @@
 
 Sets are abstract data structures which are able to store and keep track of unique values.
 
-Imagine you have a grocery list that you use to keep tracking of things you need to buy. You want to make sure there are no duplicate items in the list, you can add items to the list and that you can remove items from your list. This structure is similar to what a set does.
+Imagine you have a grocery list that you use to keep track of things you need to buy. You want to make sure there are no duplicate items in the list, you can add items to the list and that you can remove items from your list. This structure is similar to what a set does.
 
 Sets have three operations: insertion, deletion and a membership test. Insertion places an element into the set, deletion removes an element from the set and a **membership** test is checking whether an element exists within the set.
 
