@@ -65,6 +65,8 @@ function parse($str){
 		$page = preg_replace('/ /','_',$match);
 		if($GLOBALS['db']->article_exists($page)){
 			$content = parse($GLOBALS['db']->get_article($page));
+			// Escape $ for preg_replace
+			$content = str_replace('$','\$',$content);
 			$str = preg_replace('/\({4}'.$match.'\){4}/',$content,$str);
 		}else{
 			echo $page." does not exist\n";
@@ -79,7 +81,8 @@ function parse($str){
 		$section = $split[1];
 		if($GLOBALS['db']->article_exists($page)){
 			$content = parse($GLOBALS['db']->get_article($page));
-
+			// Escape $ for preg_replace
+			$content = str_replace('$','\$',$content);
 			if(preg_match('/<section><h2>(<a.*?>)?'.$section.'(<\/a>)?<\/h2>(.*?)<\/section>/s',$content,$section_matches)>0){
 				$str = preg_replace('/\({4}'.$split[0].'\.'.$section.'\){4}/',$section_matches[3],$str);
 			}else{

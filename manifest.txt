@@ -1,6 +1,9 @@
 ` Getting Started `
 	`` Getting Started ``
 	((((Getting Started))))
+` Interviews `
+	`` Interviews ``
+	((((Interviews))))
 ~ Fundamentals ~
 	` Fundamentals `
 		((((Fundamentals.Introduction))))
@@ -44,6 +47,32 @@
 		((((Priority Queue))))
 		`` Heap ``
 		((((Heap))))
+~ Sorting ~
+	((((Sorting.Introduction))))
+	` Slow Sorts `
+		((((Sorting.Slow Sorts))))
+		`` Bubble Sort ``
+		((((Bubble Sort))))
+		`` Selection Sort ``
+		((((Selection Sort))))
+		`` Insertion Sort ``
+		((((Insertion Sort))))
+	` Fast Sorts `
+		((((Sorting.Fast Sorts))))
+		`` Heap Sort ``
+		((((Heap Sort))))
+		`` Merge Sort ``
+		((((Merge Sort))))
+		`` Quick Sort ``
+		((((Quick Sort))))
+	` Super Slow Sorts `
+		((((Sorting.Super Slow Sorts))))
+		`` Bozo Sort ``
+		((((Bozo Sort))))
+		`` Permutation Sort ``
+		((((Permutation Sort))))
+		`` Miracle Sort ``
+		((((Miracle Sort))))
 ~ Graph Theory ~
 	((((Graph Theory.Introduction))))
 	` Representation `
@@ -89,8 +118,8 @@
 		((((Dynamic Programming))))
 		`` Advanced Dynamic Programming ``
 		((((Advanced Dynamic Programming))))
-~ Interviews ~
-	` Interviews `
-		`` Interviews ``
-		((((Interviews))))
+~ Greedy Algorithm ~
+	` Greedy Algorithm `
+		`` Greedy Algorithm ``
+		((((Greedy Algorithm))))
 

@@ -138,6 +138,29 @@ function latexParse($str){
 }
 
 
+function getExercises(){
+	$output = '';
+	foreach($GLOBALS['map'] as $page => $path){
+		
+		if(!$GLOBALS['db']->article_exists($page)){
+			continue;
+		}
+
+		$title = preg_replace('/\_/',' ',$page);
+
+		$contents = $GLOBALS['db']->get_article($page);
+		$contents = parse($contents);
+
+		$res = preg_match('/<section><h2>Exercises<\/h2>(.*)<\/section>/is',$contents,$matches);
+
+		if($res){
+			$output = $output.'<b>'.$title.'</b>'.$matches[1];
+		}
+
+	}
+	return $output;
+}
+
 function makeManifest(){
 
 	$manifest = file_get_contents('manifest.txt');
@@ -148,75 +171,19 @@ function makeManifest(){
 
 	$book = parse($manifest);
 
+	//$book = str_replace('Exercises', getExercises(), $book);
 
 	file_put_contents('book/book.html',$book);
 
 	file_put_contents('book/book.tex',latexParse($book));
 }
 
-function makeBook(){
 
-	$cfg = parse_ini_file('config/local_config.ini',true);
-	$head = 0;
-	$end = 1;
-	$queue = array();
-	$map = [];
-
-	foreach($cfg['sections'] as $section){
-		$queue[$end]=$section;
-		$map[$section] = 1;
-		$end++;
-	}
-	$end--;
-	$queue = reverse($queue, 1, $end);
-	
-	$db = new DB($cfg['db']);
-	$book = '';
-	while($end > 0){
-
-		$article = $queue[$end];
-		$page = $article;
-		echo $article."\n";
-		$page = preg_replace('/ /','_',$article);
-
-		if($db->article_exists($page)){
-
-			$content = $db->get_article($page);
-
-			preg_match_all('/\[\[([A-Za-z\_\s\'\-]+?)\]\]/',$content,$matches);
-
-			$rev = $end;
-			foreach ($matches[1] as $link){
-				if(!array_key_exists($link,$map) && $map[$article]<2){
-					$map[$link] = $map[$article]+1;
-					$end++;
-					$queue[$end] = $link;
-				}
-			}
-			$queue = reverse($queue, $rev, $end);
-			if($map[$article] == 1){
-				$content = parse($content);
-				preg_match('/<section>.*?<\/section>/s',$content,$matches);
-				//print_r($matches);
-				$content = $matches[0];
-				$content = '<h0>'.$article.'</h0>'.$content;
-				$content = preg_replace('/<h2>/','<h3>',$content);
-				$content = preg_replace('/<\/h2>/','</h3>',$content);
-			}else{
-				$content = '<h1>'.$article.'</h1>'.parse($content);
-			}
-
-			$book = $book . $content;
-		}
-		$end--;	
-	}
-	file_put_contents('book/book.html',$book);
-
-	file_put_contents('book/book.tex',latexParse($book));
-}
 
 $cfg = parse_ini_file('config/local_config.ini',true);
 $db = new DB($cfg['db']);
+$crumbs = file_get_contents('./data/breadcrumbs.txt');
+$map = json_decode($crumbs,true);
 
 makeManifest();
 ?>

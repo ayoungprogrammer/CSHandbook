@@ -4,7 +4,7 @@
 
 Recursion is process that repeats itself in a similar way. Anything that has its definition nested inside itself is considered to be recursive. For example GNU stands for GNU not Unix!. Expanding this acronym gives us ((GNU not Unix) not Unix!). As you can see this will go on forever and GNU's definition is nested inside itself so it is recursive. The Fibonacci sequence is also recursive: F(n) = F(n-1)+F(n-2). Inside the function F, we see two more F's! 
 
-In computer science infinite looping is not good because computers do not know how to terminate so we need some way to terminate it. We will call a stopping point the base case. A base case is the case where the function will stop and everything should eventually reduce to a base case. For the Fibonacci sequence, the base case is F(0) = 1 and F(1) = 1 and we can see that for all N>1, the Fibonacci sequence will reach the base case.
+In computer science infinite looping is not good because computers do not know how to terminate so we need some way to terminate it. A base case is the condition where the last step is reached. Everything should eventually reduce to a base case. For the Fibonacci sequence, the base case is F(0) = 1 and F(1) = 1 and we can see that for all N>1, the Fibonacci sequence will reach the base case.
 
 So for something to be recursive in computer science, it needs:
 

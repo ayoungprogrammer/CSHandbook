@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  8 FEB 2015 23:17
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  15 FEB 2015 13:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -250,40 +250,55 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 File: bkm-pdftex.def 2011/12/02 v1.24 bookmark driver for pdfTeX (HO)
 \BKM@id=\count108
 ))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+\Gm@cnth=\count109
+\Gm@cntv=\count110
+\c@Gm@tempcnt=\count111
+\Gm@bindingoffset=\dimen119
+\Gm@wd@mp=\dimen120
+\Gm@odd@mp=\dimen121
+\Gm@even@mp=\dimen122
+\Gm@layoutwidth=\dimen123
+\Gm@layoutheight=\dimen124
+\Gm@layouthoffset=\dimen125
+\Gm@layoutvoffset=\dimen126
+\Gm@dimlist=\toks17
+)
 (/usr/local/texlive/2013/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
 (./book.aux)
 \openout1 = `book.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-\c@lstlisting=\count109
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+\c@lstlisting=\count112
  (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count110
-\scratchdimen=\dimen119
+\scratchcounter=\count113
+\scratchdimen=\dimen127
 \scratchbox=\box28
-\nofMPsegments=\count111
-\nofMParguments=\count112
-\everyMPshowfont=\toks17
-\MPscratchCnt=\count113
-\MPscratchDim=\dimen120
-\MPnumerator=\count114
-\makeMPintoPDFobject=\count115
-\everyMPtoPDFconversion=\toks18
+\nofMPsegments=\count114
+\nofMParguments=\count115
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count116
+\MPscratchDim=\dimen128
+\MPnumerator=\count117
+\makeMPintoPDFobject=\count118
+\everyMPtoPDFconversion=\toks19
 ) (/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -300,7 +315,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box29
-Package hyperref Info: Link coloring OFF on input line 34.
+Package hyperref Info: Link coloring OFF on input line 35.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -308,18 +323,52 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count116
+\c@section@level=\count119
 )
-LaTeX Info: Redefining \ref on input line 34.
-LaTeX Info: Redefining \pageref on input line 34.
-LaTeX Info: Redefining \nameref on input line 34.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 36.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 36.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 36.
+LaTeX Info: Redefining \ref on input line 35.
+LaTeX Info: Redefining \pageref on input line 35.
+LaTeX Info: Redefining \nameref on input line 35.
 
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: custom
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(66.39874pt, 309.85626pt, 66.39874pt)
+* v-part:(T,H,B)=(80.22052pt, 467.9462pt, 120.33078pt)
+* \paperwidth=442.65375pt
+* \paperheight=668.4975pt
+* \textwidth=309.85626pt
+* \textheight=467.9462pt
+* \oddsidemargin=-5.87125pt
+* \evensidemargin=-5.87125pt
+* \topmargin=-23.92326pt
+* \headheight=12.0pt
+* \headsep=19.8738pt
+* \topskip=11.0pt
+* \footskip=27.46295pt
+* \marginparwidth=62.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 37.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 37.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 37.
 [1
 
 
@@ -331,1310 +380,1523 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.43 ...er}{\numberline {4} Stack }{35}{chapter.4}
+l.28 ...\numberline {4} Recursion }{22}{chapter.4}
                                                    [1
 
-] [2] [3] [4])
+] [2] [3] [4] [5] [6])
 \tf@toc=\write3
 \openout3 = `book.toc'.
 
- [5]
+
+[7]
 Chapter 1.
-[6
+[8
 
-] [7] [8
-
-]
+] [9]
 Chapter 2.
-[9
-
-]
-
-Package tabulary Warning: tymin too large (10.0pt), resetting to -4.82115pt on 
-input line 100.
-
-
-Package tabulary Warning: No suitable columns! on input line 100.
-
-
-Package tabulary Warning: tymin too large (10.0pt), resetting to -4.82115pt on 
-input line 119.
-
-
-Package tabulary Warning: No suitable columns! on input line 119.
-
-
-Package tabulary Warning: tymin too large (10.0pt), resetting to -4.82115pt on 
-input line 159.
-
-
-Package tabulary Warning: No suitable columns! on input line 159.
-
-
-Overfull \hbox (18.4949pt too wide) in paragraph at lines 159--160
-[][] 
- []
-
-[10] [11] [12] [13
-
-]
-Chapter 3.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 236.
-
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 85.
 (/usr/local/texlive/2013/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 236.
- [14
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 85.
+ [10
 
-] [15]
-[16] [17] [18] [19] [20]
-<../public_html/img/uploads/recursion_grid.png, id=599, 223.43475pt x 142.73325
+]
+Overfull \hbox (21.89453pt too wide) in paragraph at lines 112--118
+[]\OT1/cmr/m/n/10.95 There are two types of in-ter-views I have en-coun-tered: 
+phone/Skype
+ []
+
+[11] [12] [13] [14] [15
+
+]
+Chapter 3.
+[16
+
+]
+
+Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
+nput line 216.
+
+
+Package tabulary Warning: No suitable columns! on input line 216.
+
+
+Overfull \hbox (0.94162pt too wide) in paragraph at lines 222--223
+\OT1/cmr/m/n/10.95 There are many dif-fer-ent meth-ods of im-ple-ment-ing dif-f
+er-ent things
+ []
+
+
+Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
+nput line 235.
+
+
+Package tabulary Warning: No suitable columns! on input line 235.
+
+[17]
+
+Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
+nput line 275.
+
+
+Package tabulary Warning: No suitable columns! on input line 275.
+
+
+Overfull \hbox (68.63864pt too wide) in paragraph at lines 275--276
+[][] 
+ []
+
+[18] [19] [20] [21
+
+]
+Chapter 4.
+[22
+
+] [23] [24] [25] [26] [27] [28] [29]
+<../public_html/img/uploads/recursion_grid.png, id=687, 223.43475pt x 142.73325
 pt>
 File: ../public_html/img/uploads/recursion_grid.png Graphic file (type png)
  <use ../public_html/img/uploads/recursion_grid.png>
 Package pdftex.def Info: ../public_html/img/uploads/recursion_grid.png used on 
-input line 514.
+input line 630.
 (pdftex.def)             Requested size: 223.4342pt x 142.73941pt.
- [21 <../public_html/img/uploads/recursion_grid.png>]
-<../public_html/img/uploads/recursion_grid2.png, id=607, 215.6055pt x 137.313pt
+ [30] [31 <../public_html/img/uploads/recursion_grid.png>]
+<../public_html/img/uploads/recursion_grid2.png, id=708, 215.6055pt x 137.313pt
 >
 File: ../public_html/img/uploads/recursion_grid2.png Graphic file (type png)
  <use ../public_html/img/uploads/recursion_grid2.png>
 Package pdftex.def Info: ../public_html/img/uploads/recursion_grid2.png used on
- input line 546.
+ input line 662.
 (pdftex.def)             Requested size: 215.60497pt x 137.31892pt.
- [22 <../public_html/img/uploads/recursion_grid2.png>]
-<../public_html/img/uploads/hanoi.png, id=636, 212.59425pt x 154.77824pt>
+ [32 <../public_html/img/uploads/recursion_grid2.png>]
+<../public_html/img/uploads/hanoi.png, id=734, 212.59425pt x 154.77824pt>
 File: ../public_html/img/uploads/hanoi.png Graphic file (type png)
 
 <use ../public_html/img/uploads/hanoi.png>
 Package pdftex.def Info: ../public_html/img/uploads/hanoi.png used on input lin
-e 572.
+e 688.
 (pdftex.def)             Requested size: 212.59372pt x 154.78731pt.
 
-<../public_html/img/uploads/hanoi2.png, id=638, 215.00325pt x 146.34676pt>
+<../public_html/img/uploads/hanoi2.png, id=736, 215.00325pt x 146.34676pt>
 File: ../public_html/img/uploads/hanoi2.png Graphic file (type png)
 
 <use ../public_html/img/uploads/hanoi2.png>
 Package pdftex.def Info: ../public_html/img/uploads/hanoi2.png used on input li
-ne 579.
+ne 695.
 (pdftex.def)             Requested size: 215.00272pt x 146.34639pt.
- [23 <../public_html/img/uploads/hanoi.png>]
-<../public_html/img/uploads/hanoi3.png, id=644, 218.61674pt x 146.34676pt>
+ [33 <../public_html/img/uploads/hanoi.png>]
+<../public_html/img/uploads/hanoi3.png, id=742, 218.61674pt x 146.34676pt>
 File: ../public_html/img/uploads/hanoi3.png Graphic file (type png)
 
 <use ../public_html/img/uploads/hanoi3.png>
 Package pdftex.def Info: ../public_html/img/uploads/hanoi3.png used on input li
-ne 584.
+ne 700.
 (pdftex.def)             Requested size: 218.6162pt x 146.35085pt.
 
-<../public_html/img/uploads/hanoi4.png, id=645, 225.84375pt x 154.77824pt>
+<../public_html/img/uploads/hanoi4.png, id=743, 225.84375pt x 154.77824pt>
 File: ../public_html/img/uploads/hanoi4.png Graphic file (type png)
 
 <use ../public_html/img/uploads/hanoi4.png>
 Package pdftex.def Info: ../public_html/img/uploads/hanoi4.png used on input li
-ne 589.
+ne 705.
 (pdftex.def)             Requested size: 225.84319pt x 154.78731pt.
- [24 <../public_html/img/uploads/hanoi2.png> <../public_html/img/uploads/hanoi3
-.png> <../public_html/img/uploads/hanoi4.png>]
+ [34 <../public_html/img/uploads/hanoi2.png> <../public_html/img/uploads/hanoi3
+.png>]
 File: ../public_html/img/uploads/hanoi.png Graphic file (type png)
- <use ../public_html/img/uploads/hanoi.png>
-Package pdftex.def Info: ../public_html/img/uploads/hanoi.png used on input lin
-e 597.
-(pdftex.def)             Requested size: 212.59372pt x 154.78731pt.
 
-<../public_html/img/uploads/hanoi5.png, id=654, 212.59425pt x 154.77824pt>
+<use ../public_html/img/uploads/hanoi.png>
+Package pdftex.def Info: ../public_html/img/uploads/hanoi.png used on input lin
+e 713.
+(pdftex.def)             Requested size: 212.59372pt x 154.78731pt.
+ [35 <../public_html/img/uploads/hanoi4.png>]
+<../public_html/img/uploads/hanoi5.png, id=755, 212.59425pt x 154.77824pt>
 File: ../public_html/img/uploads/hanoi5.png Graphic file (type png)
 
 <use ../public_html/img/uploads/hanoi5.png>
 Package pdftex.def Info: ../public_html/img/uploads/hanoi5.png used on input li
-ne 605.
+ne 721.
 (pdftex.def)             Requested size: 212.59372pt x 154.78731pt.
 
-<../public_html/img/uploads/hanoi6.png, id=655, 212.59425pt x 154.77824pt>
+<../public_html/img/uploads/hanoi6.png, id=756, 212.59425pt x 154.77824pt>
 File: ../public_html/img/uploads/hanoi6.png Graphic file (type png)
 
 <use ../public_html/img/uploads/hanoi6.png>
 Package pdftex.def Info: ../public_html/img/uploads/hanoi6.png used on input li
-ne 611.
+ne 727.
 (pdftex.def)             Requested size: 212.59372pt x 154.78731pt.
- [25 <../public_html/img/uploads/hanoi5.png>]
+ [36 <../public_html/img/uploads/hanoi5.png>]
 File: ../public_html/img/uploads/hanoi2.png Graphic file (type png)
  <use ../public_html/img/uploads/hanoi2.png>
 Package pdftex.def Info: ../public_html/img/uploads/hanoi2.png used on input li
-ne 617.
+ne 733.
 (pdftex.def)             Requested size: 215.00272pt x 146.34639pt.
- [26 <../public_html/img/uploads/hanoi6.png>] [27] [28] [29] [30] [31] [32
+ [37 <../public_html/img/uploads/hanoi6.png>] [38] [39] [40] [41] [42]
+Overfull \hbox (47.66522pt too wide) in paragraph at lines 933--934
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[43] [44
 
 ]
-<../public_html/img/uploads/bottle.png, id=813, 494.84875pt x 212.795pt>
+<../public_html/img/uploads/bottle.png, id=918, 494.84875pt x 212.795pt>
 File: ../public_html/img/uploads/bottle.png Graphic file (type png)
 
 <use ../public_html/img/uploads/bottle.png>
 Package pdftex.def Info: ../public_html/img/uploads/bottle.png used on input li
-ne 840.
-(pdftex.def)             Requested size: 360.0pt x 154.80653pt.
+ne 956.
+(pdftex.def)             Requested size: 309.85626pt x 133.2433pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 840--841
+Overfull \hbox (17.0pt too wide) in paragraph at lines 956--957
 [][] 
  []
 
-<../public_html/img/uploads/adt.png, id=814, 560.0925pt x 246.9225pt>
+[45 <../public_html/img/uploads/bottle.png>]
+<../public_html/img/uploads/adt.png, id=924, 560.0925pt x 246.9225pt>
 File: ../public_html/img/uploads/adt.png Graphic file (type png)
 
 <use ../public_html/img/uploads/adt.png>
 Package pdftex.def Info: ../public_html/img/uploads/adt.png used on input line 
-844.
-(pdftex.def)             Requested size: 360.0pt x 158.71556pt.
-
-Overfull \hbox (17.0pt too wide) in paragraph at lines 844--845
-[][] 
- []
-
-[33 <../public_html/img/uploads/bottle.png>] [34 <../public_html/img/uploads/ad
-t.png>]
-Chapter 4.
-<../public_html/img/uploads/stack.png, id=825, 295.1025pt x 217.81375pt>
-File: ../public_html/img/uploads/stack.png Graphic file (type png)
-
-<use ../public_html/img/uploads/stack.png>
-Package pdftex.def Info: ../public_html/img/uploads/stack.png used on input lin
-e 859.
-(pdftex.def)             Requested size: 295.10176pt x 217.81651pt.
- [35
-
-]
-<../public_html/img/uploads/stack2.png, id=830, 299.1175pt x 184.69pt>
-File: ../public_html/img/uploads/stack2.png Graphic file (type png)
-
-<use ../public_html/img/uploads/stack2.png>
-Package pdftex.def Info: ../public_html/img/uploads/stack2.png used on input li
-ne 863.
-(pdftex.def)             Requested size: 299.11676pt x 184.70361pt.
-
-
-Package tabulary Warning: tymin too large (10.0pt), resetting to -4.82115pt on 
-input line 884.
-
-
-Package tabulary Warning: No suitable columns! on input line 884.
-
-[36 <../public_html/img/uploads/stack.png> <../public_html/img/uploads/stack2.p
-ng>]
-
-Package tabulary Warning: tymin too large (10.0pt), resetting to -4.82115pt on 
-input line 934.
-
-
-Package tabulary Warning: No suitable columns! on input line 934.
-
-[37] <../public_html/img/uploads/vector3.png, id=843, 417.56pt x 206.7725pt>
-File: ../public_html/img/uploads/vector3.png Graphic file (type png)
-
-<use ../public_html/img/uploads/vector3.png>
-Package pdftex.def Info: ../public_html/img/uploads/vector3.png used on input l
-ine 960.
-(pdftex.def)             Requested size: 360.0pt x 178.27837pt.
+960.
+(pdftex.def)             Requested size: 309.85626pt x 136.60654pt.
 
 Overfull \hbox (17.0pt too wide) in paragraph at lines 960--961
 [][] 
  []
 
-<../public_html/img/uploads/vector2.png, id=844, 426.59375pt x 165.61874pt>
-[38 <../public_html/img/uploads/vector3.png>]
+[46 <../public_html/img/uploads/adt.png>]
+Chapter 5.
+<../public_html/img/uploads/stack.png, id=930, 295.1025pt x 217.81375pt>
+File: ../public_html/img/uploads/stack.png Graphic file (type png)
+
+<use ../public_html/img/uploads/stack.png>
+Package pdftex.def Info: ../public_html/img/uploads/stack.png used on input lin
+e 975.
+(pdftex.def)             Requested size: 295.10176pt x 217.81651pt.
+
+Overfull \hbox (2.2455pt too wide) in paragraph at lines 975--976
+[][] 
+ []
+
+[47
+
+] <../public_html/img/uploads/stack2.png, id=935, 299.1175pt x 184.69pt>
+File: ../public_html/img/uploads/stack2.png Graphic file (type png)
+
+<use ../public_html/img/uploads/stack2.png>
+Package pdftex.def Info: ../public_html/img/uploads/stack2.png used on input li
+ne 979.
+(pdftex.def)             Requested size: 299.11676pt x 184.70361pt.
+
+Overfull \hbox (6.2605pt too wide) in paragraph at lines 979--980
+[][] 
+ []
+
+[48 <../public_html/img/uploads/stack.png> <../public_html/img/uploads/stack2.p
+ng>]
+
+Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
+nput line 1000.
+
+
+Package tabulary Warning: No suitable columns! on input line 1000.
+
+
+Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
+nput line 1050.
+
+
+Package tabulary Warning: No suitable columns! on input line 1050.
+
+[49] <../public_html/img/uploads/vector3.png, id=949, 417.56pt x 206.7725pt>
+File: ../public_html/img/uploads/vector3.png Graphic file (type png)
+
+<use ../public_html/img/uploads/vector3.png>
+Package pdftex.def Info: ../public_html/img/uploads/vector3.png used on input l
+ine 1076.
+(pdftex.def)             Requested size: 309.85626pt x 153.4478pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 1076--1077
+[][] 
+ []
+
+[50]
+<../public_html/img/uploads/vector2.png, id=965, 426.59375pt x 165.61874pt>
 File: ../public_html/img/uploads/vector2.png Graphic file (type png)
 
 <use ../public_html/img/uploads/vector2.png>
 Package pdftex.def Info: ../public_html/img/uploads/vector2.png used on input l
-ine 976.
-(pdftex.def)             Requested size: 360.0pt x 139.77332pt.
+ine 1092.
+(pdftex.def)             Requested size: 309.85626pt x 120.30426pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 976--977
+Overfull \hbox (17.0pt too wide) in paragraph at lines 1092--1093
 [][] 
  []
 
-<../public_html/img/uploads/vector4.png, id=869, 388.45125pt x 129.48375pt>
+[51 <../public_html/img/uploads/vector3.png> <../public_html/img/uploads/vector
+2.png>]
+<../public_html/img/uploads/vector4.png, id=982, 388.45125pt x 129.48375pt>
 File: ../public_html/img/uploads/vector4.png Graphic file (type png)
 
 <use ../public_html/img/uploads/vector4.png>
 Package pdftex.def Info: ../public_html/img/uploads/vector4.png used on input l
-ine 992.
-(pdftex.def)             Requested size: 360.0pt x 120.00371pt.
+ine 1108.
+(pdftex.def)             Requested size: 309.85626pt x 103.28877pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 992--993
+Overfull \hbox (17.0pt too wide) in paragraph at lines 1108--1109
 [][] 
  []
 
-[39 <../public_html/img/uploads/vector2.png> <../public_html/img/uploads/vector
-4.png>]
 File: ../public_html/img/uploads/vector4.png Graphic file (type png)
- <use ../public_html/img/uploads/vector4.png>
+<use ../public_html/img/uploads/vector4.png>
 Package pdftex.def Info: ../public_html/img/uploads/vector4.png used on input l
-ine 1011.
-(pdftex.def)             Requested size: 360.0pt x 120.00371pt.
+ine 1127.
+(pdftex.def)             Requested size: 309.85626pt x 103.28877pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 1011--1012
+Overfull \hbox (17.0pt too wide) in paragraph at lines 1127--1128
 [][] 
  []
 
-<../public_html/img/uploads/vectorget.png, id=889, 196.735pt x 127.47626pt>
+[52 <../public_html/img/uploads/vector4.png>]
+<../public_html/img/uploads/vectorget.png, id=1003, 196.735pt x 127.47626pt>
 File: ../public_html/img/uploads/vectorget.png Graphic file (type png)
 
 <use ../public_html/img/uploads/vectorget.png>
 Package pdftex.def Info: ../public_html/img/uploads/vectorget.png used on input
- line 1032.
+ line 1148.
 (pdftex.def)             Requested size: 196.7345pt x 127.47594pt.
- [40]
-<../public_html/img/uploads/vectorinsert.png, id=911, 183.68625pt x 128.48pt>
+ [53]
+<../public_html/img/uploads/vectorinsert.png, id=1021, 183.68625pt x 128.48pt>
 File: ../public_html/img/uploads/vectorinsert.png Graphic file (type png)
 
 <use ../public_html/img/uploads/vectorinsert.png>
 Package pdftex.def Info: ../public_html/img/uploads/vectorinsert.png used on in
-put line 1047.
+put line 1163.
 (pdftex.def)             Requested size: 183.68578pt x 128.4875pt.
 
-<../public_html/img/uploads/vectorinsert2.png, id=912, 198.7425pt x 122.4575pt>
+<../public_html/img/uploads/vectorinsert2.png, id=1022, 198.7425pt x 122.4575pt
+>
 File: ../public_html/img/uploads/vectorinsert2.png Graphic file (type png)
-<use ../public_html/img/uploads/vectorinsert2.png>
+ <use ../public_html/img/uploads/vectorinsert2.png>
 Package pdftex.def Info: ../public_html/img/uploads/vectorinsert2.png used on i
-nput line 1049.
+nput line 1165.
 (pdftex.def)             Requested size: 198.742pt x 122.4609pt.
- [41 <../public_html/img/uploads/vectorget.png> <../public_html/img/uploads/vec
-torinsert.png>] [42 <../public_html/img/uploads/vectorinsert2.png>]
-Chapter 5.
-<../public_html/img/uploads/queue.png, id=951, 249.93375pt x 167.62625pt>
+ [54 <../public_html/img/uploads/vectorget.png> <../public_html/img/uploads/vec
+torinsert.png>] [55 <../public_html/img/uploads/vectorinsert2.png>]
+Chapter 6.
+[56
+
+]
+<../public_html/img/uploads/queue.png, id=1065, 249.93375pt x 167.62625pt>
 File: ../public_html/img/uploads/queue.png Graphic file (type png)
 
 <use ../public_html/img/uploads/queue.png>
 Package pdftex.def Info: ../public_html/img/uploads/queue.png used on input lin
-e 1088.
+e 1204.
 (pdftex.def)             Requested size: 249.93314pt x 167.63094pt.
- [43
 
-]
-<../public_html/img/uploads/queue2.png, id=956, 250.9375pt x 161.60374pt>
+<../public_html/img/uploads/queue2.png, id=1066, 250.9375pt x 161.60374pt>
 File: ../public_html/img/uploads/queue2.png Graphic file (type png)
 
 <use ../public_html/img/uploads/queue2.png>
 Package pdftex.def Info: ../public_html/img/uploads/queue2.png used on input li
-ne 1092.
+ne 1208.
 (pdftex.def)             Requested size: 250.93687pt x 161.61073pt.
 
 
-Package tabulary Warning: tymin too large (10.0pt), resetting to -4.82115pt on 
-input line 1111.
+Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
+nput line 1227.
 
 
-Package tabulary Warning: No suitable columns! on input line 1111.
+Package tabulary Warning: No suitable columns! on input line 1227.
 
-[44 <../public_html/img/uploads/queue.png> <../public_html/img/uploads/queue2.p
-ng>]
-<../public_html/img/uploads/linkedlist.png, id=964, 334.24875pt x 91.34125pt>
+[57 <../public_html/img/uploads/queue.png> <../public_html/img/uploads/queue2.p
+ng>] [58]
+<../public_html/img/uploads/linkedlist.png, id=1078, 334.24875pt x 91.34125pt>
 File: ../public_html/img/uploads/linkedlist.png Graphic file (type png)
 
 <use ../public_html/img/uploads/linkedlist.png>
 Package pdftex.def Info: ../public_html/img/uploads/linkedlist.png used on inpu
-t line 1151.
-(pdftex.def)             Requested size: 334.24792pt x 91.34798pt.
- [45 <../public_html/img/uploads/linkedlist.png>]
-<../public_html/img/uploads/doublelinkedlist.png, id=970, 334.24875pt x 92.345p
-t>
+t line 1267.
+(pdftex.def)             Requested size: 309.85626pt x 84.68166pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 1267--1268
+[][] 
+ []
+
+
+<../public_html/img/uploads/doublelinkedlist.png, id=1079, 334.24875pt x 92.345
+pt>
 File: ../public_html/img/uploads/doublelinkedlist.png Graphic file (type png)
  <use ../public_html/img/uploads/doublelinkedlist.png>
 Package pdftex.def Info: ../public_html/img/uploads/doublelinkedlist.png used o
-n input line 1157.
-(pdftex.def)             Requested size: 334.24792pt x 92.35179pt.
+n input line 1273.
+(pdftex.def)             Requested size: 309.85626pt x 85.61221pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 1273--1274
+[][] 
+ []
 
 
-Package tabulary Warning: tymin too large (10.0pt), resetting to -4.82115pt on 
-input line 1176.
+Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
+nput line 1292.
 
 
-Package tabulary Warning: No suitable columns! on input line 1176.
+Package tabulary Warning: No suitable columns! on input line 1292.
 
-[46 <../public_html/img/uploads/doublelinkedlist.png>]
-<../public_html/img/uploads/linkedlistpush.png, id=985, 419.5675pt x 91.34125pt
->
+[59 <../public_html/img/uploads/linkedlist.png>] [60 <../public_html/img/upload
+s/doublelinkedlist.png>]
+<../public_html/img/uploads/linkedlistpush.png, id=1105, 419.5675pt x 91.34125p
+t>
 File: ../public_html/img/uploads/linkedlistpush.png Graphic file (type png)
  <use ../public_html/img/uploads/linkedlistpush.png>
 Package pdftex.def Info: ../public_html/img/uploads/linkedlistpush.png used on 
-input line 1215.
-(pdftex.def)             Requested size: 360.0pt x 78.37354pt.
+input line 1331.
+(pdftex.def)             Requested size: 309.85626pt x 67.45625pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 1215--1216
+Overfull \hbox (17.0pt too wide) in paragraph at lines 1331--1332
 [][] 
  []
 
 
-<../public_html/img/uploads/linkedlistpush2.png, id=986, 419.5675pt x 91.34125p
-t>
+<../public_html/img/uploads/linkedlistpush2.png, id=1106, 419.5675pt x 91.34125
+pt>
 File: ../public_html/img/uploads/linkedlistpush2.png Graphic file (type png)
  <use ../public_html/img/uploads/linkedlistpush2.png>
 Package pdftex.def Info: ../public_html/img/uploads/linkedlistpush2.png used on
- input line 1217.
-(pdftex.def)             Requested size: 360.0pt x 78.37354pt.
+ input line 1333.
+(pdftex.def)             Requested size: 309.85626pt x 67.45625pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 1217--1218
+Overfull \hbox (17.0pt too wide) in paragraph at lines 1333--1334
 [][] 
  []
 
 
-<../public_html/img/uploads/linkedlistpush3.png, id=987, 419.5675pt x 91.34125p
-t>
+<../public_html/img/uploads/linkedlistpush3.png, id=1107, 419.5675pt x 91.34125
+pt>
 File: ../public_html/img/uploads/linkedlistpush3.png Graphic file (type png)
  <use ../public_html/img/uploads/linkedlistpush3.png>
 Package pdftex.def Info: ../public_html/img/uploads/linkedlistpush3.png used on
- input line 1219.
-(pdftex.def)             Requested size: 360.0pt x 78.37354pt.
+ input line 1335.
+(pdftex.def)             Requested size: 309.85626pt x 67.45625pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 1219--1220
+Overfull \hbox (17.0pt too wide) in paragraph at lines 1335--1336
 [][] 
  []
 
-[47 <../public_html/img/uploads/linkedlistpush.png> <../public_html/img/uploads
+[61 <../public_html/img/uploads/linkedlistpush.png> <../public_html/img/uploads
 /linkedlistpush2.png> <../public_html/img/uploads/linkedlistpush3.png>]
-<../public_html/img/uploads/linkedlistpop.png, id=1008, 334.24875pt x 91.34125p
+<../public_html/img/uploads/linkedlistpop.png, id=1128, 334.24875pt x 91.34125p
 t>
 File: ../public_html/img/uploads/linkedlistpop.png Graphic file (type png)
  <use ../public_html/img/uploads/linkedlistpop.png>
 Package pdftex.def Info: ../public_html/img/uploads/linkedlistpop.png used on i
-nput line 1241.
-(pdftex.def)             Requested size: 334.24792pt x 91.34798pt.
+nput line 1357.
+(pdftex.def)             Requested size: 309.85626pt x 84.68166pt.
 
-<../public_html/img/uploads/linkedlistpop2.png, id=1009, 243.91125pt x 91.34125
+Overfull \hbox (17.0pt too wide) in paragraph at lines 1357--1358
+[][] 
+ []
+
+
+<../public_html/img/uploads/linkedlistpop2.png, id=1129, 243.91125pt x 91.34125
 pt>
 File: ../public_html/img/uploads/linkedlistpop2.png Graphic file (type png)
  <use ../public_html/img/uploads/linkedlistpop2.png>
 Package pdftex.def Info: ../public_html/img/uploads/linkedlistpop2.png used on 
-input line 1243.
+input line 1359.
 (pdftex.def)             Requested size: 243.91064pt x 91.3424pt.
- [48 <../public_html/img/uploads/linkedlistpop.png> <../public_html/img/uploads
+ [62 <../public_html/img/uploads/linkedlistpop.png> <../public_html/img/uploads
 /linkedlistpop2.png>]
-<../public_html/img/uploads/linkedlistget.png, id=1042, 334.24875pt x 141.52875
+<../public_html/img/uploads/linkedlistget.png, id=1154, 334.24875pt x 141.52875
 pt>
 File: ../public_html/img/uploads/linkedlistget.png Graphic file (type png)
  <use ../public_html/img/uploads/linkedlistget.png>
 Package pdftex.def Info: ../public_html/img/uploads/linkedlistget.png used on i
-nput line 1267.
-(pdftex.def)             Requested size: 334.24792pt x 141.53918pt.
+nput line 1383.
+(pdftex.def)             Requested size: 309.85626pt x 131.21005pt.
 
-<../public_html/img/uploads/linkedlistget2.png, id=1043, 334.24875pt x 141.5287
+Overfull \hbox (17.0pt too wide) in paragraph at lines 1383--1384
+[][] 
+ []
+
+
+<../public_html/img/uploads/linkedlistget2.png, id=1155, 334.24875pt x 141.5287
 5pt>
 File: ../public_html/img/uploads/linkedlistget2.png Graphic file (type png)
  <use ../public_html/img/uploads/linkedlistget2.png>
 Package pdftex.def Info: ../public_html/img/uploads/linkedlistget2.png used on 
-input line 1269.
-(pdftex.def)             Requested size: 334.24792pt x 141.53918pt.
+input line 1385.
+(pdftex.def)             Requested size: 309.85626pt x 131.21005pt.
 
-<../public_html/img/uploads/linkedlistget3.png, id=1044, 334.24875pt x 141.5287
+Overfull \hbox (17.0pt too wide) in paragraph at lines 1385--1386
+[][] 
+ []
+
+
+<../public_html/img/uploads/linkedlistget3.png, id=1156, 334.24875pt x 141.5287
 5pt>
 File: ../public_html/img/uploads/linkedlistget3.png Graphic file (type png)
  <use ../public_html/img/uploads/linkedlistget3.png>
 Package pdftex.def Info: ../public_html/img/uploads/linkedlistget3.png used on 
-input line 1271.
-(pdftex.def)             Requested size: 334.24792pt x 141.53918pt.
- [49 <../public_html/img/uploads/linkedlistget.png> <../public_html/img/uploads
-/linkedlistget2.png>]
-<../public_html/img/uploads/linkedlistrem.png, id=1054, 334.24875pt x 91.34125p
+input line 1387.
+(pdftex.def)             Requested size: 309.85626pt x 131.21005pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 1387--1388
+[][] 
+ []
+
+[63 <../public_html/img/uploads/linkedlistget.png> <../public_html/img/uploads/
+linkedlistget2.png>]
+<../public_html/img/uploads/linkedlistrem.png, id=1167, 334.24875pt x 91.34125p
 t>
 File: ../public_html/img/uploads/linkedlistrem.png Graphic file (type png)
  <use ../public_html/img/uploads/linkedlistrem.png>
 Package pdftex.def Info: ../public_html/img/uploads/linkedlistrem.png used on i
-nput line 1295.
-(pdftex.def)             Requested size: 334.24792pt x 91.34798pt.
+nput line 1411.
+(pdftex.def)             Requested size: 309.85626pt x 84.68166pt.
 
-<../public_html/img/uploads/linkedlistrem2.png, id=1055, 334.24875pt x 91.34125
-pt>
+Overfull \hbox (17.0pt too wide) in paragraph at lines 1411--1412
+[][] 
+ []
+
+
+<../public_html/img/uploads/linkedlistrem2.png, id=1168, 334.24875pt x 91.34125
+pt> [64 <../public_html/img/uploads/linkedlistget3.png>]
 File: ../public_html/img/uploads/linkedlistrem2.png Graphic file (type png)
- <use ../public_html/img/uploads/linkedlistrem2.png>
+
+<use ../public_html/img/uploads/linkedlistrem2.png>
 Package pdftex.def Info: ../public_html/img/uploads/linkedlistrem2.png used on 
-input line 1297.
-(pdftex.def)             Requested size: 334.24792pt x 91.34798pt.
- [50 <../public_html/img/uploads/linkedlistget3.png> <../public_html/img/upload
-s/linkedlistrem.png>]
-[51 <../public_html/img/uploads/linkedlistrem2.png>]
-Chapter 6.
+input line 1413.
+(pdftex.def)             Requested size: 309.85626pt x 84.68166pt.
 
-Package tabulary Warning: tymin too large (10.0pt), resetting to -4.82115pt on 
-input line 1364.
+Overfull \hbox (17.0pt too wide) in paragraph at lines 1413--1414
+[][] 
+ []
+
+[65 <../public_html/img/uploads/linkedlistrem.png> <../public_html/img/uploads/
+linkedlistrem2.png>] [66]
+Chapter 7.
+
+Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
+nput line 1480.
 
 
-Package tabulary Warning: No suitable columns! on input line 1364.
+Package tabulary Warning: No suitable columns! on input line 1480.
 
-[52
+[67
 
-] <../public_html/img/uploads/hashcode.png, id=1103, 168.63pt x 86.3225pt>
+] <../public_html/img/uploads/hashcode.png, id=1221, 168.63pt x 86.3225pt>
 File: ../public_html/img/uploads/hashcode.png Graphic file (type png)
 
 <use ../public_html/img/uploads/hashcode.png>
 Package pdftex.def Info: ../public_html/img/uploads/hashcode.png used on input 
-line 1391.
+line 1507.
 (pdftex.def)             Requested size: 168.62958pt x 86.32358pt.
-
-<../public_html/img/uploads/hashset.png, id=1104, 174.6525pt x 249.93375pt>
+ [68 <../public_html/img/uploads/hashcode.png>]
+<../public_html/img/uploads/hashset.png, id=1230, 174.6525pt x 249.93375pt>
 File: ../public_html/img/uploads/hashset.png Graphic file (type png)
 
 <use ../public_html/img/uploads/hashset.png>
 Package pdftex.def Info: ../public_html/img/uploads/hashset.png used on input l
-ine 1397.
+ine 1513.
 (pdftex.def)             Requested size: 174.65207pt x 249.94838pt.
 
 
-Package tabulary Warning: tymin too large (10.0pt), resetting to -4.82115pt on 
-input line 1414.
+Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
+nput line 1530.
 
 
-Package tabulary Warning: No suitable columns! on input line 1414.
+Package tabulary Warning: No suitable columns! on input line 1530.
 
-[53 <../public_html/img/uploads/hashcode.png>]
 File: ../public_html/img/uploads/hashset.png Graphic file (type png)
-
 <use ../public_html/img/uploads/hashset.png>
 Package pdftex.def Info: ../public_html/img/uploads/hashset.png used on input l
-ine 1420.
+ine 1536.
 (pdftex.def)             Requested size: 174.65207pt x 249.94838pt.
- [54 <../public_html/img/uploads/hashset.png>] [55]
+ [69 <../public_html/img/uploads/hashset.png>] [70]
 File: ../public_html/img/uploads/hashcode.png Graphic file (type png)
  <use ../public_html/img/uploads/hashcode.png>
 Package pdftex.def Info: ../public_html/img/uploads/hashcode.png used on input 
-line 1455.
+line 1571.
 (pdftex.def)             Requested size: 168.62958pt x 86.32358pt.
- [56]
+ [71] [72]
 File: ../public_html/img/uploads/hashset.png Graphic file (type png)
 
 <use ../public_html/img/uploads/hashset.png>
 Package pdftex.def Info: ../public_html/img/uploads/hashset.png used on input l
-ine 1493.
+ine 1609.
 (pdftex.def)             Requested size: 174.65207pt x 249.94838pt.
 
-<../public_html/img/uploads/hashsetinsert.png, id=1148, 295.1025pt x 249.93375p
-t> [57]
+<../public_html/img/uploads/hashsetinsert.png, id=1282, 295.1025pt x 249.93375p
+t>
 File: ../public_html/img/uploads/hashsetinsert.png Graphic file (type png)
  <use ../public_html/img/uploads/hashsetinsert.png>
 Package pdftex.def Info: ../public_html/img/uploads/hashsetinsert.png used on i
-nput line 1495.
+nput line 1611.
 (pdftex.def)             Requested size: 295.10176pt x 249.93694pt.
- [58 <../public_html/img/uploads/hashsetinsert.png>]
-<../public_html/img/uploads/hashsetcontains.png, id=1176, 295.1025pt x 249.9337
+
+Overfull \hbox (2.2455pt too wide) in paragraph at lines 1611--1612
+[][] 
+ []
+
+[73] [74 <../public_html/img/uploads/hashsetinsert.png>]
+<../public_html/img/uploads/hashsetcontains.png, id=1311, 295.1025pt x 249.9337
 5pt>
 File: ../public_html/img/uploads/hashsetcontains.png Graphic file (type png)
  <use ../public_html/img/uploads/hashsetcontains.png>
 Package pdftex.def Info: ../public_html/img/uploads/hashsetcontains.png used on
- input line 1520.
+ input line 1636.
 (pdftex.def)             Requested size: 295.10176pt x 249.93694pt.
 
-<../public_html/img/uploads/hashsetcontains2.png, id=1177, 295.1025pt x 249.933
-75pt> [59]
+Overfull \hbox (2.2455pt too wide) in paragraph at lines 1636--1637
+[][] 
+ []
+
+
+<../public_html/img/uploads/hashsetcontains2.png, id=1312, 295.1025pt x 249.933
+75pt>
 File: ../public_html/img/uploads/hashsetcontains2.png Graphic file (type png)
  <use ../public_html/img/uploads/hashsetcontains2.png>
 Package pdftex.def Info: ../public_html/img/uploads/hashsetcontains2.png used o
-n input line 1522.
+n input line 1638.
 (pdftex.def)             Requested size: 295.10176pt x 249.93694pt.
 
-<../public_html/img/uploads/hashsetcontains3.png, id=1198, 305.14pt x 249.93375
-pt>
+Overfull \hbox (2.2455pt too wide) in paragraph at lines 1638--1639
+[][] 
+ []
+
+
+<../public_html/img/uploads/hashsetcontains3.png, id=1313, 305.14pt x 249.93375
+pt> [75 <../public_html/img/uploads/hashsetcontains.png>]
 File: ../public_html/img/uploads/hashsetcontains3.png Graphic file (type png)
- <use ../public_html/img/uploads/hashsetcontains3.png>
+
+<use ../public_html/img/uploads/hashsetcontains3.png>
 Package pdftex.def Info: ../public_html/img/uploads/hashsetcontains3.png used o
-n input line 1524.
+n input line 1640.
 (pdftex.def)             Requested size: 305.13924pt x 249.94456pt.
- [60 <../public_html/img/uploads/hashsetcontains.png> <../public_html/img/uploa
-ds/hashsetcontains2.png>]
-<../public_html/img/uploads/hashsetrem.png, id=1206, 295.1025pt x 249.93375pt>
+
+Overfull \hbox (12.28297pt too wide) in paragraph at lines 1640--1641
+[][] 
+ []
+
+[76 <../public_html/img/uploads/hashsetcontains2.png>]
+<../public_html/img/uploads/hashsetrem.png, id=1328, 295.1025pt x 249.93375pt>
+[77 <../public_html/img/uploads/hashsetcontains3.png>]
 File: ../public_html/img/uploads/hashsetrem.png Graphic file (type png)
 
 <use ../public_html/img/uploads/hashsetrem.png>
 Package pdftex.def Info: ../public_html/img/uploads/hashsetrem.png used on inpu
-t line 1540.
+t line 1656.
 (pdftex.def)             Requested size: 295.10176pt x 249.93694pt.
 
-<../public_html/img/uploads/hashsetrem2.png, id=1207, 295.1025pt x 249.93375pt>
-[61 <../public_html/img/uploads/hashsetcontains3.png>]
-File: ../public_html/img/uploads/hashsetrem2.png Graphic file (type png)
+Overfull \hbox (2.2455pt too wide) in paragraph at lines 1656--1657
+[][] 
+ []
 
+
+<../public_html/img/uploads/hashsetrem2.png, id=1341, 295.1025pt x 249.93375pt>
+File: ../public_html/img/uploads/hashsetrem2.png Graphic file (type png)
 <use ../public_html/img/uploads/hashsetrem2.png>
 Package pdftex.def Info: ../public_html/img/uploads/hashsetrem2.png used on inp
-ut line 1542.
+ut line 1658.
 (pdftex.def)             Requested size: 295.10176pt x 249.93694pt.
 
-<../public_html/img/uploads/hashsetrem3.png, id=1220, 295.1025pt x 249.93375pt>
+Overfull \hbox (2.2455pt too wide) in paragraph at lines 1658--1659
+[][] 
+ []
+
+
+<../public_html/img/uploads/hashsetrem3.png, id=1342, 295.1025pt x 249.93375pt>
+[78 <../public_html/img/uploads/hashsetrem.png>]
 File: ../public_html/img/uploads/hashsetrem3.png Graphic file (type png)
+
 <use ../public_html/img/uploads/hashsetrem3.png>
 Package pdftex.def Info: ../public_html/img/uploads/hashsetrem3.png used on inp
-ut line 1544.
+ut line 1660.
 (pdftex.def)             Requested size: 295.10176pt x 249.93694pt.
- [62 <../public_html/img/uploads/hashsetrem.png> <../public_html/img/uploads/ha
-shsetrem2.png>] [63 <../public_html/img/uploads/hashsetrem3.png>]
-<../public_html/img/uploads/bstcompare.png, id=1246, 275.0275pt x 151.56625pt>
+
+Overfull \hbox (2.2455pt too wide) in paragraph at lines 1660--1661
+[][] 
+ []
+
+[79 <../public_html/img/uploads/hashsetrem2.png>] [80 <../public_html/img/uploa
+ds/hashsetrem3.png>]
+<../public_html/img/uploads/bstcompare.png, id=1371, 275.0275pt x 151.56625pt>
 File: ../public_html/img/uploads/bstcompare.png Graphic file (type png)
 
 <use ../public_html/img/uploads/bstcompare.png>
 Package pdftex.def Info: ../public_html/img/uploads/bstcompare.png used on inpu
-t line 1573.
+t line 1689.
 (pdftex.def)             Requested size: 275.02682pt x 151.57974pt.
 
-<../public_html/img/uploads/bst.png, id=1247, 253.94875pt x 206.7725pt>
+<../public_html/img/uploads/bst.png, id=1372, 253.94875pt x 206.7725pt>
 File: ../public_html/img/uploads/bst.png Graphic file (type png)
 
 <use ../public_html/img/uploads/bst.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst.png used on input line 
-1577.
+1693.
 (pdftex.def)             Requested size: 253.94812pt x 206.77829pt.
 
 
-Package tabulary Warning: tymin too large (10.0pt), resetting to -4.82115pt on 
-input line 1594.
+Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
+nput line 1710.
 
 
-Package tabulary Warning: No suitable columns! on input line 1594.
+Package tabulary Warning: No suitable columns! on input line 1710.
 
-[64 <../public_html/img/uploads/bstcompare.png> <../public_html/img/uploads/bst
-.png>]
+[81 <../public_html/img/uploads/bstcompare.png>]
 File: ../public_html/img/uploads/bstcompare.png Graphic file (type png)
- <use ../public_html/img/uploads/bstcompare.png>
-Package pdftex.def Info: ../public_html/img/uploads/bstcompare.png used on inpu
-t line 1607.
-(pdftex.def)             Requested size: 275.02682pt x 151.57974pt.
-File: ../public_html/img/uploads/bst.png Graphic file (type png)
 
-<use ../public_html/img/uploads/bst.png>
+<use ../public_html/img/uploads/bstcompare.png>
+Package pdftex.def Info: ../public_html/img/uploads/bstcompare.png used on inpu
+t line 1723.
+(pdftex.def)             Requested size: 275.02682pt x 151.57974pt.
+ [82 <../public_html/img/uploads/bst.png>]
+File: ../public_html/img/uploads/bst.png Graphic file (type png)
+ <use ../public_html/img/uploads/bst.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst.png used on input line 
-1609.
+1725.
 (pdftex.def)             Requested size: 253.94812pt x 206.77829pt.
- [65] [66]
-<../public_html/img/uploads/bstinsert.png, id=1297, 231.86626pt x 151.56625pt>
+ [83] [84]
+<../public_html/img/uploads/bstinsert.png, id=1429, 231.86626pt x 151.56625pt>
 File: ../public_html/img/uploads/bstinsert.png Graphic file (type png)
 
 <use ../public_html/img/uploads/bstinsert.png>
 Package pdftex.def Info: ../public_html/img/uploads/bstinsert.png used on input
- line 1666.
+ line 1782.
 (pdftex.def)             Requested size: 231.86568pt x 151.56818pt.
 
-<../public_html/img/uploads/bstinsert2.png, id=1298, 231.86626pt x 151.56625pt>
+<../public_html/img/uploads/bstinsert2.png, id=1430, 231.86626pt x 151.56625pt>
 File: ../public_html/img/uploads/bstinsert2.png Graphic file (type png)
 <use ../public_html/img/uploads/bstinsert2.png>
 Package pdftex.def Info: ../public_html/img/uploads/bstinsert2.png used on inpu
-t line 1668.
+t line 1784.
 (pdftex.def)             Requested size: 231.86568pt x 151.56818pt.
 
-<../public_html/img/uploads/bstinsert3.png, id=1299, 231.86626pt x 151.56625pt>
+<../public_html/img/uploads/bstinsert3.png, id=1431, 231.86626pt x 151.56625pt>
+[85 <../public_html/img/uploads/bstinsert.png>]
 File: ../public_html/img/uploads/bstinsert3.png Graphic file (type png)
+
 <use ../public_html/img/uploads/bstinsert3.png>
 Package pdftex.def Info: ../public_html/img/uploads/bstinsert3.png used on inpu
-t line 1670.
+t line 1786.
 (pdftex.def)             Requested size: 231.86568pt x 151.56818pt.
 
-<../public_html/img/uploads/bstinsert4.png, id=1300, 231.86626pt x 201.75375pt>
-[67 <../public_html/img/uploads/bstinsert.png> <../public_html/img/uploads/bsti
-nsert2.png>]
+<../public_html/img/uploads/bstinsert4.png, id=1444, 231.86626pt x 201.75375pt>
 File: ../public_html/img/uploads/bstinsert4.png Graphic file (type png)
- <use ../public_html/img/uploads/bstinsert4.png>
+<use ../public_html/img/uploads/bstinsert4.png>
 Package pdftex.def Info: ../public_html/img/uploads/bstinsert4.png used on inpu
-t line 1672.
+t line 1788.
 (pdftex.def)             Requested size: 231.86568pt x 201.75632pt.
- [68 <../public_html/img/uploads/bstinsert3.png> <../public_html/img/uploads/bs
-tinsert4.png>]
-<../public_html/img/uploads/bstcontains.png, id=1336, 236.885pt x 151.56625pt>
+ [86 <../public_html/img/uploads/bstinsert2.png> <../public_html/img/uploads/bs
+tinsert3.png>] [87 <../public_html/img/uploads/bstinsert4.png>]
+<../public_html/img/uploads/bstcontains.png, id=1478, 236.885pt x 151.56625pt>
 File: ../public_html/img/uploads/bstcontains.png Graphic file (type png)
 
 <use ../public_html/img/uploads/bstcontains.png>
 Package pdftex.def Info: ../public_html/img/uploads/bstcontains.png used on inp
-ut line 1709.
+ut line 1825.
 (pdftex.def)             Requested size: 236.88441pt x 151.5705pt.
 
-<../public_html/img/uploads/bstcontains2.png, id=1337, 236.885pt x 151.56625pt>
+<../public_html/img/uploads/bstcontains2.png, id=1479, 236.885pt x 151.56625pt>
 File: ../public_html/img/uploads/bstcontains2.png Graphic file (type png)
 <use ../public_html/img/uploads/bstcontains2.png>
 Package pdftex.def Info: ../public_html/img/uploads/bstcontains2.png used on in
-put line 1711.
+put line 1827.
 (pdftex.def)             Requested size: 236.88441pt x 151.5705pt.
 
-<../public_html/img/uploads/bstcontains3.png, id=1338, 236.885pt x 151.56625pt>
-[69 <../public_html/img/uploads/bstcontains.png>]
+<../public_html/img/uploads/bstcontains3.png, id=1480, 236.885pt x 151.56625pt>
+[88 <../public_html/img/uploads/bstcontains.png>]
 File: ../public_html/img/uploads/bstcontains3.png Graphic file (type png)
 
 <use ../public_html/img/uploads/bstcontains3.png>
 Package pdftex.def Info: ../public_html/img/uploads/bstcontains3.png used on in
-put line 1713.
+put line 1829.
 (pdftex.def)             Requested size: 236.88441pt x 151.5705pt.
 
-<../public_html/img/uploads/bstcontains4.png, id=1359, 236.885pt x 151.56625pt>
+<../public_html/img/uploads/bstcontains4.png, id=1494, 236.885pt x 151.56625pt>
 File: ../public_html/img/uploads/bstcontains4.png Graphic file (type png)
 <use ../public_html/img/uploads/bstcontains4.png>
 Package pdftex.def Info: ../public_html/img/uploads/bstcontains4.png used on in
-put line 1715.
+put line 1831.
 (pdftex.def)             Requested size: 236.88441pt x 151.5705pt.
- [70 <../public_html/img/uploads/bstcontains2.png> <../public_html/img/uploads/
+ [89 <../public_html/img/uploads/bstcontains2.png> <../public_html/img/uploads/
 bstcontains3.png> <../public_html/img/uploads/bstcontains4.png>]
-<../public_html/img/uploads/bst-rem.png, id=1372, 201.75375pt x 201.75375pt>
+<../public_html/img/uploads/bst-rem.png, id=1502, 201.75375pt x 201.75375pt>
 File: ../public_html/img/uploads/bst-rem.png Graphic file (type png)
 
 <use ../public_html/img/uploads/bst-rem.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst-rem.png used on input l
-ine 1739.
+ine 1855.
 (pdftex.def)             Requested size: 201.75325pt x 201.75632pt.
-
-<../public_html/img/uploads/bst-rem-case11.png, id=1373, 201.75375pt x 201.7537
+ [90]
+<../public_html/img/uploads/bst-rem-case11.png, id=1523, 201.75375pt x 201.7537
 5pt>
 File: ../public_html/img/uploads/bst-rem-case11.png Graphic file (type png)
  <use ../public_html/img/uploads/bst-rem-case11.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst-rem-case11.png used on 
-input line 1743.
+input line 1859.
 (pdftex.def)             Requested size: 201.75325pt x 201.75632pt.
- [71 <../public_html/img/uploads/bst-rem.png>]
-<../public_html/img/uploads/bst-rem-case12.png, id=1389, 161.60374pt x 201.7537
+
+<../public_html/img/uploads/bst-rem-case12.png, id=1524, 161.60374pt x 201.7537
 5pt>
 File: ../public_html/img/uploads/bst-rem-case12.png Graphic file (type png)
  <use ../public_html/img/uploads/bst-rem-case12.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst-rem-case12.png used on 
-input line 1747.
+input line 1863.
 (pdftex.def)             Requested size: 161.60335pt x 201.76248pt.
-
-<../public_html/img/uploads/bst-rem-case21.png, id=1390, 201.75375pt x 201.7537
+ [91 <../public_html/img/uploads/bst-rem.png> <../public_html/img/uploads/bst-r
+em-case11.png>]
+<../public_html/img/uploads/bst-rem-case21.png, id=1531, 201.75375pt x 201.7537
 5pt>
 File: ../public_html/img/uploads/bst-rem-case21.png Graphic file (type png)
  <use ../public_html/img/uploads/bst-rem-case21.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst-rem-case21.png used on 
-input line 1751.
+input line 1867.
 (pdftex.def)             Requested size: 201.75325pt x 201.75632pt.
- [72 <../public_html/img/uploads/bst-rem-case11.png> <../public_html/img/upload
-s/bst-rem-case12.png>]
-<../public_html/img/uploads/bst-rem-case22.png, id=1398, 201.75375pt x 201.7537
+
+<../public_html/img/uploads/bst-rem-case22.png, id=1532, 201.75375pt x 201.7537
 5pt>
 File: ../public_html/img/uploads/bst-rem-case22.png Graphic file (type png)
  <use ../public_html/img/uploads/bst-rem-case22.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst-rem-case22.png used on 
-input line 1755.
+input line 1871.
 (pdftex.def)             Requested size: 201.75325pt x 201.75632pt.
-
-<../public_html/img/uploads/bst-rem-case31.png, id=1399, 201.75375pt x 201.7537
+ [92 <../public_html/img/uploads/bst-rem-case12.png> <../public_html/img/upload
+s/bst-rem-case21.png>]
+<../public_html/img/uploads/bst-rem-case31.png, id=1539, 201.75375pt x 201.7537
 5pt>
 File: ../public_html/img/uploads/bst-rem-case31.png Graphic file (type png)
  <use ../public_html/img/uploads/bst-rem-case31.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst-rem-case31.png used on 
-input line 1759.
+input line 1875.
 (pdftex.def)             Requested size: 201.75325pt x 201.75632pt.
- [73 <../public_html/img/uploads/bst-rem-case21.png> <../public_html/img/upload
-s/bst-rem-case22.png>]
-<../public_html/img/uploads/bst-rem-case32.png, id=1406, 201.75375pt x 201.7537
+
+<../public_html/img/uploads/bst-rem-case32.png, id=1540, 201.75375pt x 201.7537
 5pt>
 File: ../public_html/img/uploads/bst-rem-case32.png Graphic file (type png)
  <use ../public_html/img/uploads/bst-rem-case32.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst-rem-case32.png used on 
-input line 1763.
+input line 1879.
 (pdftex.def)             Requested size: 201.75325pt x 201.75632pt.
-
-<../public_html/img/uploads/bst-rem-case33.png, id=1407, 201.75375pt x 201.7537
+ [93 <../public_html/img/uploads/bst-rem-case22.png> <../public_html/img/upload
+s/bst-rem-case31.png>]
+<../public_html/img/uploads/bst-rem-case33.png, id=1547, 201.75375pt x 201.7537
 5pt>
 File: ../public_html/img/uploads/bst-rem-case33.png Graphic file (type png)
  <use ../public_html/img/uploads/bst-rem-case33.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst-rem-case33.png used on 
-input line 1767.
+input line 1883.
 (pdftex.def)             Requested size: 201.75325pt x 201.75632pt.
- [74 <../public_html/img/uploads/bst-rem-case31.png> <../public_html/img/upload
-s/bst-rem-case32.png>]
-<../public_html/img/uploads/bst-rem-case34.png, id=1414, 201.75375pt x 201.7537
-5pt>
+
+<../public_html/img/uploads/bst-rem-case34.png, id=1548, 201.75375pt x 201.7537
+5pt> [94 <../public_html/img/uploads/bst-rem-case32.png> <../public_html/img/up
+loads/bst-rem-case33.png>]
 File: ../public_html/img/uploads/bst-rem-case34.png Graphic file (type png)
  <use ../public_html/img/uploads/bst-rem-case34.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst-rem-case34.png used on 
-input line 1771.
+input line 1887.
 (pdftex.def)             Requested size: 201.75325pt x 201.75632pt.
- [75 <../public_html/img/uploads/bst-rem-case33.png> <../public_html/img/upload
-s/bst-rem-case34.png>]
-[76]
+
+[95 <../public_html/img/uploads/bst-rem-case34.png>]
+Overfull \hbox (14.59038pt too wide) in paragraph at lines 1921--1922
+[][][][][][][][][][][][][][][][][]  
+ []
+
+
+Overfull \hbox (9.34042pt too wide) in paragraph at lines 1930--1931
+[][][][][][][][][][][][][][][][][]  
+ []
+
+[96] [97]
 File: ../public_html/img/uploads/bst.png Graphic file (type png)
  <use ../public_html/img/uploads/bst.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst.png used on input line 
-1873.
+1989.
 (pdftex.def)             Requested size: 253.94812pt x 206.77829pt.
 
 
-Package tabulary Warning: tymin too large (10.0pt), resetting to -4.82115pt on 
-input line 1890.
+Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
+nput line 2006.
 
 
-Package tabulary Warning: No suitable columns! on input line 1890.
+Package tabulary Warning: No suitable columns! on input line 2006.
 
-[77] [78]
-Chapter 7.
+[98]
+Chapter 8.
 
-Package tabulary Warning: tymin too large (10.0pt), resetting to -4.82115pt on 
-input line 1936.
-
-
-Package tabulary Warning: No suitable columns! on input line 1936.
-
-[79
-
-] [80] [81] [82]
-
-Package tabulary Warning: tymin too large (10.0pt), resetting to -4.82115pt on 
-input line 2107.
+Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
+nput line 2052.
 
 
-Package tabulary Warning: No suitable columns! on input line 2107.
+Package tabulary Warning: No suitable columns! on input line 2052.
+
+[99
+
+] [100] [101] [102] [103]
+
+Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
+nput line 2223.
+
+
+Package tabulary Warning: No suitable columns! on input line 2223.
 
 File: ../public_html/img/uploads/bst.png Graphic file (type png)
 <use ../public_html/img/uploads/bst.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst.png used on input line 
-2113.
+2229.
 (pdftex.def)             Requested size: 253.94812pt x 206.77829pt.
- [83] [84] [85] [86]
+ [104] [105] [106] [107]
 File: ../public_html/img/uploads/bst-rem.png Graphic file (type png)
 
 <use ../public_html/img/uploads/bst-rem.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst-rem.png used on input l
-ine 2237.
+ine 2353.
 (pdftex.def)             Requested size: 201.75325pt x 201.75632pt.
+ [108]
 File: ../public_html/img/uploads/bst-rem-case11.png Graphic file (type png)
 
 <use ../public_html/img/uploads/bst-rem-case11.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst-rem-case11.png used on 
-input line 2241.
+input line 2357.
 (pdftex.def)             Requested size: 201.75325pt x 201.75632pt.
 File: ../public_html/img/uploads/bst-rem-case12.png Graphic file (type png)
 
 <use ../public_html/img/uploads/bst-rem-case12.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst-rem-case12.png used on 
-input line 2245.
+input line 2361.
 (pdftex.def)             Requested size: 161.60335pt x 201.76248pt.
- [87]
+ [109]
 File: ../public_html/img/uploads/bst-rem-case21.png Graphic file (type png)
 
 <use ../public_html/img/uploads/bst-rem-case21.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst-rem-case21.png used on 
-input line 2249.
+input line 2365.
 (pdftex.def)             Requested size: 201.75325pt x 201.75632pt.
 File: ../public_html/img/uploads/bst-rem-case22.png Graphic file (type png)
 
 <use ../public_html/img/uploads/bst-rem-case22.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst-rem-case22.png used on 
-input line 2253.
+input line 2369.
 (pdftex.def)             Requested size: 201.75325pt x 201.75632pt.
- [88]
+ [110]
 File: ../public_html/img/uploads/bst-rem-case31.png Graphic file (type png)
 
 <use ../public_html/img/uploads/bst-rem-case31.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst-rem-case31.png used on 
-input line 2257.
+input line 2373.
 (pdftex.def)             Requested size: 201.75325pt x 201.75632pt.
 File: ../public_html/img/uploads/bst-rem-case32.png Graphic file (type png)
 
 <use ../public_html/img/uploads/bst-rem-case32.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst-rem-case32.png used on 
-input line 2261.
+input line 2377.
 (pdftex.def)             Requested size: 201.75325pt x 201.75632pt.
- [89]
+ [111]
 File: ../public_html/img/uploads/bst-rem-case33.png Graphic file (type png)
 
 <use ../public_html/img/uploads/bst-rem-case33.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst-rem-case33.png used on 
-input line 2265.
+input line 2381.
 (pdftex.def)             Requested size: 201.75325pt x 201.75632pt.
+ [112]
 File: ../public_html/img/uploads/bst-rem-case34.png Graphic file (type png)
 
 <use ../public_html/img/uploads/bst-rem-case34.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst-rem-case34.png used on 
-input line 2269.
+input line 2385.
 (pdftex.def)             Requested size: 201.75325pt x 201.75632pt.
- [90] [91] [92]
-Chapter 8.
+ [113]
+Overfull \hbox (14.59038pt too wide) in paragraph at lines 2419--2420
+[][][][][][][][][][][][][][][][][]  
+ []
 
-Package tabulary Warning: tymin too large (10.0pt), resetting to -4.82115pt on 
-input line 2364.
+
+Overfull \hbox (9.34042pt too wide) in paragraph at lines 2428--2429
+[][][][][][][][][][][][][][][][][]  
+ []
+
+[114] [115]
+Chapter 9.
+
+Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
+nput line 2480.
 
 
-Package tabulary Warning: No suitable columns! on input line 2364.
+Package tabulary Warning: No suitable columns! on input line 2480.
 
-[93
+[116
 
-]
-<../public_html/img/uploads/maxheap2.png, id=1816, 197.73875pt x 206.7725pt>
+] [117]
+<../public_html/img/uploads/maxheap2.png, id=1974, 197.73875pt x 206.7725pt>
 File: ../public_html/img/uploads/maxheap2.png Graphic file (type png)
 
 <use ../public_html/img/uploads/maxheap2.png>
 Package pdftex.def Info: ../public_html/img/uploads/maxheap2.png used on input 
-line 2404.
+line 2520.
 (pdftex.def)             Requested size: 197.73827pt x 206.77513pt.
- [94]
-<../public_html/img/uploads/maxheap.png, id=1828, 426.59375pt x 207.77625pt>
+
+<../public_html/img/uploads/maxheap.png, id=1975, 426.59375pt x 207.77625pt>
 File: ../public_html/img/uploads/maxheap.png Graphic file (type png)
 
 <use ../public_html/img/uploads/maxheap.png>
 Package pdftex.def Info: ../public_html/img/uploads/maxheap.png used on input l
-ine 2408.
-(pdftex.def)             Requested size: 360.0pt x 175.35197pt.
+ine 2524.
+(pdftex.def)             Requested size: 309.85626pt x 150.92717pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 2408--2409
+Overfull \hbox (17.0pt too wide) in paragraph at lines 2524--2525
 [][] 
  []
 
+[118 <../public_html/img/uploads/maxheap2.png>]
 
-Package tabulary Warning: tymin too large (10.0pt), resetting to -4.82115pt on 
-input line 2429.
+Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
+nput line 2545.
 
 
-Package tabulary Warning: No suitable columns! on input line 2429.
+Package tabulary Warning: No suitable columns! on input line 2545.
 
-[95 <../public_html/img/uploads/maxheap2.png> <../public_html/img/uploads/maxhe
-ap.png>] [96]
+
+Overfull \hbox (1.53197pt too wide) in paragraph at lines 2545--2546
+[][] 
+ []
+
+[119 <../public_html/img/uploads/maxheap.png>] [120]
 File: ../public_html/img/uploads/maxheap.png Graphic file (type png)
- <use ../public_html/img/uploads/maxheap.png>
-Package pdftex.def Info: ../public_html/img/uploads/maxheap.png used on input l
-ine 2498.
-(pdftex.def)             Requested size: 360.0pt x 175.35197pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 2498--2499
+<use ../public_html/img/uploads/maxheap.png>
+Package pdftex.def Info: ../public_html/img/uploads/maxheap.png used on input l
+ine 2614.
+(pdftex.def)             Requested size: 309.85626pt x 150.92717pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 2614--2615
 [][] 
  []
 
 
-<../public_html/img/uploads/maxheappush.png, id=1877, 197.73875pt x 207.77625pt
+<../public_html/img/uploads/maxheappush.png, id=2039, 197.73875pt x 207.77625pt
 >
 File: ../public_html/img/uploads/maxheappush.png Graphic file (type png)
  <use ../public_html/img/uploads/maxheappush.png>
 Package pdftex.def Info: ../public_html/img/uploads/maxheappush.png used on inp
-ut line 2500.
+ut line 2616.
 (pdftex.def)             Requested size: 197.73827pt x 207.77888pt.
 
-<../public_html/img/uploads/maxheappush2.png, id=1878, 197.73875pt x 207.77625p
-t> [97]
+<../public_html/img/uploads/maxheappush2.png, id=2040, 197.73875pt x 207.77625p
+t> [121]
 File: ../public_html/img/uploads/maxheappush2.png Graphic file (type png)
  <use ../public_html/img/uploads/maxheappush2.png>
 Package pdftex.def Info: ../public_html/img/uploads/maxheappush2.png used on in
-put line 2502.
+put line 2618.
 (pdftex.def)             Requested size: 197.73827pt x 207.77888pt.
 
-<../public_html/img/uploads/maxheappush3.png, id=1894, 197.73875pt x 207.77625p
+<../public_html/img/uploads/maxheappush3.png, id=2050, 197.73875pt x 207.77625p
 t>
 File: ../public_html/img/uploads/maxheappush3.png Graphic file (type png)
  <use ../public_html/img/uploads/maxheappush3.png>
 Package pdftex.def Info: ../public_html/img/uploads/maxheappush3.png used on in
-put line 2504.
+put line 2620.
 (pdftex.def)             Requested size: 197.73827pt x 207.77888pt.
- [98 <../public_html/img/uploads/maxheappush.png> <../public_html/img/uploads/m
-axheappush2.png>] [99 <../public_html/img/uploads/maxheappush3.png>]
-<../public_html/img/uploads/maxheappop.png, id=1927, 197.73875pt x 206.7725pt>
+ [122 <../public_html/img/uploads/maxheappush.png> <../public_html/img/uploads/
+maxheappush2.png>] [123 <../public_html/img/uploads/maxheappush3.png>]
+<../public_html/img/uploads/maxheappop.png, id=2082, 197.73875pt x 206.7725pt>
 File: ../public_html/img/uploads/maxheappop.png Graphic file (type png)
 
 <use ../public_html/img/uploads/maxheappop.png>
 Package pdftex.def Info: ../public_html/img/uploads/maxheappop.png used on inpu
-t line 2532.
+t line 2648.
 (pdftex.def)             Requested size: 197.73827pt x 206.77513pt.
 
-<../public_html/img/uploads/maxheappop1.png, id=1928, 177.66376pt x 158.5925pt>
+<../public_html/img/uploads/maxheappop1.png, id=2083, 177.66376pt x 158.5925pt>
 File: ../public_html/img/uploads/maxheappop1.png Graphic file (type png)
 <use ../public_html/img/uploads/maxheappop1.png>
 Package pdftex.def Info: ../public_html/img/uploads/maxheappop1.png used on inp
-ut line 2534.
+ut line 2650.
 (pdftex.def)             Requested size: 177.66331pt x 158.59692pt.
 
-<../public_html/img/uploads/maxheappop2.png, id=1929, 177.66376pt x 158.5925pt>
+<../public_html/img/uploads/maxheappop2.png, id=2084, 177.66376pt x 158.5925pt>
 File: ../public_html/img/uploads/maxheappop2.png Graphic file (type png)
 <use ../public_html/img/uploads/maxheappop2.png>
 Package pdftex.def Info: ../public_html/img/uploads/maxheappop2.png used on inp
-ut line 2536.
+ut line 2652.
 (pdftex.def)             Requested size: 177.66331pt x 158.59692pt.
 
-<../public_html/img/uploads/maxheappop3.png, id=1930, 177.66376pt x 158.5925pt>
-[100 <../public_html/img/uploads/maxheappop.png> <../public_html/img/uploads/ma
+<../public_html/img/uploads/maxheappop3.png, id=2085, 177.66376pt x 158.5925pt>
+[124 <../public_html/img/uploads/maxheappop.png> <../public_html/img/uploads/ma
 xheappop1.png>]
 File: ../public_html/img/uploads/maxheappop3.png Graphic file (type png)
  <use ../public_html/img/uploads/maxheappop3.png>
 Package pdftex.def Info: ../public_html/img/uploads/maxheappop3.png used on inp
-ut line 2538.
+ut line 2654.
 (pdftex.def)             Requested size: 177.66331pt x 158.59692pt.
- [101 <../public_html/img/uploads/maxheappop2.png> <../public_html/img/uploads/
-maxheappop3.png>] [102] [103
+ [125 <../public_html/img/uploads/maxheappop2.png> <../public_html/img/uploads/
+maxheappop3.png>] [126] [127
+
+] [128]
+Chapter 10.
+
+Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
+nput line 2741.
+
+
+Package tabulary Warning: No suitable columns! on input line 2741.
+
+[129
+
+] [130] [131] [132]
+Chapter 11.
+
+Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
+nput line 2862.
+
+
+Package tabulary Warning: No suitable columns! on input line 2862.
+
+[133
+
+] <../public_html/img/uploads/mergesort.png, id=2223, 256.96pt x 264.99pt>
+File: ../public_html/img/uploads/mergesort.png Graphic file (type png)
+
+<use ../public_html/img/uploads/mergesort.png>
+Package pdftex.def Info: ../public_html/img/uploads/mergesort.png used on input
+ line 2901.
+(pdftex.def)             Requested size: 256.95937pt x 265.00955pt.
+ [134]
+Overfull \hbox (35.11497pt too wide) in paragraph at lines 2911--2913
+[][][][][][][][][][][][][][] 
+ []
+
+[135 <../public_html/img/uploads/mergesort.png>] [136] [137]
+<../public_html/img/uploads/quicksort.png, id=2328, 274.02374pt x 176.66pt>
+File: ../public_html/img/uploads/quicksort.png Graphic file (type png)
+
+<use ../public_html/img/uploads/quicksort.png>
+Package pdftex.def Info: ../public_html/img/uploads/quicksort.png used on input
+ line 3000.
+(pdftex.def)             Requested size: 274.02307pt x 176.67303pt.
+ [138] [139 <../public_html/img/uploads/quicksort.png>] [140]
+Chapter 12.
+
+Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
+nput line 3063.
+
+
+Package tabulary Warning: No suitable columns! on input line 3063.
+
+[141
+
+] [142] [143] [144
 
 ]
-<../public_html/img/uploads/graph.png, id=1982, 233.87375pt x 156.585pt>
+<../public_html/img/uploads/graph.png, id=2444, 233.87375pt x 156.585pt>
 File: ../public_html/img/uploads/graph.png Graphic file (type png)
 
 <use ../public_html/img/uploads/graph.png>
 Package pdftex.def Info: ../public_html/img/uploads/graph.png used on input lin
-e 2594.
+e 3148.
 (pdftex.def)             Requested size: 233.87315pt x 156.59177pt.
 
-<../public_html/img/uploads/digraph.png, id=1983, 153.57375pt x 136.51pt>
+<../public_html/img/uploads/digraph.png, id=2445, 153.57375pt x 136.51pt>
 File: ../public_html/img/uploads/digraph.png Graphic file (type png)
 
 <use ../public_html/img/uploads/digraph.png>
 Package pdftex.def Info: ../public_html/img/uploads/digraph.png used on input l
-ine 2600.
+ine 3154.
 (pdftex.def)             Requested size: 153.57336pt x 136.51799pt.
- [104 <../public_html/img/uploads/graph.png> <../public_html/img/uploads/digrap
-h.png>]
-Chapter 9.
+ [145 <../public_html/img/uploads/graph.png> <../public_html/img/uploads/digrap
+h.png>] [146]
+Chapter 13.
 
-Package tabulary Warning: tymin too large (10.0pt), resetting to -4.82115pt on 
-input line 2685.
-
-
-Package tabulary Warning: No suitable columns! on input line 2685.
-
-File: ../public_html/img/uploads/graph.png Graphic file (type png)
-<use ../public_html/img/uploads/graph.png>
-Package pdftex.def Info: ../public_html/img/uploads/graph.png used on input lin
-e 2696.
-(pdftex.def)             Requested size: 233.87315pt x 156.59177pt.
+Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
+nput line 3239.
 
 
-Package tabulary Warning: tymin too large (10.0pt), resetting to -4.82115pt on 
-input line 2724.
+Package tabulary Warning: No suitable columns! on input line 3239.
 
-
-Package tabulary Warning: No suitable columns! on input line 2724.
-
-[105
+[147
 
 ]
-
-Package tabulary Warning: tymin too large (10.0pt), resetting to -4.82115pt on 
-input line 2798.
-
-
-Package tabulary Warning: No suitable columns! on input line 2798.
-
-[106]
 File: ../public_html/img/uploads/graph.png Graphic file (type png)
  <use ../public_html/img/uploads/graph.png>
 Package pdftex.def Info: ../public_html/img/uploads/graph.png used on input lin
-e 2832.
+e 3250.
 (pdftex.def)             Requested size: 233.87315pt x 156.59177pt.
 
 
-Package tabulary Warning: tymin too large (10.0pt), resetting to -4.82115pt on 
-input line 2860.
+Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
+nput line 3278.
 
 
-Package tabulary Warning: No suitable columns! on input line 2860.
+Package tabulary Warning: No suitable columns! on input line 3278.
 
-[107] [108]
-Chapter 10.
-<../public_html/img/uploads/treegraph.png, id=2031, 233.87375pt x 156.585pt>
+
+Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
+nput line 3352.
+
+
+Package tabulary Warning: No suitable columns! on input line 3352.
+
+[148] [149]
+File: ../public_html/img/uploads/graph.png Graphic file (type png)
+ <use ../public_html/img/uploads/graph.png>
+Package pdftex.def Info: ../public_html/img/uploads/graph.png used on input lin
+e 3386.
+(pdftex.def)             Requested size: 233.87315pt x 156.59177pt.
+
+
+Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
+nput line 3414.
+
+
+Package tabulary Warning: No suitable columns! on input line 3414.
+
+[150]
+Chapter 14.
+<../public_html/img/uploads/treegraph.png, id=2497, 233.87375pt x 156.585pt>
 File: ../public_html/img/uploads/treegraph.png Graphic file (type png)
 
 <use ../public_html/img/uploads/treegraph.png>
 Package pdftex.def Info: ../public_html/img/uploads/treegraph.png used on input
- line 2869.
+ line 3423.
 (pdftex.def)             Requested size: 233.87315pt x 156.59177pt.
-
-
-Package tabulary Warning: tymin too large (10.0pt), resetting to -4.82115pt on 
-input line 2906.
-
-
-Package tabulary Warning: No suitable columns! on input line 2906.
-
-[109
+ [151
 
  <../public_html/img/uploads/treegraph.png>]
-<../public_html/img/uploads/prim.png, id=2038, 276.03125pt x 165.61874pt>
+
+Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
+nput line 3460.
+
+
+Package tabulary Warning: No suitable columns! on input line 3460.
+
+
+Overfull \hbox (23.02121pt too wide) in paragraph at lines 3460--3461
+[][] 
+ []
+
+<../public_html/img/uploads/prim.png, id=2503, 276.03125pt x 165.61874pt>
 File: ../public_html/img/uploads/prim.png Graphic file (type png)
 
 <use ../public_html/img/uploads/prim.png>
 Package pdftex.def Info: ../public_html/img/uploads/prim.png used on input line
- 2932.
+ 3486.
 (pdftex.def)             Requested size: 276.03056pt x 165.63602pt.
 
-<../public_html/img/uploads/prim1.png, id=2039, 276.03125pt x 165.61874pt>
-[110]
+<../public_html/img/uploads/prim1.png, id=2504, 276.03125pt x 165.61874pt>
+[152]
 File: ../public_html/img/uploads/prim1.png Graphic file (type png)
  <use ../public_html/img/uploads/prim1.png>
 Package pdftex.def Info: ../public_html/img/uploads/prim1.png used on input lin
-e 2934.
+e 3488.
 (pdftex.def)             Requested size: 276.03056pt x 165.63602pt.
 
-<../public_html/img/uploads/prim2.png, id=2050, 276.03125pt x 165.61874pt>
+<../public_html/img/uploads/prim2.png, id=2516, 276.03125pt x 165.61874pt>
 File: ../public_html/img/uploads/prim2.png Graphic file (type png)
 
 <use ../public_html/img/uploads/prim2.png>
 Package pdftex.def Info: ../public_html/img/uploads/prim2.png used on input lin
-e 2936.
+e 3490.
 (pdftex.def)             Requested size: 276.03056pt x 165.63602pt.
 
-<../public_html/img/uploads/prim3.png, id=2051, 276.03125pt x 165.61874pt>
+<../public_html/img/uploads/prim3.png, id=2517, 276.03125pt x 165.61874pt>
+[153 <../public_html/img/uploads/prim.png> <../public_html/img/uploads/prim1.pn
+g>]
 File: ../public_html/img/uploads/prim3.png Graphic file (type png)
-
-<use ../public_html/img/uploads/prim3.png>
+ <use ../public_html/img/uploads/prim3.png>
 Package pdftex.def Info: ../public_html/img/uploads/prim3.png used on input lin
-e 2938.
+e 3492.
 (pdftex.def)             Requested size: 276.03056pt x 165.63602pt.
 
-<../public_html/img/uploads/prim4.png, id=2052, 276.03125pt x 165.61874pt>
-[111 <../public_html/img/uploads/prim.png> <../public_html/img/uploads/prim1.pn
-g> <../public_html/img/uploads/prim2.png>]
+<../public_html/img/uploads/prim4.png, id=2525, 276.03125pt x 165.61874pt>
 File: ../public_html/img/uploads/prim4.png Graphic file (type png)
 
 <use ../public_html/img/uploads/prim4.png>
 Package pdftex.def Info: ../public_html/img/uploads/prim4.png used on input lin
-e 2940.
+e 3494.
 (pdftex.def)             Requested size: 276.03056pt x 165.63602pt.
 
-<../public_html/img/uploads/prim5.png, id=2061, 276.03125pt x 165.61874pt>
+<../public_html/img/uploads/prim5.png, id=2526, 276.03125pt x 165.61874pt>
+[154 <../public_html/img/uploads/prim2.png> <../public_html/img/uploads/prim3.p
+ng>]
 File: ../public_html/img/uploads/prim5.png Graphic file (type png)
-
-<use ../public_html/img/uploads/prim5.png>
+ <use ../public_html/img/uploads/prim5.png>
 Package pdftex.def Info: ../public_html/img/uploads/prim5.png used on input lin
-e 2942.
+e 3496.
 (pdftex.def)             Requested size: 276.03056pt x 165.63602pt.
 
-<../public_html/img/uploads/prim6.png, id=2062, 276.03125pt x 165.61874pt>
+<../public_html/img/uploads/prim6.png, id=2533, 276.03125pt x 165.61874pt>
 File: ../public_html/img/uploads/prim6.png Graphic file (type png)
 
 <use ../public_html/img/uploads/prim6.png>
 Package pdftex.def Info: ../public_html/img/uploads/prim6.png used on input lin
-e 2944.
+e 3498.
 (pdftex.def)             Requested size: 276.03056pt x 165.63602pt.
 
-<../public_html/img/uploads/prim7.png, id=2063, 276.03125pt x 166.6225pt>
-[112 <../public_html/img/uploads/prim3.png> <../public_html/img/uploads/prim4.p
-ng> <../public_html/img/uploads/prim5.png>]
+<../public_html/img/uploads/prim7.png, id=2534, 276.03125pt x 166.6225pt>
+[155 <../public_html/img/uploads/prim4.png> <../public_html/img/uploads/prim5.p
+ng>]
 File: ../public_html/img/uploads/prim7.png Graphic file (type png)
-
-<use ../public_html/img/uploads/prim7.png>
+ <use ../public_html/img/uploads/prim7.png>
 Package pdftex.def Info: ../public_html/img/uploads/prim7.png used on input lin
-e 2946.
+e 3500.
 (pdftex.def)             Requested size: 276.03056pt x 166.63988pt.
- [113 <../public_html/img/uploads/prim6.png> <../public_html/img/uploads/prim7.
-png>] [114]
-<../public_html/img/uploads/kruskal.png, id=2125, 263.98625pt x 148.555pt>
+ [156 <../public_html/img/uploads/prim6.png> <../public_html/img/uploads/prim7.
+png>] [157] [158]
+<../public_html/img/uploads/kruskal.png, id=2603, 263.98625pt x 148.555pt>
 File: ../public_html/img/uploads/kruskal.png Graphic file (type png)
 
 <use ../public_html/img/uploads/kruskal.png>
 Package pdftex.def Info: ../public_html/img/uploads/kruskal.png used on input l
-ine 3032.
+ine 3586.
 (pdftex.def)             Requested size: 263.9856pt x 148.56369pt.
 
-<../public_html/img/uploads/kruskal2.png, id=2126, 263.98625pt x 148.555pt>
+<../public_html/img/uploads/kruskal2.png, id=2604, 263.98625pt x 148.555pt>
 File: ../public_html/img/uploads/kruskal2.png Graphic file (type png)
 
 <use ../public_html/img/uploads/kruskal2.png>
 Package pdftex.def Info: ../public_html/img/uploads/kruskal2.png used on input 
-line 3034.
+line 3588.
 (pdftex.def)             Requested size: 263.9856pt x 148.56369pt.
 
-<../public_html/img/uploads/kruskal3.png, id=2127, 263.98625pt x 148.555pt>
-[115 <../public_html/img/uploads/kruskal.png>]
+<../public_html/img/uploads/kruskal3.png, id=2605, 263.98625pt x 148.555pt>
 File: ../public_html/img/uploads/kruskal3.png Graphic file (type png)
 
 <use ../public_html/img/uploads/kruskal3.png>
 Package pdftex.def Info: ../public_html/img/uploads/kruskal3.png used on input 
-line 3036.
+line 3590.
 (pdftex.def)             Requested size: 263.9856pt x 148.56369pt.
 
-<../public_html/img/uploads/kruskal4.png, id=2140, 263.98625pt x 148.555pt>
+<../public_html/img/uploads/kruskal4.png, id=2606, 263.98625pt x 148.555pt>
+[159 <../public_html/img/uploads/kruskal.png> <../public_html/img/uploads/krusk
+al2.png>]
 File: ../public_html/img/uploads/kruskal4.png Graphic file (type png)
-
-<use ../public_html/img/uploads/kruskal4.png>
+ <use ../public_html/img/uploads/kruskal4.png>
 Package pdftex.def Info: ../public_html/img/uploads/kruskal4.png used on input 
-line 3038.
+line 3592.
 (pdftex.def)             Requested size: 263.9856pt x 148.56369pt.
 
-<../public_html/img/uploads/kruskal5.png, id=2141, 263.98625pt x 149.55875pt>
+<../public_html/img/uploads/kruskal5.png, id=2616, 263.98625pt x 149.55875pt>
 File: ../public_html/img/uploads/kruskal5.png Graphic file (type png)
 
 <use ../public_html/img/uploads/kruskal5.png>
 Package pdftex.def Info: ../public_html/img/uploads/kruskal5.png used on input 
-line 3040.
+line 3594.
 (pdftex.def)             Requested size: 263.9856pt x 149.5675pt.
 
-<../public_html/img/uploads/kruskal6.png, id=2142, 263.98625pt x 149.55875pt>
-[116 <../public_html/img/uploads/kruskal2.png> <../public_html/img/uploads/krus
-kal3.png> <../public_html/img/uploads/kruskal4.png>]
+<../public_html/img/uploads/kruskal6.png, id=2617, 263.98625pt x 149.55875pt>
 File: ../public_html/img/uploads/kruskal6.png Graphic file (type png)
 
 <use ../public_html/img/uploads/kruskal6.png>
 Package pdftex.def Info: ../public_html/img/uploads/kruskal6.png used on input 
-line 3042.
+line 3596.
 (pdftex.def)             Requested size: 263.9856pt x 149.5675pt.
 
-<../public_html/img/uploads/kruskal7.png, id=2150, 263.98625pt x 149.55875pt>
+<../public_html/img/uploads/kruskal7.png, id=2618, 263.98625pt x 149.55875pt>
+[160 <../public_html/img/uploads/kruskal3.png> <../public_html/img/uploads/krus
+kal4.png> <../public_html/img/uploads/kruskal5.png>]
 File: ../public_html/img/uploads/kruskal7.png Graphic file (type png)
 
 <use ../public_html/img/uploads/kruskal7.png>
 Package pdftex.def Info: ../public_html/img/uploads/kruskal7.png used on input 
-line 3044.
+line 3598.
 (pdftex.def)             Requested size: 263.9856pt x 149.5675pt.
- [117 <../public_html/img/uploads/kruskal5.png> <../public_html/img/uploads/kru
-skal6.png> <../public_html/img/uploads/kruskal7.png>] [118] [119]
-Chapter 11.
+ [161 <../public_html/img/uploads/kruskal6.png> <../public_html/img/uploads/kru
+skal7.png>]
+Overfull \hbox (37.69035pt too wide) in paragraph at lines 3635--3636
+[][][][][][][][][][][][][][][][][][][][][][][][][][][]  
+ []
 
-Package tabulary Warning: tymin too large (10.0pt), resetting to -4.82115pt on 
-input line 3138.
+[162] [163]
+Chapter 15.
+
+Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
+nput line 3692.
 
 
-Package tabulary Warning: No suitable columns! on input line 3138.
+Package tabulary Warning: No suitable columns! on input line 3692.
 
 
-Overfull \hbox (302.23253pt too wide) in paragraph at lines 3138--3139
+Overfull \hbox (352.37627pt too wide) in paragraph at lines 3692--3693
 [] 
  []
 
-[120
+[164
 
 ]
-<../public_html/img/uploads/djikstra.png, id=2219, 253.94875pt x 148.555pt>
+<../public_html/img/uploads/djikstra.png, id=2693, 253.94875pt x 148.555pt>
 File: ../public_html/img/uploads/djikstra.png Graphic file (type png)
 
 <use ../public_html/img/uploads/djikstra.png>
 Package pdftex.def Info: ../public_html/img/uploads/djikstra.png used on input 
-line 3171.
+line 3725.
 (pdftex.def)             Requested size: 253.94812pt x 148.55916pt.
-
-<../public_html/img/uploads/djikstra1.png, id=2220, 253.94875pt x 175.65625pt>
+ [165]
+<../public_html/img/uploads/djikstra1.png, id=2702, 253.94875pt x 175.65625pt>
 File: ../public_html/img/uploads/djikstra1.png Graphic file (type png)
 
 <use ../public_html/img/uploads/djikstra1.png>
 Package pdftex.def Info: ../public_html/img/uploads/djikstra1.png used on input
- line 3175.
+ line 3729.
 (pdftex.def)             Requested size: 253.94812pt x 175.66116pt.
- [121 <../public_html/img/uploads/djikstra.png>]
-<../public_html/img/uploads/djikstra2.png, id=2230, 253.94875pt x 184.69pt>
+
+<../public_html/img/uploads/djikstra2.png, id=2703, 253.94875pt x 184.69pt>
 File: ../public_html/img/uploads/djikstra2.png Graphic file (type png)
 
 <use ../public_html/img/uploads/djikstra2.png>
 Package pdftex.def Info: ../public_html/img/uploads/djikstra2.png used on input
- line 3179.
+ line 3733.
 (pdftex.def)             Requested size: 253.94812pt x 184.69516pt.
-
-<../public_html/img/uploads/djikstra3.png, id=2231, 283.0575pt x 184.69pt>
+ [166 <../public_html/img/uploads/djikstra.png> <../public_html/img/uploads/dji
+kstra1.png>]
+<../public_html/img/uploads/djikstra3.png, id=2710, 283.0575pt x 184.69pt>
 File: ../public_html/img/uploads/djikstra3.png Graphic file (type png)
 
 <use ../public_html/img/uploads/djikstra3.png>
 Package pdftex.def Info: ../public_html/img/uploads/djikstra3.png used on input
- line 3183.
+ line 3737.
 (pdftex.def)             Requested size: 283.0568pt x 184.70361pt.
- [122 <../public_html/img/uploads/djikstra1.png> <../public_html/img/uploads/dj
-ikstra2.png>]
-<../public_html/img/uploads/djikstra4.png, id=2238, 283.0575pt x 167.62625pt>
+
+<../public_html/img/uploads/djikstra4.png, id=2711, 283.0575pt x 167.62625pt>
 File: ../public_html/img/uploads/djikstra4.png Graphic file (type png)
 
 <use ../public_html/img/uploads/djikstra4.png>
 Package pdftex.def Info: ../public_html/img/uploads/djikstra4.png used on input
- line 3187.
+ line 3741.
 (pdftex.def)             Requested size: 283.0568pt x 167.63861pt.
-
-<../public_html/img/uploads/djikstra5.png, id=2239, 283.0575pt x 148.555pt>
+ [167 <../public_html/img/uploads/djikstra2.png> <../public_html/img/uploads/dj
+ikstra3.png>]
+<../public_html/img/uploads/djikstra5.png, id=2718, 283.0575pt x 148.555pt>
 File: ../public_html/img/uploads/djikstra5.png Graphic file (type png)
 
 <use ../public_html/img/uploads/djikstra5.png>
 Package pdftex.def Info: ../public_html/img/uploads/djikstra5.png used on input
- line 3191.
+ line 3745.
 (pdftex.def)             Requested size: 283.0568pt x 148.56595pt.
- [123 <../public_html/img/uploads/djikstra3.png> <../public_html/img/uploads/dj
-ikstra4.png>]
-<../public_html/img/uploads/djikstra6.png, id=2246, 253.94875pt x 148.555pt>
+
+<../public_html/img/uploads/djikstra6.png, id=2719, 253.94875pt x 148.555pt>
 File: ../public_html/img/uploads/djikstra6.png Graphic file (type png)
 
 <use ../public_html/img/uploads/djikstra6.png>
 Package pdftex.def Info: ../public_html/img/uploads/djikstra6.png used on input
- line 3195.
+ line 3749.
 (pdftex.def)             Requested size: 253.94812pt x 148.55916pt.
- [124 <../public_html/img/uploads/djikstra5.png> <../public_html/img/uploads/dj
-ikstra6.png>] [125]
-<../public_html/img/uploads/bellmanford.png, id=2296, 253.94875pt x 147.55125pt
+ [168 <../public_html/img/uploads/djikstra4.png> <../public_html/img/uploads/dj
+ikstra5.png>] [169 <../public_html/img/uploads/djikstra6.png>]
+Overfull \hbox (11.4904pt too wide) in paragraph at lines 3783--3784
+[][][][][][][][][][][][][]  
+ []
+
+[170]
+<../public_html/img/uploads/bellmanford.png, id=2775, 253.94875pt x 147.55125pt
 >
 File: ../public_html/img/uploads/bellmanford.png Graphic file (type png)
  <use ../public_html/img/uploads/bellmanford.png>
 Package pdftex.def Info: ../public_html/img/uploads/bellmanford.png used on inp
-ut line 3261.
+ut line 3815.
 (pdftex.def)             Requested size: 253.94812pt x 147.55537pt.
 
-<../public_html/img/uploads/bellmanford2.png, id=2297, 33.12375pt x 36.135pt>
+<../public_html/img/uploads/bellmanford2.png, id=2776, 33.12375pt x 36.135pt>
 File: ../public_html/img/uploads/bellmanford2.png Graphic file (type png)
 
 <use ../public_html/img/uploads/bellmanford2.png>
 Package pdftex.def Info: ../public_html/img/uploads/bellmanford2.png used on in
-put line 3265.
+put line 3819.
 (pdftex.def)             Requested size: 33.12366pt x 36.13763pt.
 
-<../public_html/img/uploads/bellmanford3.png, id=2298, 99.37125pt x 127.47626pt
->
+<../public_html/img/uploads/bellmanford3.png, id=2777, 99.37125pt x 127.47626pt
+> [171 <../public_html/img/uploads/bellmanford.png> <../public_html/img/uploads
+/bellmanford2.png>]
 File: ../public_html/img/uploads/bellmanford3.png Graphic file (type png)
  <use ../public_html/img/uploads/bellmanford3.png>
 Package pdftex.def Info: ../public_html/img/uploads/bellmanford3.png used on in
-put line 3269.
+put line 3823.
 (pdftex.def)             Requested size: 99.371pt x 127.47981pt.
- [126 <../public_html/img/uploads/bellmanford.png> <../public_html/img/uploads/
-bellmanford2.png>]
-<../public_html/img/uploads/bellmanford4.png, id=2306, 159.59625pt x 179.67125p
+
+<../public_html/img/uploads/bellmanford4.png, id=2785, 159.59625pt x 179.67125p
 t>
 File: ../public_html/img/uploads/bellmanford4.png Graphic file (type png)
  <use ../public_html/img/uploads/bellmanford4.png>
 Package pdftex.def Info: ../public_html/img/uploads/bellmanford4.png used on in
-put line 3275.
+put line 3829.
 (pdftex.def)             Requested size: 159.59584pt x 179.67079pt.
 
-<../public_html/img/uploads/bellmanford5.png, id=2307, 229.85875pt x 189.70876p
-t>
+<../public_html/img/uploads/bellmanford5.png, id=2786, 229.85875pt x 189.70876p
+t> [172 <../public_html/img/uploads/bellmanford3.png> <../public_html/img/uploa
+ds/bellmanford4.png>]
 File: ../public_html/img/uploads/bellmanford5.png Graphic file (type png)
  <use ../public_html/img/uploads/bellmanford5.png>
 Package pdftex.def Info: ../public_html/img/uploads/bellmanford5.png used on in
-put line 3283.
+put line 3837.
 (pdftex.def)             Requested size: 229.85817pt x 189.71985pt.
- [127 <../public_html/img/uploads/bellmanford3.png> <../public_html/img/uploads
-/bellmanford4.png>]
-[128 <../public_html/img/uploads/bellmanford5.png>] [129]
 
-Package tabulary Warning: tymin too large (10.0pt), resetting to -4.82115pt on 
-input line 3411.
+[173 <../public_html/img/uploads/bellmanford5.png>]
+Overfull \hbox (1.57745pt too wide) in paragraph at lines 3868--3869
+[]\OT1/cmr/m/n/10.95 We can rewrite this so-lu-tion us-ing dy-namic pro-gram-mi
+ng with-
+ []
 
+[174] [175]
 
-Package tabulary Warning: No suitable columns! on input line 3411.
-
-[130]
-
-Package tabulary Warning: tymin too large (10.0pt), resetting to -4.82115pt on 
-input line 3444.
+Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
+nput line 3965.
 
 
-Package tabulary Warning: No suitable columns! on input line 3444.
+Package tabulary Warning: No suitable columns! on input line 3965.
 
 
-Overfull \hbox (73.56178pt too wide) in paragraph at lines 3444--3445
+Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
+nput line 3998.
+
+
+Package tabulary Warning: No suitable columns! on input line 3998.
+
+
+Overfull \hbox (123.70552pt too wide) in paragraph at lines 3998--3999
 [][] 
  []
 
-
-<../public_html/img/uploads/floydwarshall1.png, id=2419, 133.49875pt x 131.4912
+[176]
+<../public_html/img/uploads/floydwarshall1.png, id=2904, 133.49875pt x 131.4912
 6pt>
 File: ../public_html/img/uploads/floydwarshall1.png Graphic file (type png)
  <use ../public_html/img/uploads/floydwarshall1.png>
 Package pdftex.def Info: ../public_html/img/uploads/floydwarshall1.png used on 
-input line 3450.
+input line 4004.
 (pdftex.def)             Requested size: 133.4984pt x 131.50294pt.
 
-<../public_html/img/uploads/floydwarshall.png, id=2420, 183.68625pt x 131.49126
+<../public_html/img/uploads/floydwarshall.png, id=2905, 183.68625pt x 131.49126
 pt>
 File: ../public_html/img/uploads/floydwarshall.png Graphic file (type png)
  <use ../public_html/img/uploads/floydwarshall.png>
 Package pdftex.def Info: ../public_html/img/uploads/floydwarshall.png used on i
-nput line 3452.
+nput line 4006.
 (pdftex.def)             Requested size: 183.68578pt x 131.49893pt.
- [131 <../public_html/img/uploads/floydwarshall1.png> <../public_html/img/uploa
+ [177 <../public_html/img/uploads/floydwarshall1.png> <../public_html/img/uploa
 ds/floydwarshall.png>]
-[132] [133] [134]
-Chapter 12.
-[135
+[178]
+Overfull \hbox (33.49004pt too wide) in paragraph at lines 4070--4071
+[][][][][][][][][][][][][][][][][][][][][][][][][]  
+ []
 
-] [136] [137
+[179] [180]
+Chapter 16.
+[181
+
+] [182] [183
 
 ]
-Chapter 13.
+Chapter 17.
 
-<../public_html/img/uploads/binarysearch.png, id=2553, 262.9825pt x 116.435pt>
+<../public_html/img/uploads/binarysearch.png, id=3036, 262.9825pt x 116.435pt>
 File: ../public_html/img/uploads/binarysearch.png Graphic file (type png)
 
 <use ../public_html/img/uploads/binarysearch.png>
 Package pdftex.def Info: ../public_html/img/uploads/binarysearch.png used on in
-put line 3592.
+put line 4146.
 (pdftex.def)             Requested size: 262.98184pt x 116.44003pt.
- [138
+ [184
 
  <../public_html/img/uploads/binarysearch.png>]
 Missing character: There is no â in font cmr10!
@@ -1643,349 +1905,484 @@ Missing character: There is no ¤ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no ‰ in font cmr10!
 Missing character: There is no ¤ in font cmr10!
- [139]
-<../public_html/img/uploads/ternarysearch.png, id=2565, 277.035pt x 197.73875pt
+ [185] [186]
+<../public_html/img/uploads/ternarysearch.png, id=3064, 277.035pt x 197.73875pt
 >
 File: ../public_html/img/uploads/ternarysearch.png Graphic file (type png)
  <use ../public_html/img/uploads/ternarysearch.png>
 Package pdftex.def Info: ../public_html/img/uploads/ternarysearch.png used on i
-nput line 3674.
+nput line 4228.
 (pdftex.def)             Requested size: 277.03432pt x 197.73827pt.
- [140]
 File: ../public_html/img/uploads/ternarysearch.png Graphic file (type png)
 
 <use ../public_html/img/uploads/ternarysearch.png>
 Package pdftex.def Info: ../public_html/img/uploads/ternarysearch.png used on i
-nput line 3682.
+nput line 4236.
 (pdftex.def)             Requested size: 277.03432pt x 197.73827pt.
-
-<../public_html/img/uploads/ternarycase11.png, id=2584, 191.71625pt x 132.495pt
-> [141 <../public_html/img/uploads/ternarysearch.png>]
+ [187 <../public_html/img/uploads/ternarysearch.png>]
+<../public_html/img/uploads/ternarycase11.png, id=3072, 191.71625pt x 132.495pt
+>
 File: ../public_html/img/uploads/ternarycase11.png Graphic file (type png)
-
-<use ../public_html/img/uploads/ternarycase11.png>
+ <use ../public_html/img/uploads/ternarycase11.png>
 Package pdftex.def Info: ../public_html/img/uploads/ternarycase11.png used on i
-nput line 3691.
+nput line 4245.
 (pdftex.def)             Requested size: 191.71577pt x 132.50273pt.
 
-<../public_html/img/uploads/ternarycase12.png, id=2591, 191.71625pt x 132.495pt
+<../public_html/img/uploads/ternarycase12.png, id=3073, 191.71625pt x 132.495pt
 >
 File: ../public_html/img/uploads/ternarycase12.png Graphic file (type png)
  <use ../public_html/img/uploads/ternarycase12.png>
 Package pdftex.def Info: ../public_html/img/uploads/ternarycase12.png used on i
-nput line 3694.
+nput line 4248.
 (pdftex.def)             Requested size: 191.71577pt x 132.50273pt.
-
-<../public_html/img/uploads/ternarycase1.png, id=2592, 214.8025pt x 145.54375pt
+ [188 <../public_html/img/uploads/ternarycase11.png>]
+<../public_html/img/uploads/ternarycase1.png, id=3080, 214.8025pt x 145.54375pt
 >
 File: ../public_html/img/uploads/ternarycase1.png Graphic file (type png)
  <use ../public_html/img/uploads/ternarycase1.png>
 Package pdftex.def Info: ../public_html/img/uploads/ternarycase1.png used on in
-put line 3700.
+put line 4254.
 (pdftex.def)             Requested size: 214.80197pt x 145.5456pt.
 
-<../public_html/img/uploads/ternarycase21.png, id=2593, 188.705pt x 132.495pt>
-[142 <../public_html/img/uploads/ternarycase11.png> <../public_html/img/uploads
-/ternarycase12.png> <../public_html/img/uploads/ternarycase1.png>]
+<../public_html/img/uploads/ternarycase21.png, id=3081, 188.705pt x 132.495pt>
 File: ../public_html/img/uploads/ternarycase21.png Graphic file (type png)
 
 <use ../public_html/img/uploads/ternarycase21.png>
 Package pdftex.def Info: ../public_html/img/uploads/ternarycase21.png used on i
-nput line 3707.
+nput line 4261.
 (pdftex.def)             Requested size: 188.70453pt x 132.49466pt.
-
-<../public_html/img/uploads/ternarycase22.png, id=2601, 188.705pt x 132.495pt>
+ [189 <../public_html/img/uploads/ternarycase12.png> <../public_html/img/upload
+s/ternarycase1.png>]
+<../public_html/img/uploads/ternarycase22.png, id=3088, 188.705pt x 132.495pt>
 File: ../public_html/img/uploads/ternarycase22.png Graphic file (type png)
 
 <use ../public_html/img/uploads/ternarycase22.png>
 Package pdftex.def Info: ../public_html/img/uploads/ternarycase22.png used on i
-nput line 3710.
+nput line 4264.
 (pdftex.def)             Requested size: 188.70453pt x 132.49466pt.
 
-<../public_html/img/uploads/ternarycase2.png, id=2602, 205.76875pt x 145.54375p
+<../public_html/img/uploads/ternarycase2.png, id=3089, 205.76875pt x 145.54375p
 t>
 File: ../public_html/img/uploads/ternarycase2.png Graphic file (type png)
  <use ../public_html/img/uploads/ternarycase2.png>
 Package pdftex.def Info: ../public_html/img/uploads/ternarycase2.png used on in
-put line 3716.
+put line 4270.
 (pdftex.def)             Requested size: 205.76823pt x 145.54338pt.
- [143 <../public_html/img/uploads/ternarycase21.png> <../public_html/img/upload
-s/ternarycase22.png> <../public_html/img/uploads/ternarycase2.png>]
+ [190 <../public_html/img/uploads/ternarycase21.png> <../public_html/img/upload
+s/ternarycase22.png>]
 File: ../public_html/img/uploads/ternarysearch.png Graphic file (type png)
 
 <use ../public_html/img/uploads/ternarysearch.png>
 Package pdftex.def Info: ../public_html/img/uploads/ternarysearch.png used on i
-nput line 3722.
+nput line 4276.
 (pdftex.def)             Requested size: 277.03432pt x 197.73827pt.
 
-<../public_html/img/uploads/ternarysearch2.png, id=2610, 277.035pt x 197.73875p
+<../public_html/img/uploads/ternarysearch2.png, id=3096, 277.035pt x 197.73875p
 t>
 File: ../public_html/img/uploads/ternarysearch2.png Graphic file (type png)
  <use ../public_html/img/uploads/ternarysearch2.png>
 Package pdftex.def Info: ../public_html/img/uploads/ternarysearch2.png used on 
-input line 3724.
+input line 4278.
 (pdftex.def)             Requested size: 277.03432pt x 197.73827pt.
 
-<../public_html/img/uploads/ternarysearch3.png, id=2611, 269.005pt x 197.73875p
-t>
+<../public_html/img/uploads/ternarysearch3.png, id=3097, 269.005pt x 197.73875p
+t> [191 <../public_html/img/uploads/ternarycase2.png>]
 File: ../public_html/img/uploads/ternarysearch3.png Graphic file (type png)
- <use ../public_html/img/uploads/ternarysearch3.png>
+
+<use ../public_html/img/uploads/ternarysearch3.png>
 Package pdftex.def Info: ../public_html/img/uploads/ternarysearch3.png used on 
-input line 3726.
+input line 4280.
 (pdftex.def)             Requested size: 269.00433pt x 197.74127pt.
 
-<../public_html/img/uploads/ternarysearch4.png, id=2612, 269.005pt x 197.73875p
-t> [144 <../public_html/img/uploads/ternarysearch2.png>]
+<../public_html/img/uploads/ternarysearch4.png, id=3104, 269.005pt x 197.73875p
+t>
 File: ../public_html/img/uploads/ternarysearch4.png Graphic file (type png)
-
-<use ../public_html/img/uploads/ternarysearch4.png>
+ <use ../public_html/img/uploads/ternarysearch4.png>
 Package pdftex.def Info: ../public_html/img/uploads/ternarysearch4.png used on 
-input line 3728.
+input line 4282.
 (pdftex.def)             Requested size: 269.00433pt x 197.74127pt.
 
-<../public_html/img/uploads/ternarysearch5.png, id=2620, 254.9525pt x 197.73875
-pt>
+<../public_html/img/uploads/ternarysearch5.png, id=3105, 254.9525pt x 197.73875
+pt> [192 <../public_html/img/uploads/ternarysearch2.png> <../public_html/img/up
+loads/ternarysearch3.png>]
 File: ../public_html/img/uploads/ternarysearch5.png Graphic file (type png)
  <use ../public_html/img/uploads/ternarysearch5.png>
 Package pdftex.def Info: ../public_html/img/uploads/ternarysearch5.png used on 
-input line 3730.
+input line 4284.
 (pdftex.def)             Requested size: 254.95186pt x 197.74731pt.
 
-<../public_html/img/uploads/ternarysearch6.png, id=2621, 254.9525pt x 195.73125
-pt> [145 <../public_html/img/uploads/ternarysearch3.png> <../public_html/img/up
-loads/ternarysearch4.png>]
+<../public_html/img/uploads/ternarysearch6.png, id=3113, 254.9525pt x 195.73125
+pt>
 File: ../public_html/img/uploads/ternarysearch6.png Graphic file (type png)
  <use ../public_html/img/uploads/ternarysearch6.png>
 Package pdftex.def Info: ../public_html/img/uploads/ternarysearch6.png used on 
-input line 3732.
+input line 4286.
 (pdftex.def)             Requested size: 254.95186pt x 195.73972pt.
 
-<../public_html/img/uploads/ternarysearch7.png, id=2628, 254.9525pt x 185.69376
-pt>
+<../public_html/img/uploads/ternarysearch7.png, id=3114, 254.9525pt x 185.69376
+pt> [193 <../public_html/img/uploads/ternarysearch4.png> <../public_html/img/up
+loads/ternarysearch5.png>]
 File: ../public_html/img/uploads/ternarysearch7.png Graphic file (type png)
  <use ../public_html/img/uploads/ternarysearch7.png>
 Package pdftex.def Info: ../public_html/img/uploads/ternarysearch7.png used on 
-input line 3734.
+input line 4288.
 (pdftex.def)             Requested size: 254.95186pt x 185.7018pt.
- [146 <../public_html/img/uploads/ternarysearch5.png> <../public_html/img/uploa
-ds/ternarysearch6.png>]
-[147 <../public_html/img/uploads/ternarysearch7.png>]
-<../public_html/img/uploads/dfs.png, id=2666, 158.5925pt x 226.8475pt>
+
+[194 <../public_html/img/uploads/ternarysearch6.png> <../public_html/img/upload
+s/ternarysearch7.png>]
+<../public_html/img/uploads/dfs.png, id=3132, 158.5925pt x 226.8475pt>
 File: ../public_html/img/uploads/dfs.png Graphic file (type png)
 
 <use ../public_html/img/uploads/dfs.png>
 Package pdftex.def Info: ../public_html/img/uploads/dfs.png used on input line 
-3780.
+4334.
 (pdftex.def)             Requested size: 158.59209pt x 226.86424pt.
- [148 <../public_html/img/uploads/dfs.png>]
+ [195]
 File: ../public_html/img/uploads/dfs.png Graphic file (type png)
- <use ../public_html/img/uploads/dfs.png>
-Package pdftex.def Info: ../public_html/img/uploads/dfs.png used on input line 
-3797.
-(pdftex.def)             Requested size: 158.59209pt x 226.86424pt.
 
-<../public_html/img/uploads/dfs-preorder.png, id=2681, 158.5925pt x 226.8475pt>
+<use ../public_html/img/uploads/dfs.png>
+Package pdftex.def Info: ../public_html/img/uploads/dfs.png used on input line 
+4351.
+(pdftex.def)             Requested size: 158.59209pt x 226.86424pt.
+ [196 <../public_html/img/uploads/dfs.png>]
+<../public_html/img/uploads/dfs-preorder.png, id=3172, 158.5925pt x 226.8475pt>
 File: ../public_html/img/uploads/dfs-preorder.png Graphic file (type png)
 <use ../public_html/img/uploads/dfs-preorder.png>
 Package pdftex.def Info: ../public_html/img/uploads/dfs-preorder.png used on in
-put line 3816.
+put line 4370.
 (pdftex.def)             Requested size: 158.59209pt x 226.86424pt.
- [149]
-<../public_html/img/uploads/dfs-postorder.png, id=2698, 158.5925pt x 226.8475pt
+ [197]
+<../public_html/img/uploads/dfs-postorder.png, id=3189, 158.5925pt x 226.8475pt
 >
 File: ../public_html/img/uploads/dfs-postorder.png Graphic file (type png)
  <use ../public_html/img/uploads/dfs-postorder.png>
 Package pdftex.def Info: ../public_html/img/uploads/dfs-postorder.png used on i
-nput line 3835.
+nput line 4389.
 (pdftex.def)             Requested size: 158.59209pt x 226.86424pt.
- [150 <../public_html/img/uploads/dfs-preorder.png>] [151 <../public_html/img/u
+ [198 <../public_html/img/uploads/dfs-preorder.png>] [199 <../public_html/img/u
 ploads/dfs-postorder.png>]
-<../public_html/img/uploads/bfs.png, id=2740, 158.5925pt x 226.8475pt>
+Overfull \hbox (11.44058pt too wide) in paragraph at lines 4422--4423
+[][][][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[200] <../public_html/img/uploads/bfs.png, id=3250, 158.5925pt x 226.8475pt>
 File: ../public_html/img/uploads/bfs.png Graphic file (type png)
 
 <use ../public_html/img/uploads/bfs.png>
 Package pdftex.def Info: ../public_html/img/uploads/bfs.png used on input line 
-3900.
+4454.
 (pdftex.def)             Requested size: 158.59209pt x 226.86424pt.
- [152] [153 <../public_html/img/uploads/bfs.png>]
-<../public_html/img/uploads/floodfill.png, id=2779, 207.174pt x 207.174pt>
+ [201 <../public_html/img/uploads/bfs.png>] [202]
+<../public_html/img/uploads/floodfill.png, id=3278, 207.174pt x 207.174pt>
 File: ../public_html/img/uploads/floodfill.png Graphic file (type png)
 
 <use ../public_html/img/uploads/floodfill.png>
 Package pdftex.def Info: ../public_html/img/uploads/floodfill.png used on input
- line 3945.
+ line 4499.
 (pdftex.def)             Requested size: 207.17348pt x 207.17348pt.
- [154 <../public_html/img/uploads/floodfill.png>]
-<../public_html/img/uploads/bucket.png, id=2788, 207.174pt x 207.174pt>
+ [203 <../public_html/img/uploads/floodfill.png>]
+<../public_html/img/uploads/bucket.png, id=3288, 207.174pt x 207.174pt>
 File: ../public_html/img/uploads/bucket.png Graphic file (type png)
 
 <use ../public_html/img/uploads/bucket.png>
 Package pdftex.def Info: ../public_html/img/uploads/bucket.png used on input li
-ne 3992.
+ne 4546.
 (pdftex.def)             Requested size: 207.17348pt x 207.17348pt.
 
-<../public_html/img/uploads/bucket2.png, id=2789, 207.174pt x 207.174pt>
-[155]
+<../public_html/img/uploads/bucket2.png, id=3289, 207.174pt x 207.174pt>
+[204]
 File: ../public_html/img/uploads/bucket2.png Graphic file (type png)
  <use ../public_html/img/uploads/bucket2.png>
 Package pdftex.def Info: ../public_html/img/uploads/bucket2.png used on input l
-ine 3994.
+ine 4548.
 (pdftex.def)             Requested size: 207.17348pt x 207.17348pt.
 
-<../public_html/img/uploads/bucket3.png, id=2823, 207.174pt x 207.174pt>
+<../public_html/img/uploads/bucket3.png, id=3319, 207.174pt x 207.174pt>
 File: ../public_html/img/uploads/bucket3.png Graphic file (type png)
 
 <use ../public_html/img/uploads/bucket3.png>
 Package pdftex.def Info: ../public_html/img/uploads/bucket3.png used on input l
-ine 3998.
+ine 4552.
 (pdftex.def)             Requested size: 207.17348pt x 207.17348pt.
 
-<../public_html/img/uploads/bucket4.png, id=2824, 207.174pt x 207.174pt>
-[156 <../public_html/img/uploads/bucket.png> <../public_html/img/uploads/bucket
+<../public_html/img/uploads/bucket4.png, id=3320, 207.174pt x 207.174pt>
+[205 <../public_html/img/uploads/bucket.png> <../public_html/img/uploads/bucket
 2.png>]
 File: ../public_html/img/uploads/bucket4.png Graphic file (type png)
  <use ../public_html/img/uploads/bucket4.png>
 Package pdftex.def Info: ../public_html/img/uploads/bucket4.png used on input l
-ine 4000.
+ine 4554.
 (pdftex.def)             Requested size: 207.17348pt x 207.17348pt.
- [157 <../public_html/img/uploads/bucket3.png> <../public_html/img/uploads/buck
-et4.png>] [158]
-<../public_html/img/uploads/backtracking.png, id=2867, 173.64874pt x 210.7875pt
+ [206 <../public_html/img/uploads/bucket3.png> <../public_html/img/uploads/buck
+et4.png>] [207] [208]
+<../public_html/img/uploads/backtracking.png, id=3384, 173.64874pt x 210.7875pt
 >
 File: ../public_html/img/uploads/backtracking.png Graphic file (type png)
  <use ../public_html/img/uploads/backtracking.png>
 Package pdftex.def Info: ../public_html/img/uploads/backtracking.png used on in
-put line 4089.
+put line 4643.
 (pdftex.def)             Requested size: 173.64832pt x 210.79341pt.
- [159] [160 <../public_html/img/uploads/backtracking.png>] [161]
-Overfull \hbox (65.24629pt too wide) in paragraph at lines 4172--4173
+ [209] [210 <../public_html/img/uploads/backtracking.png>] [211]
+Overfull \hbox (115.39003pt too wide) in paragraph at lines 4726--4727
 [][][][]  
  []
 
-
-Overfull \hbox (122.99579pt too wide) in paragraph at lines 4188--4189
+[212]
+Overfull \hbox (173.13953pt too wide) in paragraph at lines 4742--4743
 [][][][][]  
  []
 
 
-Overfull \hbox (65.24629pt too wide) in paragraph at lines 4190--4191
+Overfull \hbox (115.39003pt too wide) in paragraph at lines 4744--4745
 [][][][]  
  []
 
 
-<../public_html/img/uploads/enumerate-sets.png, id=2926, 156.585pt x 199.74625p
+<../public_html/img/uploads/enumerate-sets.png, id=3437, 156.585pt x 199.74625p
 t>
 File: ../public_html/img/uploads/enumerate-sets.png Graphic file (type png)
  <use ../public_html/img/uploads/enumerate-sets.png>
 Package pdftex.def Info: ../public_html/img/uploads/enumerate-sets.png used on 
-input line 4195.
+input line 4749.
 (pdftex.def)             Requested size: 156.58461pt x 199.75185pt.
- [162] [163 <../public_html/img/uploads/enumerate-sets.png>]
-<../public_html/img/uploads/nqueen.jpg, id=2990, 313.9228pt x 298.86656pt>
-[164]
+ [213] [214 <../public_html/img/uploads/enumerate-sets.png>] [215]
+<../public_html/img/uploads/nqueen.jpg, id=3529, 313.9228pt x 298.86656pt>
 File: ../public_html/img/uploads/nqueen.jpg Graphic file (type jpg)
- <use ../public_html/img/uploads/nqueen.jpg>
-Package pdftex.def Info: ../public_html/img/uploads/nqueen.jpg used on input li
-ne 4272.
-(pdftex.def)             Requested size: 313.92203pt x 298.87949pt.
 
-<../public_html/img/uploads/nqueen3.png, id=3035, 375.4025pt x 371.3875pt>
+<use ../public_html/img/uploads/nqueen.jpg>
+Package pdftex.def Info: ../public_html/img/uploads/nqueen.jpg used on input li
+ne 4826.
+(pdftex.def)             Requested size: 309.85626pt x 295.00777pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 4826--4827
+[][] 
+ []
+
+[216]
+<../public_html/img/uploads/nqueen3.png, id=3543, 375.4025pt x 371.3875pt>
 File: ../public_html/img/uploads/nqueen3.png Graphic file (type png)
 
 <use ../public_html/img/uploads/nqueen3.png>
 Package pdftex.def Info: ../public_html/img/uploads/nqueen3.png used on input l
-ine 4276.
-(pdftex.def)             Requested size: 360.0pt x 356.17093pt.
+ine 4830.
+(pdftex.def)             Requested size: 309.85626pt x 306.56279pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 4276--4277
+Overfull \hbox (17.0pt too wide) in paragraph at lines 4830--4831
 [][] 
  []
 
-[165 <../public_html/img/uploads/nqueen.jpg>]
-<../public_html/img/uploads/nqueen1.png, id=3040, 225.2415pt x 226.446pt>
+[217 <../public_html/img/uploads/nqueen.jpg>]
+<../public_html/img/uploads/nqueen1.png, id=3548, 225.2415pt x 226.446pt>
 File: ../public_html/img/uploads/nqueen1.png Graphic file (type png)
 
 <use ../public_html/img/uploads/nqueen1.png>
 Package pdftex.def Info: ../public_html/img/uploads/nqueen1.png used on input l
-ine 4286.
+ine 4840.
 (pdftex.def)             Requested size: 225.24094pt x 226.44888pt.
- [166 <../public_html/img/uploads/nqueen3.png>]
-<../public_html/img/uploads/nqueen2.png, id=3046, 225.2415pt x 222.8325pt>
+ [218 <../public_html/img/uploads/nqueen3.png>]
+<../public_html/img/uploads/nqueen2.png, id=3554, 225.2415pt x 222.8325pt>
 File: ../public_html/img/uploads/nqueen2.png Graphic file (type png)
 
 <use ../public_html/img/uploads/nqueen2.png>
 Package pdftex.def Info: ../public_html/img/uploads/nqueen2.png used on input l
-ine 4296.
+ine 4850.
 (pdftex.def)             Requested size: 225.24094pt x 222.83534pt.
- [167 <../public_html/img/uploads/nqueen1.png>] [168 <../public_html/img/upload
-s/nqueen2.png>] [169] [170]
-[171
+ [219 <../public_html/img/uploads/nqueen1.png>] [220 <../public_html/img/upload
+s/nqueen2.png>] [221] [222]
+[223] [224
 
 ]
-Chapter 14.
-[172
+Chapter 18.
+[225
 
-] [173] [174] [175] [176] [177] [178] [179] [180] [181]
+] [226] [227] [228] [229] [230] [231] [232] [233] [234] [235] [236]
 File: ../public_html/img/uploads/recursion_grid.png Graphic file (type png)
 
 <use ../public_html/img/uploads/recursion_grid.png>
 Package pdftex.def Info: ../public_html/img/uploads/recursion_grid.png used on 
-input line 4779.
+input line 5333.
 (pdftex.def)             Requested size: 223.4342pt x 142.73941pt.
- [182] [183]
-Overfull \hbox (3.47675pt too wide) in paragraph at lines 4844--4845
-[]\OT1/cmr/m/n/10.95 For ex-am-ple given A="xyaaaabcdeg", B="bcaaaaefgxy" the l
-ongest com-
- []
+ [237] [238] [239]
+Missing character: There is no â in font cmtt10!
+Missing character: There is no ‰ in font cmtt10!
+Missing character: There is no ¤ in font cmtt10!
+Missing character: There is no â in font cmtt10!
+Missing character: There is no ‰ in font cmtt10!
+Missing character: There is no ¤ in font cmtt10!
+Missing character: There is no â in font cmtt10!
+Missing character: There is no ‰ in font cmtt10!
+Missing character: There is no ¤ in font cmtt10!
+Missing character: There is no â in font cmtt10!
+Missing character: There is no ‰ in font cmtt10!
+Missing character: There is no ¤ in font cmtt10!
+ [240]
+Missing character: There is no â in font cmtt10!
+Missing character: There is no ‰ in font cmtt10!
+Missing character: There is no ¤ in font cmtt10!
+Missing character: There is no â in font cmtt10!
+Missing character: There is no ‰ in font cmtt10!
+Missing character: There is no ¤ in font cmtt10!
+Missing character: There is no â in font cmtt10!
+Missing character: There is no ‰ in font cmtt10!
+Missing character: There is no ¤ in font cmtt10!
+Missing character: There is no â in font cmtt10!
+Missing character: There is no ‰ in font cmtt10!
+Missing character: There is no ¤ in font cmtt10!
 
-Missing character: There is no â in font cmtt10!
-Missing character: There is no ‰ in font cmtt10!
-Missing character: There is no ¤ in font cmtt10!
-Missing character: There is no â in font cmtt10!
-Missing character: There is no ‰ in font cmtt10!
-Missing character: There is no ¤ in font cmtt10!
-Missing character: There is no â in font cmtt10!
-Missing character: There is no ‰ in font cmtt10!
-Missing character: There is no ¤ in font cmtt10!
-Missing character: There is no â in font cmtt10!
-Missing character: There is no ‰ in font cmtt10!
-Missing character: There is no ¤ in font cmtt10!
-Missing character: There is no â in font cmtt10!
-Missing character: There is no ‰ in font cmtt10!
-Missing character: There is no ¤ in font cmtt10!
-Missing character: There is no â in font cmtt10!
-Missing character: There is no ‰ in font cmtt10!
-Missing character: There is no ¤ in font cmtt10!
-[184]
-Missing character: There is no â in font cmtt10!
-Missing character: There is no ‰ in font cmtt10!
-Missing character: There is no ¤ in font cmtt10!
-Missing character: There is no â in font cmtt10!
-Missing character: There is no ‰ in font cmtt10!
-Missing character: There is no ¤ in font cmtt10!
- [185] [186
+[241] [242] [243
 
 ]
-Chapter 15.
-[187
+Chapter 19.
+[244
 
-] [188] [189]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5042.
- [190]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 5042.
- (./book.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 5042.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 5042.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 5042.
+]
+<../public_html/img/uploads/intervalschedule.png, id=4068, 465.74pt x 160.6pt>
+File: ../public_html/img/uploads/intervalschedule.png Graphic file (type png)
+
+<use ../public_html/img/uploads/intervalschedule.png>
+Package pdftex.def Info: ../public_html/img/uploads/intervalschedule.png used o
+n input line 5522.
+(pdftex.def)             Requested size: 309.85626pt x 106.85156pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 5522--5523
+[][] 
+ []
+
+[245 <../public_html/img/uploads/intervalschedule.png>]
+<../public_html/img/uploads/intervalschedule2.png, id=4085, 465.74pt x 160.6pt>
+File: ../public_html/img/uploads/intervalschedule2.png Graphic file (type png)
+<use ../public_html/img/uploads/intervalschedule2.png>
+Package pdftex.def Info: ../public_html/img/uploads/intervalschedule2.png used 
+on input line 5526.
+(pdftex.def)             Requested size: 309.85626pt x 106.85156pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 5526--5527
+[][] 
+ []
+
+
+<../public_html/img/uploads/intervalschedule3.png, id=4086, 465.74pt x 160.6pt>
+File: ../public_html/img/uploads/intervalschedule3.png Graphic file (type png)
+<use ../public_html/img/uploads/intervalschedule3.png>
+Package pdftex.def Info: ../public_html/img/uploads/intervalschedule3.png used 
+on input line 5530.
+(pdftex.def)             Requested size: 309.85626pt x 106.85156pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 5530--5531
+[][] 
+ []
+
+
+<../public_html/img/uploads/intervalschedule4.png, id=4087, 465.74pt x 160.6pt>
+File: ../public_html/img/uploads/intervalschedule4.png Graphic file (type png)
+<use ../public_html/img/uploads/intervalschedule4.png>
+Package pdftex.def Info: ../public_html/img/uploads/intervalschedule4.png used 
+on input line 5534.
+(pdftex.def)             Requested size: 309.85626pt x 106.85156pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 5534--5535
+[][] 
+ []
+
+[246 <../public_html/img/uploads/intervalschedule2.png> <../public_html/img/upl
+oads/intervalschedule3.png> <../public_html/img/uploads/intervalschedule4.png>]
+
+<../public_html/img/uploads/couplematch.png, id=4096, 214.8025pt x 221.82875pt>
+File: ../public_html/img/uploads/couplematch.png Graphic file (type png)
+<use ../public_html/img/uploads/couplematch.png>
+Package pdftex.def Info: ../public_html/img/uploads/couplematch.png used on inp
+ut line 5565.
+(pdftex.def)             Requested size: 214.80197pt x 221.83156pt.
+ [247]
+<../public_html/img/uploads/couplematch2.png, id=4123, 205.76875pt x 220.825pt>
+File: ../public_html/img/uploads/couplematch2.png Graphic file (type png)
+<use ../public_html/img/uploads/couplematch2.png>
+Package pdftex.def Info: ../public_html/img/uploads/couplematch2.png used on in
+put line 5569.
+(pdftex.def)             Requested size: 205.76823pt x 220.82445pt.
+ [248 <../public_html/img/uploads/couplematch.png>]
+<../public_html/img/uploads/gasproblem.png, id=4129, 524.96124pt x 136.51pt>
+File: ../public_html/img/uploads/gasproblem.png Graphic file (type png)
+
+<use ../public_html/img/uploads/gasproblem.png>
+Package pdftex.def Info: ../public_html/img/uploads/gasproblem.png used on inpu
+t line 5576.
+(pdftex.def)             Requested size: 309.85626pt x 80.57768pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 5576--5577
+[][] 
+ []
+
+[249 <../public_html/img/uploads/couplematch2.png> <../public_html/img/uploads/
+gasproblem.png>]
+<../public_html/img/uploads/gasproblem1.png, id=4136, 524.96124pt x 216.81pt>
+File: ../public_html/img/uploads/gasproblem1.png Graphic file (type png)
+
+<use ../public_html/img/uploads/gasproblem1.png>
+Package pdftex.def Info: ../public_html/img/uploads/gasproblem1.png used on inp
+ut line 5586.
+(pdftex.def)             Requested size: 309.85626pt x 127.97633pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 5586--5587
+[][] 
+ []
+
+<../public_html/img/uploads/gasproblem2.png, id=4137, 524.96124pt x 216.81pt>
+File: ../public_html/img/uploads/gasproblem2.png Graphic file (type png)
+
+<use ../public_html/img/uploads/gasproblem2.png>
+Package pdftex.def Info: ../public_html/img/uploads/gasproblem2.png used on inp
+ut line 5590.
+(pdftex.def)             Requested size: 309.85626pt x 127.97633pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 5590--5591
+[][] 
+ []
+
+[250 <../public_html/img/uploads/gasproblem1.png>]
+<../public_html/img/uploads/gasproblem3.png, id=4143, 524.96124pt x 216.81pt>
+File: ../public_html/img/uploads/gasproblem3.png Graphic file (type png)
+
+<use ../public_html/img/uploads/gasproblem3.png>
+Package pdftex.def Info: ../public_html/img/uploads/gasproblem3.png used on inp
+ut line 5594.
+(pdftex.def)             Requested size: 309.85626pt x 127.97633pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 5594--5595
+[][] 
+ []
+
+<../public_html/img/uploads/gasproblem4.png, id=4144, 524.96124pt x 216.81pt>
+File: ../public_html/img/uploads/gasproblem4.png Graphic file (type png)
+
+<use ../public_html/img/uploads/gasproblem4.png>
+Package pdftex.def Info: ../public_html/img/uploads/gasproblem4.png used on inp
+ut line 5598.
+(pdftex.def)             Requested size: 309.85626pt x 127.97633pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 5598--5599
+[][] 
+ []
+
+[251 <../public_html/img/uploads/gasproblem2.png> <../public_html/img/uploads/g
+asproblem3.png>] [252 <../public_html/img/uploads/gasproblem4.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5619.
+ [253]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 5619.
+
+(./book.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 5619.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 5619.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 5619.
  ) 
 Here is how much of TeX's memory you used:
- 10612 strings out of 493315
- 169532 string characters out of 6137904
- 252539 words of memory out of 5000000
- 11360 multiletter control sequences out of 15000+600000
+ 11534 strings out of 493315
+ 184402 string characters out of 6137904
+ 265102 words of memory out of 5000000
+ 11913 multiletter control sequences out of 15000+600000
  10544 words of font info for 37 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 35i,8n,40p,815b,1711s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 35i,8n,40p,815b,1734s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
@@ -1997,10 +2394,10 @@ al/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/
 texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/t
 exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
 xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on book.pdf (191 pages, 1479411 bytes).
+Output written on book.pdf (254 pages, 1411775 bytes).
 PDF statistics:
- 4570 PDF objects out of 5155 (max. 8388607)
- 4074 compressed objects within 41 object streams
- 2501 named destinations out of 2984 (max. 500000)
- 1875 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 5335 PDF objects out of 6186 (max. 8388607)
+ 4743 compressed objects within 48 object streams
+ 2853 named destinations out of 2984 (max. 500000)
+ 2148 words of extra memory for PDF output out of 10000 (max. 10000000)
 
