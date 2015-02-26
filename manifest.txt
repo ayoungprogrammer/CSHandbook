@@ -19,12 +19,15 @@
 	((((Data Structures.Introduction))))
 	` Stack `
 		`` Stack ``
-		((((Stack))))
+		((((Stack.Introduction))))
 		`` Vector ``
 		((((Vector))))
+		`` Exercises ``
+		((((Stack.Exercises))))
 	` Queue `
 		`` Queue ``
-		((((Queue))))
+		((((Queue.Introduction))))
+		((((Queue.Implementation))))
 		`` Linked List ``
 		((((Linked List))))
 	` Sets `

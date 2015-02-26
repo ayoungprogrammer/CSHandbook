@@ -16,6 +16,7 @@
 \contentsline {subsubsection}{Step 2 - Find a solution}{13}{section*.7}
 \contentsline {subsubsection}{Step 3 - Start coding}{14}{section*.8}
 \contentsline {subsection}{\numberline {2.1.6}End Interview}{14}{subsection.2.1.6}
+\contentsline {subsection}{\numberline {2.1.7}Practice Problems}{14}{subsection.2.1.7}
 \contentsline {part}{I\hspace {1em} Fundamentals }{15}{part.1}
 \contentsline {chapter}{\numberline {3} Fundamentals }{16}{chapter.3}
 \contentsline {section}{\numberline {3.1} Runtime and Memory }{16}{section.3.1}
@@ -38,12 +39,12 @@
 \contentsline {subsubsection}{Implementation}{28}{section*.16}
 \contentsline {subsection}{\numberline {4.1.4}Calculate Exponential}{28}{subsection.4.1.4}
 \contentsline {subsubsection}{Formalization}{29}{section*.17}
-\contentsline {subsubsection}{Implementation}{29}{section*.18}
+\contentsline {subsubsection}{Implementation}{30}{section*.18}
 \contentsline {subsection}{\numberline {4.1.5}Exercises}{30}{subsection.4.1.5}
 \contentsline {section}{\numberline {4.2} Advanced Recursion }{30}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Number of paths}{30}{subsection.4.2.1}
-\contentsline {subsubsection}{Formalization}{31}{section*.19}
-\contentsline {subsubsection}{Implementation}{32}{section*.20}
+\contentsline {subsection}{\numberline {4.2.1}Number of paths}{31}{subsection.4.2.1}
+\contentsline {subsubsection}{Formalization}{32}{section*.19}
+\contentsline {subsubsection}{Implementation}{33}{section*.20}
 \contentsline {subsection}{\numberline {4.2.2}Towers of Hanoi}{33}{subsection.4.2.2}
 \contentsline {subsubsection}{Formalization}{38}{section*.21}
 \contentsline {subsubsection}{Implementation}{40}{section*.22}
@@ -53,212 +54,209 @@
 \contentsline {part}{III\hspace {1em} Data Structures }{44}{part.3}
 \contentsline {chapter}{\numberline {5} Stack }{47}{chapter.5}
 \contentsline {section}{\numberline {5.1} Stack }{47}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Implementation}{49}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Exercises}{49}{subsection.5.1.2}
 \contentsline {section}{\numberline {5.2} Vector }{49}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Class}{50}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.1}Class}{49}{subsection.5.2.1}
 \contentsline {subsection}{\numberline {5.2.2}Resize}{50}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Add Element}{51}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Pop}{52}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.3}Add Element}{50}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Pop}{51}{subsection.5.2.4}
 \contentsline {subsection}{\numberline {5.2.5}Remove}{52}{subsection.5.2.5}
 \contentsline {subsection}{\numberline {5.2.6}Get Element}{53}{subsection.5.2.6}
-\contentsline {subsection}{\numberline {5.2.7}Insert Element}{54}{subsection.5.2.7}
+\contentsline {subsection}{\numberline {5.2.7}Insert Element}{53}{subsection.5.2.7}
 \contentsline {subsection}{\numberline {5.2.8}Exercises}{55}{subsection.5.2.8}
+\contentsline {section}{\numberline {5.3} Exercises }{55}{section.5.3}
 \contentsline {chapter}{\numberline {6} Queue }{56}{chapter.6}
 \contentsline {section}{\numberline {6.1} Queue }{56}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Implementation}{57}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Exercises}{58}{subsection.6.1.2}
 \contentsline {section}{\numberline {6.2} Linked List }{58}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Link Class}{60}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}LinkedList Class}{60}{subsection.6.2.2}
-\contentsline {subsection}{\numberline {6.2.3}Push}{61}{subsection.6.2.3}
-\contentsline {subsection}{\numberline {6.2.4}Pop}{62}{subsection.6.2.4}
-\contentsline {subsection}{\numberline {6.2.5}Get}{63}{subsection.6.2.5}
-\contentsline {subsection}{\numberline {6.2.6}Delete}{64}{subsection.6.2.6}
-\contentsline {subsection}{\numberline {6.2.7}Exercises}{65}{subsection.6.2.7}
-\contentsline {chapter}{\numberline {7} Sets }{67}{chapter.7}
-\contentsline {section}{\numberline {7.1} Sets }{67}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}Implementation}{67}{subsection.7.1.1}
-\contentsline {subsection}{\numberline {7.1.2}Exercises}{68}{subsection.7.1.2}
-\contentsline {section}{\numberline {7.2} Hash Set }{68}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}Implementation}{69}{subsection.7.2.1}
-\contentsline {subsubsection}{Class}{71}{section*.24}
-\contentsline {subsubsection}{Hash code}{71}{section*.25}
-\contentsline {subsubsection}{Resize}{72}{section*.26}
-\contentsline {subsubsection}{Insert}{73}{section*.27}
-\contentsline {subsubsection}{Contains}{75}{section*.28}
-\contentsline {subsubsection}{Remove}{77}{section*.29}
-\contentsline {subsection}{\numberline {7.2.2}Exercises}{80}{subsection.7.2.2}
-\contentsline {section}{\numberline {7.3} Binary Search Tree }{81}{section.7.3}
-\contentsline {subsubsection}{Prerequisites}{82}{section*.30}
-\contentsline {subsection}{\numberline {7.3.1}Implementation}{82}{subsection.7.3.1}
-\contentsline {subsubsection}{Class}{83}{section*.31}
-\contentsline {subsubsection}{Insert}{85}{section*.32}
-\contentsline {subsubsection}{Contains}{88}{section*.33}
-\contentsline {subsubsection}{Remove}{90}{section*.34}
-\contentsline {subsubsection}{Print Tree}{97}{section*.35}
-\contentsline {subsection}{\numberline {7.3.2}Exercises}{97}{subsection.7.3.2}
-\contentsline {section}{\numberline {7.4} Tree Set }{97}{section.7.4}
-\contentsline {subsection}{\numberline {7.4.1}Implementation}{98}{subsection.7.4.1}
-\contentsline {subsection}{\numberline {7.4.2}Exercises}{98}{subsection.7.4.2}
-\contentsline {chapter}{\numberline {8} Maps }{99}{chapter.8}
-\contentsline {section}{\numberline {8.1} Maps }{99}{section.8.1}
-\contentsline {subsection}{\numberline {8.1.1}Implementation}{100}{subsection.8.1.1}
-\contentsline {subsection}{\numberline {8.1.2}Exercises}{100}{subsection.8.1.2}
-\contentsline {section}{\numberline {8.2} Hash Map }{100}{section.8.2}
-\contentsline {subsection}{\numberline {8.2.1}Implementation}{100}{subsection.8.2.1}
-\contentsline {subsubsection}{Class}{100}{section*.36}
-\contentsline {subsubsection}{Hash}{101}{section*.37}
-\contentsline {subsubsection}{Resize}{101}{section*.38}
-\contentsline {subsubsection}{Insert}{102}{section*.39}
-\contentsline {subsubsection}{Get}{103}{section*.40}
-\contentsline {subsubsection}{Remove}{103}{section*.41}
-\contentsline {subsection}{\numberline {8.2.2}Exercises}{104}{subsection.8.2.2}
-\contentsline {section}{\numberline {8.3} Tree Map }{104}{section.8.3}
-\contentsline {subsection}{\numberline {8.3.1}Implementation}{104}{subsection.8.3.1}
-\contentsline {subsubsection}{Class}{105}{section*.42}
-\contentsline {subsubsection}{Insert}{107}{section*.43}
-\contentsline {subsubsection}{Get}{108}{section*.44}
-\contentsline {subsubsection}{Remove}{108}{section*.45}
-\contentsline {subsection}{\numberline {8.3.2}Exercises}{115}{subsection.8.3.2}
-\contentsline {chapter}{\numberline {9} Priority Queue }{116}{chapter.9}
-\contentsline {subsection}{\numberline {9.0.3}Implementation}{117}{subsection.9.0.3}
-\contentsline {subsection}{\numberline {9.0.4}Applications}{117}{subsection.9.0.4}
-\contentsline {subsection}{\numberline {9.0.5}Exercises}{117}{subsection.9.0.5}
-\contentsline {section}{\numberline {9.1} Heap }{117}{section.9.1}
-\contentsline {subsection}{\numberline {9.1.1}Implementation}{119}{subsection.9.1.1}
-\contentsline {subsubsection}{Class}{119}{section*.46}
-\contentsline {subsubsection}{Heapify}{120}{section*.47}
-\contentsline {subsubsection}{Resize}{120}{section*.48}
-\contentsline {subsubsection}{Push}{121}{section*.49}
-\contentsline {subsubsection}{Pop}{124}{section*.50}
-\contentsline {subsection}{\numberline {9.1.2}Applications}{126}{subsection.9.1.2}
-\contentsline {subsection}{\numberline {9.1.3}Exercises}{126}{subsection.9.1.3}
-\contentsline {part}{IV\hspace {1em} Sorting }{127}{part.4}
-\contentsline {chapter}{\numberline {10} Slow Sorts }{129}{chapter.10}
-\contentsline {section}{\numberline {10.1} Bubble Sort }{129}{section.10.1}
-\contentsline {subsection}{\numberline {10.1.1}Implementation}{130}{subsection.10.1.1}
-\contentsline {section}{\numberline {10.2} Selection Sort }{130}{section.10.2}
-\contentsline {subsection}{\numberline {10.2.1}Implementation}{130}{subsection.10.2.1}
-\contentsline {section}{\numberline {10.3} Insertion Sort }{131}{section.10.3}
-\contentsline {subsection}{\numberline {10.3.1}Implementation}{131}{subsection.10.3.1}
-\contentsline {chapter}{\numberline {11} Fast Sorts }{133}{chapter.11}
-\contentsline {section}{\numberline {11.1} Heap Sort }{133}{section.11.1}
-\contentsline {subsubsection}{Implementation}{133}{section*.51}
-\contentsline {section}{\numberline {11.2} Merge Sort }{134}{section.11.2}
-\contentsline {subsection}{\numberline {11.2.1}Implementation}{134}{subsection.11.2.1}
-\contentsline {subsubsection}{Formalization}{135}{section*.52}
-\contentsline {subsubsection}{Code}{136}{section*.53}
-\contentsline {section}{\numberline {11.3} Quick Sort }{138}{section.11.3}
-\contentsline {subsection}{\numberline {11.3.1}Implementation}{139}{subsection.11.3.1}
-\contentsline {chapter}{\numberline {12} Super Slow Sorts }{141}{chapter.12}
-\contentsline {section}{\numberline {12.1} Bozo Sort }{141}{section.12.1}
-\contentsline {subsection}{\numberline {12.1.1}Implementation}{141}{subsection.12.1.1}
-\contentsline {section}{\numberline {12.2} Permutation Sort }{142}{section.12.2}
-\contentsline {subsubsection}{Implementation}{142}{section*.54}
-\contentsline {section}{\numberline {12.3} Miracle Sort }{142}{section.12.3}
-\contentsline {subsection}{\numberline {12.3.1}Implementation}{143}{subsection.12.3.1}
-\contentsline {part}{V\hspace {1em} Graph Theory }{144}{part.5}
-\contentsline {chapter}{\numberline {13} Representation }{147}{chapter.13}
-\contentsline {subsubsection}{Adjacency Matrix}{147}{section*.55}
-\contentsline {subsubsection}{Adjacency List}{148}{section*.56}
-\contentsline {section}{\numberline {13.1} Adjacency Matrix }{148}{section.13.1}
-\contentsline {subsection}{\numberline {13.1.1}Implementation}{149}{subsection.13.1.1}
-\contentsline {section}{\numberline {13.2} Adjacency List }{149}{section.13.2}
-\contentsline {chapter}{\numberline {14} Tree }{151}{chapter.14}
-\contentsline {subsubsection}{Spanning Tree}{152}{section*.57}
-\contentsline {section}{\numberline {14.1} Prim's }{152}{section.14.1}
-\contentsline {subsection}{\numberline {14.1.1}Implementation}{152}{subsection.14.1.1}
-\contentsline {subsubsection}{Example}{153}{section*.58}
-\contentsline {subsubsection}{Java Code}{156}{section*.59}
-\contentsline {subsection}{\numberline {14.1.2}Applications}{158}{subsection.14.1.2}
-\contentsline {subsection}{\numberline {14.1.3}Exercises}{158}{subsection.14.1.3}
-\contentsline {section}{\numberline {14.2} Kruskal }{158}{section.14.2}
-\contentsline {subsection}{\numberline {14.2.1}Implementation}{158}{subsection.14.2.1}
-\contentsline {subsubsection}{Example}{159}{section*.60}
-\contentsline {subsubsection}{Code}{161}{section*.61}
-\contentsline {subsection}{\numberline {14.2.2}Applications}{162}{subsection.14.2.2}
-\contentsline {subsection}{\numberline {14.2.3}Exercises}{162}{subsection.14.2.3}
-\contentsline {chapter}{\numberline {15} Shortest Path }{164}{chapter.15}
-\contentsline {subsubsection}{Algorithms}{164}{section*.62}
-\contentsline {section}{\numberline {15.1} Dijkstra's }{164}{section.15.1}
-\contentsline {subsection}{\numberline {15.1.1}Implementation}{165}{subsection.15.1.1}
-\contentsline {subsubsection}{Java}{169}{section*.63}
-\contentsline {subsection}{\numberline {15.1.2}Applications}{170}{subsection.15.1.2}
-\contentsline {subsection}{\numberline {15.1.3}Practice Exercises}{170}{subsection.15.1.3}
-\contentsline {section}{\numberline {15.2} Bellman Ford }{171}{section.15.2}
-\contentsline {subsection}{\numberline {15.2.1}Implementation}{171}{subsection.15.2.1}
-\contentsline {subsection}{\numberline {15.2.2}Applications}{176}{subsection.15.2.2}
-\contentsline {subsection}{\numberline {15.2.3}Exercises}{176}{subsection.15.2.3}
-\contentsline {section}{\numberline {15.3} Floyd Warsahll }{176}{section.15.3}
-\contentsline {subsection}{\numberline {15.3.1}Implementation}{177}{subsection.15.3.1}
-\contentsline {subsubsection}{Formalization}{177}{section*.64}
-\contentsline {subsubsection}{Code}{178}{section*.65}
-\contentsline {subsection}{\numberline {15.3.2}Applications}{180}{subsection.15.3.2}
-\contentsline {subsection}{\numberline {15.3.3}Exercises}{180}{subsection.15.3.3}
-\contentsline {chapter}{\numberline {16} Cycle Detection }{181}{chapter.16}
-\contentsline {subsection}{\numberline {16.0.4}Implementation}{181}{subsection.16.0.4}
-\contentsline {part}{VI\hspace {1em} Searches }{183}{part.6}
-\contentsline {chapter}{\numberline {17} Searches }{184}{chapter.17}
-\contentsline {section}{\numberline {17.1} Binary Search }{184}{section.17.1}
-\contentsline {subsection}{\numberline {17.1.1}Binary Search}{184}{subsection.17.1.1}
-\contentsline {subsubsection}{Example}{185}{section*.66}
-\contentsline {subsection}{\numberline {17.1.2}Implementation}{186}{subsection.17.1.2}
-\contentsline {subsubsection}{Generic Binary Search}{186}{section*.67}
-\contentsline {subsection}{\numberline {17.1.3}Exercises}{186}{subsection.17.1.3}
-\contentsline {section}{\numberline {17.2} Ternary Search }{187}{section.17.2}
-\contentsline {subsection}{\numberline {17.2.1}Implementation}{187}{subsection.17.2.1}
-\contentsline {subsubsection}{Proof}{188}{section*.68}
-\contentsline {subsubsection}{Example}{191}{section*.69}
-\contentsline {subsubsection}{Formalization}{194}{section*.70}
-\contentsline {subsubsection}{Code}{195}{section*.71}
-\contentsline {section}{\numberline {17.3} Depth First Search }{195}{section.17.3}
-\contentsline {subsection}{\numberline {17.3.1}Implementation}{196}{subsection.17.3.1}
-\contentsline {subsubsection}{Binary Tree Transversal}{197}{section*.72}
-\contentsline {subsubsection}{Binary Tree Preorder}{198}{section*.73}
-\contentsline {subsubsection}{Binary Tree Postorder}{199}{section*.74}
-\contentsline {subsubsection}{Graph Transversal}{199}{section*.75}
-\contentsline {subsection}{\numberline {17.3.2}Memory}{200}{subsection.17.3.2}
-\contentsline {subsection}{\numberline {17.3.3}Exercises}{200}{subsection.17.3.3}
-\contentsline {section}{\numberline {17.4} Breadth First Search }{200}{section.17.4}
-\contentsline {subsection}{\numberline {17.4.1}Implementation}{201}{subsection.17.4.1}
-\contentsline {subsection}{\numberline {17.4.2}Exercises}{202}{subsection.17.4.2}
-\contentsline {section}{\numberline {17.5} Flood Fill }{203}{section.17.5}
-\contentsline {subsection}{\numberline {17.5.1}General solution}{203}{subsection.17.5.1}
-\contentsline {subsubsection}{General DFS}{203}{section*.76}
-\contentsline {subsubsection}{General BFS}{204}{section*.77}
-\contentsline {subsection}{\numberline {17.5.2}Bucket Fill}{204}{subsection.17.5.2}
-\contentsline {subsubsection}{DFS Solution}{207}{section*.78}
-\contentsline {subsubsection}{BFS Solution}{207}{section*.79}
-\contentsline {subsection}{\numberline {17.5.3}Exercises}{208}{subsection.17.5.3}
-\contentsline {section}{\numberline {17.6} Backtracking }{209}{section.17.6}
-\contentsline {subsection}{\numberline {17.6.1}General Solution}{210}{subsection.17.6.1}
-\contentsline {subsection}{\numberline {17.6.2}List all sets}{211}{subsection.17.6.2}
-\contentsline {subsubsection}{Recursive Method}{212}{section*.80}
-\contentsline {subsubsection}{Formalization}{214}{section*.81}
-\contentsline {subsubsection}{Implementation}{215}{section*.82}
-\contentsline {subsection}{\numberline {17.6.3}N Queen Problem}{216}{subsection.17.6.3}
-\contentsline {subsubsection}{Formalization}{220}{section*.83}
-\contentsline {subsection}{\numberline {17.6.4}Exercises}{223}{subsection.17.6.4}
-\contentsline {part}{VII\hspace {1em} Dynamic Programming }{224}{part.7}
-\contentsline {chapter}{\numberline {18} Dynamic Programming }{225}{chapter.18}
-\contentsline {section}{\numberline {18.1} Dynamic Programming }{225}{section.18.1}
-\contentsline {subsection}{\numberline {18.1.1}Fibonacci Sequence}{225}{subsection.18.1.1}
-\contentsline {subsubsection}{Formalization}{226}{section*.84}
-\contentsline {subsubsection}{Code}{227}{section*.85}
-\contentsline {subsection}{\numberline {18.1.2}Coin Problem}{228}{subsection.18.1.2}
-\contentsline {subsection}{\numberline {18.1.3}Knapsack Problem}{233}{subsection.18.1.3}
-\contentsline {subsubsection}{Formalization}{236}{section*.86}
-\contentsline {subsection}{\numberline {18.1.4}Number of Paths}{237}{subsection.18.1.4}
-\contentsline {subsection}{\numberline {18.1.5}Exercises}{239}{subsection.18.1.5}
-\contentsline {section}{\numberline {18.2} Advanced Dynamic Programming }{239}{section.18.2}
-\contentsline {subsection}{\numberline {18.2.1}Longest Common Subsequence}{239}{subsection.18.2.1}
-\contentsline {subsection}{\numberline {18.2.2}Zero-One Knapsack Problem}{241}{subsection.18.2.2}
-\contentsline {part}{VIII\hspace {1em} Greedy Algorithm }{243}{part.8}
-\contentsline {chapter}{\numberline {19} Greedy Algorithm }{244}{chapter.19}
-\contentsline {section}{\numberline {19.1} Greedy Algorithm }{244}{section.19.1}
-\contentsline {subsection}{\numberline {19.1.1}Coin Problem}{244}{subsection.19.1.1}
-\contentsline {subsection}{\numberline {19.1.2}Interval Scheduling}{245}{subsection.19.1.2}
-\contentsline {subsection}{\numberline {19.1.3}Couple Matching Problem}{247}{subsection.19.1.3}
-\contentsline {subsection}{\numberline {19.1.4}Gas Tank Problem}{249}{subsection.19.1.4}
-\contentsline {subsection}{\numberline {19.1.5}Exercises}{252}{subsection.19.1.5}
+\contentsline {subsection}{\numberline {6.2.1}Link Class}{59}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}LinkedList Class}{59}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}Push}{60}{subsection.6.2.3}
+\contentsline {subsection}{\numberline {6.2.4}Pop}{61}{subsection.6.2.4}
+\contentsline {subsection}{\numberline {6.2.5}Get}{62}{subsection.6.2.5}
+\contentsline {subsection}{\numberline {6.2.6}Delete}{63}{subsection.6.2.6}
+\contentsline {subsection}{\numberline {6.2.7}Exercises}{64}{subsection.6.2.7}
+\contentsline {chapter}{\numberline {7} Sets }{66}{chapter.7}
+\contentsline {section}{\numberline {7.1} Sets }{66}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Implementation}{66}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Exercises}{67}{subsection.7.1.2}
+\contentsline {section}{\numberline {7.2} Hash Set }{67}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Implementation}{68}{subsection.7.2.1}
+\contentsline {subsubsection}{Class}{70}{section*.24}
+\contentsline {subsubsection}{Hash code}{70}{section*.25}
+\contentsline {subsubsection}{Resize}{71}{section*.26}
+\contentsline {subsubsection}{Insert}{72}{section*.27}
+\contentsline {subsubsection}{Contains}{74}{section*.28}
+\contentsline {subsubsection}{Remove}{76}{section*.29}
+\contentsline {subsection}{\numberline {7.2.2}Exercises}{79}{subsection.7.2.2}
+\contentsline {section}{\numberline {7.3} Binary Search Tree }{80}{section.7.3}
+\contentsline {subsubsection}{Prerequisites}{81}{section*.30}
+\contentsline {subsection}{\numberline {7.3.1}Implementation}{81}{subsection.7.3.1}
+\contentsline {subsubsection}{Class}{82}{section*.31}
+\contentsline {subsubsection}{Insert}{84}{section*.32}
+\contentsline {subsubsection}{Contains}{87}{section*.33}
+\contentsline {subsubsection}{Remove}{89}{section*.34}
+\contentsline {subsubsection}{Print Tree}{96}{section*.35}
+\contentsline {subsection}{\numberline {7.3.2}Exercises}{96}{subsection.7.3.2}
+\contentsline {section}{\numberline {7.4} Tree Set }{96}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}Implementation}{97}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.2}Exercises}{97}{subsection.7.4.2}
+\contentsline {chapter}{\numberline {8} Maps }{98}{chapter.8}
+\contentsline {section}{\numberline {8.1} Maps }{98}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}Implementation}{99}{subsection.8.1.1}
+\contentsline {subsection}{\numberline {8.1.2}Exercises}{99}{subsection.8.1.2}
+\contentsline {section}{\numberline {8.2} Hash Map }{99}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}Implementation}{99}{subsection.8.2.1}
+\contentsline {subsubsection}{Class}{99}{section*.36}
+\contentsline {subsubsection}{Hash}{100}{section*.37}
+\contentsline {subsubsection}{Resize}{100}{section*.38}
+\contentsline {subsubsection}{Insert}{101}{section*.39}
+\contentsline {subsubsection}{Get}{102}{section*.40}
+\contentsline {subsubsection}{Remove}{102}{section*.41}
+\contentsline {subsection}{\numberline {8.2.2}Exercises}{103}{subsection.8.2.2}
+\contentsline {section}{\numberline {8.3} Tree Map }{103}{section.8.3}
+\contentsline {subsection}{\numberline {8.3.1}Implementation}{103}{subsection.8.3.1}
+\contentsline {subsubsection}{Class}{104}{section*.42}
+\contentsline {subsubsection}{Insert}{106}{section*.43}
+\contentsline {subsubsection}{Get}{107}{section*.44}
+\contentsline {subsubsection}{Remove}{107}{section*.45}
+\contentsline {subsection}{\numberline {8.3.2}Exercises}{114}{subsection.8.3.2}
+\contentsline {chapter}{\numberline {9} Priority Queue }{115}{chapter.9}
+\contentsline {subsection}{\numberline {9.0.3}Implementation}{116}{subsection.9.0.3}
+\contentsline {subsection}{\numberline {9.0.4}Applications}{116}{subsection.9.0.4}
+\contentsline {subsection}{\numberline {9.0.5}Exercises}{116}{subsection.9.0.5}
+\contentsline {section}{\numberline {9.1} Heap }{116}{section.9.1}
+\contentsline {subsection}{\numberline {9.1.1}Implementation}{118}{subsection.9.1.1}
+\contentsline {subsubsection}{Class}{118}{section*.46}
+\contentsline {subsubsection}{Heapify}{119}{section*.47}
+\contentsline {subsubsection}{Resize}{119}{section*.48}
+\contentsline {subsubsection}{Push}{120}{section*.49}
+\contentsline {subsubsection}{Pop}{123}{section*.50}
+\contentsline {subsection}{\numberline {9.1.2}Applications}{125}{subsection.9.1.2}
+\contentsline {subsection}{\numberline {9.1.3}Exercises}{125}{subsection.9.1.3}
+\contentsline {part}{IV\hspace {1em} Sorting }{126}{part.4}
+\contentsline {chapter}{\numberline {10} Slow Sorts }{128}{chapter.10}
+\contentsline {section}{\numberline {10.1} Bubble Sort }{128}{section.10.1}
+\contentsline {subsection}{\numberline {10.1.1}Implementation}{129}{subsection.10.1.1}
+\contentsline {section}{\numberline {10.2} Selection Sort }{129}{section.10.2}
+\contentsline {subsection}{\numberline {10.2.1}Implementation}{129}{subsection.10.2.1}
+\contentsline {section}{\numberline {10.3} Insertion Sort }{130}{section.10.3}
+\contentsline {subsection}{\numberline {10.3.1}Implementation}{130}{subsection.10.3.1}
+\contentsline {chapter}{\numberline {11} Fast Sorts }{132}{chapter.11}
+\contentsline {section}{\numberline {11.1} Heap Sort }{132}{section.11.1}
+\contentsline {subsubsection}{Implementation}{132}{section*.51}
+\contentsline {section}{\numberline {11.2} Merge Sort }{133}{section.11.2}
+\contentsline {subsection}{\numberline {11.2.1}Implementation}{133}{subsection.11.2.1}
+\contentsline {subsubsection}{Formalization}{134}{section*.52}
+\contentsline {subsubsection}{Code}{135}{section*.53}
+\contentsline {section}{\numberline {11.3} Quick Sort }{137}{section.11.3}
+\contentsline {subsection}{\numberline {11.3.1}Implementation}{138}{subsection.11.3.1}
+\contentsline {chapter}{\numberline {12} Super Slow Sorts }{140}{chapter.12}
+\contentsline {section}{\numberline {12.1} Bozo Sort }{140}{section.12.1}
+\contentsline {subsection}{\numberline {12.1.1}Implementation}{140}{subsection.12.1.1}
+\contentsline {section}{\numberline {12.2} Permutation Sort }{141}{section.12.2}
+\contentsline {subsubsection}{Implementation}{141}{section*.54}
+\contentsline {section}{\numberline {12.3} Miracle Sort }{141}{section.12.3}
+\contentsline {subsection}{\numberline {12.3.1}Implementation}{142}{subsection.12.3.1}
+\contentsline {part}{V\hspace {1em} Graph Theory }{143}{part.5}
+\contentsline {chapter}{\numberline {13} Representation }{146}{chapter.13}
+\contentsline {subsubsection}{Adjacency Matrix}{146}{section*.55}
+\contentsline {subsubsection}{Adjacency List}{147}{section*.56}
+\contentsline {section}{\numberline {13.1} Adjacency Matrix }{147}{section.13.1}
+\contentsline {subsection}{\numberline {13.1.1}Implementation}{148}{subsection.13.1.1}
+\contentsline {section}{\numberline {13.2} Adjacency List }{148}{section.13.2}
+\contentsline {chapter}{\numberline {14} Tree }{150}{chapter.14}
+\contentsline {subsubsection}{Spanning Tree}{151}{section*.57}
+\contentsline {section}{\numberline {14.1} Prim's }{151}{section.14.1}
+\contentsline {subsection}{\numberline {14.1.1}Implementation}{151}{subsection.14.1.1}
+\contentsline {subsubsection}{Example}{152}{section*.58}
+\contentsline {subsubsection}{Java Code}{155}{section*.59}
+\contentsline {subsection}{\numberline {14.1.2}Applications}{157}{subsection.14.1.2}
+\contentsline {subsection}{\numberline {14.1.3}Exercises}{157}{subsection.14.1.3}
+\contentsline {section}{\numberline {14.2} Kruskal }{157}{section.14.2}
+\contentsline {subsection}{\numberline {14.2.1}Implementation}{157}{subsection.14.2.1}
+\contentsline {subsubsection}{Example}{158}{section*.60}
+\contentsline {subsubsection}{Code}{160}{section*.61}
+\contentsline {subsection}{\numberline {14.2.2}Applications}{161}{subsection.14.2.2}
+\contentsline {subsection}{\numberline {14.2.3}Exercises}{161}{subsection.14.2.3}
+\contentsline {chapter}{\numberline {15} Shortest Path }{163}{chapter.15}
+\contentsline {subsubsection}{Algorithms}{163}{section*.62}
+\contentsline {section}{\numberline {15.1} Dijkstra's }{163}{section.15.1}
+\contentsline {subsection}{\numberline {15.1.1}Implementation}{164}{subsection.15.1.1}
+\contentsline {subsubsection}{Java}{168}{section*.63}
+\contentsline {subsection}{\numberline {15.1.2}Applications}{169}{subsection.15.1.2}
+\contentsline {subsection}{\numberline {15.1.3}Practice Exercises}{169}{subsection.15.1.3}
+\contentsline {section}{\numberline {15.2} Bellman Ford }{170}{section.15.2}
+\contentsline {subsection}{\numberline {15.2.1}Implementation}{170}{subsection.15.2.1}
+\contentsline {subsection}{\numberline {15.2.2}Applications}{175}{subsection.15.2.2}
+\contentsline {subsection}{\numberline {15.2.3}Exercises}{175}{subsection.15.2.3}
+\contentsline {section}{\numberline {15.3} Floyd Warsahll }{175}{section.15.3}
+\contentsline {subsection}{\numberline {15.3.1}Implementation}{176}{subsection.15.3.1}
+\contentsline {subsubsection}{Formalization}{176}{section*.64}
+\contentsline {subsubsection}{Code}{177}{section*.65}
+\contentsline {subsection}{\numberline {15.3.2}Applications}{179}{subsection.15.3.2}
+\contentsline {subsection}{\numberline {15.3.3}Exercises}{179}{subsection.15.3.3}
+\contentsline {chapter}{\numberline {16} Cycle Detection }{180}{chapter.16}
+\contentsline {subsection}{\numberline {16.0.4}Implementation}{180}{subsection.16.0.4}
+\contentsline {part}{VI\hspace {1em} Searches }{182}{part.6}
+\contentsline {chapter}{\numberline {17} Searches }{183}{chapter.17}
+\contentsline {section}{\numberline {17.1} Binary Search }{183}{section.17.1}
+\contentsline {subsection}{\numberline {17.1.1}Binary Search}{183}{subsection.17.1.1}
+\contentsline {subsubsection}{Example}{184}{section*.66}
+\contentsline {subsection}{\numberline {17.1.2}Implementation}{185}{subsection.17.1.2}
+\contentsline {subsubsection}{Generic Binary Search}{185}{section*.67}
+\contentsline {subsection}{\numberline {17.1.3}Exercises}{185}{subsection.17.1.3}
+\contentsline {section}{\numberline {17.2} Ternary Search }{186}{section.17.2}
+\contentsline {subsection}{\numberline {17.2.1}Implementation}{186}{subsection.17.2.1}
+\contentsline {subsubsection}{Proof}{187}{section*.68}
+\contentsline {subsubsection}{Example}{190}{section*.69}
+\contentsline {subsubsection}{Formalization}{193}{section*.70}
+\contentsline {subsubsection}{Code}{194}{section*.71}
+\contentsline {section}{\numberline {17.3} Depth First Search }{194}{section.17.3}
+\contentsline {subsection}{\numberline {17.3.1}Implementation}{195}{subsection.17.3.1}
+\contentsline {subsubsection}{Binary Tree Transversal}{196}{section*.72}
+\contentsline {subsubsection}{Binary Tree Preorder}{197}{section*.73}
+\contentsline {subsubsection}{Binary Tree Postorder}{198}{section*.74}
+\contentsline {subsubsection}{Graph Transversal}{198}{section*.75}
+\contentsline {subsection}{\numberline {17.3.2}Memory}{199}{subsection.17.3.2}
+\contentsline {subsection}{\numberline {17.3.3}Exercises}{199}{subsection.17.3.3}
+\contentsline {section}{\numberline {17.4} Breadth First Search }{199}{section.17.4}
+\contentsline {subsection}{\numberline {17.4.1}Implementation}{200}{subsection.17.4.1}
+\contentsline {subsection}{\numberline {17.4.2}Exercises}{201}{subsection.17.4.2}
+\contentsline {section}{\numberline {17.5} Flood Fill }{202}{section.17.5}
+\contentsline {subsection}{\numberline {17.5.1}General solution}{202}{subsection.17.5.1}
+\contentsline {subsubsection}{General DFS}{202}{section*.76}
+\contentsline {subsubsection}{General BFS}{203}{section*.77}
+\contentsline {subsection}{\numberline {17.5.2}Bucket Fill}{203}{subsection.17.5.2}
+\contentsline {subsubsection}{DFS Solution}{206}{section*.78}
+\contentsline {subsubsection}{BFS Solution}{206}{section*.79}
+\contentsline {subsection}{\numberline {17.5.3}Exercises}{207}{subsection.17.5.3}
+\contentsline {section}{\numberline {17.6} Backtracking }{208}{section.17.6}
+\contentsline {subsection}{\numberline {17.6.1}General Solution}{209}{subsection.17.6.1}
+\contentsline {subsection}{\numberline {17.6.2}List all sets}{210}{subsection.17.6.2}
+\contentsline {subsubsection}{Recursive Method}{211}{section*.80}
+\contentsline {subsubsection}{Formalization}{213}{section*.81}
+\contentsline {subsubsection}{Implementation}{214}{section*.82}
+\contentsline {subsection}{\numberline {17.6.3}N Queen Problem}{215}{subsection.17.6.3}
+\contentsline {subsubsection}{Formalization}{219}{section*.83}
+\contentsline {subsection}{\numberline {17.6.4}Exercises}{222}{subsection.17.6.4}
+\contentsline {part}{VII\hspace {1em} Dynamic Programming }{223}{part.7}
+\contentsline {chapter}{\numberline {18} Dynamic Programming }{224}{chapter.18}
+\contentsline {section}{\numberline {18.1} Dynamic Programming }{224}{section.18.1}
+\contentsline {subsection}{\numberline {18.1.1}Fibonacci Sequence}{224}{subsection.18.1.1}
+\contentsline {subsubsection}{Formalization}{225}{section*.84}
+\contentsline {subsubsection}{Code}{226}{section*.85}
+\contentsline {subsection}{\numberline {18.1.2}Coin Problem}{227}{subsection.18.1.2}
+\contentsline {subsection}{\numberline {18.1.3}Knapsack Problem}{232}{subsection.18.1.3}
+\contentsline {subsubsection}{Formalization}{235}{section*.86}
+\contentsline {subsection}{\numberline {18.1.4}Number of Paths}{236}{subsection.18.1.4}
+\contentsline {subsection}{\numberline {18.1.5}Exercises}{238}{subsection.18.1.5}
+\contentsline {section}{\numberline {18.2} Advanced Dynamic Programming }{238}{section.18.2}
+\contentsline {subsection}{\numberline {18.2.1}Longest Common Subsequence}{238}{subsection.18.2.1}
+\contentsline {subsection}{\numberline {18.2.2}Zero-One Knapsack Problem}{240}{subsection.18.2.2}
+\contentsline {part}{VIII\hspace {1em} Greedy Algorithm }{242}{part.8}
+\contentsline {chapter}{\numberline {19} Greedy Algorithm }{243}{chapter.19}
+\contentsline {section}{\numberline {19.1} Greedy Algorithm }{243}{section.19.1}
+\contentsline {subsection}{\numberline {19.1.1}Coin Problem}{243}{subsection.19.1.1}
+\contentsline {subsection}{\numberline {19.1.2}Interval Scheduling}{244}{subsection.19.1.2}
+\contentsline {subsection}{\numberline {19.1.3}Couple Matching Problem}{246}{subsection.19.1.3}
+\contentsline {subsection}{\numberline {19.1.4}Gas Tank Problem}{248}{subsection.19.1.4}
+\contentsline {subsection}{\numberline {19.1.5}Exercises}{251}{subsection.19.1.5}

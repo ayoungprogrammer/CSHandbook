@@ -40,7 +40,7 @@ function latexParse($str){
 	// <h3>header3</h3> -> \subsection{header3}
 	$str = preg_replace('/<h3>(.*?)<\/h3>/','\subsubsection{$1}',$str);
 
-	// <img src = "\.\/pubicsrc">
+	// <img src = "\.\/public_html....."> -> \includegraphics
 	$str = preg_replace('/<img src="\.\/public_html\/img\/uploads\/(.*?)">/',
 		'\vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{$1}',$str);
 
@@ -75,20 +75,30 @@ function latexParse($str){
 	$str = preg_replace('/<script>.*?<\/script>/s','',$str);
 
 	// <sup>exp</sup> -> $^{exp}$
-	$str = preg_replace('/<sup>(.*?)<\/sup>/','\$^{$1}\$',$str);
+	$str = preg_replace('/<sup>(.*?)<\/sup>/', '\$^{$1}\$', $str);
+
+	// <sub>base</sub> -> $_{base}$
+	$str = preg_replace('/<sub>(.*?)<\/sub>/', '\$_{$1}\$', $str);
 
 	// <tag> -> 
 	$str = preg_replace('/<.*?>/','',$str);
 
+	//HTML special chars, escape
 	$str = str_replace(['&#42;','&gt;','&lt;','&amp;','&#124;','%'],['=','$>$','$<$','\&','$|$','\%'],$str);
 	
+	// \begin{lstlisting} $<$, $>$, \_, \%, \end{lstlisting} -> no escape
 	$str = preg_replace_callback(
 		'/\\\\begin{lstlisting}.*?\\\\end{lstlisting}/s',
 		function($matches){
+			// $<$ -> <
 			$ret = preg_replace('/\$<\$/','<',$matches[0]);
+			// $>$ -> >
 			$ret = preg_replace('/\$>\$/','>',$ret);
+			// \_ -> _
 			$ret = preg_replace('/\\\_/','_',$ret);
 			$ret = preg_replace('/\\\%/','%',$ret);
+			// \& -> &
+			$ret = preg_replace('/\\\&/','&',$ret);
 			return $ret;
 		},
 		$str
@@ -132,7 +142,7 @@ function latexParse($str){
 		\begin{document}
 		\maketitle
 		\tableofcontents
-		'.$str.'\end{document}';
+		'.$str.'\newpage\end{document}';
 
 	return $tex;
 }

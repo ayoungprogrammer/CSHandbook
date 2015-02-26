@@ -178,6 +178,10 @@ Now that you have a solution, you need to prove to the interviewer that you can 
 
 Hopefully you have time left before the interview (otherwise, you took too long for the technical part). Ask your interviewer about projects at the company to get a feel of what will interest you. Ask them any other questions you have about the position like any other interview. When you leave, thank the interviewer for their time, put on a smile and shake their hand. Ultimately, the outcome of the interview is determined by the amount of rapport you built with the interviewer, how capable you were at the technical problems and how enthusiastic you are. If all goes well, you will get the job, or you will get a second round of interviews meaning you get to repeat the same process with another interviewer! Good luck!
 
+\subsection{Practice Problems}
+
+Exercises
+
 \part{ Fundamentals }
     \chapter{ Fundamentals }
         
@@ -278,7 +282,7 @@ Keep in mind that in a couple of years as technology improves, this chart will b
 
 \subsection{Runtime Analysis}
 
-Let us examine a function that takes in an array of size N and returns the maximum element. In a program we are usually concerned with two complexities: memory and time.
+Let us examine a function that takes in an array of size N and returns the maximum element. In a program we are usually concerned with two main factors: memory and time.
 
 Code:
 
@@ -293,7 +297,7 @@ int findMax(int[] array){
 }
 \end{lstlisting}
 
-Memory: The array takes O(N) memory and storing the max value is O(1) more memory. but usually when analyzing programs, we ignore the input memory sizes and take into account additional memory that is required to produce the output. So the memory footprint of the function is O(1).
+Memory: The array takes O(N) memory, and storing the max value is O(1) more memory. However, usually when analyzing programs, we ignore the input memory sizes and take into account additional memory that is required to produce the output. So the memory footprint of the function is O(1).
 
 Time: The first assignment of maxVal takes O(1). The loop runs N-1 times and of each of those N-1 times it checks if the current array element is greater than the current max which takes O(1). If it is greater, then we reassign maxVal which is O(1). When analyzing time complexity, we usually take worst case so we have: O(1+(N-1)(2)) and this simplifies to O(N) since it is the largest factor.
 
@@ -314,7 +318,7 @@ void zeroArrays(int[][] grid){
 }
 \end{lstlisting}
 
-There are NxN cells we need to set to 0 so we need O(N$^{2}$) operations. We can also think of it as another way. There are two nested loop and each loop is O(n) so we multiply them and O(n) x O(n) = O(n$^{2}$). Generally, when we have nested loops, we multiple their complexities.
+There are NxN cells we need to set to 0, so we need O(n$^{2}$) operations. We can also think of it as another way. There are two nested loops and each loop is O(n) so we multiply them and O(n) x O(n) = O(n$^{2}$). Generally, when we have nested loops, we multiply their complexities.
 
 \subsubsection{Example}
 
@@ -333,7 +337,7 @@ void binaryNumbers(int n){
 }
 \end{lstlisting}
 
-For each number x, it will take O(log x) to convert the number to binary and we do this N times so the runtime is: O(n log n).
+For each number x, it will take O(ln$_{2}$ x) to convert the number to binary because we dividing by 2. Since O(ln$_{2}$ x) = O( (ln x)/ (ln 2) ), and the denominator is a constant, we can rewrite this as O(ln x). We do this operation N times so the runtime is: O(n log n).
 
 \part{ Recursion }
     \chapter{ Recursion }
@@ -342,9 +346,9 @@ For each number x, it will take O(log x) to convert the number to binary and we 
 
 Next: Advanced Recursion
 
-Recursion is process that repeats itself in a similar way. Anything that has its definition nested inside itself is considered to be recursive. For example GNU stands for GNU not Unix!. Expanding this acronym gives us ((GNU not Unix) not Unix!). As you can see this will go on forever and GNU's definition is nested inside itself so it is recursive. The Fibonacci sequence is also recursive: F(n) = F(n-1)+F(n-2). Inside the function F, we see two more F's!
+Recursion is process that repeats itself in a similar way. Anything that has its definition nested inside itself is considered to be recursive. For example GNU stands for GNU's Not Unix!. Expanding this acronym gives us ((GNU's Not Unix) Not Unix!). As you can see this will go on forever and GNU's definition is nested inside itself so it is recursive. The Fibonacci sequence is also recursive: F(n) = F(n-1)+F(n-2). Inside the function F, we see two more F's!
 
-In computer science infinite looping is not good because computers do not know how to terminate so we need some way to terminate it. A base case is the condition where the last step is reached. Everything should eventually reduce to a base case. For the Fibonacci sequence, the base case is F(0) = 1 and F(1) = 1 and we can see that for all N$>$1, the Fibonacci sequence will reach the base case.
+In computer science infinite looping is not good, because we want our programs to finish at some point. This means we have to find a stopping point where the function will stop calling itself. A base case is the condition where the last step is reached. All cases should eventually reduce to a base case. For the Fibonacci sequence, the base case is F(0) = 1 and F(1) = 1, and we can see that for all N$>$1, the Fibonacci sequence will reach the base case.
 
 So for something to be recursive in computer science, it needs:
 
@@ -374,21 +378,21 @@ Let's look at a simple recursive function: factorial.
 
 1! = 1
 
-n! = 1 * 2 * 3 .... n.
+n! = 1 ∙ 2 ∙ 3 .... n.
 
-Or we could write it as n! = (n-1)! * n. We now see that in this form, the factorial function is defined within itself which makes it recursive. Our base case is 1! = 1.
+Or we could write it as n! = (n-1)! ∙ n. We now see that in this form, the factorial function is defined within itself which makes it recursive. Our base case is 1! = 1.
 
 Example:
 
 4!
 
-= 3! * 4
+= 4 ∙ 3!
 
-= 2! * 3 * 4
+= 4 ∙ 3 ∙ 2!
 
-= 1! * 2 * 3 * 4
+= 4 ∙ 3 ∙ 2 ∙ 1!
 
-= 1 * 2 * 3 * 4
+= 4 ∙ 3 ∙ 2 ∙ 1
 
 = 24
 
@@ -423,18 +427,18 @@ int factorial(int n){
 
 \subsection{Sum of digits of a string}
 
-We can use recursion in many places and we can apply it to simple problems that you probably have not thought about. Summing the digits of a string can be done using simple loop but we can also use recursion to do it.
+We can use recursion in many places, and we can apply it to simple problems that you probably have not thought about. Summing the digits of a string can be done using a simple loop, but we can also use recursion to do it.
 
-Let's say we have the string '23528'. The total is equal to the first digit + the sum of the rest of the digits. 2 + '3528'. We can do the exact same thing for the rest of the digits: the second digit + the sum of the rest of the digits and keep doing this until we have no more digits.
+Let's say we have the string '23528'. The total is equal to the first digit plus the sum of the rest of the digits. 2 + '3528'. We can do the exact same thing for the rest of the digits: the second digit plus the sum of the rest of the digits and keep doing this until we have no more digits.
 
 \begin{itemize}
 \item f('23528')
-\item f('3528') + 2
-\item f('528') + 3 + 2
-\item f('28') + 5 + 3 + 2
-\item f('8') + 2 + 5 + 3 + 2
-\item f('') + 8 + 2 + 5 + 3 + 2
-\item 0 + 8 + 2 + 5 + 3 + 2
+\item 2 + f('3528')
+\item 2 + 3 + f('528')
+\item 2 + 3 + 5 + f('28')
+\item 2 + 3+ 5 + 2 + f('8') 
+\item 2 + 3+ 5 + 2 + 8 + f('')
+\item 2 + 3 + 5 + 2 + 8 + 0
 \item 20
 \end{itemize}
 
@@ -454,19 +458,19 @@ string[1..1] = ''
 string[1] = 'a'
 
 Base case:
-sum(empty) = 0
+sum('') = 0
 
 Recurrence:
-sum(string) = sum(string[2..n]) + int(string[1])
+sum(string) = int(string[1]) + sum(string[2..n])
 
 Example:
-sum('23528')
-= sum('3528') + 2
-= (sum('528') + 3) + 2
-= ((sum('28') + 5) + 3) + 2
-= (((sum('8') + 2) + 5) + 3) + 2
-= ((((sum('') + 8) + 2) + 5) + 3) + 2
-= ((((0 + 8) + 2) + 5) + 3) + 2
+sum("23528")
+= 2 + sum("3528"')
+= 2 + ( 3 + ( sum("528") )
+= 2 + ( 3 + ( 5 + sum ("28") ) )
+= 2 + ( 3 + ( 5 + ( 2 + sum("8") ) ) ) )
+= 2 + ( 3 + ( 5 + ( 2 + ( 8 + sum("") ) ) ) ) )
+= 2 + ( 3 + ( 5 + ( 2 + ( 8 + 0 ) ) ) )
 = 20
 \end{lstlisting}
 
@@ -474,16 +478,20 @@ sum('23528')
 
 \begin{lstlisting}
 int sum(string str){
-   int n = str.length();
-   if(n == 0){
-       return 0;
+    int n = str.length();
+    //Base case when string is empty.
+    if(n == 0){
+        return 0;
     }
-   else{
-     int charToNum = (str.charAt(0) - '0');
-     return sum(str.substring(1, n)) + charToNum;
-   }
+    //Case when string is not empty
+    else{
+        //Convert ASCII to number.
+        int charToNum = (str.charAt(0) - '0');
+        return charToNum + sum(str.substring(1, n))
+    }
 }
 
+//Example: should return 20.
 sum('23528');
 \end{lstlisting}
 
@@ -497,13 +505,13 @@ For example we have the string 'cacaec'. Since the first letter is a 'c' we add 
 
 \begin{itemize}
 \item 'cacaec'
-\item 'acaec' +1
-\item 'caec' + 0 + 1
-\item 'aec' + 1 + 0 + 1
-\item 'ec' + 0 + 1 + 0 + 1
-\item 'c'  + 0 + 0 + 1 + 0 +1
-\item '' + 1 + 0 + 0 + 1 + 0 + 1
-\item 0 + 1 + 0 + 0 + 1 + 0 + 1
+\item 1 + 'acaec'
+\item 1 + 0 + 'caec'
+\item 1 + 0 + 1 + 'aec'
+\item 1 + 0 + 1 + 0 + 'ec'
+\item 1 + 0 + 1 + 0 + 0 + 'c'
+\item 1 + 0 + 1 + 0 + 0 + 1 + ''
+\item 1 + 0 + 1 + 0 + 0 + 1 + 0
 \item 3
 \end{itemize}
 
@@ -521,36 +529,45 @@ Base case:
 count(empty) = 0
 
 Recurrence:
-count(string) =  {if string[n]=='c'  count(string[2..n])+1
+count(string) =  {if string[n]=='c'  1 + count(string[2..n])
                  {else               count(string[2..n])
 
 Example:
-count('cacaec')
-= count('acaec') + 1
-= (count('caec') + 0) + 1
-= ((count('aec')+ 1) + 0) + 1
-= (((count('ec') + 0) + 1) + 0) +1
-= ((((count('c') + 0) + 0) + 1) + 0)+1
-= ((((count('') + 1) + 0) + 0) + 1) + 0) + 1
-= ((((0 + 1) + 0) + 0) + 1) + 0) + 1
+count("cacaec")
+= 1 + count("acaec") 
+= 1 + ( 0 + count("caec") )
+= 1 + ( 0 + ( 1 + count("aec") ) )
+= 1 + ( 0 + ( 1 + ( 0 + count("ec") ) ) )
+= 1 + ( 0 + ( 1 + ( 0 + ( 0 + count("c") ) ) ) )
+= 1 + ( 0 + ( 1 + ( 0 + ( 0 + ( 1 + count("") ) ) ) )
+= 1 + ( 0 + ( 1 + ( 0 + ( 0 + ( 1 + 0 ) ) ) ) )
 = 3
 \end{lstlisting}
 
 \subsubsection{Implementation}
 
 \begin{lstlisting}
-int count3(string str){
-   int n = str.length();
-   if(n == 0)return 0;
-   if(str.charAt(0) == 'c'){
-      return count3(str.substring(1, n)) + 1;
-   }
-   else{
-     return count3(str.substring(1, n));
-   }
+int count(string str){
+    int n = str.length();
+
+    //Base case for empty string.
+    if(n == 0){
+        return 0;
+    }
+
+    //Case if first character is a 'c'.
+    if(str.charAt(0) == 'c'){
+        return count(str.substring(1, n)) + 1;
+    }
+
+    //Case if first character is not a 'c'.
+    else{
+        return count(str.substring(1, n));
+    }
 }
 
-count3('cacaec');
+//Example: should return 3.
+count('cacaec');
 
 \end{lstlisting}
 
@@ -622,6 +639,7 @@ Prerequisites: Recursion
 Next: Intermediate Recursion, Backtracking, Dynamic Programming
 
 Recursion can sometimes be very difficult to wrap your head around because when you try to go deeper, it only keeps getting deeper. It is sometimes hard to figure out the recurrence relation, but once you do, the problem becomes simple to solve.
+di
 
 \subsection{Number of paths}
 
@@ -674,7 +692,7 @@ int paths(int n,int m){
 
 \subsection{Towers of Hanoi}
 
-There are three poles and N disks where each disk is heaver than the next disk. In the initial configuration, the discs are stacked upon another on the first pole where the lighter discs are above the heavier discs. We want to move all the discs to the last pole with the following conditions:
+There are three poles and N discs where each disc is heavier than the next disc. In the initial configuration, the discs are stacked upon another on the first pole where the lighter discs are above the heavier discs. We want to move all the discs to the last pole with the following conditions:
 
 \begin{itemize}
 \item Only one disc can be moved from one pole to another at a time.
@@ -732,7 +750,7 @@ We move N-2 discs from the helper pole to the destination pole.
 
 \vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{hanoi2.png}
 
-As we can see, the steps to move N discs are the exact same as to move N-1 discs! The only difference is that the actual poles are different but we the steps are the same relative to their roles (starting, helper and destination). We are solving a reduced version of the same problem and so have a recurrence.
+As we can see, the steps to move N discs are exactly the same as to move N-1 discs! The only difference is that the actual poles are different but the steps are the same relative to their roles (starting, helper and destination). We are solving a reduced version of the same problem and so have a recurrence.
 
 In Step 1, when we move N-1 discs from start to helper, the new helper is the old destination and the new destination is the old helper.
 
@@ -822,13 +840,13 @@ void hanoi(int N, int start, int helper, int destination){
         System.out.println("Move " + start + " to " + destination);
     }else{
 
-        //Move N-1 disks from start to helper
+        //Move N-1 discs from start to helper
         hanoi(N-1, start, destination, helper);
 
-        //Move 1 disk from start to end
+        //Move 1 disc from start to end
         hanoi(1, start, helper, destination);
 
-        //Move N-1 disks from helper to end
+        //Move N-1 discs from helper to end
         hanoi(N - 1, helper, start, destination);
     }
 }
@@ -839,7 +857,7 @@ hanoi(4, 1, 2, 3);
 
 A permutation is an arrangement of the original set of elements.
 
-For example permutations of A,B,C,D,E,F:
+For example, here we have a few permutations of A,B,C,D,E,F:
 
 \begin{itemize}
 \item D,E,F,C,B,A
@@ -850,7 +868,7 @@ For example permutations of A,B,C,D,E,F:
 
 Given a string S of length N, how can we generate all permutations?
 
-Let's assume that we have a list of permutations for the substring of S of N-1 characters. Then to get the permutations for the string of length N, all we need to do is insert the Nth character in between all the positions of each permutation of N-1 characters. For example permutation of A,B,C,D.
+Let's assume that we have a list of permutations for the substring of S of N-1 characters. Then to get the permutations for the string of length N, all we need to do is insert the Nth character in between all the positions of each permutation of N-1 characters. For example, here is how the permutation of A,B,C,D is generated.
 
 We can manually find the permutations of A,B,C.
 
@@ -940,35 +958,35 @@ Vector<String> permutation(String s){
 \subsection{Exercises}
 
 \begin{enumerate}
-\item Given a string S, write a recursive function to generate all substrings
+\item Given a string S, write a recursive function to generate all its non-empty substrings.
 \item Write a solution for hanoi towers but with the restriction that discs can only be moved from adjacent poles. (You can move a disc from A to B but not A to C because they are not adjacent)
 \end{enumerate}
 
 \part{ Data Structures }
     
 
+Next: Advanced Data Structures
+
 Data structures are different ways of storing data such that they optimize certain data operations such as retrieval and insertion. Although many of these data structures are already built into various languages, it is important to understand how they work. By understanding the implementations, we can have a sense of which data structure to use for different scenarios.
 
 An abstract data type is a conceptual model for representing data. An abstract data type tells what it should do as opposed to how it should work. It will tell us what operations it should have but should not tell us how to implement them.
 
-For example, a bottle should be able to hold water and allow us to drink from. This tells us what it should do but we don't need to know how it works or how it is made. A plastic water bottle is an implementation of a bottle. It holds water in its interior and allows us to drink by unscrewing the cap and letting us pour water down our throat. A thermos is also an implementation of the bottle, it holds fluid inside it, but this thermos has a lid that can be popped open and water can come from it. A thermos and plastic water bottle are different implementations as they are made differently and used differently, but they fundamentally do what a bottle is supposed to do: store liquid, and provide a way to drink. A bottle does not actually exist, but types of bottles do.
+For example, a bottle should be able to hold water and allow us to drink from. This tells us what it should do but we don't need to know how it works or how it is made. A plastic water bottle is an implementation of a bottle. It holds water in its interior and allows us to drink by unscrewing the cap and letting us pour water down our throat. A thermos is also an implementation of the bottle, it has a lid that can be popped open. and water can come from it. A thermos and plastic water bottle are different implementations as they are made differently and used differently, but they fundamentally do what a bottle is supposed to do: store liquid and provide a way to drink. A bottle in the abstract does not actually exist, but types of bottles do.
 
 \vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{bottle.png}
 
-Some implementations of abstract data types are better than others for different purposes. For example plastic water bottles are very cheap whereas a thermos is more expensive but a thermos can hold hot water and keep it warm for a long period of time. When selecting a data structure, we should analyze the efficiencies of data operations that we will do most often.
+Some implementations of abstract data types are better than others for different purposes. For example, plastic water bottles are very cheap, whereas a thermos is more expensive. However, a thermos can hold hot water and keep it warm for a long period of time. When selecting a data structure, we should pick one based on the efficiencies of data operations that we will do most often.
 
 \vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{adt.png}
-
-For more intermediate data structures, read the advanced data structures page.
 
 
     \chapter{ Stack }
         \section{ Stack }
         
 
-Imagine a stack of plates at a buffet, the plates are taken from the top and are also replaced from the top. The first plate to go in will be the last plate to come out. The last plate to go in will be the first to come out. This structure is called a stack.
-
 A stack is an abstract data type with the property that it can remove and insert elements following a FILO (First In Last Out) structure. The first element to be inserted must be the last element to be removed and the last element to be inserted must be the first element to be removed. Sometimes, removal is called "pop" and insertion is called "push".
+
+Imagine a stack of plates at a buffet, the plates are taken from the top and are also replaced from the top. The first plate to go in will be the last plate to come out. The last plate to go in will be the first to come out. This structure is what a stack is.
 
 Example of push:
 
@@ -978,46 +996,10 @@ Example of pop:
 
 \vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{stack2.png}
 
-Stacks are used for function calls on the memory stack. Whenever a function is called, it is placed on the memory stack with its variables and when it is returning a value, it is popped off the stack.
+Stacks are used to keep track of function calls in memory. Whenever a function is called, it is placed on the memory stack with its variables, and when it is returning a value, it is popped off the stack.
 
 A stack is usually implemented as a vector.
 
-\subsection{Implementation}
-
-\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
-
-
-  Implementation &
-  Pop &
-  Push\\
-\hline
-
-
-  Vector &
-  O(1) &
-  O(1)\\
-
-\hline\end{tabulary}
-
-\subsection{Exercises}
-
-\begin{enumerate}
-\item Given a string of brackets of either () or [], determine if the bracket syntax is legal (every opening bracket has a closing bracket from left to right).
-
-Legal syntax:
-
-\begin{itemize}
-\item ( [ ( ) [ ] ] )
-\item ( ) ( ) [ ] ( ) ( )
-\end{itemize}
-
-Illegal syntax:
-
-\begin{itemize}
-\item ( ( ) ]
-\item ( ) [ ( ] )
-\end{itemize}
-\end{enumerate}
 
         \section{ Vector }
         
@@ -1189,6 +1171,27 @@ public void insert(int idx,int x){
 \item Implement removeAtIndex(int index) for Vector
 \end{enumerate}
 
+        \section{ Exercises }
+        
+
+\begin{enumerate}
+\item Given a string of brackets of either () or [], determine if the bracket syntax is legal (every opening bracket has a closing bracket from left to right).
+
+Legal syntax:
+
+\begin{itemize}
+\item ( [ ( ) [ ] ] )
+\item ( ) ( ) [ ] ( ) ( )
+\end{itemize}
+
+Illegal syntax:
+
+\begin{itemize}
+\item ( ( ) ]
+\item ( ) [ ( ] )
+\end{itemize}
+\end{enumerate}
+
     \chapter{ Queue }
         \section{ Queue }
         
@@ -1207,7 +1210,8 @@ Example of pop:
 
 \vspace{5px}\includegraphics[width=\maxwidth{\textwidth}]{queue2.png}
 
-\subsection{Implementation}
+
+        
 
 We can implement a queue most efficiently using a linked list because it has an efficient memory allocation.
 
@@ -1226,32 +1230,6 @@ We can implement a queue most efficiently using a linked list because it has an 
 
 \hline\end{tabulary}
 
-\subsection{Exercises}
-
-\begin{enumerate}
-\item Given a list of letters representing instructions where the first instruction is executed, output what the final list should look like after N instructions are executed.
-
-First instruction:
-
-\begin{itemize}
-\item A. Add B to the end of the list of instructions
-\item B. Do nothing
-\item C. Add two A's to the front of the list of instructions
-\end{itemize}
-
-Example:
-
-\begin{itemize}
-\item ABC
-\item BCB
-\item CB
-\item AAB
-\item ABB
-\item BBB
-\item BB
-\item B
-\end{itemize}
-\end{enumerate}
 
         \section{ Linked List }
         
@@ -1451,7 +1429,7 @@ For example, you have 5 players (1,2,3,4,5) and the 3rd player is eliminated.
 
 Sets are abstract data structures which are able to store and keep track of unique values.
 
-Imagine you have a grocery list that you use to keep track of things you need to buy. You want to make sure there are no duplicate items in the list, you can add items to the list and that you can remove items from your list. This structure is similar to what a set does.
+Imagine you have a grocery list that you use to keep tracking of things you need to buy. You want to make sure there are no duplicate items in the list, you can add items to the list and that you can remove items from your list. This structure is similar to what a set does.
 
 Sets have three operations: insertion, deletion and a membership test. Insertion places an element into the set, deletion removes an element from the set and a membership test is checking whether an element exists within the set.
 
@@ -1903,7 +1881,7 @@ public boolean remove(int x){
         return false;
     }
     //Case 1: leaf node
-    if(curNode.left==null \&\& curNode.right==null){
+    if(curNode.left==null && curNode.right==null){
         //if root
         if(curNode==root){
             this.root = null;
@@ -2401,7 +2379,7 @@ public boolean remove(int key){
         return false;
     }
     //Case 1: leaf node
-    if(curNode.left==null \&\& curNode.right==null){
+    if(curNode.left==null && curNode.right==null){
         //if root
         if(curNode==root){
             this.root = null;
@@ -2575,12 +2553,12 @@ public void heapify(int arr[]){
         while(idx<size){
             int left = idx*2+1;
             int right = idx*2+2;
-            if(left<size \&\& arr[left]>arr[idx]){
+            if(left<size && arr[left]>arr[idx]){
                 int swap = arr[left];
                 arr[left] = arr[idx];
                 arr[idx] = swap;
                 idx = left;
-            }else if(right<size \&\& arr[right]>arr[idx]){
+            }else if(right<size && arr[right]>arr[idx]){
                 int swap = arr[right];
                 arr[right]=arr[idx];
                 arr[idx] = swap;
@@ -2631,7 +2609,7 @@ public void push(int x){
     //Make sure parent is > child from the last element
     int idx = size-1;
     int parent = (idx-1)/2;
-    while(idx>0 \&\& arr[parent]<arr[idx]){
+    while(idx>0 && arr[parent]<arr[idx]){
         int swap = arr[parent];
         arr[parent] = arr[idx];
         arr[idx] = swap;
@@ -2665,12 +2643,12 @@ public int pop(){
     while(idx<size){
         int left = idx*2+1;
         int right = idx*2+2;
-        if(left<size \&\& arr[left]>arr[idx]){
+        if(left<size && arr[left]>arr[idx]){
             int swap = arr[left];
             arr[left] = arr[idx];
             arr[idx] = swap;
             idx = left;
-        }else if(right<size \&\& arr[right]>arr[idx]){
+        }else if(right<size && arr[right]>arr[idx]){
             int swap = arr[right];
             arr[right]=arr[idx];
             arr[idx] = swap;
@@ -2826,7 +2804,7 @@ public static void InsertionSort (int a[]){
         
         //loops through the already sorted list to find where to 
         //insert the current element
-        while (index > 0 \&\& a[index-1] > val){
+        while (index > 0 && a[index-1] > val){
             //switches the current item at index with the one before 
             //to check if the element that needs to be inserted will 
             //go in the next spot
@@ -2935,7 +2913,7 @@ public static void merge(int arr[],int start1,int end1, int start2,int end2){
     int n = 0;
     
     //Pick smallest element one by one
-    while(start1 <= end1 \&\& start2 <= end2){
+    while(start1 <= end1 && start2 <= end2){
         if(arr[start1] <= arr[start2]){
             arr2[n] = arr[start1];
             start1++;
@@ -3530,7 +3508,7 @@ public static int Prims(Vector<Vector<node>> adjList){
     for(int i=0;i<adjList.get(0).size();i++){
         pq.add(adjList.get(0).get(i));
     }
-    while(!pq.isEmpty()\&\&inTree<n){
+    while(!pq.isEmpty()&&inTree<n){
         node cur = pq.poll();
         if(visited[cur.index])continue;
         inTree++;
@@ -3770,7 +3748,7 @@ public static int dijkstra(int[][] adjMatrix,int start,int end){
     boolean visited[] = new boolean[n];
     for(int i=0;i<n;i++)visited[i] = false;
     pq.add(new node(0,start));
-    while(!visited[end] \&\& !pq.isEmpty()){
+    while(!visited[end] && !pq.isEmpty()){
         node curNode = pq.poll();
     
         if(visited[curNode.index])continue;
@@ -3779,7 +3757,7 @@ public static int dijkstra(int[][] adjMatrix,int start,int end){
             return curNode.weight;
         }
         for(int i=0;i<n;i++){
-            if(adjMatrix[curNode.index][i]>0 \&\& !visited[i]){
+            if(adjMatrix[curNode.index][i]>0 && !visited[i]){
                 int newWeight = curNode.weight+adjMatrix[curNode.index][i];
                 pq.add(new node(newWeight,i));
             }
@@ -4067,7 +4045,7 @@ public static int[][] FloydWarshall(Vector<Vector<edge>> adjList){
         for(int i=0;i<n;i++){
             for(int j=0;j<n;j++){
                 //If dist[i][k] and dist[k][j] have been set then use those values
-                if(dist[i][k]!=UNDEFINED\&\&dist[k][j]!=UNDEFINED){
+                if(dist[i][k]!=UNDEFINED&&dist[k][j]!=UNDEFINED){
                     //If the new distance is less than current or not used, then update
                     int newDist = dist[i][k]+dist[k][j];
                     if(dist[i][j] > newDist || dist[i][j]==UNDEFINED){
@@ -5548,7 +5526,7 @@ int maxEvents(ArrayList<Interval> intervals){
     int curTime = 0;
     int events = 0;
     for(int i=0;i<intervals.size();i++){
-        while(i < intervals.size() \&\& intervals[i].start < curTime){
+        while(i < intervals.size() && intervals[i].start < curTime){
             i++;
         }
         curTime = intervals[i].end;
@@ -5616,4 +5594,4 @@ For example you are given \$1000, the future prices of a stock are: 100, 103, 10
 For example, if the total distance is 200km apart with tank capacity 80L and with 5 gas stations at 10km, 40km, 50km, 90km, 150km, the minimum time it will take is 224 minutes.
 \end{enumerate}
 
-\end{document}
+\newpage\end{document}

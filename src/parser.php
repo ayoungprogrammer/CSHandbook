@@ -33,6 +33,9 @@ function parse($str){
 
 	//^^n^^
 	$str = preg_replace('/\^\^([A-Za-z0-9\/]+?)\^\^/','<sup>$1</sup>',$str);
+
+	//vvnvv
+	$str = preg_replace('/vv([A-Za-z0-9\/]+?)vv/','<sub>$1</sub>',$str);
 	
 	//GITHUB_PATH
 	$str = preg_replace('/GITHUB_PATH/','https://github.com/ayoungprogrammer/Algorithms/blob/master/src',$str);

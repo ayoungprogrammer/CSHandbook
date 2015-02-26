@@ -5,7 +5,7 @@
 **Next**: [[Intermediate Recursion]], [[Backtracking]], [[Dynamic Programming]]
 
 Recursion can sometimes be very difficult to wrap your head around because when you try to go deeper, it only keeps getting deeper. It is sometimes hard to figure out the recurrence relation, but once you do, the problem becomes simple to solve.
-
+di
 ## Number of paths
 
 Suppose we have a grid of N rows and M columns. How many ways are there to get from the bottom left corner to the top right corner using the intersection points and only going upwards or rightwards?
@@ -57,7 +57,7 @@ int paths(int n,int m){
 
 ## [[Towers of Hanoi]]
 
-There are three poles and N disks where each disk is heaver than the next disk. In the initial configuration, the discs are stacked upon another on the first pole where the lighter discs are above the heavier discs. We want to move all the discs to the last pole with the following conditions:
+There are three poles and N discs where each disc is heavier than the next disc. In the initial configuration, the discs are stacked upon another on the first pole where the lighter discs are above the heavier discs. We want to move all the discs to the last pole with the following conditions:
 
 * Only one disc can be moved from one pole to another at a time.
 * The discs have to be stacked such that all the lighter discs are on top of the heavier ones.
@@ -113,7 +113,7 @@ We move N-2 discs from the helper pole to the destination pole.
 
 {{hanoi2.png}}
 
-As we can see, the steps to move N discs are the exact same as to move N-1 discs! The only difference is that the actual poles are different but we the steps are the same relative to their roles (starting, helper and destination). We are solving a reduced version of the same problem and so have a recurrence. 
+As we can see, the steps to move N discs are exactly the same as to move N-1 discs! The only difference is that the actual poles are different but the steps are the same relative to their roles (starting, helper and destination). We are solving a reduced version of the same problem and so have a recurrence. 
 
 In Step 1, when we move N-1 discs from start to helper, the new helper is the old destination and the new destination is the old helper.
 
@@ -203,13 +203,13 @@ void hanoi(int N, int start, int helper, int destination){
         System.out.println("Move " + start + " to " + destination);
     }else{
 
-        //Move N-1 disks from start to helper
+        //Move N-1 discs from start to helper
         hanoi(N-1, start, destination, helper);
 
-        //Move 1 disk from start to end
+        //Move 1 disc from start to end
         hanoi(1, start, helper, destination);
 
-        //Move N-1 disks from helper to end
+        //Move N-1 discs from helper to end
         hanoi(N - 1, helper, start, destination);
     }
 }
@@ -220,7 +220,7 @@ hanoi(4, 1, 2, 3);
 
 A permutation is an arrangement of the original set of elements.
 
-For example permutations of A,B,C,D,E,F:
+For example, here we have a few permutations of A,B,C,D,E,F:
 
 * D,E,F,C,B,A
 * F,C,D,B,A,E
@@ -229,7 +229,7 @@ For example permutations of A,B,C,D,E,F:
 
 Given a string S of length N, how can we generate all permutations?
 
-Let's assume that we have a list of permutations for the substring of S of N-1 characters. Then to get the permutations for the string of length N, all we need to do is insert the Nth character in between all the positions of each permutation of N-1 characters. For example permutation of A,B,C,D.
+Let's assume that we have a list of permutations for the substring of S of N-1 characters. Then to get the permutations for the string of length N, all we need to do is insert the Nth character in between all the positions of each permutation of N-1 characters. For example, here is how the permutation of A,B,C,D is generated.
 
 We can manually find the permutations of A,B,C.
 
@@ -310,5 +310,5 @@ Vector<String> permutation(String s){
 
 ## Exercises
 
-1. Given a string S, write a recursive function to generate all substrings
+1. Given a string S, write a recursive function to generate all its non-empty substrings.
 2. Write a solution for hanoi towers but with the restriction that discs can only be moved from adjacent poles. (You can move a disc from A to B but not A to C because they are not adjacent)

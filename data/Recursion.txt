@@ -2,9 +2,9 @@
 
 **Next**: [[Advanced Recursion]]
 
-Recursion is process that repeats itself in a similar way. Anything that has its definition nested inside itself is considered to be recursive. For example GNU stands for GNU not Unix!. Expanding this acronym gives us ((GNU not Unix) not Unix!). As you can see this will go on forever and GNU's definition is nested inside itself so it is recursive. The Fibonacci sequence is also recursive: F(n) = F(n-1)+F(n-2). Inside the function F, we see two more F's! 
+Recursion is process that repeats itself in a similar way. Anything that has its definition nested inside itself is considered to be recursive. For example GNU stands for GNU's Not Unix!. Expanding this acronym gives us ((GNU's Not Unix) Not Unix!). As you can see this will go on forever and GNU's definition is nested inside itself so it is recursive. The Fibonacci sequence is also recursive: F(n) = F(n-1)+F(n-2). Inside the function F, we see two more F's! 
 
-In computer science infinite looping is not good because computers do not know how to terminate so we need some way to terminate it. A base case is the condition where the last step is reached. Everything should eventually reduce to a base case. For the Fibonacci sequence, the base case is F(0) = 1 and F(1) = 1 and we can see that for all N>1, the Fibonacci sequence will reach the base case.
+In computer science infinite looping is not good, because we want our programs to finish at some point. This means we have to find a stopping point where the function will stop calling itself. A base case is the condition where the last step is reached. All cases should eventually reduce to a base case. For the Fibonacci sequence, the base case is F(0) = 1 and F(1) = 1, and we can see that for all N>1, the Fibonacci sequence will reach the base case.
 
 So for something to be recursive in computer science, it needs:
 
@@ -30,21 +30,21 @@ Let's look at a simple recursive function: factorial.
 
 1! = 1
 
-n! = 1 * 2 * 3 .... n.
+n! = 1 ∙ 2 ∙ 3 .... n.
 
-Or we could write it as n! = (n-1)! * n. We now see that in this form, the factorial function is defined within itself which makes it recursive. Our base case is 1! = 1. 
+Or we could write it as n! = (n-1)! ∙ n. We now see that in this form, the factorial function is defined within itself which makes it recursive. Our base case is 1! = 1. 
 
 Example:
 
 4! 
 
-= 3! * 4 
+= 4 ∙ 3!
 
-= 2! * 3 * 4 
+= 4 ∙ 3 ∙ 2!
 
-= 1! * 2 * 3 * 4 
+= 4 ∙ 3 ∙ 2 ∙ 1!
 
-= 1 * 2 * 3 * 4 
+= 4 ∙ 3 ∙ 2 ∙ 1
 
 = 24
 
@@ -78,17 +78,17 @@ int factorial(int n){
 
 ## Sum of digits of a string
 
-We can use recursion in many places and we can apply it to simple problems that you probably have not thought about. Summing the digits of a string can be done using simple loop but we can also use recursion to do it.
+We can use recursion in many places, and we can apply it to simple problems that you probably have not thought about. Summing the digits of a string can be done using a simple loop, but we can also use recursion to do it.
 
-Let's say we have the string '23528'. The total is equal to the first digit + the sum of the rest of the digits. 2 + '3528'. We can do the exact same thing for the rest of the digits: the second digit + the sum of the rest of the digits and keep doing this until we have no more digits.
+Let's say we have the string '23528'. The total is equal to the first digit plus the sum of the rest of the digits. 2 + '3528'. We can do the exact same thing for the rest of the digits: the second digit plus the sum of the rest of the digits and keep doing this until we have no more digits.
 
 * f('23528')
-* f('3528') + 2
-* f('528') + 3 + 2
-* f('28') + 5 + 3 + 2
-* f('8') + 2 + 5 + 3 + 2
-* f('') + 8 + 2 + 5 + 3 + 2
-* 0 + 8 + 2 + 5 + 3 + 2
+* 2 + f('3528')
+* 2 + 3 + f('528')
+* 2 + 3 + 5 + f('28')
+* 2 + 3+ 5 + 2 + f('8') 
+* 2 + 3+ 5 + 2 + 8 + f('')
+* 2 + 3 + 5 + 2 + 8 + 0
 * 20
 
 ### Formalization
@@ -107,19 +107,19 @@ string[1..1] = ''
 string[1] = 'a'
 
 Base case:
-sum(empty) = 0
+sum('') = 0
 
 Recurrence:
-sum(string) = sum(string[2..n]) + int(string[1])
+sum(string) = int(string[1]) + sum(string[2..n])
 
 Example:
-sum('23528')
-= sum('3528') + 2
-= (sum('528') + 3) + 2
-= ((sum('28') + 5) + 3) + 2
-= (((sum('8') + 2) + 5) + 3) + 2
-= ((((sum('') + 8) + 2) + 5) + 3) + 2
-= ((((0 + 8) + 2) + 5) + 3) + 2
+sum("23528")
+= 2 + sum("3528"')
+= 2 + ( 3 + ( sum("528") )
+= 2 + ( 3 + ( 5 + sum ("28") ) )
+= 2 + ( 3 + ( 5 + ( 2 + sum("8") ) ) ) )
+= 2 + ( 3 + ( 5 + ( 2 + ( 8 + sum("") ) ) ) ) )
+= 2 + ( 3 + ( 5 + ( 2 + ( 8 + 0 ) ) ) )
 = 20
 ]]]]
 
@@ -127,16 +127,20 @@ sum('23528')
 
 [[[[
 int sum(string str){
-   int n = str.length();
-   if(n == 0){
-       return 0;
+    int n = str.length();
+    //Base case when string is empty.
+    if(n == 0){
+        return 0;
     }
-   else{
-     int charToNum = (str.charAt(0) - '0');
-     return sum(str.substring(1, n)) + charToNum;
-   }
+    //Case when string is not empty
+    else{
+        //Convert ASCII to number.
+        int charToNum = (str.charAt(0) - '0');
+        return charToNum + sum(str.substring(1, n))
+    }
 }
 
+//Example: should return 20.
 sum('23528');
 ]]]]
 
@@ -149,13 +153,13 @@ If the first letter of the string is a 'c', then we can add 1 to the count. Othe
 For example we have the string 'cacaec'. Since the first letter is a 'c' we add 1 to the count. Then we remove the first letter and get 'acaec', the first letter is not a 'c' so we don't add to the count. We keep reducing this way until we get an empty string and we return the count. 
 
 * 'cacaec'
-* 'acaec' +1
-* 'caec' + 0 + 1
-* 'aec' + 1 + 0 + 1
-* 'ec' + 0 + 1 + 0 + 1
-* 'c'  + 0 + 0 + 1 + 0 +1
-* '' + 1 + 0 + 0 + 1 + 0 + 1
-* 0 + 1 + 0 + 0 + 1 + 0 + 1
+* 1 + 'acaec'
+* 1 + 0 + 'caec'
+* 1 + 0 + 1 + 'aec'
+* 1 + 0 + 1 + 0 + 'ec'
+* 1 + 0 + 1 + 0 + 0 + 'c'
+* 1 + 0 + 1 + 0 + 0 + 1 + ''
+* 1 + 0 + 1 + 0 + 0 + 1 + 0
 * 3
 
 
@@ -173,34 +177,43 @@ Base case:
 count(empty) = 0
 
 Recurrence:
-count(string) =  {if string[n]=='c'  count(string[2..n])+1
+count(string) =  {if string[n]=='c'  1 + count(string[2..n])
                  {else               count(string[2..n])
 
 Example:
-count('cacaec')
-= count('acaec') + 1
-= (count('caec') + 0) + 1
-= ((count('aec')+ 1) + 0) + 1
-= (((count('ec') + 0) + 1) + 0) +1
-= ((((count('c') + 0) + 0) + 1) + 0)+1
-= ((((count('') + 1) + 0) + 0) + 1) + 0) + 1
-= ((((0 + 1) + 0) + 0) + 1) + 0) + 1
+count("cacaec")
+= 1 + count("acaec") 
+= 1 + ( 0 + count("caec") )
+= 1 + ( 0 + ( 1 + count("aec") ) )
+= 1 + ( 0 + ( 1 + ( 0 + count("ec") ) ) )
+= 1 + ( 0 + ( 1 + ( 0 + ( 0 + count("c") ) ) ) )
+= 1 + ( 0 + ( 1 + ( 0 + ( 0 + ( 1 + count("") ) ) ) )
+= 1 + ( 0 + ( 1 + ( 0 + ( 0 + ( 1 + 0 ) ) ) ) )
 = 3
 ]]]]
 ### Implementation
 [[[[
-int count3(string str){
-   int n = str.length();
-   if(n == 0)return 0;
-   if(str.charAt(0) == 'c'){
-      return count3(str.substring(1, n)) + 1;
-   }
-   else{
-     return count3(str.substring(1, n));
-   }
+int count(string str){
+    int n = str.length();
+
+    //Base case for empty string.
+    if(n == 0){
+        return 0;
+    }
+
+    //Case if first character is a 'c'.
+    if(str.charAt(0) == 'c'){
+        return count(str.substring(1, n)) + 1;
+    }
+
+    //Case if first character is not a 'c'.
+    else{
+        return count(str.substring(1, n));
+    }
 }
 
-count3('cacaec');
+//Example: should return 3.
+count('cacaec');
 
 ]]]]
 

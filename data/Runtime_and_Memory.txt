@@ -41,7 +41,7 @@ Keep in mind that in a couple of years as technology improves, this chart will b
 
 ## Runtime Analysis
 
-Let us examine a function that takes in an array of size N and returns the maximum element. In a program we are usually concerned with two complexities: memory and time. 
+Let us examine a function that takes in an array of size N and returns the maximum element. In a program we are usually concerned with two main factors: memory and time. 
 
 Code:
 
@@ -56,7 +56,7 @@ int findMax(int[] array){
 }
 ]]]]
 
-Memory: The array takes O(N) memory and storing the max value is O(1) more memory. but usually when analyzing programs, we ignore the input memory sizes and take into account additional memory that is required to produce the output. So the memory footprint of the function is O(1).
+Memory: The array takes O(N) memory, and storing the max value is O(1) more memory. However, usually when analyzing programs, we ignore the input memory sizes and take into account additional memory that is required to produce the output. So the memory footprint of the function is O(1).
 
 Time: The first assignment of maxVal takes O(1). The loop runs N-1 times and of each of those N-1 times it checks if the current array element is greater than the current max which takes O(1). If it is greater, then we reassign maxVal which is O(1). When analyzing time complexity, we usually take worst case so we have: O(1+(N-1)(2)) and this simplifies to O(N) since it is the largest factor.
 
@@ -77,7 +77,7 @@ void zeroArrays(int[][] grid){
 }
 ]]]]
 
-There are NxN cells we need to set to 0 so we need O(N^^2^^) operations. We can also think of it as another way. There are two nested loop and each loop is O(n) so we multiply them and O(n) x O(n) = O(n^^2^^). Generally, when we have nested loops, we multiple their complexities. 
+There are NxN cells we need to set to 0, so we need O(n^^2^^) operations. We can also think of it as another way. There are two nested loops and each loop is O(n) so we multiply them and O(n) x O(n) = O(n^^2^^). Generally, when we have nested loops, we multiply their complexities. 
 
 ### Example
 
@@ -96,4 +96,4 @@ void binaryNumbers(int n){
 }
 ]]]]
 
-For each number x, it will take O(log x) to convert the number to binary and we do this N times so the runtime is: O(n log n).
+For each number x, it will take O(lnvv2vv x) to convert the number to binary because we dividing by 2. Since O(lnvv2vv x) = O( (ln x)/ (ln 2) ), and the denominator is a constant, we can rewrite this as O(ln x). We do this operation N times so the runtime is: O(n log n).

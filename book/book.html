@@ -259,7 +259,7 @@
 
 </section><section><h2>Runtime Analysis</h2>
 
-<p>Let us examine a function that takes in an array of size N and returns the maximum element. In a program we are usually concerned with two complexities: memory and time.</p>
+<p>Let us examine a function that takes in an array of size N and returns the maximum element. In a program we are usually concerned with two main factors: memory and time.</p>
 
 <p>Code:</p>
 
@@ -274,7 +274,7 @@ int findMax(int[] array){
 }
 </pre>
 
-<p>Memory: The array takes O(N) memory and storing the max value is O(1) more memory. but usually when analyzing programs, we ignore the input memory sizes and take into account additional memory that is required to produce the output. So the memory footprint of the function is O(1).</p>
+<p>Memory: The array takes O(N) memory, and storing the max value is O(1) more memory. However, usually when analyzing programs, we ignore the input memory sizes and take into account additional memory that is required to produce the output. So the memory footprint of the function is O(1).</p>
 
 <p>Time: The first assignment of maxVal takes O(1). The loop runs N-1 times and of each of those N-1 times it checks if the current array element is greater than the current max which takes O(1). If it is greater, then we reassign maxVal which is O(1). When analyzing time complexity, we usually take worst case so we have: O(1+(N-1)(2)) and this simplifies to O(N) since it is the largest factor.</p>
 
@@ -295,7 +295,7 @@ void zeroArrays(int[][] grid){
 }
 </pre>
 
-<p>There are NxN cells we need to set to 0 so we need O(N<sup>2</sup>) operations. We can also think of it as another way. There are two nested loop and each loop is O(n) so we multiply them and O(n) x O(n) = O(n<sup>2</sup>). Generally, when we have nested loops, we multiple their complexities.</p>
+<p>There are NxN cells we need to set to 0, so we need O(n<sup>2</sup>) operations. We can also think of it as another way. There are two nested loops and each loop is O(n) so we multiply them and O(n) x O(n) = O(n<sup>2</sup>). Generally, when we have nested loops, we multiply their complexities.</p>
 
 <hr><h3>Example</h3>
 
@@ -314,7 +314,7 @@ void binaryNumbers(int n){
 }
 </pre>
 
-<p>For each number x, it will take O(log x) to convert the number to binary and we do this N times so the runtime is: O(n log n).</p>
+<p>For each number x, it will take O(ln<sub>2</sub> x) to convert the number to binary because we dividing by 2. Since O(ln<sub>2</sub> x) = O( (ln x)/ (ln 2) ), and the denominator is a constant, we can rewrite this as O(ln x). We do this operation N times so the runtime is: O(n log n).</p>
 </section>
 \part{ Recursion }
     \chapter{ Recursion }
@@ -323,9 +323,9 @@ void binaryNumbers(int n){
 
 <p><strong>Next</strong>: <a href="./Advanced_Recursion" target="_blank">Advanced Recursion</a></p>
 
-<p>Recursion is process that repeats itself in a similar way. Anything that has its definition nested inside itself is considered to be recursive. For example GNU stands for GNU not Unix!. Expanding this acronym gives us ((GNU not Unix) not Unix!). As you can see this will go on forever and GNU's definition is nested inside itself so it is recursive. The Fibonacci sequence is also recursive: F(n) = F(n-1)+F(n-2). Inside the function F, we see two more F's!</p>
+<p>Recursion is process that repeats itself in a similar way. Anything that has its definition nested inside itself is considered to be recursive. For example GNU stands for GNU's Not Unix!. Expanding this acronym gives us ((GNU's Not Unix) Not Unix!). As you can see this will go on forever and GNU's definition is nested inside itself so it is recursive. The Fibonacci sequence is also recursive: F(n) = F(n-1)+F(n-2). Inside the function F, we see two more F's!</p>
 
-<p>In computer science infinite looping is not good because computers do not know how to terminate so we need some way to terminate it. A base case is the condition where the last step is reached. Everything should eventually reduce to a base case. For the Fibonacci sequence, the base case is F(0) = 1 and F(1) = 1 and we can see that for all N&gt;1, the Fibonacci sequence will reach the base case.</p>
+<p>In computer science infinite looping is not good, because we want our programs to finish at some point. This means we have to find a stopping point where the function will stop calling itself. A base case is the condition where the last step is reached. All cases should eventually reduce to a base case. For the Fibonacci sequence, the base case is F(0) = 1 and F(1) = 1, and we can see that for all N&gt;1, the Fibonacci sequence will reach the base case.</p>
 
 <p>So for something to be recursive in computer science, it needs:</p>
 
@@ -355,21 +355,21 @@ recursion(parameter)
 
 <p>1! = 1</p>
 
-<p>n! = 1 * 2 * 3 .... n.</p>
+<p>n! = 1 ∙ 2 ∙ 3 .... n.</p>
 
-<p>Or we could write it as n! = (n-1)! * n. We now see that in this form, the factorial function is defined within itself which makes it recursive. Our base case is 1! = 1.</p>
+<p>Or we could write it as n! = (n-1)! ∙ n. We now see that in this form, the factorial function is defined within itself which makes it recursive. Our base case is 1! = 1.</p>
 
 <p>Example:</p>
 
 <p>4!</p>
 
-<p>= 3! * 4</p>
+<p>= 4 ∙ 3!</p>
 
-<p>= 2! * 3 * 4</p>
+<p>= 4 ∙ 3 ∙ 2!</p>
 
-<p>= 1! * 2 * 3 * 4</p>
+<p>= 4 ∙ 3 ∙ 2 ∙ 1!</p>
 
-<p>= 1 * 2 * 3 * 4</p>
+<p>= 4 ∙ 3 ∙ 2 ∙ 1</p>
 
 <p>= 24</p>
 
@@ -404,18 +404,18 @@ int factorial(int n){
 
 </section><section><h2>Sum of digits of a string</h2>
 
-<p>We can use recursion in many places and we can apply it to simple problems that you probably have not thought about. Summing the digits of a string can be done using simple loop but we can also use recursion to do it.</p>
+<p>We can use recursion in many places, and we can apply it to simple problems that you probably have not thought about. Summing the digits of a string can be done using a simple loop, but we can also use recursion to do it.</p>
 
-<p>Let's say we have the string '23528'. The total is equal to the first digit + the sum of the rest of the digits. 2 + '3528'. We can do the exact same thing for the rest of the digits: the second digit + the sum of the rest of the digits and keep doing this until we have no more digits.</p>
+<p>Let's say we have the string '23528'. The total is equal to the first digit plus the sum of the rest of the digits. 2 + '3528'. We can do the exact same thing for the rest of the digits: the second digit plus the sum of the rest of the digits and keep doing this until we have no more digits.</p>
 
 <ul>
 <li>f('23528')</li>
-<li>f('3528') + 2</li>
-<li>f('528') + 3 + 2</li>
-<li>f('28') + 5 + 3 + 2</li>
-<li>f('8') + 2 + 5 + 3 + 2</li>
-<li>f('') + 8 + 2 + 5 + 3 + 2</li>
-<li>0 + 8 + 2 + 5 + 3 + 2</li>
+<li>2 + f('3528')</li>
+<li>2 + 3 + f('528')</li>
+<li>2 + 3 + 5 + f('28')</li>
+<li>2 + 3+ 5 + 2 + f('8') </li>
+<li>2 + 3+ 5 + 2 + 8 + f('')</li>
+<li>2 + 3 + 5 + 2 + 8 + 0</li>
 <li>20</li>
 </ul>
 
@@ -435,19 +435,19 @@ string[1..1] = ''
 string[1] = 'a'
 
 Base case:
-sum(empty) = 0
+sum('') = 0
 
 Recurrence:
-sum(string) = sum(string[2..n]) + int(string[1])
+sum(string) = int(string[1]) + sum(string[2..n])
 
 Example:
-sum('23528')
-= sum('3528') + 2
-= (sum('528') + 3) + 2
-= ((sum('28') + 5) + 3) + 2
-= (((sum('8') + 2) + 5) + 3) + 2
-= ((((sum('') + 8) + 2) + 5) + 3) + 2
-= ((((0 + 8) + 2) + 5) + 3) + 2
+sum("23528")
+= 2 + sum("3528"')
+= 2 + ( 3 + ( sum("528") )
+= 2 + ( 3 + ( 5 + sum ("28") ) )
+= 2 + ( 3 + ( 5 + ( 2 + sum("8") ) ) ) )
+= 2 + ( 3 + ( 5 + ( 2 + ( 8 + sum("") ) ) ) ) )
+= 2 + ( 3 + ( 5 + ( 2 + ( 8 + 0 ) ) ) )
 = 20
 </pre>
 
@@ -455,16 +455,20 @@ sum('23528')
 
 <pre class="prettyprint linenums ">
 int sum(string str){
-   int n = str.length();
-   if(n == 0){
-       return 0;
+    int n = str.length();
+    //Base case when string is empty.
+    if(n == 0){
+        return 0;
     }
-   else{
-     int charToNum = (str.charAt(0) - '0');
-     return sum(str.substring(1, n)) + charToNum;
-   }
+    //Case when string is not empty
+    else{
+        //Convert ASCII to number.
+        int charToNum = (str.charAt(0) - '0');
+        return charToNum + sum(str.substring(1, n))
+    }
 }
 
+//Example: should return 20.
 sum('23528');
 </pre>
 
@@ -478,13 +482,13 @@ sum('23528');
 
 <ul>
 <li>'cacaec'</li>
-<li>'acaec' +1</li>
-<li>'caec' + 0 + 1</li>
-<li>'aec' + 1 + 0 + 1</li>
-<li>'ec' + 0 + 1 + 0 + 1</li>
-<li>'c'  + 0 + 0 + 1 + 0 +1</li>
-<li>'' + 1 + 0 + 0 + 1 + 0 + 1</li>
-<li>0 + 1 + 0 + 0 + 1 + 0 + 1</li>
+<li>1 + 'acaec'</li>
+<li>1 + 0 + 'caec'</li>
+<li>1 + 0 + 1 + 'aec'</li>
+<li>1 + 0 + 1 + 0 + 'ec'</li>
+<li>1 + 0 + 1 + 0 + 0 + 'c'</li>
+<li>1 + 0 + 1 + 0 + 0 + 1 + ''</li>
+<li>1 + 0 + 1 + 0 + 0 + 1 + 0</li>
 <li>3</li>
 </ul>
 
@@ -502,36 +506,45 @@ Base case:
 count(empty) = 0
 
 Recurrence:
-count(string) =  {if string[n]=='c'  count(string[2..n])+1
+count(string) =  {if string[n]=='c'  1 + count(string[2..n])
                  {else               count(string[2..n])
 
 Example:
-count('cacaec')
-= count('acaec') + 1
-= (count('caec') + 0) + 1
-= ((count('aec')+ 1) + 0) + 1
-= (((count('ec') + 0) + 1) + 0) +1
-= ((((count('c') + 0) + 0) + 1) + 0)+1
-= ((((count('') + 1) + 0) + 0) + 1) + 0) + 1
-= ((((0 + 1) + 0) + 0) + 1) + 0) + 1
+count("cacaec")
+= 1 + count("acaec") 
+= 1 + ( 0 + count("caec") )
+= 1 + ( 0 + ( 1 + count("aec") ) )
+= 1 + ( 0 + ( 1 + ( 0 + count("ec") ) ) )
+= 1 + ( 0 + ( 1 + ( 0 + ( 0 + count("c") ) ) ) )
+= 1 + ( 0 + ( 1 + ( 0 + ( 0 + ( 1 + count("") ) ) ) )
+= 1 + ( 0 + ( 1 + ( 0 + ( 0 + ( 1 + 0 ) ) ) ) )
 = 3
 </pre>
 
 <hr><h3>Implementation</h3>
 
 <pre class="prettyprint linenums ">
-int count3(string str){
-   int n = str.length();
-   if(n == 0)return 0;
-   if(str.charAt(0) == 'c'){
-      return count3(str.substring(1, n)) + 1;
-   }
-   else{
-     return count3(str.substring(1, n));
-   }
+int count(string str){
+    int n = str.length();
+
+    //Base case for empty string.
+    if(n == 0){
+        return 0;
+    }
+
+    //Case if first character is a 'c'.
+    if(str.charAt(0) == 'c'){
+        return count(str.substring(1, n)) + 1;
+    }
+
+    //Case if first character is not a 'c'.
+    else{
+        return count(str.substring(1, n));
+    }
 }
 
-count3('cacaec');
+//Example: should return 3.
+count('cacaec');
 
 </pre>
 
@@ -602,7 +615,8 @@ int exponent(int b, int n){
 
 <p><strong>Next</strong>: <a href="./Intermediate_Recursion" target="_blank">Intermediate Recursion</a>, <a href="./Backtracking" target="_blank">Backtracking</a>, <a href="./Dynamic_Programming" target="_blank">Dynamic Programming</a></p>
 
-<p>Recursion can sometimes be very difficult to wrap your head around because when you try to go deeper, it only keeps getting deeper. It is sometimes hard to figure out the recurrence relation, but once you do, the problem becomes simple to solve.</p>
+<p>Recursion can sometimes be very difficult to wrap your head around because when you try to go deeper, it only keeps getting deeper. It is sometimes hard to figure out the recurrence relation, but once you do, the problem becomes simple to solve.
+di</p>
 
 </section><section><h2>Number of paths</h2>
 
@@ -655,7 +669,7 @@ int paths(int n,int m){
 
 </section><section><h2><a href="./Towers_of_Hanoi" target="_blank">Towers of Hanoi</a></h2>
 
-<p>There are three poles and N disks where each disk is heaver than the next disk. In the initial configuration, the discs are stacked upon another on the first pole where the lighter discs are above the heavier discs. We want to move all the discs to the last pole with the following conditions:</p>
+<p>There are three poles and N discs where each disc is heavier than the next disc. In the initial configuration, the discs are stacked upon another on the first pole where the lighter discs are above the heavier discs. We want to move all the discs to the last pole with the following conditions:</p>
 
 <ul>
 <li>Only one disc can be moved from one pole to another at a time.</li>
@@ -713,7 +727,7 @@ int paths(int n,int m){
 
 <p><img src="./public_html/img/uploads/hanoi2.png"></p>
 
-<p>As we can see, the steps to move N discs are the exact same as to move N-1 discs! The only difference is that the actual poles are different but we the steps are the same relative to their roles (starting, helper and destination). We are solving a reduced version of the same problem and so have a recurrence.</p>
+<p>As we can see, the steps to move N discs are exactly the same as to move N-1 discs! The only difference is that the actual poles are different but the steps are the same relative to their roles (starting, helper and destination). We are solving a reduced version of the same problem and so have a recurrence.</p>
 
 <p>In Step 1, when we move N-1 discs from start to helper, the new helper is the old destination and the new destination is the old helper.</p>
 
@@ -803,13 +817,13 @@ void hanoi(int N, int start, int helper, int destination){
         System.out.println("Move " + start + " to " + destination);
     }else{
 
-        //Move N-1 disks from start to helper
+        //Move N-1 discs from start to helper
         hanoi(N-1, start, destination, helper);
 
-        //Move 1 disk from start to end
+        //Move 1 disc from start to end
         hanoi(1, start, helper, destination);
 
-        //Move N-1 disks from helper to end
+        //Move N-1 discs from helper to end
         hanoi(N - 1, helper, start, destination);
     }
 }
@@ -820,7 +834,7 @@ hanoi(4, 1, 2, 3);
 
 <p>A permutation is an arrangement of the original set of elements.</p>
 
-<p>For example permutations of A,B,C,D,E,F:</p>
+<p>For example, here we have a few permutations of A,B,C,D,E,F:</p>
 
 <ul>
 <li>D,E,F,C,B,A</li>
@@ -831,7 +845,7 @@ hanoi(4, 1, 2, 3);
 
 <p>Given a string S of length N, how can we generate all permutations?</p>
 
-<p>Let's assume that we have a list of permutations for the substring of S of N-1 characters. Then to get the permutations for the string of length N, all we need to do is insert the Nth character in between all the positions of each permutation of N-1 characters. For example permutation of A,B,C,D.</p>
+<p>Let's assume that we have a list of permutations for the substring of S of N-1 characters. Then to get the permutations for the string of length N, all we need to do is insert the Nth character in between all the positions of each permutation of N-1 characters. For example, here is how the permutation of A,B,C,D is generated.</p>
 
 <p>We can manually find the permutations of A,B,C.</p>
 
@@ -921,35 +935,35 @@ Vector&lt;String&gt; permutation(String s){
 </section><section><h2>Exercises</h2>
 
 <ol>
-<li>Given a string S, write a recursive function to generate all substrings</li>
+<li>Given a string S, write a recursive function to generate all its non-empty substrings.</li>
 <li>Write a solution for hanoi towers but with the restriction that discs can only be moved from adjacent poles. (You can move a disc from A to B but not A to C because they are not adjacent)</li>
 </ol>
 </section>
 \part{ Data Structures }
     
 
+<p><strong>Next</strong>: <a href="./Advanced_Data_Structures" target="_blank">Advanced Data Structures</a></p>
+
 <p>Data structures are different ways of storing data such that they optimize certain data operations such as retrieval and insertion. Although many of these data structures are already built into various languages, it is important to understand how they work. By understanding the implementations, we can have a sense of which data structure to use for different scenarios.</p>
 
 <p>An <strong>abstract data type</strong> is a conceptual model for representing data. An abstract data type tells what it should do as opposed to how it should work. It will tell us what operations it should have but should not tell us how to implement them.</p>
 
-<p>For example, a bottle should be able to hold water and allow us to drink from. This tells us what it should do but we don't need to know how it works or how it is made. A plastic water bottle is an implementation of a bottle. It holds water in its interior and allows us to drink by unscrewing the cap and letting us pour water down our throat. A thermos is also an implementation of the bottle, it holds fluid inside it, but this thermos has a lid that can be popped open and water can come from it. A thermos and plastic water bottle are different implementations as they are made differently and used differently, but they fundamentally do what a bottle is supposed to do: store liquid, and provide a way to drink. A bottle does not actually exist, but types of bottles do.</p>
+<p>For example, a bottle should be able to hold water and allow us to drink from. This tells us what it should do but we don't need to know how it works or how it is made. A plastic water bottle is an implementation of a bottle. It holds water in its interior and allows us to drink by unscrewing the cap and letting us pour water down our throat. A thermos is also an implementation of the bottle, it has a lid that can be popped open. and water can come from it. A thermos and plastic water bottle are different implementations as they are made differently and used differently, but they fundamentally do what a bottle is supposed to do: store liquid and provide a way to drink. A bottle in the abstract does not actually exist, but types of bottles do.</p>
 
 <p><img src="./public_html/img/uploads/bottle.png"></p>
 
-<p>Some implementations of abstract data types are better than others for different purposes. For example plastic water bottles are very cheap whereas a thermos is more expensive but a thermos can hold hot water and keep it warm for a long period of time. When selecting a data structure, we should analyze the efficiencies of data operations that we will do most often.</p>
+<p>Some implementations of abstract data types are better than others for different purposes. For example, plastic water bottles are very cheap, whereas a thermos is more expensive. However, a thermos can hold hot water and keep it warm for a long period of time. When selecting a data structure, we should pick one based on the efficiencies of data operations that we will do most often.</p>
 
 <p><img src="./public_html/img/uploads/adt.png"></p>
-
-<p>For more intermediate data structures, read the <a href="./Advanced_Data_Structures" target="_blank">advanced data structures</a> page.</p>
 
 
     \chapter{ Stack }
         \section{ Stack }
-        <section><h2>Introduction</h2>
-
-<p>Imagine a stack of plates at a buffet, the plates are taken from the top and are also replaced from the top. The first plate to go in will be the last plate to come out. The last plate to go in will be the first to come out. This structure is called a stack.</p>
+        
 
 <p>A <strong>stack</strong> is an abstract data type with the property that it can remove and insert elements following a FILO (First In Last Out) structure. The first element to be inserted must be the last element to be removed and the last element to be inserted must be the first element to be removed. Sometimes, removal is called "pop" and insertion is called "push".</p>
+
+<p>Imagine a stack of plates at a buffet, the plates are taken from the top and are also replaced from the top. The first plate to go in will be the last plate to come out. The last plate to go in will be the first to come out. This structure is what a stack is.</p>
 
 <p>Example of push:</p>
 
@@ -959,49 +973,11 @@ Vector&lt;String&gt; permutation(String s){
 
 <p><img src="./public_html/img/uploads/stack2.png"></p>
 
-<p>Stacks are used for function calls on the memory stack. Whenever a function is called, it is placed on the memory stack with its variables and when it is returning a value, it is popped off the stack.</p>
+<p>Stacks are used to keep track of function calls in memory. Whenever a function is called, it is placed on the memory stack with its variables, and when it is returning a value, it is popped off the stack.</p>
 
 <p>A stack is usually implemented as a <a href="./Vector" target="_blank">vector</a>.</p>
 
-</section><section><h2>Implementation</h2>
 
-<table>
-<thead>
-<tr>
-  <th>Implementation</th>
-  <th>Pop</th>
-  <th>Push</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td><a href="./Vector" target="_blank">Vector</a></td>
-  <td>O(1)</td>
-  <td>O(1)</td>
-</tr>
-</tbody>
-</table>
-
-</section><section><h2>Exercises</h2>
-
-<ol>
-<li><p>Given a string of brackets of either () or [], determine if the bracket syntax is legal (every opening bracket has a closing bracket from left to right).</p>
-
-<p>Legal syntax:</p>
-
-<ul>
-<li>( [ ( ) [ ] ] )</li>
-<li>( ) ( ) [ ] ( ) ( )</li>
-</ul>
-
-<p>Illegal syntax:</p>
-
-<ul>
-<li>( ( ) ]</li>
-<li>( ) [ ( ] )</li>
-</ul></li>
-</ol>
-</section>
         \section{ Vector }
         <section><h2>Introduction</h2>
 
@@ -1174,9 +1150,30 @@ public void insert(int idx,int x){
 <li>Implement removeAtIndex(int index) for Vector</li>
 </ol>
 </section>
+        \section{ Exercises }
+        
+
+<ol>
+<li><p>Given a string of brackets of either () or [], determine if the bracket syntax is legal (every opening bracket has a closing bracket from left to right).</p>
+
+<p>Legal syntax:</p>
+
+<ul>
+<li>( [ ( ) [ ] ] )</li>
+<li>( ) ( ) [ ] ( ) ( )</li>
+</ul>
+
+<p>Illegal syntax:</p>
+
+<ul>
+<li>( ( ) ]</li>
+<li>( ) [ ( ] )</li>
+</ul></li>
+</ol>
+
     \chapter{ Queue }
         \section{ Queue }
-        <section><h2>Introduction</h2>
+        
 
 <p>A queue is an abstract data type with two functions, pop and push. Removal from the front is called "pop" or "dequeue". Insertion from the back is called "push" or "enqueue". A queue follows a First In First Out (FIFO) structure meaning the first element pushed should be the first element popped and the last element pushed should be the last element popped.</p>
 
@@ -1192,7 +1189,8 @@ public void insert(int idx,int x){
 
 <p><img src="./public_html/img/uploads/queue2.png"></p>
 
-</section><section><h2>Implementation</h2>
+
+        
 
 <p>We can implement a queue most efficiently using a linked list because it has an efficient memory allocation.</p>
 
@@ -1213,33 +1211,7 @@ public void insert(int idx,int x){
 </tbody>
 </table>
 
-</section><section><h2>Exercises</h2>
 
-<ol>
-<li><p>Given a list of letters representing instructions where the first instruction is executed, output what the final list should look like after N instructions are executed.</p>
-
-<p>First instruction:</p>
-
-<ul>
-<li>A. Add B to the end of the list of instructions</li>
-<li>B. Do nothing</li>
-<li>C. Add two A's to the front of the list of instructions</li>
-</ul>
-
-<p>Example:</p>
-
-<ul>
-<li>ABC</li>
-<li>BCB</li>
-<li>CB</li>
-<li>AAB</li>
-<li>ABB</li>
-<li>BBB</li>
-<li>BB</li>
-<li>B</li>
-</ul></li>
-</ol>
-</section>
         \section{ Linked List }
         <section><h2>Introduction</h2>
 
@@ -1440,7 +1412,7 @@ public void deleteNext(Link node){
 
 <p>Sets are abstract data structures which are able to store and keep track of unique values.</p>
 
-<p>Imagine you have a grocery list that you use to keep track of things you need to buy. You want to make sure there are no duplicate items in the list, you can add items to the list and that you can remove items from your list. This structure is similar to what a set does.</p>
+<p>Imagine you have a grocery list that you use to keep tracking of things you need to buy. You want to make sure there are no duplicate items in the list, you can add items to the list and that you can remove items from your list. This structure is similar to what a set does.</p>
 
 <p>Sets have three operations: insertion, deletion and a membership test. Insertion places an element into the set, deletion removes an element from the set and a <strong>membership</strong> test is checking whether an element exists within the set.</p>
 

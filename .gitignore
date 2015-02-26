@@ -6,3 +6,4 @@ config/local_config.ini
 .cache
 composer.lock
 vendor/*
+book
