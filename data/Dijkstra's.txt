@@ -12,6 +12,8 @@ If a negative cycle exists within the graph, then the algorithm breaks as it wil
 
 A naive fix for negative cycles would be to offset all edges by the largest negative edge and then subtract it from the resulting total but this does not work. Consider an example where you have start node A and end node B. The first route from A->B has length 2 and the second route has lengths 1,1,-2. Clearly the second route has less cost. If we try to make the length positive by adding all costs by 2, we will have the first path of length 4 and the second path of lengths 3,3,0 and the first route becomes the smallest total cost which is wrong.
 
+In general, Dijkstra is usually the method for finding the minimum cost between two nodes in any kind of network. For example, Dijkstra can be used in computer networking to find the shortest path between two hosts. It can also be used in flight networking to find the cheapest cost to get from one airport to another airport. 
+
 ## Implementation
 
 At each node we visit we keep track of the minimum cost it takes to reach to reach that node from the starting node. 
@@ -56,47 +58,65 @@ Implementation of Dijkstra in Java using a [[priority queue|Priority Queue]].
 
 [[[[
 class node implements Comparable<node>{
-	int weight,index;
-	public node(int weight,int index){
-		this.weight = weight;
-		this.index = index;
-	}
-	public int compareTo(node e){
-		return weight-e.weight;
-	}
+  int weight,index;
+  public node(int weight,int index){
+    this.weight = weight;
+    this.index = index;
+  }
+  public int compareTo(node e){
+    return weight-e.weight;
+  }
 }
 
-public static int dijkstra(int[][] adjMatrix,int start,int end){
-	int n = adjMatrix.length;
-	PriorityQueue <node> pq = new PriorityQueue<node>();
-	boolean visited[] = new boolean[n];
-	for(int i=0;i<n;i++)visited[i] = false;
-	pq.add(new node(0,start));
-	while(!visited[end] && !pq.isEmpty()){
-		node curNode = pq.poll();
-	
-		if(visited[curNode.index])continue;
-		visited[curNode.index] = true;
-		if(curNode.index==end){
-			return curNode.weight;
-		}
-		for(int i=0;i<n;i++){
-			if(adjMatrix[curNode.index][i]>0 && !visited[i]){
-				int newWeight = curNode.weight+adjMatrix[curNode.index][i];
-				pq.add(new node(newWeight,i));
-			}
-		}
-	}
-	return -1;
+public static int dijkstra(int[][] adjMatrix, int start, int end) {
+
+  int n = adjMatrix.length;
+  PriorityQueue<node> pq = new PriorityQueue<node>();
+
+  // Initialize visited to false.
+  boolean visited[] = new boolean[n];
+  for (int i = 0; i < n; i++) {
+    visited[i] = false;
+  }
+
+  // Add the start node to the queue.
+  pq.add(new node(0, start));
+
+  // Keep going until all nodes are visited or queue is empty.
+  while (!visited[end] && !pq.isEmpty()) {
+
+    // Get node with lowest total weight.
+    node curNode = pq.poll();
+
+    // Skip node is already visited.
+    if (visited[curNode.index]) {
+      continue;
+    }
+
+    // Mark node as visited.
+    visited[curNode.index] = true;
+
+    // If current node is end node then we are done.
+    if (curNode.index == end) {
+      return curNode.weight;
+    }
+
+    // Iterate through neighbors of current node.
+    for (int i = 0; i < n; i++) {
+      // Iterate through each unvisited neighbor.
+      if (adjMatrix[curNode.index][i] > 0 && !visited[i]) {
+        // Set add edge weight to current weight.
+        int newWeight = curNode.weight + adjMatrix[curNode.index][i];
+        pq.add(new node(newWeight, i));
+      }
+    }
+  }
+  return -1;
 }
 ]]]]
 
-## Applications
-
-In general, Dijkstra is usually the goto method for finding the minimum cost between two nodes in any kind of network. For example, Dijkstra can be used in networking to find the shortest path between two hosts. It can also be used in flight networking to find the cheapest cost to get from one airport to another airport. 
-
 ## Practice Exercises
 
-1. Extend Dijkstra's to find the exact path from start to end (the order of nodes of the shortest path A->B->C)
-2. Extend Dijkstra's to find the best three minimal costs with unique paths from the start node to the end node
-3. Prove that Dijkstra's algorithm works
+1. Extend Dijkstra's to find the exact path from start to end (the order of nodes of the shortest path A->B->C).
+2. Extend Dijkstra's to find the best three minimal costs with unique paths from the start node to the end node.
+3. Prove that Dijkstra's algorithm works.

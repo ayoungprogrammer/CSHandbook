@@ -1,34 +1,23 @@
 ## Introduction
 
-Insertion Sort is the another n<sup>2</sup> sorting algorithm.
-
-It works by starting with an empty sorted sequence of numbers and then inserting every element in the array into the sorted sequence maintaining the order after each insert.
-
-The sorting algorithms are implemented to sort integer arrays but can be adapted to sort arrays of any data structure that is comparable. 
+Insertion is a sort that works by inserting unused elements into a sorted array. We start with an empty array and we add the first element to the array. We then add the second element to the array and we "insert" it by shifting elements. We keep doing this until the array is sorted.
 
 ## Implementation
 
 
 [[[[
-//sorts integers from smallest to greatest
-public static void InsertionSort (int a[]){
-	//iterates through the array selecting the smallest elements
-	for (int i=0;i<a.length;i++){
-		//element that needs to be inserted into the sorted list
-		int val = a[i]; 
-		//keeps track of where to insert the element
-		int index = i; 
-		
-		//loops through the already sorted list to find where to 
-		//insert the current element
-		while (index > 0 && a[index-1] > val){
-			//switches the current item at index with the one before 
-			//to check if the element that needs to be inserted will 
-			//go in the next spot
-			a[index] = a[index-1];
-			index--;
-		}
-		a[index] = val;
-	}
+public static void InsertionSort(int[] array) {
+  int i,j;
+
+  // Iterate through size of array.
+  for (j = 1; j < array.length; j++) {
+    int element = array[j];
+    // Shift all elements until beginning of array or correct position.
+    for (i = j - 1; (i >= 0) && (array[i] < element); i--) {
+      array[i + 1] = array[i];
+    }
+    // Insert element into correct position.
+    array[i + 1] = element;
+  }
 }
 ]]]]

@@ -8,45 +8,6 @@ Flood fill can be implemented using a BFS or DFS.
 
 {{floodfill.png}}
 
-## General solution
-
-Most flood fill solutions follow the same basic layout. There is a general [[DFS|Depth First Search]] solution and a general [[BFS|Breadth First Search]] solution.
-
-### General DFS
-
-[[[[
-//marked is initially a n by m boolean array of false
-void floodFill(int i,int j){
-   if(outOfBounds(i,j))return;
-   if(visited(i,j))return;
-   markVisited(i,j);
-   floodFill(i+1,j);
-   floodFill(i,j+1);
-   floodFill(i-1,j);
-   floodFill(i,j-1);
-}
-]]]]
-
-### General BFS
-
-[[[[
-void floodFill(int i,int j){
-   Queue<Point> q;
-   q.push(new Point(i,j));
-   while(!q.isEmpty()){
-      Point cur = q.pop();
-      if(outOfBounds(cur))continue;
-      if(visited(cur))continue;
-      markVisited(cur);
-      q.push(new Point(cur.x+1,cur.y));
-      q.push(new Point(cur.x-1,cur.y));
-      q.push(new Point(cur.x,cur.y+1));
-      q.push(new Point(cur.x,cur.y-1));
-   }
-   
-}
-]]]]
-
 ## Bucket Fill
 
 Given an n x m matrix and a start point and two colors (src and dst), we want to replace all the cells in the matrix that are connected to the start point with the color src and change to color dst as well as output the number of cells changed.
@@ -72,24 +33,25 @@ This is the [[DFS|Depth First Search]] approach to the problem.
 * Assume that visited is a global boolean n by m matrix that is initially all false
 
 [[[[
-/* Changes all pixels that are equal to src to tar that are connected to start
- * and returns the number of pixels changed
- */
-public int FloodFillDFS(int x,int y,int src,int tar){
-	if(x<0 || x>=n || y<0 || y>=m)return 0;
-	if(visited[x][y])return 0;
-	visited[x][y] = true;
-	if(image[x][y]!=src)return 0;
-	image[x][y] = tar;
-	int sum = 0;
-	sum+=FloodFillDFS(x+1,y,src,tar);
-	sum+=FloodFillDFS(x-1,y,src,tar);
-	sum+=FloodFillDFS(x,y+1,src,tar);
-	sum+=FloodFillDFS(x,y-1,src,tar);
-	return sum;
+public int FloodFillDFS(int x, int y, int src, int tar) {
+  if (x < 0 || x >= n || y < 0 || y >= m) {
+    return 0;
+  }
+  if (visited[x][y]) {
+    return 0;
+  }
+  visited[x][y] = true;
+  if (image[x][y] != src) {
+    return 0;
+  }
+  image[x][y] = tar;
+  int sum = 0;
+  sum += FloodFillDFS(x + 1, y, src, tar);
+  sum += FloodFillDFS(x - 1, y, src, tar);
+  sum += FloodFillDFS(x, y + 1, src, tar);
+  sum += FloodFillDFS(x, y - 1, src, tar);
+  return sum;
 }
-
-floodFillDFS(1,1,1,2);
 ]]]]
 
 ### BFS Solution
@@ -101,29 +63,31 @@ This is the [[BFS|Breadth First Search]] approach to the problem.
 * Assume that visited is a global boolean n by m matrix that is initially all false
 
 [[[[
-/* Changes all pixels that are equal to src to tar that are connected to start
- * and returns the number of pixels changes 
- */
-public int FloodFillBFS(int x,int y,int src,int tar){
-	LinkedList<Point> q = new LinkedList<Point>();
-	q.push(new Point(x,y));
-	int total = 0;
-	while(q.isEmpty()==false){
-		Point cur = q.pop();
-		if(cur.x<0||cur.x>=n||cur.y<0||cur.y>=m)continue;
-		if(visited[cur.x][cur.y])continue;
-                visited[cur.x][cur.y] = true;
-		if(image[cur.x][cur.y]!=src)continue;
-		image[cur.x][cur.y] = tar;
-		total++;
-		q.push(new Point(cur.x+1,cur.y));
-		q.push(new Point(cur.x-1,cur.y));
-		q.push(new Point(cur.x,cur.y+1));
-		q.push(new Point(cur.x,cur.y-1));
-	}
-	return total;
+public int FloodFillBFS(int x, int y, int src, int tar) {
+  LinkedList<Point> q = new LinkedList<Point>();
+  q.push(new Point(x, y));
+  int total = 0;
+  while (q.isEmpty() == false) {
+    Point cur = q.pop();
+    if (cur.x < 0 || cur.x >= n || cur.y < 0 || cur.y >= m) {
+      continue;
+    }
+    if (visited[cur.x][cur.y]) {
+      continue;
+    }
+    visited[cur.x][cur.y] = true;
+    if (image[cur.x][cur.y] != src) {
+      continue;
+    }
+    image[cur.x][cur.y] = tar;
+    total++;
+    q.push(new Point(cur.x + 1, cur.y));
+    q.push(new Point(cur.x - 1, cur.y));
+    q.push(new Point(cur.x, cur.y + 1));
+    q.push(new Point(cur.x, cur.y - 1));
+  }
+  return total;
 }
-FloodFillBFS(1,1,1,2);
 ]]]]
 
 ## Exercises

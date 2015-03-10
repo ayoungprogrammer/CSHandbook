@@ -27,13 +27,14 @@ In Java, there already exists a LinkedList class but we will implement our own.
 The Link class for each "link" in the Linked List. In each Link we only need the value and location of the previous and next node. 
 
 [[[[
-class Link{
-	int value;
-	Link next;
-	public Link(int value){
-		this.value = value;
-		this.next = null;
-	}
+class Link {
+  int value;
+  Link next;
+
+  public Link(int value) {
+    this.value = value;
+    this.next = null;
+  }
 }
 ]]]]
 
@@ -41,14 +42,17 @@ class Link{
 
 Create the linked list by initializing the starting node as null and setting the size to empty.
 [[[[
-class LinkedList{
-	Link head;
-	Link end;
-	int size;
-	public LinkedList(){
-		start = end = null;
-		size = 0;
-	}
+public class LinkedList {
+
+  public Link head;
+  public Link end;
+  public int size;
+
+  public LinkedList() {
+    head = null;
+    end = null;
+    size = 0;
+  }
 }
 ]]]]
  
@@ -63,18 +67,16 @@ Create a new node with the value given and add it to the end. We have to set the
 {{linkedlistpush3.png}}
 
 [[[[
-/*
- * Adds new node to head of linked list
- */
-public void push(int value){
-	Link newLink = new Link(value);
-	if(size==0){
-		head = end = newLink;
-	}else{
-		end.next = newLink;
-		end = newLink;
-	}
-	size++;
+public void push(int value) {
+  Link newLink = new Link(value);
+  if (size == 0) {
+    head = end = newLink;
+  }
+  else {
+    end.next = newLink;
+    end = newLink;
+  }
+  size++;
 }
 ]]]]
 
@@ -87,20 +89,17 @@ Pops off the node at the head.
 {{linkedlistpop2.png}}
 
 [[[[
-/*
- * Adds new node to head of linked list
- */
-public int pop(){
-	if(head==null){
-		throw new NoSuchElementException();
-	}
-	int ret = head.value;
-	head = head.next;
-	size--;
-	if(size==0){
-		end = null;
-	}
-	return ret;
+public int pop() {
+  if (head == null) {
+    throw new NoSuchElementException();
+  }
+  int ret = head.value;
+  head = head.next;
+  size--;
+  if (size == 0) {
+    end = null;
+  }
+  return ret;
 }
 ]]]]
 
@@ -115,20 +114,17 @@ Get retrieves the value at the specified index. We have to loop through the enti
 {{linkedlistget3.png}}
 
 [[[[
-/*
-* Gets the value at index
-*/
-public int get(int index){
-	int i = 0;
-	Link curNode = head;
-	while(curNode!=null){
-		if(index==i){
-			return curNode.value;
-		}
-		curNode = curNode.next;
-		i++;
-	}
-	throw new NoSuchElementException();
+public int get(int index) {
+  int i = 0;
+  Link curNode = head;
+  while (curNode != null) {
+    if (index == i) {
+      return curNode.value;
+    }
+    curNode = curNode.next;
+    i++;
+  }
+  throw new NoSuchElementException();
 }
 ]]]]
 
@@ -141,15 +137,12 @@ To delete the current node we set the previous node next link to the link after.
 {{linkedlistrem2.png}}
 
 [[[[
-/*
- * Deletes node after specified
- */
-public void deleteNext(Link node){
-	if(node.next==end){
-		end = node;
-	}
-	node.next = node.next.next;
-	size--;
+public void deleteNext(Link node) {
+  if (node.next == end) {
+    end = node;
+  }
+  node.next = node.next.next;
+  size--;
 }
 ]]]]
 

@@ -65,68 +65,72 @@ We can rewrite this solution using dynamic programming without recursion.
 
 [[[[
 class edge{
-	int weight,source,dest;
-	public edge(int source,int dest,int weight){
-		this.source = source;
-		this.dest = dest;
-		this.weight = weight;
-	}
+  int weight,source,dest;
+  public edge(int source,int dest,int weight){
+    this.source = source;
+    this.dest = dest;
+    this.weight = weight;
+  }
 }
 
-public static int BellmanFord(Vector<Vector<edge>> adjList,int startNode,int endNode){
-	
-	int n = adjList.size();
-	//dist[i] is minimum distance from start to i
-	int[] dist=new int[n];
-	
-	//used[i] is if dist[i] has been initialized
-	boolean[] used = new boolean[n];
-	
-	//initialize dist[i]=0 and used[i]=false
-	for(int i=0;i<n;i++){
-		dist[i] = 0;
-		used[i] = false;
-	}
-	used[startNode] = true;
-	dist[startNode] = 0;
-	for(int i=0;i<n-1;i++){
-		//Iterate through adjacency list
-		for(int j=0;j<n;j++){
-			for(int k=0;k<adjList.get(j).size();k++){
-				if(!used[j])continue;
-				edge e = adjList.get(j).get(k);
-				//If dist[e.source] has been used
-				if(used[e.source]){
-					//If new dist < cur dist or not used, then update
-					int newDist = dist[e.source]+e.weight;
-					if(newDist<dist[e.dest] || !used[e.dest]){
-						used[e.dest]= true; 
-						dist[e.dest] = newDist;
-					}
-				}
-			}
-		}
-	}
-	
-	for(int j=0;j<n;j++){
-		for(int k=0;k<adjList.get(j).size();k++){
-			edge e = adjList.get(j).get(k);
-			//If negative cycle
-			if(dist[e.source]+e.weight < dist[e.dest]){
-				System.out.println("Negative cycle");
-			}
-		}
-	}
-	
-	//If no path exists
-	if(!used[endNode]){
-		System.out.println("No path from start to end");
-	}
-	
-	//Return distance from start to end
-	return dist[endNode];
-}
+public static int UNDEFINED = Integer.MIN_VALUE;
 
+public static int BellmanFord(Vector<Vector<edge>> adjList, int startNode,
+    int endNode) {
+
+  int n = adjList.size();
+  
+  // Let dist[i] be minimum distance from start to i.
+  int[] dist = new int[n];
+
+  // initialize dist[i]=0 and used[i]=false
+  for (int i = 0; i < n; i++) {
+    dist[i] = UNDEFINED;
+  }
+  dist[startNode] = 0;
+  
+  // Maximum path to take is n-1 steps.
+  for (int i = 0; i < n - 1; i++) {
+    // Iterate through nodes.
+    for (int j = 0; j < n; j++) {
+      // Iterate through neighbors of the node.
+      for (int k = 0; k < adjList.get(j).size(); k++) {
+        // Only visit node if path is defined.
+        if (dist[j] == UNDEFINED) {
+          continue;
+        }
+        edge e = adjList.get(j).get(k);
+        // If dist[e.source] has been used
+        if (dist[e.source] != UNDEFINED) {
+          // If new dist < cur dist or not used, then update node.
+          int newDist = dist[e.source] + e.weight;
+          if (newDist < dist[e.dest] || dist[e.dest] == UNDEFINED) {
+            dist[e.dest] = newDist;
+          }
+        }
+      }
+    }
+  }
+
+  // Check if negative cycle exists.
+  for (int j = 0; j < n; j++) {
+    for (int k = 0; k < adjList.get(j).size(); k++) {
+      edge e = adjList.get(j).get(k);
+      // Check if edge can create negative cycle.
+      if (dist[e.source] + e.weight < dist[e.dest]) {
+        System.out.println("Negative cycle exists.");
+      }
+    }
+  }
+
+  // Check if no path exists.
+  if (dist[endNode] == UNDEFINED) {
+    System.out.println("No path from start to end");
+  }
+
+  // Return distance from start to end
+  return dist[endNode];
+}
 ]]]]
 
 ## Applications
@@ -143,5 +147,5 @@ Notice that 1 USD -> 1.12 CAD -> 1.008 USD. Bellman Ford can be used to find met
 
 ## Exercises
 
-1. Write a program that detects a path for arbitrage to occur
-2. Prove Bellmand-Ford works
+1. Write a program that detects a path for arbitrage to occur.
+2. Prove Bellmand-Ford works.

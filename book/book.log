@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  25 FEB 2015 22:17
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  3 MAR 2015 23:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -364,95 +364,99 @@ LaTeX Info: Redefining \nameref on input line 35.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 37.
+(Font)              <12> on input line 38.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 37.
+(Font)              <8> on input line 38.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 37.
+(Font)              <6> on input line 38.
 [1
 
 
 {/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(./book.toc
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 2.
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
+[1
+
+]pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.29 ...\numberline {4} Recursion }{22}{chapter.4}
-                                                   [1
+l.60 		\tableofcontents
+                        [1
 
-] [2] [3] [4] [5] [6])
+] (./book.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 2.
+ [2
+
+] [3] [4] [5] [6] [7])
 \tf@toc=\write3
 \openout3 = `book.toc'.
 
-
-[7]
+ [8]
 Chapter 1.
-[8
+[9
 
-] [9]
+] [10]
 Chapter 2.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 85.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 108.
+
 (/usr/local/texlive/2013/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 85.
- [10
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 108.
+ [11
 
 ]
-Overfull \hbox (21.89453pt too wide) in paragraph at lines 112--118
+Overfull \hbox (21.89453pt too wide) in paragraph at lines 135--141
 []\OT1/cmr/m/n/10.95 There are two types of in-ter-views I have en-coun-tered: 
 phone/Skype
  []
 
-[11] [12] [13] [14] [15
+[12] [13] [14] [15] [16
 
 ]
 Chapter 3.
-[16
+[17
 
 ]
 
 Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
-nput line 220.
+nput line 243.
 
 
-Package tabulary Warning: No suitable columns! on input line 220.
+Package tabulary Warning: No suitable columns! on input line 243.
 
 
-Overfull \hbox (0.94162pt too wide) in paragraph at lines 226--227
+Overfull \hbox (0.94162pt too wide) in paragraph at lines 249--250
 \OT1/cmr/m/n/10.95 There are many dif-fer-ent meth-ods of im-ple-ment-ing dif-f
 er-ent things
  []
 
 
 Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
-nput line 239.
+nput line 262.
 
 
-Package tabulary Warning: No suitable columns! on input line 239.
+Package tabulary Warning: No suitable columns! on input line 262.
 
-[17]
+[18]
 
 Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
-nput line 279.
+nput line 302.
 
 
-Package tabulary Warning: No suitable columns! on input line 279.
+Package tabulary Warning: No suitable columns! on input line 302.
 
 
-Overfull \hbox (68.63864pt too wide) in paragraph at lines 279--280
+Overfull \hbox (68.63864pt too wide) in paragraph at lines 302--303
 [][] 
  []
 
-[18] [19] [20] [21
+[19] [20] [21] [22
 
 ]
 Chapter 4.
-[22
+[23
 
 ]
 Missing character: There is no â in font cmr10!
@@ -491,1450 +495,1664 @@ Missing character: There is no ™ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no ˆ in font cmr10!
 Missing character: There is no ™ in font cmr10!
- [23] [24] [25] [26] [27] [28] [29] [30]
-<../public_html/img/uploads/recursion_grid.png, id=706, 223.43475pt x 142.73325
-pt>
+ [24] [25] [26] [27] [28] [29] [30]
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/recursion_grid.png, id=700, 372.39125pt x 237.88875
+pt> [31]
 File: ../public_html/img/uploads/recursion_grid.png Graphic file (type png)
  <use ../public_html/img/uploads/recursion_grid.png>
 Package pdftex.def Info: ../public_html/img/uploads/recursion_grid.png used on 
-input line 648.
-(pdftex.def)             Requested size: 223.4342pt x 142.73941pt.
- [31 <../public_html/img/uploads/recursion_grid.png>]
-<../public_html/img/uploads/recursion_grid2.png, id=711, 215.6055pt x 137.313pt
+input line 671.
+(pdftex.def)             Requested size: 309.85626pt x 197.94852pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 671--672
+[][] 
+ []
+
+[32 <../public_html/img/uploads/recursion_grid.png>]
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/recursion_grid2.png, id=723, 359.3425pt x 228.855pt
 >
 File: ../public_html/img/uploads/recursion_grid2.png Graphic file (type png)
  <use ../public_html/img/uploads/recursion_grid2.png>
 Package pdftex.def Info: ../public_html/img/uploads/recursion_grid2.png used on
- input line 680.
-(pdftex.def)             Requested size: 215.60497pt x 137.31892pt.
- [32]
-<../public_html/img/uploads/hanoi.png, id=735, 212.59425pt x 154.77824pt>
-[33 <../public_html/img/uploads/recursion_grid2.png>]
+ input line 703.
+(pdftex.def)             Requested size: 309.85626pt x 197.35272pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 703--704
+[][] 
+ []
+
+[33] [34 <../public_html/img/uploads/recursion_grid2.png>]
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/hanoi.png, id=758, 354.32375pt x 257.96375pt>
 File: ../public_html/img/uploads/hanoi.png Graphic file (type png)
 
 <use ../public_html/img/uploads/hanoi.png>
 Package pdftex.def Info: ../public_html/img/uploads/hanoi.png used on input lin
-e 706.
-(pdftex.def)             Requested size: 212.59372pt x 154.78731pt.
+e 729.
+(pdftex.def)             Requested size: 309.85626pt x 225.59569pt.
 
-<../public_html/img/uploads/hanoi2.png, id=749, 215.00325pt x 146.34676pt>
+Overfull \hbox (17.0pt too wide) in paragraph at lines 729--730
+[][] 
+ []
+
+
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/hanoi2.png, id=759, 358.33875pt x 243.91125pt>
 File: ../public_html/img/uploads/hanoi2.png Graphic file (type png)
 
 <use ../public_html/img/uploads/hanoi2.png>
 Package pdftex.def Info: ../public_html/img/uploads/hanoi2.png used on input li
-ne 713.
-(pdftex.def)             Requested size: 215.00272pt x 146.34639pt.
+ne 736.
+(pdftex.def)             Requested size: 309.85626pt x 210.92448pt.
 
-<../public_html/img/uploads/hanoi3.png, id=750, 218.61674pt x 146.34676pt>
+Overfull \hbox (27.27364pt too wide) in paragraph at lines 735--737
+\OT1/cmr/m/n/10.95 pole. [] 
+ []
+
+[35 <../public_html/img/uploads/hanoi.png>]
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/hanoi3.png, id=766, 364.36125pt x 243.91125pt>
 File: ../public_html/img/uploads/hanoi3.png Graphic file (type png)
 
 <use ../public_html/img/uploads/hanoi3.png>
 Package pdftex.def Info: ../public_html/img/uploads/hanoi3.png used on input li
-ne 718.
-(pdftex.def)             Requested size: 218.6162pt x 146.35085pt.
- [34 <../public_html/img/uploads/hanoi.png> <../public_html/img/uploads/hanoi2.
+ne 741.
+(pdftex.def)             Requested size: 309.85626pt x 207.43346pt.
+
+Overfull \hbox (82.69289pt too wide) in paragraph at lines 740--742
+\OT1/cmr/m/n/10.95 des-ti-na-tion pole. [] 
+ []
+
+[36 <../public_html/img/uploads/hanoi2.png> <../public_html/img/uploads/hanoi3.
 png>]
-<../public_html/img/uploads/hanoi4.png, id=757, 225.84375pt x 154.77824pt>
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/hanoi4.png, id=773, 376.40625pt x 257.96375pt>
 File: ../public_html/img/uploads/hanoi4.png Graphic file (type png)
 
 <use ../public_html/img/uploads/hanoi4.png>
 Package pdftex.def Info: ../public_html/img/uploads/hanoi4.png used on input li
-ne 723.
-(pdftex.def)             Requested size: 225.84319pt x 154.78731pt.
- [35 <../public_html/img/uploads/hanoi3.png> <../public_html/img/uploads/hanoi4
-.png>]
-File: ../public_html/img/uploads/hanoi.png Graphic file (type png)
+ne 746.
+(pdftex.def)             Requested size: 309.85626pt x 212.37004pt.
 
+Overfull \hbox (48.56534pt too wide) in paragraph at lines 745--747
+\OT1/cmr/m/n/10.95 tion pole. [] 
+ []
+
+File: ../public_html/img/uploads/hanoi.png Graphic file (type png)
 <use ../public_html/img/uploads/hanoi.png>
 Package pdftex.def Info: ../public_html/img/uploads/hanoi.png used on input lin
-e 731.
-(pdftex.def)             Requested size: 212.59372pt x 154.78731pt.
+e 754.
+(pdftex.def)             Requested size: 309.85626pt x 225.59569pt.
 
-<../public_html/img/uploads/hanoi5.png, id=764, 212.59425pt x 154.77824pt>
+Overfull \hbox (17.0pt too wide) in paragraph at lines 754--755
+[][] 
+ []
+
+[37 <../public_html/img/uploads/hanoi4.png>]
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/hanoi5.png, id=779, 354.32375pt x 257.96375pt>
 File: ../public_html/img/uploads/hanoi5.png Graphic file (type png)
 
 <use ../public_html/img/uploads/hanoi5.png>
 Package pdftex.def Info: ../public_html/img/uploads/hanoi5.png used on input li
-ne 739.
-(pdftex.def)             Requested size: 212.59372pt x 154.78731pt.
+ne 762.
+(pdftex.def)             Requested size: 309.85626pt x 225.59569pt.
 
-<../public_html/img/uploads/hanoi6.png, id=765, 212.59425pt x 154.77824pt>
+Overfull \hbox (17.0pt too wide) in paragraph at lines 762--763
+[][] 
+ []
+
+[38]
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/hanoi6.png, id=784, 354.32375pt x 257.96375pt>
 File: ../public_html/img/uploads/hanoi6.png Graphic file (type png)
 
 <use ../public_html/img/uploads/hanoi6.png>
 Package pdftex.def Info: ../public_html/img/uploads/hanoi6.png used on input li
-ne 745.
-(pdftex.def)             Requested size: 212.59372pt x 154.78731pt.
- [36 <../public_html/img/uploads/hanoi5.png>]
+ne 768.
+(pdftex.def)             Requested size: 309.85626pt x 225.59569pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 768--769
+[][] 
+ []
+
+[39 <../public_html/img/uploads/hanoi5.png>]
 File: ../public_html/img/uploads/hanoi2.png Graphic file (type png)
- <use ../public_html/img/uploads/hanoi2.png>
+
+<use ../public_html/img/uploads/hanoi2.png>
 Package pdftex.def Info: ../public_html/img/uploads/hanoi2.png used on input li
-ne 751.
-(pdftex.def)             Requested size: 215.00272pt x 146.34639pt.
- [37 <../public_html/img/uploads/hanoi6.png>] [38] [39]
-Overfull \hbox (0.60406pt too wide) in paragraph at lines 860--861
+ne 774.
+(pdftex.def)             Requested size: 309.85626pt x 210.92448pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 774--775
+[][] 
+ []
+
+[40 <../public_html/img/uploads/hanoi6.png>] [41] [42] [43]
+Overfull \hbox (0.60406pt too wide) in paragraph at lines 883--884
 []\OT1/cmr/m/n/10.95 For ex-am-ple, here we have a few per-mu-ta-tions of A,B,C
 ,D,E,F: 
  []
 
-[40] [41] [42]
-Overfull \hbox (47.66522pt too wide) in paragraph at lines 951--952
+[44] [45] [46]
+Overfull \hbox (47.66522pt too wide) in paragraph at lines 974--975
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
  []
 
-[43] [44
+[47] [48
 
 ]
-<../public_html/img/uploads/bottle.png, id=927, 494.84875pt x 212.795pt>
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/bottle.png, id=951, 494.84875pt x 212.795pt>
 File: ../public_html/img/uploads/bottle.png Graphic file (type png)
 
 <use ../public_html/img/uploads/bottle.png>
 Package pdftex.def Info: ../public_html/img/uploads/bottle.png used on input li
-ne 976.
+ne 999.
 (pdftex.def)             Requested size: 309.85626pt x 133.2433pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 976--977
+Overfull \hbox (17.0pt too wide) in paragraph at lines 999--1000
 [][] 
  []
 
-[45 <../public_html/img/uploads/bottle.png>]
-<../public_html/img/uploads/adt.png, id=933, 560.0925pt x 246.9225pt>
+[49 <../public_html/img/uploads/bottle.png>]
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/adt.png, id=958, 560.0925pt x 246.9225pt>
 File: ../public_html/img/uploads/adt.png Graphic file (type png)
 
 <use ../public_html/img/uploads/adt.png>
 Package pdftex.def Info: ../public_html/img/uploads/adt.png used on input line 
-980.
+1003.
 (pdftex.def)             Requested size: 309.85626pt x 136.60654pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 980--981
+Overfull \hbox (17.0pt too wide) in paragraph at lines 1003--1004
 [][] 
  []
 
-[46 <../public_html/img/uploads/adt.png>]
+[50 <../public_html/img/uploads/adt.png>]
 Chapter 5.
-<../public_html/img/uploads/stack.png, id=940, 295.1025pt x 217.81375pt>
+
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/stack.png, id=964, 295.1025pt x 217.81375pt>
 File: ../public_html/img/uploads/stack.png Graphic file (type png)
 
 <use ../public_html/img/uploads/stack.png>
 Package pdftex.def Info: ../public_html/img/uploads/stack.png used on input lin
-e 993.
+e 1016.
 (pdftex.def)             Requested size: 295.10176pt x 217.81651pt.
 
-Overfull \hbox (2.2455pt too wide) in paragraph at lines 993--994
+Overfull \hbox (2.2455pt too wide) in paragraph at lines 1016--1017
 [][] 
  []
 
-[47
+[51
 
-] <../public_html/img/uploads/stack2.png, id=945, 299.1175pt x 184.69pt>
+]
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/stack2.png, id=969, 299.1175pt x 184.69pt>
 File: ../public_html/img/uploads/stack2.png Graphic file (type png)
 
 <use ../public_html/img/uploads/stack2.png>
 Package pdftex.def Info: ../public_html/img/uploads/stack2.png used on input li
-ne 997.
+ne 1020.
 (pdftex.def)             Requested size: 299.11676pt x 184.70361pt.
 
-Overfull \hbox (6.2605pt too wide) in paragraph at lines 997--998
+Overfull \hbox (6.2605pt too wide) in paragraph at lines 1020--1021
 [][] 
  []
 
-[48 <../public_html/img/uploads/stack.png> <../public_html/img/uploads/stack2.p
+[52 <../public_html/img/uploads/stack.png> <../public_html/img/uploads/stack2.p
 ng>]
 
 Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
-nput line 1032.
+nput line 1055.
 
 
-Package tabulary Warning: No suitable columns! on input line 1032.
+Package tabulary Warning: No suitable columns! on input line 1055.
 
-[49] <../public_html/img/uploads/vector3.png, id=968, 417.56pt x 206.7725pt>
+[53]
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/vector3.png, id=992, 417.56pt x 206.7725pt>
 File: ../public_html/img/uploads/vector3.png Graphic file (type png)
 
 <use ../public_html/img/uploads/vector3.png>
 Package pdftex.def Info: ../public_html/img/uploads/vector3.png used on input l
-ine 1058.
+ine 1081.
 (pdftex.def)             Requested size: 309.85626pt x 153.4478pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 1058--1059
+Overfull \hbox (17.0pt too wide) in paragraph at lines 1081--1082
 [][] 
  []
 
-<../public_html/img/uploads/vector2.png, id=969, 426.59375pt x 165.61874pt>
+
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/vector2.png, id=993, 426.59375pt x 165.61874pt>
 File: ../public_html/img/uploads/vector2.png Graphic file (type png)
 
 <use ../public_html/img/uploads/vector2.png>
 Package pdftex.def Info: ../public_html/img/uploads/vector2.png used on input l
-ine 1074.
+ine 1097.
 (pdftex.def)             Requested size: 309.85626pt x 120.30426pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 1074--1075
+Overfull \hbox (17.0pt too wide) in paragraph at lines 1097--1098
 [][] 
  []
 
-[50 <../public_html/img/uploads/vector3.png>]
-<../public_html/img/uploads/vector4.png, id=983, 388.45125pt x 129.48375pt>
+[54 <../public_html/img/uploads/vector3.png>]
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/vector4.png, id=1007, 388.45125pt x 129.48375pt>
 File: ../public_html/img/uploads/vector4.png Graphic file (type png)
 
 <use ../public_html/img/uploads/vector4.png>
 Package pdftex.def Info: ../public_html/img/uploads/vector4.png used on input l
-ine 1090.
+ine 1113.
 (pdftex.def)             Requested size: 309.85626pt x 103.28877pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 1090--1091
+Overfull \hbox (17.0pt too wide) in paragraph at lines 1113--1114
 [][] 
  []
 
-[51 <../public_html/img/uploads/vector2.png> <../public_html/img/uploads/vector
+[55 <../public_html/img/uploads/vector2.png> <../public_html/img/uploads/vector
 4.png>]
 File: ../public_html/img/uploads/vector4.png Graphic file (type png)
  <use ../public_html/img/uploads/vector4.png>
 Package pdftex.def Info: ../public_html/img/uploads/vector4.png used on input l
-ine 1109.
+ine 1132.
 (pdftex.def)             Requested size: 309.85626pt x 103.28877pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 1109--1110
+Overfull \hbox (17.0pt too wide) in paragraph at lines 1132--1133
 [][] 
  []
 
-[52]
-<../public_html/img/uploads/vectorget.png, id=1024, 196.735pt x 127.47626pt>
-File: ../public_html/img/uploads/vectorget.png Graphic file (type png)
 
-<use ../public_html/img/uploads/vectorget.png>
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/vectorget.png, id=1028, 196.735pt x 127.47626pt>
+[56]
+File: ../public_html/img/uploads/vectorget.png Graphic file (type png)
+ <use ../public_html/img/uploads/vectorget.png>
 Package pdftex.def Info: ../public_html/img/uploads/vectorget.png used on input
- line 1130.
+ line 1153.
 (pdftex.def)             Requested size: 196.7345pt x 127.47594pt.
 
-<../public_html/img/uploads/vectorinsert.png, id=1025, 183.68625pt x 128.48pt>
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/vectorinsert.png, id=1049, 183.68625pt x 128.48pt>
 File: ../public_html/img/uploads/vectorinsert.png Graphic file (type png)
 
 <use ../public_html/img/uploads/vectorinsert.png>
 Package pdftex.def Info: ../public_html/img/uploads/vectorinsert.png used on in
-put line 1145.
+put line 1168.
 (pdftex.def)             Requested size: 183.68578pt x 128.4875pt.
 
-<../public_html/img/uploads/vectorinsert2.png, id=1026, 198.7425pt x 122.4575pt
-> [53 <../public_html/img/uploads/vectorget.png>]
-File: ../public_html/img/uploads/vectorinsert2.png Graphic file (type png)
+pdfTeX warning (ext1): too large image resolution ignored
 
-<use ../public_html/img/uploads/vectorinsert2.png>
+<../public_html/img/uploads/vectorinsert2.png, id=1050, 198.7425pt x 122.4575pt
+>
+File: ../public_html/img/uploads/vectorinsert2.png Graphic file (type png)
+ <use ../public_html/img/uploads/vectorinsert2.png>
 Package pdftex.def Info: ../public_html/img/uploads/vectorinsert2.png used on i
-nput line 1147.
+nput line 1170.
 (pdftex.def)             Requested size: 198.742pt x 122.4609pt.
- [54 <../public_html/img/uploads/vectorinsert.png> <../public_html/img/uploads/
-vectorinsert2.png>] [55]
+ [57 <../public_html/img/uploads/vectorget.png> <../public_html/img/uploads/vec
+torinsert.png>] [58 <../public_html/img/uploads/vectorinsert2.png>] [59]
 Chapter 6.
-[56
+[60
 
 ]
-<../public_html/img/uploads/queue.png, id=1074, 249.93375pt x 167.62625pt>
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/queue.png, id=1098, 249.93375pt x 167.62625pt>
 File: ../public_html/img/uploads/queue.png Graphic file (type png)
 
 <use ../public_html/img/uploads/queue.png>
 Package pdftex.def Info: ../public_html/img/uploads/queue.png used on input lin
-e 1207.
+e 1230.
 (pdftex.def)             Requested size: 249.93314pt x 167.63094pt.
 
-<../public_html/img/uploads/queue2.png, id=1075, 250.9375pt x 161.60374pt>
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/queue2.png, id=1099, 250.9375pt x 161.60374pt>
 File: ../public_html/img/uploads/queue2.png Graphic file (type png)
 
 <use ../public_html/img/uploads/queue2.png>
 Package pdftex.def Info: ../public_html/img/uploads/queue2.png used on input li
-ne 1211.
+ne 1234.
 (pdftex.def)             Requested size: 250.93687pt x 161.61073pt.
 
 
 Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
-nput line 1231.
+nput line 1254.
 
 
-Package tabulary Warning: No suitable columns! on input line 1231.
+Package tabulary Warning: No suitable columns! on input line 1254.
 
-[57 <../public_html/img/uploads/queue.png> <../public_html/img/uploads/queue2.p
+[61 <../public_html/img/uploads/queue.png> <../public_html/img/uploads/queue2.p
 ng>]
-<../public_html/img/uploads/linkedlist.png, id=1082, 334.24875pt x 91.34125pt>
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/linkedlist.png, id=1106, 334.24875pt x 91.34125pt>
 File: ../public_html/img/uploads/linkedlist.png Graphic file (type png)
 
 <use ../public_html/img/uploads/linkedlist.png>
 Package pdftex.def Info: ../public_html/img/uploads/linkedlist.png used on inpu
-t line 1245.
+t line 1268.
 (pdftex.def)             Requested size: 309.85626pt x 84.68166pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 1245--1246
+Overfull \hbox (17.0pt too wide) in paragraph at lines 1268--1269
 [][] 
  []
 
-[58 <../public_html/img/uploads/linkedlist.png>]
-<../public_html/img/uploads/doublelinkedlist.png, id=1088, 334.24875pt x 92.345
+
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/doublelinkedlist.png, id=1107, 334.24875pt x 92.345
 pt>
 File: ../public_html/img/uploads/doublelinkedlist.png Graphic file (type png)
  <use ../public_html/img/uploads/doublelinkedlist.png>
 Package pdftex.def Info: ../public_html/img/uploads/doublelinkedlist.png used o
-n input line 1251.
+n input line 1274.
 (pdftex.def)             Requested size: 309.85626pt x 85.61221pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 1251--1252
+Overfull \hbox (17.0pt too wide) in paragraph at lines 1274--1275
 [][] 
  []
 
 
 Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
-nput line 1270.
+nput line 1293.
 
 
-Package tabulary Warning: No suitable columns! on input line 1270.
+Package tabulary Warning: No suitable columns! on input line 1293.
 
-[59 <../public_html/img/uploads/doublelinkedlist.png>]
-<../public_html/img/uploads/linkedlistpush.png, id=1106, 419.5675pt x 91.34125p
+[62 <../public_html/img/uploads/linkedlist.png>] [63 <../public_html/img/upload
+s/doublelinkedlist.png>]
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/linkedlistpush.png, id=1132, 419.5675pt x 91.34125p
 t>
 File: ../public_html/img/uploads/linkedlistpush.png Graphic file (type png)
  <use ../public_html/img/uploads/linkedlistpush.png>
 Package pdftex.def Info: ../public_html/img/uploads/linkedlistpush.png used on 
-input line 1309.
+input line 1332.
 (pdftex.def)             Requested size: 309.85626pt x 67.45625pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 1309--1310
+Overfull \hbox (17.0pt too wide) in paragraph at lines 1332--1333
 [][] 
  []
 
 
-<../public_html/img/uploads/linkedlistpush2.png, id=1107, 419.5675pt x 91.34125
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/linkedlistpush2.png, id=1133, 419.5675pt x 91.34125
 pt>
 File: ../public_html/img/uploads/linkedlistpush2.png Graphic file (type png)
  <use ../public_html/img/uploads/linkedlistpush2.png>
 Package pdftex.def Info: ../public_html/img/uploads/linkedlistpush2.png used on
- input line 1311.
+ input line 1334.
 (pdftex.def)             Requested size: 309.85626pt x 67.45625pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 1311--1312
+Overfull \hbox (17.0pt too wide) in paragraph at lines 1334--1335
 [][] 
  []
 
 
-<../public_html/img/uploads/linkedlistpush3.png, id=1108, 419.5675pt x 91.34125
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/linkedlistpush3.png, id=1134, 419.5675pt x 91.34125
 pt>
 File: ../public_html/img/uploads/linkedlistpush3.png Graphic file (type png)
  <use ../public_html/img/uploads/linkedlistpush3.png>
 Package pdftex.def Info: ../public_html/img/uploads/linkedlistpush3.png used on
- input line 1313.
+ input line 1336.
 (pdftex.def)             Requested size: 309.85626pt x 67.45625pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 1313--1314
+Overfull \hbox (17.0pt too wide) in paragraph at lines 1336--1337
 [][] 
  []
 
-[60 <../public_html/img/uploads/linkedlistpush.png> <../public_html/img/uploads
+[64 <../public_html/img/uploads/linkedlistpush.png> <../public_html/img/uploads
 /linkedlistpush2.png> <../public_html/img/uploads/linkedlistpush3.png>]
-<../public_html/img/uploads/linkedlistpop.png, id=1130, 334.24875pt x 91.34125p
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/linkedlistpop.png, id=1156, 334.24875pt x 91.34125p
 t>
 File: ../public_html/img/uploads/linkedlistpop.png Graphic file (type png)
  <use ../public_html/img/uploads/linkedlistpop.png>
 Package pdftex.def Info: ../public_html/img/uploads/linkedlistpop.png used on i
-nput line 1335.
+nput line 1358.
 (pdftex.def)             Requested size: 309.85626pt x 84.68166pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 1335--1336
+Overfull \hbox (17.0pt too wide) in paragraph at lines 1358--1359
 [][] 
  []
 
 
-<../public_html/img/uploads/linkedlistpop2.png, id=1131, 243.91125pt x 91.34125
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/linkedlistpop2.png, id=1157, 243.91125pt x 91.34125
 pt>
 File: ../public_html/img/uploads/linkedlistpop2.png Graphic file (type png)
  <use ../public_html/img/uploads/linkedlistpop2.png>
 Package pdftex.def Info: ../public_html/img/uploads/linkedlistpop2.png used on 
-input line 1337.
+input line 1360.
 (pdftex.def)             Requested size: 243.91064pt x 91.3424pt.
- [61 <../public_html/img/uploads/linkedlistpop.png> <../public_html/img/uploads
+ [65 <../public_html/img/uploads/linkedlistpop.png> <../public_html/img/uploads
 /linkedlistpop2.png>]
-<../public_html/img/uploads/linkedlistget.png, id=1156, 334.24875pt x 141.52875
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/linkedlistget.png, id=1184, 334.24875pt x 141.52875
 pt>
 File: ../public_html/img/uploads/linkedlistget.png Graphic file (type png)
  <use ../public_html/img/uploads/linkedlistget.png>
 Package pdftex.def Info: ../public_html/img/uploads/linkedlistget.png used on i
-nput line 1361.
+nput line 1384.
 (pdftex.def)             Requested size: 309.85626pt x 131.21005pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 1361--1362
+Overfull \hbox (17.0pt too wide) in paragraph at lines 1384--1385
 [][] 
  []
 
 
-<../public_html/img/uploads/linkedlistget2.png, id=1157, 334.24875pt x 141.5287
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/linkedlistget2.png, id=1185, 334.24875pt x 141.5287
 5pt>
 File: ../public_html/img/uploads/linkedlistget2.png Graphic file (type png)
  <use ../public_html/img/uploads/linkedlistget2.png>
 Package pdftex.def Info: ../public_html/img/uploads/linkedlistget2.png used on 
-input line 1363.
+input line 1386.
 (pdftex.def)             Requested size: 309.85626pt x 131.21005pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 1363--1364
+Overfull \hbox (17.0pt too wide) in paragraph at lines 1386--1387
 [][] 
  []
 
 
-<../public_html/img/uploads/linkedlistget3.png, id=1158, 334.24875pt x 141.5287
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/linkedlistget3.png, id=1186, 334.24875pt x 141.5287
 5pt>
 File: ../public_html/img/uploads/linkedlistget3.png Graphic file (type png)
  <use ../public_html/img/uploads/linkedlistget3.png>
 Package pdftex.def Info: ../public_html/img/uploads/linkedlistget3.png used on 
-input line 1365.
+input line 1388.
 (pdftex.def)             Requested size: 309.85626pt x 131.21005pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 1365--1366
+Overfull \hbox (17.0pt too wide) in paragraph at lines 1388--1389
 [][] 
  []
 
-[62 <../public_html/img/uploads/linkedlistget.png> <../public_html/img/uploads/
+[66 <../public_html/img/uploads/linkedlistget.png> <../public_html/img/uploads/
 linkedlistget2.png>]
-<../public_html/img/uploads/linkedlistrem.png, id=1171, 334.24875pt x 91.34125p
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/linkedlistrem.png, id=1196, 334.24875pt x 91.34125p
 t>
 File: ../public_html/img/uploads/linkedlistrem.png Graphic file (type png)
  <use ../public_html/img/uploads/linkedlistrem.png>
 Package pdftex.def Info: ../public_html/img/uploads/linkedlistrem.png used on i
-nput line 1389.
+nput line 1412.
 (pdftex.def)             Requested size: 309.85626pt x 84.68166pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 1389--1390
+Overfull \hbox (17.0pt too wide) in paragraph at lines 1412--1413
 [][] 
  []
 
 
-<../public_html/img/uploads/linkedlistrem2.png, id=1172, 334.24875pt x 91.34125
-pt> [63 <../public_html/img/uploads/linkedlistget3.png>]
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/linkedlistrem2.png, id=1197, 334.24875pt x 91.34125
+pt> [67 <../public_html/img/uploads/linkedlistget3.png>]
 File: ../public_html/img/uploads/linkedlistrem2.png Graphic file (type png)
 
 <use ../public_html/img/uploads/linkedlistrem2.png>
 Package pdftex.def Info: ../public_html/img/uploads/linkedlistrem2.png used on 
-input line 1391.
+input line 1414.
 (pdftex.def)             Requested size: 309.85626pt x 84.68166pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 1391--1392
+Overfull \hbox (17.0pt too wide) in paragraph at lines 1414--1415
 [][] 
  []
 
-[64 <../public_html/img/uploads/linkedlistrem.png> <../public_html/img/uploads/
-linkedlistrem2.png>] [65]
+[68 <../public_html/img/uploads/linkedlistrem.png> <../public_html/img/uploads/
+linkedlistrem2.png>] [69]
 Chapter 7.
 
 Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
-nput line 1458.
+nput line 1481.
 
 
-Package tabulary Warning: No suitable columns! on input line 1458.
+Package tabulary Warning: No suitable columns! on input line 1481.
 
-[66
+[70
 
-] <../public_html/img/uploads/hashcode.png, id=1225, 168.63pt x 86.3225pt>
+]
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/hashcode.png, id=1248, 168.63pt x 86.3225pt>
 File: ../public_html/img/uploads/hashcode.png Graphic file (type png)
 
 <use ../public_html/img/uploads/hashcode.png>
 Package pdftex.def Info: ../public_html/img/uploads/hashcode.png used on input 
-line 1485.
+line 1508.
 (pdftex.def)             Requested size: 168.62958pt x 86.32358pt.
- [67 <../public_html/img/uploads/hashcode.png>]
-<../public_html/img/uploads/hashset.png, id=1234, 174.6525pt x 249.93375pt>
+ [71 <../public_html/img/uploads/hashcode.png>]
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/hashset.png, id=1258, 174.6525pt x 249.93375pt>
 File: ../public_html/img/uploads/hashset.png Graphic file (type png)
 
-<use ../public_html/img/uploads/hashset.png>
-Package pdftex.def Info: ../public_html/img/uploads/hashset.png used on input l
-ine 1491.
-(pdftex.def)             Requested size: 174.65207pt x 249.94838pt.
-
-
-Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
-nput line 1508.
-
-
-Package tabulary Warning: No suitable columns! on input line 1508.
-
-File: ../public_html/img/uploads/hashset.png Graphic file (type png)
 <use ../public_html/img/uploads/hashset.png>
 Package pdftex.def Info: ../public_html/img/uploads/hashset.png used on input l
 ine 1514.
 (pdftex.def)             Requested size: 174.65207pt x 249.94838pt.
- [68 <../public_html/img/uploads/hashset.png>] [69]
+
+
+Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
+nput line 1531.
+
+
+Package tabulary Warning: No suitable columns! on input line 1531.
+
+File: ../public_html/img/uploads/hashset.png Graphic file (type png)
+<use ../public_html/img/uploads/hashset.png>
+Package pdftex.def Info: ../public_html/img/uploads/hashset.png used on input l
+ine 1537.
+(pdftex.def)             Requested size: 174.65207pt x 249.94838pt.
+ [72 <../public_html/img/uploads/hashset.png>] [73]
 File: ../public_html/img/uploads/hashcode.png Graphic file (type png)
  <use ../public_html/img/uploads/hashcode.png>
 Package pdftex.def Info: ../public_html/img/uploads/hashcode.png used on input 
-line 1549.
+line 1572.
 (pdftex.def)             Requested size: 168.62958pt x 86.32358pt.
- [70] [71]
+ [74] [75]
 File: ../public_html/img/uploads/hashset.png Graphic file (type png)
 
 <use ../public_html/img/uploads/hashset.png>
 Package pdftex.def Info: ../public_html/img/uploads/hashset.png used on input l
-ine 1587.
+ine 1610.
 (pdftex.def)             Requested size: 174.65207pt x 249.94838pt.
 
-<../public_html/img/uploads/hashsetinsert.png, id=1285, 295.1025pt x 249.93375p
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/hashsetinsert.png, id=1310, 295.1025pt x 249.93375p
 t>
 File: ../public_html/img/uploads/hashsetinsert.png Graphic file (type png)
  <use ../public_html/img/uploads/hashsetinsert.png>
 Package pdftex.def Info: ../public_html/img/uploads/hashsetinsert.png used on i
-nput line 1589.
+nput line 1612.
 (pdftex.def)             Requested size: 295.10176pt x 249.93694pt.
 
-Overfull \hbox (2.2455pt too wide) in paragraph at lines 1589--1590
+Overfull \hbox (2.2455pt too wide) in paragraph at lines 1612--1613
 [][] 
  []
 
-[72] [73 <../public_html/img/uploads/hashsetinsert.png>]
-<../public_html/img/uploads/hashsetcontains.png, id=1315, 295.1025pt x 249.9337
+[76] [77 <../public_html/img/uploads/hashsetinsert.png>]
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/hashsetcontains.png, id=1339, 295.1025pt x 249.9337
 5pt>
 File: ../public_html/img/uploads/hashsetcontains.png Graphic file (type png)
  <use ../public_html/img/uploads/hashsetcontains.png>
 Package pdftex.def Info: ../public_html/img/uploads/hashsetcontains.png used on
- input line 1614.
+ input line 1637.
 (pdftex.def)             Requested size: 295.10176pt x 249.93694pt.
 
-Overfull \hbox (2.2455pt too wide) in paragraph at lines 1614--1615
+Overfull \hbox (2.2455pt too wide) in paragraph at lines 1637--1638
 [][] 
  []
 
 
-<../public_html/img/uploads/hashsetcontains2.png, id=1316, 295.1025pt x 249.933
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/hashsetcontains2.png, id=1340, 295.1025pt x 249.933
 75pt>
 File: ../public_html/img/uploads/hashsetcontains2.png Graphic file (type png)
  <use ../public_html/img/uploads/hashsetcontains2.png>
 Package pdftex.def Info: ../public_html/img/uploads/hashsetcontains2.png used o
-n input line 1616.
+n input line 1639.
 (pdftex.def)             Requested size: 295.10176pt x 249.93694pt.
 
-Overfull \hbox (2.2455pt too wide) in paragraph at lines 1616--1617
+Overfull \hbox (2.2455pt too wide) in paragraph at lines 1639--1640
 [][] 
  []
 
 
-<../public_html/img/uploads/hashsetcontains3.png, id=1317, 305.14pt x 249.93375
-pt> [74 <../public_html/img/uploads/hashsetcontains.png>]
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/hashsetcontains3.png, id=1341, 305.14pt x 249.93375
+pt> [78 <../public_html/img/uploads/hashsetcontains.png>]
 File: ../public_html/img/uploads/hashsetcontains3.png Graphic file (type png)
 
 <use ../public_html/img/uploads/hashsetcontains3.png>
 Package pdftex.def Info: ../public_html/img/uploads/hashsetcontains3.png used o
-n input line 1618.
+n input line 1641.
 (pdftex.def)             Requested size: 305.13924pt x 249.94456pt.
 
-Overfull \hbox (12.28297pt too wide) in paragraph at lines 1618--1619
+Overfull \hbox (12.28297pt too wide) in paragraph at lines 1641--1642
 [][] 
  []
 
-[75 <../public_html/img/uploads/hashsetcontains2.png>]
-<../public_html/img/uploads/hashsetrem.png, id=1332, 295.1025pt x 249.93375pt>
-[76 <../public_html/img/uploads/hashsetcontains3.png>]
+[79 <../public_html/img/uploads/hashsetcontains2.png>]
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/hashsetrem.png, id=1356, 295.1025pt x 249.93375pt>
+[80 <../public_html/img/uploads/hashsetcontains3.png>]
 File: ../public_html/img/uploads/hashsetrem.png Graphic file (type png)
 
 <use ../public_html/img/uploads/hashsetrem.png>
 Package pdftex.def Info: ../public_html/img/uploads/hashsetrem.png used on inpu
-t line 1634.
+t line 1657.
 (pdftex.def)             Requested size: 295.10176pt x 249.93694pt.
 
-Overfull \hbox (2.2455pt too wide) in paragraph at lines 1634--1635
+Overfull \hbox (2.2455pt too wide) in paragraph at lines 1657--1658
 [][] 
  []
 
 
-<../public_html/img/uploads/hashsetrem2.png, id=1345, 295.1025pt x 249.93375pt>
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/hashsetrem2.png, id=1369, 295.1025pt x 249.93375pt>
 File: ../public_html/img/uploads/hashsetrem2.png Graphic file (type png)
 <use ../public_html/img/uploads/hashsetrem2.png>
 Package pdftex.def Info: ../public_html/img/uploads/hashsetrem2.png used on inp
-ut line 1636.
+ut line 1659.
 (pdftex.def)             Requested size: 295.10176pt x 249.93694pt.
 
-Overfull \hbox (2.2455pt too wide) in paragraph at lines 1636--1637
+Overfull \hbox (2.2455pt too wide) in paragraph at lines 1659--1660
 [][] 
  []
 
 
-<../public_html/img/uploads/hashsetrem3.png, id=1346, 295.1025pt x 249.93375pt>
-[77 <../public_html/img/uploads/hashsetrem.png>]
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/hashsetrem3.png, id=1370, 295.1025pt x 249.93375pt>
+[81 <../public_html/img/uploads/hashsetrem.png>]
 File: ../public_html/img/uploads/hashsetrem3.png Graphic file (type png)
 
 <use ../public_html/img/uploads/hashsetrem3.png>
 Package pdftex.def Info: ../public_html/img/uploads/hashsetrem3.png used on inp
-ut line 1638.
+ut line 1661.
 (pdftex.def)             Requested size: 295.10176pt x 249.93694pt.
 
-Overfull \hbox (2.2455pt too wide) in paragraph at lines 1638--1639
+Overfull \hbox (2.2455pt too wide) in paragraph at lines 1661--1662
 [][] 
  []
 
-[78 <../public_html/img/uploads/hashsetrem2.png>] [79 <../public_html/img/uploa
+[82 <../public_html/img/uploads/hashsetrem2.png>] [83 <../public_html/img/uploa
 ds/hashsetrem3.png>]
-<../public_html/img/uploads/bstcompare.png, id=1375, 275.0275pt x 151.56625pt>
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/bstcompare.png, id=1399, 275.0275pt x 151.56625pt>
 File: ../public_html/img/uploads/bstcompare.png Graphic file (type png)
 
 <use ../public_html/img/uploads/bstcompare.png>
 Package pdftex.def Info: ../public_html/img/uploads/bstcompare.png used on inpu
-t line 1667.
+t line 1690.
 (pdftex.def)             Requested size: 275.02682pt x 151.57974pt.
 
-<../public_html/img/uploads/bst.png, id=1376, 253.94875pt x 206.7725pt>
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/bst.png, id=1400, 253.94875pt x 206.7725pt>
 File: ../public_html/img/uploads/bst.png Graphic file (type png)
 
 <use ../public_html/img/uploads/bst.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst.png used on input line 
-1671.
+1694.
 (pdftex.def)             Requested size: 253.94812pt x 206.77829pt.
 
 
 Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
-nput line 1688.
+nput line 1711.
 
 
-Package tabulary Warning: No suitable columns! on input line 1688.
+Package tabulary Warning: No suitable columns! on input line 1711.
 
-[80 <../public_html/img/uploads/bstcompare.png>]
+[84 <../public_html/img/uploads/bstcompare.png>]
 File: ../public_html/img/uploads/bstcompare.png Graphic file (type png)
 
 <use ../public_html/img/uploads/bstcompare.png>
 Package pdftex.def Info: ../public_html/img/uploads/bstcompare.png used on inpu
-t line 1701.
+t line 1724.
 (pdftex.def)             Requested size: 275.02682pt x 151.57974pt.
- [81 <../public_html/img/uploads/bst.png>]
+ [85 <../public_html/img/uploads/bst.png>]
 File: ../public_html/img/uploads/bst.png Graphic file (type png)
  <use ../public_html/img/uploads/bst.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst.png used on input line 
-1703.
+1726.
 (pdftex.def)             Requested size: 253.94812pt x 206.77829pt.
- [82] [83]
-<../public_html/img/uploads/bstinsert.png, id=1432, 231.86626pt x 151.56625pt>
+ [86] [87]
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/bstinsert.png, id=1456, 231.86626pt x 151.56625pt>
 File: ../public_html/img/uploads/bstinsert.png Graphic file (type png)
 
 <use ../public_html/img/uploads/bstinsert.png>
 Package pdftex.def Info: ../public_html/img/uploads/bstinsert.png used on input
- line 1760.
+ line 1783.
 (pdftex.def)             Requested size: 231.86568pt x 151.56818pt.
 
-<../public_html/img/uploads/bstinsert2.png, id=1433, 231.86626pt x 151.56625pt>
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/bstinsert2.png, id=1457, 231.86626pt x 151.56625pt>
 File: ../public_html/img/uploads/bstinsert2.png Graphic file (type png)
 <use ../public_html/img/uploads/bstinsert2.png>
 Package pdftex.def Info: ../public_html/img/uploads/bstinsert2.png used on inpu
-t line 1762.
+t line 1785.
 (pdftex.def)             Requested size: 231.86568pt x 151.56818pt.
 
-<../public_html/img/uploads/bstinsert3.png, id=1434, 231.86626pt x 151.56625pt>
-[84 <../public_html/img/uploads/bstinsert.png>]
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/bstinsert3.png, id=1458, 231.86626pt x 151.56625pt>
+[88 <../public_html/img/uploads/bstinsert.png>]
 File: ../public_html/img/uploads/bstinsert3.png Graphic file (type png)
 
 <use ../public_html/img/uploads/bstinsert3.png>
 Package pdftex.def Info: ../public_html/img/uploads/bstinsert3.png used on inpu
-t line 1764.
+t line 1787.
 (pdftex.def)             Requested size: 231.86568pt x 151.56818pt.
 
-<../public_html/img/uploads/bstinsert4.png, id=1448, 231.86626pt x 201.75375pt>
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/bstinsert4.png, id=1471, 231.86626pt x 201.75375pt>
 File: ../public_html/img/uploads/bstinsert4.png Graphic file (type png)
 <use ../public_html/img/uploads/bstinsert4.png>
 Package pdftex.def Info: ../public_html/img/uploads/bstinsert4.png used on inpu
-t line 1766.
+t line 1789.
 (pdftex.def)             Requested size: 231.86568pt x 201.75632pt.
- [85 <../public_html/img/uploads/bstinsert2.png> <../public_html/img/uploads/bs
-tinsert3.png>] [86 <../public_html/img/uploads/bstinsert4.png>]
-<../public_html/img/uploads/bstcontains.png, id=1482, 236.885pt x 151.56625pt>
+ [89 <../public_html/img/uploads/bstinsert2.png> <../public_html/img/uploads/bs
+tinsert3.png>] [90 <../public_html/img/uploads/bstinsert4.png>]
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/bstcontains.png, id=1506, 236.885pt x 151.56625pt>
 File: ../public_html/img/uploads/bstcontains.png Graphic file (type png)
 
 <use ../public_html/img/uploads/bstcontains.png>
 Package pdftex.def Info: ../public_html/img/uploads/bstcontains.png used on inp
-ut line 1803.
+ut line 1826.
 (pdftex.def)             Requested size: 236.88441pt x 151.5705pt.
 
-<../public_html/img/uploads/bstcontains2.png, id=1483, 236.885pt x 151.56625pt>
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/bstcontains2.png, id=1507, 236.885pt x 151.56625pt>
 File: ../public_html/img/uploads/bstcontains2.png Graphic file (type png)
 <use ../public_html/img/uploads/bstcontains2.png>
 Package pdftex.def Info: ../public_html/img/uploads/bstcontains2.png used on in
-put line 1805.
+put line 1828.
 (pdftex.def)             Requested size: 236.88441pt x 151.5705pt.
 
-<../public_html/img/uploads/bstcontains3.png, id=1484, 236.885pt x 151.56625pt>
-[87 <../public_html/img/uploads/bstcontains.png>]
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/bstcontains3.png, id=1508, 236.885pt x 151.56625pt>
+[91 <../public_html/img/uploads/bstcontains.png>]
 File: ../public_html/img/uploads/bstcontains3.png Graphic file (type png)
 
 <use ../public_html/img/uploads/bstcontains3.png>
 Package pdftex.def Info: ../public_html/img/uploads/bstcontains3.png used on in
-put line 1807.
+put line 1830.
 (pdftex.def)             Requested size: 236.88441pt x 151.5705pt.
 
-<../public_html/img/uploads/bstcontains4.png, id=1498, 236.885pt x 151.56625pt>
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/bstcontains4.png, id=1522, 236.885pt x 151.56625pt>
 File: ../public_html/img/uploads/bstcontains4.png Graphic file (type png)
 <use ../public_html/img/uploads/bstcontains4.png>
 Package pdftex.def Info: ../public_html/img/uploads/bstcontains4.png used on in
-put line 1809.
+put line 1832.
 (pdftex.def)             Requested size: 236.88441pt x 151.5705pt.
- [88 <../public_html/img/uploads/bstcontains2.png> <../public_html/img/uploads/
+ [92 <../public_html/img/uploads/bstcontains2.png> <../public_html/img/uploads/
 bstcontains3.png> <../public_html/img/uploads/bstcontains4.png>]
-<../public_html/img/uploads/bst-rem.png, id=1506, 201.75375pt x 201.75375pt>
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/bst-rem.png, id=1530, 201.75375pt x 201.75375pt>
 File: ../public_html/img/uploads/bst-rem.png Graphic file (type png)
 
 <use ../public_html/img/uploads/bst-rem.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst-rem.png used on input l
-ine 1833.
+ine 1856.
 (pdftex.def)             Requested size: 201.75325pt x 201.75632pt.
- [89]
-<../public_html/img/uploads/bst-rem-case11.png, id=1526, 201.75375pt x 201.7537
+ [93]
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/bst-rem-case11.png, id=1550, 201.75375pt x 201.7537
 5pt>
 File: ../public_html/img/uploads/bst-rem-case11.png Graphic file (type png)
  <use ../public_html/img/uploads/bst-rem-case11.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst-rem-case11.png used on 
-input line 1837.
+input line 1860.
 (pdftex.def)             Requested size: 201.75325pt x 201.75632pt.
 
-<../public_html/img/uploads/bst-rem-case12.png, id=1527, 161.60374pt x 201.7537
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/bst-rem-case12.png, id=1551, 161.60374pt x 201.7537
 5pt>
 File: ../public_html/img/uploads/bst-rem-case12.png Graphic file (type png)
  <use ../public_html/img/uploads/bst-rem-case12.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst-rem-case12.png used on 
-input line 1841.
+input line 1864.
 (pdftex.def)             Requested size: 161.60335pt x 201.76248pt.
- [90 <../public_html/img/uploads/bst-rem.png> <../public_html/img/uploads/bst-r
+ [94 <../public_html/img/uploads/bst-rem.png> <../public_html/img/uploads/bst-r
 em-case11.png>]
-<../public_html/img/uploads/bst-rem-case21.png, id=1535, 201.75375pt x 201.7537
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/bst-rem-case21.png, id=1558, 201.75375pt x 201.7537
 5pt>
 File: ../public_html/img/uploads/bst-rem-case21.png Graphic file (type png)
  <use ../public_html/img/uploads/bst-rem-case21.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst-rem-case21.png used on 
-input line 1845.
+input line 1868.
 (pdftex.def)             Requested size: 201.75325pt x 201.75632pt.
 
-<../public_html/img/uploads/bst-rem-case22.png, id=1536, 201.75375pt x 201.7537
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/bst-rem-case22.png, id=1559, 201.75375pt x 201.7537
 5pt>
 File: ../public_html/img/uploads/bst-rem-case22.png Graphic file (type png)
  <use ../public_html/img/uploads/bst-rem-case22.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst-rem-case22.png used on 
-input line 1849.
+input line 1872.
 (pdftex.def)             Requested size: 201.75325pt x 201.75632pt.
- [91 <../public_html/img/uploads/bst-rem-case12.png> <../public_html/img/upload
+ [95 <../public_html/img/uploads/bst-rem-case12.png> <../public_html/img/upload
 s/bst-rem-case21.png>]
-<../public_html/img/uploads/bst-rem-case31.png, id=1543, 201.75375pt x 201.7537
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/bst-rem-case31.png, id=1568, 201.75375pt x 201.7537
 5pt>
 File: ../public_html/img/uploads/bst-rem-case31.png Graphic file (type png)
  <use ../public_html/img/uploads/bst-rem-case31.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst-rem-case31.png used on 
-input line 1853.
+input line 1876.
 (pdftex.def)             Requested size: 201.75325pt x 201.75632pt.
 
-<../public_html/img/uploads/bst-rem-case32.png, id=1544, 201.75375pt x 201.7537
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/bst-rem-case32.png, id=1569, 201.75375pt x 201.7537
 5pt>
 File: ../public_html/img/uploads/bst-rem-case32.png Graphic file (type png)
  <use ../public_html/img/uploads/bst-rem-case32.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst-rem-case32.png used on 
-input line 1857.
+input line 1880.
 (pdftex.def)             Requested size: 201.75325pt x 201.75632pt.
- [92 <../public_html/img/uploads/bst-rem-case22.png> <../public_html/img/upload
+ [96 <../public_html/img/uploads/bst-rem-case22.png> <../public_html/img/upload
 s/bst-rem-case31.png>]
-<../public_html/img/uploads/bst-rem-case33.png, id=1551, 201.75375pt x 201.7537
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/bst-rem-case33.png, id=1576, 201.75375pt x 201.7537
 5pt>
 File: ../public_html/img/uploads/bst-rem-case33.png Graphic file (type png)
  <use ../public_html/img/uploads/bst-rem-case33.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst-rem-case33.png used on 
-input line 1861.
+input line 1884.
 (pdftex.def)             Requested size: 201.75325pt x 201.75632pt.
 
-<../public_html/img/uploads/bst-rem-case34.png, id=1552, 201.75375pt x 201.7537
-5pt> [93 <../public_html/img/uploads/bst-rem-case32.png> <../public_html/img/up
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/bst-rem-case34.png, id=1577, 201.75375pt x 201.7537
+5pt> [97 <../public_html/img/uploads/bst-rem-case32.png> <../public_html/img/up
 loads/bst-rem-case33.png>]
 File: ../public_html/img/uploads/bst-rem-case34.png Graphic file (type png)
  <use ../public_html/img/uploads/bst-rem-case34.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst-rem-case34.png used on 
-input line 1865.
+input line 1888.
 (pdftex.def)             Requested size: 201.75325pt x 201.75632pt.
 
-[94 <../public_html/img/uploads/bst-rem-case34.png>]
-Overfull \hbox (14.59038pt too wide) in paragraph at lines 1899--1900
+[98 <../public_html/img/uploads/bst-rem-case34.png>]
+Overfull \hbox (14.59038pt too wide) in paragraph at lines 1922--1923
 [][][][][][][][][][][][][][][][][]  
  []
 
 
-Overfull \hbox (9.34042pt too wide) in paragraph at lines 1908--1909
+Overfull \hbox (9.34042pt too wide) in paragraph at lines 1931--1932
 [][][][][][][][][][][][][][][][][]  
  []
 
-[95] [96]
+[99] [100]
 File: ../public_html/img/uploads/bst.png Graphic file (type png)
  <use ../public_html/img/uploads/bst.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst.png used on input line 
-1967.
+1990.
 (pdftex.def)             Requested size: 253.94812pt x 206.77829pt.
 
 
 Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
-nput line 1984.
+nput line 2007.
 
 
-Package tabulary Warning: No suitable columns! on input line 1984.
+Package tabulary Warning: No suitable columns! on input line 2007.
 
-[97]
+[101]
 Chapter 8.
 
 Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
-nput line 2030.
+nput line 2053.
 
 
-Package tabulary Warning: No suitable columns! on input line 2030.
+Package tabulary Warning: No suitable columns! on input line 2053.
 
-[98
+[102
 
-] [99] [100] [101] [102]
+] [103] [104] [105] [106]
 
 Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
-nput line 2201.
+nput line 2224.
 
 
-Package tabulary Warning: No suitable columns! on input line 2201.
+Package tabulary Warning: No suitable columns! on input line 2224.
 
 File: ../public_html/img/uploads/bst.png Graphic file (type png)
 <use ../public_html/img/uploads/bst.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst.png used on input line 
-2207.
+2230.
 (pdftex.def)             Requested size: 253.94812pt x 206.77829pt.
- [103] [104] [105] [106]
+ [107] [108] [109] [110]
 File: ../public_html/img/uploads/bst-rem.png Graphic file (type png)
 
 <use ../public_html/img/uploads/bst-rem.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst-rem.png used on input l
-ine 2331.
+ine 2354.
 (pdftex.def)             Requested size: 201.75325pt x 201.75632pt.
- [107]
+ [111]
 File: ../public_html/img/uploads/bst-rem-case11.png Graphic file (type png)
 
 <use ../public_html/img/uploads/bst-rem-case11.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst-rem-case11.png used on 
-input line 2335.
+input line 2358.
 (pdftex.def)             Requested size: 201.75325pt x 201.75632pt.
 File: ../public_html/img/uploads/bst-rem-case12.png Graphic file (type png)
 
 <use ../public_html/img/uploads/bst-rem-case12.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst-rem-case12.png used on 
-input line 2339.
+input line 2362.
 (pdftex.def)             Requested size: 161.60335pt x 201.76248pt.
- [108]
+ [112]
 File: ../public_html/img/uploads/bst-rem-case21.png Graphic file (type png)
 
 <use ../public_html/img/uploads/bst-rem-case21.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst-rem-case21.png used on 
-input line 2343.
+input line 2366.
 (pdftex.def)             Requested size: 201.75325pt x 201.75632pt.
 File: ../public_html/img/uploads/bst-rem-case22.png Graphic file (type png)
 
 <use ../public_html/img/uploads/bst-rem-case22.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst-rem-case22.png used on 
-input line 2347.
+input line 2370.
 (pdftex.def)             Requested size: 201.75325pt x 201.75632pt.
- [109]
+ [113]
 File: ../public_html/img/uploads/bst-rem-case31.png Graphic file (type png)
 
 <use ../public_html/img/uploads/bst-rem-case31.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst-rem-case31.png used on 
-input line 2351.
+input line 2374.
 (pdftex.def)             Requested size: 201.75325pt x 201.75632pt.
 File: ../public_html/img/uploads/bst-rem-case32.png Graphic file (type png)
 
 <use ../public_html/img/uploads/bst-rem-case32.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst-rem-case32.png used on 
-input line 2355.
+input line 2378.
 (pdftex.def)             Requested size: 201.75325pt x 201.75632pt.
- [110]
+ [114]
 File: ../public_html/img/uploads/bst-rem-case33.png Graphic file (type png)
 
 <use ../public_html/img/uploads/bst-rem-case33.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst-rem-case33.png used on 
-input line 2359.
+input line 2382.
 (pdftex.def)             Requested size: 201.75325pt x 201.75632pt.
- [111]
+ [115]
 File: ../public_html/img/uploads/bst-rem-case34.png Graphic file (type png)
 
 <use ../public_html/img/uploads/bst-rem-case34.png>
 Package pdftex.def Info: ../public_html/img/uploads/bst-rem-case34.png used on 
-input line 2363.
+input line 2386.
 (pdftex.def)             Requested size: 201.75325pt x 201.75632pt.
- [112]
-Overfull \hbox (14.59038pt too wide) in paragraph at lines 2397--2398
+ [116]
+Overfull \hbox (14.59038pt too wide) in paragraph at lines 2420--2421
 [][][][][][][][][][][][][][][][][]  
  []
 
 
-Overfull \hbox (9.34042pt too wide) in paragraph at lines 2406--2407
+Overfull \hbox (9.34042pt too wide) in paragraph at lines 2429--2430
 [][][][][][][][][][][][][][][][][]  
  []
 
-[113] [114]
+[117] [118]
 Chapter 9.
 
 Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
-nput line 2458.
+nput line 2481.
 
 
-Package tabulary Warning: No suitable columns! on input line 2458.
+Package tabulary Warning: No suitable columns! on input line 2481.
 
-[115
+[119
 
-] [116]
-<../public_html/img/uploads/maxheap2.png, id=1978, 197.73875pt x 206.7725pt>
+] [120]
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/maxheap2.png, id=2003, 197.73875pt x 206.7725pt>
 File: ../public_html/img/uploads/maxheap2.png Graphic file (type png)
 
 <use ../public_html/img/uploads/maxheap2.png>
 Package pdftex.def Info: ../public_html/img/uploads/maxheap2.png used on input 
-line 2498.
+line 2521.
 (pdftex.def)             Requested size: 197.73827pt x 206.77513pt.
 
-<../public_html/img/uploads/maxheap.png, id=1979, 426.59375pt x 207.77625pt>
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/maxheap.png, id=2004, 426.59375pt x 207.77625pt>
 File: ../public_html/img/uploads/maxheap.png Graphic file (type png)
 
 <use ../public_html/img/uploads/maxheap.png>
 Package pdftex.def Info: ../public_html/img/uploads/maxheap.png used on input l
-ine 2502.
+ine 2525.
 (pdftex.def)             Requested size: 309.85626pt x 150.92717pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 2502--2503
+Overfull \hbox (17.0pt too wide) in paragraph at lines 2525--2526
 [][] 
  []
 
-[117 <../public_html/img/uploads/maxheap2.png>]
+[121 <../public_html/img/uploads/maxheap2.png>]
 
 Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
-nput line 2523.
+nput line 2546.
 
 
-Package tabulary Warning: No suitable columns! on input line 2523.
+Package tabulary Warning: No suitable columns! on input line 2546.
 
 
-Overfull \hbox (1.53197pt too wide) in paragraph at lines 2523--2524
+Overfull \hbox (1.53197pt too wide) in paragraph at lines 2546--2547
 [][] 
  []
 
-[118 <../public_html/img/uploads/maxheap.png>] [119]
+[122 <../public_html/img/uploads/maxheap.png>] [123]
 File: ../public_html/img/uploads/maxheap.png Graphic file (type png)
 
 <use ../public_html/img/uploads/maxheap.png>
 Package pdftex.def Info: ../public_html/img/uploads/maxheap.png used on input l
-ine 2592.
+ine 2615.
 (pdftex.def)             Requested size: 309.85626pt x 150.92717pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 2592--2593
+Overfull \hbox (17.0pt too wide) in paragraph at lines 2615--2616
 [][] 
  []
 
 
-<../public_html/img/uploads/maxheappush.png, id=2042, 197.73875pt x 207.77625pt
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/maxheappush.png, id=2066, 197.73875pt x 207.77625pt
 >
 File: ../public_html/img/uploads/maxheappush.png Graphic file (type png)
  <use ../public_html/img/uploads/maxheappush.png>
 Package pdftex.def Info: ../public_html/img/uploads/maxheappush.png used on inp
-ut line 2594.
+ut line 2617.
 (pdftex.def)             Requested size: 197.73827pt x 207.77888pt.
 
-<../public_html/img/uploads/maxheappush2.png, id=2043, 197.73875pt x 207.77625p
-t> [120]
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/maxheappush2.png, id=2067, 197.73875pt x 207.77625p
+t> [124]
 File: ../public_html/img/uploads/maxheappush2.png Graphic file (type png)
  <use ../public_html/img/uploads/maxheappush2.png>
 Package pdftex.def Info: ../public_html/img/uploads/maxheappush2.png used on in
-put line 2596.
+put line 2619.
 (pdftex.def)             Requested size: 197.73827pt x 207.77888pt.
 
-<../public_html/img/uploads/maxheappush3.png, id=2054, 197.73875pt x 207.77625p
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/maxheappush3.png, id=2077, 197.73875pt x 207.77625p
 t>
 File: ../public_html/img/uploads/maxheappush3.png Graphic file (type png)
  <use ../public_html/img/uploads/maxheappush3.png>
 Package pdftex.def Info: ../public_html/img/uploads/maxheappush3.png used on in
-put line 2598.
+put line 2621.
 (pdftex.def)             Requested size: 197.73827pt x 207.77888pt.
- [121 <../public_html/img/uploads/maxheappush.png> <../public_html/img/uploads/
-maxheappush2.png>] [122 <../public_html/img/uploads/maxheappush3.png>]
-<../public_html/img/uploads/maxheappop.png, id=2086, 197.73875pt x 206.7725pt>
+ [125 <../public_html/img/uploads/maxheappush.png> <../public_html/img/uploads/
+maxheappush2.png>] [126 <../public_html/img/uploads/maxheappush3.png>]
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/maxheappop.png, id=2111, 197.73875pt x 206.7725pt>
 File: ../public_html/img/uploads/maxheappop.png Graphic file (type png)
 
 <use ../public_html/img/uploads/maxheappop.png>
 Package pdftex.def Info: ../public_html/img/uploads/maxheappop.png used on inpu
-t line 2626.
+t line 2649.
 (pdftex.def)             Requested size: 197.73827pt x 206.77513pt.
 
-<../public_html/img/uploads/maxheappop1.png, id=2087, 177.66376pt x 158.5925pt>
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/maxheappop1.png, id=2112, 177.66376pt x 158.5925pt>
 File: ../public_html/img/uploads/maxheappop1.png Graphic file (type png)
 <use ../public_html/img/uploads/maxheappop1.png>
 Package pdftex.def Info: ../public_html/img/uploads/maxheappop1.png used on inp
-ut line 2628.
+ut line 2651.
 (pdftex.def)             Requested size: 177.66331pt x 158.59692pt.
 
-<../public_html/img/uploads/maxheappop2.png, id=2088, 177.66376pt x 158.5925pt>
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/maxheappop2.png, id=2113, 177.66376pt x 158.5925pt>
 File: ../public_html/img/uploads/maxheappop2.png Graphic file (type png)
 <use ../public_html/img/uploads/maxheappop2.png>
 Package pdftex.def Info: ../public_html/img/uploads/maxheappop2.png used on inp
-ut line 2630.
+ut line 2653.
 (pdftex.def)             Requested size: 177.66331pt x 158.59692pt.
 
-<../public_html/img/uploads/maxheappop3.png, id=2089, 177.66376pt x 158.5925pt>
-[123 <../public_html/img/uploads/maxheappop.png> <../public_html/img/uploads/ma
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/maxheappop3.png, id=2114, 177.66376pt x 158.5925pt>
+[127 <../public_html/img/uploads/maxheappop.png> <../public_html/img/uploads/ma
 xheappop1.png>]
 File: ../public_html/img/uploads/maxheappop3.png Graphic file (type png)
  <use ../public_html/img/uploads/maxheappop3.png>
 Package pdftex.def Info: ../public_html/img/uploads/maxheappop3.png used on inp
-ut line 2632.
+ut line 2655.
 (pdftex.def)             Requested size: 177.66331pt x 158.59692pt.
- [124 <../public_html/img/uploads/maxheappop2.png> <../public_html/img/uploads/
-maxheappop3.png>] [125] [126
+ [128 <../public_html/img/uploads/maxheappop2.png> <../public_html/img/uploads/
+maxheappop3.png>] [129] [130
 
-] [127]
+] [131]
 Chapter 10.
 
 Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
-nput line 2719.
+nput line 2742.
 
 
-Package tabulary Warning: No suitable columns! on input line 2719.
-
-[128
-
-] [129] [130] [131]
-Chapter 11.
-
-Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
-nput line 2840.
-
-
-Package tabulary Warning: No suitable columns! on input line 2840.
+Package tabulary Warning: No suitable columns! on input line 2742.
 
 [132
 
-] <../public_html/img/uploads/mergesort.png, id=2227, 256.96pt x 264.99pt>
+] [133] [134] [135]
+Chapter 11.
+
+Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
+nput line 2863.
+
+
+Package tabulary Warning: No suitable columns! on input line 2863.
+
+[136
+
+]
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/mergesort.png, id=2252, 256.96pt x 264.99pt>
 File: ../public_html/img/uploads/mergesort.png Graphic file (type png)
 
 <use ../public_html/img/uploads/mergesort.png>
 Package pdftex.def Info: ../public_html/img/uploads/mergesort.png used on input
- line 2879.
+ line 2902.
 (pdftex.def)             Requested size: 256.95937pt x 265.00955pt.
- [133]
-Overfull \hbox (35.11497pt too wide) in paragraph at lines 2889--2891
+ [137]
+Overfull \hbox (35.11497pt too wide) in paragraph at lines 2912--2914
 [][][][][][][][][][][][][][] 
  []
 
-[134 <../public_html/img/uploads/mergesort.png>] [135] [136]
-<../public_html/img/uploads/quicksort.png, id=2332, 274.02374pt x 176.66pt>
+[138 <../public_html/img/uploads/mergesort.png>] [139] [140]
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/quicksort.png, id=2356, 274.02374pt x 176.66pt>
 File: ../public_html/img/uploads/quicksort.png Graphic file (type png)
 
 <use ../public_html/img/uploads/quicksort.png>
 Package pdftex.def Info: ../public_html/img/uploads/quicksort.png used on input
- line 2978.
+ line 3001.
 (pdftex.def)             Requested size: 274.02307pt x 176.67303pt.
- [137] [138 <../public_html/img/uploads/quicksort.png>] [139]
+ [141] [142 <../public_html/img/uploads/quicksort.png>] [143]
 Chapter 12.
 
 Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
-nput line 3041.
+nput line 3064.
 
 
-Package tabulary Warning: No suitable columns! on input line 3041.
+Package tabulary Warning: No suitable columns! on input line 3064.
 
-[140
+[144
 
-] [141] [142] [143
+] [145] [146] [147
 
 ]
-<../public_html/img/uploads/graph.png, id=2447, 233.87375pt x 156.585pt>
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/graph.png, id=2471, 233.87375pt x 156.585pt>
 File: ../public_html/img/uploads/graph.png Graphic file (type png)
 
 <use ../public_html/img/uploads/graph.png>
 Package pdftex.def Info: ../public_html/img/uploads/graph.png used on input lin
-e 3126.
+e 3149.
 (pdftex.def)             Requested size: 233.87315pt x 156.59177pt.
 
-<../public_html/img/uploads/digraph.png, id=2448, 153.57375pt x 136.51pt>
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/digraph.png, id=2472, 153.57375pt x 136.51pt>
 File: ../public_html/img/uploads/digraph.png Graphic file (type png)
 
 <use ../public_html/img/uploads/digraph.png>
 Package pdftex.def Info: ../public_html/img/uploads/digraph.png used on input l
-ine 3132.
+ine 3155.
 (pdftex.def)             Requested size: 153.57336pt x 136.51799pt.
- [144 <../public_html/img/uploads/graph.png> <../public_html/img/uploads/digrap
-h.png>] [145]
+ [148 <../public_html/img/uploads/graph.png> <../public_html/img/uploads/digrap
+h.png>] [149]
 Chapter 13.
 
 Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
-nput line 3217.
+nput line 3240.
 
 
-Package tabulary Warning: No suitable columns! on input line 3217.
+Package tabulary Warning: No suitable columns! on input line 3240.
 
-[146
+[150
 
 ]
 File: ../public_html/img/uploads/graph.png Graphic file (type png)
  <use ../public_html/img/uploads/graph.png>
 Package pdftex.def Info: ../public_html/img/uploads/graph.png used on input lin
-e 3228.
+e 3251.
 (pdftex.def)             Requested size: 233.87315pt x 156.59177pt.
 
 
 Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
-nput line 3256.
+nput line 3279.
 
 
-Package tabulary Warning: No suitable columns! on input line 3256.
+Package tabulary Warning: No suitable columns! on input line 3279.
 
 
 Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
-nput line 3330.
+nput line 3353.
 
 
-Package tabulary Warning: No suitable columns! on input line 3330.
+Package tabulary Warning: No suitable columns! on input line 3353.
 
-[147] [148]
+[151] [152]
 File: ../public_html/img/uploads/graph.png Graphic file (type png)
  <use ../public_html/img/uploads/graph.png>
 Package pdftex.def Info: ../public_html/img/uploads/graph.png used on input lin
-e 3364.
+e 3387.
 (pdftex.def)             Requested size: 233.87315pt x 156.59177pt.
 
 
 Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
-nput line 3392.
+nput line 3415.
 
 
-Package tabulary Warning: No suitable columns! on input line 3392.
+Package tabulary Warning: No suitable columns! on input line 3415.
 
-[149]
+[153]
 Chapter 14.
-<../public_html/img/uploads/treegraph.png, id=2500, 233.87375pt x 156.585pt>
+
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/treegraph.png, id=2524, 233.87375pt x 156.585pt>
 File: ../public_html/img/uploads/treegraph.png Graphic file (type png)
 
 <use ../public_html/img/uploads/treegraph.png>
 Package pdftex.def Info: ../public_html/img/uploads/treegraph.png used on input
- line 3401.
+ line 3424.
 (pdftex.def)             Requested size: 233.87315pt x 156.59177pt.
- [150
+ [154
 
  <../public_html/img/uploads/treegraph.png>]
 
 Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
-nput line 3438.
+nput line 3461.
 
 
-Package tabulary Warning: No suitable columns! on input line 3438.
+Package tabulary Warning: No suitable columns! on input line 3461.
 
 
-Overfull \hbox (23.02121pt too wide) in paragraph at lines 3438--3439
+Overfull \hbox (23.02121pt too wide) in paragraph at lines 3461--3462
 [][] 
  []
 
-<../public_html/img/uploads/prim.png, id=2507, 276.03125pt x 165.61874pt>
+
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/prim.png, id=2530, 276.03125pt x 165.61874pt>
 File: ../public_html/img/uploads/prim.png Graphic file (type png)
 
 <use ../public_html/img/uploads/prim.png>
 Package pdftex.def Info: ../public_html/img/uploads/prim.png used on input line
- 3464.
+ 3487.
 (pdftex.def)             Requested size: 276.03056pt x 165.63602pt.
 
-<../public_html/img/uploads/prim1.png, id=2508, 276.03125pt x 165.61874pt>
-[151]
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/prim1.png, id=2531, 276.03125pt x 165.61874pt>
+[155]
 File: ../public_html/img/uploads/prim1.png Graphic file (type png)
  <use ../public_html/img/uploads/prim1.png>
 Package pdftex.def Info: ../public_html/img/uploads/prim1.png used on input lin
-e 3466.
+e 3489.
 (pdftex.def)             Requested size: 276.03056pt x 165.63602pt.
 
-<../public_html/img/uploads/prim2.png, id=2520, 276.03125pt x 165.61874pt>
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/prim2.png, id=2545, 276.03125pt x 165.61874pt>
 File: ../public_html/img/uploads/prim2.png Graphic file (type png)
 
 <use ../public_html/img/uploads/prim2.png>
 Package pdftex.def Info: ../public_html/img/uploads/prim2.png used on input lin
-e 3468.
+e 3491.
 (pdftex.def)             Requested size: 276.03056pt x 165.63602pt.
 
-<../public_html/img/uploads/prim3.png, id=2521, 276.03125pt x 165.61874pt>
-[152 <../public_html/img/uploads/prim.png> <../public_html/img/uploads/prim1.pn
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/prim3.png, id=2546, 276.03125pt x 165.61874pt>
+[156 <../public_html/img/uploads/prim.png> <../public_html/img/uploads/prim1.pn
 g>]
 File: ../public_html/img/uploads/prim3.png Graphic file (type png)
  <use ../public_html/img/uploads/prim3.png>
 Package pdftex.def Info: ../public_html/img/uploads/prim3.png used on input lin
-e 3470.
+e 3493.
 (pdftex.def)             Requested size: 276.03056pt x 165.63602pt.
 
-<../public_html/img/uploads/prim4.png, id=2530, 276.03125pt x 165.61874pt>
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/prim4.png, id=2554, 276.03125pt x 165.61874pt>
 File: ../public_html/img/uploads/prim4.png Graphic file (type png)
 
 <use ../public_html/img/uploads/prim4.png>
 Package pdftex.def Info: ../public_html/img/uploads/prim4.png used on input lin
-e 3472.
+e 3495.
 (pdftex.def)             Requested size: 276.03056pt x 165.63602pt.
 
-<../public_html/img/uploads/prim5.png, id=2531, 276.03125pt x 165.61874pt>
-[153 <../public_html/img/uploads/prim2.png> <../public_html/img/uploads/prim3.p
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/prim5.png, id=2555, 276.03125pt x 165.61874pt>
+[157 <../public_html/img/uploads/prim2.png> <../public_html/img/uploads/prim3.p
 ng>]
 File: ../public_html/img/uploads/prim5.png Graphic file (type png)
  <use ../public_html/img/uploads/prim5.png>
 Package pdftex.def Info: ../public_html/img/uploads/prim5.png used on input lin
-e 3474.
+e 3497.
 (pdftex.def)             Requested size: 276.03056pt x 165.63602pt.
 
-<../public_html/img/uploads/prim6.png, id=2538, 276.03125pt x 165.61874pt>
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/prim6.png, id=2562, 276.03125pt x 165.61874pt>
 File: ../public_html/img/uploads/prim6.png Graphic file (type png)
 
 <use ../public_html/img/uploads/prim6.png>
 Package pdftex.def Info: ../public_html/img/uploads/prim6.png used on input lin
-e 3476.
+e 3499.
 (pdftex.def)             Requested size: 276.03056pt x 165.63602pt.
 
-<../public_html/img/uploads/prim7.png, id=2539, 276.03125pt x 166.6225pt>
-[154 <../public_html/img/uploads/prim4.png> <../public_html/img/uploads/prim5.p
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/prim7.png, id=2563, 276.03125pt x 166.6225pt>
+[158 <../public_html/img/uploads/prim4.png> <../public_html/img/uploads/prim5.p
 ng>]
 File: ../public_html/img/uploads/prim7.png Graphic file (type png)
  <use ../public_html/img/uploads/prim7.png>
 Package pdftex.def Info: ../public_html/img/uploads/prim7.png used on input lin
-e 3478.
+e 3501.
 (pdftex.def)             Requested size: 276.03056pt x 166.63988pt.
- [155 <../public_html/img/uploads/prim6.png> <../public_html/img/uploads/prim7.
-png>] [156] [157]
-<../public_html/img/uploads/kruskal.png, id=2607, 263.98625pt x 148.555pt>
+ [159 <../public_html/img/uploads/prim6.png> <../public_html/img/uploads/prim7.
+png>] [160] [161]
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/kruskal.png, id=2631, 263.98625pt x 148.555pt>
 File: ../public_html/img/uploads/kruskal.png Graphic file (type png)
 
 <use ../public_html/img/uploads/kruskal.png>
 Package pdftex.def Info: ../public_html/img/uploads/kruskal.png used on input l
-ine 3564.
+ine 3587.
 (pdftex.def)             Requested size: 263.9856pt x 148.56369pt.
 
-<../public_html/img/uploads/kruskal2.png, id=2608, 263.98625pt x 148.555pt>
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/kruskal2.png, id=2632, 263.98625pt x 148.555pt>
 File: ../public_html/img/uploads/kruskal2.png Graphic file (type png)
 
 <use ../public_html/img/uploads/kruskal2.png>
 Package pdftex.def Info: ../public_html/img/uploads/kruskal2.png used on input 
-line 3566.
+line 3589.
 (pdftex.def)             Requested size: 263.9856pt x 148.56369pt.
 
-<../public_html/img/uploads/kruskal3.png, id=2609, 263.98625pt x 148.555pt>
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/kruskal3.png, id=2633, 263.98625pt x 148.555pt>
 File: ../public_html/img/uploads/kruskal3.png Graphic file (type png)
 
 <use ../public_html/img/uploads/kruskal3.png>
 Package pdftex.def Info: ../public_html/img/uploads/kruskal3.png used on input 
-line 3568.
+line 3591.
 (pdftex.def)             Requested size: 263.9856pt x 148.56369pt.
 
-<../public_html/img/uploads/kruskal4.png, id=2610, 263.98625pt x 148.555pt>
-[158 <../public_html/img/uploads/kruskal.png> <../public_html/img/uploads/krusk
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/kruskal4.png, id=2634, 263.98625pt x 148.555pt>
+[162 <../public_html/img/uploads/kruskal.png> <../public_html/img/uploads/krusk
 al2.png>]
 File: ../public_html/img/uploads/kruskal4.png Graphic file (type png)
  <use ../public_html/img/uploads/kruskal4.png>
 Package pdftex.def Info: ../public_html/img/uploads/kruskal4.png used on input 
-line 3570.
+line 3593.
 (pdftex.def)             Requested size: 263.9856pt x 148.56369pt.
 
-<../public_html/img/uploads/kruskal5.png, id=2620, 263.98625pt x 149.55875pt>
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/kruskal5.png, id=2644, 263.98625pt x 149.55875pt>
 File: ../public_html/img/uploads/kruskal5.png Graphic file (type png)
 
 <use ../public_html/img/uploads/kruskal5.png>
 Package pdftex.def Info: ../public_html/img/uploads/kruskal5.png used on input 
-line 3572.
+line 3595.
 (pdftex.def)             Requested size: 263.9856pt x 149.5675pt.
 
-<../public_html/img/uploads/kruskal6.png, id=2621, 263.98625pt x 149.55875pt>
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/kruskal6.png, id=2645, 263.98625pt x 149.55875pt>
 File: ../public_html/img/uploads/kruskal6.png Graphic file (type png)
 
 <use ../public_html/img/uploads/kruskal6.png>
 Package pdftex.def Info: ../public_html/img/uploads/kruskal6.png used on input 
-line 3574.
+line 3597.
 (pdftex.def)             Requested size: 263.9856pt x 149.5675pt.
 
-<../public_html/img/uploads/kruskal7.png, id=2622, 263.98625pt x 149.55875pt>
-[159 <../public_html/img/uploads/kruskal3.png> <../public_html/img/uploads/krus
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/kruskal7.png, id=2646, 263.98625pt x 149.55875pt>
+[163 <../public_html/img/uploads/kruskal3.png> <../public_html/img/uploads/krus
 kal4.png> <../public_html/img/uploads/kruskal5.png>]
 File: ../public_html/img/uploads/kruskal7.png Graphic file (type png)
 
 <use ../public_html/img/uploads/kruskal7.png>
 Package pdftex.def Info: ../public_html/img/uploads/kruskal7.png used on input 
-line 3576.
+line 3599.
 (pdftex.def)             Requested size: 263.9856pt x 149.5675pt.
- [160 <../public_html/img/uploads/kruskal6.png> <../public_html/img/uploads/kru
+ [164 <../public_html/img/uploads/kruskal6.png> <../public_html/img/uploads/kru
 skal7.png>]
-Overfull \hbox (37.69035pt too wide) in paragraph at lines 3613--3614
+Overfull \hbox (37.69035pt too wide) in paragraph at lines 3636--3637
 [][][][][][][][][][][][][][][][][][][][][][][][][][][]  
  []
 
-[161] [162]
+[165] [166]
 Chapter 15.
 
 Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
-nput line 3670.
+nput line 3693.
 
 
-Package tabulary Warning: No suitable columns! on input line 3670.
+Package tabulary Warning: No suitable columns! on input line 3693.
 
 
-Overfull \hbox (352.37627pt too wide) in paragraph at lines 3670--3671
+Overfull \hbox (352.37627pt too wide) in paragraph at lines 3693--3694
 [] 
  []
 
-[163
+[167
 
 ]
-<../public_html/img/uploads/djikstra.png, id=2697, 253.94875pt x 148.555pt>
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/djikstra.png, id=2721, 253.94875pt x 148.555pt>
 File: ../public_html/img/uploads/djikstra.png Graphic file (type png)
 
 <use ../public_html/img/uploads/djikstra.png>
 Package pdftex.def Info: ../public_html/img/uploads/djikstra.png used on input 
-line 3703.
+line 3726.
 (pdftex.def)             Requested size: 253.94812pt x 148.55916pt.
- [164]
-<../public_html/img/uploads/djikstra1.png, id=2706, 253.94875pt x 175.65625pt>
+ [168]
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/djikstra1.png, id=2730, 253.94875pt x 175.65625pt>
 File: ../public_html/img/uploads/djikstra1.png Graphic file (type png)
 
 <use ../public_html/img/uploads/djikstra1.png>
 Package pdftex.def Info: ../public_html/img/uploads/djikstra1.png used on input
- line 3707.
+ line 3730.
 (pdftex.def)             Requested size: 253.94812pt x 175.66116pt.
 
-<../public_html/img/uploads/djikstra2.png, id=2707, 253.94875pt x 184.69pt>
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/djikstra2.png, id=2731, 253.94875pt x 184.69pt>
 File: ../public_html/img/uploads/djikstra2.png Graphic file (type png)
 
 <use ../public_html/img/uploads/djikstra2.png>
 Package pdftex.def Info: ../public_html/img/uploads/djikstra2.png used on input
- line 3711.
+ line 3734.
 (pdftex.def)             Requested size: 253.94812pt x 184.69516pt.
- [165 <../public_html/img/uploads/djikstra.png> <../public_html/img/uploads/dji
+ [169 <../public_html/img/uploads/djikstra.png> <../public_html/img/uploads/dji
 kstra1.png>]
-<../public_html/img/uploads/djikstra3.png, id=2714, 283.0575pt x 184.69pt>
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/djikstra3.png, id=2738, 283.0575pt x 184.69pt>
 File: ../public_html/img/uploads/djikstra3.png Graphic file (type png)
 
 <use ../public_html/img/uploads/djikstra3.png>
 Package pdftex.def Info: ../public_html/img/uploads/djikstra3.png used on input
- line 3715.
+ line 3738.
 (pdftex.def)             Requested size: 283.0568pt x 184.70361pt.
 
-<../public_html/img/uploads/djikstra4.png, id=2715, 283.0575pt x 167.62625pt>
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/djikstra4.png, id=2739, 283.0575pt x 167.62625pt>
 File: ../public_html/img/uploads/djikstra4.png Graphic file (type png)
 
 <use ../public_html/img/uploads/djikstra4.png>
 Package pdftex.def Info: ../public_html/img/uploads/djikstra4.png used on input
- line 3719.
+ line 3742.
 (pdftex.def)             Requested size: 283.0568pt x 167.63861pt.
- [166 <../public_html/img/uploads/djikstra2.png> <../public_html/img/uploads/dj
+ [170 <../public_html/img/uploads/djikstra2.png> <../public_html/img/uploads/dj
 ikstra3.png>]
-<../public_html/img/uploads/djikstra5.png, id=2722, 283.0575pt x 148.555pt>
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/djikstra5.png, id=2746, 283.0575pt x 148.555pt>
 File: ../public_html/img/uploads/djikstra5.png Graphic file (type png)
 
 <use ../public_html/img/uploads/djikstra5.png>
 Package pdftex.def Info: ../public_html/img/uploads/djikstra5.png used on input
- line 3723.
+ line 3746.
 (pdftex.def)             Requested size: 283.0568pt x 148.56595pt.
 
-<../public_html/img/uploads/djikstra6.png, id=2723, 253.94875pt x 148.555pt>
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/djikstra6.png, id=2747, 253.94875pt x 148.555pt>
 File: ../public_html/img/uploads/djikstra6.png Graphic file (type png)
 
 <use ../public_html/img/uploads/djikstra6.png>
 Package pdftex.def Info: ../public_html/img/uploads/djikstra6.png used on input
- line 3727.
+ line 3750.
 (pdftex.def)             Requested size: 253.94812pt x 148.55916pt.
- [167 <../public_html/img/uploads/djikstra4.png> <../public_html/img/uploads/dj
-ikstra5.png>] [168 <../public_html/img/uploads/djikstra6.png>]
-Overfull \hbox (11.4904pt too wide) in paragraph at lines 3761--3762
+ [171 <../public_html/img/uploads/djikstra4.png> <../public_html/img/uploads/dj
+ikstra5.png>] [172 <../public_html/img/uploads/djikstra6.png>]
+Overfull \hbox (11.4904pt too wide) in paragraph at lines 3784--3785
 [][][][][][][][][][][][][]  
  []
 
-[169]
-<../public_html/img/uploads/bellmanford.png, id=2780, 253.94875pt x 147.55125pt
+[173]
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/bellmanford.png, id=2804, 253.94875pt x 147.55125pt
 >
 File: ../public_html/img/uploads/bellmanford.png Graphic file (type png)
  <use ../public_html/img/uploads/bellmanford.png>
 Package pdftex.def Info: ../public_html/img/uploads/bellmanford.png used on inp
-ut line 3793.
+ut line 3816.
 (pdftex.def)             Requested size: 253.94812pt x 147.55537pt.
 
-<../public_html/img/uploads/bellmanford2.png, id=2781, 33.12375pt x 36.135pt>
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/bellmanford2.png, id=2805, 33.12375pt x 36.135pt>
 File: ../public_html/img/uploads/bellmanford2.png Graphic file (type png)
 
 <use ../public_html/img/uploads/bellmanford2.png>
 Package pdftex.def Info: ../public_html/img/uploads/bellmanford2.png used on in
-put line 3797.
+put line 3820.
 (pdftex.def)             Requested size: 33.12366pt x 36.13763pt.
 
-<../public_html/img/uploads/bellmanford3.png, id=2782, 99.37125pt x 127.47626pt
-> [170 <../public_html/img/uploads/bellmanford.png> <../public_html/img/uploads
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/bellmanford3.png, id=2806, 99.37125pt x 127.47626pt
+> [174 <../public_html/img/uploads/bellmanford.png> <../public_html/img/uploads
 /bellmanford2.png>]
 File: ../public_html/img/uploads/bellmanford3.png Graphic file (type png)
  <use ../public_html/img/uploads/bellmanford3.png>
 Package pdftex.def Info: ../public_html/img/uploads/bellmanford3.png used on in
-put line 3801.
+put line 3824.
 (pdftex.def)             Requested size: 99.371pt x 127.47981pt.
 
-<../public_html/img/uploads/bellmanford4.png, id=2789, 159.59625pt x 179.67125p
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/bellmanford4.png, id=2813, 159.59625pt x 179.67125p
 t>
 File: ../public_html/img/uploads/bellmanford4.png Graphic file (type png)
  <use ../public_html/img/uploads/bellmanford4.png>
 Package pdftex.def Info: ../public_html/img/uploads/bellmanford4.png used on in
-put line 3807.
+put line 3830.
 (pdftex.def)             Requested size: 159.59584pt x 179.67079pt.
 
-<../public_html/img/uploads/bellmanford5.png, id=2790, 229.85875pt x 189.70876p
-t> [171 <../public_html/img/uploads/bellmanford3.png> <../public_html/img/uploa
-ds/bellmanford4.png>]
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/bellmanford5.png, id=2814, 229.85875pt x 189.70876p
+t>
 File: ../public_html/img/uploads/bellmanford5.png Graphic file (type png)
  <use ../public_html/img/uploads/bellmanford5.png>
 Package pdftex.def Info: ../public_html/img/uploads/bellmanford5.png used on in
-put line 3815.
+put line 3838.
 (pdftex.def)             Requested size: 229.85817pt x 189.71985pt.
-
-[172 <../public_html/img/uploads/bellmanford5.png>]
-Overfull \hbox (1.57745pt too wide) in paragraph at lines 3846--3847
+ [175 <../public_html/img/uploads/bellmanford3.png> <../public_html/img/uploads
+/bellmanford4.png>]
+[176 <../public_html/img/uploads/bellmanford5.png>]
+Overfull \hbox (1.57745pt too wide) in paragraph at lines 3869--3870
 []\OT1/cmr/m/n/10.95 We can rewrite this so-lu-tion us-ing dy-namic pro-gram-mi
 ng with-
  []
 
-[173] [174]
+[177] [178]
 
 Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
-nput line 3943.
+nput line 3966.
 
 
-Package tabulary Warning: No suitable columns! on input line 3943.
+Package tabulary Warning: No suitable columns! on input line 3966.
 
 
 Package tabulary Warning: tymin too large (10.0pt), resetting to -5.8768pt on i
-nput line 3976.
+nput line 3999.
 
 
-Package tabulary Warning: No suitable columns! on input line 3976.
+Package tabulary Warning: No suitable columns! on input line 3999.
 
 
-Overfull \hbox (123.70552pt too wide) in paragraph at lines 3976--3977
+Overfull \hbox (123.70552pt too wide) in paragraph at lines 3999--4000
 [][] 
  []
 
-[175]
-<../public_html/img/uploads/floydwarshall1.png, id=2908, 133.49875pt x 131.4912
+[179]
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/floydwarshall1.png, id=2932, 133.49875pt x 131.4912
 6pt>
 File: ../public_html/img/uploads/floydwarshall1.png Graphic file (type png)
  <use ../public_html/img/uploads/floydwarshall1.png>
 Package pdftex.def Info: ../public_html/img/uploads/floydwarshall1.png used on 
-input line 3982.
+input line 4005.
 (pdftex.def)             Requested size: 133.4984pt x 131.50294pt.
 
-<../public_html/img/uploads/floydwarshall.png, id=2909, 183.68625pt x 131.49126
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/floydwarshall.png, id=2933, 183.68625pt x 131.49126
 pt>
 File: ../public_html/img/uploads/floydwarshall.png Graphic file (type png)
  <use ../public_html/img/uploads/floydwarshall.png>
 Package pdftex.def Info: ../public_html/img/uploads/floydwarshall.png used on i
-nput line 3984.
+nput line 4007.
 (pdftex.def)             Requested size: 183.68578pt x 131.49893pt.
- [176 <../public_html/img/uploads/floydwarshall1.png> <../public_html/img/uploa
+ [180 <../public_html/img/uploads/floydwarshall1.png> <../public_html/img/uploa
 ds/floydwarshall.png>]
-[177]
-Overfull \hbox (22.99013pt too wide) in paragraph at lines 4048--4049
+[181]
+Overfull \hbox (22.99013pt too wide) in paragraph at lines 4071--4072
 [][][][][][][][][][][][][][][][][][][][][][][][][]  
  []
 
-[178] [179]
+[182] [183]
 Chapter 16.
-[180
+[184
 
-] [181] [182
+] [185] [186
 
 ]
 Chapter 17.
 
-<../public_html/img/uploads/binarysearch.png, id=3040, 262.9825pt x 116.435pt>
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/binarysearch.png, id=3064, 262.9825pt x 116.435pt>
 File: ../public_html/img/uploads/binarysearch.png Graphic file (type png)
 
 <use ../public_html/img/uploads/binarysearch.png>
 Package pdftex.def Info: ../public_html/img/uploads/binarysearch.png used on in
-put line 4124.
+put line 4147.
 (pdftex.def)             Requested size: 262.98184pt x 116.44003pt.
- [183
+ [187
 
  <../public_html/img/uploads/binarysearch.png>]
 Missing character: There is no â in font cmr10!
@@ -1943,304 +2161,384 @@ Missing character: There is no ¤ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no ‰ in font cmr10!
 Missing character: There is no ¤ in font cmr10!
- [184] [185]
-<../public_html/img/uploads/ternarysearch.png, id=3067, 277.035pt x 197.73875pt
+ [188] [189]
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/ternarysearch.png, id=3091, 277.035pt x 197.73875pt
 >
 File: ../public_html/img/uploads/ternarysearch.png Graphic file (type png)
  <use ../public_html/img/uploads/ternarysearch.png>
 Package pdftex.def Info: ../public_html/img/uploads/ternarysearch.png used on i
-nput line 4206.
+nput line 4229.
 (pdftex.def)             Requested size: 277.03432pt x 197.73827pt.
 File: ../public_html/img/uploads/ternarysearch.png Graphic file (type png)
 
 <use ../public_html/img/uploads/ternarysearch.png>
 Package pdftex.def Info: ../public_html/img/uploads/ternarysearch.png used on i
-nput line 4214.
+nput line 4237.
 (pdftex.def)             Requested size: 277.03432pt x 197.73827pt.
- [186 <../public_html/img/uploads/ternarysearch.png>]
-<../public_html/img/uploads/ternarycase11.png, id=3076, 191.71625pt x 132.495pt
+ [190 <../public_html/img/uploads/ternarysearch.png>]
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/ternarycase11.png, id=3099, 191.71625pt x 132.495pt
 >
 File: ../public_html/img/uploads/ternarycase11.png Graphic file (type png)
  <use ../public_html/img/uploads/ternarycase11.png>
 Package pdftex.def Info: ../public_html/img/uploads/ternarycase11.png used on i
-nput line 4223.
+nput line 4246.
 (pdftex.def)             Requested size: 191.71577pt x 132.50273pt.
 
-<../public_html/img/uploads/ternarycase12.png, id=3077, 191.71625pt x 132.495pt
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/ternarycase12.png, id=3100, 191.71625pt x 132.495pt
 >
 File: ../public_html/img/uploads/ternarycase12.png Graphic file (type png)
  <use ../public_html/img/uploads/ternarycase12.png>
 Package pdftex.def Info: ../public_html/img/uploads/ternarycase12.png used on i
-nput line 4226.
+nput line 4249.
 (pdftex.def)             Requested size: 191.71577pt x 132.50273pt.
- [187 <../public_html/img/uploads/ternarycase11.png>]
-<../public_html/img/uploads/ternarycase1.png, id=3084, 214.8025pt x 145.54375pt
+ [191 <../public_html/img/uploads/ternarycase11.png>]
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/ternarycase1.png, id=3108, 214.8025pt x 145.54375pt
 >
 File: ../public_html/img/uploads/ternarycase1.png Graphic file (type png)
  <use ../public_html/img/uploads/ternarycase1.png>
 Package pdftex.def Info: ../public_html/img/uploads/ternarycase1.png used on in
-put line 4232.
+put line 4255.
 (pdftex.def)             Requested size: 214.80197pt x 145.5456pt.
 
-<../public_html/img/uploads/ternarycase21.png, id=3085, 188.705pt x 132.495pt>
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/ternarycase21.png, id=3109, 188.705pt x 132.495pt>
 File: ../public_html/img/uploads/ternarycase21.png Graphic file (type png)
 
 <use ../public_html/img/uploads/ternarycase21.png>
 Package pdftex.def Info: ../public_html/img/uploads/ternarycase21.png used on i
-nput line 4239.
+nput line 4262.
 (pdftex.def)             Requested size: 188.70453pt x 132.49466pt.
- [188 <../public_html/img/uploads/ternarycase12.png> <../public_html/img/upload
+ [192 <../public_html/img/uploads/ternarycase12.png> <../public_html/img/upload
 s/ternarycase1.png>]
-<../public_html/img/uploads/ternarycase22.png, id=3092, 188.705pt x 132.495pt>
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/ternarycase22.png, id=3116, 188.705pt x 132.495pt>
 File: ../public_html/img/uploads/ternarycase22.png Graphic file (type png)
 
 <use ../public_html/img/uploads/ternarycase22.png>
 Package pdftex.def Info: ../public_html/img/uploads/ternarycase22.png used on i
-nput line 4242.
+nput line 4265.
 (pdftex.def)             Requested size: 188.70453pt x 132.49466pt.
 
-<../public_html/img/uploads/ternarycase2.png, id=3093, 205.76875pt x 145.54375p
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/ternarycase2.png, id=3117, 205.76875pt x 145.54375p
 t>
 File: ../public_html/img/uploads/ternarycase2.png Graphic file (type png)
  <use ../public_html/img/uploads/ternarycase2.png>
 Package pdftex.def Info: ../public_html/img/uploads/ternarycase2.png used on in
-put line 4248.
+put line 4271.
 (pdftex.def)             Requested size: 205.76823pt x 145.54338pt.
- [189 <../public_html/img/uploads/ternarycase21.png> <../public_html/img/upload
+ [193 <../public_html/img/uploads/ternarycase21.png> <../public_html/img/upload
 s/ternarycase22.png>]
 File: ../public_html/img/uploads/ternarysearch.png Graphic file (type png)
 
 <use ../public_html/img/uploads/ternarysearch.png>
 Package pdftex.def Info: ../public_html/img/uploads/ternarysearch.png used on i
-nput line 4254.
+nput line 4277.
 (pdftex.def)             Requested size: 277.03432pt x 197.73827pt.
 
-<../public_html/img/uploads/ternarysearch2.png, id=3100, 277.035pt x 197.73875p
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/ternarysearch2.png, id=3125, 277.035pt x 197.73875p
 t>
 File: ../public_html/img/uploads/ternarysearch2.png Graphic file (type png)
  <use ../public_html/img/uploads/ternarysearch2.png>
 Package pdftex.def Info: ../public_html/img/uploads/ternarysearch2.png used on 
-input line 4256.
+input line 4279.
 (pdftex.def)             Requested size: 277.03432pt x 197.73827pt.
 
-<../public_html/img/uploads/ternarysearch3.png, id=3101, 269.005pt x 197.73875p
-t> [190 <../public_html/img/uploads/ternarycase2.png>]
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/ternarysearch3.png, id=3126, 269.005pt x 197.73875p
+t> [194 <../public_html/img/uploads/ternarycase2.png>]
 File: ../public_html/img/uploads/ternarysearch3.png Graphic file (type png)
 
 <use ../public_html/img/uploads/ternarysearch3.png>
 Package pdftex.def Info: ../public_html/img/uploads/ternarysearch3.png used on 
-input line 4258.
+input line 4281.
 (pdftex.def)             Requested size: 269.00433pt x 197.74127pt.
 
-<../public_html/img/uploads/ternarysearch4.png, id=3108, 269.005pt x 197.73875p
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/ternarysearch4.png, id=3133, 269.005pt x 197.73875p
 t>
 File: ../public_html/img/uploads/ternarysearch4.png Graphic file (type png)
  <use ../public_html/img/uploads/ternarysearch4.png>
 Package pdftex.def Info: ../public_html/img/uploads/ternarysearch4.png used on 
-input line 4260.
+input line 4283.
 (pdftex.def)             Requested size: 269.00433pt x 197.74127pt.
 
-<../public_html/img/uploads/ternarysearch5.png, id=3109, 254.9525pt x 197.73875
-pt> [191 <../public_html/img/uploads/ternarysearch2.png> <../public_html/img/up
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/ternarysearch5.png, id=3134, 254.9525pt x 197.73875
+pt> [195 <../public_html/img/uploads/ternarysearch2.png> <../public_html/img/up
 loads/ternarysearch3.png>]
 File: ../public_html/img/uploads/ternarysearch5.png Graphic file (type png)
  <use ../public_html/img/uploads/ternarysearch5.png>
 Package pdftex.def Info: ../public_html/img/uploads/ternarysearch5.png used on 
-input line 4262.
+input line 4285.
 (pdftex.def)             Requested size: 254.95186pt x 197.74731pt.
 
-<../public_html/img/uploads/ternarysearch6.png, id=3116, 254.9525pt x 195.73125
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/ternarysearch6.png, id=3141, 254.9525pt x 195.73125
 pt>
 File: ../public_html/img/uploads/ternarysearch6.png Graphic file (type png)
  <use ../public_html/img/uploads/ternarysearch6.png>
 Package pdftex.def Info: ../public_html/img/uploads/ternarysearch6.png used on 
-input line 4264.
+input line 4287.
 (pdftex.def)             Requested size: 254.95186pt x 195.73972pt.
 
-<../public_html/img/uploads/ternarysearch7.png, id=3117, 254.9525pt x 185.69376
-pt> [192 <../public_html/img/uploads/ternarysearch4.png> <../public_html/img/up
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/ternarysearch7.png, id=3142, 254.9525pt x 185.69376
+pt> [196 <../public_html/img/uploads/ternarysearch4.png> <../public_html/img/up
 loads/ternarysearch5.png>]
 File: ../public_html/img/uploads/ternarysearch7.png Graphic file (type png)
  <use ../public_html/img/uploads/ternarysearch7.png>
 Package pdftex.def Info: ../public_html/img/uploads/ternarysearch7.png used on 
-input line 4266.
+input line 4289.
 (pdftex.def)             Requested size: 254.95186pt x 185.7018pt.
 
-[193 <../public_html/img/uploads/ternarysearch6.png> <../public_html/img/upload
+[197 <../public_html/img/uploads/ternarysearch6.png> <../public_html/img/upload
 s/ternarysearch7.png>]
-<../public_html/img/uploads/dfs.png, id=3137, 158.5925pt x 226.8475pt>
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/dfs.png, id=3161, 158.5925pt x 226.8475pt>
 File: ../public_html/img/uploads/dfs.png Graphic file (type png)
 
 <use ../public_html/img/uploads/dfs.png>
 Package pdftex.def Info: ../public_html/img/uploads/dfs.png used on input line 
-4312.
+4335.
 (pdftex.def)             Requested size: 158.59209pt x 226.86424pt.
- [194]
+ [198]
 File: ../public_html/img/uploads/dfs.png Graphic file (type png)
 
 <use ../public_html/img/uploads/dfs.png>
 Package pdftex.def Info: ../public_html/img/uploads/dfs.png used on input line 
-4329.
+4352.
 (pdftex.def)             Requested size: 158.59209pt x 226.86424pt.
- [195 <../public_html/img/uploads/dfs.png>]
-<../public_html/img/uploads/dfs-preorder.png, id=3176, 158.5925pt x 226.8475pt>
+ [199 <../public_html/img/uploads/dfs.png>]
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/dfs-preorder.png, id=3200, 158.5925pt x 226.8475pt>
 File: ../public_html/img/uploads/dfs-preorder.png Graphic file (type png)
 <use ../public_html/img/uploads/dfs-preorder.png>
 Package pdftex.def Info: ../public_html/img/uploads/dfs-preorder.png used on in
-put line 4348.
+put line 4371.
 (pdftex.def)             Requested size: 158.59209pt x 226.86424pt.
- [196]
-<../public_html/img/uploads/dfs-postorder.png, id=3193, 158.5925pt x 226.8475pt
+ [200]
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/dfs-postorder.png, id=3217, 158.5925pt x 226.8475pt
 >
 File: ../public_html/img/uploads/dfs-postorder.png Graphic file (type png)
  <use ../public_html/img/uploads/dfs-postorder.png>
 Package pdftex.def Info: ../public_html/img/uploads/dfs-postorder.png used on i
-nput line 4367.
+nput line 4390.
 (pdftex.def)             Requested size: 158.59209pt x 226.86424pt.
- [197 <../public_html/img/uploads/dfs-preorder.png>] [198 <../public_html/img/u
+ [201 <../public_html/img/uploads/dfs-preorder.png>] [202 <../public_html/img/u
 ploads/dfs-postorder.png>]
-Overfull \hbox (11.44058pt too wide) in paragraph at lines 4400--4401
+Overfull \hbox (11.44058pt too wide) in paragraph at lines 4423--4424
 [][][][][][][][][][][][][][][][][][][][][][][]  
  []
 
-[199] <../public_html/img/uploads/bfs.png, id=3254, 158.5925pt x 226.8475pt>
+[203]
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/bfs.png, id=3278, 158.5925pt x 226.8475pt>
 File: ../public_html/img/uploads/bfs.png Graphic file (type png)
 
 <use ../public_html/img/uploads/bfs.png>
 Package pdftex.def Info: ../public_html/img/uploads/bfs.png used on input line 
-4432.
+4455.
 (pdftex.def)             Requested size: 158.59209pt x 226.86424pt.
- [200 <../public_html/img/uploads/bfs.png>] [201]
-<../public_html/img/uploads/floodfill.png, id=3282, 207.174pt x 207.174pt>
+ [204 <../public_html/img/uploads/bfs.png>] [205]
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/floodfill.png, id=3306, 345.29pt x 345.29pt>
 File: ../public_html/img/uploads/floodfill.png Graphic file (type png)
 
 <use ../public_html/img/uploads/floodfill.png>
 Package pdftex.def Info: ../public_html/img/uploads/floodfill.png used on input
- line 4477.
-(pdftex.def)             Requested size: 207.17348pt x 207.17348pt.
- [202 <../public_html/img/uploads/floodfill.png>]
-<../public_html/img/uploads/bucket.png, id=3292, 207.174pt x 207.174pt>
+ line 4500.
+(pdftex.def)             Requested size: 309.85626pt x 309.86243pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 4500--4501
+[][] 
+ []
+
+[206 <../public_html/img/uploads/floodfill.png>] [207]
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/bucket.png, id=3345, 345.29pt x 345.29pt>
 File: ../public_html/img/uploads/bucket.png Graphic file (type png)
 
 <use ../public_html/img/uploads/bucket.png>
 Package pdftex.def Info: ../public_html/img/uploads/bucket.png used on input li
-ne 4524.
-(pdftex.def)             Requested size: 207.17348pt x 207.17348pt.
+ne 4547.
+(pdftex.def)             Requested size: 309.85626pt x 309.86243pt.
 
-<../public_html/img/uploads/bucket2.png, id=3293, 207.174pt x 207.174pt>
-[203]
+Overfull \hbox (17.0pt too wide) in paragraph at lines 4547--4548
+[][] 
+ []
+
+
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/bucket2.png, id=3346, 345.29pt x 345.29pt>
 File: ../public_html/img/uploads/bucket2.png Graphic file (type png)
- <use ../public_html/img/uploads/bucket2.png>
-Package pdftex.def Info: ../public_html/img/uploads/bucket2.png used on input l
-ine 4526.
-(pdftex.def)             Requested size: 207.17348pt x 207.17348pt.
 
-<../public_html/img/uploads/bucket3.png, id=3322, 207.174pt x 207.174pt>
+<use ../public_html/img/uploads/bucket2.png>
+Package pdftex.def Info: ../public_html/img/uploads/bucket2.png used on input l
+ine 4549.
+(pdftex.def)             Requested size: 309.85626pt x 309.86243pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 4549--4550
+[][] 
+ []
+
+[208 <../public_html/img/uploads/bucket.png>]
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/bucket3.png, id=3352, 345.29pt x 345.29pt>
 File: ../public_html/img/uploads/bucket3.png Graphic file (type png)
 
 <use ../public_html/img/uploads/bucket3.png>
 Package pdftex.def Info: ../public_html/img/uploads/bucket3.png used on input l
-ine 4530.
-(pdftex.def)             Requested size: 207.17348pt x 207.17348pt.
+ine 4553.
+(pdftex.def)             Requested size: 309.85626pt x 309.86243pt.
 
-<../public_html/img/uploads/bucket4.png, id=3323, 207.174pt x 207.174pt>
-[204 <../public_html/img/uploads/bucket.png> <../public_html/img/uploads/bucket
-2.png>]
+Overfull \hbox (17.0pt too wide) in paragraph at lines 4553--4554
+[][] 
+ []
+
+
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/bucket4.png, id=3353, 345.29pt x 345.29pt> [209 <..
+/public_html/img/uploads/bucket2.png>]
 File: ../public_html/img/uploads/bucket4.png Graphic file (type png)
- <use ../public_html/img/uploads/bucket4.png>
+
+<use ../public_html/img/uploads/bucket4.png>
 Package pdftex.def Info: ../public_html/img/uploads/bucket4.png used on input l
-ine 4532.
-(pdftex.def)             Requested size: 207.17348pt x 207.17348pt.
- [205 <../public_html/img/uploads/bucket3.png> <../public_html/img/uploads/buck
-et4.png>] [206] [207]
-<../public_html/img/uploads/backtracking.png, id=3388, 173.64874pt x 210.7875pt
+ine 4555.
+(pdftex.def)             Requested size: 309.85626pt x 309.86243pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 4555--4556
+[][] 
+ []
+
+[210 <../public_html/img/uploads/bucket3.png>] [211 <../public_html/img/uploads
+/bucket4.png>] [212] [213]
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/backtracking.png, id=3426, 173.64874pt x 210.7875pt
 >
 File: ../public_html/img/uploads/backtracking.png Graphic file (type png)
  <use ../public_html/img/uploads/backtracking.png>
 Package pdftex.def Info: ../public_html/img/uploads/backtracking.png used on in
-put line 4621.
+put line 4644.
 (pdftex.def)             Requested size: 173.64832pt x 210.79341pt.
- [208] [209 <../public_html/img/uploads/backtracking.png>] [210]
-Overfull \hbox (115.39003pt too wide) in paragraph at lines 4704--4705
+ [214 <../public_html/img/uploads/backtracking.png>] [215] [216]
+Overfull \hbox (115.39003pt too wide) in paragraph at lines 4727--4728
 [][][][]  
  []
 
-[211]
-Overfull \hbox (173.13953pt too wide) in paragraph at lines 4720--4721
+
+Overfull \hbox (173.13953pt too wide) in paragraph at lines 4743--4744
 [][][][][]  
  []
 
 
-Overfull \hbox (115.39003pt too wide) in paragraph at lines 4722--4723
+Overfull \hbox (115.39003pt too wide) in paragraph at lines 4745--4746
 [][][][]  
  []
 
 
-<../public_html/img/uploads/enumerate-sets.png, id=3441, 156.585pt x 199.74625p
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/enumerate-sets.png, id=3467, 156.585pt x 199.74625p
 t>
 File: ../public_html/img/uploads/enumerate-sets.png Graphic file (type png)
  <use ../public_html/img/uploads/enumerate-sets.png>
 Package pdftex.def Info: ../public_html/img/uploads/enumerate-sets.png used on 
-input line 4727.
+input line 4750.
 (pdftex.def)             Requested size: 156.58461pt x 199.75185pt.
- [212] [213 <../public_html/img/uploads/enumerate-sets.png>] [214]
-<../public_html/img/uploads/nqueen.jpg, id=3533, 313.9228pt x 298.86656pt>
+ [217] [218 <../public_html/img/uploads/enumerate-sets.png>] [219]
+<../public_html/img/uploads/nqueen.jpg, id=3567, 313.9228pt x 298.86656pt>
 File: ../public_html/img/uploads/nqueen.jpg Graphic file (type jpg)
 
 <use ../public_html/img/uploads/nqueen.jpg>
 Package pdftex.def Info: ../public_html/img/uploads/nqueen.jpg used on input li
-ne 4804.
+ne 4827.
 (pdftex.def)             Requested size: 309.85626pt x 295.00777pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 4804--4805
+Overfull \hbox (17.0pt too wide) in paragraph at lines 4827--4828
 [][] 
  []
 
-[215]
-<../public_html/img/uploads/nqueen3.png, id=3546, 375.4025pt x 371.3875pt>
+[220 <../public_html/img/uploads/nqueen.jpg>]
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/nqueen3.png, id=3579, 375.4025pt x 371.3875pt>
 File: ../public_html/img/uploads/nqueen3.png Graphic file (type png)
 
 <use ../public_html/img/uploads/nqueen3.png>
 Package pdftex.def Info: ../public_html/img/uploads/nqueen3.png used on input l
-ine 4808.
+ine 4831.
 (pdftex.def)             Requested size: 309.85626pt x 306.56279pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 4808--4809
+Overfull \hbox (17.0pt too wide) in paragraph at lines 4831--4832
 [][] 
  []
 
-[216 <../public_html/img/uploads/nqueen.jpg>]
-<../public_html/img/uploads/nqueen1.png, id=3552, 225.2415pt x 226.446pt>
+
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/nqueen1.png, id=3580, 375.4025pt x 377.41pt>
+[221 <../public_html/img/uploads/nqueen3.png>]
 File: ../public_html/img/uploads/nqueen1.png Graphic file (type png)
 
 <use ../public_html/img/uploads/nqueen1.png>
 Package pdftex.def Info: ../public_html/img/uploads/nqueen1.png used on input l
-ine 4818.
-(pdftex.def)             Requested size: 225.24094pt x 226.44888pt.
- [217 <../public_html/img/uploads/nqueen3.png>]
-<../public_html/img/uploads/nqueen2.png, id=3558, 225.2415pt x 222.8325pt>
+ine 4841.
+(pdftex.def)             Requested size: 309.85626pt x 311.53409pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 4841--4842
+[][] 
+ []
+
+
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/nqueen2.png, id=3588, 375.4025pt x 371.3875pt>
 File: ../public_html/img/uploads/nqueen2.png Graphic file (type png)
 
 <use ../public_html/img/uploads/nqueen2.png>
 Package pdftex.def Info: ../public_html/img/uploads/nqueen2.png used on input l
-ine 4828.
-(pdftex.def)             Requested size: 225.24094pt x 222.83534pt.
- [218 <../public_html/img/uploads/nqueen1.png>] [219 <../public_html/img/upload
-s/nqueen2.png>] [220] [221]
-[222] [223
+ine 4851.
+(pdftex.def)             Requested size: 309.85626pt x 306.56279pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 4851--4852
+[][] 
+ []
+
+[222 <../public_html/img/uploads/nqueen1.png>] [223 <../public_html/img/uploads
+/nqueen2.png>] [224] [225] [226] [227
 
 ]
 Chapter 18.
-[224
+[228
 
-] [225] [226] [227] [228] [229] [230] [231] [232] [233] [234] [235]
+] [229] [230] [231] [232] [233] [234] [235] [236] [237] [238] [239]
 File: ../public_html/img/uploads/recursion_grid.png Graphic file (type png)
 
 <use ../public_html/img/uploads/recursion_grid.png>
 Package pdftex.def Info: ../public_html/img/uploads/recursion_grid.png used on 
-input line 5311.
-(pdftex.def)             Requested size: 223.4342pt x 142.73941pt.
- [236] [237] [238]
+input line 5334.
+(pdftex.def)             Requested size: 309.85626pt x 197.94852pt.
+ [240] [241] [242]
 Missing character: There is no â in font cmtt10!
 Missing character: There is no ‰ in font cmtt10!
 Missing character: There is no ¤ in font cmtt10!
@@ -2253,7 +2551,6 @@ Missing character: There is no ¤ in font cmtt10!
 Missing character: There is no â in font cmtt10!
 Missing character: There is no ‰ in font cmtt10!
 Missing character: There is no ¤ in font cmtt10!
- [239]
 Missing character: There is no â in font cmtt10!
 Missing character: There is no ‰ in font cmtt10!
 Missing character: There is no ¤ in font cmtt10!
@@ -2266,158 +2563,179 @@ Missing character: There is no ¤ in font cmtt10!
 Missing character: There is no â in font cmtt10!
 Missing character: There is no ‰ in font cmtt10!
 Missing character: There is no ¤ in font cmtt10!
-
-[240] [241] [242
+ [243]
+[244] [245] [246
 
 ]
 Chapter 19.
-[243
+[247
 
 ]
-<../public_html/img/uploads/intervalschedule.png, id=4072, 465.74pt x 160.6pt>
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/intervalschedule.png, id=4102, 465.74pt x 160.6pt>
 File: ../public_html/img/uploads/intervalschedule.png Graphic file (type png)
 
 <use ../public_html/img/uploads/intervalschedule.png>
 Package pdftex.def Info: ../public_html/img/uploads/intervalschedule.png used o
-n input line 5500.
+n input line 5523.
 (pdftex.def)             Requested size: 309.85626pt x 106.85156pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 5500--5501
+Overfull \hbox (17.0pt too wide) in paragraph at lines 5523--5524
 [][] 
  []
 
-[244 <../public_html/img/uploads/intervalschedule.png>]
-<../public_html/img/uploads/intervalschedule2.png, id=4089, 465.74pt x 160.6pt>
+
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/intervalschedule2.png, id=4103, 465.74pt x 160.6pt>
+[248 <../public_html/img/uploads/intervalschedule.png>]
 File: ../public_html/img/uploads/intervalschedule2.png Graphic file (type png)
+
 <use ../public_html/img/uploads/intervalschedule2.png>
 Package pdftex.def Info: ../public_html/img/uploads/intervalschedule2.png used 
-on input line 5504.
+on input line 5527.
 (pdftex.def)             Requested size: 309.85626pt x 106.85156pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 5504--5505
+Overfull \hbox (17.0pt too wide) in paragraph at lines 5527--5528
 [][] 
  []
 
 
-<../public_html/img/uploads/intervalschedule3.png, id=4090, 465.74pt x 160.6pt>
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/intervalschedule3.png, id=4121, 465.74pt x 160.6pt>
 File: ../public_html/img/uploads/intervalschedule3.png Graphic file (type png)
 <use ../public_html/img/uploads/intervalschedule3.png>
 Package pdftex.def Info: ../public_html/img/uploads/intervalschedule3.png used 
-on input line 5508.
+on input line 5531.
 (pdftex.def)             Requested size: 309.85626pt x 106.85156pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 5508--5509
+Overfull \hbox (17.0pt too wide) in paragraph at lines 5531--5532
 [][] 
  []
 
 
-<../public_html/img/uploads/intervalschedule4.png, id=4091, 465.74pt x 160.6pt>
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/intervalschedule4.png, id=4122, 465.74pt x 160.6pt>
 File: ../public_html/img/uploads/intervalschedule4.png Graphic file (type png)
 <use ../public_html/img/uploads/intervalschedule4.png>
 Package pdftex.def Info: ../public_html/img/uploads/intervalschedule4.png used 
-on input line 5512.
+on input line 5535.
 (pdftex.def)             Requested size: 309.85626pt x 106.85156pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 5512--5513
+Overfull \hbox (17.0pt too wide) in paragraph at lines 5535--5536
 [][] 
  []
 
-[245 <../public_html/img/uploads/intervalschedule2.png> <../public_html/img/upl
+[249 <../public_html/img/uploads/intervalschedule2.png> <../public_html/img/upl
 oads/intervalschedule3.png> <../public_html/img/uploads/intervalschedule4.png>]
 
-<../public_html/img/uploads/couplematch.png, id=4099, 214.8025pt x 221.82875pt>
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/couplematch.png, id=4130, 214.8025pt x 221.82875pt>
 File: ../public_html/img/uploads/couplematch.png Graphic file (type png)
 <use ../public_html/img/uploads/couplematch.png>
 Package pdftex.def Info: ../public_html/img/uploads/couplematch.png used on inp
-ut line 5543.
+ut line 5566.
 (pdftex.def)             Requested size: 214.80197pt x 221.83156pt.
- [246]
-<../public_html/img/uploads/couplematch2.png, id=4127, 205.76875pt x 220.825pt>
+ [250]
+pdfTeX warning (ext1): too large image resolution ignored
+
+<../public_html/img/uploads/couplematch2.png, id=4156, 205.76875pt x 220.825pt>
 File: ../public_html/img/uploads/couplematch2.png Graphic file (type png)
 <use ../public_html/img/uploads/couplematch2.png>
 Package pdftex.def Info: ../public_html/img/uploads/couplematch2.png used on in
-put line 5547.
+put line 5570.
 (pdftex.def)             Requested size: 205.76823pt x 220.82445pt.
- [247 <../public_html/img/uploads/couplematch.png>]
-<../public_html/img/uploads/gasproblem.png, id=4133, 524.96124pt x 136.51pt>
+ [251 <../public_html/img/uploads/couplematch.png>]
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/gasproblem.png, id=4163, 524.96124pt x 136.51pt>
 File: ../public_html/img/uploads/gasproblem.png Graphic file (type png)
 
 <use ../public_html/img/uploads/gasproblem.png>
 Package pdftex.def Info: ../public_html/img/uploads/gasproblem.png used on inpu
-t line 5554.
+t line 5577.
 (pdftex.def)             Requested size: 309.85626pt x 80.57768pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 5554--5555
+Overfull \hbox (17.0pt too wide) in paragraph at lines 5577--5578
 [][] 
  []
 
-[248 <../public_html/img/uploads/couplematch2.png> <../public_html/img/uploads/
+[252 <../public_html/img/uploads/couplematch2.png> <../public_html/img/uploads/
 gasproblem.png>]
-<../public_html/img/uploads/gasproblem1.png, id=4140, 524.96124pt x 216.81pt>
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/gasproblem1.png, id=4170, 524.96124pt x 216.81pt>
 File: ../public_html/img/uploads/gasproblem1.png Graphic file (type png)
 
 <use ../public_html/img/uploads/gasproblem1.png>
 Package pdftex.def Info: ../public_html/img/uploads/gasproblem1.png used on inp
-ut line 5564.
+ut line 5587.
 (pdftex.def)             Requested size: 309.85626pt x 127.97633pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 5564--5565
+Overfull \hbox (17.0pt too wide) in paragraph at lines 5587--5588
 [][] 
  []
 
-<../public_html/img/uploads/gasproblem2.png, id=4141, 524.96124pt x 216.81pt>
+
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/gasproblem2.png, id=4171, 524.96124pt x 216.81pt>
 File: ../public_html/img/uploads/gasproblem2.png Graphic file (type png)
 
 <use ../public_html/img/uploads/gasproblem2.png>
 Package pdftex.def Info: ../public_html/img/uploads/gasproblem2.png used on inp
-ut line 5568.
+ut line 5591.
 (pdftex.def)             Requested size: 309.85626pt x 127.97633pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 5568--5569
+Overfull \hbox (17.0pt too wide) in paragraph at lines 5591--5592
 [][] 
  []
 
-[249 <../public_html/img/uploads/gasproblem1.png>]
-<../public_html/img/uploads/gasproblem3.png, id=4147, 524.96124pt x 216.81pt>
+[253 <../public_html/img/uploads/gasproblem1.png>]
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/gasproblem3.png, id=4177, 524.96124pt x 216.81pt>
 File: ../public_html/img/uploads/gasproblem3.png Graphic file (type png)
 
 <use ../public_html/img/uploads/gasproblem3.png>
 Package pdftex.def Info: ../public_html/img/uploads/gasproblem3.png used on inp
-ut line 5572.
+ut line 5595.
 (pdftex.def)             Requested size: 309.85626pt x 127.97633pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 5572--5573
+Overfull \hbox (17.0pt too wide) in paragraph at lines 5595--5596
 [][] 
  []
 
-<../public_html/img/uploads/gasproblem4.png, id=4148, 524.96124pt x 216.81pt>
+
+pdfTeX warning (ext1): too large image resolution ignored
+<../public_html/img/uploads/gasproblem4.png, id=4178, 524.96124pt x 216.81pt>
 File: ../public_html/img/uploads/gasproblem4.png Graphic file (type png)
 
 <use ../public_html/img/uploads/gasproblem4.png>
 Package pdftex.def Info: ../public_html/img/uploads/gasproblem4.png used on inp
-ut line 5576.
+ut line 5599.
 (pdftex.def)             Requested size: 309.85626pt x 127.97633pt.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 5576--5577
+Overfull \hbox (17.0pt too wide) in paragraph at lines 5599--5600
 [][] 
  []
 
-[250 <../public_html/img/uploads/gasproblem2.png> <../public_html/img/uploads/g
-asproblem3.png>] [251 <../public_html/img/uploads/gasproblem4.png>] [252]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5597.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 5597.
-
-(./book.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 5597.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 5597.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 5597.
+[254 <../public_html/img/uploads/gasproblem2.png> <../public_html/img/uploads/g
+asproblem3.png>] [255 <../public_html/img/uploads/gasproblem4.png>] [256]
+[257]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5620.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 5620.
+ (./book.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 5620.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 5620.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 5620.
  ) 
 Here is how much of TeX's memory you used:
- 11540 strings out of 493315
- 184529 string characters out of 6137904
- 266102 words of memory out of 5000000
- 11910 multiletter control sequences out of 15000+600000
- 10544 words of font info for 37 fonts, out of 8000000 for 9000
+ 11550 strings out of 493315
+ 184623 string characters out of 6137904
+ 265102 words of memory out of 5000000
+ 11912 multiletter control sequences out of 15000+600000
+ 11155 words of font info for 39 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  35i,8n,40p,815b,1734s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
@@ -2429,12 +2747,14 @@ sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
 ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/loc
 al/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/
 texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/t
-exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
-xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on book.pdf (253 pages, 1393266 bytes).
+exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/te
+xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/tex
+live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
+ive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on book.pdf (259 pages, 1393028 bytes).
 PDF statistics:
- 5334 PDF objects out of 6186 (max. 8388607)
- 4743 compressed objects within 48 object streams
- 2862 named destinations out of 2984 (max. 500000)
+ 5375 PDF objects out of 6186 (max. 8388607)
+ 4769 compressed objects within 48 object streams
+ 2868 named destinations out of 2984 (max. 500000)
  2132 words of extra memory for PDF output out of 10000 (max. 10000000)
 

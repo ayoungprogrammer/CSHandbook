@@ -21,7 +21,7 @@ Floyd-Warshall uses a [[dynamic programming|Dynamic Programming]] approach to fi
 
 ### Formalization
 
-Recursion
+Here is a recursive definition of the Floyd-Warshall algorithm:
 
 [[[[
 Given a directed graph with N nodes and edges between nodes:
@@ -30,74 +30,81 @@ Let shortestPath(i,j) be the shortest path from i to j
 
 Base Case:
 shortestPath(i,i) = 0
-shortestPath(i,j) = edge(i,j)
 
 Recursion:
-shortestPath(i,j) =  minmum of shortestPath(i,k) + shortestPath(k,j) for all unvisited nodes k
+shortestPath(i,j) =  minimum of:
+       minimum of (shortestPath(i,k) + shortestPath(k,j) for all unvisited nodes k)
+       edge(i,j) if exists
 ]]]]
 
 ### Code
 
 [[[[
 class edge{
-	int weight,source,dest;
-	public edge(int source,int dest,int weight){
-		this.source = source;
-		this.dest = dest;
-		this.weight = weight;
-	}
+  int weight,source,dest;
+  public edge(int source,int dest,int weight){
+    this.source = source;
+    this.dest = dest;
+    this.weight = weight;
+  }
 }
 public static final int UNDEFINED = Integer.MIN_VALUE;
-	
-public static int[][] FloydWarshall(Vector<Vector<edge>> adjList){
-	int n = adjList.size();
-	//dist[i][j] is the minimum distance from i to j
-	int[][] dist = new int[n][n];
-	
-	//initialize dist[i][j]
-	for(int i=0;i<n;i++){
-		for(int j=0;j<n;j++){
-			dist[i][j] = UNDEFINED;
-		}
-	}
-	
-	//dist[i][i] = 0
-	for(int i=0;i<n;i++){
-		dist[i][i]=0;
-	}
-	
-	//initialize weights, dist[i][j] = edge from i to j
-	for(int i=0;i<n;i++){
-		for(int j=0;j<adjList.get(i).size();j++){
-			
-			edge e = adjList.get(i).get(j);
-			dist[e.source][e.dest] = e.weight;
-			
-			System.out.println(e.source+" "+e.dest);
-		}
-	}
-	
-	for(int k=0;k<n;k++){
-		for(int i=0;i<n;i++){
-			for(int j=0;j<n;j++){
-				//If dist[i][k] and dist[k][j] have been set then use those values
-				if(dist[i][k]!=UNDEFINED&&dist[k][j]!=UNDEFINED){
-					//If the new distance is less than current or not used, then update
-					int newDist = dist[i][k]+dist[k][j];
-					if(dist[i][j] > newDist || dist[i][j]==UNDEFINED){
-						dist[i][j] = newDist;
-					}
-				}
-			}
-		}
-	}
-	for(int i=0;i<n;i++){
-		if(dist[i][i]<0){
-			System.out.println("negative cycle");
-		}
-	}
-	
-	return dist;
+
+public static int[][] FloydWarshall(Vector<Vector<edge>> adjList) {
+  int n = adjList.size();
+  // Let dist[i][j] be the minimum distance from i to j.
+  int[][] dist = new int[n][n];
+
+  // Initialize all minimum distances to be undefined.
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n; j++) {
+      dist[i][j] = UNDEFINED;
+    }
+  }
+
+  // The minimum distance from a node to itself is 0.
+  for (int i = 0; i < n; i++) {
+    dist[i][i] = 0;
+  }
+
+  // Set distances for each edge.
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < adjList.get(i).size(); j++) {
+      edge e = adjList.get(i).get(j);
+      dist[e.source][e.dest] = e.weight;
+    }
+  }
+
+  // Iterate through each intermediate node.
+  for (int k = 0; k < n; k++) {
+    // Iterate through each starting node.
+    for (int i = 0; i < n; i++) {
+      // Iterate through each ending node.
+      for (int j = 0; j < n; j++) {
+        // If there is a path from i to k and k to j.
+        if (dist[i][k] != UNDEFINED && dist[k][j] != UNDEFINED) {
+          // Distance from i to j is distance from i to k plus distance from k
+          // to j.
+          int newDist = dist[i][k] + dist[k][j];
+          // Update distance from i to j, if the new distance is less than
+          // current distance or if there is no existing path from i to j.
+          if (dist[i][j] > newDist || dist[i][j] == UNDEFINED) {
+            dist[i][j] = newDist;
+          }
+        }
+      }
+    }
+  }
+  // Check if there are negative cycles.
+  for (int i = 0; i < n; i++) {
+    // If the distance from a node to itself is negative, then there is a
+    // negative cycle.
+    if (dist[i][i] < 0) {
+      System.out.println("negative cycle");
+    }
+  }
+
+  return dist;
 }
 ]]]]
 

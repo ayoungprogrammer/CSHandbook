@@ -17,19 +17,35 @@ If implemented efficiently using a priority queue to get the edges with minimum 
 
 ### Example
 
+We first start with each node uniquely labelled as a letter.
+
 {{kruskal.png}}
+
+We first start with the edge with the smallest weight of 2 which was between A and B. We add B to A's component by labelling B as A.
 
 {{kruskal2.png}}
 
+The next edge with the smallest weight is 5 which connects to C. We add C to A's component by labelling it as A.
+
 {{kruskal3.png}}
+
+There is a tie between edges with the smallest weight of 6 and it doesn't matter which one we take. For the purpose of this example we will take the edge between D and G. We add G to D's component be labelling it as D.
 
 {{kruskal4.png}}
 
+Next we take the other edge with weight 6. We are connecting the D and A components, thus we can label all the nodes with D as A.
+
 {{kruskal5.png}}
+
+The next edge with smallest weight is 7 but it does not connect two different components, thus we discard the edge. The next two edges have weights 8 and we can randomly pick the edge to E. We add E to A's component by labelling it as A.
 
 {{kruskal6.png}}
 
+We take the other edge with weight 8 to F and add F to A's component by relabelling it as A.
+
 {{kruskal7.png}}
+
+All the nodes are the same label and all part of the same component, thus by the algorithm, we have our minimum spanning tree.
 
 ### Code
 
@@ -45,42 +61,64 @@ class edge implements Comparable<edge>{
 		return weight-e.weight;
 	}
 }
-public static int getParent(int parents[],int x){
-	if(parents[x]==x)return x;
-	parents[x] = getParent(parents,parents[x]);
-	return parents[x];
+public static int getParent(int parents[], int x) {
+  // Base Case: parent of x is itself.
+  if (parents[x] == x) {
+    return x;
+  }
+  // Set current's parent to highest parent.
+  parents[x] = getParent(parents, parents[x]);
+
+  // Returns parent.
+  return parents[x];
 }
-public static int Kruskal(Vector<Vector<edge>> adjList){
-	int n = adjList.size();
-	int parents[] = new int[n];
-	for(int i=0;i<n;i++)parents[i] = i;
-	int sum = 0;
-	
-	PriorityQueue<edge> edges = new PriorityQueue<edge>();
-	
-	for(int i=0;i<n;i++){
-		for(int j=0;j<adjList.get(i).size();j++){
-			edges.add(adjList.get(i).get(j));
-		}
-	}
-	
-	while(!edges.isEmpty()){
-		edge e = edges.poll();
-		if(getParent(parents,e.source)!=getParent(parents,e.dest)){
-			parents[e.source] = getParent(parents,e.dest);
-			sum+=e.weight;
-		}
-	}
-	
-	return sum;
+
+public static int Kruskal(Vector<Vector<edge>> adjList) {
+  int n = adjList.size();
+  // Parents of each node. Nodes with the same parents are in the same
+  // component.
+  int parents[] = new int[n];
+
+  // Set parents of each node to itself.
+  for (int i = 0; i < n; i++) {
+    parents[i] = i;
+  }
+
+  int sum = 0;
+  PriorityQueue<edge> edges = new PriorityQueue<edge>();
+
+  // Iterate through each node.
+  for (int i = 0; i < n; i++) {
+    // Iterate through edges of node.
+    for (int j = 0; j < adjList.get(i).size(); j++) {
+      // Add edge to priority queue.
+      edges.add(adjList.get(i).get(j));
+    }
+  }
+
+  // Iterate through all edges.
+  while (!edges.isEmpty()) {
+    // Get edge with smallest weight.
+    edge e = edges.poll();
+    // Take edge if highest parent of source and destination nodes are
+    // different i.e. take the edge if it connects different components
+    if (getParent(parents, e.source) != getParent(parents, e.dest)) {
+      // Set parent of source to highest parent of destination node.
+      parents[e.source] = getParent(parents, e.dest);
+      
+      // Add edge weight to MST weight.
+      sum += e.weight;
+    }
+  }
+
+  // Return MST weight.
+  return sum;
 }
 ]]]]
 
-## Applications
-
 ## Exercises
 
-1. Prove Kruskal's Algorithm works
-2. Extends Kruskals's to output all the edges used
-3. Given a weighted graph with n nodes, find the smallest total cost to connect all nodes into 3 separate groups. (A single node can be a group)
-4. Same as 3, but a group must contain at least 3 other nodes.
+1. Prove Kruskal's Algorithm works.
+2. Extends Kruskals's to output the full minimum spanning tree used.
+3. Given a weighted graph with n nodes, find the smallest total cost to connect all nodes into 3 separate groups. (A single node can be a group).
+4. Same as Q3, but each group must contain at least 3 nodes.

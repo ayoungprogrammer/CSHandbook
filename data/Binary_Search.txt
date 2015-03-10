@@ -43,20 +43,25 @@ This is a generic implementation of a binary search.
 
 ### Generic Binary Search
 [[[[
-void binarySearch(int ans,int minBound,int maxBound){
-    while(maxVal>=minVal){
-       int mid = (minVal+maxVal)/2;
-       if(mid==ans)return;
-       if(mid<ans)minVal = mid;
-       else maxVal = mid;
+void binarySearch(int ans,int minBound, int maxBound){
+  while(maxVal >= minVal) {
+    int mid = (minVal + maxVal) / 2;
+    if (mid == ans) {
+      return;
     }
+    if (mid < ans) {
+      minVal = mid;
+    } else {
+      maxVal = mid;
+    }
+  }
 }
 ]]]]
 
 ## Exercises
 
-1. Given a sorted array, find whether or not the number N exists
+1. Given a sorted array, find whether or not the number N exists.
 2. Given a sorted array, find the the number of elements between the number A and number B inclusive.
-    Example: 1,2 4, 6, 8, 10, 16, 20. Given A=5 and B=15, the number of elements between A and B is 3 (6, 8, 10)
+    Example: 1, 2, 4, 6, 8, 10, 16, 20. Given A=5 and B=15, the number of elements between A and B is 3 (6, 8, 10).
 3. Given two sorted arrays, find the number of duplicate elements.
-4. Given two decimal numbers A and B, how do you find A/B without using division?
+4. Given two decimal numbers A and B, find A/B without using the division operation or using decimals.

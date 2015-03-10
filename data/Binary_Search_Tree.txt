@@ -1,4 +1,7 @@
 ## Introduction
+
+Prerequisites: [[Set]], [[Binary Tree]]
+
 A binary search tree is a  [[binary tree|Binary Tree]] with special properties. The left children of a node will always be less than the node and the right children of a node will always be more than the node. It has a recursive structure such that every subtree is also a binary search tree.
 
 {{bstcompare.png}}
@@ -11,11 +14,7 @@ Example:
 |-
 | Time Complexity | O(log n) | O(log n) | O(log n)
 
-### Prerequisites
-* [[Set]]
-* [[Binary Tree]]
-
-## Implementation
+## Class
 
 In a binary search tree, everything to the left of a node is smaller than that node and everything to the right of that node is greater than that node. 
 
@@ -25,7 +24,7 @@ In a binary search tree, everything to the left of a node is smaller than that n
 
 This implementation of a binary search will be unbalanced. For a balanced binary search tree, see [[AVL trees|AVL Tree]] and [[Red Black trees|Red Black Trees]].
 
-### Class
+### Implementation
 
 A Node is a node in our tree set. Each node will contain a left subtree, a right subtree, the parent of the tree and the value stored at that node. It is unnecessary to store the parent but for this implementation it will be easier to keep track of the parent.
 
@@ -33,30 +32,32 @@ replaceChild replaces the left or right child node specified with the replacemen
 
 [[[[
 public class Node {
-	int value;
-	Node left;
-	Node right;
-	Node parent;
-	public Node(int val,Node parent){
-		this.value = val;
-		this.left = null;
-		this.right = null;
-		this.parent = parent;
-	}
-	public void replaceChild(Node child,Node replacement){
-		if(left==child){
-			left = replacement;
-			if(replacement!= null){
-				replacement.parent = this;
-			}
-		}
-		if(right==child){
-			right = replacement;
-			if(replacement!= null){
-				replacement.parent = this;
-			}
-		}
-	}
+  int value;
+  Node left;
+  Node right;
+  Node parent;
+
+  public Node(int val, Node parent) {
+    this.value = val;
+    this.left = null;
+    this.right = null;
+    this.parent = parent;
+  }
+
+  public void replaceChild(Node child, Node replacement) {
+    if (left == child) {
+      left = replacement;
+      if (replacement != null) {
+        replacement.parent = this;
+      }
+    }
+    if (right == child) {
+      right = replacement;
+      if (replacement != null) {
+        replacement.parent = this;
+      }
+    }
+  }
 }
 ]]]]
 
@@ -64,90 +65,112 @@ In our class we will store the number of element in the set and the root of the 
 
 [[[[
 public class TreeSet {
-
-	int size;
-	Node root;
+  int size;
+  Node root;
 	
-	public TreeSet(){
-		size = 0;
-		root = null;
-	}
+  public TreeSet(){
+    size = 0;
+    root = null;
+  }
+}
 ]]]]
 
-### Insert
+## Insert
 
 To insert an element in the tree set we search for the element that we are trying to insert. If it is already there then the operation fails because sets contain unique elements. Otherwise we will insert the new element into the set. 
 
+Let's insert 4 into the binary search tree. We first start at the root at 5.
+
 {{bstinsert.png}}
+
+Since 4 is less than 5, we traverse the left subtree to 2.
 
 {{bstinsert2.png}}
 
+Since 4 is greater than 2, we traverse the right subtree to 3.
+
 {{bstinsert3.png}}
+
+Since 4 is greater than 3 and there is no right child, than we set 4 as the right child.
 
 {{bstinsert4.png}}
 
+### Implementation
+
 [[[[
-public boolean insert(int x){
-	if(root==null){
-		root = new Node(x,null);
-		size = 1;
-		return true;
-	}
-	Node curTree = root;
-	while(curTree != null){
-		if(x == curTree.value){
-			return false;
-		}else if(x < curTree.value){
-			if(curTree.left == null){
-				curTree.left =  new Node(x,curTree);
-				size++;
-				return true;
-			}
-			curTree = curTree.left;
-		}else {
-			if(curTree.right == null){
-				curTree.right = new Node(x,curTree);
-				size++;
-				return true;
-			}
-			curTree = curTree.right;
-		}
-	}
-	return false;
+public boolean insert(int x) {
+  if (root == null) {
+    root = new Node(x, null);
+    size = 1;
+    return true;
+  }
+  Node curTree = root;
+  while (curTree != null) {
+    if (x == curTree.value) {
+      return false;
+    }
+    else if (x < curTree.value) {
+      if (curTree.left == null) {
+        curTree.left = new Node(x, curTree);
+        size++;
+        return true;
+      }
+      curTree = curTree.left;
+    }
+    else {
+      if (curTree.right == null) {
+        curTree.right = new Node(x, curTree);
+        size++;
+        return true;
+      }
+      curTree = curTree.right;
+    }
+  }
+  return false;
 }
 ]]]]
 
-### Contains
+## Contains
 
-To check if the tree set contains an element, we search for it in the binary tree by starting at the root. If the number is less than the current, we search the left child. If the number if greater than the current, we search the right child.
+To check if the tree set contains an element, we search for it in the binary tree by starting at the root. If the number is less than the current, we search the left child. If the number is greater than the current, we search the right child. 
+
+We want to check if the number 6 is in the binary search tree. 
 
 {{bstcontains.png}}
 
+Since 6 is larger than 5, we traverse the right subtree of56. 
+
 {{bstcontains2.png}}
+
+Since 6 is less than 8, we traverse the left subtree of 8.
 
 {{bstcontains3.png}}
 
+The root of the left subtree is 6, thus we have found the element. If we were to keep traversing and reach a leaf node that was not the element, then the element would not exist in the binary search tree.
+
 {{bstcontains4.png}}
 
-We return true if it exists and false otherwise.
+### Implementation
 
 [[[[
-public boolean contains(int x){
-	Node curTree = root;
-	while(curTree!=null){
-		if(x==curTree.value){
-			return true;
-		}else if(x<curTree.value){
-			curTree = curTree.left;
-		}else{
-			curTree = curTree.right;
-		}
-	}
-	return false;
+public boolean contains(int x) {
+  Node curTree = root;
+  while (curTree != null) {
+    if (x == curTree.value) {
+      return true;
+    }
+    else if (x < curTree.value) {
+      curTree = curTree.left;
+    }
+    else {
+      curTree = curTree.right;
+    }
+  }
+  return false;
 }
 ]]]]
 
-### Remove 
+## Remove 
 
 Removing an element is a much more complex because we need to maintain the tree structure of the tree set when removing elements. First we locate the element that we want to remove. If the element is not there then the operation failed and we return false. If the element is there then are three cases we need to consider. 
 
@@ -185,90 +208,101 @@ Then we replace the rightmost of the left subtree with its left subtree.
 
 {{bst-rem-case34.png}}
 
+### Implementation
+
 [[[[
-public boolean remove(int x){
-	//Get node to remove
-	Node curNode = root;
-	while(curNode!=null){
-		if(x==curNode.value){
-			break;
-		}else if(x<curNode.value){
-			curNode = curNode.left;
-		}else{
-			curNode = curNode.right;
-		}
-	}
-	if(curNode==null){
-		return false;
-	}
-	//Case 1: leaf node
-	if(curNode.left==null && curNode.right==null){
-		//if root
-		if(curNode==root){
-			this.root = null;
-		}else{
-			curNode.parent.replaceChild(curNode,null);
-		}
-	}
-	//Case 2: one child
-	else if(curNode.left==null){
-		//If root
-		if(curNode==root){
-			root = curNode.right;
-			root.parent = null;
-		}else {
-			curNode.parent.replaceChild(curNode,curNode.right);
-		}
-	}
-	else if(curNode.right==null){
-		//If root
-		if(curNode==root){
-			root = curNode.left;
-			root.parent = null;
-		}else {
-			curNode.parent.replaceChild(curNode,curNode.left);
-		}
-	}
-	//Case 3: two children
-	else {
-		//Get rightmost of left subtree
-		Node rightmost = curNode.left;
-		while(rightmost.right!=null){
-			rightmost = rightmost.right;
-		}
-		curNode.value = rightmost.value;
-		rightmost.parent.replaceChild(rightmost, rightmost.left);
-	}
-	size--;
-	return true;
+public boolean remove(int x) {
+  // Get node to remove
+  Node curNode = root;
+  while (curNode != null) {
+    if (x == curNode.value) {
+      break;
+    }
+    else if (x < curNode.value) {
+      curNode = curNode.left;
+    }
+    else {
+      curNode = curNode.right;
+    }
+  }
+  if (curNode == null) {
+    return false;
+  }
+  // Case 1: leaf node
+  if (curNode.left == null && curNode.right == null) {
+    // if root
+    if (curNode == root) {
+      this.root = null;
+    }
+    else {
+      curNode.parent.replaceChild(curNode, null);
+    }
+  }
+  // Case 2: one child
+  else if (curNode.left == null) {
+    // If root
+    if (curNode == root) {
+      root = curNode.right;
+      root.parent = null;
+    }
+    else {
+      curNode.parent.replaceChild(curNode, curNode.right);
+    }
+  }
+  else if (curNode.right == null) {
+    // If root
+    if (curNode == root) {
+      root = curNode.left;
+      root.parent = null;
+    }
+    else {
+      curNode.parent.replaceChild(curNode, curNode.left);
+    }
+  }
+  // Case 3: two children
+  else {
+    // Get rightmost of left subtree
+    Node rightmost = curNode.left;
+    while (rightmost.right != null) {
+      rightmost = rightmost.right;
+    }
+    curNode.value = rightmost.value;
+    rightmost.parent.replaceChild(rightmost, rightmost.left);
+  }
+  size--;
+  return true;
 }
 ]]]]
 
-### Print Tree
+## Print Tree
 
 Since tree sets are stored as a binary search tree, we can print the elements in order.
 
+### Implementation
+
 [[[[
-public String dfs(Node curTree){
-	if(curTree == null)return "";
-	String ret = "";
-	ret += dfs(curTree.left);
-	ret += curTree.value;
-	ret += ",";
-	ret += dfs(curTree.right);
-	return ret;
+public String dfs(Node curTree) {
+  if (curTree == null) {
+    return "";
+  }
+  String ret = "";
+  ret += dfs(curTree.left);
+  ret += curTree.value;
+  ret += ",";
+  ret += dfs(curTree.right);
+  return ret;
 }
 	
-public String toString(){
-	String ret = "";
-	if(root!=null){
-		ret += dfs(root);
-	}
-	return ret.substring(0,ret.length()-1);
+public String toString() {
+  String ret = "";
+  if (root != null) {
+    ret += dfs(root);
+  }
+  return ret.substring(0, ret.length() - 1);
 }
 ]]]]
 
 
 ## Exercises
 
-1. Write a function to determine if a binary tree is a binary search tree
+1. Write a function to determine if a binary tree is a binary search tree.

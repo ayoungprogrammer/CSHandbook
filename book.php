@@ -20,7 +20,7 @@ function latexParse($str){
 	$str = preg_replace('/<div.*?><\/div>/s','',$str);
 
 	// Source on Github -> 
-	$str = preg_replace('/Source on GitHub/','',$str);
+	$str = preg_replace('/Source on Git(H|h)ub/','',$str);
 
 	// <pre>code</pre> 
 	$str = preg_replace('/<pre(.*?)>(.*?)<\/pre>/s','\begin{lstlisting}$2\end{lstlisting}',$str);
@@ -141,8 +141,30 @@ function latexParse($str){
 		\def\maxwidth#1{\ifdim\Gin@nat@width>#1 #1\else\Gin@nat@width\fi}
 		\begin{document}
 		\maketitle
+		\frontmatter
+		\topskip0pt
+		\vspace*{\fill}
+		\begin{center}
+			Thanks to: \\
+			Dr. Yuli Ye, for teaching me\\
+			Gord Ridout, for encouraging me to make this book\\
+		\end{center}
+		\vspace*{\fill}
+		
+		\mainmatter
+		
+		\topskip0pt
+		\vspace*{\fill}
+		\begin{center}
+		\LARGE\textsf{The Computer Science Handbook}\par
+		\end{center}
+		\begin{center}
+		\textsf{By: Michael Young}\par
+		\end{center}
+		\vspace*{\fill}
+
 		\tableofcontents
-		'.$str.'\newpage\end{document}';
+		'.$str.'\newpage\null\thispagestyle{empty}\newpage';
 
 	return $tex;
 }

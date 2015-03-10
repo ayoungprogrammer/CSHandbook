@@ -74,10 +74,10 @@ Let A,B be interval
 
 Let tern(a,b) return x where f(x) = maximum
 
-Let m1 = a+(b-a)/3,
-m2 = a+(b-a)*2/3
+Let m1 = a + ( b - a ) / 3,
+m2 = a + (b - a) * 2 / 3
 
-tern(a,b) = { if |f(a)-f(b)|<epsilon    (a+b)/2 
+tern(a,b) = { if |f(a) - f(b)| < epsilon    (a + b) / 2 
             { if f(a) < f(b)             tern(m1,b)
             { else                       tern(a,m2)
 ]]]]
@@ -86,15 +86,15 @@ tern(a,b) = { if |f(a)-f(b)|<epsilon    (a+b)/2
 
 [[[[
 public double tern(double a,double b){
-	if(Math.abs(f(a)-f(b))<0.0001){
-		return (a+b)/2.0;
-	}
-	double m1 = a+(b-a)/3.0;
-	double m2 = a+(b-a)*2/3;
-	if(f(a)<f(b)){
-		return tern(m1,b);
-	}else {
-		return tern(a,m2);
-	}
+  if(Math.abs(f(a) - f(b)) < 0.0001) {
+    return (a + b) / 2.0;
+  }
+  double m1 = a + (b - a) / 3.0;
+  double m2 = a + (b - a) * 2 / 3;
+  if(f(a) < f(b)) {
+    return tern(m1, b);
+  } else {
+    return tern(a, m2);
+  }
 }
 ]]]]

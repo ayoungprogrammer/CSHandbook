@@ -61,18 +61,20 @@ f(n) = f(n-1) * n
 
 Example:
 f(4) 
-= f(3) * 4
-= f(2) * 3 * 4
-= f(1) * 2 * 3 * 4  [Base Case]
-= 1 * 2 * 3 * 4
+= 4 ∙ f(3)
+= 4 ∙ 3 ∙ f(2)
+= 4 ∙ 3 ∙ 2 ∙ f(1)  [Base Case]
+= 4 ∙ 3 ∙ 2 ∙ 1
 = 24
 ]]]]
 
 ### Implementation
 [[[[
 int factorial(int n){
-   if(n == 1)return 1;
-   return factorial(n - 1) * n;
+  if (n == 1) {
+    return 1;
+  }
+  return n * factorial(n - 1);
 }
 ]]]]
 
@@ -129,11 +131,11 @@ sum("23528")
 int sum(string str){
     int n = str.length();
     //Base case when string is empty.
-    if(n == 0){
+    if (n == 0) {
         return 0;
     }
     //Case when string is not empty
-    else{
+    else {
         //Convert ASCII to number.
         int charToNum = (str.charAt(0) - '0');
         return charToNum + sum(str.substring(1, n))
@@ -194,27 +196,24 @@ count("cacaec")
 ### Implementation
 [[[[
 int count(string str){
-    int n = str.length();
+  int n = str.length();
 
-    //Base case for empty string.
-    if(n == 0){
-        return 0;
-    }
-
-    //Case if first character is a 'c'.
-    if(str.charAt(0) == 'c'){
-        return count(str.substring(1, n)) + 1;
-    }
-
-    //Case if first character is not a 'c'.
-    else{
-        return count(str.substring(1, n));
-    }
+  //Base case for empty string.
+  if (n == 0) {
+    return 0;
+  }
+  //Case if first character is a 'c'.
+  if (str.charAt(0) == 'c') {
+    return count(str.substring(1, n)) + 1;
+  }
+  //Case if first character is not a 'c'.
+  else {
+    return count(str.substring(1, n));
+  }
 }
 
 //Example: should return 3.
 count('cacaec');
-
 ]]]]
 
 ## Calculate Exponential
@@ -252,22 +251,26 @@ exp(3,10)
 ### Implementation
 [[[[
 int exponent(int b, int n){
-   if(n == 1)return b;
-   if(n % 2 == 0){
-     int x = exponent(b, n / 2);
-     return (x * x) % 10000;
-   }
-   else{
-     int x = exponent(b, n / 2);
-     return (x * x * b) % 10000;
-   }
+  //Base case when n is 1.
+  if (n == 1) {
+    return b;
+  }
+  // Case when n is even.
+  if(n % 2 == 0) {
+    int x = exponent(b, n / 2);
+    return (x * x) % 10000;
+  }
+  // Case when n is odd.
+  else {
+    int x = exponent(b, n / 2);
+    return (x * x * b) % 10000;
+  }
 }
-
 ]]]]
 
 ## Exercises
 
-1. Given an array of N integers, write a recursive function to get the sum
+1. Given an array of N integers, write a recursive function to get the sum.
 2. Given a string S, write a recursive function to determine if it is a palindrome.
 3. Given a number N, write a recursive function to output the number in binary.
-4. Given a string S, write a recursive function to return a reversed string
+4. Given a string S, write a recursive function to return a reversed string.

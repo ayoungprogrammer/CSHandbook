@@ -77,7 +77,7 @@ void zeroArrays(int[][] grid){
 }
 ]]]]
 
-There are NxN cells we need to set to 0, so we need O(n^^2^^) operations. We can also think of it as another way. There are two nested loops and each loop is O(n) so we multiply them and O(n) x O(n) = O(n^^2^^). Generally, when we have nested loops, we multiply their complexities. 
+There are NxN cells we need to set to 0, so we need O(n^^2^^) operations. We can also think of it as another way. There are two nested loops and each loop is O(n) so we multiply them and O(n) x O(n) = O(n^^2^^). Generally, when we have nested loops, we multiply their complexities. Since we do not use any extra memory in this function, the space complexity is O(1).
 
 ### Example
 
@@ -97,3 +97,7 @@ void binaryNumbers(int n){
 ]]]]
 
 For each number x, it will take O(lnvv2vv x) to convert the number to binary because we dividing by 2. Since O(lnvv2vv x) = O( (ln x)/ (ln 2) ), and the denominator is a constant, we can rewrite this as O(ln x). We do this operation N times so the runtime is: O(n log n).
+
+## Exercises
+
+1. Give the runtime and space complexity of the following code:

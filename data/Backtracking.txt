@@ -1,6 +1,6 @@
 ## Introduction
 
-Backtracking is a search that find all possible solutions by enumerating on partial solutions. Backtracking can be done using [[DFS|Depth First Search]] or [[BFS|Breadth First Search]]. Generally, DFS will be better than BFS because backtracking is used to enumerate a large amount of solution. Since BFS requires storing each "level" of solutions and DFS requires storing each "height" of the solution.
+Backtracking is a search that find all possible solutions by enumerating on partial solutions. Backtracking can be done using [[DFS|Depth First Search]] or [[BFS|Breadth First Search]]. Generally, DFS will be better than BFS because backtracking is used to enumerate many, many solutions. Since BFS requires storing each "level" of solutions and DFS requires storing each "height" of the solution.
 
 Backtracking is similar to recursion, but instead of generating all the solutions, we will generate each solution one by one. In this way, we only need to store the current solution in memory whereas in normal recursion we need to store all the solutions into memory.
 
@@ -159,24 +159,21 @@ subset(0,'1111')
 ### Implementation
 
 [[[[
-void subsets(int arr[],bool use[],int i){
-    if(i>=arr.length){
-         for(int j=0;j<n;j++){
-              System.out.print("%d ",arr[i]);
-         }
-         System.out.println();
-         return;
-     }
-     use[i] = false;
-     subsets(arr,use,i+1);
-     use[i] = true;
-     subsets(arr,use,i+1);
+void subsets(int arr[], bool use[], int i) {
+  if (i >= arr.length) {
+    for (int j = 0; j < n; j++) {
+      System.out.print("%d ", arr[i]);
+    }
+    System.out.println();
+    return;
+  }
+  use[i] = false;
+  subsets(arr, use, i + 1);
+  use[i] = true;
+  subsets(arr, use, i + 1);
 }
+Example:
 subsets([1,2,3,4],[0,0,0],0);
- 
-subsets([1,2,3,4],[0,0,0],0);
- 
-subsets([1,2,3,4],[1,0,0],0);
 ]]]]
 
 ## [[N Queen Problem]]
@@ -299,8 +296,37 @@ queen(0,[3,0,2,2],[6,2,3,2],[3,5,2,1]) x-- reject
 queen(0,[3,0,2,3],[6,2,3,3],[3,5,2,0]) x-- reject
 ]]]]
 
+### Implementation
+
+[[[[
+public static int nqueen(int col, boolean row[], boolean d1[], boolean d2[]) {
+  // Base case if 8 queens are placed.
+  if (col >= 8) {
+    return 1;
+  }
+
+  int sum = 0;
+
+  for (int r = 0; r < 8; r++) {
+    if (!row[r] && !d1[r + col] && !d2[7 - r + col]) {
+      // Mark rows and diagonals as filled
+      row[r] = true;
+      d1[r + col] = true;
+      d2[7 - r + col] = true;
+      // Backtrack positions
+      sum += nqueen(col + 1, row, d1, d2);
+      // Clear rows and diagonals
+      row[r] = false;
+      d1[r + col] = false;
+      d2[7 - r + col] = false;
+    }
+  }
+  return sum;
+}
+]]]]
+
 ## Exercises
 
-1. Given a sequence of numbers, output all increasing subsequences
+1. Given a sequence of numbers, output all increasing subsequences.
 2. Given a NxN chessboard with certain squares that can have no pieces placed, output the number of configurations that can be made from rooks without attacking each other.
 2. Given a sudoku grid, output a solution for the grid if it exists. Note: this question is popular for technical interviews.

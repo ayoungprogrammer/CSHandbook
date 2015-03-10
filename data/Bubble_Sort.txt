@@ -2,26 +2,29 @@
 
 Bubble sort is one of the most basic sorting algorithms, one of the first you should learn. 
 
-Its name describes how the algorithm works: bigger bubbles float to the top. This will become more clear when we see the implmentation.
-
-The sorting algorithms are implemented to sort integer arrays but can be adapted to sort arrays of any data structure that is comparable. 
+Its name describes how the algorithm works: bigger bubbles float to the top. Each time we pass through the array, we swap adjacent bigger elements with smaller elements. If we do this and we do not swap any adjacent elements in a pass, then we know we have sorted the array. It can be proved that you will need to pass through the array at most N times. Try to prove this for yourself.
 
 ## Implementation
 
+Given an array, sort it from smallest to biggest.
+
 [[[[
-//sorts integers from smallest to greatest
-public static void BubbleSort (int a[]){
-	for (int i=0;i<a.length;i++){
-		for (int j=1;j<a.length;j++){
-			//if the current bubble is smaller than the bubble that's 
-			//below then the bigger bubble floats up
-			if (a[j]<a[j-1]){
-				//swap the bubbles
-				int temp = a[j];
-				a[j] = a[j-1];
-				a[j-1] = temp;
-			}
-		}
-	}
+public static void BubbleSort(int array[]) {
+  // Iterate through each node
+  boolean swapped = true;
+  while(swapped){
+    swapped = false;
+    // Iterate through each next node
+    for (int j = 1; j < array.length; j++) {
+      // Swap if current element is bigger then next
+      if (array[j - 1] > array[j]) {
+        // swap the bubbles
+        int temp = array[j];
+        array[j] = array[j - 1];
+        array[j - 1] = temp;
+        swapped = true;
+      }
+    }
+  }
 }
 ]]]]

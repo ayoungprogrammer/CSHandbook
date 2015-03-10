@@ -33,7 +33,30 @@
 		\makeatletter
 		\def\maxwidth#1{\ifdim\Gin@nat@width>#1 #1\else\Gin@nat@width\fi}
 		\begin{document}
+		
 		\maketitle
+		\frontmatter
+		\topskip0pt
+		\vspace*{\fill}
+		\begin{center}
+			Thanks to: \\
+			Dr. Yuli Ye, for teaching me\\
+			Gord Ridout, for encouraging me to make this book\\
+		\end{center}
+		\vspace*{\fill}
+		
+		\mainmatter
+		
+		\topskip0pt
+		\vspace*{\fill}
+		\begin{center}
+		\LARGE\textsf{The Computer Science Handbook}\par
+		\end{center}
+		\begin{center}
+		\textsf{By: Michael Young}\par
+		\end{center}
+		\vspace*{\fill}
+		
 		\tableofcontents
 		\chapter{ Getting Started }
     \section{ Getting Started }
@@ -1006,7 +1029,7 @@ A stack is usually implemented as a vector.
 
 Prerequisites: Arrays, Stack
 
-Source on Github
+
 
 A vector is a stack that is implemented as an array. It is very similar to an array, but it is more flexible in terms of size. Elements are added and removed only from the end of the array. When more elements are added to the vector and the vector is at full capacity, the vector resizes itself and reallocates for 2*N space. When using an vector we can keep adding elements and let the data structure handle all the memory allocation.
 
@@ -1236,7 +1259,7 @@ We can implement a queue most efficiently using a linked list because it has an 
 
 Prerequisites: Queue
 
-Source on Github
+
 
 A linked list is an implementation of a queue that uses a chain of pointers. Instead of storing all the data in a fixed set of memory, we can store each element by itself but have a pointer from each element to the next element. A pointer is something that holds the memory location of another object.
 
@@ -1478,7 +1501,7 @@ Sets have three operations: insertion, deletion and a membership test. Insertion
 
 Prerequisites: Sets, Linked List
 
-Source on Github
+
 
 Hash sets are sets that use hashes to store elements. A hashing algorithm is an algorithm that takes an element and converts it to a smaller chunk called a hash. For example let our hashing algorithm be (x mod 10). So the hashes of 232, 217 and 19 are 2,7, and 9 respectively.
 
@@ -1958,7 +1981,7 @@ public String toString(){
 
 Prerequeisites: Sets, Binary Search Tree
 
-Source on Github
+
 
 A tree set is a set which stores the values in a binary search tree. To store elements in a tree set, they must be able to be sorted by a property. To insert an element, it is added to the binary tree. To delete an element, it is removed from the binary tree. To check for membership, we do a binary search for the element in the binary tree.
 
@@ -5593,5 +5616,5 @@ For example you are given \$1000, the future prices of a stock are: 100, 103, 10
 
 For example, if the total distance is 200km apart with tank capacity 80L and with 5 gas stations at 10km, 40km, 50km, 90km, 150km, the minimum time it will take is 224 minutes.
 \end{enumerate}
-
-\newpage\end{document}
+\newpage\null\thispagestyle{empty}\newpage
+\end{document}

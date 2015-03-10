@@ -1,31 +1,26 @@
 ## Introduction
 
-Selection Sort is similar to Bubble Sort in terms of complexity and arguably more intuitive. 
-
-Selection Sort works by selecting the smallest element and setting it as the first item in the array, then selecting the second element and setting that as the second item in the array and so on. This process repeats until the least smallest element (the largest element) is set as the last item in the array.
-
-The sorting algorithms are implemented to sort integer arrays but can be adapted to sort arrays of any data structure that is comparable. 
+Selection sort works by finding the smallest element in the array and swapping it with the first element. Then it finds the second smallest element and swaps it with the second element and it does this until the array is sorted.
 
 ## Implementation
 
 [[[[
-//sorts integers from smallest to greatest
-public static void SelectionSort (int a[]){
-	//iterates through the array selecting the smallest elements
-	for (int i=0;i<a.length-1;i++){
-		int minIndex = i;//var for storing where the ith smallest element is
-		//iterates through the array looking for the ith smallest element
-		for (int j=i+1;j<a.length;j++){
-			//if the current element is smaller than the current smallest element
-			if (a[j]<a[minIndex]){
-				//updated the location of the smallest element
-				minIndex = j;
-			}
-			//swap the current i with the smallest element
-			int temp = a[i];
-			a[i] = a[minIndex];
-			a[minIndex] = temp;
-		}
-	}
+public static void SelectionSort(int array[]) {
+  // Iterates through the array selecting the smallest elements
+  for (int i = 0; i < array.length - 1; i++) {
+    int minIndex = i;
+
+    for (int j = i + 1; j < array.length; j++) {
+      // Find the index of the smallest element from i to n.
+      if (array[j] < array[minIndex]) {
+        minIndex = j;
+      }
+      // Swap the smallest element with the element at i.
+      int temp = array[i];
+      array[i] = array[minIndex];
+      array[minIndex] = temp;
+    }
+  }
 }
+
 ]]]]
