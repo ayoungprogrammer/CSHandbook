@@ -99,20 +99,17 @@ Let's say we have the string '23528'. The total is equal to the first digit plus
 Let sum(string) be the sum of digits in a string
 Let n be the length of the string
 
-For simplicity, let string[x..y] be the substring of the string from index x to index y. 
-The starting index will be 1.
-
+For simplicity, let string[x..y] be the substring of the string from x inclusive to y exclusive.
 Example: 
-string = 'abcd'.
-string[1..3] = 'abc'
-string[1..1] = ''
-string[1] = 'a'
+string = 'abcd'
+string[0] = 'a'
+string[1..4] = 'bcd'
 
 Base case:
 sum('') = 0
 
 Recurrence:
-sum(string) = int(string[1]) + sum(string[2..n])
+sum(string) = int(string[0]) + sum(string[1..n])
 
 Example:
 sum("23528")
@@ -128,21 +125,21 @@ sum("23528")
 ### Implementation
 
 [[[[
-int sum(string str){
-    int n = str.length();
-    //Base case when string is empty.
-    if (n == 0) {
-        return 0;
-    }
-    //Case when string is not empty
-    else {
-        //Convert ASCII to number.
-        int charToNum = (str.charAt(0) - '0');
-        return charToNum + sum(str.substring(1, n))
-    }
+int sum(String str) {
+  int n = str.length();
+  // Base case when string is empty.
+  if (n == 0) {
+    return 0;
+  }
+  // Case when string is not empty.
+  else {
+    // Convert ASCII to number.
+    int charToNum = (str.charAt(0) - '0');
+    return charToNum + sum(str.substring(1, n));
+  }
 }
 
-//Example: should return 20.
+// Example: should return 20.
 sum('23528');
 ]]]]
 
@@ -170,7 +167,7 @@ For example we have the string 'cacaec'. Since the first letter is a 'c' we add 
 [[[[{lang-html}
 Let count(string) be the number of 'c's in the string
 
-For simplicity, let string[x..y] be the substring of the string from x to y.
+For simplicity, let string[x..y] be the substring of the string from x inclusive to y exclusive.
 Example: 
 string = 'abcd'.
 string[1..3] = 'bcd'
@@ -179,8 +176,8 @@ Base case:
 count(empty) = 0
 
 Recurrence:
-count(string) =  {if string[n]=='c'  1 + count(string[2..n])
-                 {else               count(string[2..n])
+count(string) = 1 + count(string[2..n]) if string[n]=='c' 
+count(string) = count(string[2..n]) otherwise
 
 Example:
 count("cacaec")
@@ -195,18 +192,18 @@ count("cacaec")
 ]]]]
 ### Implementation
 [[[[
-int count(string str){
+int count(String str) {
   int n = str.length();
 
-  //Base case for empty string.
+  // Base case for empty string.
   if (n == 0) {
     return 0;
   }
-  //Case if first character is a 'c'.
+  // Case if first character is a 'c'.
   if (str.charAt(0) == 'c') {
     return count(str.substring(1, n)) + 1;
   }
-  //Case if first character is not a 'c'.
+  // Case if first character is not a 'c'.
   else {
     return count(str.substring(1, n));
   }
@@ -231,11 +228,11 @@ But what if n is odd and not 1? Then we have x^^n^^ = x^^n/2^^ * x^^n/2^^ * x. T
 Let exp(b,n) be b^n
 
 Base case:
-exp(b,1) = 1  [Since b^1 = b]
+exp(b,1) = 1  (Since b^1 = b)
 
 Recurrence:
-exp(b,n) = {if n divisible by 2    exp(b,n/2)^2 % 10000
-           {else                   (exp(b,n/2)^2)*b % 10000
+exp(b,n) = exp(b,n/2)^2 % 10000 if n is even
+exp(b,n) = exp(b,n/2)^2)*b % 10000 otherwise
 
 Example: (for simplicity, leave out the modulus)
 exp(3,10)

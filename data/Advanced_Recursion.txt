@@ -5,23 +5,23 @@
 **Next**: [[Intermediate Recursion]], [[Backtracking]], [[Dynamic Programming]]
 
 Recursion can sometimes be very difficult to wrap your head around because when you try to go deeper, it only keeps getting deeper. It is sometimes hard to figure out the recurrence relation, but once you do, the problem becomes simple to solve.
-di
+
 ## Number of paths
 
-Suppose we have a grid of N rows and M columns. How many ways are there to get from the bottom left corner to the top right corner using the intersection points and only going upwards or rightwards?
+Suppose we have a grid of N rows and M columns. How many ways are there to get from the bottom left cell to the top right cell only going upwards or rightwards?
 
 {{recursion_grid.png}}
 
-We see that the only way to reach an intersection is to come from the left or from the bottom. So the number of ways to reach an intersection is the number of ways to reach the intersection to the left plus the number of ways to reach the intersection on the bottom. 
+We see that the only way to reach a cell, is to come from the left or from the bottom. So the number of ways to reach a cell is the number of ways to reach the cell to the left plus the number of ways to reach the cell on the bottom. 
 
-So more accurately, the number of ways to get to intersection N x M is the sum of the ways to get to the intersection N-1 x M and the intersection N x M-1. However, the number of ways to reach the intersection N-1 x M is the sum of the number of ways to the intersection N-2 x M and N-1 x M-1. As we can see, we are solving a reduced version of the same problem. Thus we have a recurrence relation.
+So more accurately, the number of ways to get to cell (x, y) is the sum of the ways to get to the cell (x-1, y) and the cell (x, y-1). However, the number of ways to reach the cell (x-1, y) is the sum of the number of ways to the cell (x-2, y) and (x-1, y-1). As we can see, we are solving a reduced version of the same problem! Thus we have a recurrence relation.
 
-The base case is any intersection on the left side or bottom side. There is only one way to reach the intersections by either going only up or only going right.
+The base case is any cell on the left border or bottom border. There is only one way to reach the cell by either going only up or only going right.
 
 ### Formalization
 
 [[[[{lang-html}
-Let path(x,y) be the number of ways to get to the intersection at x and y
+Let path(x,y) be the number of ways to get to the grid at x and y
 
 Base case:
 paths(1,y) = 1
@@ -48,10 +48,10 @@ Example of what the grid should look like
 
 [[[[
 int paths(int n,int m){
-   if(n == 1 || m == 1){
-        return 1;
-   }
-   return paths(n - 1, m) + paths(n, m - 1);
+  if (n == 1 || m == 1) {
+    return 1;
+  }
+  return paths(n - 1, m) + paths(n, m - 1);
 }
 ]]]]
 
@@ -121,58 +121,56 @@ In Step 3, when we move N-1 discs from the helper to the destination, the new he
 
 ### Formalization
 [[[[{lang-html}
-Let f(N,start,helper,dest) be the steps to move N discs from the start to dest
+Let hanoi(N,start,helper,dest) be the steps to move N discs from the start to dest
 
 Base case:
-f(1,start,helper,dest) = Move from (start) to (dest)
+hanoi(1,start,helper,dest):
+  print "Move from (start) to (dest)"
 
 Recurrence:
-f(N,start,helper,dest)
-
-=
-
-f(N - 1, start, dest, helper)
-Move from start to dest
-f(N - 1, helper, start, dest)
+hanoi(N,start,helper,dest):
+  hanoi(N - 1, start, dest, helper)
+  print "Move from start to dest"
+  hanoi(N - 1, helper, start, dest)
 
 Example:
 Let A, B, C be pole 1, 2, 3
 
-f(4,A,B,C) 
+hanoi(4,A,B,C) 
 
 =
 
-f(3,A,C,B)
+hanoi(3,A,C,B)
 Move from A to C
-f(3,B,A,C)
+hanoi(3,B,A,C)
 
 =
 
-f(2,A,B,C)
+hanoi(2,A,B,C)
 Move from A to B
-f(2,C,A,B)
+hanoi(2,C,A,B)
 Move from A to C
-f(2,B,A,C)
+hanoi(2,B,A,C)
 Move from B to C
-f(2,A,B,C)
+hanoi(2,A,B,C)
 
 =
 
-f(1,A,C,B)
+hanoi(1,A,C,B)
 Move from A to C
-f(1,B,A,C)
+hanoi(1,B,A,C)
 Move from A to B
-f(1,C,B,A)
+hanoi(1,C,B,A)
 Move from C to B
-f(1,A,C,B)
+hanoi(1,A,C,B)
 Move from A to C
-f(1,B,C,A)
+hanoi(1,B,C,A)
 Move from B to C
-f(1,A,B,C)
+hanoi(1,A,B,C)
 Move from B to C
-f(1,A,C,B)
+hanoi(1,A,C,B)
 Move from A to C
-f(1,B,A,C)
+hanoi(1,B,A,C)
 
 =
 
@@ -198,20 +196,21 @@ Move from B to C
 ### Implementation
 
 [[[[
-void hanoi(int N, int start, int helper, int destination){
-    if(N == 1){
-        System.out.println("Move " + start + " to " + destination);
-    }else{
+void hanoi(int N, int start, int helper, int destination) {
+  // Base case to move one disk.
+  if (N == 1) {
+    System.out.println("Move " + start + " to " + destination);
+  }
+  else {
+    // Move N-1 discs from start to helper.
+    hanoi(N - 1, start, destination, helper);
 
-        //Move N-1 discs from start to helper
-        hanoi(N-1, start, destination, helper);
+    // Move 1 disc from start to end.
+    hanoi(1, start, helper, destination);
 
-        //Move 1 disc from start to end
-        hanoi(1, start, helper, destination);
-
-        //Move N-1 discs from helper to end
-        hanoi(N - 1, helper, start, destination);
-    }
+    // Move N-1 discs from helper to end.
+    hanoi(N - 1, helper, start, destination);
+  }
 }
 hanoi(4, 1, 2, 3);
 ]]]]
@@ -275,40 +274,60 @@ We see that we are solving the same reduced problem thus we have a recurrence re
 For simplicity, S[i..j] will mean the substring from including i to excluding j.
 
 [[[[{lang-html}
-Let P(S) be the list of permutations for the string S of length N
+Let permute(S) be the list of permutations for the string S of length N
+
+Let insertAll(ch, stringArr) be a function that inserts the character ch in every position in every string stringArr.
+
+Example: 
+insertAll('c', ['ab','ba']) = ['cab', 'acb', 'bac', 'cba', 'bca', 'bac'] 
 
 Base case:
-P('') = []
+permute("") = [""]
 
 Recurrence:
 Let N = length of string S
-P(S) = ps[0..i] + S[N] + ps[i..N] for i in 0..N, for ps in P(S[0..N-1])
+permute(S) = insertAll(S[0], permute(S[1..N]) )
 
 Example:
-P('ABC')
-=
-
+permute('ABC')
+= insertAll('A', permute('BC')
+= insertAll('A', insertAll('B', permute('C'))
+= insertAll('A', insertAll('B', insertAll('C', permute(''))))
+= insertAll('A', insertAll('B', insertAll('C', [''])))
+= insertAll('A', insertAll('B', ['C']))
+= insertAll('A', ['BC', 'CB'])
+= ['ABC', 'BAC', 'BCA', 'ACB', 'CAB', 'CBA']
 ]]]]
 
 ### Implementation
 [[[[
-Vector<String> permutation(String s){
-   int n = s.length;
-   Vector<String> vec = new Vector<String>();
-   if(s.length==0)return vec;
-   Vector<String> subvec = permutation(s.substring(0,n-1));
-   for(int i=0;i<subvec.size();i++){
-      String ps = subvec.get(i);
-      for(int j=0;j<n;j++){
-         vec.push(ps.substring(0,j)+s.charAt(n)+ps.substring(j,n-1));
-      }
-   }
-   return vec;
+Vector<String> insertAll(char ch, Vector<String> strArr) {
+  Vector<String> vec = new Vector<String>();
+  for (int i = 0; i < strArr.size(); i++) {
+    String str = strArr.get(i);
+    for (int j = 0; j <= str.length(); j++) {
+      vec.add(str.substring(0, j) + ch + str.substring(j, str.length()));
+    }
+  }
+  return vec;
 }
+
+Vector<String> permutation(String s) {
+  int n = s.length();
+  if (n == 1) {
+    Vector<String> vec = new Vector<String>();
+    vec.add(s.substring(0, 1));
+    return vec;
+  }
+  return insertAll(s.charAt(0), permutation(s.substring(1)));
+}
+
+// Example usage:
+permutation("abc");
 ]]]]
 
 
 ## Exercises
 
 1. Given a string S, write a recursive function to generate all its non-empty substrings.
-2. Write a solution for hanoi towers but with the restriction that discs can only be moved from adjacent poles. (You can move a disc from A to B but not A to C because they are not adjacent)
+2. Write a solution for hanoi towers but with the restriction that discs can only be moved from adjacent poles. (You can move a disc from A to B but not A to C because they are not adjacent).

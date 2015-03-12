@@ -11,6 +11,8 @@ Like [[recursion|Recursion]], dynamic programming requires two things:
 * A base case and
 * A subproblem that can be reduced into smaller subproblems 
 
+To find a dynamic programming solution to a problem, first start with a recursive solution and then use memoizations to optimize for duplicate calculations.
+
 ## Fibonacci Sequence
 
 The Fibonacci sequence is determined by f(n) = f(n-1)+f(n-2) where f(0) = 1 and f(1) = 1. 
@@ -57,7 +59,8 @@ f(5)
 = 8
 ]]]]
 
-Dynamic Programming
+Dynamic Programming:
+We only need O(1) memory for Fibonacci, but for this example, we will use an array.
 [[[[
 Let fib[n] be the nth Fibonacci number
 
@@ -88,21 +91,23 @@ fib[10] = 89
 Recursion
 [[[[
 public int fib(int n){
-    if(n == 0 || n == 1) return 1;
-    return fib(n - 1) + fib(n - 2);
+  if (n == 0 || n == 1) {
+    return 1;
+  }
+  return fib(n - 1) + fib(n - 2);
 }
 ]]]]
 
 Dynamic Programming
 [[[[
-public int fib(int n){
-    int fibArr[] = new int[n];
-    fibArr[0] = 1
-    fibArr[1] = 1
-    for(int x=2; x < n; x++){
-         fibArr[x] = fibArr[x - 1] + fibArr[x - 2];
-    }
-    return fibArr[n];
+public int fib(int n) {
+  int fibArr[] = new int[n];
+  fibArr[0] = 1;
+  fibArr[1] = 1;
+  for (int x = 2; x < n; x++) {
+    fibArr[x] = fibArr[x - 1] + fibArr[x - 2];
+  }
+  return fibArr[n];
 }
 ]]]]
 
@@ -129,7 +134,7 @@ bills(C) = impossible if C < 0
 
 Subproblem:
 bills(C) = bills(C - d) + 1 if bills(C-d) is possible
-           impossible       if bills(C-d) is impossible
+bills(C) = impossible if bills(C-d) is impossible
 
 Example:
 C = 10
@@ -182,12 +187,11 @@ Let denom be a list of denominations
 Let bills(C) be the minimum number of bills from denominations to make C dollars
 
 Base Cases:
-bills(0) = 0
-bills(C) = impossible if C < 0
+bills(C) = impossible if C <= 0
 
 Subproblem
-bill(C) = {  minimum of bills(C - d)+1 for d in denom if bills(C-d) is possible
-             {  impossible if bills(C - d) is impossible for all d in denom
+bill(C) = minimum of bills(C - d)+1 for d in denom
+bill(C) = impossible if bills(C - d) = impossible for all d in denom
 
 Example:
 denom = [3,4,5]
@@ -208,7 +212,6 @@ bill(7)
            min(impossible, impossible, impossible) + 1)
 = min(2,2,impossible)
 = 2
-
 ]]]]
 
 However note, that we are recomputing multiple things. For example we are recomputing bill(0) multiple times and bill(-1) multiple times. If instead we worked the solution up instead of down, we can find bill(C) more efficiently. We can do this by computing bill(c) as c goes from 0 to C. Eg. we compute bill(0) then bill(1) then bill(2) .... until bill(C).
@@ -277,10 +280,10 @@ Let knapsack(W) be the maximum value of items that can fit into maximum capacity
 Let w1 be the weight of one item and v1 be the value of one item.
 
 Base Case:
-knapsack(0) = 0
 knapsack(W) = 0 if W < w1
 
 Recursion:
+knapsack(W) = impossible if knapsack(W - w1) is impossible
 knapsack(W) = knapsack(W - w1) + v1
 
 Example:
@@ -298,11 +301,11 @@ Note that we are recomputing multiple values multiple times. We can avoid this b
 Let knapsack[W] be the maximum value with weight capacity W
 Let w be the positive integer weight of the item and v be the value of an item
 
-for k from 0 to w-1
+for k from 0 to w - 1
     knapsack[k] = 0
 
 for weight from 1 to W
-    knapsack[weight] = knapsack[weight-w]+v
+    knapsack[weight] = knapsack[weight - w]+v
 
 Example:
 W = 9
@@ -313,11 +316,11 @@ knapsack[0] = 0     base case
 knapsack[1] = 0     base case
 knapsack[2] = 0     base case
 knapsack[3] = 0     base case
-knapsack[4] = 5     (knapsack[0]+5)
+knapsack[4] = 5     (knapsack[0] + 5)
 knapsack[5] = 5     ^
 knapsack[6] = 5     ^
 knapsack[7] = 5     ^
-knapsack[8] = 10    (knapsack[4]+5)
+knapsack[8] = 10    (knapsack[4] + 5)
 knapsack[9] = 10    ^
 ]]]]
 
@@ -336,26 +339,25 @@ Let knapsack(W) be the maximum value with maximum capacity W
 Let weights be an array of weights where wi is the weight of the ith item.
 Let values be an array of values where vi is the value of the ith item.
 
-knapsack(W) = 0 if W < wi for all items
+knapsack(W) = 0 if W < 0
 
-knapsack(W) = max(knapsack(W-wi) + vi for all items with wi <= W)
+knapsack(W) = maximum of (knapsack(W-wi) + vi for all items with wi <= W)
 ]]]]
 
-Since we are recomputing 
+Since we could be recomputing knapsack(w) multiple times, we can optimize by working forwards using dynamic programming.
 
 [[[[
 Let knapsack[w] be the maximum value with maximum capacity W
 Let weights be an array of weights where wi is the weight of the ith item.
 Let values be an array of values where vi is the value of the ith item.
 
-for w from 0 to W
-    knapsack[w] = 0
+knapsack[0] = 0
 
 for w from 1 to W
     maxVal = 0
     for i in items
-        if w-wi >= 0
-            knapsack[w] = max(knapsack[w], knapsack[w-wi] + vi)
+        if w - wi >= 0
+            knapsack[w] = max(knapsack[w], knapsack[w - wi] + vi)
 
 Example:
 
@@ -368,7 +370,7 @@ Example:
 We first examined the number of paths problem in [[advanced recursion|Advanced Recursion]]. However, now that we know how to use dynamic programming, we can see that the recursive solution was very inefficient because we were recomputing values many times. 
 
 [[[[{lang-html}
-Let path(x,y) be the number of ways to get to the intersection at x and y
+Let path(x,y) be the number of ways to get to the cell at x and y
 
 Base case:
 paths(1,y) = 1
@@ -387,7 +389,7 @@ paths(3,5)
 = 15
 ]]]]
 
-Instead of recomputing multiple values, we can build our solution upwards starting from 1,1
+Instead of recomputing multiple values, we can build our solution upwards starting from (1,1).
 
 [[[[
 Let paths[x][y] be the number of ways to get from (1,1) to (x,y). 
@@ -411,4 +413,4 @@ M = 5
 
 1. Given an array of N integers, find the largest sum that can be found using consecutive integers.
 2. Given an array of N integers, find the length of the longest increasing subsequence. For example, given [1, -5, 4, 5, 10, -1, -5, 7], the longest increasing subsequence is length 4 [1,4,5,10].
-3. Given a matrix of NxN integers, find the maximum sum of a submatrix
+3. Given a matrix of NxN integers, find the maximum sum of a submatrix.

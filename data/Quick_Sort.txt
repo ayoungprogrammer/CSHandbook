@@ -12,6 +12,32 @@ The sorting algorithms are implemented to sort integer arrays but can be adapted
 
 {{quicksort.png}}
 
+### Formalization
+
+[[[[
+Let quicksort(array) sort the array using quicksort
+
+Base case:
+quicksort([]) = []
+quicksort([x]) = [x]
+
+Recurrence:
+Let pivot be a random element in array
+
+quicksort(array) = quicksort([elements < pivot]) + [pivot] + quicksort([elements >= pivot])
+
+Example:
+quicksort([6,1,4,3,5,7,9,2,8,0])
+= quicksort([1,4,3,2,0] + [5] + quicksort([6,7,9,8])
+= (quicksort([1,2,0]) + [3] + quicksort([4])) + [5] + (quicksort([6]) + [7] + quicksort([9,8]))
+= (quicksort([0,1]) + [2] + quicksort([]) + [3] + [4]) + [5] + ([6] + [7] + [8, 9])
+= (([0, 1] + [2] + []) + [3] + [4]) + [5] + ([6] + [7] + [8, 9])
+= [0, 1, 2, 3, 4] + [5] + [6, 7, 8, 9]
+= [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+]]]]
+
+### Code
+
 [[[[
 //sorts integers from smallest to greatest
 public static void QuickSort (int a[], int first, int last){
