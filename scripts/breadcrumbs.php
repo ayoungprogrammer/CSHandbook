@@ -29,7 +29,7 @@ function bfsLinks(){
 
 			preg_match_all('/\[\[([A-Za-z\_\s\'\-]+?)\]\]/',$content,$matches);
 
-			foreach ($matches[1] as $link){
+			foreach($matches[1] as $link){
 
 				$new_link = str_replace(" ","_",$link);
 				
@@ -43,7 +43,7 @@ function bfsLinks(){
 			
 			preg_match_all('/\[\[([A-Za-z\_\s\']+?)\|([A-Za-z\_\s\']+?)\]\]/',$content,$matches);
 
-			foreach ($matches[2] as $link){
+			foreach($matches[2] as $link){
 				
 				$new_link = str_replace(" ","_",$link);
 				
