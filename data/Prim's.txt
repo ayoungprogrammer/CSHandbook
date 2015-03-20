@@ -40,55 +40,67 @@ In Java, we need to specify a comparison for the Priority Queue to order. We do 
 adjList is an [[adjacency list|Adjacency List]] that is an array of arrays that store the graph. 
 
 [[[[
-
-class node implements Comparable<node>{
-	int weight,index;
-	public node(int weight,int index){
-		this.weight = weight;
-		this.index = index;
-	}
-	public int compareTo(node e){
-		return weight-e.weight;
-	}
+class node implements Comparable<node> {
+  int weight, index;
+  public node(int weight, int index) {
+    this.weight = weight;
+    this.index = index;
+  }
+  public int compareTo(node e) {
+    return weight - e.weight;
+  }
 }
-public static int Prims(Vector<Vector<node>> adjList){
-	int cost = 0;
-	int n = adjList.size();
-	PriorityQueue<node> pq = new PriorityQueue<node>();
-	boolean visited[] = new boolean[n];
-	for(int i=0;i<n;i++){
-		visited[i] = false;
-	}
-	int inTree = 1;
-	visited[0] = true;
-	for(int i=0;i<adjList.get(0).size();i++){
-		pq.add(adjList.get(0).get(i));
-	}
-	while(!pq.isEmpty()&&inTree<n){
-		node cur = pq.poll();
-		if(visited[cur.index])continue;
-		inTree++;
-		visited[cur.index]=true;
-		cost+=cur.weight;
-		for(int i=0;i<adjList.get(cur.index).size();i++){
-			pq.add(adjList.get(cur.index).get(i));			
-                 }
-	}
-	//Graph is not connected
-	if(inTree<n)return -1;
-	return cost;
+public static int Prims(Vector<Vector<node>> adjList) {
+  // Current cost of MST.
+  int cost = 0;
+  int n = adjList.size();
+  
+  PriorityQueue<node> pq = new PriorityQueue<node>();
+  
+  // Keep track if each node is visited.
+  boolean visited[] = new boolean[n];
+  for (int i = 0; i < n; i++) {
+    visited[i] = false;
+  }
+  
+  // Number of nodes visited.
+  int inTree = 1;
+  
+  // Mark starting node as visited.
+  visited[0] = true;
+  
+  // Add all edges of starting node.
+  for (int i = 0; i < adjList.get(0).size(); i++) {
+    pq.add(adjList.get(0).get(i));
+  }
+  // Keep going until all nodes visited.
+  while (!pq.isEmpty() && inTree < n) {
+    // Get the edge with the smallest weight.
+    node cur = pq.poll();
+    // Skip if node already used.
+    if (visited[cur.index]) {
+      continue;
+    }
+    inTree++;
+    visited[cur.index] = true;
+    cost += cur.weight;
+    // Add all the edges of the new node to the priority queue.
+    for (int i = 0; i < adjList.get(cur.index).size(); i++) {
+      pq.add(adjList.get(cur.index).get(i));
+    }
+  }
+  // Graph not connected if number of nodes used is less than total nodes.
+  if (inTree < n) {
+    return -1;
+  }
+
+  return cost;
 }
 ]]]]
 
-## Applications
-
-In networking, if a cable company wanted to connect all the houses with the least amount of wiring, the minimum spanning tree can be found that finds the least total cost of wire. 
-
-Minimum spanning trees can also be used in generating mazes.
-
 ## Exercises
 
-1. Prove that Prim's algorithm works
-2. Extends Prim's to output all the edges used
-3. Given a weighted graph with n nodes, find the smallest total cost to connect all nodes into 3 separate groups. (A single node can be a group)
+1. Prove that Prim's algorithm works.
+2. Extends Prim's to output all the edges used.
+3. Given a weighted graph with n nodes, find the smallest total cost to connect all nodes into 3 separate groups. (A single node can be a group).
 4. Same as 3, but a group must contain at least 3 other nodes.

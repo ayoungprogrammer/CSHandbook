@@ -96,8 +96,8 @@ Let's say we have the string '23528'. The total is equal to the first digit plus
 ### Formalization
 
 [[[[{lang-html}
-Let sum(string) be the sum of digits in a string
-Let n be the length of the string
+Let sum(string) be the sum of digits in a string.
+Let n be the length of the string.
 
 For simplicity, let string[x..y] be the substring of the string from x inclusive to y exclusive.
 Example: 
@@ -165,7 +165,7 @@ For example we have the string 'cacaec'. Since the first letter is a 'c' we add 
 ### Formalization
 
 [[[[{lang-html}
-Let count(string) be the number of 'c's in the string
+Let count(string) be the number of 'c's in the string.
 
 For simplicity, let string[x..y] be the substring of the string from x inclusive to y exclusive.
 Example: 
@@ -225,7 +225,7 @@ But what if n is odd and not 1? Then we have x^^n^^ = x^^n/2^^ * x^^n/2^^ * x. T
 
 ### Formalization
 [[[[{lang-html}
-Let exp(b,n) be b^n
+Let exp(b,n) be b^n.
 
 Base case:
 exp(b,1) = 1  (Since b^1 = b)

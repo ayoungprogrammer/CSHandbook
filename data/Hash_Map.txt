@@ -10,129 +10,152 @@ Hash maps are maps that use [[hash sets|Hash sets]] to store the keys.
 
 Here is a Java implementation of a hash map which is a modified version of a [[hash set]].
 
-### Class
+## Class
 
-Inside our implementation of a hash map we will store the buckets using an array of linked lists, the number of buckets, and the number of elements in the set. 
+Our implementation of a Hash Map will be very similar to a Hash Set except instead of storing values, we will be storing a pair consisting of a key and value.
 
-The collision chance is the threshold for resizing the hash set. When the ratio of elements in the set to number of buckets is greater than the threshold, then the chance of collision will be high enough that it will slow down the operations. The lower this ratio, the better performing a hash set will be.
+[[[[
+public class Pair {
+  int key;
+  String value;
+
+  public Pair(int key, String value) {
+    this.key = key;
+    this.value = value;
+  }
+}
+]]]]
+
+Inside our implementation of a hash map we will store the buckets using an array of linked lists of pairs, the number of buckets, and the number of elements in the set. 
 
 [[[[
 public class HashMap {
 
-	public LinkedList<Pair>[] buckets;
-	public int bucketsSize = 10;
-	public int size = 0;
-	public static final double COLLISION_CHANCE = 0.3;
-	
-	public HashMap(){
-		buckets = new LinkedList[10];
-		for(int i=0;i<bucketsSize;i++){
-			buckets[i] = new LinkedList<Pair>();
-		}
-		size = 0;
-	}
+  public LinkedList<Pair>[] buckets;
+  public int bucketsSize = 10;
+  public int size = 0;
+  public static final double COLLISION_CHANCE = 0.3;
+
+  public HashMap() {
+    buckets = new LinkedList[10];
+    for (int i = 0; i < bucketsSize; i++) {
+      buckets[i] = new LinkedList<Pair>();
+    }
+    size = 0;
+  }
 }
 ]]]]
 
-### Hash
+Since most of the implementation is the same as Hash Set, we will skip most of the explanations.
 
-The hash code is the result of the hashing algorithm for an element. In our hash set implementation, we will use a simple hash: modulus of the integer by the number of buckets. 
+## Resize
 
-For the most part if the numbers are all random then the hash function is fine. However, if the number of buckets was 10 and we added the elements 20,30,40,50,60,70, they will all end up in the same bucket and results in poor performance.
+Resizing is the same as a Hash Set, but we to copy the pairs instead of only the values. 
 
 [[[[
-public int getHash(int x,int hashSize){
-	return x % hashSize;
+public void resize() {
+  // Double number of buckets.
+  int newBucketsSize = bucketsSize * 2;
+  LinkedList<Pair>[] newBuckets = new LinkedList[newBucketsSize];
+  
+  // Create new buckets.
+  for (int i = 0; i < newBucketsSize; i++) {
+    newBuckets[i] = new LinkedList<Pair>();
+  }
+  // Copy elements over and use new hashes.
+  for (int i = 0; i < bucketsSize; i++) {
+    for (Pair y : buckets[i]) {
+      int hash = getHash(y.key, newBucketsSize);
+      newBuckets[hash].push(y);
+    }
+  }
+  // Set new buckets.
+  buckets = newBuckets;
+  bucketsSize = newBucketsSize;
 }
 ]]]]
 
-### Resize
+## Put
 
-A hash map must be able to resize. When the ratio of number of elements to number of buckets, the chance of collision will increase more and more. So we must able to resize the number of buckets to support the number of elements to lower the chance of collision.
-
-To resize efficiently, we can create two times the number of buckets and set them to empty and then insert all the elements in the old buckets to the new buckets.
+To put a key value pair in a hash map, we first check if the key exists in a pair in the Hash Map. If the key already exists, we update the value of the pair. Otherwise, we create a new key value pair in the map.
 
 [[[[
-public void resize(){
-	int newBucketsSize = bucketsSize*2;
-	LinkedList<Pair>[] newBuckets = new LinkedList[newBucketsSize];
-	for(int i=0;i<newBucketsSize;i++){
-		newBuckets[i] = new LinkedList<Pair>();
-	}
-	for(int i=0;i<bucketsSize;i++){
-		for(Pair p:buckets[i]){
-			int hash = getHash(p.key,newBucketsSize);
-			newBuckets[hash].push(p);
-		}
-	}
-	buckets = newBuckets;
-	bucketsSize = newBucketsSize;
+public boolean put(int key, String value) {
+  // Get hash of x.
+  int hash = getHash(key, bucketsSize);
+
+  // Get current bucket from hash.
+  LinkedList<Pair> curBucket = buckets[hash];
+  
+  // Check if bucket contains key.
+  for(Pair p: curBucket){
+    // Overwrite value if key already exists and return false.
+    if(p.key == key){
+      p.value = value;
+      return false;
+    }
+  }
+  
+  // Otherwise, add pair to the bucket.
+  curBucket.push(new Pair(key, value));
+  
+  // Resize if the collision chance is higher than threshold.
+  if ((float) size / bucketsSize > COLLISION_CHANCE) {
+    resize();
+  }
+  size++;
+  return true;
 }
 ]]]]
 
-### Insert
+## Get
 
-To insert an element in a hash set, we get the hash code from our hashing algorithm and insert the element into the corresponding bucket.
-
-The function will return method or not the operation was successful. If the bucket already contains the element the operation will stop because we do not want to add duplicate elements into the set. If the bucket does not contain the element, we will insert it into the bucket and the operation is successful.
+To get the value from a hash set from a key, we check if the key-value exists and if it does we return the value. Otherwise, we return null.
 
 [[[[
-public boolean insert(Pair p){
-	int hash = getHash(p.key,bucketsSize);
-	
-	LinkedList<Pair> curBucket = buckets[hash];
-	if(curBucket.contains(p.key)){
-		return false;
-	}
-	curBucket.push(p);
-	if( (float)size/bucketsSize>COLLISION_CHANCE){
-		resize();
-	}
-	size++;
-	return true;
+public String get(int key) {
+  // Get hash of x.
+  int hash = getHash(key, bucketsSize);
+  
+  // Get current bucket from hash.
+  LinkedList<Pair> curBucket = buckets[hash];
+  
+  // Look for key in bucket.
+  for(Pair p: curBucket){
+    // Return value if keys are equal.
+    if(p.key == key){
+      return p.value;
+    }
+  }
+  // Return null if not found.
+  return null;
 }
 ]]]]
 
-### Get
+## Remove
 
-To get the value from a hash set from a key, we get the hash code from our hashing algorithm of the key and find the key-value pair in the corresponding bucket.
-
-
-[[[[
-public Pair get(int key){
-	int hash = getHash(key,bucketsSize);
-	LinkedList<Pair> curBucket = buckets[hash];
-	for(Pair p:curBucket){
-		if(p.key==key){
-			return p;
-		}
-	}
-	return null;
-}
-]]]]
-
-### Remove
-
-To remove an element from a hash set, we get the hash code from our hashing algorithm and remove the element from the corresponding bucket.
-
-The function will return whether or not the operation was successful. If the bucket contains the element we can remove it from the linked list and the operation is successful. If the element is not in the bucket then the operation fails because we cannot remove something that is not there.
-
+To remove a key-value pair, we first search for the key-value pair in the map and remove it from its bucket.
 
 [[[[
-public boolean remove(int key){
-	int hash = getHash(key,bucketsSize);
-	
-	LinkedList<Pair> curBucket = buckets[hash];
-	for(Pair p: curBucket){
-		if(p.key==key){
-			curBucket.remove(p);
-			return true;
-		}
-	}
-	return false;
+public boolean remove(int key) {
+  // Get hash of x.
+  int hash = getHash(key, bucketsSize);
+  
+  // Get bucket from hash.
+  LinkedList<Pair> curBucket = buckets[hash];
+  
+  // Remove x from bucket and return if operation successful.
+  for(Pair p: curBucket){
+    // Remove pair from bucket if keys match.
+    if(p.key == key){
+      return curBucket.remove(p);
+    }
+  }
+  // Return false if key not found in map.
+  return false;
 }
 ]]]]
 
 ## Exercises
 
-1. Create a hash map for the English dictionary (word as keys, definition as value). You will need to create a hash function for strings.
+1. Create a hash map for the an contact list (phone numbers as keys, names as value).

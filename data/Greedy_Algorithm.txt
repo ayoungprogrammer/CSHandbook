@@ -22,16 +22,22 @@ $5.33 - 2\*$2
 
 The coin problem can only be solved greedily if the denominations fit nicely inside each other. Otherwise, the solution becomes more complicated. (See [[Dynamic Programming]])
 
+### Implementation
+
 [[[[
-int minCoins(int value){
-    int denoms[] = {1,5,10,25,100,200};
-    int totalCoins = 0;
-    for(int i = denoms.size; i >= 0; i--){
-        int coins = value / denoms[i];
-        totalCoins += coins;
-        value -= denoms[i] * coins;
-    }
-    return totalCoins;
+int minCoins(int value) {
+  int denoms[] = { 1, 5, 10, 25, 100, 200 };
+  int totalCoins = 0;
+  // Iterate backwards by highest denomination.
+  for (int i = denoms.length; i >= 0; i--) {
+    // Calculate highest number of coins that can be used.
+    int coins = value / denoms[i];
+    // Increment number of coins.
+    totalCoins += coins;
+    // Subtract value of coins.
+    value -= denoms[i] * coins;
+  }
+  return totalCoins;
 }
 ]]]]
 
@@ -57,26 +63,36 @@ The above approaches seem to work, but they do not offer the optimal solution.  
 
 Note that although this approach does not give us the **longest time** spent at events, it gives us the **most** events that can be visited.
 
+### Implementation
+
 [[[[
-class Interval implements Comparable<Interval>{
-    int start, end;
-    public int compareTo(interval i){
-        return end - i.end;
-    }
+class Interval implements Comparable<Interval> {
+  int start, end;
+  public Interval(int start, int end){
+    this.start = start;
+    this.end = end;
+  }
+  public int compareTo(Interval i) {
+    return end - i.end;
+  }
 }
 
-int maxEvents(ArrayList<Interval> intervals){
-    Collections.sort(intervals);
-    int curTime = 0;
-    int events = 0;
-    for(int i=0;i<intervals.size();i++){
-        while(i < intervals.size() && intervals[i].start < curTime){
-            i++;
-        }
-        curTime = intervals[i].end;
-        events++;
+public int maxEvents(Vector<Interval> intervals) {
+  // Sort intervals by earliest end time.
+  Collections.sort(intervals);
+  int curTime = 0;
+  int events = 0;
+  for (int i = 0; i < intervals.size(); i++) {
+    // Find next interval greater or equal to current time.
+    while (i < intervals.size() && intervals.get(i).start < curTime) {
+      i++;
     }
-    return events;
+    // Set current time as end of interval.
+    curTime = intervals.get(i).end;
+    // Increment number of intervals.
+    events++;
+  }
+  return events;
 }
 ]]]]
 

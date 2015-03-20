@@ -12,7 +12,7 @@ Heaps store their data level by level in a binary tree. This allows us to store 
 root = 0
 left = index * 2 + 1
 right = index * 2 + 2
-parent = (index-1)/2
+parent = (index - 1)/2
 ]]]]
 
 Indexes of a heap
@@ -26,158 +26,191 @@ Example Heap:
 
 A heap has two operations: push and pop. Pushing an element into a heap adds it into the heap and the heap needs to ensure that the properties of the heap still hold. Popping removes an element from the top of the heap and the heap needs to ensure that the properties of the heap still hold.
 
- Operation | Heapify | Resize | Push | Pop | 
+ Operation  | Resize | Push | Pop | Heapify
 -----------|---------|--
-Time Complexity | O(n)| O(n) | O(log n) | O(log n)
+Time Complexity | O(n)| O(n) | O(log n) | O(n)
 
-## Implementation
 
-Here is an implementation of a max heap. A heap needs to be able to resize, push an element and pop an element.
+## Class
 
-### Class
+We will implement a max heap in Java. We need to store the element in the heap and the size of the heap.
 
 [[[[
 public class Heap {
 
-	public int[] arr;
-	public int size;
-	
-	public Heap(int startSize){
-		arr = new int[startSize];
-		size = 0;
-	}
+  public int[] arr;
+  public int size;
+
+  public Heap(int startSize) {
+    arr = new int[startSize];
+    size = 0;
+  }
 }
 ]]]]
 
-### Heapify
+## Resize
 
-Heapify takes a random array of N elements and transforms it into a heap. The runtime of heapify is O(N).
+When the heap gets too full, we can resize it to make it fit more elements.
 
 [[[[
-public void heapify(int arr[]){
-    this.arr = arr;
-    for(int i=0;i<Math.floor(arr.length/2.0);i++){
-        int idx = i;
-        while(idx<size){
-            int left = idx*2+1;
-            int right = idx*2+2;
-            if(left<size && arr[left]>arr[idx]){
-                int swap = arr[left];
-                arr[left] = arr[idx];
-                arr[idx] = swap;
-                idx = left;
-            }else if(right<size && arr[right]>arr[idx]){
-                int swap = arr[right];
-                arr[right]=arr[idx];
-                arr[idx] = swap;
-                idx = right;
-            }else {
-                break;
-            }
-        }
-    }
+public void resize() {
+  int[] newArr = new int[arr.length*2];
+  for (int i=0;i<size;i++) {
+    newArr[i] = arr[i];
+  }
+  arr = newArr;
 }
 ]]]]
 
-### Resize
+## Swap
 
-When the heap gets too full, we can resize it to make it bigger
+Swaps two nodes in the heap. 
 
 [[[[
-public void resize(){
-	int[] newArr = new int[arr.length*2];
-	for(int i=0;i<size;i++){
-		newArr[i] = arr[i];
-	}
-	arr = newArr;
+public void swap(int a, int b) {
+  int tmp = arr[a];
+  arr[a] = arr[b];
+  arr[b] = tmp;
 }
 ]]]]
 
-### Push
+## Push
 
 Pushes the number x into the priority queue. We can do this by adding it to the bottom of the heap and then keep swapping it upwards if it is greater than the parent.
 
+Example of heap:
+
 {{maxheap.png}}
+
+Add 9 to the end of the heap.
 
 {{maxheappush.png}}
 
+The parent of 9 is 3 and smaller so we can swap the two. 
+
 {{maxheappush2.png}}
+
+The parent of 9 is 8 and smaller so we can swap the two.
 
 {{maxheappush3.png}}
 
+Since the parent of 9 is 10 and greater than 9 then we can stop.
+
 [[[[
-public void push(int x){
-		
-	if(size>=arr.length){
-		resize();
-	}
-	arr[size] = x;
-	size++;
-	
-	//Make sure parent is > child from the last element
-	int idx = size-1;
-	int parent = (idx-1)/2;
-	while(idx>0 && arr[parent]<arr[idx]){
-		int swap = arr[parent];
-		arr[parent] = arr[idx];
-		arr[idx] = swap;
-		idx = parent;
-		parent = (idx-1)/2;
-	}
+public void push(int x) {
+
+  if (size >= arr.length) {
+    resize();
+  }
+
+  // Insert to the end of the heap.
+  arr[size] = x;
+  size++;
+
+  int idx = size - 1;
+  int parent = (idx - 1) / 2;
+
+  // Push the node up until the parent is larger.
+  while (idx > 0 && arr[parent] < arr[idx]) {
+    swap(parent, idx);
+    idx = parent;
+    parent = (idx - 1) / 2;
+  }
 }
 ]]]]
 
-### Pop
+## Pop
 
 Popping removes the greatest element in the priority queue by removing the root which is guaranteed to be the greatest as property of a heap. After removing the root, we replace it with the element at the bottom of the heap and we can keep swapping it with its children until the heap property is satisfied.
 
+Let's do an example of where we pop from a heap. We want to remove the root of the heap and replace it with the last element of the heap.
+
 {{maxheappop.png}}
+
+We switch the node and replace it with the last element in the heap.
 
 {{maxheappop1.png}}
 
+The largest child is the left child of 8 and it is larger than the current node, so we swap them.
+
 {{maxheappop2.png}}
+
+The largest child is the right child of 7 and it it larger than the current node, so we swap the nodes again.
 
 {{maxheappop3.png}}
 
+When the current node is larger than both children or the current node is at the bottom, then we can stop.
+
 [[[[
-public int pop(){
-	if(size==0)return 0;
-	int ret = arr[0];
-	arr[0] = arr[size-1];
-	size--;
-		
-	int idx = 0;
-		
-	while(idx<size){
-		int left = idx*2+1;
-		int right = idx*2+2;
-		if(left<size && arr[left]>arr[idx]){
-			int swap = arr[left];
-			arr[left] = arr[idx];
-			arr[idx] = swap;
-			idx = left;
-		}else if(right<size && arr[right]>arr[idx]){
-			int swap = arr[right];
-			arr[right]=arr[idx];
-			arr[idx] = swap;
-			idx = right;
-		}else {
-			break;
-		}
-	}
+public void bubbleDown(int idx) {
+  while (idx < size) {
+    int left = idx * 2 + 1;
+    int right = idx * 2 + 2;
+    // If both child exists.
+    if (left < size && right < size) {
+      // If left child is larger than right child and current node.
+      if (arr[left] > arr[right] && arr[left] > arr[idx]) {
+        swap(left, idx);
+        idx = left;
+      }
+      // If right child is larger or equal than left child and current node.
+      else if (arr[right] >= arr[left] && arr[right] > arr[idx]) {
+        swap(right, idx);
+        idx = right;
+      }
+      // If no children, stop.
+      else {
+        break;
+      }
+    }
+    // If there is only a left child.
+    else if (left < size) {
+      swap(left, idx);
+      idx = left;
+    }
+    // If there is only a right child.
+    else if (right < size) {
+      swap(right, idx);
+      idx = right;
+    }
+    else {
+      break;
+    }
+  }
+}
+
+public int pop() {
+  if (size == 0) {
+    return 0;
+  }
+  // Swap root and last element of heap.
+  int ret = arr[0];
+  arr[0] = arr[size - 1];
+  size--;
+
+  // Push the root down until parent is greater than children
+  bubbleDown(0);
+
+  return ret;
 }
 ]]]]
 
-## Applications
+## Heapify
 
-Heaps are very efficient in its opertions O(log n) and it is used in many other algorithms such as:
+Heapify takes a random array of N elements and transforms it into a heap. The runtime of heapify is O(n).
 
-* [[Dijkstra's]]
-* [[Prim's]]
-* [[Kruskal]]
-* [[Line Sweeping]]
-
+[[[[
+public void heapify(int arr[]) {
+  this.arr = arr;
+  // Reach height of tree.
+  for (int i = 0; i < Math.floor(arr.length / 2.0); i++) {
+    // Iterate through array.
+    bubbleDown(i);
+  }
+}
+]]]]
 ## Exercises
 
-1. Implement a min heap
-2. Prove heaps work
+1. Implement a min heap in Java.
+2. Prove the runtime of heapify is O(n).
+3. Write a function that checks if an array is a heap. 

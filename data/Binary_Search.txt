@@ -1,10 +1,10 @@
-## [[Binary Search]]
+## Introduction
 
 Binary search is a type of search that is able to find an object in a sorted list in O(log n). In binary search we first start at the middle element and we keep trying to halve the problem until we find the number.
 
 {{binarysearch.png}}
 
-### Example
+## Example
 For example if I told you I had a number form 1 to 100 and I told you if your guess was higher or lower than my number you could use binary search to find it.
 
 Eg: my number = 17
@@ -12,7 +12,7 @@ Eg: my number = 17
 * You guess: 50
 * I say lower.
 
-So we know that:1≤number<50. Since the number is <50 then we know we can eliminate all the numbers above 50. We just made the problem half as hard! The reason we picked 50 is important because it is the middle and it tells us the most information. If we picked 80 and the reply was higher it would narrow down the problem a lot, but if the reply was lower it would barely reduce the problem. Picking the middle works best because it tells us the most information if we get a "lower" or "higher" reply. So we should also guess the middle between 1 and 50.
+So we know that: 1 <= number < 50. Since the number is less than 50, then we know we can eliminate all the numbers above 50. We just made the problem half as hard! The reason we picked 50 is important because it is the middle and it tells us the most information. If we picked 80 and the reply was higher it would narrow down the problem a lot, but if the reply was lower it would barely reduce the problem. Picking the middle works best because it tells us the most information if we get a "lower" or "higher" reply. So we should also guess the middle between 1 and 50.
 
 * You guess: 25.
 * I say lower.
@@ -22,46 +22,71 @@ So we know that 1≤number<25. Once again we made the problem half as hard again
 * You guess 13.
 * I say higher.
 
-So we know that 13<number<25. 
+So we know that 13 < number < 25. 
 
 * You guess 19.
 * I say lower.
 
-So we know that 13<number<19.
+So we know that 13 < number < 19.
 
 * You guess 16.
 * I say higher.
 
-So we know that 16<number<19
+So we know that 16 < number < 19
 
 * You guess 17.
 * I say correct!
 
-## Implementation
+## Generic Binary Search
 
 This is a generic implementation of a binary search.
 
-### Generic Binary Search
+
 [[[[
-void binarySearch(int ans,int minBound, int maxBound){
+void binarySearch (int ans, int minVal, int maxVal) {
   while(maxVal >= minVal) {
     int mid = (minVal + maxVal) / 2;
     if (mid == ans) {
       return;
     }
-    if (mid < ans) {
-      minVal = mid;
-    } else {
-      maxVal = mid;
+    else if (mid < ans) {
+      minVal = mid + 1;
+    } 
+    else if (mid > ans) {
+      maxVal = mid - 1;
     }
   }
 }
 ]]]]
 
-## Exercises
+## Finding Number in Sorted Array
 
-1. Given a sorted array, find whether or not the number N exists.
-2. Given a sorted array, find the the number of elements between the number A and number B inclusive.
+Suppose we have a sorted array and we want to find if a number X is in the array. We can do this easily by looping through the entire array and searching for the element we want. However, we can do better with binary search. 
+
+Let's say we start with the array [-6, -5, 1, 2, 5, 7, 10, 17, 23, 29] and we are looking for the element 2. We pick the middle element in the array which is 7 and we compare it with 5. Since 2 < 7, and everything in the last half the array is greater than 7, then everything in the last half the array is greater than 2 and there is no point searching there. Thus we have halved the work we need to do. We can do the same thing by picking the middle element of the first half [-6, -5, 1, 2, 5] which is 1. Since 2 > 1 and everything in the first half is less than 1, then everything in the first quarter is less than 1 and there is no point searching there. Thus the element we are looking for must be in the 2nd quarter of the array [2, 5]. 
+
+[[[[
+public static boolean exists(int[] arr, int x) {
+  int start = 0;
+  int end = arr.length - 1;
+  while (end >= start) {
+    int middle = (start + end) / 2;
+    if (arr[middle] == x) {
+      return true;
+    }
+    else if (arr[middle] < x) {
+      start = middle + 1;
+    }
+    else if (arr[middle] > x) {
+      end = middle - 1;
+    }
+  }
+  return false;
+}
+]]]]
+## Exercises
+1. Given a sorted array, find the the number of elements between the number A and number B inclusive.
     Example: 1, 2, 4, 6, 8, 10, 16, 20. Given A=5 and B=15, the number of elements between A and B is 3 (6, 8, 10).
-3. Given two sorted arrays, find the number of duplicate elements.
-4. Given two decimal numbers A and B, find A/B without using the division operation or using decimals.
+2. Given two sorted arrays, find the number of duplicate elements.
+3. Given two decimal numbers A and B, find A/B without using the division operation or using decimals.
+4. Write a square root function that uses binary search.

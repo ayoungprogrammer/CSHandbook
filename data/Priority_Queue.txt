@@ -16,15 +16,6 @@ Implementation | Push | Pop
 -----------|---------|--
 [[Heap]]  | O(log n) | O(log n)
 
-## Applications
-
-Priority queues are very efficient in its opertions O(log n) and it is used in many other algorithms such as:
-
-* [[Dijkstra's]]
-* [[Prim's]]
-* [[Kruskal]]
-* [[Line Sweeping]]
-
 ## Exercises
 
 1. Given a list of N numbers, find the M largest numbers. (Note you can do better than O(N log N))

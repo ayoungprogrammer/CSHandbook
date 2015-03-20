@@ -8,16 +8,13 @@ A tree set is a set which stores the values in a [[binary search tree|Binary Sea
 
 The advantage of tree sets is that they are maintained in a sorted order. 
 
+Tree Sets are implemented using [[binary search trees|Binary Search Tree]].
+
 {{bst.png}}
 
 | Operation | Membership | Insertion | Deletion
 |-
 | Time Complexity | O(log n) | O(log n) | O(log n)
-
-
-## Implementation
-
-Tree Sets are implemented using [[binary search trees|Binary Search Tree]].
 
 ## Exercises
 

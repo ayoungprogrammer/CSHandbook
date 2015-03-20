@@ -7,16 +7,16 @@ Miracle sort is a sort that truly requires a miracle. We keep checking the array
 ## Implementation
 
 [[[[
-public void miracleSort(int[] arr){
-   boolean sorted = false;
-   do{
-      sorted = true;
-      for(int i=1;i<arr.length;i++){
-         if(arr[i]<arr[i-1]){
-             sorted = false;
-             break;
-         }
+public void miracleSort(int[] arr) {
+  boolean sorted = false;
+  do {
+    sorted = true;
+    for (int i = 1; i < arr.length; i++) {
+      if (arr[i] < arr[i - 1]) {
+        sorted = false;
+        break;
       }
-   }while(!sorted);
+    }
+  } while (!sorted);
 }
 ]]]]

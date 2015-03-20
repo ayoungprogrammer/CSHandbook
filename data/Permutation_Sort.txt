@@ -2,7 +2,7 @@
 
 Permutation sort is a sort that keeps permutating the array until it is sorted. It is the slowest sort that will guarantee that the array will be sorted.
 
-### Implementation
+## Implementation
 
 [[[[
 void permuteSort(int[] arr){

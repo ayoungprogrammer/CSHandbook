@@ -20,13 +20,13 @@ Example
 ## Implementation
 
 [[[[
-class edge{
-	int weight,source,dest;
-	public edge(int source,int dest,int weight){
-		this.source = source;
-		this.dest = dest;
-		this.weight = weight;
-	}
+class edge {
+  int weight,source,dest;
+  public edge(int source,int dest,int weight) {
+    this.source = source;
+    this.dest = dest;
+    this.weight = weight;
+  }
 }
 
 public static int[][] getAdjMatrix(Vector<edge> edges, int n) {

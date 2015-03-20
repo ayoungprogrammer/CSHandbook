@@ -1,5 +1,7 @@
 ## Introduction
 
+Prerequisites: [[Graph Theory]], [[Depth First Search]]
+
 A topological sort or topological order of a directed graph is an order in which every node will come after its ancestors.
 
 {{topsort.png}}
@@ -11,11 +13,6 @@ For example topological orders could be:
 * (B, A, D, G, F, C, E)
 
 But (B, A, C, F, D, E, G) is not a topological ordering because D is an ancestor of F and it comes after F.
-
-### Prerequisites
-
-* [[Graph Theory]]
-* [[Depth First Search]]
 
 ## Implementation
 

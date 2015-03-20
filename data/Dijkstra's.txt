@@ -57,14 +57,14 @@ At each node we have the minimum cost to get from the start node to each node.
 Implementation of Dijkstra in Java using a [[priority queue|Priority Queue]].
 
 [[[[
-class node implements Comparable<node>{
-  int weight,index;
-  public node(int weight,int index){
+class node implements Comparable<node> {
+  int weight, index;
+  public node(int weight, int index) {
     this.weight = weight;
     this.index = index;
   }
-  public int compareTo(node e){
-    return weight-e.weight;
+  public int compareTo(node e) {
+    return weight - e.weight;
   }
 }
 

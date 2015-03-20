@@ -6,7 +6,7 @@ A depth first search on a tree is a traversal of a tree that goes as far down as
 
 A DFS can also be used on a graph to transverse it by ignoring nodes that have already been visited.
 
-A DFS requires a stack but most the time DFS is implemented with recursion which uses the system stack. So most of the time you do not need an explicit stack.
+A DFS requires a stack but DFS is usually implemented with recursion which uses the system stack. So most of the time you do not need an explicit stack.
 
 {{dfs.png}}
 
@@ -93,12 +93,8 @@ public static void DFS_graph(int[][] adjMatrix, int cur, boolean[] visited) {
 }
 ]]]]
 
-## Memory
-
-Since DFS goes as deep as possible before going back, the stack we use will need to store at least the depth of the tree. 
-
 ## Exercises
 
 1. Given a binary tree, find the height of it (the longest path from root to leaf).
-2. Given a graph, determine if it contains a cycle.
+2. Given a graph and a node, determine if a path exists to that node.
 3. Given a node and a binary tree, find the next node for post order, pre order and normal order.

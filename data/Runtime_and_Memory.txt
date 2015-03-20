@@ -46,12 +46,12 @@ Let us examine a function that takes in an array of size N and returns the maxim
 Code:
 
 [[[[
-int findMax(int[] array){
+int findMax(int[] array) {
   int maxVal = array[0]; //O(1) memory to store max element, O(1) time for assignment
-  for(int i=1;i<array.length;i++){ //O(n) loop runtime
-      if(maxVal < array[i]){ //O(1) to compare runtime
-         maxVal = array[i]; //O(1) to assign new value runtime
-     }
+  for(int i = 1; i < array.length; i++) { //O(n) loop runtime
+    if (maxVal < array[i]) { //O(1) to compare runtime
+      maxVal = array[i]; //O(1) to assign new value runtime
+    }
   }
 }
 ]]]]
@@ -65,11 +65,11 @@ Time: The first assignment of maxVal takes O(1). The loop runs N-1 times and of 
 Suppose we have a function that zeroes a 2D NxN array.
 
 [[[[
-void zeroArrays(int[][] grid){
+void zeroArrays(int[][] grid) {
   //O(n) loop
-  for(int i=0; i<grid.length;i++){
+  for (int i = 0; i < grid.length; i++) {
     //O(n) loop
-    for(int j=0;j<grid[i].length;j++){
+    for (int j = 0; j < grid[i].length; j++) {
       //O(1)
       grid[i][j] = 0;
     }
@@ -84,15 +84,14 @@ There are NxN cells we need to set to 0, so we need O(n^^2^^) operations. We can
 Suppose we have another function that prints out the binary backwards for each number from 1 to N.
 
 [[[[
-void binaryNumbers(int n){
-    for(int x = 1; x < n; x++){
-        int bin = x;
-        while(bin > 0){
-            System.out.print(bin % 2);
-            bin = bin / 2;
-        }
-        System.out.println();
-    }
+void binaryNumbers(int n) {
+  for(int x = 1; x < n; x++) {
+  int bin = x;
+  while(bin > 0) {
+    System.out.print(bin % 2);
+    bin = bin / 2;
+  }
+  System.out.println();
 }
 ]]]]
 

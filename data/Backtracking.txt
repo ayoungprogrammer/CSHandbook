@@ -20,8 +20,6 @@ Check if partial solution needs to be rejected
 Recurrence:
 Generate next partial solution thats growing to full solution
 
-----------
-
 backtrack(solution):
     if reject(solution)
         stop
@@ -31,12 +29,8 @@ backtrack(solution):
 
     backtrack( next_solution ) for next_solution from solution
 
-
-----------
-
 Initial:
 backtrack( empty_solution)
-
 ]]]]
 
 ## List all sets
@@ -103,7 +97,7 @@ subsets([000,001,010,011,100,101,110,111],1)
 subsets([0000,0001,0010,0011,0100,0101,0110,0111,1000,1001,1010,1011,1100,1101,1110,1111],0)
 =
 [0000,0001,0010,0011,0100,0101,0110,0111,1000,1001,1010,1011,1100,1101,1110,1111]
- ]]]]
+]]]]
 Here is the way we would do this problem with backtracking, however it takes a lot of memory to store **ALL** the solutions. Instead of building all the solutions, we can build each solution one by one.
 
 {{enumerate-sets.png}}
@@ -341,4 +335,5 @@ nqueen(0, row, d1, d2);
 
 1. Given a sequence of numbers, output all increasing subsequences.
 2. Given a NxN chessboard with certain squares that can have no pieces placed, output the number of configurations that can be made from rooks without attacking each other.
-2. Given a sudoku grid, output a solution for the grid if it exists. Note: this question is popular for technical interviews.
+3. Given a sudoku problem, output a solution for the grid if it exists. Note: this question is popular for technical interviews.
+4. Given a NxN magic square where you need to place the numbers from 1 to N^2, find the number of ways to have every row, column and diagonal add to M.

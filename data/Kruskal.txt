@@ -50,14 +50,14 @@ All the nodes are the same label and all part of the same component, thus by the
 ### Code
 
 [[[[
-class edge implements Comparable<edge>{
+class edge implements Comparable<edge> {
 	int weight,source,dest;
-	public edge(int source,int dest,int weight){
+	public edge(int source,int dest,int weight) {
 		this.source = source;
 		this.dest = dest;
 		this.weight = weight;
 	}
-	public int compareTo(edge e){
+	public int compareTo(edge e) {
 		return weight-e.weight;
 	}
 }
