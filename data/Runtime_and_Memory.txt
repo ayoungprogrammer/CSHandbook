@@ -1,20 +1,10 @@
 ## Introduction
 
-Processing time and memory are two primary resources that computer programs use and it is important to analyze the limits we have. Computers are super fast at making calculations compared to humans, but humans have much more "memory" than computers currently do. For example, computers can add two 100-digit numbers together much more quickly than any human possibly can. However, the human brain can contain much more memory than computers.
+Processing time and memory are two primary resources that computer programs use and it is important to analyze the limits we have. Computers are super fast at making calculations compared to humans, but humans have much more "memory" than computers currently do. For example, computers can add two 100-digit numbers together much more quickly than any human possibly can. Standard computers have around 8GB of RAM and some higher end machines may have 16-32GB. Although hard-disks can store terabytes of memory, we use RAM (flash memory) when analyzing computer memory because it is much faster than disk storage. As an analogy, RAM can be thought of as grabbing an object in another room whereas disk memory is driving 20 min away to get that object. 
 
-Brains have trillions of connections between neurons and the estimated storage capacity is about 2.5 petabytes. That is approximately 340 years of TV shows that you could watch! Computers on the other hand, have much less memory than human brains. Standard computers have around 8GB of RAM and some higher end machines may have 16-32GB. Although hard-disks can store terabytes of memory, we use RAM (flash memory) when analyzing computer memory because it is much faster than disk storage. As an analogy, RAM can be thought of as grabbing an object in another room whereas disk memory is driving 20 min away to get that object. 
-
-The neurons and connections in our brains allow us to store an immense amount of information in our brains and allows us to easily recognize patterns much better than computers. For example it is very easy for us to identify different objects around us (e.g. we can easily differentiate between an apple and an orange), but it is difficult for a computer to do this for the countless number of objects in the world. However this is currently changing as more research is being done in "deep learning".
-
-|Brain|Computer
--|-|-
-Memory|2.5 petabytes |16GB RAM
-Processing| 60Hz | 2.7GHz Quad Core 
-
-Note that a computer is 1,000,000,000 times faster than humans but humans can store 100,000 times more information (approx. 340 years of TV shows).
 ## Limits
 
-There are many different methods of implementing different things but most of the time we care most about implementations that are the fastest and use the least amount of memory. Let's go through some basic benchmarks about computers that you should know. Adding two numbers takes a nanosecond (1 billionth of a second) for an average computer to process. For practical purposes, we'll assume that the average computer program can hold up to 1GB or RAM or about 250 million integers. We use RAM because it is flash memory and read/write is super fast in comparison to disk read/writes. 
+There are many different methods of implementing different things but most of the time we care most about implementations that are the fastest and use the least amount of memory. Let's go through some basic benchmarks about computers that you should know. Adding two numbers takes a nanosecond (1 billionth of a second) for an average computer to process as of this date of writing. For practical purposes, we'll assume that the average computer program can hold up to 1GB or RAM or about 250 million integers.
 
 Memory| Operations (per second)
 -|--
@@ -22,7 +12,7 @@ Memory| Operations (per second)
 
 ## Big O Notation
 
-When we compare how efficient algorithms or data structures are to another, we want to be able to describe them such that they can be quantified. We use something called Big O notation to do this. Many algorithms and data structures will have its time and space complexities depend on the size of the inputs. The Big O notation takes the largest factor of an input to compare computation times / memory usage. When we take the largest factor, we ignore smaller factors, coefficients and constants because they do not matter at very large values. For example: O(3n^^2^^ + 12n + 20) is simply O(n^^2^^) because it is the largest factor.
+When we compare how efficient algorithms or data structures are to another, we want to be able to describe them such that they can be quantified. We use something called Big O notation to do this. The size of the inputs determines the space and time complexities of many algorithms and data structures. The Big O notation takes the largest factor of an input to compare computation times / memory usage. When we take the largest factor, we ignore smaller factors, coefficients and constants because they become insignificant at very large values. For example: O(3n^^2^^ + 12n + 20) is simply O(n^^2^^) because it is the largest factor.
 
 Here is a list of common Big O notations based on complexity:
 
@@ -39,20 +29,24 @@ O(N!) *Factorial Time* | 11
 
 Keep in mind that in a couple of years as technology improves, this chart will be outdated.
 
-## Runtime Analysis
+## Runtime and Memory Analysis
 
-Let us examine a function that takes in an array of size N and returns the maximum element. In a program we are usually concerned with two main factors: memory and time. 
+In a program we are usually concerned with two main factors: runtime and memory. Runtime complexity is the amount of time it takes for a program to run and memory complexity is usually used as the additional amount of memory other than the input that a program takes. Note that if you are able to stream your input in your program (read in chunks at a time), then the memory footprint will be reduced to your stream size.
 
-Code:
+### Example
+
+Suppose we have a function that has an array of size N as an input that returns the maximum element.
 
 [[[[
+// Assume that array has a positive length.
 int findMax(int[] array) {
-  int maxVal = array[0]; //O(1) memory to store max element, O(1) time for assignment
-  for(int i = 1; i < array.length; i++) { //O(n) loop runtime
-    if (maxVal < array[i]) { //O(1) to compare runtime
-      maxVal = array[i]; //O(1) to assign new value runtime
+  int maxVal = array[0]; //O(1) memory to store max element, O(1) time for assignment.
+  for(int i = 1; i < array.length; i++) { //O(n) loop runtime.
+    if (maxVal < array[i]) { //O(1) to compare runtime.
+      maxVal = array[i]; //O(1) to assign new value runtime.
     }
   }
+  return maxVal;
 }
 ]]]]
 
@@ -62,15 +56,15 @@ Time: The first assignment of maxVal takes O(1). The loop runs N-1 times and of 
 
 ### Example
 
-Suppose we have a function that zeroes a 2D NxN array.
+Suppose we have a function that sets all the values of a 2D NxN array to 0.
 
 [[[[
 void zeroArrays(int[][] grid) {
-  //O(n) loop
+  //O(n) to loop through rows.
   for (int i = 0; i < grid.length; i++) {
-    //O(n) loop
+    //O(n) loop through columns.
     for (int j = 0; j < grid[i].length; j++) {
-      //O(1)
+      //O(1) to set element in 2D array.
       grid[i][j] = 0;
     }
   }
@@ -81,22 +75,95 @@ There are NxN cells we need to set to 0, so we need O(n^^2^^) operations. We can
 
 ### Example
 
-Suppose we have another function that prints out the binary backwards for each number from 1 to N.
+Suppose we have another function that prints out the binary number backwards for each number from 1 to N. For example, the binary number backwards for 25 is 11001.
 
 [[[[
 void binaryNumbers(int n) {
+  // O(1) memory to store number.
+  int bin;
+  // O(n) loop from 1 to n.
   for(int x = 1; x < n; x++) {
-  int bin = x;
-  while(bin > 0) {
-    System.out.print(bin % 2);
-    bin = bin / 2;
-  }
+    bin = x;
+    // O(log n) to print binary of n.
+    while(bin > 0) {
+      // O(1) runtime to print one binary digit.
+      System.out.print(bin % 2);
+      // O(1) runtime to perform integer division.
+      bin = bin / 2; 
+    }
+  // O(1) to print new line.
   System.out.println();
+  }
 }
 ]]]]
 
-For each number x, it will take O(lnvv2vv x) to convert the number to binary because we dividing by 2. Since O(lnvv2vv x) = O( (ln x)/ (ln 2) ), and the denominator is a constant, we can rewrite this as O(ln x). We do this operation N times so the runtime is: O(n log n).
+For each number x, it will take O(lnvv2vv x) to convert the number to binary because we dividing by 2. Since O(lnvv2vv x) = O( (ln x)/ (ln 2) ), and the denominator is a constant, we can rewrite this as O(ln x). We can also rewrite this os O(log x) which most people when referring to logarithmic complexities. We do this operation N times so the total runtime complexity is: O(n log n). We need O(1) additional memory to store the variable bin and x.
+
+### Example
+
+Suppose we have a function that takes in an array that contains N integers from 1 to M and prints out one of the modes (number with most occurrences). We can do this in two different ways.
+
+Our first approach is to loop through the array and count the number of occurrences that number appears in the rest of array.
+
+[[[[
+public int mode1(int[] arr, int m) {
+  int n = arr.length;
+  int maxMode = 0;
+  int maxOccurences = 0;
+  
+  // O(n) to loop through each number in array.
+  for (int i = 0; i < n; i++) {
+    int occurances = 0;
+    // O(n) to count number of occurnaces of that number in array.
+    for (int j = 0; j < n; j++) {
+      if (arr[j] == arr[i]) {
+        occurances++;
+      }
+    }
+    // O(1) to update mode number of occurrences is greater. 
+    if (occurances > maxOccurences) {
+      maxOccurences = occurances;
+      maxMode = arr[i];
+    }
+  }
+  return maxMode;
+}
+]]]]
+
+We first have to loop through each number in the array which takes O(n). Inside that loop, we have another array that counts the number of occurrences which is O(n) again. Thus the total runtime of the method is O(n^^2^^). We store only the max mode and the number of occurrences for the max mode so the memory complexity is O(1).
+
+In our second approach, we will keep an array that stores the number of occurrences of all the numbers from 1 to M. We will go through the array and increment the occurrences of a number when we see it. Then we will find the number that has the maximum number of occurrences.
+
+[[[[
+public int mode2(int[] arr, int m) {
+  int n = arr.length;
+  // O(m) memory to store occurrences of each number. Let occurrences[i] be 
+  // number of times i appears in arr.
+  int[] occurrences = new int[m+1];
+  // O(m) runtime to set number of occurrences to 0 for each number.
+  for (int i = 0; i <= m; i++) {
+    occurrences[i] = 0;
+  }
+  // O(n) runtime to loop through array and increment number of occurrences.
+  for (int j = 0; j < n; j++) {
+    occurrences[arr[j]]++;
+  }
+  int mode = 0;
+  // O(m) runtime to loop through occurrences.
+  for (int i = 0; i <= m; i++) {
+    // O(1) runtime to compare update mode if occurrences of current number is bigger.
+    if (occurrences[i] > occurrences[mode]) {
+      mode = i;
+    }
+  }
+  return mode;
+}
+]]]]
+
+We first initialize the array of occurrences to 0 which takes O(m). We then loop through the array of numbers which takes O(n). FInally, we loop through the array of occurrences to find the mode which takes O(m). Thus the final runtime is O(n + m). We need to store the mode which takes O(1) and the array of occurrences which takes O(m). Thus the memory footprint is O(m).
+
+Note that although the two approaches do the same thing, they have different complexities for runtime and space. If m was large and the cost of storing m integers was too expensive, then we would use the first approach at the cost of having O(n^^2^^) quadratic runtime. However, if m was small and we wanted a fast solution, then we would use the second approach at the cost of storing extra O(m) integers. Problems can have solutions that optimize for speed and other solutions that optimize for space. Sometimes space can be more expensive than speed and sometimes speed can be more expensive than space. 
 
 ## Exercises
 
-1. Give the runtime and space complexity of the following code:
+1. 

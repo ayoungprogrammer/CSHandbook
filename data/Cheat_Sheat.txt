@@ -1,0 +1,50 @@
+## Cheat Sheet
+
+[[Sorting]]
+
+ Name | Runtime
+-|-
+[[Bubble Sort]] | O(n^^2^^)
+[[Selection Sort]] | O(n^^2^^)
+[[Insertion Sort]] | O(n^^2^^)
+[[Heap Sort]] | O(n log n)
+[[Merge Sort]] | O(n log n)
+[[Quick Sort]] | O(n log n)
+
+[[Vector]]
+
+ Operation | Get  | Push | Pop | Insert | Remove
+-----------|---------|--
+Time Complexity  | O(1) | O(1) | O(1) | O(n) | O(n)
+
+[[Linked List]]
+
+| Operation | Get | Push | Delete  | Insert
+|-----------|---------|------------|---------
+| Time Complexity | O(n) | O(1) | O(1) | O(1)
+
+[[Hash Set]]
+
+| Operation | Membership | Insertion | Deletion
+|-
+| Time Complexity | O(1) | O(1) | O(1)
+
+ [[Tree Set]]
+
+| Operation | Membership | Insertion | Deletion
+|-
+| Time Complexity | O(log n) | O(log n) | O(log n)
+
+[[Heap]]
+
+ Operation  | Resize | Push | Pop | Heapify
+-----------|---------|--
+Time Complexity | O(n)| O(log n) | O(log n) | O(n)
+
+[[Shortest Path]]
+
+| Algorithm | Time | Space 
+|----------|----|------|-----|----------
+|[[Floyd Warshall]] | O(n^^3^^) | O(n^^2^^) 
+|[[Bellman Ford]] | O(n^^2^^) | O(n) 
+|[[Dijkstra's]] | O(n log n) | O(n log n) 

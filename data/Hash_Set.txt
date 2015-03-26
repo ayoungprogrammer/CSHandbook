@@ -4,13 +4,13 @@
 
 [[Source on Github||GITHUB_PATH/HashSet.java]]
 
-Hash sets are sets that use hashes to store elements. A hashing algorithm is an algorithm that takes an element and converts it to a smaller chunk called a **hash**. For example let our hashing algorithm be (x mod 10). So the hashes of 232, 217 and 19 are 2,7, and 9 respectively. 
+Hash sets are sets that use hashes to store elements. A hashing algorithm is an algorithm that takes an element and converts it to a chunk of a fixed size called a **hash**. For example, let our hashing algorithm be (x mod 10). So the hashes of 232, 217 and 19 are 2,7, and 9 respectively. 
 
 {{hashcode.png}}
 
-For every element in a hash set, the hash is computed and elements with the same hash are grouped together and stored in a [[linked list|Linked List]]. The linked list is called a **bucket**.
+For every element in a hash set, the hash is computed and elements with the same hash are grouped together. This group of similar hashes is called a bucket and they are usually stored as linked lists.
 
-If we want to check if an element already exists within the set, we first compute the hash of the element and then search through the linked list associated with the hash to see if the element is contained.
+If we want to check if an element already exists within the set, we first compute the hash of the element and then search through the bucket associated with the hash to see if the element is contained.
 
 {{hashset.png}}
 
@@ -20,7 +20,7 @@ If we want to check if an element already exists within the set, we first comput
 
 ## Class 
 
-Inside our implementation of a hash set we will store the buckets using an array of linked lists, the number of buckets, and the number of elements in the set. 
+Inside our implementation of a hash set, we will store the buckets (using an array of linked lists), the number of buckets, and the number of elements in the set. 
 
 The collision chance is the threshold for resizing the hash set. When the ratio of elements in the set to number of buckets is greater than the threshold, then the chance of collision will be high enough that it will slow down the operations. The lower this ratio, the better performing a hash set will be.
 
@@ -43,9 +43,9 @@ public class HashSet {
 }
 ]]]]
 
-If we wanted to check if 7238 was in the hash set, we would get the hash (7238 mod 10 = 8). So we get the bucket associated with the hash 8 and we get the list of (538). When we iterate through this short list, we see that 7238 is not a member of the set. 
+If we wanted to check if 7238 was in the hash set, we would get the hash (7238 mod 10 = 8). So we get the bucket associated with the hash 8 and we get the list of [538]. When we iterate through this short list, we see that 7238 is not a member of the set. 
 
-Similarly, if we wanted to insert 7238 into the hash set, we would check if it exists and if it did not we would append the element to the end of the bucket. For deletion we would find 7238 check if it existed in the set and remove it from the bucket. 
+Similarly, if we wanted to insert 7238 into the hash set, we would check if it exists and if it did not, we would add the element to the bucket. For deletion, we would find 7238 and then remove it from the bucket if it existed. 
 
 Hash sets are very efficient in all three set operations if a good hashing algorithm is used. When the objects are that being stored are large then hash sets are effective as a set.
 
@@ -55,7 +55,7 @@ The hash code is the result of the hashing algorithm for an element. In our hash
 
 {{hashcode.png}}
 
-For the most part if the numbers are all random then the hash function is fine. However, if the number of buckets was 10 and we added the elements 20,30,40,50,60,70, they will all end up in the same bucket and results in poor performance.
+For the most part, if the numbers are all random, then the hash function will perform well. However, if the number of buckets was 10 and we added the elements 20,30,40,50,60,70, then they would all end up in the same bucket and performance degenerates to a linked list.
 
 [[[[
 public int getHash(int x, int hashSize) {
@@ -103,7 +103,7 @@ To insert an element in a hash set, we get the hash code from our hashing algori
 
 {{hashsetinsert.png}}
 
-The function will return method or not the operation was successful. If the bucket already contains the element the operation will stop because we do not want to add duplicate elements into the set. If the bucket does not contain the element, we will insert it into the bucket and the operation is successful.
+The function will return whether or not the operation was successful. If the bucket already contains the element, the operation will stop because we do not want to add duplicate elements into the set. If the bucket does not contain the element, we will insert it into the bucket and the operation is successful.
 
 [[[[
 public boolean insert(int x) {
@@ -180,7 +180,7 @@ public boolean remove(int x) {
 
 ## Exercises
 
-1. Try to come up with a better hashing algorithm.
+1. Devise a better hashing algorithm for strings.
 2. Calculate the probability of a collision occurring given the number of buckets and number of elements in the hash set.
 3. Given an array of numbers, find the number of pairs of numbers that sum to 0.
 4. Given an array of numbers and a number A, find the number of pairs of numbers that sum to A.

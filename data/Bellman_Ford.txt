@@ -2,11 +2,11 @@
 
 **Prerequisites**:  [[Shortest Path]]
 
-Bellman Ford is an algorithm that finds the shortest path from one source node to every other node in the graph. The running time is O(n^^2^^) and is slower than [[Dijkstra's]] but it is able to find negative cycles. 
+Bellman Ford is an algorithm that finds the shortest path from one source node to every other node in the graph. The running time is O(n^^2^^) and is able to find negative cycles. 
 
 ## Implementation
 
-Bellman Ford can be done using [[backtracking|Backtracking]] to find the shortest path in a graph. We first start at the starting node with starting cost of 0 and 0 edges used. For each node thats connected to that node, we repeat and add to the cost of the node. 
+Bellman Ford can be done using [[backtracking|Backtracking]] to find the shortest path in a graph. We first start at the starting node with a starting cost of 0 and 0 edges used. For each node thats connected to that node, we repeat and add to the cost of the node. 
 
 {{bellmanford.png}}
 
@@ -14,13 +14,13 @@ We will do an example of the Bellman Ford algorithm on the above graph. At each 
  
 {{bellmanford2.png}}
 
-From node 0, we can reach node 1 and node 3. At node 1, we have an accumulative weight of 3. At node , we have an accumulative weight of 5. 
+From node 0, we can reach node 1 and node 3. At node 1, we have an accumulative weight of 3. At node 3, we have an accumulative weight of 5. 
 
 {{bellmanford3.png}}
 
 From node 1, we can reach node 2 and node 4 with respective accumulative weights of 10 and 5. 
 
-From node 3 we can reach node 4 with an accumulative weight of 9.
+From node 3, we can reach node 4 with an accumulative weight of 9.
 
 {{bellmanford4.png}}
 
@@ -31,6 +31,8 @@ From node 4, we can reach node 5 with an accumulative weight of 11.
 From node 4, we can reach node 5 with an accumulative weight of 15.
 
 {{bellmanford5.png}}
+
+### Formalization
 
 [[[[{lang-html}
 Let N be the number of nodes in the graph
@@ -56,10 +58,12 @@ bellmanFord(source, n, w):
     shortestPath[source] = min(shortestPath[source], w)
     bellmanFord(edge.dest, n + 1, w + edge.weight) for edge in edges[source]
 
-Init:
+Example:
 shortestPath = [0] * N
 bellmanFord(start,0,0)
 ]]]]
+
+### Implementation
 
 We can rewrite this solution using dynamic programming without recursion.
 
@@ -133,19 +137,14 @@ public static int BellmanFord(Vector<Vector<edge>> adjList, int startNode,
 }
 ]]]]
 
-## Applications
-
-Arbitrage occurs when you can exchange currencies for another and make a profit. For example given a currency exchange table:
-
- | USD | CAD | EURO
--|-|-|-
-USD| / | 1.12 | 0.72
-CAD| 0.90 | / | 0.64
-EURO| 1.38 | 1.56 | /
-
-Notice that 1 USD -> 1.12 CAD -> 1.008 USD. Bellman Ford can be used to find methods of arbitrage by using the vertex as currency and edges as transactions, and the weight as the exchange rate. All that is needed is to find a path that maximizes product of weights and finding a negative cycle.
-
 ## Exercises
-
-1. Write a program that detects a path for arbitrage to occur.
-2. Prove Bellmand-Ford works.
+1. Prove Bellmand-Ford works.
+2. Arbitrage occurs when you can exchange currencies for another and make a profit. For example given a currency exchange table:
+  
+  | USD | CAD | EURO
+  -|-|-|-
+  USD| / | 1.12 | 0.72
+  CAD| 0.90 | / | 0.64
+  EURO| 1.38 | 1.56 | /
+  
+  Notice that 1 USD -> 1.12 CAD -> 1.008 USD. Bellman Ford can be used to find methods of arbitrage by using the vertex as currency and edges as transactions, and the weight as the exchange rate. All that is needed is to find a path that maximizes product of weights and finding a negative cycle. Write a program that detects a path for arbitrage to occur.

@@ -6,9 +6,14 @@ The shortest path is defined as a path from one node to another while trying to 
 
 ## Algorithms
 
+Let N be the number of nodes.
 
-| Algorithm | Desc | Time | Space | Detect cycles?
+| Algorithm | Time | Detect cycles?
 |----------|----|------|-----|----------
-|[[Floyd Warshall]] | Computes shortest path between all pairs of nodes | O(n^^3^^) | O(n^^2^^) | Yes
-|[[Bellman Ford]] | Computes shortest path between a pairs of nodes | O(n^^2^^) | O(n) | Yes
-|[[Dijkstra's]] | Computes shortest path between a pair of nodes using the Greedy method | O(n log n) | O(n log n) | No
+|[[Floyd Warshall]] |  O(N^^3^^) | Yes
+|[[Bellman Ford]] |  O(N^^2^^) | Yes
+|[[Dijkstra's]]  | O(N log N) | No
+
+* [[Floyd Warshall]] computes the shortest path between all pairs of nodes.
+* [[Bellman Ford]] computes the shortest path between one node to every other node.
+* [[Dijkstra's]] computes the shortest path between two nodes.

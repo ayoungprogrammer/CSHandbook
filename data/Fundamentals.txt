@@ -2,7 +2,7 @@
 
 Before we can learn about algorithms and data structures we must first learn how to analyze algorithms and data structures so we can apply them to the right needs.
 
-It is highly recommended that you understand syntax for Java or C++ before you continue.
+It is highly recommended that you understand the syntax and control structures for Java or C++ before you continue.
 
 ## [[Runtime and Memory]]
 

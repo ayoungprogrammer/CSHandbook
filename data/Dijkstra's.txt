@@ -8,9 +8,9 @@ Dijkstra works by beginning at the starting node repeatedly picking the next clo
 
 If Dijkstra's is implemented using a priority queue, the run time is O(n log n). 
 
-If a negative cycle exists within the graph, then the algorithm breaks as it will repeatedly try to take the negative edges. See [[Bellman Ford]] to find negative cycles in a graph. 
+If a negative cycle exists within the graph, then the algorithm breaks as it will repeatedly try to take the negative edges. See the [[Bellman Ford]] algorithm for finding negative cycles in a graph. 
 
-A naive fix for negative cycles would be to offset all edges by the largest negative edge and then subtract it from the resulting total but this does not work. Consider an example where you have start node A and end node B. The first route from A->B has length 2 and the second route has lengths 1,1,-2. Clearly the second route has less cost. If we try to make the length positive by adding all costs by 2, we will have the first path of length 4 and the second path of lengths 3,3,0 and the first route becomes the smallest total cost which is wrong.
+A naive fix for negative cycles would be to offset all edges by the largest negative edge and then subtract it from the resulting total but this does not work. Consider an example where you have the path from A to B. The first path from A->B has a weight of 2 and the second path has weights 1,1,-2. Clearly, the second route has less cost. If we try to make the length positive by adding all costs by 2, we will have the first path of weight 4 and the second path of weights 3,3,0. From the adjusted weights, we determine the first path minimizes total cost which is wrong.
 
 In general, Dijkstra is usually the method for finding the minimum cost between two nodes in any kind of network. For example, Dijkstra can be used in computer networking to find the shortest path between two hosts. It can also be used in flight networking to find the cheapest cost to get from one airport to another airport. 
 
@@ -18,12 +18,12 @@ In general, Dijkstra is usually the method for finding the minimum cost between 
 
 At each node we visit we keep track of the minimum cost it takes to reach to reach that node from the starting node. 
 
-1. Start at the starting node
+1. Start at the starting node.
 2. Find an unvisited node that has the least cost to reach from the visited nodes.
-3. Mark that node as visited
-4. Repeat until all nodes are visited
+3. Mark that node as visited.
+4. Repeat until all nodes are visited.
 
-When we reach a node for the first time, it will be the shortest path to that node (Try to prove this to yourself).
+When we reach a node for the first time, it will be the shortest path from the start node to that node. (Try to prove this to yourself).
 
 We first start at the starting node. The distance from the starting node to the starting node is obviously 0.
 
@@ -33,7 +33,7 @@ From the starting node we have two nodes we can reach. The top node has a cost o
 
 {{djikstra1.png}}
 
-We pick the smallest node the reach and we mark it as visited. Once we visit a node, we can guarantee that it is the smallest cost to reach it. The next nodes minimum cost to reach is 10, 5 and 5. 
+We pick the smallest node that can be reached and we mark it as visited. Once we visit a node, we can guarantee that it is the smallest cost to reach it. The next nodes that can be reached have minimum costs of 10, 5 and 5. 
 
 {{djikstra2.png}}
 
@@ -49,12 +49,12 @@ We take the smallest which is 10 and we now only have one last node to reach at 
 
 {{djikstra5.png}}
 
-At each node we have the minimum cost to get from the start node to each node.
+Finally, we have the shortest path from the start node to the end node.
 
 {{djikstra6.png}}
 
-### Java
-Implementation of Dijkstra in Java using a [[priority queue|Priority Queue]].
+### Code
+We can implement Dijkstra's algorithm efficiently using a [[priority queue|Priority Queue]].
 
 [[[[
 class node implements Comparable<node> {

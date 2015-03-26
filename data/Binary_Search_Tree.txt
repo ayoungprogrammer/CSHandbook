@@ -22,11 +22,9 @@ In a binary search tree, everything to the left of a node is smaller than that n
 
 {{bst.png}}
 
-This implementation of a binary search will be unbalanced. For a balanced binary search tree, see [[AVL trees|AVL Tree]] and [[Red Black trees|Red Black Trees]].
-
 ### Implementation
 
-A Node is a node in our tree set. Each node will contain a left subtree, a right subtree, the parent of the tree and the value stored at that node. It is unnecessary to store the parent but for this implementation it will be easier to keep track of the parent.
+A Node is a node in our tree set. Each node will contain a left subtree, a right subtree, the parent of the tree and the value stored at that node. It is unnecessary to store the parent, but for this implementation it will be easier to keep track of the parent.
 
 replaceChild replaces the left or right child node specified with the replacement node. 
 
@@ -141,7 +139,7 @@ public boolean insert(int x) {
 
 ## Contains
 
-To check if the tree set contains an element, we search for it in the binary tree by starting at the root. If the number is less than the current, we search the left child. If the number is greater than the current, we search the right child. 
+To check if the tree set contains an element, we search for it in the binary tree by starting at the root. If the number is less than the current, we search the left subtree. If the number is greater than the current, we search the right subtree. 
 
 We want to check if the number 6 is in the binary search tree. 
 

@@ -10,8 +10,8 @@ Heaps store their data level by level in a binary tree. This allows us to store 
 
 [[[[{lang-html}
 root = 0
-left = index * 2 + 1
-right = index * 2 + 2
+leftChild = index * 2 + 1
+rightChild = index * 2 + 2
 parent = (index - 1)/2
 ]]]]
 
@@ -28,7 +28,7 @@ A heap has two operations: push and pop. Pushing an element into a heap adds it 
 
  Operation  | Resize | Push | Pop | Heapify
 -----------|---------|--
-Time Complexity | O(n)| O(n) | O(log n) | O(n)
+Time Complexity | O(n)| O(log n) | O(log n) | O(n)
 
 
 ## Class
@@ -121,7 +121,7 @@ public void push(int x) {
 
 ## Pop
 
-Popping removes the greatest element in the priority queue by removing the root which is guaranteed to be the greatest as property of a heap. After removing the root, we replace it with the element at the bottom of the heap and we can keep swapping it with its children until the heap property is satisfied.
+Popping removes the greatest element in the heap. Since the root is guaranteed to be the greatest element as a property of a heap, we remove it and return that element. After removing the root, we replace it with the element at the bottom of the heap and we can keep swapping it with its children until the heap property is satisfied.
 
 Let's do an example of where we pop from a heap. We want to remove the root of the heap and replace it with the last element of the heap.
 
@@ -197,7 +197,7 @@ public int pop() {
 
 ## Heapify
 
-Heapify takes a random array of N elements and transforms it into a heap. The runtime of heapify is O(n).
+Heapify takes a random array of N elements and transforms it into a heap in the same array. The runtime of heapify is O(n) and the proof of that is beyond the scope of this article.
 
 [[[[
 public void heapify(int arr[]) {
@@ -212,5 +212,4 @@ public void heapify(int arr[]) {
 ## Exercises
 
 1. Implement a min heap in Java.
-2. Prove the runtime of heapify is O(n).
-3. Write a function that checks if an array is a heap. 
+2. Write a function that checks if an array is a heap. 

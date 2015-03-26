@@ -17,6 +17,6 @@ Type  | Membership | Insertion | Deletion
 
 1. Given a list of words, determine how many of them are anagrams of each other. An anagram is a word that can have its letters scrambled into another word. 
   * For example silent and listen are anagrams but banana and orange are not.
-2. Given two lists of friends, find the number of mutual friends.
+2. Given friend lists of two people, find the number of mutual friends.
 3. Given a list of numbers, find the number of tuples of size 4 that add to 0. 
   * For example in the list (10,5,-1, 3, 4, -6) the tuple of size 4 (-1,3,4-6) adds to 0.

@@ -21,13 +21,13 @@ Recurrence:
 Generate next partial solution thats growing to full solution
 
 backtrack(solution):
-    if reject(solution)
-        stop
+  if reject(solution)
+    stop
 
-    if base case
-       stop
+  if base case
+    stop
 
-    backtrack( next_solution ) for next_solution from solution
+    backtrack( next_solution ) for next_solution
 
 Initial:
 backtrack( empty_solution)
@@ -296,26 +296,29 @@ queen(0,[3,0,2,3],[6,2,3,3],[3,5,2,0]) x-- reject
 Here is a Java implementation of counting the number of ways to place 8 queens on board.
 
 [[[[
-public static int nqueen(int col, boolean row[], boolean d1[], boolean d2[]) {
+public int nqueen(int col, boolean row[], boolean d1[], boolean d2[]) {
+  
+  int n = row.length;
+  
   // Base case if 8 queens are placed.
-  if (col >= 8) {
+  if (col >= n) {
     return 1;
   }
 
   int sum = 0;
 
-  for (int r = 0; r < 8; r++) {
-    if (!row[r] && !d1[r + col] && !d2[7 - r + col]) {
-      // Mark rows and diagonals as filled
+  for (int r = 0; r < n; r++) {
+    if (!row[r] && !d1[r + col] && !d2[n - 1 - r + col]) {
+      // Mark rows and diagonals as filled.
       row[r] = true;
       d1[r + col] = true;
-      d2[7 - r + col] = true;
-      // Backtrack positions
+      d2[n - 1 - r + col] = true;
+      // Backtrack positions.
       sum += nqueen(col + 1, row, d1, d2);
-      // Clear rows and diagonals
+      // Clear rows and diagonals.
       row[r] = false;
       d1[r + col] = false;
-      d2[7 - r + col] = false;
+      d2[n - 1 - r + col] = false;
     }
   }
   return sum;

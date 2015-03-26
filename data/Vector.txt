@@ -6,9 +6,9 @@
 
 A vector is a stack that is implemented as an array. It is very similar to an array, but it is more flexible in terms of size. Elements are added and removed only from the end of the array. When more elements are added to the vector and the vector is at full capacity, the vector resizes itself and reallocates for 2*N space. When using an vector we can keep adding elements and let the data structure handle all the memory allocation. 
 
- Operation | Get  | Push | Pop | Insert | Delete
+ Operation | Get  | Push | Pop | Insert 
 -----------|---------|--
-Time Complexity  | O(1) | O(1) | O(1) | O(n) | O(n)
+Time Complexity  | O(1) | O(1) | O(1) | O(n)
 
 ## Class
 There is a builtin Vector class already, but we will go through the implementation of a simple integer vector class to understand how the data structure works.
@@ -17,7 +17,6 @@ In our vector class, we need to store the element and the size of the current ve
 
 [[[[
 public class Vec {
-
   private int[] arr;
   int size = 0;
 
@@ -35,11 +34,12 @@ Resize will be used to resize the current size of elements. We create a new arra
 
 [[[[
 public void resize() {
-  int[] new_arr = new int[2 * arr.length];
+  int[] newArr = new int[2 * arr.length];
+  // Copy to new array.
   for (int i = 0; i < size; i++) {
-    new_arr[i] = arr[i];
+    newArr[i] = arr[i];
   }
-  arr = new_arr;
+  arr = newArr;
 }
 ]]]]
 
@@ -75,11 +75,10 @@ public int pop() {
   return ret;
 }
 ]]]]
+
 ## Remove
 
-Removes element at the index idx. It will throw an exception if the index is out of bounds.
-
-We shift everything to the right of the index to the left by one to fill in the missing element.
+Removes element at index and shift element to the right of it to the left by one.
 
 {{vector4.png}}
 
@@ -141,4 +140,5 @@ public void insert(int idx, int x) {
 
 ## Exercises
 
-1. Implement removeAtIndex(int index) for Vector.
+1. Implement add(Vector v) to the Vector class, which adds all the elements of v to the current vector.
+2. Implement remove(Integer i) that finds the element i and removes it from the current vector.

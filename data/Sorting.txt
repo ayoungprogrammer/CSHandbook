@@ -10,7 +10,7 @@ and we want to sort by the first property in increasing order, we will have:
 
 (1, G) (1,B) (3,G), (3,A) (6 K). 
 
-If we sort again by the second property we have (1,B) (3, A) (1, G) (3, G) (6,K) then the sort is stable as the first sort is preserved. However if we had (1,B) (3, A) (3, G) (1, G) (6, K), then the sort would be unstable. 
+If we sort again by the second property we have (1,B) (3, A) (1, G) (3, G) (6,K) then the sort is stable as the first sort is preserved. However, if we had (1,B) (3, A) (3, G) (1, G) (6, K), then the sort would be unstable. 
 
 ##Slow Sorts
 
@@ -27,9 +27,9 @@ Slow sorts are sorts that have the runtime of O(n^^2^^). Although they should al
 Fast sorts are sorts that have a runtime of O(nlogn). They are very fast and you will usually use merge sort or quick sort for sorting in the real world. Most language will have their own implementation of a quick sort or merge sort in their standard libraries. 
  Name | Runtime
 -|-
-[[Heap Sort]] | O(nlogn)
-[[Merge Sort]] | O(nlogn)
-[[Quick Sort]] | O(nlogn)
+[[Heap Sort]] | O(n log n)
+[[Merge Sort]] | O(n log n)
+[[Quick Sort]] | O(n log n)
 
 ## Super Slow Sorts
 Just for fun, these are some silly sorts that you should never use.
@@ -44,4 +44,4 @@ Just for fun, these are some silly sorts that you should never use.
 1. Given two sorted arrays of N numbers, merge the two arrays into an single array of size 2N.
 2. Find the minimum number of swaps to sort an array.
 3. Find the minimum number of adjacent swaps to sort an array.
-4. A flip is when you reverse all the elements in an array from the beginning to some element. Devise an algorithm for flipping that sorts an array.
+4. Let flip(int[] arr, int x) be a function that reverses all elements from arr[0..x]. Devise a function that sorts the array.

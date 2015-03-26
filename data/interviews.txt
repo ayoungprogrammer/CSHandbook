@@ -7,7 +7,7 @@ From personal experience, I know that programming interviews can be quite stress
 	However, in later interviews, I became more accustomed to the process and became more 
 	comfortable with the interviewer. As you do more interviews in your life, you will be
 	less nervous and become more confident in your abilities. The more prepared you are, the 
-	more likely your chances of success in the interview room. Below you will find a small guide
+	more likely your chances of success in the interview room. In this section, you will find a small guide
 	to rocking the interview!
 
 ## Resume
@@ -17,20 +17,18 @@ Resumes are key to getting any interview in the first place and your resume shou
  * Have either one or two pages exactly
  * GPA doesn't matter unless it's low
  * Your school is not very important
- * Interviews will all have varying weights on importance for:
-    * Projects
-    * ACM / TopCoder / Programming Contests
- * Github with good projects helps to show off your abilities
+ * Github with interesting side projects show your interest
+ * ACM / TopCoder / Programming Contests show your abilities
  * Put relevant work experience (marketing at a tech company doesn't show anything)
 
 ## Before the Interview
 
-Preparation is key for interviews. You can be as charming and confident as you want, but
+Preparation is the most important thing you can do for interviews. You can be as charming and confident as you want, but
 	if you cannot solve their problems, your application will quickly be discarded. When you 
 	are given a problem, there is a chance you have solved or read about a solution to the
-	problem. Hence, the more prepared you are, the more likely you will already have a 
-	solution. The sections in this handbook that come up often are: all of [[Data Structure]],
-	[[Advanced Recursion]], [[Binary Search]] and [[Strings]]. If you cover those topics, you should be set 
+	problem. Hence, the more prepared you are, the more likely you can come up with a 
+	solution. The sections in this handbook that come up the most are: everything in [[Data Structures]],
+	[[Advanced Recursion]] and [[Binary Search]]. If you cover those topics, you should be set 
 	for most interviews. However, if you are interviewing for higher end companies, you may need to learn
 	a lot more. In some interviews, you will be asked to code your solution, therefore I suggest you 
 	get very familiar with a language and become very proficient in it. You should know how to 
@@ -39,13 +37,13 @@ Preparation is key for interviews. You can be as charming and confident as you w
 
 There are two types of interviews I have encountered: phone/Skype interviews and in person. 
 	If given a choice, in person is always preferable. When you doing an in person interview, 
-	you are able to better communicate with your interviewer and build a rapport. You will also be 
+	you are able to communicate better with your interviewer and build a rapport. You will also be able to
 	show your thought process on paper which is easier to do than via phone or Skype. Additionally, 
 	depending on the company, if they fly you down to their headquarters for the interview, 
 	you'll get a free trip!
 
 If the company you are interviewing for is a startup, you can dress casually. Otherwise, if the
-	company is more corporate, then you might want to dress a little more formally. 
+	company is more corporate, then you may want to dress a little more formally. 
 
 ## During the Interview - Part 1: Behavioural
 
@@ -57,23 +55,24 @@ The interview usually starts with introductions and then the interviewer will us
 	as you are able to focus a large chunk of your time on a single project). During this first part of the interview,
 	try to build a better rapport with the interviewer. You should be passionate about the work you have done
 	and hopefully your interviewer is equally passionate about their own work and be able to relate to you. 
-	Essentially, in this part of the interview, you need to convince your interviewer that you are a likeable person. 
+	Essentially, in this part of the interview, you need to convince your interviewer that you are a likeable person and 
+that they can work with you. 
 
-Like any normal interview, try to maintain eye contact and good posture. Ask the interviewer some questions about their position and projects they are working on. Be interested in and listen to what they have to say. 
+Like any normal interview, try to maintain eye contact and good posture. Ask the interviewer some questions about their position and projects they are working on. Listen and be interested in to what they have to say. 
 
 ## During the Interview - Part 2: Technical
 
 The second part of the interview usually consists of technical problems. If you are expected to code
-	the solution, you should expect 1 medium to difficult problem (30-45 min) and possibly an easy problem 
+	the solution, you should expect a medium to difficult problem (30-45 min) and possibly an easy problem 
 	(5-10 minutes). (Exception of Google, does 3-4 problems). If you are not coding, then you should expect
-	3-4 problems where you need to describe the solution. 
+	3-4 problems where you will need to describe the solution. 
 
 ### Step 1 - Analyzing the Problem
 
 *1-2 minutes*
 
 When given the problem, make sure you read through 
-	the problem carefully and that you understand the specifications. Ask your interviewer if you are unsure 
+	the problem carefully and that you understand the specifications. Ask your interviewer for clarification if you are unsure 
 	of anything. 
 
 ### Step 2 - Find a solution
@@ -81,12 +80,12 @@ When given the problem, make sure you read through
 *5-10 minutes*
 
 Now that you understand the problem, ask yourself if you've seen this problem before or 
-	any similar problem. If you have, then you should also remember the solution and you're in luck! 
+	any similar problem. If you have, then you should also remember a solution or similar solution and you're in luck! 
 	However, if you don't remember the solution or have not seen the problem before, then you will
-	need to think out the solution. First start with the naive solution which is usually bruteforce. 
+	need to think out the solution. First, start with the naive solution which is usually a bruteforce method. 
 	An inefficient solution is better then no solution. Once you have that, start working towards a 
 	more optimal solution. You should be thinking aloud and letting the interviewer see your thought process. 
-	You can write down your solutions on paper so that it can be more clear to the interviewer. You should be able
+	You should write down your solutions on paper so that it can be more clear to the interviewer what you are trying to do. You should be able
 	to explain why your solution is more efficient than another and why it works. If your solution 
 	is wrong, the interviewer may stop you and you should quickly find the mistake and determine
 	why it is wrong. Keep going as far as you can without letting the interviewer help you. If you are stuck,

@@ -113,7 +113,7 @@ We move N-2 discs from the helper pole to the destination pole.
 
 {{hanoi2.png}}
 
-As we can see, the steps to move N discs are exactly the same as to move N-1 discs! The only difference is that the actual poles are different but the steps are the same relative to their roles (starting, helper and destination). We are solving a reduced version of the same problem and so have a recurrence. 
+As we can see, the steps to move N discs are exactly the same as to move N-1 discs! The only difference is that the actual poles are different but the steps are the same relative to their roles (starting, helper and destination). We are solving a reduced version of the same problem, thus we have a recurrence. 
 
 In Step 1, when we move N-1 discs from start to helper, the new helper is the old destination and the new destination is the old helper.
 
@@ -121,14 +121,14 @@ In Step 3, when we move N-1 discs from the helper to the destination, the new he
 
 ### Formalization
 [[[[{lang-html}
-Let hanoi(N,start,helper,dest) be the steps to move N discs from the start to dest
+Let hanoi(N, start, helper, dest) print the steps to move N discs from the start to dest
 
 Base case:
-hanoi(1,start,helper,dest):
+hanoi(1, start, helper, dest):
   print "Move from (start) to (dest)"
 
 Recurrence:
-hanoi(N,start,helper,dest):
+hanoi(N, start, helper, dest):
   hanoi(N - 1, start, dest, helper)
   print "Move from start to dest"
   hanoi(N - 1, helper, start, dest)
@@ -269,12 +269,12 @@ Insert C for all positions for all permutations
 * B,C,A
 * C,B,A
 
-We see that we are solving the same reduced problem thus we have a recurrence relation. To get the permutations of a string N, we take the string[1..N-1] and we insert the Nth character at every position for each permutation of the N-1 substring. The base case of an empty string is simply an empty string. Permutation of an empty string is an empty list.
+For simplicity, S[i..j] will mean the substring from i inclusive to j exclusive. For example, if S = "abcd", S[0] = 'a' and S[1..4] = "bcd".
 
-For simplicity, S[i..j] will mean the substring from including i to excluding j.
+We see that we are solving the same reduced problem, thus we have a recurrence relation. To get the permutations of a string N, we take the string[0..N-1] and we insert the Nth character at every position for each permutation of the N-1 substring. The base case is an empty string. Permutation of an empty string is an empty list.
 
 [[[[{lang-html}
-Let permute(S) be the list of permutations for the string S of length N
+Let permute(S) be a list of permutations for the string S
 
 Let insertAll(ch, stringArr) be a function that inserts the character ch in every position in every string stringArr.
 
@@ -285,7 +285,7 @@ Base case:
 permute("") = [""]
 
 Recurrence:
-Let N = length of string S
+Let N be the length of string S
 permute(S) = insertAll(S[0], permute(S[1..N]) )
 
 Example:
@@ -314,11 +314,13 @@ Vector<String> insertAll(char ch, Vector<String> strArr) {
 
 Vector<String> permutation(String s) {
   int n = s.length();
+  // Base case of one empty string.
   if (n == 1) {
     Vector<String> vec = new Vector<String>();
     vec.add(s.substring(0, 1));
     return vec;
   }
+  // Recursive relation.
   return insertAll(s.charAt(0), permutation(s.substring(1)));
 }
 
@@ -331,3 +333,4 @@ permutation("abc");
 
 1. Given a string S, write a recursive function to generate all its non-empty substrings.
 2. Write a solution for hanoi towers but with the restriction that discs can only be moved from adjacent poles. (You can move a disc from A to B but not A to C because they are not adjacent).
+3. Write the formalization and code for a recursive insertAll(ch, stringArr).

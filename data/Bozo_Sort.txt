@@ -2,7 +2,7 @@
 
 Bozo sort is a sort that keeps randomly arranging an array until it is sorted. This sort should never been used.
 
-## Implementation
+### Implementation
 
 [[[[
 boolean sorted(int[] arr) {

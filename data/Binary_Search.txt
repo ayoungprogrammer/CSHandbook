@@ -1,13 +1,13 @@
 ## Introduction
 
-Binary search is a type of search that is able to find an object in a sorted list in O(log n). In binary search we first start at the middle element and we keep trying to halve the problem until we find the number.
+Binary search is a type of search that is able to find an object in a sorted list in O(log n). In binary search, we first start at range and we keep trying to halve the problem until the range is narrowed down to a solution.
 
 {{binarysearch.png}}
 
 ## Example
-For example if I told you I had a number form 1 to 100 and I told you if your guess was higher or lower than my number you could use binary search to find it.
+For example, suppose we have a game where I told you I had a number from 1 to 100 and you would keep guessing a number. Every time you guessed, I would tell you if my number was higher or lower than your guess. We could use binary search to solve this problem in the most efficient way.
 
-Eg: my number = 17
+If my number was 17:
 
 * You guess: 50
 * I say lower.
@@ -89,4 +89,4 @@ public static boolean exists(int[] arr, int x) {
     Example: 1, 2, 4, 6, 8, 10, 16, 20. Given A=5 and B=15, the number of elements between A and B is 3 (6, 8, 10).
 2. Given two sorted arrays, find the number of duplicate elements.
 3. Given two decimal numbers A and B, find A/B without using the division operation or using decimals.
-4. Write a square root function that uses binary search.
+4. Write a square root function accurate to four decimal places that uses binary search.

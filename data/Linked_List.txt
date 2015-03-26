@@ -24,7 +24,7 @@ A **doubly linked list** is a linked list that has pointers going backwards as w
 
 In Java, there already exists a LinkedList class but we will implement our own.
 
-The Link class for each "link" in the Linked List. In each Link we only need the value and location of the previous and next node. 
+We need a Link class for each "link" in the Linked List. In each Link we only need the value and location of the previous and next node. 
 
 [[[[
 class Link {
@@ -40,7 +40,7 @@ class Link {
 
 ## LinkedList Class
 
-Create the linked list by initializing the starting node as null and setting the size to empty.
+Create the linked list by initializing the starting node and ending node as null and setting the size to empty.
 [[[[
 public class LinkedList {
 
@@ -82,7 +82,7 @@ public void push(int value) {
 
 ## Pop
 
-Pops off the node at the head.
+Pops off the head of the linked list and throws an exception if the linked list is empty.
 
 {{linkedlistpop.png}}
 
@@ -105,7 +105,7 @@ public int pop() {
 
 ## Get 
 
-Get retrieves the value at the specified index. We have to loop through the entire list to get the index we want because the nodes are not in the same block of memory.
+Get retrieves the value at the specified index. We have to loop through the entire list to get to the index we want.
 
 {{linkedlistget.png}}
 
@@ -130,7 +130,7 @@ public int get(int index) {
 
 ## Delete
 
-To delete the current node we set the previous node next link to the link after.
+To delete the current node we set the previous node next link to the link that is next.
 
 {{linkedlistrem.png}}
 
@@ -149,7 +149,7 @@ public void deleteNext(Link node) {
 ## Exercises
 
 1. Implement a doubly linked list.
-2. A game is played by always eliminating the kth player from the last elimination and played until one player is left. Given N players each assigned to a number, find the number of the last player.
+2. A game is played by always eliminating the kth player from the last elimination and played until one player is left. Given N players where each is assigned to a number, find the number of the last remaining player.
     
     For example, you have 5 players (1,2,3,4,5) and the 3rd player is eliminated. 
     * 1, 2, 3, 4, 5 
@@ -158,5 +158,6 @@ public void deleteNext(Link node) {
     * 2, 4 (2, 4, 5 is eliminated)
     * 2 (2, 4, 2 is eliminated)
     * Player 2 is the last one standing.
-3. Given two linked lists which may share tails, determine the point at which they converge.
+3. Given two linked lists which may share tails, determine the point at which they converge. For example, if our first linked list is [1,2,4,5] and our second linked list is [0,3,4,5] and each number is a node, then the two linked lists converge at 4. 
+  {{linked_list_converge.png}}
 4. Given a node in a doubly linked list, write a function that removes the node from the list. 

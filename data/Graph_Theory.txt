@@ -20,7 +20,7 @@ A **weighted** graph is a graph that contains weights or values assigned to each
 
 ## Representations
 
-A graph can be represented as a adjacency matrix or a adjacency list.
+A graph can be represented as a adjacency matrix or an adjacency list.
 
 ### [[Adjacency Matrix]]
 
