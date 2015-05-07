@@ -36,9 +36,9 @@ shortestPath(i,j) =  minimum of:
 ### Code
 
 [[[[
-class edge{
-  int weight,source,dest;
-  public edge(int source,int dest,int weight){
+class edge {
+  int weight, source, dest;
+  public edge(int source, int dest, int weight) {
     this.source = source;
     this.dest = dest;
     this.weight = weight;

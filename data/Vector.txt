@@ -28,7 +28,7 @@ public class Vec {
 
 ## Resize
 
-Resize will be used to resize the current size of elements. We create a new array of two times the size of the old one and copy the old array over.
+Resize will be used to resize the array to have twice the capacity. We create a new array of two times the size of the old one and copy the old elements over.
 
 {{vector3.png}}
 
@@ -78,7 +78,7 @@ public int pop() {
 
 ## Remove
 
-Removes element at index and shift element to the right of it to the left by one.
+Removes element at index and shifts all elements to the right of it to the left by one.
 
 {{vector4.png}}
 
@@ -99,7 +99,7 @@ public int remove(int idx) {
 
 ## Get Element
 
-Returns the element at the specified index. It will throw an exception if the index is out of bounds. Note this function is exactly as the same as in the [[array|Array]]
+Returns the element at the specified index. It will throw an exception if the index is out of bounds.
 
 {{vectorget.png}}
 
@@ -114,9 +114,11 @@ public int get(int idx) {
 
 ## Insert Element
 
-Insert the new number x at the index. We need to make space at the index for the new element so we shift everything to the right of the index by 1.
+Insert the new number x at the index. 
 
 {{vectorinsert.png}}
+
+We need to make space for the new element so when we insert the element, we have to shift all the elements to the right of the index by 1.
 
 {{vectorinsert2.png}}
 
@@ -130,10 +132,12 @@ public void insert(int idx, int x) {
     resize();
   }
   int idx2 = size;
+  // Shift elements to the right.
   while (idx2 > idx) {
     arr[idx2] = arr[idx2 - 1];
     idx2--;
   }
+  // Insert element.
   arr[idx] = x;
 }
 ]]]]

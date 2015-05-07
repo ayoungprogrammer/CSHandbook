@@ -5,14 +5,14 @@
   \usepackage{tabulary}
   \usepackage{color}
   \usepackage{float}                  % make images stay
-  \usepackage[numbered]{bookmark} 		% add pdf bookmarks
-  \usepackage[parfill]{parskip} 			% remove indents
+  \usepackage[numbered]{bookmark}     % add pdf bookmarks
+  \usepackage[parfill]{parskip}       % remove indents
   \usepackage[paperwidth=6.125in, paperheight=9.250in]{geometry}
 
   \title{The Computer Science Handbook}
   \author{Michael Young}
 
-  \definecolor{dkgreen}{rgb}{0,0.6,0}
+  \definecolor{dkgreen}{rgb}{0.25,0.25,0.25}
   \definecolor{gray}{rgb}{0.5,0.5,0.5}
   \definecolor{mauve}{rgb}{0.58,0,0.82}
   \lstset{
@@ -165,10 +165,6 @@ Now that you have a solution, you need to prove to the interviewer that you can 
 
 Hopefully you have time left before the interview (otherwise, you took too long for the technical part). Ask your interviewer about projects at the company to get a feel of what will interest you. Ask them any other questions you have about the position like any other interview. When you leave, thank the interviewer for their time, put on a smile and shake their hand. Ultimately, the outcome of the interview is determined by the amount of rapport you built with the interviewer, how capable you were at the technical problems and how enthusiastic you are. If all goes well, you will get the job, or you will get a second round of interviews meaning you get to repeat the same process with another interviewer! Good luck!
 
-\subsection{Practice Problems}
-
-Exercises
-
 \part{ Fundamentals }
     \chapter{ Fundamentals }
         
@@ -187,7 +183,7 @@ Processing time and memory are two primary resources that computer programs use 
 
 There are many different methods of implementing different things but most of the time we care most about implementations that are the fastest and use the least amount of memory. Let's go through some basic benchmarks about computers that you should know. Adding two numbers takes a nanosecond (1 billionth of a second) for an average computer to process as of this date of writing. For practical purposes, we'll assume that the average computer program can hold up to 1GB or RAM or about 250 million integers.
 
-\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\begin{center}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Memory &
@@ -198,7 +194,7 @@ There are many different methods of implementing different things but most of th
   1 GB (250,000,000 ints) &
   1,000,000,000 operations\\
 
-\hline\end{tabulary}
+\hline\end{tabulary}\end{center}
 
 \subsection{Big O Notation}
 
@@ -206,11 +202,11 @@ When we compare how efficient algorithms or data structures are to another, we w
 
 Here is a list of common Big O notations based on complexity:
 
-\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\begin{center}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Big O &
-  Limit of N for 1 second (Standard processor)\\
+  Limit of N for 1 second\\
 \hline
 
 
@@ -238,7 +234,7 @@ Here is a list of common Big O notations based on complexity:
   O(N!) Factorial Time &
   11\\
 
-\hline\end{tabulary}
+\hline\end{tabulary}\end{center}
 
 Keep in mind that in a couple of years as technology improves, this chart will be outdated.
 
@@ -380,7 +376,12 @@ Note that although the two approaches do the same thing, they have different com
 \subsection{Exercises}
 
 \begin{enumerate}
-\item 
+\item Determine the runtime and memory complexities of finding the average of an array.
+\item Determine the runtime and memory complexities of adding two NxN matrices together.
+\item Determine the runtime complexity of guessing a N digit numeric password.
+\item Determine the runtime complexity of summing the digits of a number.
+\item Determine the memory complexity of counting the occurrences of letters in a book.
+\item Determine the memory complexity of counting the occurrences of words in a book.
 \end{enumerate}
 
 \part{ Recursion }
@@ -508,7 +509,7 @@ sum(string) = int(string[0]) + sum(string[1..n])
 
 Example:
 sum("23528")
-= 2 + sum("3528"')
+= 2 + sum("3528")
 = 2 + ( 3 + ( sum("528") )
 = 2 + ( 3 + ( 5 + sum ("28") ) )
 = 2 + ( 3 + ( 5 + ( 2 + sum("8") ) ) ) )
@@ -1049,9 +1050,8 @@ permutation("abc");
 \end{enumerate}
 
 \part{ Data Structures }
+    \subsubsection{ Introduction }
     
-
-Next: Advanced Data Structures
 
 Data structures are different ways of storing data such that they optimize certain data operations such as retrieval and insertion. Although many of these data structures are already built into various languages, it is important to understand how they work. By understanding the implementations, we can have a sense of which data structure to use for different scenarios.
 
@@ -1095,6 +1095,24 @@ Stacks are used to keep track of function calls in memory. Whenever a function i
 A stack is usually implemented as a vector.
 
 
+        
+
+\begin{center}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+
+
+  Implementation &
+  Pop &
+  Push\\
+\hline
+
+
+  Vector &
+  O(1) &
+  O(1)\\
+
+\hline\end{tabulary}\end{center}
+
+
         \section{ Vector }
         
 
@@ -1104,7 +1122,7 @@ Prerequisites: Arrays, Stack
 
 A vector is a stack that is implemented as an array. It is very similar to an array, but it is more flexible in terms of size. Elements are added and removed only from the end of the array. When more elements are added to the vector and the vector is at full capacity, the vector resizes itself and reallocates for 2*N space. When using an vector we can keep adding elements and let the data structure handle all the memory allocation.
 
-\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\begin{center}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Operation &
@@ -1121,7 +1139,7 @@ A vector is a stack that is implemented as an array. It is very similar to an ar
   O(1) &
   O(n)\\
 
-\hline\end{tabulary}
+\hline\end{tabulary}\end{center}
 
 \subsection{Class}
 
@@ -1244,6 +1262,8 @@ Insert the new number x at the index. We need to make space at the index for the
         \includegraphics[width=0.66\maxwidth{\textwidth}]{vectorinsert.png}
         \end{figure}
 
+When we insert the new element, we have to shift all the elements to the right of it by 1.
+
 \vspace{5px}\begin{figure}[H]\centering
         \includegraphics[width=0.66\maxwidth{\textwidth}]{vectorinsert2.png}
         \end{figure}
@@ -1319,9 +1339,9 @@ Example of pop:
 
         
 
-We can implement a queue most efficiently using a linked list because it has an efficient memory allocation.
+We can implement a queue most efficiently using a linked list because it uses efficient memory allocation.
 
-\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\begin{center}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Implementation &
@@ -1334,7 +1354,7 @@ We can implement a queue most efficiently using a linked list because it has an 
   O(1) &
   O(1)\\
 
-\hline\end{tabulary}
+\hline\end{tabulary}\end{center}
 
 
         \section{ Linked List }
@@ -1360,7 +1380,7 @@ A doubly linked list is a linked list that has pointers going backwards as well 
         \includegraphics[width=0.66\maxwidth{\textwidth}]{doublelinkedlist.png}
         \end{figure}
 
-\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\begin{center}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Operation &
@@ -1377,7 +1397,7 @@ A doubly linked list is a linked list that has pointers going backwards as well 
   O(1) &
   O(1)\\
 
-\hline\end{tabulary}
+\hline\end{tabulary}\end{center}
 
 \subsection{Link Class}
 
@@ -1571,6 +1591,34 @@ For example, you have 5 players (1,2,3,4,5) and the 3rd player is eliminated.
 \item Given a node in a doubly linked list, write a function that removes the node from the list. 
 \end{enumerate}
 
+        \section{ Exercises }
+        
+
+\begin{enumerate}
+\item Given a list of letters representing instructions where the first instruction is executed, output what the final list should look like after N instructions are executed.
+
+First instruction:
+
+\begin{itemize}
+\item A. Add B to the end of the list of instructions
+\item B. Do nothing
+\item C. Add two A's to the front of the list of instructions
+\end{itemize}
+
+Example:
+
+\begin{itemize}
+\item ABC
+\item BCB
+\item CB
+\item AAB
+\item ABB
+\item BBB
+\item BB
+\item B
+\end{itemize}
+\end{enumerate}
+
     \chapter{ Sets }
         \section{ Sets }
         
@@ -1581,9 +1629,10 @@ Imagine you have a grocery list that you use to keep tracking of things you need
 
 Sets have three operations: insertion, deletion and a membership test. Insertion places an element into the set, deletion removes an element from the set and a membership test is checking whether an element exists within the set.
 
-\subsection{Implementation}
 
-\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+        
+
+\begin{center}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Type &
@@ -1593,33 +1642,18 @@ Sets have three operations: insertion, deletion and a membership test. Insertion
 \hline
 
 
-  Tree Set &
-  O(log n) &
-  O(log n) &
-  O(log n)\\
-
   Hash Set &
   O(1) &
   O(1) &
   O(1)\\
 
-\hline\end{tabulary}
+  Tree Set &
+  O(log n) &
+  O(log n) &
+  O(log n)\\
 
-\subsection{Exercises}
+\hline\end{tabulary}\end{center}
 
-\begin{enumerate}
-\item Given a list of words, determine how many of them are anagrams of each other. An anagram is a word that can have its letters scrambled into another word. 
-
-\begin{itemize}
-\item For example silent and listen are anagrams but banana and orange are not.
-\end{itemize}
-\item Given friend lists of two people, find the number of mutual friends.
-\item Given a list of numbers, find the number of tuples of size 4 that add to 0. 
-
-\begin{itemize}
-\item For example in the list (10,5,-1, 3, 4, -6) the tuple of size 4 (-1,3,4-6) adds to 0.
-\end{itemize}
-\end{enumerate}
 
         \section{ Hash Set }
         
@@ -1642,7 +1676,7 @@ If we want to check if an element already exists within the set, we first comput
         \includegraphics[width=0.66\maxwidth{\textwidth}]{hashset.png}
         \end{figure}
 
-\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\begin{center}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Operation &
@@ -1657,7 +1691,7 @@ If we want to check if an element already exists within the set, we first comput
   O(1) &
   O(1)\\
 
-\hline\end{tabulary}
+\hline\end{tabulary}\end{center}
 
 \subsection{Class}
 
@@ -1856,29 +1890,27 @@ public boolean remove(int x) {
 \begin{enumerate}
 \item Devise a better hashing algorithm for strings.
 \item Calculate the probability of a collision occurring given the number of buckets and number of elements in the hash set.
-\item Given an array of numbers, find the number of pairs of numbers that sum to 0.
-\item Given an array of numbers and a number A, find the number of pairs of numbers that sum to A.
-\item Given an array of numbers and a number A, find the number of quadruples that sum to A.
+\item Prove that the runtime of all the operations are O(1).
 \end{enumerate}
 
-        \section{ Binary Search Tree }
+        \section{ Tree Set }
         
 
-Prerequisites: Set, Binary Tree
+Prerequeisites: Sets, Binary Search Tree
 
-A binary search tree is a  binary tree with special properties. The left children of a node will always be less than the node and the right children of a node will always be more than the node. It has a recursive structure such that every subtree is also a binary search tree.
 
-\vspace{5px}\begin{figure}[H]\centering
-        \includegraphics[width=0.66\maxwidth{\textwidth}]{bstcompare.png}
-        \end{figure}
 
-Example:
+A tree set is a set which stores the values in a binary search tree. To store elements in a tree set, they must be able to be sorted by a property. To insert an element, it is added to the binary tree. To delete an element, it is removed from the binary tree. To check for membership, we do a binary search for the element in the binary tree.
+
+The advantage of tree sets is that they are maintained in a sorted order.
+
+Tree Sets are implemented using binary search trees.
 
 \vspace{5px}\begin{figure}[H]\centering
         \includegraphics[width=0.66\maxwidth{\textwidth}]{bst.png}
         \end{figure}
 
-\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\begin{center}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Operation &
@@ -1893,15 +1925,61 @@ Example:
   O(log n) &
   O(log n)\\
 
-\hline\end{tabulary}
+\hline\end{tabulary}\end{center}
+
+\subsection{Exercises}
+
+\begin{enumerate}
+\item Given a list of names, output all the unique names in alphabetical order
+\end{enumerate}
+
+        \section{ Binary Search Tree }
+        
+
+Prerequisites: Set, Binary Tree
+
+A binary search tree is a  binary tree with special properties. The left children of a node will always be less than the node and the right children of a node will always be more than the node. It has a recursive structure such that every subtree is also a binary search tree.
+
+Structure:
+
+\vspace{5px}\begin{figure}[H]\centering
+        \includegraphics[width=0.66\maxwidth{\textwidth}]{bstcompare.png}
+        \end{figure}
+
+Example:
+
+\vspace{5px}\begin{figure}[H]\centering
+        \includegraphics[width=0.66\maxwidth{\textwidth}]{bst.png}
+        \end{figure}
+
+\begin{center}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+
+
+  Operation &
+  Membership &
+  Insertion &
+  Deletion\\
+\hline
+
+
+  Time Complexity &
+  O(log n) &
+  O(log n) &
+  O(log n)\\
+
+\hline\end{tabulary}\end{center}
 
 \subsection{Class}
 
 In a binary search tree, everything to the left of a node is smaller than that node and everything to the right of that node is greater than that node.
 
+Structure:
+
 \vspace{5px}\begin{figure}[H]\centering
         \includegraphics[width=0.66\maxwidth{\textwidth}]{bstcompare.png}
         \end{figure}
+
+Example:
 
 \vspace{5px}\begin{figure}[H]\centering
         \includegraphics[width=0.66\maxwidth{\textwidth}]{bst.png}
@@ -2254,44 +2332,22 @@ public String toString() {
 \item Write a function to determine if a binary tree is a binary search tree.
 \end{enumerate}
 
-        \section{ Tree Set }
+        \section{ Exercises }
         
 
-Prerequeisites: Sets, Binary Search Tree
-
-
-
-A tree set is a set which stores the values in a binary search tree. To store elements in a tree set, they must be able to be sorted by a property. To insert an element, it is added to the binary tree. To delete an element, it is removed from the binary tree. To check for membership, we do a binary search for the element in the binary tree.
-
-The advantage of tree sets is that they are maintained in a sorted order.
-
-Tree Sets are implemented using binary search trees.
-
-\vspace{5px}\begin{figure}[H]\centering
-        \includegraphics[width=0.66\maxwidth{\textwidth}]{bst.png}
-        \end{figure}
-
-\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
-
-
-  Operation &
-  Membership &
-  Insertion &
-  Deletion\\
-\hline
-
-
-  Time Complexity &
-  O(log n) &
-  O(log n) &
-  O(log n)\\
-
-\hline\end{tabulary}
-
-\subsection{Exercises}
-
 \begin{enumerate}
-\item Given a list of names, output all the unique names in alphabetical order
+\item Given a list of words, determine how many of them are anagrams of each other. An anagram is a word that can have its letters scrambled into another word. 
+
+\begin{itemize}
+\item For example silent and listen are anagrams but banana and orange are not.
+\end{itemize}
+\item Given friend lists of two people, find the number of mutual friends.
+\item Given an array of numbers, find the number of pairs of numbers that sum to 0.
+\item Given a array of numbers, find the number of tuples of size 4 that add to A.
+
+\begin{itemize}
+\item For example in the list (10,5,-1, 3, 4, -6) the tuple of size 4 (-1,3,4-6) adds to 0.
+\end{itemize}
 \end{enumerate}
 
     \chapter{ Maps }
@@ -2306,36 +2362,31 @@ Imagine you had a English dictionary. If you look up a word, you can find it's d
 
 Maps (also called dictionaries) are abstract data types that store pairs of key-values and can be used to look up values from the keys. The keys are like the words in an English dictionary and the definitions can be seen as the values. Maps are able to support insertion of key-value pairs, retrieve values from keys, and delete key-value pairs.
 
-\subsection{Implementation}
 
-\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+        
+
+\begin{center}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Type &
   Get &
-  Insertion &
+  Put &
   Deletion\\
 \hline
 
-
-  Tree Map &
-  O(log n) &
-  O(log n) &
-  O(log n)\\
 
   Hash Map &
   O(1) &
   O(1) &
   O(1)\\
 
-\hline\end{tabulary}
+  Tree Map &
+  O(log n) &
+  O(log n) &
+  O(log n)\\
 
-\subsection{Exercises}
+\hline\end{tabulary}\end{center}
 
-\begin{enumerate}
-\item Given a list of N strings, output the strings in alphabetical order and the number of times they appear in the list.
-\item Given a mapping of a id to a name, output the ids in order by lexicographical name.
-\end{enumerate}
 
         \section{ Hash Map }
         
@@ -2344,11 +2395,24 @@ Prerequisites: Map, Hash Set
 
 
 
-Hash maps are maps that use hash sets to store the keys.
+Hash maps are maps that use hash sets to store pairs of key values. Implementations of hash maps are very similar to hash sets.
 
-\subsection{Implementation}
+\begin{center}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
-Here is a Java implementation of a hash map which is a modified version of a hash set.
+
+  Type &
+  Get &
+  Put &
+  Deletion\\
+\hline
+
+
+  Hash Map &
+  O(1) &
+  O(1) &
+  O(1)\\
+
+\hline\end{tabulary}\end{center}
 
 \subsection{Class}
 
@@ -2505,7 +2569,7 @@ public boolean remove(int key) {
         \section{ Tree Map }
         
 
-Prerequeisites: Maps, Binary Search Tree
+Prerequisites: Maps, Binary Search Tree
 
 A tree map is a map which stores the values in a binary search tree. To store elements in a tree map, they must be able to be sorted by a property. To insert an element, it is added to the binary tree. To delete an element, it is removed from the binary tree. To check for membership, we do a binary search for the element in the binary tree.
 
@@ -2515,7 +2579,7 @@ The advantage of tree maps is that they are maps maintained in a sorted order.
         \includegraphics[width=0.66\maxwidth{\textwidth}]{bst.png}
         \end{figure}
 
-\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\begin{center}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Operation &
@@ -2530,9 +2594,9 @@ The advantage of tree maps is that they are maps maintained in a sorted order.
   O(log n) &
   O(log n)\\
 
-\hline\end{tabulary}
+\hline\end{tabulary}\end{center}
 
-Tree Maps are implemented using binary search trees. Since much of the code is the same, we will not go in depth in an implementation.
+Tree Maps are implemented using binary search trees. Since the implementation of a tree map is very similar to the implementation of a tree set, it will left as an exercise.
 
 \subsection{Exercise}
 
@@ -2540,7 +2604,16 @@ Tree Maps are implemented using binary search trees. Since much of the code is t
 \item Implement a Tree Map following the code of Binary Search Tree and Hash Map.
 \end{enumerate}
 
+        \section{ Exercises }
+        
+
+\begin{enumerate}
+\item Given a list of N strings, output the strings in alphabetical order and the number of times they appear in the list.
+\item Given a mapping of a id to a name, output the ids in order by lexicographical name.
+\end{enumerate}
+
     \chapter{ Priority Queue }
+        \section{ Priority Queue }
         
 
 Prerequisites: Queue, Heap
@@ -2553,9 +2626,10 @@ A priority queue is an abstract data structure with two operations: push and pop
 
 A priority queue is usually implemented as a heap because it is the most efficient implementation.
 
-\subsection{Implementation}
 
-\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+        
+
+\begin{center}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Implementation &
@@ -2568,14 +2642,8 @@ A priority queue is usually implemented as a heap because it is the most efficie
   O(log n) &
   O(log n)\\
 
-\hline\end{tabulary}
+\hline\end{tabulary}\end{center}
 
-\subsection{Exercises}
-
-\begin{enumerate}
-\item Given a list of N numbers, find the M largest numbers. (Note you can do better than O(N log N)).
-\item Given N lists of N numbers, find the N largest numbers.
-\end{enumerate}
 
         \section{ Heap }
         
@@ -2609,7 +2677,7 @@ Example Heap:
 
 A heap has two operations: push and pop. Pushing an element into a heap adds it into the heap and the heap needs to ensure that the properties of the heap still hold. Popping removes an element from the top of the heap and the heap needs to ensure that the properties of the heap still hold.
 
-\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\begin{center}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Operation &
@@ -2626,11 +2694,11 @@ A heap has two operations: push and pop. Pushing an element into a heap adds it 
   O(log n) &
   O(n)\\
 
-\hline\end{tabulary}
+\hline\end{tabulary}\end{center}
 
 \subsection{Class}
 
-We will implement a max heap in Java. We need to store the element in the heap and the size of the heap.
+We will implement a max heap in Java and in our class we need to store the element in the heap and the size of the heap.
 
 \begin{lstlisting}
 public class Heap {
@@ -2647,7 +2715,7 @@ public class Heap {
 
 \subsection{Resize}
 
-When the heap gets too full, we can resize it to make it fit more elements.
+When the heap reaches capacity, we need to resize it to be able to contain more elements.
 
 \begin{lstlisting}
 public void resize() {
@@ -2661,7 +2729,7 @@ public void resize() {
 
 \subsection{Swap}
 
-Swaps two nodes in the heap.
+Swap will switch two nodes in the heap.
 
 \begin{lstlisting}
 public void swap(int a, int b) {
@@ -2830,12 +2898,21 @@ public void heapify(int arr[]) {
 \item Write a function that checks if an array is a heap. 
 \end{enumerate}
 
+        \section{ Exercises }
+        
+
+\begin{enumerate}
+\item Given a list of N numbers, find the M largest numbers. (Note you can do better than O(N log N)).
+\item Given N lists of N numbers, find the N largest numbers.
+\end{enumerate}
+
 \part{ Sorting }
+    \subsubsection{ Introduction }
     
 
 Sorting is arranging an array of n elements in either increasing or decreasing order by some property. It is very useful in computer science for efficiency in other algorithms that usually require a search.
 
-A stable sort is a sort that can preserve sorting of other properties. For example if we have
+A stable sort is a sort that can preserve sorting of other properties. For example, if we have
 
 (3,G), (1,G), (3, A), (6 K), (1,B)
 
@@ -2849,9 +2926,9 @@ If we sort again by the second property we have (1,B) (3, A) (1, G) (3, G) (6,K)
     \chapter{ Slow Sorts }
         
 
-Slow sorts are sorts that have the runtime of O(n$^{2}$). Although they should almost never be used, it is good to know how to implement a simple sort.
+Slow sorts are sorts that have the runtime of O(n$^{2}$). Although they should almost never be used, it is good to understand how to implement them.
 
-\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\begin{center}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Name &
@@ -2868,7 +2945,7 @@ Slow sorts are sorts that have the runtime of O(n$^{2}$). Although they should a
   Insertion Sort &
   O(n$^{2}$)\\
 
-\hline\end{tabulary}
+\hline\end{tabulary}\end{center}
 
 
         \section{ Bubble Sort }
@@ -2878,7 +2955,7 @@ Bubble sort is one of the most basic sorting algorithms, one of the first you sh
 
 Its name describes how the algorithm works: bigger bubbles float to the top. Each time we pass through the array, we swap adjacent bigger elements with smaller elements. If we do this and we do not swap any adjacent elements in a pass, then we know we have sorted the array. It can be proved that you will need to pass through the array at most N times. Try to prove this for yourself.
 
-\subsubsection{Implementation}
+\subsection{Implementation}
 
 Bubble sort works by going through the array multiple times and swapping elements that are out of order as we go through the array. Every pass through the array, we move the largest element to the end.
 
@@ -2886,8 +2963,10 @@ Bubble sort works by going through the array multiple times and swapping element
         \includegraphics[width=0.66\maxwidth{\textwidth}]{bubble_sort.png}
         \end{figure}
 
+\subsubsection{Code}
+
 \begin{lstlisting}
-public static void BubbleSort(int array[]) {
+public static void bubbleSort(int array[]) {
   // Keep going through array unless until no swaps are made.
   boolean swapped = true;
   while (swapped) {
@@ -2912,7 +2991,7 @@ public static void BubbleSort(int array[]) {
 
 Selection sort works by finding the smallest element in the array and swapping it with the first element. Then it finds the second smallest element and swaps it with the second element and it does this until the array is sorted.
 
-\subsubsection{Implementation}
+\subsection{Implementation}
 
 We keep picking the smallest element and swapping it with the current position until the array is sorted.
 
@@ -2920,8 +2999,10 @@ We keep picking the smallest element and swapping it with the current position u
         \includegraphics[width=0.66\maxwidth{\textwidth}]{selection_sort.png}
         \end{figure}
 
+\subsubsection{Code}
+
 \begin{lstlisting}
-public static void SelectionSort(int array[]) {
+public static void selectionSort(int array[]) {
   // Iterates through the array selecting the smallest elements
   for (int i = 0; i < array.length - 1; i++) {
     int minIndex = i;
@@ -2946,7 +3027,7 @@ public static void SelectionSort(int array[]) {
 
 Insertion is a sort that works by inserting unused elements into a sorted array. We start with an empty array and we add the first element to the array. We then add the second element to the array and we "insert" it by shifting elements. We keep doing this until the array is sorted.
 
-\subsubsection{Implementation}
+\subsection{Implementation}
 
 We split the original array into two parts: the first part is sorted and the second part is unsorted. We take the first element from the second part and insert it into the sorted part. We keep doing this until we have no more elements in the unsorted part and we only have the sorted part.
 
@@ -2954,8 +3035,10 @@ We split the original array into two parts: the first part is sorted and the sec
         \includegraphics[width=0.66\maxwidth{\textwidth}]{insertion_sort.png}
         \end{figure}
 
+\subsubsection{Code}
+
 \begin{lstlisting}
-public void InsertionSort(int[] array) {
+public static void insertionSort(int[] array) {
   int i,j;
 
   // Iterate through size of array.
@@ -2974,8 +3057,9 @@ public void InsertionSort(int[] array) {
     \chapter{ Fast Sorts }
         
 
-Fast sorts are sorts that have a runtime of O(nlogn). They are very fast and you will usually use merge sort or quick sort for sorting in the real world. Most language will have their own implementation of a quick sort or merge sort in their standard libraries. 
-\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+Fast sorts are sorts that have a runtime of O(n log n). They are very fast and you will usually use merge sort or quick sort for sorting in the real world. Most language will have their own implementation of a quick sort or merge sort in their standard libraries.
+
+\begin{center}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Name &
@@ -2992,7 +3076,7 @@ Fast sorts are sorts that have a runtime of O(nlogn). They are very fast and you
   Quick Sort &
   O(n log n)\\
 
-\hline\end{tabulary}
+\hline\end{tabulary}\end{center}
 
 
         \section{ Heap Sort }
@@ -3002,7 +3086,11 @@ Prerequisites: Heap
 
 Heap sort is a sort that inserts all the element in an array into a min heap and then pops all the element outs. Since a heap guarantees that the root node will be the smallest element, we can store the entire array in a heap and the order that they are popped out of the heap will be in order.
 
-\subsubsection{Implementation}
+\subsection{Implementation}
+
+We can simply use builtin heaps for this sort by adding all the elements to the array which is O(n log n) and then popping all the elements which is O(n log n).
+
+\subsubsection{Code}
 
 \begin{lstlisting}
 public void heapSort(int[] arr) {
@@ -3023,13 +3111,13 @@ public void heapSort(int[] arr) {
         \section{ Merge Sort }
         
 
-Preqrequistes: Recursion
+Prerequisites: Recursion
 
 Merge sort works by breaking down the sorting into smaller pieces. If we want to sort N elements, we can sort the first half of the elements, sort the second half and then merge the results together. To sort the first half, we can do the exact same thing of sorting the first quarter and the second quarter and merging the results.
 
 \subsection{Implementation}
 
-Merge sort work be breaking down the problem into smaller and smaller parts and then combing those parts to solve the big problem.
+Merge sort work be breaking down the problem into smaller and smaller parts and then combining those parts to solve the larger problem.
 
 We can keep splitting the list into half until there each piece has 1 element or no elements. We can then combine the results of each piece repeatedly until the entire list is sorted.
 
@@ -3049,7 +3137,7 @@ merge([1,5,7,9], [2,4,8])
 = [1, 2, 4, 5, 7, 8, 9]
 
 Let sort(arr) sort an array
-Let middle be (0 + arr.length) / 2
+Let middle be arr.length / 2
 
 sort([x]) = [x]
 sort([x,y]) = [x,y] if x<y 
@@ -3067,69 +3155,65 @@ sort([3, 7, 1, 9, 8, 4, 5])
 
 \subsubsection{Code}
 
-For our Java implementation, instead of returning a new array every time we merge two arrays, we can create a temporary array to store the merged results and then move it back.
+We will implement our solution in Java that reflects our formalization in a way that is more inefficient but easier to understand. In our code, we create new arrays to store merged results but we can actually do this in place without extra memory (left as an exercise).
 
 \begin{lstlisting}
-public void merge(int arr[], int start1, int end1, int start2, int end2) {
-  int arr2[] = new int[end2 - start1 + 1];
-  int begin = start1;
-  int n = 0;
-
-  // Pick smallest element one by one.
-  while (start1 <= end1 && start2 <= end2) {
-    // Take from first part.
-    if (arr[start1] <= arr[start2]) {
-      arr2[n] = arr[start1];
-      start1++;
+// Merges two sorted arrays v1 and v2 into a new sorted array
+public static Vector<Integer> merge(Vector<Integer> v1, Vector<Integer> v2) {
+  Vector<Integer> merged = new Vector<Integer>();
+  int i = 0, j = 0;
+  // Always take the smaller element of the two vectors
+  while(i < v1.size() && j < v2.size()){
+    if(v1.get(i) < v2.get(j)){
+      merged.add(v1.get(i));
+      i++;
+    } else {
+      merged.add(v2.get(j));
+      j++;
     }
-    // Take from second part.
-    else {
-      arr2[n] = arr[start2];
-      start2++;
+  }
+  if (i >= v1.size()){
+    // Add the rest of v2
+    while(j < v2.size()){
+      merged.add(v2.get(j));
+      j++;
     }
-    n++;
+  } else {
+    // Add the rest of v1.
+    while(i < v1.size()){
+      merged.add(v1.get(i));
+      i++;
+    }
   }
-  // If first segment still has elements.
-  while (start1 <= end1) {
-    arr2[n] = arr[start1];
-    n++;
-    start1++;
-  }
-  // If second segment still has elements.
-  while (start2 <= end2) {
-    arr2[n] = arr[start2];
-    start2++;
-    n++;
-  }
-  // Copy merged array back.
-  for (int i = 0; i < n; i++) {
-    arr[begin + i] = arr2[i];
-  }
+  return merged;
 }
-// Merge sorts array from [start..end]
-public void mergeSort(int arr[], int start, int end) {
+
+// Merge sorts an array
+public static Vector<Integer> mergeSort(Vector<Integer> v) {
   // Base case if 1 or 0 elements.
-  if (end - start <= 0) {
-    return;
+  if (v.size() <= 1) {
+    return v;
   }
-  int mid = (start + end) / 2;
-  // Sort left side.
-  mergeSort(arr, start, mid);
-  // Sort right side.
-  mergeSort(arr, mid + 1, end);
-  // Merge both sides.
-  merge(arr, start, mid, mid + 1, end);
+  // Get middle of array.
+  int middle = v.size()/2;
+  // Split vector into two halves.
+  Vector<Integer> firstHalf = new Vector<Integer>(v.subList(0, middle));
+  Vector<Integer> secondHalf = new Vector<Integer>(v.subList(middle, v.size()));
+  // Return merged halves.
+  return merge(mergeSort(firstHalf), mergeSort(secondHalf));
 }
 
 // Example usage:
-int arr[] = {5,7,2,6,8,5};
-mergeSort(arr,0,arr.length-1);
+Vector<Integer> v = new Vector<Integer>();
+Collections.addAll(v, 5,4,10,8,9,2);
+System.out.println(mergeSort(v));
 \end{lstlisting}
 
 \subsection{Exercises}
 
 \begin{enumerate}
-\item Write merge sort that uses no extra memory (no additional array).
+\item Write the formalization for merge(arr1, arr2). 
+\item Rewrite merge sort to not use any additional memory (i.e. merging and splitting arrays is done in place and no new vectors or arrays are created). You should rewrite the function to sort in place: void mergeSort(int[] arr, int start, int end) and void merge(int arr[]. int start, int end, int start2, int end2).
 \end{enumerate}
 
         \section{ Quick Sort }
@@ -3137,11 +3221,9 @@ mergeSort(arr,0,arr.length-1);
 
 Quick Sort is another fast sorting algorithm that uses divide and conquer. It is also known as partition-exchange sort or as Hoare's quicksort (named after the author).
 
-In Quick Sort an element is selected as a "pivot". The list is then divided into two sublists: a list of elements less than (or equal to) the pivot and a list of elements greater than the pivot. Each sublist is sorted (conquered) and then appended together along with the origin pivot.
+In quick sort an element is selected as a "pivot". The list is then divided into two sublists: a list of elements less than (or equal to) the pivot and a list of elements greater than the pivot. Each sublist is sorted (conquered) and then appended together along with the origin pivot.
 
 In the best case (if the pivot that is chosen is exactly the middle element), then the runtime is O(n log n). However, in the worst case, the runtime for Quick Sort is n$^{2}$. Despite its worst case behaviour, quick sort is still popular and in widespread use. The average case behaviour is quite good and there are straightforward methods that can be used to improve the selection of the pivot.
-
-The sorting algorithms are implemented to sort integer arrays but can be adapted to sort arrays of any data structure that is comparable.
 
 \subsection{Implementation}
 
@@ -3175,51 +3257,57 @@ quicksort([6,1,4,3,5,7,9,2,8,0])
 
 \subsubsection{Code}
 
+We will implement our solution in Java that reflects our formalization in a way that is more inefficient but easier to understand. In our code, we create new arrays to store partitions and merged results but we can actually do this in place without extra memory (left as an exercise).
+
 \begin{lstlisting}
-//sorts integers from smallest to greatest
-public static void QuickSort (int a[], int first, int last){
-    //first is the starting index of the list
-    //last is the last index of the list
-    //QuickSort can be called by QuickSort(a, 0, a.length-1)
-    
-    if (last <= first) return; //if the array size <= 1
-    
-    int pivot = a[first]; //picks the first element as the pivot
-    // the location to put the next integer that's larger than the pivot
-    int index = last;  
-    
-    //iterate through the list, sorting it by the first pivot
-    for (int i=last;i>=first+1;i--){
-        if (a[i]>=pivot){
-            //swap the current element to be on the side that's 
-            //larger than the pivot
-            int temp = a[index];
-            a[index] = a[i];
-            a[i] = temp;
-            
-            //decrements index for the next switch
-            index--;
-        }
+// Quick sorts array from [first..last]
+public static Vector<Integer> quickSort(Vector<Integer> arr) {
+  // Base case if sorting one or zero elements.
+  if (arr.size() <= 1) {
+    return arr;
+  }
+  // Select a random pivot.
+  int pivot = (int) (Math.random() * arr.size());
+
+  // Store each part.
+  Vector<Integer> lower = new Vector<Integer>();
+  Vector<Integer> higher = new Vector<Integer>();
+  Vector<Integer> equal = new Vector<Integer>();
+
+  // Splits element into each part.
+  for (int i = 0; i < arr.size(); i++) {
+    if (arr.get(i) < arr.get(pivot)) {
+      lower.add(arr.get(i));
     }
-    
-    //swap the element at index with the pivot so that it's 
-    //in the right place
-    int temp = pivot;
-    a[first] = a[index];
-    a[index] = pivot;
-    
-    //recursively sort the lists less than and greater than the pivot
-    QuickSort (a, first, index-1);
-    QuickSort (a, index+1, last);
+    else if (arr.get(i) > arr.get(pivot)) {
+      higher.add(arr.get(i));
+    }
+    else {
+      equal.add(arr.get(i));
+    }
+  }
+
+  // Combine results of all parts.
+  Vector<Integer> result = new Vector<Integer>();
+  result.addAll(quickSort(lower));
+  result.addAll(quickSort(equal));
+  result.addAll(quickSort(higher));
+  return result;
 }
 \end{lstlisting}
+
+\subsection{Exercises}
+
+\begin{enumerate}
+\item Rewrite quickSort such that we do not use any additional memory (i.e. rearranging into parts is done in place in the array and we do not create any additional vector or arrays). You should rewrite the function to sort in place: void quickSort(int arr[], int start, int end).
+\end{enumerate}
 
     \chapter{ Super Slow Sorts }
         
 
 Just for fun, these are some silly sorts that you should never use.
 
-\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\begin{center}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Name &
@@ -3236,7 +3324,7 @@ Just for fun, these are some silly sorts that you should never use.
   Miracle Sort &
   O(?)\\
 
-\hline\end{tabulary}
+\hline\end{tabulary}\end{center}
 
 
         \section{ Bozo Sort }
@@ -3244,7 +3332,11 @@ Just for fun, these are some silly sorts that you should never use.
 
 Bozo sort is a sort that keeps randomly arranging an array until it is sorted. This sort should never been used.
 
-\subsubsection{Implementation}
+\subsection{Implementation}
+
+We keep checking if the array is sorted and if is not, we pick two random indexes to swap.
+
+\subsubsection{Code}
 
 \begin{lstlisting}
 boolean sorted(int[] arr) {
@@ -3278,7 +3370,11 @@ public void bozoSort(int[] arr) {
 
 Permutation sort is a sort that keeps permuting the array until it is sorted. It is the slowest sort that will guarantee that the array will be sorted.
 
-\subsubsection{Implementation}
+\subsection{Implementation}
+
+We keep finding the next permutation until the array is sorted.
+
+\subsubsection{Code}
 
 \begin{lstlisting}
 void permuteSort(int[] arr){
@@ -3295,7 +3391,11 @@ Prerequisites: Miracles, Sense of Humour
 
 Miracle sort is a sort that truly requires a miracle. We keep checking the array until it is sorted. It requires that some external force (a miracle?) changes some bits in the computer in a way that it becomes sorted.
 
-\subsubsection{Implementation}
+\subsection{Implementation}
+
+We keep checking if the array is sorted until some miracle occurs.
+
+\subsubsection{Code}
 
 \begin{lstlisting}
 public void miracleSort(int[] arr) {
@@ -3312,7 +3412,18 @@ public void miracleSort(int[] arr) {
 }
 \end{lstlisting}
 
+    \chapter{ Exercises }
+    
+
+\begin{enumerate}
+\item Given two sorted arrays of N numbers, merge the two arrays into an single array of size 2N.
+\item Find the minimum number of swaps to sort an array.
+\item Find the minimum number of adjacent swaps to sort an array.
+\item Let flip(int[] arr, int x) be a function that reverses all elements from arr[0..x]. Devise a function that sorts the array.
+\end{enumerate}
+
 \part{ Graph Theory }
+    \subsubsection{ Introduction }
     
 
 Next: Advanced Graph Theory
@@ -3338,122 +3449,10 @@ A directed acyclic graph (DAG) is a graph with no directed cycles (see topologic
 A weighted graph is a graph that contains weights or values assigned to each edge or node. Usually these weights act as the cost to reach/use that node.
 
 
-    \chapter{ Representation }
+    \chapter{ Graph Representations }
         
 
-A graph can be represented as a adjacency matrix or an adjacency list.
-
-\subsubsection{Adjacency Matrix}
-
-
-
-An adjacency matrix stores a graph of N nodes with a two dimensional NxN array. We let adjMatrix[i][j] represents the weight between the node i and node j. If we a sparse graph which has many nodes but few edges, the memory storage will be very inefficient and it would be better to use an adjacency list. However, if the graph is very dense, or there are few nodes, then an adjacency matrix is quick and easy to use. Checking if an edge exists between two nodes is O(1).
-
-Example
-
-\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
-
-
-   &
-  1 &
-  2 &
-  3 &
-  4 &
-  5 &
-  6\\
-\hline
-
-
-  1 &
-  0 &
-  1 &
-  0 &
-  0 &
-  1 &
-  0\\
-
-  2 &
-  1 &
-  0 &
-  1 &
-  0 &
-  1 &
-  0\\
-
-  3 &
-  0 &
-  1 &
-  0 &
-  1 &
-  0 &
-  0\\
-
-  4 &
-  0 &
-  0 &
-  1 &
-  0 &
-  1 &
-  1\\
-
-  5 &
-  1 &
-  1 &
-  0 &
-  1 &
-  0 &
-  0\\
-
-  6 &
-  0 &
-  0 &
-  0 &
-  1 &
-  0 &
-  0\\
-
-\hline\end{tabulary}
-
-
-
-\subsubsection{Adjacency List}
-
-
-
-An adjacency list stores a graph in an array of linked lists. Each node stores its neighbours by keeping a linked list of edges. Adjacency lists are slower when checking if an edge exists but they are more memory efficient since they only need to store the total number of edges.
-
-\vspace{5px}\begin{figure}[H]\centering
-        \includegraphics[width=0.66\maxwidth{\textwidth}]{graph.png}
-        \end{figure}
-
-\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
-
-
-  Node &
-  edges\\
-\hline
-
-
-  1 &
-  2 5\\
-
-  2 &
-  1 3 5\\
-
-  3 &
-  2 4\\
-
-  4 &
-  3 5 6\\
-
-  5 &
-  1 2 4\\
-
-  6 &
-  4\\
-
-\hline\end{tabulary}
-
+A graph can be represented in various ways, but the most useful representations are as an adjacency matrix or as an adjacency list.
 
 
         \section{ Adjacency Matrix }
@@ -3461,9 +3460,15 @@ An adjacency list stores a graph in an array of linked lists. Each node stores i
 
 An adjacency matrix stores a graph of N nodes with a two dimensional NxN array. We let adjMatrix[i][j] represents the weight between the node i and node j. If we a sparse graph which has many nodes but few edges, the memory storage will be very inefficient and it would be better to use an adjacency list. However, if the graph is very dense, or there are few nodes, then an adjacency matrix is quick and easy to use. Checking if an edge exists between two nodes is O(1).
 
-Example
+Example:
 
-\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\vspace{5px}\begin{figure}[H]\centering
+        \includegraphics[width=0.66\maxwidth{\textwidth}]{graph.png}
+        \end{figure}
+
+The adjacency matrix of the graph is:
+
+\begin{center}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
    &
@@ -3524,14 +3529,14 @@ Example
   0 &
   0\\
 
-\hline\end{tabulary}
+\hline\end{tabulary}\end{center}
 
 \subsection{Implementation}
 
 \begin{lstlisting}
 class edge {
-  int weight,source,dest;
-  public edge(int source,int dest,int weight) {
+  int weight, source, dest;
+  public edge(int source, int dest, int weight) {
     this.source = source;
     this.dest = dest;
     this.weight = weight;
@@ -3561,11 +3566,15 @@ public static int[][] getAdjMatrix(Vector<edge> edges, int n) {
 
 An adjacency list stores a graph in an array of linked lists. Each node stores its neighbours by keeping a linked list of edges. Adjacency lists are slower when checking if an edge exists but they are more memory efficient since they only need to store the total number of edges.
 
+Example:
+
 \vspace{5px}\begin{figure}[H]\centering
         \includegraphics[width=0.66\maxwidth{\textwidth}]{graph.png}
         \end{figure}
 
-\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+The adjacency list of the graph is:
+
+\begin{center}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Node &
@@ -3591,384 +3600,74 @@ An adjacency list stores a graph in an array of linked lists. Each node stores i
   6 &
   4\\
 
-\hline\end{tabulary}
-
-    \chapter{ Tree }
-        
-
-
-
-A tree is a special graph with no cycles. It has the special property that there will be only one path from one node to another node.
-
-\vspace{5px}\begin{figure}[H]\centering
-        \includegraphics[width=0.66\maxwidth{\textwidth}]{treegraph.png}
-        \end{figure}
-
-A subtree is a child tree of a tree.
-
-Note that trees have two meanings in computer science. It can either refer to a tree data structure or it can refer to a tree in graph theory.
-
-
-\subsubsection{Spanning Tree}
-
-
-
-A spanning tree of a graph is a connected tree that spans all the nodes of the graph.
-
-A minimum spanning tree is the spanning tree that requires the minimum of some property such as total weight or total edges.
-
-Spanning tree algorithms are essential in networking to ensure no loops occur when sending data through a network.
-
-\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
-
-
-  Algorithm &
-  Desc &
-  Time &
-  Space\\
-\hline
-
-
-  Prim's &
-  Using greedy method &
-  O(n log n) &
-  O(n$^{2}$)\\
-
-  Kruskal &
-  Using connected components &
-  O(n log n) &
-  O(n$^{2}$)\\
-
-\hline\end{tabulary}
-
-
-
-        \section{ Prim's }
-        
-
-Prerequisites:  Priority Queue, Minimum Spanning Tree
-
-Prim's algorithm is a greedy algorithm that finds the minimum spanning tree in a graph.
-
-If implemented efficiently using a priority queue, the runtime is O(n log n).
+\hline\end{tabulary}\end{center}
 
 \subsection{Implementation}
 
-Prim's algorithm finds the minimum spanning tree using a greedy fashion. It works as such:
-
-\begin{enumerate}
-\item Pick an arbitrary node.
-\item Find the closest node to that node.
-\item Find the closest node to the 2 nodes.
-\item Find the closest node to the 3 nodes.
-\item ...
-\item Find the closest node to n-1 nodes.
-\end{enumerate}
-
-The closest node is the node with the lowest cost edge to the already connected nodes.
-
-\subsubsection{Example}
-
-Suppose we have the following graph and we would like the find the minimum spanning tree.
-
-\vspace{5px}\begin{figure}[H]\centering
-        \includegraphics[width=0.66\maxwidth{\textwidth}]{prim.png}
-        \end{figure}
-
-We start a random node and for this example we will start at 1.
-
-\vspace{5px}\begin{figure}[H]\centering
-        \includegraphics[width=0.66\maxwidth{\textwidth}]{prim1.png}
-        \end{figure}
-
-The closest unpicked node to all the chosen nodes is 2 at a cost of 2.
-
-\vspace{5px}\begin{figure}[H]\centering
-        \includegraphics[width=0.66\maxwidth{\textwidth}]{prim2.png}
-        \end{figure}
-
-The closest unpicked node to all the chosen nodes is 7 at a cost of 6.
-
-\vspace{5px}\begin{figure}[H]\centering
-        \includegraphics[width=0.66\maxwidth{\textwidth}]{prim3.png}
-        \end{figure}
-
-The closest unpicked node to all the chosen nodes is 5 at a cost of 6.
-
-\vspace{5px}\begin{figure}[H]\centering
-        \includegraphics[width=0.66\maxwidth{\textwidth}]{prim4.png}
-        \end{figure}
-
-The closest unpicked node to all the chosen nodes is 4 at a cost of 6.
-\vspace{5px}\begin{figure}[H]\centering
-        \includegraphics[width=0.66\maxwidth{\textwidth}]{prim5.png}
-        \end{figure}
-
-The closest unpicked node to all the chosen nodes is 6 at a cost of 8.
-\vspace{5px}\begin{figure}[H]\centering
-        \includegraphics[width=0.66\maxwidth{\textwidth}]{prim6.png}
-        \end{figure}
-
-The last node to be chosen is 3 with a cost of 8.
-
-\vspace{5px}\begin{figure}[H]\centering
-        \includegraphics[width=0.66\maxwidth{\textwidth}]{prim7.png}
-        \end{figure}
-
-\subsubsection{Java Code}
-
-We can implement Prim's algorithm in Java efficiently with a priority queue of the closest edges with the least cost.
+Here is a function that takes in an array of edges and returns an adjacency list of the graph.
 
 \begin{lstlisting}
-class node implements Comparable<node> {
-  int weight, index;
-  public node(int weight, int index) {
+class edge {
+  int weight, source, dest;
+  public edge(int source, int dest, int weight) {
+    this.source = source;
+    this.dest = dest;
     this.weight = weight;
-    this.index = index;
-  }
-  public int compareTo(node e) {
-    return weight - e.weight;
   }
 }
-public static int Prims(Vector<Vector<node>> adjList) {
-  // Current cost of MST.
-  int cost = 0;
-  int n = adjList.size();
-  
-  PriorityQueue<node> pq = new PriorityQueue<node>();
-  
-  // Keep track if each node is visited.
-  boolean visited[] = new boolean[n];
-  for (int i = 0; i < n; i++) {
-    visited[i] = false;
-  }
-  
-  // Number of nodes visited.
-  int inTree = 1;
-  
-  // Mark starting node as visited.
-  visited[0] = true;
-  
-  // Add all edges of starting node.
-  for (int i = 0; i < adjList.get(0).size(); i++) {
-    pq.add(adjList.get(0).get(i));
-  }
-  // Keep going until all nodes visited.
-  while (!pq.isEmpty() && inTree < n) {
-    // Get the edge with the smallest weight.
-    node cur = pq.poll();
-    // Skip if node already used.
-    if (visited[cur.index]) {
-      continue;
-    }
-    inTree++;
-    visited[cur.index] = true;
-    cost += cur.weight;
-    // Add all the edges of the new node to the priority queue.
-    for (int i = 0; i < adjList.get(cur.index).size(); i++) {
-      pq.add(adjList.get(cur.index).get(i));
-    }
-  }
-  // Graph not connected if number of nodes used is less than total nodes.
-  if (inTree < n) {
-    return -1;
-  }
 
-  return cost;
+public static Vector<Vector<edge>> getAdjList(Vector<edge> edges, int n) {
+  Vector<Vector<edge>> adjList = new Vector<Vector<edge>>();
+  for (int i = 0; i < n; i++){
+    adjList.add(new Vector<edge>());
+  }
+  
+  for(edge e: edges){
+     adjList.get(e.source).add(e);
+     adjList.get(e.dest).add(e);
+  }
+  return adjList;
 }
 \end{lstlisting}
-
-\subsection{Exercises}
-
-\begin{enumerate}
-\item Prove that Prim's algorithm works.
-\item Extends Prim's to output all the edges used.
-\item Given a weighted graph with n nodes, find the smallest total cost to connect all nodes into 3 separate groups. (A single node can be a group).
-\item Same as 3, but a group must contain at least 3 other nodes.
-\end{enumerate}
-
-        \section{ Kruskal }
-        
-
-Prerequisites:  Sorting, Minimum Spanning Tree
-
-Kruskal's algorithm finds the minimum spanning tree using connected components.
-
-If Kruskal's algorithm is implemented efficiently using a priority queue, the runtime is O(n log n).
-
-\subsection{Implementation}
-
-\begin{enumerate}
-\item Uniquely label each node.
-\item Take the edge with the minimum weight.
-\item If the edge connects nodes A and B with different labels, all nodes with label B will be labeled with A. Otherwise, throw the edge away.
-\item Repeat 2-3 until all the nodes have the same label.
-\end{enumerate}
-
-\subsubsection{Example}
-
-We first start with each node uniquely labelled as a letter.
-
-\vspace{5px}\begin{figure}[H]\centering
-        \includegraphics[width=0.66\maxwidth{\textwidth}]{kruskal.png}
-        \end{figure}
-
-We first start with the edge with the smallest weight of 2 which was between A and B. We add B to A's component by labelling B as A.
-
-\vspace{5px}\begin{figure}[H]\centering
-        \includegraphics[width=0.66\maxwidth{\textwidth}]{kruskal2.png}
-        \end{figure}
-
-The next edge with the smallest weight is 5 which connects to C. We add C to A's component by labelling it as A.
-
-\vspace{5px}\begin{figure}[H]\centering
-        \includegraphics[width=0.66\maxwidth{\textwidth}]{kruskal3.png}
-        \end{figure}
-
-There is a tie between edges with the smallest weight of 6 and it doesn't matter which one we take. For the purpose of this example we will take the edge between D and G. We add G to D's component be labelling it as D.
-
-\vspace{5px}\begin{figure}[H]\centering
-        \includegraphics[width=0.66\maxwidth{\textwidth}]{kruskal4.png}
-        \end{figure}
-
-Next we take the other edge with weight 6. We are connecting the D and A components, thus we can label all the nodes with D as A.
-
-\vspace{5px}\begin{figure}[H]\centering
-        \includegraphics[width=0.66\maxwidth{\textwidth}]{kruskal5.png}
-        \end{figure}
-
-The next edge with smallest weight is 7 but it does not connect two different components, thus we discard the edge. The next two edges have weights 8 and we can randomly pick the edge to E. We add E to A's component by labelling it as A.
-
-\vspace{5px}\begin{figure}[H]\centering
-        \includegraphics[width=0.66\maxwidth{\textwidth}]{kruskal6.png}
-        \end{figure}
-
-We take the other edge with weight 8 to F and add F to A's component by relabelling it as A.
-
-\vspace{5px}\begin{figure}[H]\centering
-        \includegraphics[width=0.66\maxwidth{\textwidth}]{kruskal7.png}
-        \end{figure}
-
-All the nodes are the same label and all part of the same component, thus by the algorithm, we have our minimum spanning tree.
-
-\subsubsection{Code}
-
-We can implement Kruskal's algorithm efficiently by using connected components.
-
-\begin{lstlisting}
-class edge implements Comparable<edge> {
-    int weight,source,dest;
-    public edge(int source,int dest,int weight) {
-        this.source = source;
-        this.dest = dest;
-        this.weight = weight;
-    }
-    public int compareTo(edge e) {
-        return weight-e.weight;
-    }
-}
-public static int getParent(int parents[], int x) {
-  // Base Case: parent of x is itself.
-  if (parents[x] == x) {
-    return x;
-  }
-  // Set current's parent to highest parent.
-  parents[x] = getParent(parents, parents[x]);
-
-  // Returns parent.
-  return parents[x];
-}
-
-public static int Kruskal(Vector<Vector<edge>> adjList) {
-  int n = adjList.size();
-  // Parents of each node. Nodes with the same parents are in the same
-  // component.
-  int parents[] = new int[n];
-
-  // Set parents of each node to itself.
-  for (int i = 0; i < n; i++) {
-    parents[i] = i;
-  }
-
-  int sum = 0;
-  PriorityQueue<edge> edges = new PriorityQueue<edge>();
-
-  // Iterate through each node.
-  for (int i = 0; i < n; i++) {
-    // Iterate through edges of node.
-    for (int j = 0; j < adjList.get(i).size(); j++) {
-      // Add edge to priority queue.
-      edges.add(adjList.get(i).get(j));
-    }
-  }
-
-  // Iterate through all edges.
-  while (!edges.isEmpty()) {
-    // Get edge with smallest weight.
-    edge e = edges.poll();
-    // Take edge if highest parent of source and destination nodes are
-    // different i.e. take the edge if it connects different components
-    if (getParent(parents, e.source) != getParent(parents, e.dest)) {
-      // Set parent of source to highest parent of destination node.
-      parents[e.source] = getParent(parents, e.dest);
-      
-      // Add edge weight to MST weight.
-      sum += e.weight;
-    }
-  }
-
-  // Return MST weight.
-  return sum;
-}
-\end{lstlisting}
-
-\subsection{Exercises}
-
-\begin{enumerate}
-\item Prove Kruskal's Algorithm works.
-\item Extends Kruskals's to output the full minimum spanning tree used.
-\item Given a weighted graph with n nodes, find the smallest total cost to connect all nodes into 3 separate groups. (A single node can be a group).
-\item Same as Q3, but each group must contain at least 3 nodes.
-\end{enumerate}
 
     \chapter{ Shortest Path }
         
 
-The shortest path is defined as a path from one node to another while trying to minimize a certain property (least number of nodes, smallest total weight). However, shortest paths may have negative weights which leads to cycles.
+Prerequisites: Graph Theory
 
-\subsubsection{Algorithms}
+The shortest path is defined as a path from one node to another while trying to minimize a certain property (least number of nodes, smallest total weight). However, shortest paths may have negative weights leads to cycles.
 
-\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+
+        
+
+\begin{center}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
   Algorithm &
-  Desc &
   Time &
-  Space &
   Detect cycles?\\
 \hline
 
 
   Floyd Warshall &
-  Computes shortest path between all pairs of nodes &
-  O(n$^{3}$) &
-  O(n$^{2}$) &
+  O(N$^{3}$) &
   Yes\\
 
   Bellman Ford &
-  Computes shortest path between a pairs of nodes &
-  O(n$^{2}$) &
-  O(n) &
+  O(N$^{2}$) &
   Yes\\
 
   Dijkstra's &
-  Computes shortest path between a pair of nodes using the Greedy method &
-  O(n log n) &
-  O(n log n) &
+  O(N log N) &
   No\\
 
-\hline\end{tabulary}
+\hline\end{tabulary}\end{center}
 
+\begin{itemize}
+\item Floyd Warshall computes the shortest path between all pairs of nodes.
+\item Bellman Ford computes the shortest path between one node to every other node.
+\item Dijkstra's computes the shortest path between two nodes.
+\end{itemize}
 
         \section{ Dijkstra's }
         
@@ -4194,9 +3893,9 @@ bellmanFord(start,0,0)
 We can rewrite this solution using dynamic programming without recursion.
 
 \begin{lstlisting}
-class edge{
-  int weight,source,dest;
-  public edge(int source,int dest,int weight){
+class edge {
+  int weight, source, dest;
+  public edge(int source, int dest, int weight) {
     this.source = source;
     this.dest = dest;
     this.weight = weight;
@@ -4270,7 +3969,7 @@ public static int BellmanFord(Vector<Vector<edge>> adjList, int startNode,
 \item Arbitrage occurs when you can exchange currencies for another and make a profit. For example given a currency exchange table:
 \end{enumerate}
 
-\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+\begin{center}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
    &
@@ -4295,7 +3994,7 @@ public static int BellmanFord(Vector<Vector<edge>> adjList, int startNode,
   1.56 &
   /\\
 
-\hline\end{tabulary}
+\hline\end{tabulary}\end{center}
 
 Notice that 1 USD -$>$ 1.12 CAD -$>$ 1.008 USD. Bellman Ford can be used to find methods of arbitrage by using the vertex as currency and edges as transactions, and the weight as the exchange rate. All that is needed is to find a path that maximizes product of weights and finding a negative cycle. Write a program that detects a path for arbitrage to occur.
 
@@ -4339,9 +4038,9 @@ shortestPath(i,j) =  minimum of:
 \subsubsection{Code}
 
 \begin{lstlisting}
-class edge{
-  int weight,source,dest;
-  public edge(int source,int dest,int weight){
+class edge {
+  int weight, source, dest;
+  public edge(int source, int dest, int weight) {
     this.source = source;
     this.dest = dest;
     this.weight = weight;
@@ -4414,8 +4113,504 @@ public static int[][] FloydWarshall(Vector<Vector<edge>> adjList) {
 \item Extend Floyd Warshall to reconstruct the paths from each pair of nodes.
 \end{enumerate}
 
+    \chapter{ Minimum Spanning Tree }
+        
+
+Prerequisites:  Graph Theory
+
+A spanning tree of a graph is a tree that spans all the nodes of the graph but only using some of the edges to connect all the nodes.
+
+A minimum spanning tree is the spanning tree that requires the minimum of some property such as total weight or total edges.
+
+Spanning tree algorithms are essential in networking to ensure no loops occur when sending data through a network.
+
+
+        
+
+\begin{center}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+
+
+  Algorithm &
+  Desc &
+  Time &
+  Space\\
+\hline
+
+
+  Prim's &
+  Using greedy method &
+  O(n log n) &
+  O(n$^{2}$)\\
+
+  Kruskal &
+  Using connected components &
+  O(n log n) &
+  O(n$^{2}$)\\
+
+\hline\end{tabulary}\end{center}
+
+
+        \section{ Prim's }
+        
+
+Prerequisites:  Priority Queue, Minimum Spanning Tree
+
+Prim's algorithm is a greedy algorithm that finds the minimum spanning tree in a graph.
+
+If implemented efficiently using a priority queue, the runtime is O(n log n).
+
+\subsection{Implementation}
+
+Prim's algorithm finds the minimum spanning tree using a greedy fashion. It works as such:
+
+\begin{enumerate}
+\item Pick an arbitrary node.
+\item Find the closest node to that node.
+\item Find the closest node to the 2 nodes.
+\item Find the closest node to the 3 nodes.
+\item ...
+\item Find the closest node to n-1 nodes.
+\end{enumerate}
+
+The closest node is the node with the lowest cost edge to the already connected nodes.
+
+\subsubsection{Example}
+
+Suppose we have the following graph and we would like the find the minimum spanning tree.
+
+\vspace{5px}\begin{figure}[H]\centering
+        \includegraphics[width=0.66\maxwidth{\textwidth}]{prim.png}
+        \end{figure}
+
+We start a random node and for this example we will start at 1.
+
+\vspace{5px}\begin{figure}[H]\centering
+        \includegraphics[width=0.66\maxwidth{\textwidth}]{prim1.png}
+        \end{figure}
+
+The closest unpicked node to all the chosen nodes is 2 at a cost of 2.
+
+\vspace{5px}\begin{figure}[H]\centering
+        \includegraphics[width=0.66\maxwidth{\textwidth}]{prim2.png}
+        \end{figure}
+
+The closest unpicked node to all the chosen nodes is 7 at a cost of 6.
+
+\vspace{5px}\begin{figure}[H]\centering
+        \includegraphics[width=0.66\maxwidth{\textwidth}]{prim3.png}
+        \end{figure}
+
+The closest unpicked node to all the chosen nodes is 5 at a cost of 6.
+
+\vspace{5px}\begin{figure}[H]\centering
+        \includegraphics[width=0.66\maxwidth{\textwidth}]{prim4.png}
+        \end{figure}
+
+The closest unpicked node to all the chosen nodes is 4 at a cost of 6.
+\vspace{5px}\begin{figure}[H]\centering
+        \includegraphics[width=0.66\maxwidth{\textwidth}]{prim5.png}
+        \end{figure}
+
+The closest unpicked node to all the chosen nodes is 6 at a cost of 8.
+\vspace{5px}\begin{figure}[H]\centering
+        \includegraphics[width=0.66\maxwidth{\textwidth}]{prim6.png}
+        \end{figure}
+
+The last node to be chosen is 3 with a cost of 8.
+
+\vspace{5px}\begin{figure}[H]\centering
+        \includegraphics[width=0.66\maxwidth{\textwidth}]{prim7.png}
+        \end{figure}
+
+\subsubsection{Java Code}
+
+We can implement Prim's algorithm in Java efficiently with a priority queue of the closest edges with the least cost.
+
+\begin{lstlisting}
+class node implements Comparable<node> {
+  int weight, index;
+  public node(int weight, int index) {
+    this.weight = weight;
+    this.index = index;
+  }
+  public int compareTo(node e) {
+    return weight - e.weight;
+  }
+}
+public static int Prims(Vector<Vector<node>> adjList) {
+  // Current cost of MST.
+  int cost = 0;
+  int n = adjList.size();
+  
+  PriorityQueue<node> pq = new PriorityQueue<node>();
+  
+  // Keep track if each node is visited.
+  boolean visited[] = new boolean[n];
+  for (int i = 0; i < n; i++) {
+    visited[i] = false;
+  }
+  
+  // Number of nodes visited.
+  int inTree = 1;
+  
+  // Mark starting node as visited.
+  visited[0] = true;
+  
+  // Add all edges of starting node.
+  for (int i = 0; i < adjList.get(0).size(); i++) {
+    pq.add(adjList.get(0).get(i));
+  }
+  // Keep going until all nodes visited.
+  while (!pq.isEmpty() && inTree < n) {
+    // Get the edge with the smallest weight.
+    node cur = pq.poll();
+    // Skip if node already used.
+    if (visited[cur.index]) {
+      continue;
+    }
+    inTree++;
+    visited[cur.index] = true;
+    cost += cur.weight;
+    // Add all the edges of the new node to the priority queue.
+    for (int i = 0; i < adjList.get(cur.index).size(); i++) {
+      pq.add(adjList.get(cur.index).get(i));
+    }
+  }
+  // Graph not connected if number of nodes used is less than total nodes.
+  if (inTree < n) {
+    return -1;
+  }
+
+  return cost;
+}
+\end{lstlisting}
+
+\subsection{Exercises}
+
+\begin{enumerate}
+\item Prove that Prim's algorithm works.
+\item Extends Prim's to output all the edges used.
+\end{enumerate}
+
+        \section{ Kruskal }
+        
+
+Prerequisites:  Sorting, Minimum Spanning Tree
+
+Kruskal's algorithm finds the minimum spanning tree using connected components.
+
+If Kruskal's algorithm is implemented efficiently using a priority queue, the runtime is O(n log n).
+
+\subsection{Implementation}
+
+\begin{enumerate}
+\item Uniquely label each node.
+\item Take the edge with the minimum weight.
+\item If the edge connects nodes A and B with different labels, all nodes with label B will be labeled with A. Otherwise, throw the edge away.
+\item Repeat 2-3 until all the nodes have the same label.
+\end{enumerate}
+
+\subsubsection{Example}
+
+We first start with each node uniquely labelled as a letter.
+
+\vspace{5px}\begin{figure}[H]\centering
+        \includegraphics[width=0.66\maxwidth{\textwidth}]{kruskal.png}
+        \end{figure}
+
+We first start with the edge with the smallest weight of 2 which was between A and B. We add B to A's component by labelling B as A.
+
+\vspace{5px}\begin{figure}[H]\centering
+        \includegraphics[width=0.66\maxwidth{\textwidth}]{kruskal2.png}
+        \end{figure}
+
+The next edge with the smallest weight is 5 which connects to C. We add C to A's component by labelling it as A.
+
+\vspace{5px}\begin{figure}[H]\centering
+        \includegraphics[width=0.66\maxwidth{\textwidth}]{kruskal3.png}
+        \end{figure}
+
+There is a tie between edges with the smallest weight of 6 and it doesn't matter which one we take. For the purpose of this example we will take the edge between D and G. We add G to D's component be labelling it as D.
+
+\vspace{5px}\begin{figure}[H]\centering
+        \includegraphics[width=0.66\maxwidth{\textwidth}]{kruskal4.png}
+        \end{figure}
+
+Next we take the other edge with weight 6. We are connecting the D and A components, thus we can label all the nodes with D as A.
+
+\vspace{5px}\begin{figure}[H]\centering
+        \includegraphics[width=0.66\maxwidth{\textwidth}]{kruskal5.png}
+        \end{figure}
+
+The next edge with smallest weight is 7 but it does not connect two different components, thus we discard the edge. The next two edges have weights 8 and we can randomly pick the edge to E. We add E to A's component by labelling it as A.
+
+\vspace{5px}\begin{figure}[H]\centering
+        \includegraphics[width=0.66\maxwidth{\textwidth}]{kruskal6.png}
+        \end{figure}
+
+We take the other edge with weight 8 to F and add F to A's component by relabelling it as A.
+
+\vspace{5px}\begin{figure}[H]\centering
+        \includegraphics[width=0.66\maxwidth{\textwidth}]{kruskal7.png}
+        \end{figure}
+
+All the nodes are the same label and all part of the same component, thus by the algorithm, we have our minimum spanning tree.
+
+\subsubsection{Code}
+
+We can implement Kruskal's algorithm efficiently by using connected components.
+
+\begin{lstlisting}
+class edge implements Comparable<edge> {
+    int weight,source,dest;
+    public edge(int source,int dest,int weight) {
+        this.source = source;
+        this.dest = dest;
+        this.weight = weight;
+    }
+    public int compareTo(edge e) {
+        return weight-e.weight;
+    }
+}
+public static int getParent(int parents[], int x) {
+  // Base Case: parent of x is itself.
+  if (parents[x] == x) {
+    return x;
+  }
+  // Set current's parent to highest parent.
+  parents[x] = getParent(parents, parents[x]);
+
+  // Returns parent.
+  return parents[x];
+}
+
+public static int Kruskal(Vector<Vector<edge>> adjList) {
+  int n = adjList.size();
+  // Parents of each node. Nodes with the same parents are in the same
+  // component.
+  int parents[] = new int[n];
+
+  // Set parents of each node to itself.
+  for (int i = 0; i < n; i++) {
+    parents[i] = i;
+  }
+
+  int sum = 0;
+  PriorityQueue<edge> edges = new PriorityQueue<edge>();
+
+  // Iterate through each node.
+  for (int i = 0; i < n; i++) {
+    // Iterate through edges of node.
+    for (int j = 0; j < adjList.get(i).size(); j++) {
+      // Add edge to priority queue.
+      edges.add(adjList.get(i).get(j));
+    }
+  }
+
+  // Iterate through all edges.
+  while (!edges.isEmpty()) {
+    // Get edge with smallest weight.
+    edge e = edges.poll();
+    // Take edge if highest parent of source and destination nodes are
+    // different i.e. take the edge if it connects different components
+    if (getParent(parents, e.source) != getParent(parents, e.dest)) {
+      // Set parent of source to highest parent of destination node.
+      parents[e.source] = getParent(parents, e.dest);
+      
+      // Add edge weight to MST weight.
+      sum += e.weight;
+    }
+  }
+
+  // Return MST weight.
+  return sum;
+}
+\end{lstlisting}
+
+\subsection{Exercises}
+
+\begin{enumerate}
+\item Prove Kruskal's Algorithm works.
+\item Extend Kruskals's to output the full minimum spanning tree used.
+\end{enumerate}
+
+        \section{ Exercises }
+        
+
+\begin{enumerate}
+\item Given a weighted graph with n nodes, find the smallest total cost to connect all nodes into 3 separate groups. (A single node can be a group)
+\item Same as 3, but a group must contain at least 3 other nodes.
+\end{enumerate}
+
+    \chapter{ Topological Sorting }
+        \section{ Topological Sorting }
+        
+
+Prerequisites: Graph Theory, Depth First Search
+
+A topological sort or topological order of a directed graph is an order in which every node will come after its ancestors.
+
+\vspace{5px}\begin{figure}[H]\centering
+        \includegraphics[width=0.66\maxwidth{\textwidth}]{topsort.png}
+        \end{figure}
+
+For example topological orders could be:
+
+\begin{itemize}
+\item (A, B, C, D, E, F, G)
+\item (B, A, D, C, F, E, G)
+\item (B, A, D, G, F, C, E)
+\end{itemize}
+
+But (B, A, C, F, D, E, G) is not a topological ordering because D is an ancestor of F and it comes after F.
+
+\subsection{Implementation}
+
+Topological sort can implemented in O(n) time using DFS for a directed acyclic graph (a digraph with no cycles). How it works:
+
+\begin{enumerate}
+\item Start with an empty top order
+\item Pick any unmarked node
+\item Get the DFS preordering from that node for unvisited nodes 
+\item Add the DFS to the head of the current order
+\item Mark every node that has been visited
+\end{enumerate}
+
+\vspace{5px}\begin{figure}[H]\centering
+        \includegraphics[width=0.66\maxwidth{\textwidth}]{topsort.png}
+        \end{figure}
+
+Example:
+
+\begin{itemize}
+\item Pick C
+\item DFS preorder from C is (C,E)
+\item Add DFS preorder to head [C,E]
+\item Pick F
+\item DFS preorder from F is (F)
+\item Add DFS preorder from F to head [F,C,E]
+\item Pick B
+\item DFS preorder from B is (B,D,G)
+\item Add DFS preorder from B to head [B,D,G,F,C,E]
+\item Pick A
+\item DFS preorder from A is (A)
+\item Add DFS preorder from A to head [A,B,D,G,F,C,E]
+\item Done, all nodes visited
+\end{itemize}
+
+A DFS order from a node is guaranteed to be a topological order. Since we add everything to the head of the order, a child of a node cannot appear before it.
+
+    \chapter{ Connected Components }
+        \section{ Connected Components }
+        
+
+A connected component is a subgraph where all the vertices in the subgraph connect to each other.
+
+Finding the number of distinct connected components can be done using a breadth first search or a depth first search.
+
+\subsection{Implementation}
+
+\begin{enumerate}
+\item Set each node's parent to itself
+\item Pick an unused edge in the graph that is from node A to node B, if the parent of A is not the same as parent of B then set all nodes whose parent is B to parents of A
+\item Repeat for all edges
+\end{enumerate}
+
+\subsubsection{Example}
+
+\vspace{5px}\begin{figure}[H]\centering
+        \includegraphics[width=0.66\maxwidth{\textwidth}]{connectedcomponents.png}
+        \end{figure}
+
+We select a random edge from node 1 and node 2. We set the parent node of 2 to node 1.
+
+\vspace{5px}\begin{figure}[H]\centering
+        \includegraphics[width=0.66\maxwidth{\textwidth}]{connectedcomponents2.png}
+        \end{figure}
+
+We select another random edge from node 5 to node 6.
+
+\vspace{5px}\begin{figure}[H]\centering
+        \includegraphics[width=0.66\maxwidth{\textwidth}]{connectedcomponents3.png}
+        \end{figure}
+
+We pick another random edge and we set the parent to 5.
+
+\vspace{5px}\begin{figure}[H]\centering
+        \includegraphics[width=0.66\maxwidth{\textwidth}]{connectedcomponents4.png}
+        \end{figure}
+
+We take another random edge and we set the parents to 7.
+
+\vspace{5px}\begin{figure}[H]\centering
+        \includegraphics[width=0.66\maxwidth{\textwidth}]{connectedcomponents5.png}
+        \end{figure}
+
+We take another random edge and we have an interesting case, two connected components are to be connected. We take all the nodes whose parent is 1, and we set the new parent to 5.
+
+\vspace{5px}\begin{figure}[H]\centering
+        \includegraphics[width=0.66\maxwidth{\textwidth}]{connectedcomponents6.png}
+        \end{figure}
+
+We take another random edge and set its parent to 1.
+
+\vspace{5px}\begin{figure}[H]\centering
+        \includegraphics[width=0.66\maxwidth{\textwidth}]{connectedcomponents7.png}
+        \end{figure}
+
+We take the last edge and set the last node parent to 7.
+
+\vspace{5px}\begin{figure}[H]\centering
+        \includegraphics[width=0.66\maxwidth{\textwidth}]{connectedcomponents8.png}
+        \end{figure}
+
+\subsubsection{Java Code}
+
+\begin{lstlisting}
+public static int getParent(int x, int[] parent) {
+  // If nodes parent is itself, then we reach the highest parent.
+  if (parent[x] == x) {
+    return x;
+  }
+
+  // Set current node's parent to highest parent.
+  parent[x] = getParent(parent[x], parent);
+
+  // Return highest parent.
+  return parent[x];
+}
+
+public static void connectedComponents(int adjMatrix[][]) {
+  int n = adjMatrix.length;
+  int[] parent = new int[n];
+  int i, j;
+
+  // Initialize every nodes parent to itself.
+  for (i = 0; i < n; i++) {
+    parent[i] = i;
+  }
+  // Iterate through each node.
+  for (i = 0; i < n; i++) {
+    // Iterate through each other node.
+    for (j = 0; j < n; j++) {
+      // If the two nodes have an edge.
+      if (adjMatrix[i][j] > 0) {
+        // Recursively get parents of each node.
+        int pi = getParent(i, parent);
+        int pj = getParent(j, parent);
+        // Set parent of one to the other if they are different.
+        if (pi != pj) {
+          parent[pj] = pi;
+        }
+      }
+    }
+  }
+}
+\end{lstlisting}
+
     \chapter{ Cycle Detection }
-    
+        \section{ Cycle Detection }
+        
 
 A cycle occurs in a graph when a duplicate node is encountered when traversing a tree using a depth first search. In other words, a cycle occurs when you can reach the same node again.
 
@@ -4924,19 +5119,25 @@ Given an n x m matrix and a start point and two colors (src and dst), we want to
 
 Example:
 
+We start with a bitmap image:
+
 \vspace{5px}\begin{figure}[H]\centering
         \includegraphics[width=0.66\maxwidth{\textwidth}]{bucket.png}
         \end{figure}
+
+We use bucket fill in the top left corner of the bitmap to fill everything with the same color as the cell.
 
 \vspace{5px}\begin{figure}[H]\centering
         \includegraphics[width=0.66\maxwidth{\textwidth}]{bucket2.png}
         \end{figure}
 
-In a numeric representation of the colors:
+A numeric representation of the bitmap before bucket fill:
 
 \vspace{5px}\begin{figure}[H]\centering
         \includegraphics[width=0.66\maxwidth{\textwidth}]{bucket3.png}
         \end{figure}
+
+Numeric representation of the bitmap after bucket fill in the left:
 
 \vspace{5px}\begin{figure}[H]\centering
         \includegraphics[width=0.66\maxwidth{\textwidth}]{bucket4.png}
@@ -5015,13 +5216,19 @@ public int FloodFillBFS(int x, int y, int src, int tar) {
 \subsection{Exercises}
 
 \begin{enumerate}
-\item Given a grid and list of start points and walls, find the distance to the closest start point for every non-wall grid space without passing through a wall.
-\item Given a grid and list of cell coordinates, find the perimeter around the cells
-
-\begin{itemize}
-\item Example: a single cell has a perimeter of 4, two cells joined side by side have a perimeter of 6
-\end{itemize}
+\item Given a NxN grid and a list of starting cells and wall cells, find the distance to the closest start point for every non-wall grid space without passing through a wall. 
+\item Given a grid of numbers where 0 means empty space and 1 means a wall, find the number of rooms and the perimeter of each room. The border of the grid is guaranteed to be walls. 
 \end{enumerate}
+
+\begin{lstlisting}
+1 1 1 1 1 1
+1 0 0 0 1 1
+1 1 0 1 1 1
+1 1 0 1 0 1
+1 1 1 1 1 1
+\end{lstlisting}
+
+The number of rooms is 2,  the perimeter of the first room is 12 and the perimeter of the second room is 4.
 
         \section{ Backtracking }
         
@@ -5065,14 +5272,14 @@ backtrack( empty_solution)
 
 Given a set of numbers S of length N, output all subsets of S.
 
-For example S=[1,2,3,4]. The subsets encodings of [1,2,3,4]:
+For example S=(1,2,3,4). The subsets encodings of (1,2,3,4):
 
 \begin{itemize}
-\item []
-\item [1], [2], [3], [4]
-\item [1,2], [1,3], [1,4], [2,3], [2,4], [3,4]
-\item [1,2,3], [1,2,4], [1,3,4], [2,3,4]
-\item [1,2,3,4]
+\item ()
+\item (1), (2), (3), (4)
+\item (1,2), (1,3), (1,4), (2,3), (2,4), (3,4)
+\item (1,2,3), (1,2,4), (1,3,4), (2,3,4)
+\item (1,2,3,4)
 \end{itemize}
 
 We want to be able to enumerate all the subsets of S so we need to find a way to encode a subset of an array. We can use a binary number of length N to encode a subset of an array of length N. For example a 1 represents we use a number in the set and a 0 means we don't use a number in the set.
@@ -5080,22 +5287,22 @@ We want to be able to enumerate all the subsets of S so we need to find a way to
 So above:
 
 \begin{itemize}
-\item [] = 0000
-\item [1] = 1000
-\item [2] = 0100
-\item [3] = 0010
-\item [4] = 0001
-\item [1,2] = 1100
-\item [1,3] = 1010
-\item [1,4] = 1001
-\item [2,3] = 0110
-\item [2,4] = 0101
-\item [3,4] = 0011
-\item [1,2,3] = 1110
-\item [1,2,4] = 1101
-\item [1,3,4] = 1011
-\item [2,3,4] = 0111
-\item [1,2,3,4] = 1111
+\item () = 0000
+\item (1) = 1000
+\item (2) = 0100
+\item (3) = 0010
+\item (4) = 0001
+\item (1,2) = 1100
+\item (1,3) = 1010
+\item (1,4) = 1001
+\item (2,3) = 0110
+\item (2,4) = 0101
+\item (3,4) = 0011
+\item (1,2,3) = 1110
+\item (1,2,4) = 1101
+\item (1,3,4) = 1011
+\item (2,3,4) = 0111
+\item (1,2,3,4) = 1111
 \end{itemize}
 
 At each position we either take or don't take the number in the set and we can do this for each number. We can enumerate through all these encoding by first starting with 0 or 1 and appending more 0's or 1's.
@@ -6109,4 +6316,164 @@ For example you are given \$1000, the future prices of a stock are: 100, 103, 10
 For example, if the total distance is 200km apart with tank capacity 80L and with 5 gas stations at 10km, 40km, 50km, 90km, 150km, the minimum time it will take is 224 minutes.
 \end{enumerate}
 
-\newpage\null\thispagestyle{empty}\newpage\end{document}
+
+  \appendix
+  \chapter{Cheat Sheet}\subsubsection{Sorting}
+
+\begin{center}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+
+
+  Name &
+  Runtime\\
+\hline
+
+
+  Bubble Sort &
+  O(n$^{2}$)\\
+
+  Selection Sort &
+  O(n$^{2}$)\\
+
+  Insertion Sort &
+  O(n$^{2}$)\\
+
+  Heap Sort &
+  O(n log n)\\
+
+  Merge Sort &
+  O(n log n)\\
+
+  Quick Sort &
+  O(n log n)\\
+
+\hline\end{tabulary}\end{center}
+
+\subsubsection{Vector}
+
+\begin{center}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+
+
+  Operation &
+  Get &
+  Push &
+  Pop &
+  Insert &
+  Remove\\
+\hline
+
+
+  Time Complexity &
+  O(1) &
+  O(1) &
+  O(1) &
+  O(n) &
+  O(n)\\
+
+\hline\end{tabulary}\end{center}
+
+\subsubsection{Linked List}
+
+\begin{center}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+
+
+  Operation &
+  Get &
+  Push &
+  Delete &
+  Insert\\
+\hline
+
+
+  Time Complexity &
+  O(n) &
+  O(1) &
+  O(1) &
+  O(1)\\
+
+\hline\end{tabulary}\end{center}
+
+\subsubsection{Hash Set}
+
+\begin{center}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+
+
+  Operation &
+  Membership &
+  Insertion &
+  Deletion\\
+\hline
+
+
+  Time Complexity &
+  O(1) &
+  O(1) &
+  O(1)\\
+
+\hline\end{tabulary}\end{center}
+
+\subsubsection{Tree Set}
+
+\begin{center}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+
+
+  Operation &
+  Membership &
+  Insertion &
+  Deletion\\
+\hline
+
+
+  Time Complexity &
+  O(log n) &
+  O(log n) &
+  O(log n)\\
+
+\hline\end{tabulary}\end{center}
+
+\subsubsection{Heap}
+
+\begin{center}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+
+
+  Operation &
+  Resize &
+  Push &
+  Pop &
+  Heapify\\
+\hline
+
+
+  Time Complexity &
+  O(n) &
+  O(log n) &
+  O(log n) &
+  O(n)\\
+
+\hline\end{tabulary}\end{center}
+
+\subsubsection{Shortest Path}
+
+\begin{center}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
+
+
+  Algorithm &
+  Time &
+  Cycles?\\
+\hline
+
+
+  Floyd Warshall &
+  O(n$^{3}$) &
+  Yes\\
+
+  Bellman Ford &
+  O(n$^{2}$) &
+  Yes\\
+
+  Dijkstra's &
+  O(n log n) &
+  No\\
+
+\hline\end{tabulary}\end{center}
+
+  \newpage\null\thispagestyle{empty}\newpage\end{document}

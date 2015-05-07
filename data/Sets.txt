@@ -6,17 +6,18 @@ Imagine you have a grocery list that you use to keep tracking of things you need
 
 Sets have three operations: insertion, deletion and a membership test. Insertion places an element into the set, deletion removes an element from the set and a **membership** test is checking whether an element exists within the set.
 
-## Implementation
+## Implementations
 
 Type  | Membership | Insertion | Deletion
 -|-
-[[Tree Set]]  | O(log n) | O(log n) | O(log n)
 [[Hash Set]]  | O(1) | O(1) | O(1)
+[[Tree Set]]  | O(log n) | O(log n) | O(log n)
 
 ## Exercises
 
 1. Given a list of words, determine how many of them are anagrams of each other. An anagram is a word that can have its letters scrambled into another word. 
-  * For example silent and listen are anagrams but banana and orange are not.
-2. Given friend lists of two people, find the number of mutual friends.
-3. Given a list of numbers, find the number of tuples of size 4 that add to 0. 
+  * For example, silent and listen are anagrams but banana and orange are not.
+2. Given the friend lists of two people, find the number of mutual friends.
+3. Given an array of numbers, find the number of pairs of numbers that sum to 0.
+4. Given an array of numbers, find the number of tuples of size 4 that add to A.
   * For example in the list (10,5,-1, 3, 4, -6) the tuple of size 4 (-1,3,4-6) adds to 0.

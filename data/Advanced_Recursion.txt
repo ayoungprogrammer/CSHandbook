@@ -14,7 +14,7 @@ Suppose we have a grid of N rows and M columns. How many ways are there to get f
 
 We see that the only way to reach a cell, is to come from the left or from the bottom. So the number of ways to reach a cell is the number of ways to reach the cell to the left plus the number of ways to reach the cell on the bottom. 
 
-So more accurately, the number of ways to get to cell (x, y) is the sum of the ways to get to the cell (x-1, y) and the cell (x, y-1). However, the number of ways to reach the cell (x-1, y) is the sum of the number of ways to the cell (x-2, y) and (x-1, y-1). As we can see, we are solving a reduced version of the same problem! Thus we have a recurrence relation.
+In other words, the number of ways to get to cell (x, y) is the sum of the ways to get to the cell (x-1, y) and the cell (x, y-1). However, the number of ways to reach the cell (x-1, y) is the sum of the number of ways to the cell (x-2, y) and (x-1, y-1). As we can see, we are solving a reduced version of the same problem! Thus we have a recurrence relation.
 
 The base case is any cell on the left border or bottom border. There is only one way to reach the cell by either going only up or only going right.
 
@@ -57,12 +57,12 @@ int paths(int n,int m){
 
 ## [[Towers of Hanoi]]
 
-There are three poles and N discs where each disc is heavier than the next disc. In the initial configuration, the discs are stacked upon another on the first pole where the lighter discs are above the heavier discs. We want to move all the discs to the last pole with the following conditions:
+Suppose we have a game where there are three poles and N discs where each disc is heavier than the next disc. In the initial configuration, the discs are stacked upon another on the first pole where the lighter discs are above the heavier discs. The end goal is to move all the discs to the last pole with the following conditions:
 
 * Only one disc can be moved from one pole to another at a time.
 * The discs have to be stacked such that all the lighter discs are on top of the heavier ones.
 
-Lets' try to make this problem simpler. To move N discs from the first pole the the last pole we need to move N-1 discs to the middle pole, then move the Nth disc to the last pole, and then move all N-1 discs from the middle pole back on to the last pole.
+Let's try to make this problem simpler. To move N discs from the first pole the the last pole we need to move N-1 discs to the middle pole, then move the Nth disc to the last pole, and then move all N-1 discs from the middle pole back on to the last pole.
 
 Let the starting pole be the first pole, the helper pole be the middle pole and the destination pole the third pole.
 
@@ -85,7 +85,7 @@ We need to move the Nth disc from the starting pole to the destination pole.
 We need to move N-1 discs from the helper pole to the destination pole.
 {{hanoi4.png}}
 
-We can see that Step 2 is easy, all we have to do is move that one disc. But for Step 1 and Step 3, we have to move N-1 discs. How can we move N-1 discs to the middle pole? 
+We can see that Step 2 is easy, all we have to do is move one disc. But for Step 1 and Step 3, we have to move N-1 discs. How can we move N-1 discs to the middle pole? 
 
 We see that we can use the same reasoning: we need to move N-2 discs to the third pole. Then we need to move the N-1 disc to the second pole and then move N-2 discs from the third pole to the second pole. Note that the Nth disc does not matter at all in this case since we can move any disc on top of it and we can pretend as if it doesn't exist.
 
@@ -228,7 +228,7 @@ For example, here we have a few permutations of A,B,C,D,E,F:
 
 Given a string S of length N, how can we generate all permutations?
 
-Let's assume that we have a list of permutations for the substring of S of N-1 characters. Then to get the permutations for the string of length N, all we need to do is insert the Nth character in between all the positions of each permutation of N-1 characters. For example, here is how the permutation of A,B,C,D is generated.
+Let's assume that we have a list of permutations for the substring of S of N-1 characters. To get the permutations for a string of length N, we need to insert the Nth character in between all the positions of each permutation of N-1 characters. For example, here is how the permutation of A,B,C,D is generated.
 
 We can manually find the permutations of A,B,C.
 
@@ -253,7 +253,7 @@ If we insert the letter D between each letter for every permutation in N-1 lette
 
 And we can guarantee that every new permutation will be unique. (Try to prove that to yourself).
 
-But let's look at how we can get the permutation of A,B,C. We can also get all the permutations of the string by taking the permutations of A,B and inserting C in all the positions for all substrings.
+But let's look at how we can get the permutations of A,B,C. We can also get all the permutations of the string by taking the permutations of A,B and inserting C in all the positions for all substrings.
 
 Substrings of A,B
 

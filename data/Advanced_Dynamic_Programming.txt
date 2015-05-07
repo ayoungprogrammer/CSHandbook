@@ -6,51 +6,7 @@ Dynamic programming is very powerful and more efficient than recursion for probl
 
 ## [[Longest Common Subsequence]]
 
-A subsequence is a subset of the original sequence that is in the same order. For example in the string "abcdefghi", "aeg" is a subsequence but "eaq" is not because it is not in order.
-
-The longest common subsequence between two strings A and B is the longest subsequence in A that is also in B.
-
-For example given A="xyaaaabcdeg", B="bcaaaaefgxy" the longest common subsequence is "aaaaeg"
-
-[[[[{lang-html}
-xyaaaabcde_g
-bcaaaa___efgxy
-]]]]
-
-If we try to use greedy we will see it doesn't work. For example if we use try to take as much as B as we can, we see that we will get BCEG or if we try to take as much as A we get XY. 
-
-Let first write a formal definition of the problem, given two strings A and B each with lengths N and M respectively we want to find the longest common subsequence between them.
-
-**[Note to make reading easier I have used short forms for substring and index. For example A[3] means the 3rd character of A and A[1..4] means the substring of A from the first character to the fourth character inclusive. A[0] represents the null substring of A]**
-
-The base is simple. The LCS of A[1..x] (where x is from 1 to N) and B[0] = 0. The LCS of B[1..x] and A[0] = 0.
-
-We need to break this problem into subproblems. 
-
-If A[N] = B[M] and then the new LCS is the LCS of A[1..N-1] and B[1..M-1]. Note that if two strings have the same character at the end of their string it has to be part of the LCS. Try to prove this to yourself.
-
-[[[[{lang-html}
-LCS of matched = (LCS of A from 1 to N-1, B from 1 to M-1) + A[N]
-]]]]
-
-If A[N] != B[M] then we try to match A[N] with B[M-1] or A[N-1] with B[M]. Thus we take the LCS of A[1..N-1] and B[1..M] and the LCS of A[1..N] and B[1..M-1].
-
-[[[[{lang-html}
-LCS of not matched = max ( (LCS of A[1..N], B[1..M-1]) , (LCS of A[1..N-1],B[1..M]))
-]]]]
-
-Putting it all together we have:
-[[[[{lang-html}
-Let LCS[i][j] be the length of longest common subsequence of A[1..i] and B[1..j] where 0< i ≤ n and 0 < j ≤ m.
-
-Base case:
-LCS[i][0] = 0 where 0< i ≤ n
-LCS[0][j] = 0 where 0< j ≤ m
-
-Subproblem:
-if A[i] == B[j], LCS[i][j] = LCS[i-1][j-1]+1 where 0< i ≤ n and 0 < j ≤ m
-if A[i] != B[j], LCS[i][j] = max( LCS[i-1][j], LCS[i][j-1] ) where 0< i ≤ n and 0 < j ≤ m
-]]]]
+((((Longest Common Subsequence.Solution))))
 
 ## [[Zero-One Knapsack Problem]]
 
@@ -60,29 +16,37 @@ Given an unlimited amount of N items with positive weights and values, we want t
 
 Let's change the problem slightly such that there is only one of each object. The problem becomes slightly more difficult because we need to take into account whether or not we have used an object before. 
 
-Given one of each N items with positive weights and values, we want to find the maximum value we can hold with a capacity W.
+Given only one copy of N items with positive weights and values, we want to find the maximum value we can hold with a capacity W.
 
-For every object, we have two options: we can take it or not take it. Thus for every option we need to make this binary decisions and thus we will have 2^^n^^ options.
+The base case is simple, if there are no more items or total capacity is less than or equal to 0 then the maximum value is 0. Suppose we have items remaining and total capacity is positive. We can either take or leave the first item and we want the maximum value of both actions. If we take the item, the value will be the value of the item plus the maximum value of the rest of the items that fit in the rest of the space in the knapsack minus the space of the item we took. If we leave the item, the value will be the maximum value of the rest of the items that fit in the knapsack. Thus we have our recurrence relation.
 
 [[[[
-Let knapsack(N,W) be maximum value of N items with capacity of W
-Let weights be array of weights
-Let values be array of values
-knapsack(i, 0) = 0
+Let knapsack(items[], W) be the maximum value of items that fit in a maximum capacity of W.
+Let N be the number of items.
 
-knapsack(i, w) = max(knapsack(i + 1, w - weights[i]) + values[i], knapsack(i-1,w))
+Base case:
+knapsack(items[], w) = 0 if w <= 0
+knapsack([], w) = 0
+
+Recursion:
+takeValue = knapsack(items[1..N], w - items[0].weight) + items[0].value
+leaveValue = knapsack(items[1..N], w)
+knapsack(items[], w) = max(takeValue, leaveValue)
 ]]]]
 
+However, we are recomputing multiple values and we can eliminate this by building the solution upwards using dynamic programming.
+
 [[[[
-Let knapsack[N][W] be the maximum value of iterating through N items with maximum capacity of W
-Let weights be an array of weights where weights[i] is the weight of the ith item
-Let values be an array of values where values[i] is the value of the ith item
+Let knapsack[N][W] be the maximum value of N items that fit in a maximum capacity of W.
+Let items be an array of N items with positive weights and values.
 
 for i from 0 to W
-    knapsack[0][i] = 0
+  knapsack[0][i] = 0
 
 for n from 1 to N
-    knapsack[n][0] = 0
-    for w from 1 to W
-        knapsack[n][w] = max(knapsack[n-1][w-weight[n]]+value[n], knapsack[n-1][w])
+  knapsack[n][0] = 0
+  for w from 1 to W
+    takeValue = knapsack[n - 1][w - item[n - 1].weight] + item[n - 1].value
+    leaveValue = knapsack[n - 1][w]
+    knapsack[n][w] = max(takeValue, leaveValue)
 ]]]]

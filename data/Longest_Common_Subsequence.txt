@@ -1,5 +1,7 @@
 ## Introduction
 
+Prerequisites:  [[Dynamic Programming]]
+
 A subsequence is a subset of the original sequence that is in the same order. For example in the string "abcdefghi", "aeg" is a subsequence but "eaq" is not because it is not in order.
 
 The longest common subsequence between two strings A and B is the longest subsequence in A that is also in B.
@@ -11,54 +13,85 @@ xyaaaabcde_g
 bcaaaa___efgxy
 ]]]]
 
-If we try to use greedy we will see it doesn't work. For example if we use try to take as much as B as we can, we see that we will get BCEG or if we try to take as much as A we get XY. 
-
-### Prerequisites
-
-* [[Dynamic Programming]]
+If we try to use greedy we will see it doesn't work. For example, if we use try to take as much as B as we can, we see that we will get BCEG or if we try to take as much as A we get XY. 
 
 ## Solution
 
 Let first write a formal definition of the problem, given two strings A and B each with lengths N and M respectively we want to find the longest common subsequence between them.
 
-**[Note to make reading easier I have used short forms for substring and index. For example A[3] means the 3rd character of A and A[1..4] means the substring of A from the first character to the fourth character inclusive. A[0] represents the null substring of A]**
+The base case is very simple: if A or B are empty strings, then trivially, the longest common subsequence is an empty string.
 
-The base is simple. The LCS of A[1..x] (where x is from 1 to N) and B[0] = 0. The LCS of B[1..x] and A[0] = 0.
+Now suppose that A and B are non empty strings. Let's consider the case that A and B both start with the same letter (A[0] == B[0]). It can be seen that the longest common subsequence must also begin with that letter. Thus the longest common subsequence is A[0] plus the longest common subsequence from A[1..N] and B[1..M]. However, suppose that A and B do not start with the same letter (A[0] != B[0]). Then the LCS of A and B is either the LCS of A[1..N] and B or the LCS of A and B[1..M] and we take the longer of the two. Thus this is our recurrence relation.
 
-We need to break this problem into subproblems. 
+### Formalization
 
-If A[N] = B[M] and then the new LCS is the LCS of A[1..N-1] and B[1..M-1]. Note that if two strings have the same character at the end of their string it has to be part of the LCS. Try to prove this to yourself.
+[[[[
+Let lcs(A, B) be the longest common substring between A and B.
+Let N be the length of A and M be the length of B.
+Let max(A, B) return the string with longer length.
 
-[[[[{lang-html}
-LCS of matched = (LCS of A from 1 to N-1, B from 1 to M-1) + A[N]
+lcs('', A) = ''
+lcs(B, '') = ''
+
+lcs(A, B) = A[0] + lcs(A[1..N], B[1..M]) if A[0] == B[0]
+lcs(A, B) = max(lcs(A, B[1..M]), lcs(A[1..N], B)) otherwise
+
+Example:
+lcs('AB', 'CAB')
+= max(lcs('AB','AB'), lcs('A', 'CAB'))
+= max('A' + lcs('B', 'B'), max(lcs('A', 'AB'), lcs('', 'CAB'))
+= max('A' + 'B' + lcs('', ''), max('A' + lcs('', 'B')), ''))
+= max('AB', max('A', ''))
+= max('AB', 'A')
+= 'AB'
+
+Example:
+lcs('XY', 'AB')
+= max(lcs('XY', 'B'), lcs('Y', 'AB'))
+= max(max(lcs('XY',''), lcs('Y', 'B')), max(lcs('Y','B'), lcs('', 'AB'))
+= ''
 ]]]]
 
-If A[N] != B[M] then we try to match A[N] with B[M-1] or A[N-1] with B[M]. Thus we take the LCS of A[1..N-1] and B[1..M] and the LCS of A[1..N] and B[1..M-1].
+Note that in the second example, we are recomputing lcs('Y', 'B') twice. If we have longer strings, we will be recomputing the same values many times! We can rewrite the solution with dynamic programming by building up the solution instead of using recursion and eliminating recomputation.
 
-[[[[{lang-html}
-LCS of not matched = max ( (LCS of A[1..N], B[1..M-1]) , (LCS of A[1..N-1],B[1..M]))
+[[[[
+Let lcs[x][y] be the least common subsequence of A[0..x] and B[0..y].
+Let N be length of A and M be length of M
+
+// Base case
+for i from 1 to N
+  lcs[i][0] = ''
+
+// Base case
+for i from 1 to M
+  lcs[0][i] = ''
+
+for x from 1 to N
+  for y from 1 to M
+    if A[x - 1] == B[j - 1]
+      lcs[x][y] = lcs[x - 1][y - 1] + A[x - 1]
+    else
+      lcs[x][y] = max(lcs[x - 1][y], lcs[x][y - 1]
+
+
+Example (string lengths):
+A = 'xygz'
+B = 'yabz'
+
+      x y g z
+  / 0 1 2 3 4
+  0 0 0 0 0 0
+y 1 0 0 1 1 1
+a 2 0 0 1 1 1
+b 3 0 0 1 1 1
+z 4 0 0 1 1 2
 ]]]]
-
-Putting it all together we have:
-[[[[{lang-html}
-Let LCS[i][j] be the length of longest common subsequence of A[1..i] and B[1..j] where 0< i ≤ n and 0 < j ≤ m.
-
-Base case:
-LCS[i][0] = 0 where 0< i ≤ n
-LCS[0][j] = 0 where 0< j ≤ m
-
-Subproblem:
-if A[i] == B[j], LCS[i][j] = LCS[i-1][j-1]+1 where 0< i ≤ n and 0 < j ≤ m
-if A[i] != B[j], LCS[i][j] = max( LCS[i-1][j], LCS[i][j-1] ) where 0< i ≤ n and 0 < j ≤ m
-]]]]
-
-## Implementation
 
 ## Exercises
 
-1. Given three strings of length N, find the longest common subsequence
-2. Given two strings of length N, find the longest common substring (adjacent characters)
+1. Given three strings of length N, find the longest common subsequence.
+2. Given two strings of length N, find the longest common substring (adjacent characters).
 3. Given a string S, find the least number of operations (add letter, remove letter) to turn it into a palindrome.
-  * Example: abcdc -> abcdcb -> abcdcba (2 operations)
+  * Example: abcdc -> abcdcb -> abcdcba (2 operations).
 4. Given a string A and string B, find the least number of operations (change letter, add letter, remove letter) to turn A into B.
-  * Example: A = abcdefh, B = bcefg, abcdefh->bcdefh->bcefh->bcefg 
+  * Example: A = abcdefh, B = bcefg, abcdefh->bcdefh->bcefh->bcefg .

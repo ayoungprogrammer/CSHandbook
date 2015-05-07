@@ -2,7 +2,9 @@
 
 Prerequisites: [[Set]], [[Binary Tree]]
 
-A binary search tree is a  [[binary tree|Binary Tree]] with special properties. The left children of a node will always be less than the node and the right children of a node will always be more than the node. It has a recursive structure such that every subtree is also a binary search tree.
+A binary search tree is a  [[binary tree|Binary Tree]] with special properties. For every node in the tree, the values of all the nodes in left subtree of a node will always be less than the value of the node and all the nodes in the right subtree will always be more than the value of the node. It has a recursive structure meaning every subtree is also a binary search tree.
+
+Structure:
 
 {{bstcompare.png}}
 
@@ -18,13 +20,17 @@ Example:
 
 In a binary search tree, everything to the left of a node is smaller than that node and everything to the right of that node is greater than that node. 
 
+Structure:
+
 {{bstcompare.png}}
+
+Example:
 
 {{bst.png}}
 
 ### Implementation
 
-A Node is a node in our tree set. Each node will contain a left subtree, a right subtree, the parent of the tree and the value stored at that node. It is unnecessary to store the parent, but for this implementation it will be easier to keep track of the parent.
+A Node is a node in our binary search tree. Each node will contain a left subtree, a right subtree, the parent of the tree and the value stored at that node. It is unnecessary to store the parent, but for this implementation it will be easier to keep track of the parent.
 
 replaceChild replaces the left or right child node specified with the replacement node. 
 
@@ -90,7 +96,7 @@ Since 4 is greater than 2, we traverse the right subtree to 3.
 
 {{bstinsert3.png}}
 
-Since 4 is greater than 3 and there is no right child, than we set 4 as the right child.
+Since 4 is greater than 3 and there is no right child, than we create a new node with the value 4 as the right child.
 
 {{bstinsert4.png}}
 
@@ -145,7 +151,7 @@ We want to check if the number 6 is in the binary search tree.
 
 {{bstcontains.png}}
 
-Since 6 is larger than 5, we traverse the right subtree of56. 
+Since 6 is larger than 5, we traverse the right subtree of 5. 
 
 {{bstcontains2.png}}
 
@@ -184,7 +190,7 @@ public boolean contains(int x) {
 
 ## Remove 
 
-Removing an element is a much more complex because we need to maintain the tree structure of the tree set when removing elements. First we locate the element that we want to remove. If the element is not there then the operation failed and we return false. If the element is there then are three cases we need to consider. 
+Removing an element is a much more complex because we need to maintain the tree structure of the tree set when removing elements. First, we locate the element that we want to remove. If the element is not there, then the operation failed and we return false. If the element is there, then are three cases we need to consider. 
 
 {{bst-rem.png}}
 
@@ -212,7 +218,7 @@ We need to replace the node with the **rightmost** of the *left* subtree or the 
 
 {{bst-rem-case32.png}}
 
-It does not matter which side we pick so we will use the **rightmost** of the *left* subtree. First we copy the value of the rightmost of the left subtree into the node that will be deleted. 
+It does not matter which side we pick, so we will use the **rightmost** of the *left* subtree. First, we copy the value of the rightmost of the left subtree into the node that will be deleted. 
 
 {{bst-rem-case33.png}}
 
@@ -257,7 +263,7 @@ public boolean remove(int x) {
       curNode.parent.replaceChild(curNode, null);
     }
   }
-  // Case 2: Removed node only has a right child.
+  // Case 2a: Removed node only has a right child.
   else if (curNode.left == null) {
     // Special case if node is root.
     if (curNode == root) {
@@ -269,7 +275,7 @@ public boolean remove(int x) {
       curNode.parent.replaceChild(curNode, curNode.right);
     }
   }
-  // Case 2: Removed node only has a left child.
+  // Case 2b: Removed node only has a left child.
   else if (curNode.right == null) {
     // Special case if node is root.
     if (curNode == root) {
@@ -300,7 +306,7 @@ public boolean remove(int x) {
 
 ## Print Tree
 
-Since tree sets are stored as a binary search tree, we can print the elements in order.
+In a binary search tree, we can print the elements in order.
 
 ### Implementation
 

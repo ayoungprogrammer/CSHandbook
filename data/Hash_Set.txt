@@ -55,7 +55,7 @@ The hash code is the result of the hashing algorithm for an element. In our hash
 
 {{hashcode.png}}
 
-For the most part, if the numbers are all random, then the hash function will perform well. However, if the number of buckets was 10 and we added the elements 20,30,40,50,60,70, then they would all end up in the same bucket and performance degenerates to a linked list.
+For the most part, if the numbers are all random, then the hash function will perform well. However, if the number of buckets was 10 and we added the elements 20,30,40,50,60,70, then they would all end up in the same bucket and performance degenerates to a linked list. A good hash function can prevent this from occurring.
 
 [[[[
 public int getHash(int x, int hashSize) {
@@ -99,7 +99,11 @@ public void resize() {
 
 To insert an element in a hash set, we get the hash code from our hashing algorithm and insert the element into the corresponding bucket.
 
+For example, if we want to insert 88 in the following hash set:
+
 {{hashset.png}}
+
+We compute the hash of 88 which is 8, and we insert it to the end of the bucket with hash 8.
 
 {{hashsetinsert.png}}
 
@@ -134,9 +138,13 @@ public boolean insert(int x) {
 
 To check if a hash set contains an element, we get the hash code from our hashing algorithm and check if the corresponding bucket contains the element.
 
+For example, if want to check if 123 is in the hash set:
+
+We compute the hash of 123 which is 3 and search the bucket with hash 3.
+
 {{hashsetcontains.png}}
 
-{{hashsetcontains2.png}}
+We iterate through the bucket until we find the element we want and return true. Otherwise, if we cannot find the element in the bucket we return false.
 
 {{hashsetcontains3.png}}
 
@@ -159,9 +167,17 @@ To remove an element from a hash set, we get the hash code from our hashing algo
 
 The function will return whether or not the operation was successful. If the bucket contains the element we can remove it from the linked list and the operation is successful. If the element is not in the bucket then the operation fails because we cannot remove something that is not there.
 
+For example, we want to remove 123 from the hash set:
+
+We compute the hash of 123 which is 3 and we search the bucket with hash 3.
+
 {{hashsetrem.png}}
 
+We iterate through each element in the bucket until we find 123.
+
 {{hashsetrem2.png}}
+
+If we find the element, we delete the element from the bucket.
 
 {{hashsetrem3.png}}
 
@@ -180,8 +196,6 @@ public boolean remove(int x) {
 
 ## Exercises
 
-1. Devise a better hashing algorithm for strings.
+1. Devise a hashing algorithm for strings.
 2. Calculate the probability of a collision occurring given the number of buckets and number of elements in the hash set.
-3. Given an array of numbers, find the number of pairs of numbers that sum to 0.
-4. Given an array of numbers and a number A, find the number of pairs of numbers that sum to A.
-5. Given an array of numbers and a number A, find the number of quadruples that sum to A.
+3. Prove that the runtime of all the operations are O(1).

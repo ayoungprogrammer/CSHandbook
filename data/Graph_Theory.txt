@@ -18,9 +18,9 @@ A **directed acyclic graph** (DAG) is a graph with no directed cycles (see topol
 
 A **weighted** graph is a graph that contains weights or values assigned to each edge or node. Usually these weights act as the cost to reach/use that node.
 
-## Representations
+## [[Graph Representations]]
 
-A graph can be represented as a adjacency matrix or an adjacency list.
+((((Graph Representations.Introduction))))
 
 ### [[Adjacency Matrix]]
 

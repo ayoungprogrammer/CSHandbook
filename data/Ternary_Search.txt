@@ -44,7 +44,7 @@ Thus if f(mvv1vv) < f(mvv2vv), then M > mvv1vv thus the maximum point cannot be 
 
  * **Case 2.3**: mvv1vv < mvv2vv < M is not possible
 
-Thus, if f(mvv1vv) >= f(mvv2vv) then M < mvv2vv thus the maximum point cannot be in the last third and we can remove it. The new range must be from A to mvv2vv.
+Thus, if f(mvv1vv) >= f(mvv2vv), then M < mvv2vv thus the maximum point cannot be in the last third and we can remove it. The new range must be from A to mvv2vv.
 
 {{ternarycase2.png}}
 
@@ -54,17 +54,31 @@ Therefore, based on the values of f(mvv1vv) and f(mvv2vv), we can always remove 
 
 Example of ternary search:
 
+Suppose we have a function f(x) with a maximum point between A and B.
+
 {{ternarysearch.png}}
+
+We find m1 (1/3) point and m2 (2/3) point between A and B. 
 
 {{ternarysearch2.png}}
 
+Since f(mvv1vv) > f(mvv2vv), then we can reduce the range from A to mvv2vv. We find the new mvv1vv and mvv2vv points. 
+
 {{ternarysearch3.png}}
+
+Since f(mvv1vv) < f(mvv2vv), then we can reduce the range from mvv1vv to B. We find the new mvv1vv and mvv2vv points. 
 
 {{ternarysearch4.png}}
 
+Since f(mvv1vv) < f(mvv2vv), then we can reduce the range from mvv1vv to B.We find the new mvv1vv and mvv2vv points.
+
 {{ternarysearch5.png}}
 
+Since f(mvv1vv) < f(mvv2vv), then we can reduce the range from mvv1vv to B. We find the new mvv1vv and mvv2vv points. 
+
 {{ternarysearch6.png}}
+
+We keep repeating this until we narrow down the range to within a small threshold and we can find the point where f(x) is maximum.
 
 {{ternarysearch7.png}}
 

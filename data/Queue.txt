@@ -4,7 +4,7 @@ A queue is an abstract data type with two functions, pop and push. Removal from 
 
 Imagine you are standing in line for a restaurant. Whoever is first in line will be served first and whoever is last in line will be served last. People can be served while more people join the line and the line may get very long because it takes a while to serve one person while more people join the queue. This is called a queue.
 
-Queues are often used for buffer systems, for example a text message service. The messages that arrive at the server first are relayed first and the messages that arrive later are relayed later. If there are too many text messages in the system such that the rate  texts are received overwhelm the number of texts that are sent the buffer may overflow and messages will get dropped. Most of the time this won't happen because the systems are designed to handle large loads, but if there were an emergency that caused everyone to start texting many texts could be dropped.
+Queues are often used for buffer systems, such as a text message service. The messages that arrive at the server first are relayed first and the messages that arrive later are relayed later. If there are too many text messages in the system such that the rate  texts are received overwhelm the number of texts that are sent the buffer may overflow and messages will get dropped. Most of the time this won't happen because the systems are designed to handle large loads, but if there were an emergency that caused everyone to start texting many texts could be dropped.
 
 Example of push:
 
@@ -14,8 +14,8 @@ Example of pop:
 
 {{queue2.png}}
 
-## Implementation
-We can implement a queue most efficiently using a linked list because it has an efficient memory allocation. 
+## Implementations
+We can implement a queue most efficiently using a linked list because it uses efficient memory allocation. 
 
 | Implementation | Pop | Push
 |-

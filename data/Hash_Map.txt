@@ -4,11 +4,11 @@
 
 [[Source on GitHub||GITHUB_PATH/HashMap.java]]
 
-Hash maps are maps that use [[hash sets|Hash sets]] to store the keys. 
+Hash maps are maps that use [[hash sets|Hash sets]] to store pairs of key values. Implementations of hash maps are very similar to hash sets.
 
-## Implementation
-
-Here is a Java implementation of a hash map which is a modified version of a [[hash set]].
+Type  | Get | Put | Deletion
+-|-
+[[Hash Map]]  | O(1) | O(1) | O(1)
 
 ## Class
 
@@ -50,7 +50,7 @@ Since most of the implementation is the same as Hash Set, we will skip most of t
 
 ## Resize
 
-Resizing is the same as a Hash Set, but we to copy the pairs instead of only the values. 
+Resizing is the same as a Hash Set, but we copy the pairs instead of only the values. 
 
 [[[[
 public void resize() {
@@ -158,4 +158,4 @@ public boolean remove(int key) {
 
 ## Exercises
 
-1. Create a hash map for the an contact list (phone numbers as keys, names as value).
+1. Create a hash map for a contact list (phone numbers as keys, names as value).

@@ -10,9 +10,7 @@ Imagine you were on a scavenger hunt with lots of treasure chests. You start wit
 
 {{linkedlist.png}}
 
-A linked list is similar to an array but it is different such that it is not stored in one block of data. Each element can be stored in a random place in memory but each element contains a pointer to the next element thus forming a chain of pointers. Think of a pointer as a clue to the next chest. Since the elements aren't in a block, accessing an element must be done by traversing the entire linked list by following each pointer to the next. However, this also allows insertion to be done more quickly by simply changing the point of the previous element and setting to the pointer of the current element to the next element. Deletion is also done by taking the previous element and changing its pointer to two elements ahead. In a linked list the links only go forward and you cannot move backward. 
-
-A **doubly linked list** is a linked list that has pointers going backwards as well as forwards.
+A linked list is similar to an array but it is different such that it is not stored in one block of data. Each element can be stored in a random place in memory but each element contains a pointer to the next element thus forming a chain of pointers. Think of a pointer as a clue to the next chest. Since the elements aren't in a block, accessing an element must be done by traversing the entire linked list by following each pointer to the next. However, this also allows insertion and deletion to be done more quickly. In a linked list the links only go forward and you cannot move backward. However, a **doubly linked list** is a linked list that has pointers going backwards as well as forwards.
 
 {{doublelinkedlist.png}}
 
@@ -60,9 +58,15 @@ public class LinkedList {
 
 Create a new node with the value given and add it to the end. We have to set the current head previous node to the new node and the new next next to the last node.
 
+For example, if we want to insert E into the following linked list:
+
 {{linkedlistpush.png}}
 
+First, we set the next pointer of the last element to the next element.
+
 {{linkedlistpush2.png}}
+
+Then we set the new end of the linked list.
 
 {{linkedlistpush3.png}}
 
@@ -84,7 +88,11 @@ public void push(int value) {
 
 Pops off the head of the linked list and throws an exception if the linked list is empty.
 
+For example, if we want to pop the first element of the following linked list:
+
 {{linkedlistpop.png}}
+
+We set the head of the linked list to the second element.
 
 {{linkedlistpop2.png}}
 
@@ -107,9 +115,17 @@ public int pop() {
 
 Get retrieves the value at the specified index. We have to loop through the entire list to get to the index we want.
 
+For example, if we want to get the element C in the following linked list:
+
+We first start at the head element and iterate through each node.
+
 {{linkedlistget.png}}
 
+We keep following the next pointers until we reach the node we want or the end of the linked list.
+
 {{linkedlistget2.png}}
+
+Since our current pointer points to C, we stop.
 
 {{linkedlistget3.png}}
 
@@ -132,7 +148,11 @@ public int get(int index) {
 
 To delete the current node we set the previous node next link to the link that is next.
 
+For example, if we wanted to delete B from the following linked list:
+
 {{linkedlistrem.png}}
+
+We would find B and set the previous node's next to B's next which is C.
 
 {{linkedlistrem2.png}}
 
@@ -159,5 +179,5 @@ public void deleteNext(Link node) {
     * 2 (2, 4, 2 is eliminated)
     * Player 2 is the last one standing.
 3. Given two linked lists which may share tails, determine the point at which they converge. For example, if our first linked list is [1,2,4,5] and our second linked list is [0,3,4,5] and each number is a node, then the two linked lists converge at 4. 
-  {{linked_list_converge.png}}
+  {{linkedlistconverge.png}}
 4. Given a node in a doubly linked list, write a function that removes the node from the list. 

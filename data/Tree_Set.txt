@@ -12,10 +12,12 @@ Tree Sets are implemented using [[binary search trees|Binary Search Tree]].
 
 {{bst.png}}
 
+## Implementations
+
 | Operation | Membership | Insertion | Deletion
 |-
-| Time Complexity | O(log n) | O(log n) | O(log n)
+| [[Binary Search Tree]] | O(log n) | O(log n) | O(log n)
 
 ## Exercises
 
-1. Given a list of names, output all the unique names in alphabetical order
+1. Given a list of names, output all the unique names in alphabetical order.

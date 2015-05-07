@@ -4,7 +4,7 @@ Processing time and memory are two primary resources that computer programs use 
 
 ## Limits
 
-There are many different methods of implementing different things but most of the time we care most about implementations that are the fastest and use the least amount of memory. Let's go through some basic benchmarks about computers that you should know. Adding two numbers takes a nanosecond (1 billionth of a second) for an average computer to process as of this date of writing. For practical purposes, we'll assume that the average computer program can hold up to 1GB or RAM or about 250 million integers.
+There are many different methods of implementing different things but most of the time we care most about implementations that are the fastest and use the least amount of memory. Let's go through some basic benchmarks about computers that you should know. Adding two numbers takes a nanosecond (1 billionth of a second) for an average computer to process as of this date of writing. For practical purposes, we'll assume that the average computer program can hold up to 1GB of RAM or about 250 million 32 bit integers.
 
 Memory| Operations (per second)
 -|--
@@ -12,11 +12,13 @@ Memory| Operations (per second)
 
 ## Big O Notation
 
-When we compare how efficient algorithms or data structures are to another, we want to be able to describe them such that they can be quantified. We use something called Big O notation to do this. The size of the inputs determines the space and time complexities of many algorithms and data structures. The Big O notation takes the largest factor of an input to compare computation times / memory usage. When we take the largest factor, we ignore smaller factors, coefficients and constants because they become insignificant at very large values. For example: O(3n^^2^^ + 12n + 20) is simply O(n^^2^^) because it is the largest factor.
+When we design algorithms and data structures, we are concerned with their runtime and memory complexities. The runtime complexity is the number of operations required for a program the run. We will consider reading a unit of data, writing a unit of data, simple arithmetic and logic operations to be a single operation. For example, if we had a program that read two numbers, added them together and stored them the result, it would take 2 operations to read the two numbers, 1 operation to add the numbers and 1 more operation to store the result.The size of the inputs determines the space and runtime complexities of algorithms and data structures. The memory complexity is the additional amount of data required by an algorithm or data structure. For example, if you had an array of 10 integers, the memory complexity would be 10 integers.
+
+When we compare how efficient algorithms or data structures are to another, we want to be able to describe them such that they can be compared by a quantifiable amount. We use a notation called Big O notation to do this. We can use it to describe the runtime and memory complexities of algorithms and data structures. The complexities of an algorithm or data structure will depend on the size of its inputs. For example, if we have a program that calculates the sum of N integers, the runtime would take much longer if N was 1000 versus if N was 10. Thus we want to determine how long a program will take to run or how much memory it will use relative to the size of the inputs. The Big O notation takes the largest factor of an input to compare computation times / memory usage. When we take the largest factor, we ignore smaller factors, coefficients and constants because they become insignificant at very large values. For example: O(3n^^2^^ + 12n + 20) is simply O(n^^2^^) because it is the largest factor.
 
 Here is a list of common Big O notations based on complexity:
 
-Big O | Limit of N for 1 second (Standard processor)
+Big O | Limit of N for 1 second
 -|-
 O(1) *Constant Time* | runtime independent of N
 O(log N) *Sublinear time* | a very big number
@@ -27,11 +29,11 @@ O(N^^3^^) *Cubic Time* | 450
 O(2^^N^^) *Exponential Time* | 27
 O(N!) *Factorial Time* | 11
 
-Keep in mind that in a couple of years as technology improves, this chart will be outdated.
+Keep in mind that in a couple of years, this chart will be outdated as technology improves.
 
 ## Runtime and Memory Analysis
 
-In a program we are usually concerned with two main factors: runtime and memory. Runtime complexity is the amount of time it takes for a program to run and memory complexity is usually used as the additional amount of memory other than the input that a program takes. Note that if you are able to stream your input in your program (read in chunks at a time), then the memory footprint will be reduced to your stream size.
+In a program we are usually concerned with two main factors: runtime and memory. Runtime complexity is the amount of time it takes for a program to run.  Memory complexity is usually used as the additional amount of memory other than the input that a program takes. Note that if you are able to stream your input in your program (read in chunks at a time), then the input memory footprint will be reduced to your stream size.
 
 ### Example
 
@@ -42,8 +44,8 @@ Suppose we have a function that has an array of size N as an input that returns 
 int findMax(int[] array) {
   int maxVal = array[0]; //O(1) memory to store max element, O(1) time for assignment.
   for(int i = 1; i < array.length; i++) { //O(n) loop runtime.
-    if (maxVal < array[i]) { //O(1) to compare runtime.
-      maxVal = array[i]; //O(1) to assign new value runtime.
+    if (maxVal < array[i]) { //O(1) to compare.
+      maxVal = array[i]; //O(1) to assign new value.
     }
   }
   return maxVal;
@@ -75,7 +77,7 @@ There are NxN cells we need to set to 0, so we need O(n^^2^^) operations. We can
 
 ### Example
 
-Suppose we have another function that prints out the binary number backwards for each number from 1 to N. For example, the binary number backwards for 25 is 11001.
+Suppose we have another function that prints out the binary number backwards for each number from 1 to N. For example, the binary number backwards for 25 is 10011.
 
 [[[[
 void binaryNumbers(int n) {
@@ -97,7 +99,7 @@ void binaryNumbers(int n) {
 }
 ]]]]
 
-For each number x, it will take O(lnvv2vv x) to convert the number to binary because we dividing by 2. Since O(lnvv2vv x) = O( (ln x)/ (ln 2) ), and the denominator is a constant, we can rewrite this as O(ln x). We can also rewrite this os O(log x) which most people when referring to logarithmic complexities. We do this operation N times so the total runtime complexity is: O(n log n). We need O(1) additional memory to store the variable bin and x.
+For each number x, it will take O(lnvv2vv x) to convert the number to binary because we dividing by 2. Since O(lnvv2vv x) = O( (ln x)/ (ln 2) ), and the denominator is a constant, we can rewrite this as O(ln x). We can also rewrite this as O(log x) which most people use when referring to logarithmic complexities. We do this operation N times so the total runtime complexity is: O(n log n). We need O(1) additional memory to store the variable bin and x.
 
 ### Example
 
@@ -160,10 +162,15 @@ public int mode2(int[] arr, int m) {
 }
 ]]]]
 
-We first initialize the array of occurrences to 0 which takes O(m). We then loop through the array of numbers which takes O(n). FInally, we loop through the array of occurrences to find the mode which takes O(m). Thus the final runtime is O(n + m). We need to store the mode which takes O(1) and the array of occurrences which takes O(m). Thus the memory footprint is O(m).
+We first initialize the array of occurrences to 0 which takes O(m). We then loop through the array of numbers which takes O(n). Finally, we loop through the array of occurrences to find the mode which takes O(m). Thus the final runtime is O(n + m). We need to store the mode which takes O(1) and the array of occurrences which takes O(m). Thus the memory footprint is O(m).
 
-Note that although the two approaches do the same thing, they have different complexities for runtime and space. If m was large and the cost of storing m integers was too expensive, then we would use the first approach at the cost of having O(n^^2^^) quadratic runtime. However, if m was small and we wanted a fast solution, then we would use the second approach at the cost of storing extra O(m) integers. Problems can have solutions that optimize for speed and other solutions that optimize for space. Sometimes space can be more expensive than speed and sometimes speed can be more expensive than space. 
+Note that although the two approaches do the same thing, they have different complexities for runtime and space. If m was large and the cost of storing m integers was too expensive, then we would use the first approach at the cost of having O(n^^2^^) quadratic runtime. However, if m was small and we wanted a fast solution, then we would use the second approach at the cost of storing extra O(m) integers. Problems can have solutions that optimize for speed and other solutions that optimize for space. Sometimes space can be more expensive than speed and vice versa.
 
 ## Exercises
 
-1. 
+1. Determine the runtime and memory complexities of finding the average of an integer array.
+2. Determine the runtime and memory complexities of adding two NxN matrices together.
+3. Determine the runtime complexity of guessing a N digit numeric password.
+4. Determine the runtime complexity of summing the digits of a number.
+5. Determine the memory complexity of counting the occurrences of letters in a book.
+5. Determine the memory complexity of counting the occurrences of words in a book.

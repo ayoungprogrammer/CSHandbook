@@ -61,12 +61,12 @@ function latexParse($str){
 	$str = preg_replace('/\$/','\\\$',$str);
 
 	// <table> ... </table> -> \begin{tabular} ... \end{tabular}
-	$str = preg_replace('/<table>/','\vspace{10px}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline',$str);
+	$str = preg_replace('/<table>/','\begin{center}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline',$str);
 	$str = preg_replace('/<thead>.*?<tr>/','{',$str);
 	$str = preg_replace('/<\/thead>/','\hline',$str);
 	$str = preg_replace('/<\/t(d|h)>\s*<\/tr>/','\\\\\\',$str);
 	$str = preg_replace('/<\/t(d|h)>/',' &',$str);
-	$str = preg_replace('/<\/table>/','\hline\end{tabulary}',$str);
+	$str = preg_replace('/<\/table>/','\hline\end{tabulary}\end{center}',$str);
 
 	// <ol> ... <\ol> -> \begin{enumerate} ... \end{enumerate}
 	$str = preg_replace('/<ol>/','\begin{enumerate}',$str);
@@ -111,27 +111,62 @@ function latexParse($str){
 			$ret = preg_replace('/\\\%/','%',$ret);
 			// \& -> &
 			$ret = preg_replace('/\\\&/','&',$ret);
+      // \$ -> $
+      $ret = preg_replace('/\\\$/','$',$ret);
 			return $ret;
 		},
 		$str
    );
 
+  return $str;
+}
 
-	$tex = '\documentclass[11pt,oneside]{book}
+
+function getExercises(){
+	$output = '';
+	foreach($GLOBALS['map'] as $page => $path){
+		
+		if(!$GLOBALS['db']->article_exists($page)){
+			continue;
+		}
+
+		$title = preg_replace('/\_/',' ',$page);
+
+		$contents = $GLOBALS['db']->get_article($page);
+		$contents = parse($contents);
+
+		$res = preg_match('/<section><h2>Exercises<\/h2>(.*)<\/section>/is',$contents,$matches);
+
+		if($res){
+			$output = $output.'<b>'.$title.'</b>'.$matches[1];
+		}
+
+	}
+	return $output;
+}
+
+function makeLatex($contents) {
+
+  $cheat_sheet = $GLOBALS['db']->get_article('Cheat_Sheet');
+  $cheat_sheet = latexParse(parse($cheat_sheet));
+
+  $contents = latexParse($contents);
+
+  return '\documentclass[11pt,oneside]{book}
   \usepackage{listings}
   \usepackage{outlines}
   \usepackage{graphicx}
   \usepackage{tabulary}
   \usepackage{color}
   \usepackage{float}                  % make images stay
-  \usepackage[numbered]{bookmark} 		% add pdf bookmarks
-  \usepackage[parfill]{parskip} 			% remove indents
+  \usepackage[numbered]{bookmark}     % add pdf bookmarks
+  \usepackage[parfill]{parskip}       % remove indents
   \usepackage[paperwidth=6.125in, paperheight=9.250in]{geometry}
 
   \title{The Computer Science Handbook}
   \author{Michael Young}
 
-  \definecolor{dkgreen}{rgb}{0,0.6,0}
+  \definecolor{dkgreen}{rgb}{0.25,0.25,0.25}
   \definecolor{gray}{rgb}{0.5,0.5,0.5}
   \definecolor{mauve}{rgb}{0.58,0,0.82}
   \lstset{
@@ -183,39 +218,17 @@ function latexParse($str){
   \mainmatter
 
   \tableofcontents
-  '.$str.'\newpage\null\thispagestyle{empty}\newpage\end{document}';
-
-  return $tex;
-}
-
-
-function getExercises(){
-	$output = '';
-	foreach($GLOBALS['map'] as $page => $path){
-		
-		if(!$GLOBALS['db']->article_exists($page)){
-			continue;
-		}
-
-		$title = preg_replace('/\_/',' ',$page);
-
-		$contents = $GLOBALS['db']->get_article($page);
-		$contents = parse($contents);
-
-		$res = preg_match('/<section><h2>Exercises<\/h2>(.*)<\/section>/is',$contents,$matches);
-
-		if($res){
-			$output = $output.'<b>'.$title.'</b>'.$matches[1];
-		}
-
-	}
-	return $output;
+  '.$contents.'
+  \appendix
+  \chapter{Cheat Sheet}'.$cheat_sheet.'
+  \newpage\null\thispagestyle{empty}\newpage\end{document}';
 }
 
 function makeManifest(){
 
 	$manifest = file_get_contents('manifest.txt');
-
+  $manifest = preg_replace('/````(.+?)````/', '\subsubsection{$1}', $manifest);
+  $manifest = preg_replace('/```(.+?)```/', '\subsection{$1}', $manifest);
 	$manifest = preg_replace('/``(.+?)``/', '\section{$1}', $manifest);
 	$manifest = preg_replace('/`(.+?)`/', '\chapter{$1}', $manifest);
 	$manifest = preg_replace('/~(.+?)~/', '\part{$1}', $manifest);
@@ -226,7 +239,7 @@ function makeManifest(){
 
 	file_put_contents('book/book.html',$book);
 
-	file_put_contents('book/book.tex',latexParse($book));
+	file_put_contents('book/book.tex',makeLatex($book));
 }
 
 

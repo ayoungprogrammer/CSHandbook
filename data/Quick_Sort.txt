@@ -2,11 +2,10 @@
 
 Quick Sort is another fast sorting algorithm that uses divide and conquer. It is also known as partition-exchange sort or as Hoare's quicksort (named after the author).
 
-In Quick Sort an element is selected as a "pivot". The list is then divided into two sublists: a list of elements less than (or equal to) the pivot and a list of elements greater than the pivot. Each sublist is sorted (conquered) and then appended together along with the origin pivot.
+In quick sort an element is selected as a "pivot". The list is then divided into two sublists: a list of elements less than (or equal to) the pivot and a list of elements greater than the pivot. Each sublist is sorted (conquered) and then appended together along with the origin pivot.
 
 In the best case (if the pivot that is chosen is exactly the middle element), then the runtime is O(n log n). However, in the worst case, the runtime for Quick Sort is n^^2^^. Despite its worst case behaviour, quick sort is still popular and in widespread use. The average case behaviour is quite good and there are straightforward methods that can be used to improve the selection of the pivot.
 
-The sorting algorithms are implemented to sort integer arrays but can be adapted to sort arrays of any data structure that is comparable. 
 
 ## Implementation
 
@@ -38,41 +37,46 @@ quicksort([6,1,4,3,5,7,9,2,8,0])
 
 ### Code
 
+We will implement our solution in Java that reflects our formalization in a way that is more inefficient but easier to understand. In our code, we create new arrays to store partitions and merged results but we can actually do this in place without extra memory (left as an exercise).
+
 [[[[
-//sorts integers from smallest to greatest
-public static void QuickSort (int a[], int first, int last){
-	//first is the starting index of the list
-	//last is the last index of the list
-	//QuickSort can be called by QuickSort(a, 0, a.length-1)
-	
-	if (last <= first) return; //if the array size <= 1
-	
-	int pivot = a[first]; //picks the first element as the pivot
-	// the location to put the next integer that's larger than the pivot
-	int index = last;  
-	
-	//iterate through the list, sorting it by the first pivot
-	for (int i=last;i>=first+1;i--){
-		if (a[i]>=pivot){
-			//swap the current element to be on the side that's 
-			//larger than the pivot
-			int temp = a[index];
-			a[index] = a[i];
-			a[i] = temp;
-			
-			//decrements index for the next switch
-			index--;
-		}
-	}
-	
-	//swap the element at index with the pivot so that it's 
-	//in the right place
-	int temp = pivot;
-	a[first] = a[index];
-	a[index] = pivot;
-	
-	//recursively sort the lists less than and greater than the pivot
-	QuickSort (a, first, index-1);
-	QuickSort (a, index+1, last);
+// Quick sorts array from [first..last]
+public static Vector<Integer> quickSort(Vector<Integer> arr) {
+  // Base case if sorting one or zero elements.
+  if (arr.size() <= 1) {
+    return arr;
+  }
+  // Select a random pivot.
+  int pivot = (int) (Math.random() * arr.size());
+
+  // Store each part.
+  Vector<Integer> lower = new Vector<Integer>();
+  Vector<Integer> higher = new Vector<Integer>();
+  Vector<Integer> equal = new Vector<Integer>();
+
+  // Splits element into each part.
+  for (int i = 0; i < arr.size(); i++) {
+    if (arr.get(i) < arr.get(pivot)) {
+      lower.add(arr.get(i));
+    }
+    else if (arr.get(i) > arr.get(pivot)) {
+      higher.add(arr.get(i));
+    }
+    else {
+      equal.add(arr.get(i));
+    }
+  }
+
+  // Combine results of all parts.
+  Vector<Integer> result = new Vector<Integer>();
+  result.addAll(quickSort(lower));
+  result.addAll(quickSort(equal));
+  result.addAll(quickSort(higher));
+  return result;
 }
 ]]]]
+
+## Exercises
+
+1. Rewrite quickSort such that we do not use any additional memory (i.e. rearranging into parts is done in place in the array and we do not create any additional vector or arrays). You should rewrite the function to sort in place: void quickSort(int arr[], int start, int end).
+

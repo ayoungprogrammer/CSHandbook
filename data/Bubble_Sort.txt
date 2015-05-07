@@ -1,17 +1,17 @@
 ## Introduction
 
-Bubble sort is one of the most basic sorting algorithms, one of the first you should learn. 
+Bubble sort is one of the most basic sorting algorithms Its name describes how the algorithm works: bigger bubbles float to the top. Each time we pass through the array, we swap adjacent bigger elements with smaller elements. We keep passing through the array bubbling bigger elements to the top and until the array is sorted. It can be proved that you will need to pass through the array at most N times. Try to prove this for yourself.
 
-Its name describes how the algorithm works: bigger bubbles float to the top. Each time we pass through the array, we swap adjacent bigger elements with smaller elements. If we do this and we do not swap any adjacent elements in a pass, then we know we have sorted the array. It can be proved that you will need to pass through the array at most N times. Try to prove this for yourself.
-
-### Implementation
+## Implementation
 
 Bubble sort works by going through the array multiple times and swapping elements that are out of order as we go through the array. Every pass through the array, we move the largest element to the end.
 
 {{bubble_sort.png}}
 
+### Code
+
 [[[[
-public static void BubbleSort(int array[]) {
+public static void bubbleSort(int array[]) {
   // Keep going through array unless until no swaps are made.
   boolean swapped = true;
   while (swapped) {

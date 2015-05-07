@@ -2,14 +2,16 @@
 
 Selection sort works by finding the smallest element in the array and swapping it with the first element. Then it finds the second smallest element and swaps it with the second element and it does this until the array is sorted.
 
-### Implementation
+## Implementation
 
 We keep picking the smallest element and swapping it with the current position until the array is sorted.
 
 {{selection_sort.png}}
 
+### Code
+
 [[[[
-public static void SelectionSort(int array[]) {
+public static void selectionSort(int array[]) {
   // Iterates through the array selecting the smallest elements
   for (int i = 0; i < array.length - 1; i++) {
     int minIndex = i;

@@ -4,7 +4,11 @@
 
 Miracle sort is a sort that truly requires a miracle. We keep checking the array until it is sorted. It requires that some external force (a miracle?) changes some bits in the computer in a way that it becomes sorted.
 
-### Implementation
+## Implementation
+
+We keep checking if the array is sorted until some miracle occurs.
+
+### Code
 
 [[[[
 public void miracleSort(int[] arr) {

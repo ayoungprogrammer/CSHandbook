@@ -98,10 +98,6 @@ that they can work with you.</p>
 </section><section><h2>End Interview</h2>
 
 <p>Hopefully you have time left before the interview (otherwise, you took too long for the technical part). Ask your interviewer about projects at the company to get a feel of what will interest you. Ask them any other questions you have about the position like any other interview. When you leave, thank the interviewer for their time, put on a smile and shake their hand. Ultimately, the outcome of the interview is determined by the amount of rapport you built with the interviewer, how capable you were at the technical problems and how enthusiastic you are. If all goes well, you will get the job, or you will get a second round of interviews meaning you get to repeat the same process with another interviewer! Good luck!</p>
-
-</section><section><h2>Practice Problems</h2>
-
-<p><a href="./Exercises" target="_blank">Exercises</a></p>
 </section>
 \part{ Fundamentals }
     \chapter{ Fundamentals }
@@ -146,7 +142,7 @@ that they can work with you.</p>
 <thead>
 <tr>
   <th>Big O</th>
-  <th>Limit of N for 1 second (Standard processor)</th>
+  <th>Limit of N for 1 second</th>
 </tr>
 </thead>
 <tbody>
@@ -325,7 +321,12 @@ public int mode2(int[] arr, int m) {
 </section><section><h2>Exercises</h2>
 
 <ol>
-<li></li>
+<li>Determine the runtime and memory complexities of finding the average of an array.</li>
+<li>Determine the runtime and memory complexities of adding two NxN matrices together.</li>
+<li>Determine the runtime complexity of guessing a N digit numeric password.</li>
+<li>Determine the runtime complexity of summing the digits of a number.</li>
+<li>Determine the memory complexity of counting the occurrences of letters in a book.</li>
+<li>Determine the memory complexity of counting the occurrences of words in a book.</li>
 </ol>
 </section>
 \part{ Recursion }
@@ -453,7 +454,7 @@ sum(string) = int(string[0]) + sum(string[1..n])
 
 Example:
 sum("23528")
-= 2 + sum("3528"')
+= 2 + sum("3528")
 = 2 + ( 3 + ( sum("528") )
 = 2 + ( 3 + ( 5 + sum ("28") ) )
 = 2 + ( 3 + ( 5 + ( 2 + sum("8") ) ) ) )
@@ -974,9 +975,8 @@ permutation("abc");
 </ol>
 </section>
 \part{ Data Structures }
+    \subsubsection{ Introduction }
     
-
-<p><strong>Next</strong>: <a href="./Advanced_Data_Structures" target="_blank">Advanced Data Structures</a></p>
 
 <p>Data structures are different ways of storing data such that they optimize certain data operations such as retrieval and insertion. Although many of these data structures are already built into various languages, it is important to understand how they work. By understanding the implementations, we can have a sense of which data structure to use for different scenarios.</p>
 
@@ -1010,6 +1010,26 @@ permutation("abc");
 <p>Stacks are used to keep track of function calls in memory. Whenever a function is called, it is placed on the memory stack with its variables, and when it is returning a value, it is popped off the stack.</p>
 
 <p>A stack is usually implemented as a <a href="./Vector" target="_blank">vector</a>.</p>
+
+
+        
+
+<table>
+<thead>
+<tr>
+  <th>Implementation</th>
+  <th>Pop</th>
+  <th>Push</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><a href="./Vector" target="_blank">Vector</a></td>
+  <td>O(1)</td>
+  <td>O(1)</td>
+</tr>
+</tbody>
+</table>
 
 
         \section{ Vector }
@@ -1151,6 +1171,8 @@ public int get(int idx) {
 
 <p><img src="./public_html/img/uploads/vectorinsert.png"></p>
 
+<p>When we insert the new element, we have to shift all the elements to the right of it by 1.</p>
+
 <p><img src="./public_html/img/uploads/vectorinsert2.png"></p>
 
 <pre class="prettyprint linenums ">
@@ -1220,7 +1242,7 @@ public void insert(int idx, int x) {
 
         
 
-<p>We can implement a queue most efficiently using a linked list because it has an efficient memory allocation.</p>
+<p>We can implement a queue most efficiently using a linked list because it uses efficient memory allocation.</p>
 
 <table>
 <thead>
@@ -1450,9 +1472,37 @@ public void deleteNext(Link node) {
 <li>Given a node in a doubly linked list, write a function that removes the node from the list. </li>
 </ol>
 </section>
+        \section{ Exercises }
+        
+
+<ol>
+<li><p>Given a list of letters representing instructions where the first instruction is executed, output what the final list should look like after N instructions are executed.</p>
+
+<p>First instruction:</p>
+
+<ul>
+<li>A. Add B to the end of the list of instructions</li>
+<li>B. Do nothing</li>
+<li>C. Add two A's to the front of the list of instructions</li>
+</ul>
+
+<p>Example:</p>
+
+<ul>
+<li>ABC</li>
+<li>BCB</li>
+<li>CB</li>
+<li>AAB</li>
+<li>ABB</li>
+<li>BBB</li>
+<li>BB</li>
+<li>B</li>
+</ul></li>
+</ol>
+
     \chapter{ Sets }
         \section{ Sets }
-        <section><h2>Introduction</h2>
+        
 
 <p>Sets are abstract data structures which are able to store and keep track of unique values.</p>
 
@@ -1460,7 +1510,8 @@ public void deleteNext(Link node) {
 
 <p>Sets have three operations: insertion, deletion and a membership test. Insertion places an element into the set, deletion removes an element from the set and a <strong>membership</strong> test is checking whether an element exists within the set.</p>
 
-</section><section><h2>Implementation</h2>
+
+        
 
 <table>
 <thead>
@@ -1473,36 +1524,21 @@ public void deleteNext(Link node) {
 </thead>
 <tbody>
 <tr>
-  <td><a href="./Tree_Set" target="_blank">Tree Set</a></td>
-  <td>O(log n)</td>
-  <td>O(log n)</td>
-  <td>O(log n)</td>
-</tr>
-<tr>
   <td><a href="./Hash_Set" target="_blank">Hash Set</a></td>
   <td>O(1)</td>
   <td>O(1)</td>
   <td>O(1)</td>
 </tr>
+<tr>
+  <td><a href="./Tree_Set" target="_blank">Tree Set</a></td>
+  <td>O(log n)</td>
+  <td>O(log n)</td>
+  <td>O(log n)</td>
+</tr>
 </tbody>
 </table>
 
-</section><section><h2>Exercises</h2>
 
-<ol>
-<li>Given a list of words, determine how many of them are anagrams of each other. An anagram is a word that can have its letters scrambled into another word. 
-
-<ul>
-<li>For example silent and listen are anagrams but banana and orange are not.</li>
-</ul></li>
-<li>Given friend lists of two people, find the number of mutual friends.</li>
-<li>Given a list of numbers, find the number of tuples of size 4 that add to 0. 
-
-<ul>
-<li>For example in the list (10,5,-1, 3, 4, -6) the tuple of size 4 (-1,3,4-6) adds to 0.</li>
-</ul></li>
-</ol>
-</section>
         \section{ Hash Set }
         <section><h2>Introduction</h2>
 
@@ -1720,9 +1756,47 @@ public boolean remove(int x) {
 <ol>
 <li>Devise a better hashing algorithm for strings.</li>
 <li>Calculate the probability of a collision occurring given the number of buckets and number of elements in the hash set.</li>
-<li>Given an array of numbers, find the number of pairs of numbers that sum to 0.</li>
-<li>Given an array of numbers and a number A, find the number of pairs of numbers that sum to A.</li>
-<li>Given an array of numbers and a number A, find the number of quadruples that sum to A.</li>
+<li>Prove that the runtime of all the operations are O(1).</li>
+</ol>
+</section>
+        \section{ Tree Set }
+        <section><h2>Introduction</h2>
+
+<p><em>Prerequeisites</em>: <a href="./Sets" target="_blank">Sets</a>, <a href="./Binary_Search_Tree" target="_blank">Binary Search Tree</a></p>
+
+<p><a href="https://github.com/ayoungprogrammer/Algorithms/blob/master/src/TreeSet.java" target="_blank">Source on Github</a></p>
+
+<p>A tree set is a set which stores the values in a <a href="./Binary_Search_Tree" target="_blank">binary search tree</a>. To store elements in a tree set, they must be able to be sorted by a property. To insert an element, it is added to the binary tree. To delete an element, it is removed from the binary tree. To check for membership, we do a binary search for the element in the binary tree.</p>
+
+<p>The advantage of tree sets is that they are maintained in a sorted order.</p>
+
+<p>Tree Sets are implemented using <a href="./Binary_Search_Tree" target="_blank">binary search trees</a>.</p>
+
+<p><img src="./public_html/img/uploads/bst.png"></p>
+
+<table>
+<thead>
+<tr>
+  <th>Operation</th>
+  <th>Membership</th>
+  <th>Insertion</th>
+  <th>Deletion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Time Complexity</td>
+  <td>O(log n)</td>
+  <td>O(log n)</td>
+  <td>O(log n)</td>
+</tr>
+</tbody>
+</table>
+
+</section><section><h2>Exercises</h2>
+
+<ol>
+<li>Given a list of names, output all the unique names in alphabetical order</li>
 </ol>
 </section>
         \section{ Binary Search Tree }
@@ -1731,6 +1805,8 @@ public boolean remove(int x) {
 <p>Prerequisites: <a href="./Set" target="_blank">Set</a>, <a href="./Binary_Tree" target="_blank">Binary Tree</a></p>
 
 <p>A binary search tree is a  <a href="./Binary_Tree" target="_blank">binary tree</a> with special properties. The left children of a node will always be less than the node and the right children of a node will always be more than the node. It has a recursive structure such that every subtree is also a binary search tree.</p>
+
+<p>Structure:</p>
 
 <p><img src="./public_html/img/uploads/bstcompare.png"></p>
 
@@ -1761,7 +1837,11 @@ public boolean remove(int x) {
 
 <p>In a binary search tree, everything to the left of a node is smaller than that node and everything to the right of that node is greater than that node.</p>
 
+<p>Structure:</p>
+
 <p><img src="./public_html/img/uploads/bstcompare.png"></p>
+
+<p>Example:</p>
 
 <p><img src="./public_html/img/uploads/bst.png"></p>
 
@@ -2078,49 +2158,27 @@ public String toString() {
 <li>Write a function to determine if a binary tree is a binary search tree.</li>
 </ol>
 </section>
-        \section{ Tree Set }
-        <section><h2>Introduction</h2>
-
-<p><em>Prerequeisites</em>: <a href="./Sets" target="_blank">Sets</a>, <a href="./Binary_Search_Tree" target="_blank">Binary Search Tree</a></p>
-
-<p><a href="https://github.com/ayoungprogrammer/Algorithms/blob/master/src/TreeSet.java" target="_blank">Source on Github</a></p>
-
-<p>A tree set is a set which stores the values in a <a href="./Binary_Search_Tree" target="_blank">binary search tree</a>. To store elements in a tree set, they must be able to be sorted by a property. To insert an element, it is added to the binary tree. To delete an element, it is removed from the binary tree. To check for membership, we do a binary search for the element in the binary tree.</p>
-
-<p>The advantage of tree sets is that they are maintained in a sorted order.</p>
-
-<p>Tree Sets are implemented using <a href="./Binary_Search_Tree" target="_blank">binary search trees</a>.</p>
-
-<p><img src="./public_html/img/uploads/bst.png"></p>
-
-<table>
-<thead>
-<tr>
-  <th>Operation</th>
-  <th>Membership</th>
-  <th>Insertion</th>
-  <th>Deletion</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>Time Complexity</td>
-  <td>O(log n)</td>
-  <td>O(log n)</td>
-  <td>O(log n)</td>
-</tr>
-</tbody>
-</table>
-
-</section><section><h2>Exercises</h2>
+        \section{ Exercises }
+        
 
 <ol>
-<li>Given a list of names, output all the unique names in alphabetical order</li>
+<li>Given a list of words, determine how many of them are anagrams of each other. An anagram is a word that can have its letters scrambled into another word. 
+
+<ul>
+<li>For example silent and listen are anagrams but banana and orange are not.</li>
+</ul></li>
+<li>Given friend lists of two people, find the number of mutual friends.</li>
+<li>Given an array of numbers, find the number of pairs of numbers that sum to 0.</li>
+<li>Given a array of numbers, find the number of tuples of size 4 that add to A.
+
+<ul>
+<li>For example in the list (10,5,-1, 3, 4, -6) the tuple of size 4 (-1,3,4-6) adds to 0.</li>
+</ul></li>
 </ol>
-</section>
+
     \chapter{ Maps }
         \section{ Maps }
-        <section><h2>Introduction</h2>
+        
 
 <p><em>Prerequisites</em>: <a href="./Sets" target="_blank">Sets</a></p>
 
@@ -2130,24 +2188,54 @@ public String toString() {
 
 <p>Maps (also called dictionaries) are abstract data types that store pairs of key-values and can be used to look up values from the keys. The keys are like the words in an English dictionary and the definitions can be seen as the values. Maps are able to support insertion of key-value pairs, retrieve values from keys, and delete key-value pairs.</p>
 
-</section><section><h2>Implementation</h2>
+
+        
 
 <table>
 <thead>
 <tr>
   <th>Type</th>
   <th>Get</th>
-  <th>Insertion</th>
+  <th>Put</th>
   <th>Deletion</th>
 </tr>
 </thead>
 <tbody>
+<tr>
+  <td><a href="./Hash_Map" target="_blank">Hash Map</a></td>
+  <td>O(1)</td>
+  <td>O(1)</td>
+  <td>O(1)</td>
+</tr>
 <tr>
   <td><a href="./Tree_Map" target="_blank">Tree Map</a></td>
   <td>O(log n)</td>
   <td>O(log n)</td>
   <td>O(log n)</td>
 </tr>
+</tbody>
+</table>
+
+
+        \section{ Hash Map }
+        <section><h2>Introduction</h2>
+
+<p><em>Prerequisites</em>: <a href="./Map" target="_blank">Map</a>, <a href="./Hash_Set" target="_blank">Hash Set</a></p>
+
+<p><a href="https://github.com/ayoungprogrammer/Algorithms/blob/master/src/HashMap.java" target="_blank">Source on GitHub</a></p>
+
+<p>Hash maps are maps that use <a href="./Hash_sets" target="_blank">hash sets</a> to store pairs of key values. Implementations of hash maps are very similar to hash sets.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Type</th>
+  <th>Get</th>
+  <th>Put</th>
+  <th>Deletion</th>
+</tr>
+</thead>
+<tbody>
 <tr>
   <td><a href="./Hash_Map" target="_blank">Hash Map</a></td>
   <td>O(1)</td>
@@ -2156,26 +2244,6 @@ public String toString() {
 </tr>
 </tbody>
 </table>
-
-</section><section><h2>Exercises</h2>
-
-<ol>
-<li>Given a list of N strings, output the strings in alphabetical order and the number of times they appear in the list.</li>
-<li>Given a mapping of a id to a name, output the ids in order by lexicographical name.</li>
-</ol>
-</section>
-        \section{ Hash Map }
-        <section><h2>Introduction</h2>
-
-<p><em>Prerequisites</em>: <a href="./Map" target="_blank">Map</a>, <a href="./Hash_Set" target="_blank">Hash Set</a></p>
-
-<p><a href="https://github.com/ayoungprogrammer/Algorithms/blob/master/src/HashMap.java" target="_blank">Source on GitHub</a></p>
-
-<p>Hash maps are maps that use <a href="./Hash_sets" target="_blank">hash sets</a> to store the keys.</p>
-
-</section><section><h2>Implementation</h2>
-
-<p>Here is a Java implementation of a hash map which is a modified version of a <a href="./hash_set" target="_blank">hash set</a>.</p>
 
 </section><section><h2>Class</h2>
 
@@ -2332,7 +2400,7 @@ public boolean remove(int key) {
         \section{ Tree Map }
         <section><h2>Introduction</h2>
 
-<p><em>Prerequeisites</em>: <a href="./Maps" target="_blank">Maps</a>, <a href="./Binary_Search_Tree" target="_blank">Binary Search Tree</a></p>
+<p><em>Prerequisites</em>: <a href="./Maps" target="_blank">Maps</a>, <a href="./Binary_Search_Tree" target="_blank">Binary Search Tree</a></p>
 
 <p>A tree map is a map which stores the values in a <a href="./Binary_Search_Tree" target="_blank">binary search tree</a>. To store elements in a tree map, they must be able to be sorted by a property. To insert an element, it is added to the binary tree. To delete an element, it is removed from the binary tree. To check for membership, we do a binary search for the element in the binary tree.</p>
 
@@ -2359,7 +2427,7 @@ public boolean remove(int key) {
 </tbody>
 </table>
 
-<p>Tree Maps are implemented using <a href="./Binary_Search_Tree" target="_blank">binary search trees</a>. Since much of the code is the same, we will not go in depth in an implementation.</p>
+<p>Tree Maps are implemented using <a href="./Binary_Search_Tree" target="_blank">binary search trees</a>. Since the implementation of a tree map is very similar to the implementation of a tree set, it will left as an exercise.</p>
 
 </section><section><h2>Exercise</h2>
 
@@ -2367,8 +2435,17 @@ public boolean remove(int key) {
 <li>Implement a Tree Map following the code of <a href="./Binary_Search_Tree" target="_blank">Binary Search Tree</a> and <a href="./Hash_Map" target="_blank">Hash Map</a>.</li>
 </ol>
 </section>
+        \section{ Exercises }
+        
+
+<ol>
+<li>Given a list of N strings, output the strings in alphabetical order and the number of times they appear in the list.</li>
+<li>Given a mapping of a id to a name, output the ids in order by lexicographical name.</li>
+</ol>
+
     \chapter{ Priority Queue }
-        <section><h2>Introduction</h2>
+        \section{ Priority Queue }
+        
 
 <p><em>Prerequisites</em>: <a href="./Queue" target="_blank">Queue</a>, <a href="./Heap" target="_blank">Heap</a></p>
 
@@ -2380,7 +2457,8 @@ public boolean remove(int key) {
 
 <p>A priority queue is usually implemented as a heap because it is the most efficient implementation.</p>
 
-</section><section><h2>Implementation</h2>
+
+        
 
 <table>
 <thead>
@@ -2399,13 +2477,7 @@ public boolean remove(int key) {
 </tbody>
 </table>
 
-</section><section><h2>Exercises</h2>
 
-<ol>
-<li>Given a list of N numbers, find the M largest numbers. (Note you can do better than O(N log N)).</li>
-<li>Given N lists of N numbers, find the N largest numbers.</li>
-</ol>
-</section>
         \section{ Heap }
         <section><h2>Introduction</h2>
 
@@ -2457,7 +2529,7 @@ parent = (index - 1)/2
 
 </section><section><h2>Class</h2>
 
-<p>We will implement a max heap in Java. We need to store the element in the heap and the size of the heap.</p>
+<p>We will implement a max heap in Java and in our class we need to store the element in the heap and the size of the heap.</p>
 
 <pre class="prettyprint linenums ">
 public class Heap {
@@ -2474,7 +2546,7 @@ public class Heap {
 
 </section><section><h2>Resize</h2>
 
-<p>When the heap gets too full, we can resize it to make it fit more elements.</p>
+<p>When the heap reaches capacity, we need to resize it to be able to contain more elements.</p>
 
 <pre class="prettyprint linenums ">
 public void resize() {
@@ -2488,7 +2560,7 @@ public void resize() {
 
 </section><section><h2>Swap</h2>
 
-<p>Swaps two nodes in the heap.</p>
+<p>Swap will switch two nodes in the heap.</p>
 
 <pre class="prettyprint linenums ">
 public void swap(int a, int b) {
@@ -2641,12 +2713,21 @@ public void heapify(int arr[]) {
 <li>Write a function that checks if an array is a heap. </li>
 </ol>
 </section>
+        \section{ Exercises }
+        
+
+<ol>
+<li>Given a list of N numbers, find the M largest numbers. (Note you can do better than O(N log N)).</li>
+<li>Given N lists of N numbers, find the N largest numbers.</li>
+</ol>
+
 \part{ Sorting }
+    \subsubsection{ Introduction }
     
 
 <p>Sorting is arranging an array of n elements in either increasing or decreasing order by some property. It is very useful in computer science for efficiency in other algorithms that usually require a search.</p>
 
-<p>A stable sort is a sort that can preserve sorting of other properties. For example if we have</p>
+<p>A stable sort is a sort that can preserve sorting of other properties. For example, if we have</p>
 
 <p>(3,G), (1,G), (3, A), (6 K), (1,B)</p>
 
@@ -2660,7 +2741,7 @@ public void heapify(int arr[]) {
     \chapter{ Slow Sorts }
         
 
-<p>Slow sorts are sorts that have the runtime of O(n<sup>2</sup>). Although they should almost never be used, it is good to know how to implement a simple sort.</p>
+<p>Slow sorts are sorts that have the runtime of O(n<sup>2</sup>). Although they should almost never be used, it is good to understand how to implement them.</p>
 
 <table>
 <thead>
@@ -2693,14 +2774,16 @@ public void heapify(int arr[]) {
 
 <p>Its name describes how the algorithm works: bigger bubbles float to the top. Each time we pass through the array, we swap adjacent bigger elements with smaller elements. If we do this and we do not swap any adjacent elements in a pass, then we know we have sorted the array. It can be proved that you will need to pass through the array at most N times. Try to prove this for yourself.</p>
 
-<hr><h3>Implementation</h3>
+</section><section><h2>Implementation</h2>
 
 <p>Bubble sort works by going through the array multiple times and swapping elements that are out of order as we go through the array. Every pass through the array, we move the largest element to the end.</p>
 
 <p><img src="./public_html/img/uploads/bubble_sort.png"></p>
 
+<hr><h3>Code</h3>
+
 <pre class="prettyprint linenums ">
-public static void BubbleSort(int array[]) {
+public static void bubbleSort(int array[]) {
   // Keep going through array unless until no swaps are made.
   boolean swapped = true;
   while (swapped) {
@@ -2725,14 +2808,16 @@ public static void BubbleSort(int array[]) {
 
 <p>Selection sort works by finding the smallest element in the array and swapping it with the first element. Then it finds the second smallest element and swaps it with the second element and it does this until the array is sorted.</p>
 
-<hr><h3>Implementation</h3>
+</section><section><h2>Implementation</h2>
 
 <p>We keep picking the smallest element and swapping it with the current position until the array is sorted.</p>
 
 <p><img src="./public_html/img/uploads/selection_sort.png"></p>
 
+<hr><h3>Code</h3>
+
 <pre class="prettyprint linenums ">
-public static void SelectionSort(int array[]) {
+public static void selectionSort(int array[]) {
   // Iterates through the array selecting the smallest elements
   for (int i = 0; i &lt; array.length - 1; i++) {
     int minIndex = i;
@@ -2757,14 +2842,16 @@ public static void SelectionSort(int array[]) {
 
 <p>Insertion is a sort that works by inserting unused elements into a sorted array. We start with an empty array and we add the first element to the array. We then add the second element to the array and we "insert" it by shifting elements. We keep doing this until the array is sorted.</p>
 
-<hr><h3>Implementation</h3>
+</section><section><h2>Implementation</h2>
 
 <p>We split the original array into two parts: the first part is sorted and the second part is unsorted. We take the first element from the second part and insert it into the sorted part. We keep doing this until we have no more elements in the unsorted part and we only have the sorted part.</p>
 
 <p><img src="./public_html/img/uploads/insertion_sort.png"></p>
 
+<hr><h3>Code</h3>
+
 <pre class="prettyprint linenums ">
-public void InsertionSort(int[] array) {
+public static void insertionSort(int[] array) {
   int i,j;
 
   // Iterate through size of array.
@@ -2783,7 +2870,8 @@ public void InsertionSort(int[] array) {
     \chapter{ Fast Sorts }
         
 
-<p>Fast sorts are sorts that have a runtime of O(nlogn). They are very fast and you will usually use merge sort or quick sort for sorting in the real world. Most language will have their own implementation of a quick sort or merge sort in their standard libraries. 
+<p>Fast sorts are sorts that have a runtime of O(n log n). They are very fast and you will usually use merge sort or quick sort for sorting in the real world. Most language will have their own implementation of a quick sort or merge sort in their standard libraries.</p>
+
 <table>
 <thead>
 <tr>
@@ -2805,7 +2893,7 @@ public void InsertionSort(int[] array) {
   <td>O(n log n)</td>
 </tr>
 </tbody>
-</table></p>
+</table>
 
 
         \section{ Heap Sort }
@@ -2815,7 +2903,11 @@ public void InsertionSort(int[] array) {
 
 <p>Heap sort is a sort that inserts all the element in an array into a min heap and then pops all the element outs. Since a heap guarantees that the root node will be the smallest element, we can store the entire array in a heap and the order that they are popped out of the heap will be in order.</p>
 
-<hr><h3>Implementation</h3>
+</section><section><h2>Implementation</h2>
+
+<p>We can simply use builtin heaps for this sort by adding all the elements to the array which is O(n log n) and then popping all the elements which is O(n log n).</p>
+
+<hr><h3>Code</h3>
 
 <pre class="prettyprint linenums ">
 public void heapSort(int[] arr) {
@@ -2836,13 +2928,13 @@ public void heapSort(int[] arr) {
         \section{ Merge Sort }
         <section><h2>Introduction</h2>
 
-<p><strong>Preqrequistes</strong>: <a href="./Recursion" target="_blank">Recursion</a></p>
+<p><strong>Prerequisites</strong>: <a href="./Recursion" target="_blank">Recursion</a></p>
 
 <p>Merge sort works by breaking down the sorting into smaller pieces. If we want to sort N elements, we can sort the first half of the elements, sort the second half and then merge the results together. To sort the first half, we can do the exact same thing of sorting the first quarter and the second quarter and merging the results.</p>
 
 </section><section><h2>Implementation</h2>
 
-<p>Merge sort work be breaking down the problem into smaller and smaller parts and then combing those parts to solve the big problem.</p>
+<p>Merge sort work be breaking down the problem into smaller and smaller parts and then combining those parts to solve the larger problem.</p>
 
 <p>We can keep splitting the list into half until there each piece has 1 element or no elements. We can then combine the results of each piece repeatedly until the entire list is sorted.</p>
 
@@ -2860,7 +2952,7 @@ merge([1,5,7,9], [2,4,8])
 = [1, 2, 4, 5, 7, 8, 9]
 
 Let sort(arr) sort an array
-Let middle be (0 + arr.length) / 2
+Let middle be arr.length / 2
 
 sort([x]) = [x]
 sort([x,y]) = [x,y] if x&lt;y 
@@ -2878,69 +2970,65 @@ sort([3, 7, 1, 9, 8, 4, 5])
 
 <hr><h3>Code</h3>
 
-<p>For our Java implementation, instead of returning a new array every time we merge two arrays, we can create a temporary array to store the merged results and then move it back.</p>
+<p>We will implement our solution in Java that reflects our formalization in a way that is more inefficient but easier to understand. In our code, we create new arrays to store merged results but we can actually do this in place without extra memory (left as an exercise).</p>
 
 <pre class="prettyprint linenums ">
-public void merge(int arr[], int start1, int end1, int start2, int end2) {
-  int arr2[] = new int[end2 - start1 + 1];
-  int begin = start1;
-  int n = 0;
-
-  // Pick smallest element one by one.
-  while (start1 &lt;= end1 &amp;&amp; start2 &lt;= end2) {
-    // Take from first part.
-    if (arr[start1] &lt;= arr[start2]) {
-      arr2[n] = arr[start1];
-      start1++;
+// Merges two sorted arrays v1 and v2 into a new sorted array
+public static Vector&lt;Integer&gt; merge(Vector&lt;Integer&gt; v1, Vector&lt;Integer&gt; v2) {
+  Vector&lt;Integer&gt; merged = new Vector&lt;Integer&gt;();
+  int i = 0, j = 0;
+  // Always take the smaller element of the two vectors
+  while(i &lt; v1.size() &amp;&amp; j &lt; v2.size()){
+    if(v1.get(i) &lt; v2.get(j)){
+      merged.add(v1.get(i));
+      i++;
+    } else {
+      merged.add(v2.get(j));
+      j++;
     }
-    // Take from second part.
-    else {
-      arr2[n] = arr[start2];
-      start2++;
+  }
+  if (i &gt;= v1.size()){
+    // Add the rest of v2
+    while(j &lt; v2.size()){
+      merged.add(v2.get(j));
+      j++;
     }
-    n++;
+  } else {
+    // Add the rest of v1.
+    while(i &lt; v1.size()){
+      merged.add(v1.get(i));
+      i++;
+    }
   }
-  // If first segment still has elements.
-  while (start1 &lt;= end1) {
-    arr2[n] = arr[start1];
-    n++;
-    start1++;
-  }
-  // If second segment still has elements.
-  while (start2 &lt;= end2) {
-    arr2[n] = arr[start2];
-    start2++;
-    n++;
-  }
-  // Copy merged array back.
-  for (int i = 0; i &lt; n; i++) {
-    arr[begin + i] = arr2[i];
-  }
+  return merged;
 }
-// Merge sorts array from [start..end]
-public void mergeSort(int arr[], int start, int end) {
+
+// Merge sorts an array
+public static Vector&lt;Integer&gt; mergeSort(Vector&lt;Integer&gt; v) {
   // Base case if 1 or 0 elements.
-  if (end - start &lt;= 0) {
-    return;
+  if (v.size() &lt;= 1) {
+    return v;
   }
-  int mid = (start + end) / 2;
-  // Sort left side.
-  mergeSort(arr, start, mid);
-  // Sort right side.
-  mergeSort(arr, mid + 1, end);
-  // Merge both sides.
-  merge(arr, start, mid, mid + 1, end);
+  // Get middle of array.
+  int middle = v.size()/2;
+  // Split vector into two halves.
+  Vector&lt;Integer&gt; firstHalf = new Vector&lt;Integer&gt;(v.subList(0, middle));
+  Vector&lt;Integer&gt; secondHalf = new Vector&lt;Integer&gt;(v.subList(middle, v.size()));
+  // Return merged halves.
+  return merge(mergeSort(firstHalf), mergeSort(secondHalf));
 }
 
 // Example usage:
-int arr[] = {5,7,2,6,8,5};
-mergeSort(arr,0,arr.length-1);
+Vector&lt;Integer&gt; v = new Vector&lt;Integer&gt;();
+Collections.addAll(v, 5,4,10,8,9,2);
+System.out.println(mergeSort(v));
 </pre>
 
 </section><section><h2>Exercises</h2>
 
 <ol>
-<li>Write merge sort that uses no extra memory (no additional array).</li>
+<li>Write the formalization for merge(arr1, arr2). </li>
+<li>Rewrite merge sort to not use any additional memory (i.e. merging and splitting arrays is done in place and no new vectors or arrays are created). You should rewrite the function to sort in place: void mergeSort(int[] arr, int start, int end) and void merge(int arr[]. int start, int end, int start2, int end2).</li>
 </ol>
 </section>
         \section{ Quick Sort }
@@ -2948,11 +3036,9 @@ mergeSort(arr,0,arr.length-1);
 
 <p>Quick Sort is another fast sorting algorithm that uses divide and conquer. It is also known as partition-exchange sort or as Hoare's quicksort (named after the author).</p>
 
-<p>In Quick Sort an element is selected as a "pivot". The list is then divided into two sublists: a list of elements less than (or equal to) the pivot and a list of elements greater than the pivot. Each sublist is sorted (conquered) and then appended together along with the origin pivot.</p>
+<p>In quick sort an element is selected as a "pivot". The list is then divided into two sublists: a list of elements less than (or equal to) the pivot and a list of elements greater than the pivot. Each sublist is sorted (conquered) and then appended together along with the origin pivot.</p>
 
 <p>In the best case (if the pivot that is chosen is exactly the middle element), then the runtime is O(n log n). However, in the worst case, the runtime for Quick Sort is n<sup>2</sup>. Despite its worst case behaviour, quick sort is still popular and in widespread use. The average case behaviour is quite good and there are straightforward methods that can be used to improve the selection of the pivot.</p>
-
-<p>The sorting algorithms are implemented to sort integer arrays but can be adapted to sort arrays of any data structure that is comparable.</p>
 
 </section><section><h2>Implementation</h2>
 
@@ -2984,44 +3070,50 @@ quicksort([6,1,4,3,5,7,9,2,8,0])
 
 <hr><h3>Code</h3>
 
+<p>We will implement our solution in Java that reflects our formalization in a way that is more inefficient but easier to understand. In our code, we create new arrays to store partitions and merged results but we can actually do this in place without extra memory (left as an exercise).</p>
+
 <pre class="prettyprint linenums ">
-//sorts integers from smallest to greatest
-public static void QuickSort (int a[], int first, int last){
-    //first is the starting index of the list
-    //last is the last index of the list
-    //QuickSort can be called by QuickSort(a, 0, a.length-1)
-    
-    if (last &lt;= first) return; //if the array size &lt;= 1
-    
-    int pivot = a[first]; //picks the first element as the pivot
-    // the location to put the next integer that's larger than the pivot
-    int index = last;  
-    
-    //iterate through the list, sorting it by the first pivot
-    for (int i=last;i&gt;=first+1;i--){
-        if (a[i]&gt;=pivot){
-            //swap the current element to be on the side that's 
-            //larger than the pivot
-            int temp = a[index];
-            a[index] = a[i];
-            a[i] = temp;
-            
-            //decrements index for the next switch
-            index--;
-        }
+// Quick sorts array from [first..last]
+public static Vector&lt;Integer&gt; quickSort(Vector&lt;Integer&gt; arr) {
+  // Base case if sorting one or zero elements.
+  if (arr.size() &lt;= 1) {
+    return arr;
+  }
+  // Select a random pivot.
+  int pivot = (int) (Math.random() * arr.size());
+
+  // Store each part.
+  Vector&lt;Integer&gt; lower = new Vector&lt;Integer&gt;();
+  Vector&lt;Integer&gt; higher = new Vector&lt;Integer&gt;();
+  Vector&lt;Integer&gt; equal = new Vector&lt;Integer&gt;();
+
+  // Splits element into each part.
+  for (int i = 0; i &lt; arr.size(); i++) {
+    if (arr.get(i) &lt; arr.get(pivot)) {
+      lower.add(arr.get(i));
     }
-    
-    //swap the element at index with the pivot so that it's 
-    //in the right place
-    int temp = pivot;
-    a[first] = a[index];
-    a[index] = pivot;
-    
-    //recursively sort the lists less than and greater than the pivot
-    QuickSort (a, first, index-1);
-    QuickSort (a, index+1, last);
+    else if (arr.get(i) &gt; arr.get(pivot)) {
+      higher.add(arr.get(i));
+    }
+    else {
+      equal.add(arr.get(i));
+    }
+  }
+
+  // Combine results of all parts.
+  Vector&lt;Integer&gt; result = new Vector&lt;Integer&gt;();
+  result.addAll(quickSort(lower));
+  result.addAll(quickSort(equal));
+  result.addAll(quickSort(higher));
+  return result;
 }
 </pre>
+
+</section><section><h2>Exercises</h2>
+
+<ol>
+<li>Rewrite quickSort such that we do not use any additional memory (i.e. rearranging into parts is done in place in the array and we do not create any additional vector or arrays). You should rewrite the function to sort in place: void quickSort(int arr[], int start, int end).</li>
+</ol>
 </section>
     \chapter{ Super Slow Sorts }
         
@@ -3057,7 +3149,11 @@ public static void QuickSort (int a[], int first, int last){
 
 <p>Bozo sort is a sort that keeps randomly arranging an array until it is sorted. This sort should never been used.</p>
 
-<hr><h3>Implementation</h3>
+</section><section><h2>Implementation</h2>
+
+<p>We keep checking if the array is sorted and if is not, we pick two random indexes to swap.</p>
+
+<hr><h3>Code</h3>
 
 <pre class="prettyprint linenums ">
 boolean sorted(int[] arr) {
@@ -3091,7 +3187,11 @@ public void bozoSort(int[] arr) {
 
 <p>Permutation sort is a sort that keeps permuting the array until it is sorted. It is the slowest sort that will guarantee that the array will be sorted.</p>
 
-<hr><h3>Implementation</h3>
+</section><section><h2>Implementation</h2>
+
+<p>We keep finding the next permutation until the array is sorted.</p>
+
+<hr><h3>Code</h3>
 
 <pre class="prettyprint linenums ">
 void permuteSort(int[] arr){
@@ -3108,7 +3208,11 @@ void permuteSort(int[] arr){
 
 <p>Miracle sort is a sort that truly requires a miracle. We keep checking the array until it is sorted. It requires that some external force (a miracle?) changes some bits in the computer in a way that it becomes sorted.</p>
 
-<hr><h3>Implementation</h3>
+</section><section><h2>Implementation</h2>
+
+<p>We keep checking if the array is sorted until some miracle occurs.</p>
+
+<hr><h3>Code</h3>
 
 <pre class="prettyprint linenums ">
 public void miracleSort(int[] arr) {
@@ -3125,7 +3229,18 @@ public void miracleSort(int[] arr) {
 }
 </pre>
 </section>
+    \chapter{ Exercises }
+    
+
+<ol>
+<li>Given two sorted arrays of N numbers, merge the two arrays into an single array of size 2N.</li>
+<li>Find the minimum number of swaps to sort an array.</li>
+<li>Find the minimum number of adjacent swaps to sort an array.</li>
+<li>Let flip(int[] arr, int x) be a function that reverses all elements from arr[0..x]. Devise a function that sorts the array.</li>
+</ol>
+
 \part{ Graph Theory }
+    \subsubsection{ Introduction }
     
 
 <p><em>Next</em>: <a href="./Advanced_Graph_Theory" target="_blank">Advanced Graph Theory</a></p>
@@ -3147,134 +3262,10 @@ public void miracleSort(int[] arr) {
 <p>A <strong>weighted</strong> graph is a graph that contains weights or values assigned to each edge or node. Usually these weights act as the cost to reach/use that node.</p>
 
 
-    \chapter{ Representation }
+    \chapter{ Graph Representations }
         
 
-<p>A graph can be represented as a adjacency matrix or an adjacency list.</p>
-
-<hr><h3><a href="./Adjacency_Matrix" target="_blank">Adjacency Matrix</a></h3>
-
-<p>
-
-<p>An adjacency matrix stores a graph of N nodes with a two dimensional NxN array. We let adjMatrix[i][j] represents the weight between the node i and node j. If we a sparse graph which has many nodes but few edges, the memory storage will be very inefficient and it would be better to use an <a href="./Adjacency_List" target="_blank">adjacency list</a>. However, if the graph is very dense, or there are few nodes, then an adjacency matrix is quick and easy to use. Checking if an edge exists between two nodes is O(1).</p>
-
-<p>Example</p>
-
-<table>
-<thead>
-<tr>
-  <th></th>
-  <th>1</th>
-  <th>2</th>
-  <th>3</th>
-  <th>4</th>
-  <th>5</th>
-  <th>6</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>1</td>
-  <td>0</td>
-  <td>1</td>
-  <td>0</td>
-  <td>0</td>
-  <td>1</td>
-  <td>0</td>
-</tr>
-<tr>
-  <td>2</td>
-  <td>1</td>
-  <td>0</td>
-  <td>1</td>
-  <td>0</td>
-  <td>1</td>
-  <td>0</td>
-</tr>
-<tr>
-  <td>3</td>
-  <td>0</td>
-  <td>1</td>
-  <td>0</td>
-  <td>1</td>
-  <td>0</td>
-  <td>0</td>
-</tr>
-<tr>
-  <td>4</td>
-  <td>0</td>
-  <td>0</td>
-  <td>1</td>
-  <td>0</td>
-  <td>1</td>
-  <td>1</td>
-</tr>
-<tr>
-  <td>5</td>
-  <td>1</td>
-  <td>1</td>
-  <td>0</td>
-  <td>1</td>
-  <td>0</td>
-  <td>0</td>
-</tr>
-<tr>
-  <td>6</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>1</td>
-  <td>0</td>
-  <td>0</td>
-</tr>
-</tbody>
-</table>
-
-</p>
-
-<hr><h3><a href="./Adjacency_List" target="_blank">Adjacency List</a></h3>
-
-<p>
-
-<p>An adjacency list stores a graph in an array of <a href="./Linked_Lists" target="_blank">linked lists</a>. Each node stores its neighbours by keeping a linked list of edges. Adjacency lists are slower when checking if an edge exists but they are more memory efficient since they only need to store the total number of edges.</p>
-
-<p><img src="./public_html/img/uploads/graph.png"></p>
-
-<table>
-<thead>
-<tr>
-  <th>Node</th>
-  <th>edges</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>1</td>
-  <td>2 5</td>
-</tr>
-<tr>
-  <td>2</td>
-  <td>1 3 5</td>
-</tr>
-<tr>
-  <td>3</td>
-  <td>2 4</td>
-</tr>
-<tr>
-  <td>4</td>
-  <td>3 5 6</td>
-</tr>
-<tr>
-  <td>5</td>
-  <td>1 2 4</td>
-</tr>
-<tr>
-  <td>6</td>
-  <td>4</td>
-</tr>
-</tbody>
-</table>
-</p>
+<p>A graph can be represented in various ways, but the most useful representations are as an adjacency matrix or as an adjacency list.</p>
 
 
         \section{ Adjacency Matrix }
@@ -3282,7 +3273,11 @@ public void miracleSort(int[] arr) {
 
 <p>An adjacency matrix stores a graph of N nodes with a two dimensional NxN array. We let adjMatrix[i][j] represents the weight between the node i and node j. If we a sparse graph which has many nodes but few edges, the memory storage will be very inefficient and it would be better to use an <a href="./Adjacency_List" target="_blank">adjacency list</a>. However, if the graph is very dense, or there are few nodes, then an adjacency matrix is quick and easy to use. Checking if an edge exists between two nodes is O(1).</p>
 
-<p>Example</p>
+<p>Example:</p>
+
+<p><img src="./public_html/img/uploads/graph.png"></p>
+
+<p>The adjacency matrix of the graph is:</p>
 
 <table>
 <thead>
@@ -3358,8 +3353,8 @@ public void miracleSort(int[] arr) {
 
 <pre class="prettyprint linenums ">
 class edge {
-  int weight,source,dest;
-  public edge(int source,int dest,int weight) {
+  int weight, source, dest;
+  public edge(int source, int dest, int weight) {
     this.source = source;
     this.dest = dest;
     this.weight = weight;
@@ -3389,7 +3384,11 @@ public static int[][] getAdjMatrix(Vector&lt;edge&gt; edges, int n) {
 
 <p>An adjacency list stores a graph in an array of <a href="./Linked_Lists" target="_blank">linked lists</a>. Each node stores its neighbours by keeping a linked list of edges. Adjacency lists are slower when checking if an edge exists but they are more memory efficient since they only need to store the total number of edges.</p>
 
+<p>Example:</p>
+
 <p><img src="./public_html/img/uploads/graph.png"></p>
+
+<p>The adjacency list of the graph is:</p>
 
 <table>
 <thead>
@@ -3425,358 +3424,77 @@ public static int[][] getAdjMatrix(Vector&lt;edge&gt; edges, int n) {
 </tr>
 </tbody>
 </table>
-</section>
-    \chapter{ Tree }
-        
-
-<p>
-
-<p>A tree is a special graph with no cycles. It has the special property that there will be only one path from one node to another node.</p>
-
-<p><img src="./public_html/img/uploads/treegraph.png"></p>
-
-<p>A <strong>subtree</strong> is a child tree of a tree.</p>
-
-<p>Note that trees have two meanings in computer science. It can either refer to a <a href="./Trees" target="_blank">tree data structure</a> or it can refer to a tree in graph theory.</p>
-</p>
-
-<hr><h3><a href="./Spanning_Tree" target="_blank">Spanning Tree</a></h3>
-
-<p>
-
-<p>A spanning tree of a graph is a connected tree that spans all the nodes of the graph.</p>
-
-<p>A <a href="./Minimum_Spanning_Tree" target="_blank">minimum spanning tree</a> is the spanning tree that requires the minimum of some property such as total weight or total edges.</p>
-
-<p>Spanning tree algorithms are essential in networking to ensure no loops occur when sending data through a network.</p>
-
-<table>
-<thead>
-<tr>
-  <th>Algorithm</th>
-  <th>Desc</th>
-  <th>Time</th>
-  <th>Space</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td><a href="./Prim's" target="_blank">Prim's</a></td>
-  <td>Using greedy method</td>
-  <td>O(n log n)</td>
-  <td>O(n<sup>2</sup>)</td>
-</tr>
-<tr>
-  <td><a href="./Kruskal" target="_blank">Kruskal</a></td>
-  <td>Using connected components</td>
-  <td>O(n log n)</td>
-  <td>O(n<sup>2</sup>)</td>
-</tr>
-</tbody>
-</table>
-</p>
-
-
-        \section{ Prim's }
-        <section><h2>Introduction</h2>
-
-<p><strong>Prerequisites</strong>:  <a href="./Priority_Queue" target="_blank">Priority Queue</a>, <a href="./Minimum_Spanning_Tree" target="_blank">Minimum Spanning Tree</a></p>
-
-<p>Prim's algorithm is a greedy algorithm that finds the minimum spanning tree in a graph.</p>
-
-<p>If implemented efficiently using a priority queue, the runtime is O(n log n).</p>
 
 </section><section><h2>Implementation</h2>
 
-<p>Prim's algorithm finds the minimum spanning tree using a greedy fashion. It works as such:</p>
-
-<ol>
-<li>Pick an arbitrary node.</li>
-<li>Find the closest node to that node.</li>
-<li>Find the closest node to the 2 nodes.</li>
-<li>Find the closest node to the 3 nodes.</li>
-<li>...</li>
-<li>Find the closest node to n-1 nodes.</li>
-</ol>
-
-<p>The closest node is the node with the lowest cost edge to the already connected nodes.</p>
-
-<hr><h3>Example</h3>
-
-<p>Suppose we have the following graph and we would like the find the minimum spanning tree.</p>
-
-<p><img src="./public_html/img/uploads/prim.png"></p>
-
-<p>We start a random node and for this example we will start at 1.</p>
-
-<p><img src="./public_html/img/uploads/prim1.png"></p>
-
-<p>The closest unpicked node to all the chosen nodes is 2 at a cost of 2.</p>
-
-<p><img src="./public_html/img/uploads/prim2.png"></p>
-
-<p>The closest unpicked node to all the chosen nodes is 7 at a cost of 6.</p>
-
-<p><img src="./public_html/img/uploads/prim3.png"></p>
-
-<p>The closest unpicked node to all the chosen nodes is 5 at a cost of 6.</p>
-
-<p><img src="./public_html/img/uploads/prim4.png"></p>
-
-<p>The closest unpicked node to all the chosen nodes is 4 at a cost of 6.
-<img src="./public_html/img/uploads/prim5.png"></p>
-
-<p>The closest unpicked node to all the chosen nodes is 6 at a cost of 8.
-<img src="./public_html/img/uploads/prim6.png"></p>
-
-<p>The last node to be chosen is 3 with a cost of 8.</p>
-
-<p><img src="./public_html/img/uploads/prim7.png"></p>
-
-<hr><h3>Java Code</h3>
-
-<p>We can implement Prim's algorithm in Java efficiently with a priority queue of the closest edges with the least cost.</p>
+<p>Here is a function that takes in an array of edges and returns an adjacency list of the graph.</p>
 
 <pre class="prettyprint linenums ">
-class node implements Comparable&lt;node&gt; {
-  int weight, index;
-  public node(int weight, int index) {
+class edge {
+  int weight, source, dest;
+  public edge(int source, int dest, int weight) {
+    this.source = source;
+    this.dest = dest;
     this.weight = weight;
-    this.index = index;
-  }
-  public int compareTo(node e) {
-    return weight - e.weight;
   }
 }
-public static int Prims(Vector&lt;Vector&lt;node&gt;&gt; adjList) {
-  // Current cost of MST.
-  int cost = 0;
-  int n = adjList.size();
-  
-  PriorityQueue&lt;node&gt; pq = new PriorityQueue&lt;node&gt;();
-  
-  // Keep track if each node is visited.
-  boolean visited[] = new boolean[n];
-  for (int i = 0; i &lt; n; i++) {
-    visited[i] = false;
-  }
-  
-  // Number of nodes visited.
-  int inTree = 1;
-  
-  // Mark starting node as visited.
-  visited[0] = true;
-  
-  // Add all edges of starting node.
-  for (int i = 0; i &lt; adjList.get(0).size(); i++) {
-    pq.add(adjList.get(0).get(i));
-  }
-  // Keep going until all nodes visited.
-  while (!pq.isEmpty() &amp;&amp; inTree &lt; n) {
-    // Get the edge with the smallest weight.
-    node cur = pq.poll();
-    // Skip if node already used.
-    if (visited[cur.index]) {
-      continue;
-    }
-    inTree++;
-    visited[cur.index] = true;
-    cost += cur.weight;
-    // Add all the edges of the new node to the priority queue.
-    for (int i = 0; i &lt; adjList.get(cur.index).size(); i++) {
-      pq.add(adjList.get(cur.index).get(i));
-    }
-  }
-  // Graph not connected if number of nodes used is less than total nodes.
-  if (inTree &lt; n) {
-    return -1;
-  }
 
-  return cost;
+public static Vector&lt;Vector&lt;edge&gt;&gt; getAdjList(Vector&lt;edge&gt; edges, int n) {
+  Vector&lt;Vector&lt;edge&gt;&gt; adjList = new Vector&lt;Vector&lt;edge&gt;&gt;();
+  for (int i = 0; i &lt; n; i++){
+    adjList.add(new Vector&lt;edge&gt;());
+  }
+  
+  for(edge e: edges){
+     adjList.get(e.source).add(e);
+     adjList.get(e.dest).add(e);
+  }
+  return adjList;
 }
 </pre>
-
-</section><section><h2>Exercises</h2>
-
-<ol>
-<li>Prove that Prim's algorithm works.</li>
-<li>Extends Prim's to output all the edges used.</li>
-<li>Given a weighted graph with n nodes, find the smallest total cost to connect all nodes into 3 separate groups. (A single node can be a group).</li>
-<li>Same as 3, but a group must contain at least 3 other nodes.</li>
-</ol>
-</section>
-        \section{ Kruskal }
-        <section><h2>Introduction</h2>
-
-<p><strong>Prerequisites</strong>:  <a href="./Sorting" target="_blank">Sorting</a>, <a href="./Minimum_Spanning_Tree" target="_blank">Minimum Spanning Tree</a></p>
-
-<p>Kruskal's algorithm finds the <a href="./Minimum_Spanning_Tree" target="_blank">minimum spanning tree</a> using <a href="./Connected_Components" target="_blank">connected components</a>.</p>
-
-<p>If Kruskal's algorithm is implemented efficiently using a priority queue, the runtime is O(n log n).</p>
-
-</section><section><h2>Implementation</h2>
-
-<ol>
-<li>Uniquely label each node.</li>
-<li>Take the edge with the minimum weight.</li>
-<li>If the edge connects nodes A and B with different labels, all nodes with label B will be labeled with A. Otherwise, throw the edge away.</li>
-<li>Repeat 2-3 until all the nodes have the same label.</li>
-</ol>
-
-<hr><h3>Example</h3>
-
-<p>We first start with each node uniquely labelled as a letter.</p>
-
-<p><img src="./public_html/img/uploads/kruskal.png"></p>
-
-<p>We first start with the edge with the smallest weight of 2 which was between A and B. We add B to A's component by labelling B as A.</p>
-
-<p><img src="./public_html/img/uploads/kruskal2.png"></p>
-
-<p>The next edge with the smallest weight is 5 which connects to C. We add C to A's component by labelling it as A.</p>
-
-<p><img src="./public_html/img/uploads/kruskal3.png"></p>
-
-<p>There is a tie between edges with the smallest weight of 6 and it doesn't matter which one we take. For the purpose of this example we will take the edge between D and G. We add G to D's component be labelling it as D.</p>
-
-<p><img src="./public_html/img/uploads/kruskal4.png"></p>
-
-<p>Next we take the other edge with weight 6. We are connecting the D and A components, thus we can label all the nodes with D as A.</p>
-
-<p><img src="./public_html/img/uploads/kruskal5.png"></p>
-
-<p>The next edge with smallest weight is 7 but it does not connect two different components, thus we discard the edge. The next two edges have weights 8 and we can randomly pick the edge to E. We add E to A's component by labelling it as A.</p>
-
-<p><img src="./public_html/img/uploads/kruskal6.png"></p>
-
-<p>We take the other edge with weight 8 to F and add F to A's component by relabelling it as A.</p>
-
-<p><img src="./public_html/img/uploads/kruskal7.png"></p>
-
-<p>All the nodes are the same label and all part of the same component, thus by the algorithm, we have our minimum spanning tree.</p>
-
-<hr><h3>Code</h3>
-
-<p>We can implement Kruskal's algorithm efficiently by using connected components.</p>
-
-<pre class="prettyprint linenums ">
-class edge implements Comparable&lt;edge&gt; {
-    int weight,source,dest;
-    public edge(int source,int dest,int weight) {
-        this.source = source;
-        this.dest = dest;
-        this.weight = weight;
-    }
-    public int compareTo(edge e) {
-        return weight-e.weight;
-    }
-}
-public static int getParent(int parents[], int x) {
-  // Base Case: parent of x is itself.
-  if (parents[x] == x) {
-    return x;
-  }
-  // Set current's parent to highest parent.
-  parents[x] = getParent(parents, parents[x]);
-
-  // Returns parent.
-  return parents[x];
-}
-
-public static int Kruskal(Vector&lt;Vector&lt;edge&gt;&gt; adjList) {
-  int n = adjList.size();
-  // Parents of each node. Nodes with the same parents are in the same
-  // component.
-  int parents[] = new int[n];
-
-  // Set parents of each node to itself.
-  for (int i = 0; i &lt; n; i++) {
-    parents[i] = i;
-  }
-
-  int sum = 0;
-  PriorityQueue&lt;edge&gt; edges = new PriorityQueue&lt;edge&gt;();
-
-  // Iterate through each node.
-  for (int i = 0; i &lt; n; i++) {
-    // Iterate through edges of node.
-    for (int j = 0; j &lt; adjList.get(i).size(); j++) {
-      // Add edge to priority queue.
-      edges.add(adjList.get(i).get(j));
-    }
-  }
-
-  // Iterate through all edges.
-  while (!edges.isEmpty()) {
-    // Get edge with smallest weight.
-    edge e = edges.poll();
-    // Take edge if highest parent of source and destination nodes are
-    // different i.e. take the edge if it connects different components
-    if (getParent(parents, e.source) != getParent(parents, e.dest)) {
-      // Set parent of source to highest parent of destination node.
-      parents[e.source] = getParent(parents, e.dest);
-      
-      // Add edge weight to MST weight.
-      sum += e.weight;
-    }
-  }
-
-  // Return MST weight.
-  return sum;
-}
-</pre>
-
-</section><section><h2>Exercises</h2>
-
-<ol>
-<li>Prove Kruskal's Algorithm works.</li>
-<li>Extends Kruskals's to output the full minimum spanning tree used.</li>
-<li>Given a weighted graph with n nodes, find the smallest total cost to connect all nodes into 3 separate groups. (A single node can be a group).</li>
-<li>Same as Q3, but each group must contain at least 3 nodes.</li>
-</ol>
 </section>
     \chapter{ Shortest Path }
         
 
-<p>The shortest path is defined as a path from one node to another while trying to minimize a certain property (least number of nodes, smallest total weight). However, shortest paths may have negative weights which leads to cycles.</p>
+<p><em>Prerequisites</em>: <a href="./Graph_Theory" target="_blank">Graph Theory</a></p>
 
-<hr><h3>Algorithms</h3>
+<p>The shortest path is defined as a path from one node to another while trying to minimize a certain property (least number of nodes, smallest total weight). However, shortest paths may have negative weights leads to cycles.</p>
+
+
+        
 
 <table>
 <thead>
 <tr>
   <th>Algorithm</th>
-  <th>Desc</th>
   <th>Time</th>
-  <th>Space</th>
   <th>Detect cycles?</th>
 </tr>
 </thead>
 <tbody>
 <tr>
   <td><a href="./Floyd_Warshall" target="_blank">Floyd Warshall</a></td>
-  <td>Computes shortest path between all pairs of nodes</td>
-  <td>O(n<sup>3</sup>)</td>
-  <td>O(n<sup>2</sup>)</td>
+  <td>O(N<sup>3</sup>)</td>
   <td>Yes</td>
 </tr>
 <tr>
   <td><a href="./Bellman_Ford" target="_blank">Bellman Ford</a></td>
-  <td>Computes shortest path between a pairs of nodes</td>
-  <td>O(n<sup>2</sup>)</td>
-  <td>O(n)</td>
+  <td>O(N<sup>2</sup>)</td>
   <td>Yes</td>
 </tr>
 <tr>
   <td><a href="./Dijkstra's" target="_blank">Dijkstra's</a></td>
-  <td>Computes shortest path between a pair of nodes using the Greedy method</td>
-  <td>O(n log n)</td>
-  <td>O(n log n)</td>
+  <td>O(N log N)</td>
   <td>No</td>
 </tr>
 </tbody>
 </table>
 
+<ul>
+<li><a href="./Floyd_Warshall" target="_blank">Floyd Warshall</a> computes the shortest path between all pairs of nodes.</li>
+<li><a href="./Bellman_Ford" target="_blank">Bellman Ford</a> computes the shortest path between one node to every other node.</li>
+<li><a href="./Dijkstra's" target="_blank">Dijkstra's</a> computes the shortest path between two nodes.</li>
+</ul>
 
         \section{ Dijkstra's }
         <section><h2>Introduction</h2>
@@ -3978,9 +3696,9 @@ bellmanFord(start,0,0)
 <p>We can rewrite this solution using dynamic programming without recursion.</p>
 
 <pre class="prettyprint linenums ">
-class edge{
-  int weight,source,dest;
-  public edge(int source,int dest,int weight){
+class edge {
+  int weight, source, dest;
+  public edge(int source, int dest, int weight) {
     this.source = source;
     this.dest = dest;
     this.weight = weight;
@@ -4123,9 +3841,9 @@ shortestPath(i,j) =  minimum of:
 <hr><h3>Code</h3>
 
 <pre class="prettyprint linenums ">
-class edge{
-  int weight,source,dest;
-  public edge(int source,int dest,int weight){
+class edge {
+  int weight, source, dest;
+  public edge(int source, int dest, int weight) {
     this.source = source;
     this.dest = dest;
     this.weight = weight;
@@ -4198,8 +3916,457 @@ public static int[][] FloydWarshall(Vector&lt;Vector&lt;edge&gt;&gt; adjList) {
 <li>Extend Floyd Warshall to reconstruct the paths from each pair of nodes.</li>
 </ol>
 </section>
+    \chapter{ Minimum Spanning Tree }
+        
+
+<p><strong>Prerequisites</strong>:  <a href="./Graph_Theory" target="_blank">Graph Theory</a></p>
+
+<p>A spanning tree of a graph is a tree that spans all the nodes of the graph but only using some of the edges to connect all the nodes.</p>
+
+<p>A <a href="./Minimum_Spanning_Tree" target="_blank">minimum spanning tree</a> is the spanning tree that requires the minimum of some property such as total weight or total edges.</p>
+
+<p>Spanning tree algorithms are essential in networking to ensure no loops occur when sending data through a network.</p>
+
+
+        
+
+<table>
+<thead>
+<tr>
+  <th>Algorithm</th>
+  <th>Desc</th>
+  <th>Time</th>
+  <th>Space</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><a href="./Prim's" target="_blank">Prim's</a></td>
+  <td>Using greedy method</td>
+  <td>O(n log n)</td>
+  <td>O(n<sup>2</sup>)</td>
+</tr>
+<tr>
+  <td><a href="./Kruskal" target="_blank">Kruskal</a></td>
+  <td>Using connected components</td>
+  <td>O(n log n)</td>
+  <td>O(n<sup>2</sup>)</td>
+</tr>
+</tbody>
+</table>
+
+
+        \section{ Prim's }
+        <section><h2>Introduction</h2>
+
+<p><strong>Prerequisites</strong>:  <a href="./Priority_Queue" target="_blank">Priority Queue</a>, <a href="./Minimum_Spanning_Tree" target="_blank">Minimum Spanning Tree</a></p>
+
+<p>Prim's algorithm is a greedy algorithm that finds the minimum spanning tree in a graph.</p>
+
+<p>If implemented efficiently using a priority queue, the runtime is O(n log n).</p>
+
+</section><section><h2>Implementation</h2>
+
+<p>Prim's algorithm finds the minimum spanning tree using a greedy fashion. It works as such:</p>
+
+<ol>
+<li>Pick an arbitrary node.</li>
+<li>Find the closest node to that node.</li>
+<li>Find the closest node to the 2 nodes.</li>
+<li>Find the closest node to the 3 nodes.</li>
+<li>...</li>
+<li>Find the closest node to n-1 nodes.</li>
+</ol>
+
+<p>The closest node is the node with the lowest cost edge to the already connected nodes.</p>
+
+<hr><h3>Example</h3>
+
+<p>Suppose we have the following graph and we would like the find the minimum spanning tree.</p>
+
+<p><img src="./public_html/img/uploads/prim.png"></p>
+
+<p>We start a random node and for this example we will start at 1.</p>
+
+<p><img src="./public_html/img/uploads/prim1.png"></p>
+
+<p>The closest unpicked node to all the chosen nodes is 2 at a cost of 2.</p>
+
+<p><img src="./public_html/img/uploads/prim2.png"></p>
+
+<p>The closest unpicked node to all the chosen nodes is 7 at a cost of 6.</p>
+
+<p><img src="./public_html/img/uploads/prim3.png"></p>
+
+<p>The closest unpicked node to all the chosen nodes is 5 at a cost of 6.</p>
+
+<p><img src="./public_html/img/uploads/prim4.png"></p>
+
+<p>The closest unpicked node to all the chosen nodes is 4 at a cost of 6.
+<img src="./public_html/img/uploads/prim5.png"></p>
+
+<p>The closest unpicked node to all the chosen nodes is 6 at a cost of 8.
+<img src="./public_html/img/uploads/prim6.png"></p>
+
+<p>The last node to be chosen is 3 with a cost of 8.</p>
+
+<p><img src="./public_html/img/uploads/prim7.png"></p>
+
+<hr><h3>Java Code</h3>
+
+<p>We can implement Prim's algorithm in Java efficiently with a priority queue of the closest edges with the least cost.</p>
+
+<pre class="prettyprint linenums ">
+class node implements Comparable&lt;node&gt; {
+  int weight, index;
+  public node(int weight, int index) {
+    this.weight = weight;
+    this.index = index;
+  }
+  public int compareTo(node e) {
+    return weight - e.weight;
+  }
+}
+public static int Prims(Vector&lt;Vector&lt;node&gt;&gt; adjList) {
+  // Current cost of MST.
+  int cost = 0;
+  int n = adjList.size();
+  
+  PriorityQueue&lt;node&gt; pq = new PriorityQueue&lt;node&gt;();
+  
+  // Keep track if each node is visited.
+  boolean visited[] = new boolean[n];
+  for (int i = 0; i &lt; n; i++) {
+    visited[i] = false;
+  }
+  
+  // Number of nodes visited.
+  int inTree = 1;
+  
+  // Mark starting node as visited.
+  visited[0] = true;
+  
+  // Add all edges of starting node.
+  for (int i = 0; i &lt; adjList.get(0).size(); i++) {
+    pq.add(adjList.get(0).get(i));
+  }
+  // Keep going until all nodes visited.
+  while (!pq.isEmpty() &amp;&amp; inTree &lt; n) {
+    // Get the edge with the smallest weight.
+    node cur = pq.poll();
+    // Skip if node already used.
+    if (visited[cur.index]) {
+      continue;
+    }
+    inTree++;
+    visited[cur.index] = true;
+    cost += cur.weight;
+    // Add all the edges of the new node to the priority queue.
+    for (int i = 0; i &lt; adjList.get(cur.index).size(); i++) {
+      pq.add(adjList.get(cur.index).get(i));
+    }
+  }
+  // Graph not connected if number of nodes used is less than total nodes.
+  if (inTree &lt; n) {
+    return -1;
+  }
+
+  return cost;
+}
+</pre>
+
+</section><section><h2>Exercises</h2>
+
+<ol>
+<li>Prove that Prim's algorithm works.</li>
+<li>Extends Prim's to output all the edges used.</li>
+</ol>
+</section>
+        \section{ Kruskal }
+        <section><h2>Introduction</h2>
+
+<p><strong>Prerequisites</strong>:  <a href="./Sorting" target="_blank">Sorting</a>, <a href="./Minimum_Spanning_Tree" target="_blank">Minimum Spanning Tree</a></p>
+
+<p>Kruskal's algorithm finds the <a href="./Minimum_Spanning_Tree" target="_blank">minimum spanning tree</a> using <a href="./Connected_Components" target="_blank">connected components</a>.</p>
+
+<p>If Kruskal's algorithm is implemented efficiently using a priority queue, the runtime is O(n log n).</p>
+
+</section><section><h2>Implementation</h2>
+
+<ol>
+<li>Uniquely label each node.</li>
+<li>Take the edge with the minimum weight.</li>
+<li>If the edge connects nodes A and B with different labels, all nodes with label B will be labeled with A. Otherwise, throw the edge away.</li>
+<li>Repeat 2-3 until all the nodes have the same label.</li>
+</ol>
+
+<hr><h3>Example</h3>
+
+<p>We first start with each node uniquely labelled as a letter.</p>
+
+<p><img src="./public_html/img/uploads/kruskal.png"></p>
+
+<p>We first start with the edge with the smallest weight of 2 which was between A and B. We add B to A's component by labelling B as A.</p>
+
+<p><img src="./public_html/img/uploads/kruskal2.png"></p>
+
+<p>The next edge with the smallest weight is 5 which connects to C. We add C to A's component by labelling it as A.</p>
+
+<p><img src="./public_html/img/uploads/kruskal3.png"></p>
+
+<p>There is a tie between edges with the smallest weight of 6 and it doesn't matter which one we take. For the purpose of this example we will take the edge between D and G. We add G to D's component be labelling it as D.</p>
+
+<p><img src="./public_html/img/uploads/kruskal4.png"></p>
+
+<p>Next we take the other edge with weight 6. We are connecting the D and A components, thus we can label all the nodes with D as A.</p>
+
+<p><img src="./public_html/img/uploads/kruskal5.png"></p>
+
+<p>The next edge with smallest weight is 7 but it does not connect two different components, thus we discard the edge. The next two edges have weights 8 and we can randomly pick the edge to E. We add E to A's component by labelling it as A.</p>
+
+<p><img src="./public_html/img/uploads/kruskal6.png"></p>
+
+<p>We take the other edge with weight 8 to F and add F to A's component by relabelling it as A.</p>
+
+<p><img src="./public_html/img/uploads/kruskal7.png"></p>
+
+<p>All the nodes are the same label and all part of the same component, thus by the algorithm, we have our minimum spanning tree.</p>
+
+<hr><h3>Code</h3>
+
+<p>We can implement Kruskal's algorithm efficiently by using connected components.</p>
+
+<pre class="prettyprint linenums ">
+class edge implements Comparable&lt;edge&gt; {
+    int weight,source,dest;
+    public edge(int source,int dest,int weight) {
+        this.source = source;
+        this.dest = dest;
+        this.weight = weight;
+    }
+    public int compareTo(edge e) {
+        return weight-e.weight;
+    }
+}
+public static int getParent(int parents[], int x) {
+  // Base Case: parent of x is itself.
+  if (parents[x] == x) {
+    return x;
+  }
+  // Set current's parent to highest parent.
+  parents[x] = getParent(parents, parents[x]);
+
+  // Returns parent.
+  return parents[x];
+}
+
+public static int Kruskal(Vector&lt;Vector&lt;edge&gt;&gt; adjList) {
+  int n = adjList.size();
+  // Parents of each node. Nodes with the same parents are in the same
+  // component.
+  int parents[] = new int[n];
+
+  // Set parents of each node to itself.
+  for (int i = 0; i &lt; n; i++) {
+    parents[i] = i;
+  }
+
+  int sum = 0;
+  PriorityQueue&lt;edge&gt; edges = new PriorityQueue&lt;edge&gt;();
+
+  // Iterate through each node.
+  for (int i = 0; i &lt; n; i++) {
+    // Iterate through edges of node.
+    for (int j = 0; j &lt; adjList.get(i).size(); j++) {
+      // Add edge to priority queue.
+      edges.add(adjList.get(i).get(j));
+    }
+  }
+
+  // Iterate through all edges.
+  while (!edges.isEmpty()) {
+    // Get edge with smallest weight.
+    edge e = edges.poll();
+    // Take edge if highest parent of source and destination nodes are
+    // different i.e. take the edge if it connects different components
+    if (getParent(parents, e.source) != getParent(parents, e.dest)) {
+      // Set parent of source to highest parent of destination node.
+      parents[e.source] = getParent(parents, e.dest);
+      
+      // Add edge weight to MST weight.
+      sum += e.weight;
+    }
+  }
+
+  // Return MST weight.
+  return sum;
+}
+</pre>
+
+</section><section><h2>Exercises</h2>
+
+<ol>
+<li>Prove Kruskal's Algorithm works.</li>
+<li>Extend Kruskals's to output the full minimum spanning tree used.</li>
+</ol>
+</section>
+        \section{ Exercises }
+        
+
+<ol>
+<li>Given a weighted graph with n nodes, find the smallest total cost to connect all nodes into 3 separate groups. (A single node can be a group)</li>
+<li>Same as 3, but a group must contain at least 3 other nodes.</li>
+</ol>
+
+    \chapter{ Topological Sorting }
+        \section{ Topological Sorting }
+        <section><h2>Introduction</h2>
+
+<p>Prerequisites: <a href="./Graph_Theory" target="_blank">Graph Theory</a>, <a href="./Depth_First_Search" target="_blank">Depth First Search</a></p>
+
+<p>A topological sort or topological order of a directed graph is an order in which every node will come after its ancestors.</p>
+
+<p><img src="./public_html/img/uploads/topsort.png"></p>
+
+<p>For example topological orders could be:</p>
+
+<ul>
+<li>(A, B, C, D, E, F, G)</li>
+<li>(B, A, D, C, F, E, G)</li>
+<li>(B, A, D, G, F, C, E)</li>
+</ul>
+
+<p>But (B, A, C, F, D, E, G) is not a topological ordering because D is an ancestor of F and it comes after F.</p>
+
+</section><section><h2>Implementation</h2>
+
+<p>Topological sort can implemented in O(n) time using DFS for a directed acyclic graph (a digraph with no cycles). How it works:</p>
+
+<ol>
+<li>Start with an empty top order</li>
+<li>Pick any unmarked node</li>
+<li>Get the DFS preordering from that node for unvisited nodes </li>
+<li>Add the DFS to the head of the current order</li>
+<li>Mark every node that has been visited</li>
+</ol>
+
+<p><img src="./public_html/img/uploads/topsort.png"></p>
+
+<p>Example:</p>
+
+<ul>
+<li>Pick C</li>
+<li>DFS preorder from C is (C,E)</li>
+<li>Add DFS preorder to head [C,E]</li>
+<li>Pick F</li>
+<li>DFS preorder from F is (F)</li>
+<li>Add DFS preorder from F to head [F,C,E]</li>
+<li>Pick B</li>
+<li>DFS preorder from B is (B,D,G)</li>
+<li>Add DFS preorder from B to head [B,D,G,F,C,E]</li>
+<li>Pick A</li>
+<li>DFS preorder from A is (A)</li>
+<li>Add DFS preorder from A to head [A,B,D,G,F,C,E]</li>
+<li>Done, all nodes visited</li>
+</ul>
+
+<p>A DFS order from a node is guaranteed to be a topological order. Since we add everything to the head of the order, a child of a node cannot appear before it.</p>
+</section>
+    \chapter{ Connected Components }
+        \section{ Connected Components }
+        <section><h2>Introduction</h2>
+
+<p>A connected component is a subgraph where all the vertices in the subgraph connect to each other.</p>
+
+<p>Finding the number of distinct connected components can be done using a <a href="./Breadth_First_Search" target="_blank">breadth first search</a> or a <a href="./Depth_First_Search" target="_blank">depth first search</a>.</p>
+
+</section><section><h2>Implementation</h2>
+
+<ol>
+<li>Set each node's parent to itself</li>
+<li>Pick an unused edge in the graph that is from node A to node B, if the parent of A is not the same as parent of B then set all nodes whose parent is B to parents of A</li>
+<li>Repeat for all edges</li>
+</ol>
+
+<hr><h3>Example</h3>
+
+<p><img src="./public_html/img/uploads/connectedcomponents.png"></p>
+
+<p>We select a random edge from node 1 and node 2. We set the parent node of 2 to node 1.</p>
+
+<p><img src="./public_html/img/uploads/connectedcomponents2.png"></p>
+
+<p>We select another random edge from node 5 to node 6.</p>
+
+<p><img src="./public_html/img/uploads/connectedcomponents3.png"></p>
+
+<p>We pick another random edge and we set the parent to 5.</p>
+
+<p><img src="./public_html/img/uploads/connectedcomponents4.png"></p>
+
+<p>We take another random edge and we set the parents to 7.</p>
+
+<p><img src="./public_html/img/uploads/connectedcomponents5.png"></p>
+
+<p>We take another random edge and we have an interesting case, two connected components are to be connected. We take all the nodes whose parent is 1, and we set the new parent to 5.</p>
+
+<p><img src="./public_html/img/uploads/connectedcomponents6.png"></p>
+
+<p>We take another random edge and set its parent to 1.</p>
+
+<p><img src="./public_html/img/uploads/connectedcomponents7.png"></p>
+
+<p>We take the last edge and set the last node parent to 7.</p>
+
+<p><img src="./public_html/img/uploads/connectedcomponents8.png"></p>
+
+<hr><h3>Java Code</h3>
+
+<pre class="prettyprint linenums ">
+public static int getParent(int x, int[] parent) {
+  // If nodes parent is itself, then we reach the highest parent.
+  if (parent[x] == x) {
+    return x;
+  }
+
+  // Set current node's parent to highest parent.
+  parent[x] = getParent(parent[x], parent);
+
+  // Return highest parent.
+  return parent[x];
+}
+
+public static void connectedComponents(int adjMatrix[][]) {
+  int n = adjMatrix.length;
+  int[] parent = new int[n];
+  int i, j;
+
+  // Initialize every nodes parent to itself.
+  for (i = 0; i &lt; n; i++) {
+    parent[i] = i;
+  }
+  // Iterate through each node.
+  for (i = 0; i &lt; n; i++) {
+    // Iterate through each other node.
+    for (j = 0; j &lt; n; j++) {
+      // If the two nodes have an edge.
+      if (adjMatrix[i][j] &gt; 0) {
+        // Recursively get parents of each node.
+        int pi = getParent(i, parent);
+        int pj = getParent(j, parent);
+        // Set parent of one to the other if they are different.
+        if (pi != pj) {
+          parent[pj] = pi;
+        }
+      }
+    }
+  }
+}
+</pre>
+</section>
     \chapter{ Cycle Detection }
-    <section><h2>Introduction</h2>
+        \section{ Cycle Detection }
+        <section><h2>Introduction</h2>
 
 <p>A cycle occurs in a graph when a duplicate node is encountered when traversing a tree using a <a href="./Depth_First_Search" target="_blank">depth first search</a>. In other words, a cycle occurs when you can reach the same node again.</p>
 
@@ -4664,13 +4831,19 @@ void bfs(Node root) {
 
 <p>Example:</p>
 
+<p>We start with a bitmap image:</p>
+
 <p><img src="./public_html/img/uploads/bucket.png"></p>
+
+<p>We use bucket fill in the top left corner of the bitmap to fill everything with the same color as the cell.</p>
 
 <p><img src="./public_html/img/uploads/bucket2.png"></p>
 
-<p>In a numeric representation of the colors:</p>
+<p>A numeric representation of the bitmap before bucket fill:</p>
 
 <p><img src="./public_html/img/uploads/bucket3.png"></p>
+
+<p>Numeric representation of the bitmap after bucket fill in the left:</p>
 
 <p><img src="./public_html/img/uploads/bucket4.png"></p>
 
@@ -4747,13 +4920,19 @@ public int FloodFillBFS(int x, int y, int src, int tar) {
 </section><section><h2>Exercises</h2>
 
 <ol>
-<li>Given a grid and list of start points and walls, find the distance to the closest start point for every non-wall grid space without passing through a wall.</li>
-<li>Given a grid and list of cell coordinates, find the perimeter around the cells
-
-<ul>
-<li>Example: a single cell has a perimeter of 4, two cells joined side by side have a perimeter of 6</li>
-</ul></li>
+<li>Given a NxN grid and a list of starting cells and wall cells, find the distance to the closest start point for every non-wall grid space without passing through a wall. </li>
+<li>Given a grid of numbers where 0 means empty space and 1 means a wall, find the number of rooms and the perimeter of each room. The border of the grid is guaranteed to be walls. </li>
 </ol>
+
+<pre class="prettyprint linenums ">
+1 1 1 1 1 1
+1 0 0 0 1 1
+1 1 0 1 1 1
+1 1 0 1 0 1
+1 1 1 1 1 1
+</pre>
+
+<p>The number of rooms is 2,  the perimeter of the first room is 12 and the perimeter of the second room is 4.</p>
 </section>
         \section{ Backtracking }
         <section><h2>Introduction</h2>
@@ -4795,14 +4974,14 @@ backtrack( empty_solution)
 
 <p>Given a set of numbers S of length N, output all subsets of S.</p>
 
-<p>For example S=[1,2,3,4]. The subsets encodings of [1,2,3,4]:</p>
+<p>For example S=(1,2,3,4). The subsets encodings of (1,2,3,4):</p>
 
 <ul>
-<li>[]</li>
-<li>[1], [2], [3], [4]</li>
-<li>[1,2], [1,3], [1,4], [2,3], [2,4], [3,4]</li>
-<li>[1,2,3], [1,2,4], [1,3,4], [2,3,4]</li>
-<li>[1,2,3,4]</li>
+<li>()</li>
+<li>(1), (2), (3), (4)</li>
+<li>(1,2), (1,3), (1,4), (2,3), (2,4), (3,4)</li>
+<li>(1,2,3), (1,2,4), (1,3,4), (2,3,4)</li>
+<li>(1,2,3,4)</li>
 </ul>
 
 <p>We want to be able to enumerate all the subsets of S so we need to find a way to encode a subset of an array. We can use a binary number of length N to encode a subset of an array of length N. For example a 1 represents we use a number in the set and a 0 means we don't use a number in the set.</p>
@@ -4810,22 +4989,22 @@ backtrack( empty_solution)
 <p>So above:</p>
 
 <ul>
-<li>[] = 0000</li>
-<li>[1] = 1000</li>
-<li>[2] = 0100</li>
-<li>[3] = 0010</li>
-<li>[4] = 0001</li>
-<li>[1,2] = 1100</li>
-<li>[1,3] = 1010</li>
-<li>[1,4] = 1001</li>
-<li>[2,3] = 0110</li>
-<li>[2,4] = 0101</li>
-<li>[3,4] = 0011</li>
-<li>[1,2,3] = 1110</li>
-<li>[1,2,4] = 1101</li>
-<li>[1,3,4] = 1011</li>
-<li>[2,3,4] = 0111</li>
-<li>[1,2,3,4] = 1111</li>
+<li>() = 0000</li>
+<li>(1) = 1000</li>
+<li>(2) = 0100</li>
+<li>(3) = 0010</li>
+<li>(4) = 0001</li>
+<li>(1,2) = 1100</li>
+<li>(1,3) = 1010</li>
+<li>(1,4) = 1001</li>
+<li>(2,3) = 0110</li>
+<li>(2,4) = 0101</li>
+<li>(3,4) = 0011</li>
+<li>(1,2,3) = 1110</li>
+<li>(1,2,4) = 1101</li>
+<li>(1,3,4) = 1011</li>
+<li>(2,3,4) = 0111</li>
+<li>(1,2,3,4) = 1111</li>
 </ul>
 
 <p>At each position we either take or don't take the number in the set and we can do this for each number. We can enumerate through all these encoding by first starting with 0 or 1 and appending more 0's or 1's.</p>

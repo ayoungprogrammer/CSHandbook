@@ -1,8 +1,8 @@
 ## Introduction
 
-The Computer Science handbook is a handbook designed to explain algorithms and data structures in a way that anyone can understand. Many websites (eg Wikipedia) contain lengthy and wordy explanations that are full of technical jargon. I have tried my hardest to simplify language to make it easy to read without a strong math or computer science background. I hope to share my knowledge with you and I hope you will learn something new from reading this!
+The Computer Science handbook is a handbook designed to explain algorithms and data structures in a way that anyone can understand. Many websites (e.g. Wikipedia) contain lengthy and wordy explanations that are full of technical jargon. I have tried my hardest to simplify language to make it easy to read without a strong math or computer science background. I hope to share my knowledge with you and I hope you will learn something new from reading this!
 
-Before you get started with this handbook, it is highly recommended that you are already familiar with Java or C++ syntax. This handbook is not meaning for learning programming basics since there are other resources better suited for that task.
+Before you get started with this handbook, it is highly recommended that you are already familiar with Java or C++ syntax. This handbook is not meant for learning programming basics since there are other resources better suited for that material.
 
 ## Format
 
@@ -18,5 +18,5 @@ The implementation section will be an implementation of the article in Java. It 
 
 ### Exercises
 
-The exercises section contains practice problems to test if you truly understand the concept. Many of these questions come from real interview questions. 
+The exercises section contains practice problems to test your understanding. Some of these questions come from real interview questions. 
 

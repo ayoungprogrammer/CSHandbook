@@ -16,10 +16,12 @@
 		`` Advanced Recursion ``
 		((((Advanced Recursion))))
 ~ Data Structures ~
+	```` Introduction ````
 	((((Data Structures.Introduction))))
 	` Stack `
 		`` Stack ``
 		((((Stack.Introduction))))
+		((((Stack.Implementations))))
 		`` Vector ``
 		((((Vector))))
 		`` Exercises ``
@@ -27,30 +29,44 @@
 	` Queue `
 		`` Queue ``
 		((((Queue.Introduction))))
-		((((Queue.Implementation))))
+		((((Queue.Implementations))))
 		`` Linked List ``
 		((((Linked List))))
+		`` Exercises ``
+		((((Queue.Exercises))))
 	` Sets `
 		`` Sets ``
-		((((Sets))))
+		((((Sets.Introduction))))
+		((((Sets.Implementations))))
 		`` Hash Set ``
 		((((Hash Set))))
+		`` Tree Set ``
+		((((Tree Set.Introduction))))
+		((((Tree Set.Implementations))))
 		`` Binary Search Tree ``
 		((((Binary Search Tree))))
-		`` Tree Set ``
-		((((Tree Set))))
+		`` Exercises ``
+		((((Sets.Exercises))))
 	` Maps `
 		`` Maps ``
-		((((Maps))))
+		((((Maps.Introduction))))
+		((((Maps.Implementations))))
 		`` Hash Map ``
 		((((Hash Map))))
 		`` Tree Map ``
 		((((Tree Map))))
+		`` Exercises ``
+		((((Maps.Exercises))))
 	` Priority Queue `
-		((((Priority Queue))))
+		`` Priority Queue ``
+		((((Priority Queue.Introduction))))
+		((((Priority Queue.Implementations))))
 		`` Heap ``
 		((((Heap))))
+		`` Exercises ``
+		((((Priority Queue.Exercises))))
 ~ Sorting ~
+	```` Introduction ````
 	((((Sorting.Introduction))))
 	` Slow Sorts `
 		((((Sorting.Slow Sorts))))
@@ -76,30 +92,44 @@
 		((((Permutation Sort))))
 		`` Miracle Sort ``
 		((((Miracle Sort))))
+	` Exercises `
+	((((Sorting.Exercises))))
 ~ Graph Theory ~
+	```` Introduction ````
 	((((Graph Theory.Introduction))))
-	` Representation `
-		((((Graph Theory.Representations))))
+	` Graph Representations `
+		((((Graph Representations.Introduction))))
 		`` Adjacency Matrix ``
 		((((Adjacency Matrix))))
 		`` Adjacency List ``
 		((((Adjacency List))))
-	` Tree `
-		((((Graph Theory.Tree))))
-		`` Prim's ``
-		((((Prim's))))
-		`` Kruskal ``
-		((((Kruskal))))
 	` Shortest Path `
-		((((Graph Theory.Shortest Path))))
+		((((Shortest Path.Introduction))))
+		((((Shortest Path.Implementations))))
 		`` Dijkstra's ``
 		((((Dijkstra's))))
 		`` Bellman Ford ``
 		((((Bellman Ford))))
 		`` Floyd Warsahll ``
 		((((Floyd Warshall))))
+	` Minimum Spanning Tree `
+		((((Minimum Spanning Tree.Introduction))))
+		((((Minimum Spanning Tree.Implementations))))
+		`` Prim's ``
+		((((Prim's))))
+		`` Kruskal ``
+		((((Kruskal))))
+		`` Exercises ``
+		((((Minimum Spanning Tree.Exercises))))
+	` Topological Sorting `
+		`` Topological Sorting ``
+		((((Topological Sorting))))
+	` Connected Components `
+		`` Connected Components ``
+		((((Connected Components))))
 	` Cycle Detection `
-	((((Cycle Detection))))
+		`` Cycle Detection ``
+		((((Cycle Detection))))
 ~ Searches ~
 	` Searches `
 		((((Searches.Introduction))))

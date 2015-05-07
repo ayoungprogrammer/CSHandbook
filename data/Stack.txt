@@ -16,7 +16,7 @@ Stacks are used to keep track of function calls in memory. Whenever a function i
 
 A stack is usually implemented as a [[vector|Vector]].
 
-## Implementation
+## Implementations
 
 | Implementation | Pop | Push
 |-----------|-----|-----

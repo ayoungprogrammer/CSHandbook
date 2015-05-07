@@ -4,7 +4,7 @@ Backtracking is a search that find all possible solutions by enumerating on part
 
 Backtracking is similar to recursion, but instead of generating all the solutions, we will generate each solution one by one. In this way, we only need to store the current solution in memory whereas in normal recursion we need to store all the solutions into memory.
 
-Since backtracking requires enumerating through all solutions, it is usually slow with runtimes usually O(n!) or O(2^^n^^). 
+Since backtracking requires enumerating through all solutions, it is usually slow with runtimes such as O(n!) or O(2^^n^^). 
 
 {{backtracking.png}}
 
@@ -37,34 +37,34 @@ backtrack( empty_solution)
 
 Given a set of numbers S of length N, output all subsets of S.
 
-For example S=[1,2,3,4]. The subsets encodings of [1,2,3,4]:
+For example S=(1,2,3,4). The subsets encodings of (1,2,3,4):
 
-* {}
-* {1}, {2}, {3}, {4}
-* {1,2}, {1,3}, {1,4}, {2,3}, {2,4}, {3,4}
-* {1,2,3}, {1,2,4},{1,3,4},{2,3,4}
-* {1,2,3,4}
+* ()
+* (1), (2), (3), (4)
+* (1,2), (1,3), (1,4), (2,3), (2,4), (3,4)
+* (1,2,3), (1,2,4), (1,3,4), (2,3,4)
+* (1,2,3,4)
 
 We want to be able to enumerate all the subsets of S so we need to find a way to encode a subset of an array. We can use a binary number of length N to encode a subset of an array of length N. For example a 1 represents we use a number in the set and a 0 means we don't use a number in the set.
 
 So above:
 
-* {} = 0000
-* {1} = 1000
-* {2} = 0100
-* {3} = 0010
-* {4} = 0001
-* {1,2} = 1100
-* {1,3} = 1010
-* {1,4} = 1001
-* {2,3} = 0110
-* {2,4} = 0101
-* {3,4} = 0011
-* {1,2,3} = 1110
-* {1,2,4} = 1101
-* {1,3,4} = 1011
-* {2,3,4} = 0111
-* {1,2,3,4} = 1111
+* () = 0000
+* (1) = 1000
+* (2) = 0100
+* (3) = 0010
+* (4) = 0001
+* (1,2) = 1100
+* (1,3) = 1010
+* (1,4) = 1001
+* (2,3) = 0110
+* (2,4) = 0101
+* (3,4) = 0011
+* (1,2,3) = 1110
+* (1,2,4) = 1101
+* (1,3,4) = 1011
+* (2,3,4) = 0111
+* (1,2,3,4) = 1111
 
 At each position we either take or don't take the number in the set and we can do this for each number. We can enumerate through all these encoding by first starting with 0 or 1 and appending more 0's or 1's.
 
@@ -80,16 +80,16 @@ Repeat until N
 [000,001,010,011,100,101,110,111]
 [0000,0001,0010,0011,0100,0101,0110,0111,1000,1001,1010,1011,1100,1101,1110,1111]
 Let S be an array of N integers
-Let subsets(arr,n) be subsets of S from 1 to n
+Let subsets(set, n) return an array of subsets of S from 1 to n
  
 Base case
-S(set,0) = set
+subsets(set, 0) = set
  
 Recurrence
-S(set,n) = subsets([sub+0 for sub in set] + [sub+1 for sub in set],n)
- 
-Example
- 
+subsets(set,n) = subsets([sub+0 for sub in set] + [sub+1 for sub in set], n)
+
+Example:
+
 subsets([],4)
 subsets([0,1],3)
 subsets([00,01,10,11],2)
@@ -98,21 +98,22 @@ subsets([0000,0001,0010,0011,0100,0101,0110,0111,1000,1001,1010,1011,1100,1101,1
 =
 [0000,0001,0010,0011,0100,0101,0110,0111,1000,1001,1010,1011,1100,1101,1110,1111]
 ]]]]
-Here is the way we would do this problem with backtracking, however it takes a lot of memory to store **ALL** the solutions. Instead of building all the solutions, we can build each solution one by one.
+Here is the way we would do this problem with backtracking, however it takes a lot of memory to store **ALL** the solutions. Instead of building all the solutions, we can build each solution one by one and only store one solution at a time.
 
 {{enumerate-sets.png}}
 
 ### Formalization
 
 [[[[
-Base case
-subset(0, binary): print binary
+Base case:
+subset(0, binary):
+  print binary
  
-Recurrence
-subset(n-1,binary+'0')
-subset(n-1,binary+'1')
+Recurrence:
+subset(n - 1, binary + '0')
+subset(n - 1, binary + '1')
  
-Example
+Example:
 subset(4,'')
  
 subset(3,'0')
@@ -151,6 +152,8 @@ subset(0,'1111')
 ]]]]
 
 ### Implementation
+
+We can implement subsets in code using recursion. Note that we only store one solution as the array use[] and we keep changing it as we iterate through partial solutions.
 
 [[[[
 void subsets(int arr[], boolean use[], int i) {
@@ -214,11 +217,11 @@ Let N be a NxN board where we want to place N queens
 Let queen(n,columns,d1,d2) be a placing of N queens across a board
  
 Base case
-queen(0,cols,d1,d2): print solution
+queen(0, cols, d1, d2): print solution
 
 Reject solution
-reject(cols,d1,d2):   { false if duplicates in cols or d1 or d2
-                               { true otherwise
+reject(cols, d1, d2) = false if duplicates in cols or d1 or d2
+reject(cols, d1, d2) = true otherwise
 Recurrence 
 queen(row,cols,d1,d2) = queen(row-1,cols with col,d1 with row+col,d2 with N-row+col) for col from 1 to N
  
@@ -339,4 +342,4 @@ nqueen(0, row, d1, d2);
 1. Given a sequence of numbers, output all increasing subsequences.
 2. Given a NxN chessboard with certain squares that can have no pieces placed, output the number of configurations that can be made from rooks without attacking each other.
 3. Given a sudoku problem, output a solution for the grid if it exists. Note: this question is popular for technical interviews.
-4. Given a NxN magic square where you need to place the numbers from 1 to N^2, find the number of ways to have every row, column and diagonal add to M.
+4. Given a NxN magic square where you need to place the numbers from 1 to N^^2^^, find the number of ways to have every row, column and diagonal add to M.

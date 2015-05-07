@@ -68,9 +68,9 @@ bellmanFord(start,0,0)
 We can rewrite this solution using dynamic programming without recursion.
 
 [[[[
-class edge{
-  int weight,source,dest;
-  public edge(int source,int dest,int weight){
+class edge {
+  int weight, source, dest;
+  public edge(int source, int dest, int weight) {
     this.source = source;
     this.dest = dest;
     this.weight = weight;

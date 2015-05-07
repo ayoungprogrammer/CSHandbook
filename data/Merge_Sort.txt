@@ -1,14 +1,14 @@
 ## Introduction
 
-**Preqrequistes**: [[Recursion]]
+**Prerequisites**: [[Recursion]]
 
 Merge sort works by breaking down the sorting into smaller pieces. If we want to sort N elements, we can sort the first half of the elements, sort the second half and then merge the results together. To sort the first half, we can do the exact same thing of sorting the first quarter and the second quarter and merging the results.
 
 ## Implementation
 
-Merge sort work be breaking down the problem into smaller and smaller parts and then combing those parts to solve the big problem. 
+Merge sort work be breaking down the problem into smaller and smaller parts and then combining those parts to solve the larger problem. 
 
-We can keep splitting the list into half until there each piece has 1 element or no elements. We can then combine the results of each piece repeatedly until the entire list is sorted.
+We can keep splitting the list into half until each piece has zero or one elements. We can then combine the results of each piece repeatedly until the entire list is sorted.
 
 Example:
 
@@ -24,7 +24,7 @@ merge([1,5,7,9], [2,4,8])
 = [1, 2, 4, 5, 7, 8, 9]
 
 Let sort(arr) sort an array
-Let middle be (0 + arr.length) / 2
+Let middle be arr.length / 2
 
 sort([x]) = [x]
 sort([x,y]) = [x,y] if x<y 
@@ -42,66 +42,62 @@ sort([3, 7, 1, 9, 8, 4, 5])
 
 ### Code
 
-For our Java implementation, instead of returning a new array every time we merge two arrays, we can create a temporary array to store the merged results and then move it back.
+We will implement our solution in Java that reflects our formalization in a way that is easier to understand but more inefficient. In our code, we create new arrays to store merged results but we can actually do this in place without extra memory (left as an exercise).
 
 [[[[
-public void merge(int arr[], int start1, int end1, int start2, int end2) {
-  int arr2[] = new int[end2 - start1 + 1];
-  int begin = start1;
-  int n = 0;
-
-  // Pick smallest element one by one.
-  while (start1 <= end1 && start2 <= end2) {
-    // Take from first part.
-    if (arr[start1] <= arr[start2]) {
-      arr2[n] = arr[start1];
-      start1++;
+// Merges two sorted arrays v1 and v2 into a new sorted array
+public static Vector<Integer> merge(Vector<Integer> v1, Vector<Integer> v2) {
+  Vector<Integer> merged = new Vector<Integer>();
+  int i = 0, j = 0;
+  // Always take the smaller element of the two vectors
+  while(i < v1.size() && j < v2.size()){
+    if(v1.get(i) < v2.get(j)){
+      merged.add(v1.get(i));
+      i++;
+    } else {
+      merged.add(v2.get(j));
+      j++;
     }
-    // Take from second part.
-    else {
-      arr2[n] = arr[start2];
-      start2++;
+  }
+  if (i >= v1.size()){
+    // Add the rest of v2
+    while(j < v2.size()){
+      merged.add(v2.get(j));
+      j++;
     }
-    n++;
+  } else {
+    // Add the rest of v1.
+    while(i < v1.size()){
+      merged.add(v1.get(i));
+      i++;
+    }
   }
-  // If first segment still has elements.
-  while (start1 <= end1) {
-    arr2[n] = arr[start1];
-    n++;
-    start1++;
-  }
-  // If second segment still has elements.
-  while (start2 <= end2) {
-    arr2[n] = arr[start2];
-    start2++;
-    n++;
-  }
-  // Copy merged array back.
-  for (int i = 0; i < n; i++) {
-    arr[begin + i] = arr2[i];
-  }
+  return merged;
 }
-// Merge sorts array from [start..end]
-public void mergeSort(int arr[], int start, int end) {
+
+// Merge sorts an array
+public static Vector<Integer> mergeSort(Vector<Integer> v) {
   // Base case if 1 or 0 elements.
-  if (end - start <= 0) {
-    return;
+  if (v.size() <= 1) {
+    return v;
   }
-  int mid = (start + end) / 2;
-  // Sort left side.
-  mergeSort(arr, start, mid);
-  // Sort right side.
-  mergeSort(arr, mid + 1, end);
-  // Merge both sides.
-  merge(arr, start, mid, mid + 1, end);
+  // Get middle of array.
+  int middle = v.size()/2;
+  // Split vector into two halves.
+  Vector<Integer> firstHalf = new Vector<Integer>(v.subList(0, middle));
+  Vector<Integer> secondHalf = new Vector<Integer>(v.subList(middle, v.size()));
+  // Return merged halves.
+  return merge(mergeSort(firstHalf), mergeSort(secondHalf));
 }
 
 // Example usage:
-int arr[] = {5,7,2,6,8,5};
-mergeSort(arr,0,arr.length-1);
+Vector<Integer> v = new Vector<Integer>();
+Collections.addAll(v, 5,4,10,8,9,2);
+System.out.println(mergeSort(v));
 ]]]]
 
 
 ## Exercises
 
-1. Write merge sort that uses no extra memory (no additional array).
+1. Write the formalization for merge(arr1, arr2). 
+2. Rewrite merge sort to not use any additional memory (i.e. merging and splitting arrays is done in place and no new vectors or arrays are created). You should rewrite the function to sort in place: void mergeSort(int[] arr, int start, int end) and void merge(int arr[]. int start, int end, int start2, int end2).

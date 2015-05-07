@@ -1,6 +1,6 @@
 ## Introduction
 
-*Prerequeisites*: [[Maps]], [[Binary Search Tree]]
+*Prerequisites*: [[Maps]], [[Binary Search Tree]]
 
 A tree map is a map which stores the values in a [[binary search tree|Binary Search Tree]]. To store elements in a tree map, they must be able to be sorted by a property. To insert an element, it is added to the binary tree. To delete an element, it is removed from the binary tree. To check for membership, we do a binary search for the element in the binary tree.
 
@@ -12,8 +12,8 @@ The advantage of tree maps is that they are maps maintained in a sorted order.
 |-
 | Time Complexity | O(log n) | O(log n) | O(log n)
 
-Tree Maps are implemented using [[binary search trees|Binary Search Tree]]. Since much of the code is the same, we will not go in depth in an implementation.
+Tree Maps are implemented using [[binary search trees|Binary Search Tree]]. Since the implementation of a tree map is very similar to the implementation of a tree set, it will left as an exercise.
 
 ## Exercise
 
-1. Implement a Tree Map following the code of [[Binary Search Tree]] and [[Hash Map]].
+1. Implement a Tree Map using the code of [[Binary Search Tree]] and [[Hash Map]] as guides.

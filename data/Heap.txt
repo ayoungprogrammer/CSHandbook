@@ -4,9 +4,9 @@
 
 [[Source on GitHub||GITHUB_PATH/PQueue.java]]
 
-Heaps are data structures that are able to pop the maximum or minimum value or push a value very quickly. Heaps are implemented as trees which have the property that a parent node must either be greater than all the elements in its left and right subtrees (a max heap) or less than all the elements in its left and right subtrees (a min heap). [[Priority queue's|Priority Queue]] are most efficiently implemented as heaps. This guarantees that the maximum or minimum element is the root node.
+Heaps are data structures that can pop the maximum or minimum value or push a value very efficiently. Heaps are special binary trees which have the property that: the value of each node is greater than the values of all its children (a max heap) or the value of each node is less than the values of all its children (a min heap). [[Priority queue's|Priority Queue]] are most efficiently implemented as heaps. This guarantees that the maximum or minimum element is the root node.
 
-Heaps store their data level by level in a binary tree. This allows us to store heaps in an array. The root index is 0. For every node, the left index can be found by using the formula 2\*ind+1 and the right index can be found by using the formula 2\*ind + 2. The parent of a node can be found by integer division with (ind-1)/2.
+Heaps store their data level by level in a binary tree. This allows us to store heaps in an array. The root index is 0. For every node with index i, the left index can be found by using the formula 2\*i+1 and the right index can be found by using the formula 2\*i + 2. The parent of a node can be found by integer division as (i-1)/2.
 
 [[[[{lang-html}
 root = 0
@@ -24,7 +24,7 @@ Example Heap:
 {{maxheap.png}}
 
 
-A heap has two operations: push and pop. Pushing an element into a heap adds it into the heap and the heap needs to ensure that the properties of the heap still hold. Popping removes an element from the top of the heap and the heap needs to ensure that the properties of the heap still hold.
+A heap has two operations: push and pop. Pushing an element into a heap adds it into the heap while ensuring that the properties of the heap still hold. Popping removes an element from the top of the heap and the heap needs to ensure that the properties of the heap still hold.
 
  Operation  | Resize | Push | Pop | Heapify
 -----------|---------|--
@@ -33,7 +33,7 @@ Time Complexity | O(n)| O(log n) | O(log n) | O(n)
 
 ## Class
 
-We will implement a max heap in Java. We need to store the element in the heap and the size of the heap.
+We will implement a max heap in Java and in our class we need to store the elements in the heap and the size of the heap.
 
 [[[[
 public class Heap {
@@ -50,12 +50,12 @@ public class Heap {
 
 ## Resize
 
-When the heap gets too full, we can resize it to make it fit more elements.
+When the heap reaches capacity, we need to resize it to be able to contain more elements.
 
 [[[[
 public void resize() {
-  int[] newArr = new int[arr.length*2];
-  for (int i=0;i<size;i++) {
+  int[] newArr = new int[arr.length * 2];
+  for (int i = 0; i < size; i++) {
     newArr[i] = arr[i];
   }
   arr = newArr;
@@ -64,7 +64,7 @@ public void resize() {
 
 ## Swap
 
-Swaps two nodes in the heap. 
+Swap will switch two nodes in the heap. 
 
 [[[[
 public void swap(int a, int b) {
@@ -78,7 +78,7 @@ public void swap(int a, int b) {
 
 Pushes the number x into the priority queue. We can do this by adding it to the bottom of the heap and then keep swapping it upwards if it is greater than the parent.
 
-Example of heap:
+Example:
 
 {{maxheap.png}}
 
@@ -94,7 +94,7 @@ The parent of 9 is 8 and smaller so we can swap the two.
 
 {{maxheappush3.png}}
 
-Since the parent of 9 is 10 and greater than 9 then we can stop.
+Since the parent of 9 is 10 and greater than 9 then we can stop. We can also see that the heap structure is still valid.
 
 [[[[
 public void push(int x) {
@@ -197,7 +197,7 @@ public int pop() {
 
 ## Heapify
 
-Heapify takes a random array of N elements and transforms it into a heap in the same array. The runtime of heapify is O(n) and the proof of that is beyond the scope of this article.
+Heapify takes an array of N elements and transforms it into a heap in the same array. The runtime of heapify is suprisingly O(n) and the proof of that is beyond the scope of this book.
 
 [[[[
 public void heapify(int arr[]) {
@@ -212,4 +212,5 @@ public void heapify(int arr[]) {
 ## Exercises
 
 1. Implement a min heap in Java.
-2. Write a function that checks if an array is a heap. 
+2. Write a function that checks if an array is a heap.
+3. Prove that heapify is O(n).

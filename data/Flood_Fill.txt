@@ -14,13 +14,19 @@ Given an n x m matrix and a start point and two colors (src and dst), we want to
 
 Example:
 
+We start with a bitmap image:
+
 {{bucket.png}}
+
+We use bucket fill in the top left corner of the bitmap to fill everything with the same color as the cell.
 
 {{bucket2.png}}
 
-In a numeric representation of the colors:
+A numeric representation of the bitmap before bucket fill:
 
 {{bucket3.png}}
+
+Numeric representation of the bitmap after bucket fill in the left:
 
 {{bucket4.png}}
 
@@ -92,6 +98,13 @@ public int FloodFillBFS(int x, int y, int src, int tar) {
 
 ## Exercises
 
-1. Given a grid and list of start points and walls, find the distance to the closest start point for every non-wall grid space without passing through a wall.
-2. Given a grid and list of cell coordinates, find the perimeter around the cells
-  * Example: a single cell has a perimeter of 4, two cells joined side by side have a perimeter of 6
+1. Given a NxN grid and a list of starting cells and wall cells, find the distance to the closest start point for every non-wall grid space without passing through a wall. 
+2. Given a grid of numbers where 0 means empty space and 1 means a wall, find the number of rooms and the perimeter of each room. The border of the grid is guaranteed to be walls. 
+[[[[
+1 1 1 1 1 1
+1 0 0 0 1 1
+1 1 0 1 1 1
+1 1 0 1 0 1
+1 1 1 1 1 1
+]]]]
+  The number of rooms is 2,  the perimeter of the first room is 12 and the perimeter of the second room is 4.

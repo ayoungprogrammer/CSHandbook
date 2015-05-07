@@ -280,18 +280,18 @@ For example if we had an item with value $5 and weight 4kg and a knapsack with c
 
 [[[[
 Let knapsack(W) be the maximum value of items that can fit into maximum capacity of W.
-Let w1 be the weight of one item and v1 be the value of one item.
+Let item be an item with a weight and value.
 
 Base Case:
 knapsack(W) = 0 if W < w1
 
 Recursion:
-knapsack(W) = impossible if knapsack(W - w1) is impossible
-knapsack(W) = knapsack(W - w1) + v1
+knapsack(W) = impossible if knapsack(W - item.weight) is impossible
+knapsack(W) = knapsack(W - item.weight) + item.value
 
 Example:
-v1 = 5
-w1 = 4
+item.value = 5
+item.weight = 4
 knapsack(9)
 = knapsack(5) + 5
 = knapsack(1) + 5 + 5
@@ -301,19 +301,19 @@ knapsack(9)
 Note that we are recomputing multiple values multiple times. We can avoid this by using dynamic programming and working up with our solution instead of backwards.
 
 [[[[
-Let knapsack[W] be the maximum value with weight capacity W
-Let w be the positive integer weight of the item and v be the value of an item
+Let knapsack[W] be the maximum value with weight capacity W.
+Let item be an item with a positive weight and value.
 
-for k from 0 to w - 1
-  knapsack[k] = 0
+for i from 0 to w - 1
+  knapsack[i] = 0
 
 for weight from 1 to W
-  knapsack[weight] = knapsack[weight - w] + v
+  knapsack[weight] = knapsack[weight - item.weight] + item.value
 
 Example:
 W = 9
-w = 4
-v = 4
+item.weight = 4
+item.value = 5
 
 knapsack[0] = 0     base case
 knapsack[1] = 0     base case
@@ -339,32 +339,30 @@ For example we have a knapsack of capacity 10kg and necklaces worth $30 with wei
 
 [[[[
 Let knapsack(W) be the maximum value with maximum capacity W
-Let weights be an array of weights where wi is the weight of the ith item.
-Let values be an array of values where vi is the value of the ith item.
+Let items[] be an array of items with positive weights and values.
 
 knapsack(W) = 0 if W < 0
 
-knapsack(W) = maximum of (knapsack(W-wi) + vi for all items with wi <= W)
+knapsack(W) = maximum of knapsack(W - item.weight) + item.value for all items
 ]]]]
 
 Since we could be recomputing knapsack(w) multiple times, we can optimize by working forwards using dynamic programming.
 
 [[[[
-Let knapsack[w] be the maximum value with maximum capacity W
-Let weights be an array of weights where wi is the weight of the ith item.
-Let values be an array of values where vi is the value of the ith item.
+Let knapsack[w] be the maximum value with maximum capacity W.
+Let items be an array of items with positive weights and values.
 
 knapsack[0] = 0
 
 for w from 1 to W
   maxVal = 0
-  for i in items
-    if w - wi >= 0
-      knapsack[w] = max(knapsack[w], knapsack[w - wi] + vi)
+  for item in items
+    if w - item.weight >= 0
+      knapsack[w] = max(knapsack[w], knapsack[w - item.weight] + item.value)
 
 Example:
-weights = [1, 3, 7, 9]
-values = [10, 270, 665, 900]
+Items = [(1kg, $10), (3kg, $270), (7kg, $665), (9kg, $900)]
+
 knapsack[0] = 0
 knapsack[1] = 10 [ max(knapsack[0] + 10) ]
 knapsack[2] = 10 [ max(knapsack[1] + 10) ]

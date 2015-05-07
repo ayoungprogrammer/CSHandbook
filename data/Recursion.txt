@@ -2,9 +2,9 @@
 
 **Next**: [[Advanced Recursion]]
 
-Recursion is process that repeats itself in a similar way. Anything that has its definition nested inside itself is considered to be recursive. For example GNU stands for GNU's Not Unix!. Expanding this acronym gives us ((GNU's Not Unix) Not Unix!). As you can see this will go on forever and GNU's definition is nested inside itself so it is recursive. The Fibonacci sequence is also recursive: F(n) = F(n-1)+F(n-2). Inside the function F, we see two more F's! 
+Recursion is process that repeats itself in a similar way. Anything that has its definition nested inside itself is considered to be recursive. For example, GNU stands for GNU's Not Unix!. Expanding this acronym gives us ((GNU's Not Unix) Not Unix!). As you can see this will go on forever and GNU's definition is nested inside itself so it is recursive. The Fibonacci sequence is also recursive: F(n) = F(n-1)+F(n-2). Inside the function F, we see two more F's! 
 
-In computer science infinite looping is not good, because we want our programs to finish at some point. This means we have to find a stopping point where the function will stop calling itself. A base case is the condition where the last step is reached. All cases should eventually reduce to a base case. For the Fibonacci sequence, the base case is F(0) = 1 and F(1) = 1, and we can see that for all N>1, the Fibonacci sequence will reach the base case.
+In computer science, we want to avoid infinite looping since we want our programs to finish at some point. This means we have to find a stopping point where the function will stop calling itself. A base case is the condition where the last step is reached. All cases should eventually reduce to a base case. For the Fibonacci sequence, the base case is F(0) = 1 and F(1) = 1, and we can see that for all N>1, the Fibonacci sequence will reach the base case.
 
 So for something to be recursive in computer science, it needs:
 
@@ -14,16 +14,17 @@ So for something to be recursive in computer science, it needs:
 Template for recursion:
 
 [[[[
-recursion(parameter)
-  if base_case (parameter):
-    stop
-  else
-    recursion( operation(parameter) )
+fun(x) {
+  if baseCase(x) {
+    return base
+  }
+  else {
+    return fun(reduce(x))
+  }
+}
 ]]]]
 
-* *recursion* is the recursive function
-* *base_case* is the check if the parameter has reached the base case
-* *operation* reduces the parameters towards the base case
+In this generic recursive function, fun is the recursive function with a single parameter x. The function baseCase(x) checks if x is the base case and if it is, fun(x) will return. The function reduce(x) reduces x to a value closer to the base case. If x is not the base case then we recursively call fun on a reduced version of x. This is the basis of most recursive functions.
 
 ## Factorial
 
@@ -62,10 +63,10 @@ f(n) = f(n-1) * n
 
 Example:
 f(4) 
-= 4 ∙ f(3)
-= 4 ∙ 3 ∙ f(2)
-= 4 ∙ 3 ∙ 2 ∙ f(1)  [Base Case]
-= 4 ∙ 3 ∙ 2 ∙ 1
+= 4 * f(3)
+= 4 * 3 * f(2)
+= 4 * 3 * 2 * f(1)  [Base Case]
+= 4 * 3 * 2 * 1
 = 24
 ]]]]
 
@@ -83,14 +84,14 @@ int factorial(int n){
 
 We can use recursion in many places, and we can apply it to simple problems that you probably have not thought about. Summing the digits of a string can be done using a simple loop, but we can also use recursion to do it.
 
-Let's say we have the string '23528'. The total is equal to the first digit plus the sum of the rest of the digits. 2 + '3528'. We can do the exact same thing for the rest of the digits: the second digit plus the sum of the rest of the digits and keep doing this until we have no more digits.
+Let's say we have the string '23528'. The sum is equal to the first digit plus the sum of the rest of the digits: 2 + '3528'. The sum of the rest of the digits is equal to sum of the second digit plus the rest of those digits. As we can see, each time we are performing the same operation on smaller parameters and this is our recurrence relation. We can keep doing this until we have no more digits and that is our base case.
 
-* f('23528')
-* 2 + f('3528')
-* 2 + 3 + f('528')
-* 2 + 3 + 5 + f('28')
-* 2 + 3+ 5 + 2 + f('8') 
-* 2 + 3+ 5 + 2 + 8 + f('')
+* sum('23528')
+* 2 + sum('3528')
+* 2 + 3 + sum('528')
+* 2 + 3 + 5 + sum('28')
+* 2 + 3+ 5 + 2 + sum('8') 
+* 2 + 3+ 5 + 2 + 8 + sum('')
 * 2 + 3 + 5 + 2 + 8 + 0
 * 20
 
@@ -114,7 +115,7 @@ sum(string) = int(string[0]) + sum(string[1..n])
 
 Example:
 sum("23528")
-= 2 + sum("3528"')
+= 2 + sum("3528")
 = 2 + ( 3 + ( sum("528") )
 = 2 + ( 3 + ( 5 + sum ("28") ) )
 = 2 + ( 3 + ( 5 + ( 2 + sum("8") ) ) ) )
@@ -146,11 +147,11 @@ sum('23528');
 
 ## Count
 
-Let's say we have an string of N characters and we want to find the number of times the letter 'c' appears. This time we need to add some logic to the solution. 
+Let's say we have an string of N characters and we want to find the number of times the letter 'c' appears. This time we will need to add some logic to the solution. 
 
-If the first letter of the string is a 'c', then we can add 1 to the count. Otherwise, we don't add anything. We can do the exact same thing for the substring without the first letter. If the second letter of the string is a 'c', we add 1 other we don't add anything etc.
+If the first letter of the string is a 'c', then we can add 1 to the count. Otherwise, we don't add anything. We can do the exact same thing for the rest of the string. If the second letter of the string is a 'c', we add 1, otherwise we don't add anything etc. As we can see, we are repeating the process on smaller parameters and we have our recurrence relation. We keep reducing this way until we get an empty string and this is our base case.
 
-For example we have the string 'cacaec'. Since the first letter is a 'c' we add 1 to the count. Then we remove the first letter and get 'acaec', the first letter is not a 'c' so we don't add to the count. We keep reducing this way until we get an empty string and we return the count. 
+For example, we have the string 'cacaec'. Since the first letter is a 'c', we add 1 to the count. Then we do the same for the rest of the string 'acaec', the first letter is not a 'c' so we don't add to the count. 
 
 * 'cacaec'
 * 1 + 'acaec'
@@ -161,7 +162,6 @@ For example we have the string 'cacaec'. Since the first letter is a 'c' we add 
 * 1 + 0 + 1 + 0 + 0 + 1 + ''
 * 1 + 0 + 1 + 0 + 0 + 1 + 0
 * 3
-
 
 ### Formalization
 

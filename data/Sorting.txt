@@ -1,20 +1,28 @@
 ## Introduction
 
-Sorting is arranging an array of n elements in either increasing or decreasing order by some property. It is very useful in computer science for efficiency in other algorithms that usually require a search.
+Sorting is arranging an array of N elements in either increasing or decreasing order by some properties. It is very useful in computer science for efficiency in other algorithms that usually require a search.
 
-A stable sort is a sort that can preserve sorting of other properties. For example if we have 
+A stable sort is a sort that can preserve sorting of other properties. For example, if we have:
 
 (3,G), (1,G), (3, A), (6 K), (1,B) 
 
 and we want to sort by the first property in increasing order, we will have: 
 
-(1, G) (1,B) (3,G), (3,A) (6 K). 
+(1, G) (1,B) (3,G), (3,A), (6 K)
 
-If we sort again by the second property we have (1,B) (3, A) (1, G) (3, G) (6,K) then the sort is stable as the first sort is preserved. However, if we had (1,B) (3, A) (3, G) (1, G) (6, K), then the sort would be unstable. 
+If we sort again by the second property we have:
+
+(1,B) (3, A) (1, G) (3, G), (6,K) 
+
+then the sort is stable as the first sort is preserved. However, if we sorted differently by the second property and got:
+
+(1,B) (3, A) (3, G) (1, G) (6, K)
+ 
+then the sort would be unstable. 
 
 ##Slow Sorts
 
-Slow sorts are sorts that have the runtime of O(n^^2^^). Although they should almost never be used, it is good to know how to implement a simple sort.
+Slow sorts are sorts that have the runtime of O(n^^2^^). Although they should almost never be used, it is good to understand how to implement them.
 
  Name | Runtime
 -|-
@@ -22,9 +30,10 @@ Slow sorts are sorts that have the runtime of O(n^^2^^). Although they should al
 [[Selection Sort]] | O(n^^2^^)
 [[Insertion Sort]] | O(n^^2^^)
 
-##Fast Sorts
+## Fast Sorts
 
-Fast sorts are sorts that have a runtime of O(nlogn). They are very fast and you will usually use merge sort or quick sort for sorting in the real world. Most language will have their own implementation of a quick sort or merge sort in their standard libraries. 
+Fast sorts are sorts that have a runtime of O(n log n). They are very fast and you will usually use merge sort or quick sort for sorting in the real world. Most language will have their own implementation of a quick sort or merge sort in their standard libraries. 
+
  Name | Runtime
 -|-
 [[Heap Sort]] | O(n log n)
