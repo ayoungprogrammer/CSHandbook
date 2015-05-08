@@ -17,5 +17,5 @@ Spanning tree algorithms are essential in networking to ensure no loops occur wh
 
 ## Exercises
 
-1. Given a weighted graph with n nodes, find the smallest total cost to connect all nodes into 3 separate groups. (A single node can be a group)
+1. Given a weighted graph with N nodes, find the smallest total cost to connect all nodes into 3 separate groups. (A single node can be a group)
 2. Same as 3, but a group must contain at least 3 other nodes.

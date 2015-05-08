@@ -2,7 +2,7 @@
 
 Prerequisites: [[Graph Theory]], [[Depth First Search]]
 
-A topological sort or topological order of a directed graph is an order in which every node will come after its ancestors.
+A topological sort or topological order of a directed graph is an order in which every node comes after its ancestors.
 
 {{topsort.png}}
 
@@ -18,11 +18,11 @@ But (B, A, C, F, D, E, G) is not a topological ordering because D is an ancestor
 
 Topological sort can implemented in O(n) time using DFS for a directed acyclic graph (a digraph with no cycles). How it works:
 
-1. Start with an empty top order
-2. Pick any unmarked node
-3. Get the DFS preordering from that node for unvisited nodes 
-4. Add the DFS to the head of the current order
-5. Mark every node that has been visited
+1. Start with an empty top order.
+2. Pick any unmarked node.
+3. Get the DFS preordering from that node for unvisited nodes.
+4. Add the DFS to the head of the current order.
+5. Mark every node that has been visited.
 
 {{topsort.png}}
 

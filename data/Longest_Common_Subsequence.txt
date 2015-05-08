@@ -1,12 +1,10 @@
 ## Introduction
 
-Prerequisites:  [[Dynamic Programming]]
-
 A subsequence is a subset of the original sequence that is in the same order. For example in the string "abcdefghi", "aeg" is a subsequence but "eaq" is not because it is not in order.
 
 The longest common subsequence between two strings A and B is the longest subsequence in A that is also in B.
 
-For example given A="xyaaaabcdeg", B="bcaaaaefgxy" the longest common subsequence is "aaaaeg"
+For example, given A="xyaaaabcdeg", B="bcaaaaefgxy" the longest common subsequence is "aaaaeg".
 
 [[[[{lang-html}
 xyaaaabcde_g
@@ -17,18 +15,18 @@ If we try to use greedy we will see it doesn't work. For example, if we use try 
 
 ## Solution
 
-Let first write a formal definition of the problem, given two strings A and B each with lengths N and M respectively we want to find the longest common subsequence between them.
+Let first write a formal definition of the problem, given two strings A and B each with lengths N and M respectively, we want to find the longest common subsequence between them.
 
 The base case is very simple: if A or B are empty strings, then trivially, the longest common subsequence is an empty string.
 
-Now suppose that A and B are non empty strings. Let's consider the case that A and B both start with the same letter (A[0] == B[0]). It can be seen that the longest common subsequence must also begin with that letter. Thus the longest common subsequence is A[0] plus the longest common subsequence from A[1..N] and B[1..M]. However, suppose that A and B do not start with the same letter (A[0] != B[0]). Then the LCS of A and B is either the LCS of A[1..N] and B or the LCS of A and B[1..M] and we take the longer of the two. Thus this is our recurrence relation.
+Now suppose that A and B are non empty strings. Let's consider the case that A and B both start with the same letter (A[0] == B[0]). It can be seen that the longest common subsequence must also begin with that letter. Thus the longest common subsequence is A[0] plus the longest common subsequence from A[1..N] and B[1..M]. However, suppose that A and B do not start with the same letter (A[0] != B[0]). Then the LCS of A and B is either the LCS of A[1..N] and B or the LCS of A and B[1..M] and we take the longer of the two. Thus, this is our recurrence relation.
 
 ### Formalization
 
 [[[[
 Let lcs(A, B) be the longest common substring between A and B.
 Let N be the length of A and M be the length of B.
-Let max(A, B) return the string with longer length.
+Let max(A, B) be the string with longer length.
 
 lcs('', A) = ''
 lcs(B, '') = ''

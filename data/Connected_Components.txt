@@ -4,11 +4,13 @@ A connected component is a subgraph where all the vertices in the subgraph conne
 
 Finding the number of distinct connected components can be done using a [[breadth first search|Breadth First Search]] or a [[depth first search|Depth First Search]].
 
+Finding the number the connected components for each node can be done with a simple algorithm.
+
 ## Implementation
 
-1. Set each node's parent to itself
-2. Pick an unused edge in the graph that is from node A to node B, if the parent of A is not the same as parent of B then set all nodes whose parent is B to parents of A
-3. Repeat for all edges
+1. Set each node's parent to itself.
+2. Pick an unused edge in the graph that is from node A to node B, if the parent of A is not the same as parent of B then set all nodes whose parent is B to parents of A.
+3. Repeat for all edges.
 
 ### Example
 
@@ -72,7 +74,7 @@ public static void connectedComponents(int adjMatrix[][]) {
     for (j = 0; j < n; j++) {
       // If the two nodes have an edge.
       if (adjMatrix[i][j] > 0) {
-        // Recursively get parents of each node.
+        // Recursively get root parents of each node.
         int pi = getParent(i, parent);
         int pj = getParent(j, parent);
         // Set parent of one to the other if they are different.

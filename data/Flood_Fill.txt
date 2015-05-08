@@ -2,15 +2,17 @@
 
 **Prerequisites**: [[Depth First Search]], [[Breadth First Search]]
 
-Flood fill is a search that fills a grid from a start point to find the areas connected to the start point. For example the "bucket fill" in Photoshop or MS Paint uses flood fill to fill in the connecting areas with the same colour.
+Flood fill is a search that starts at a point and finds the areas connected to the start point. For example, the "bucket fill" in Photoshop or MS Paint uses flood fill to fill in the connecting areas of the same colour.
 
 Flood fill can be implemented using a BFS or DFS.
 
 {{floodfill.png}}
 
+The above grid shows how flood fill works. The number in each cell represents the number of steps from the starting cell and the black cells are blocked off. We start at the cell marked as 0 and we reach all adjacent cells. 
+
 ## Bucket Fill
 
-Given an n x m matrix and a start point and two colors (src and dst), we want to replace all the cells in the matrix that are connected to the start point with the color src and change to color dst as well as output the number of cells changed.
+Given an N x M matrix and a start point and two colors (src and dst), we want to replace all the cells in the matrix that are connected to the start point with the color src and change to color dst as well as output the number of cells changed.
 
 Example:
 

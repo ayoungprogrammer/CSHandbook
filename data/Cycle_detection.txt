@@ -1,12 +1,14 @@
 ## Introduction
 
-A cycle occurs in a graph when a duplicate node is encountered when traversing a tree using a [[depth first search|Depth First Search]]. In other words, a cycle occurs when you can reach the same node again.
+A cycle occurs in a graph when a duplicate node is encountered when traversing a tree using a [[depth first search|Depth First Search]]. In other words, a cycle occurs when you can reach the same node through a path in a graph.
 
 An undirected graph where the number of edges is greater than or equal to the number of nodes will always have cycles.
 
+{{cycle2.png}}
+
 ## Implementation
 
-We first mark every node as unvisited. We start at each unvisited node and we do a depth first search from that node. We mark each node along the way as temporarily visited and if encounter a temporarily visited node, then we have a cycle. After temporarily visiting the nodes, we mark them as visited. If we reach a visited node again, then we stop since we already checked if that node had a cycle.
+We first mark every node as unvisited. We start at each unvisited node and we do a depth first search from that node. We mark each node along the way as temporarily visited and if we encounter a temporarily visited node, then we have a cycle. After temporarily visiting the nodes, we mark them as visited. If we reach a visited node again, then we stop since we already checked if that node had a cycle.
 
 [[[[
 public static boolean hasCycle(int[][] adjMatrix) {

@@ -1,7 +1,6 @@
 ## Introduction
 
-A greedy algorithm is an algorithm that always selects the optimal next step towards the solution based on some property. Greedy problems are generally straightforward and easy to solve once you determine what property to maximize. However, the most difficult part is proving that greedy is the optimal solution for **all** cases. It is much easier to provide a counter example to a faulty solution than to prove that a solution works for all cases or even to determine if a greedy solution exists.
-
+A greedy algorithm is an algorithm that always selects the optimal next step towards the solution based on some property. Greedy problems are generally straightforward and easy to solve once you determine what property to maximize. However, the most difficult part is proving that greedy is the optimal solution for **all** cases.
 ## Coin Problem
 
 A cashier is given a $20 bill from their customer whose total comes to $14.67. How can the cashier give the change in the least amount of coins? Let's say our currency has denominations 1 cent, 5 cent, 10 cent, 25 cents, $1 and $2. 
@@ -117,6 +116,6 @@ We can minimize the average height difference by sorting men and woman by height
     * Buy 11 x $95 [$15]
     * Sell 11 x $97 [$1082]
 
-3. You are on a road trip that is D km and there are N gas stations along the way and your gas tank has capacity C. Assuming that you start with a full tank, travel 1km/min, use 1L/km and the gas station fill rate is 5L/min, how do you finish in the quickest way?
+3. You are on a road trip that is D km with N gas stations along the way and your gas tank has capacity C. Assuming that you start with a full tank, travel 1km/min, use 1L/km and the gas station fill rate is 5L/min, find the quickest time you can finish the trip in.
 
     For example, if the total distance is 200km apart with tank capacity 80L and with 5 gas stations at 10km, 40km, 50km, 90km, 150km, the minimum time it will take is 224 minutes.

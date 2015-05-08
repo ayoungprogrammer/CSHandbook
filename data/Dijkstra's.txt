@@ -10,7 +10,7 @@ If Dijkstra's is implemented using a priority queue, the run time is O(n log n).
 
 If a negative cycle exists within the graph, then the algorithm breaks as it will repeatedly try to take the negative edges. See the [[Bellman Ford]] algorithm for finding negative cycles in a graph. 
 
-A naive fix for negative cycles would be to offset all edges by the largest negative edge and then subtract it from the resulting total but this does not work. Consider an example where you have the path from A to B. The first path from A->B has a weight of 2 and the second path has weights 1,1,-2. Clearly, the second route has less cost. If we try to make the length positive by adding all costs by 2, we will have the first path of weight 4 and the second path of weights 3,3,0. From the adjusted weights, we determine the first path minimizes total cost which is wrong.
+A naive fix for negative cycles would be to offset all edges by the largest negative edge and then subtract it from the resulting total but this does not work. Consider an example where you have the path from A to B. The first path from A->B has a weight of 2 and the second path has weights 1,1,-2. Clearly, the second route has less cost. If we try to make the length positive by adding all costs by 2, we will have the first path of weight 4 and the second path of weights 3,3,0. From the adjusted weights, the first path minimizes the total cost which is incorrect.
 
 In general, Dijkstra is usually the method for finding the minimum cost between two nodes in any kind of network. For example, Dijkstra can be used in computer networking to find the shortest path between two hosts. It can also be used in flight networking to find the cheapest cost to get from one airport to another airport. 
 
@@ -29,7 +29,7 @@ We first start at the starting node. The distance from the starting node to the 
 
 {{djikstra.png}}
 
-From the starting node we have two nodes we can reach. The top node has a cost of 3 to reach and the bottom node has a cost of 5 to reach. 
+From the starting node, we have two nodes we can reach. The top node has a cost of 3 to reach and the bottom node has a cost of 5 to reach. 
 
 {{djikstra1.png}}
 
@@ -117,6 +117,6 @@ public static int dijkstra(int[][] adjMatrix, int start, int end) {
 
 ## Practice Exercises
 
-1. Extend Dijkstra's to find the exact path from start to end (the order of nodes of the shortest path A->B->C).
-2. Extend Dijkstra's to find the best three minimal costs with unique paths from the start node to the end node.
+1. Extend Dijkstra's to return the order of nodes in the shortest path from start to end (e.g. A→B→C).
+2. Extend Dijkstra's to find the best three shortest unique paths from the start node to the end node.
 3. Prove that Dijkstra's algorithm works.

@@ -17,7 +17,7 @@ So we know that: 1 <= number < 50. Since the number is less than 50, then we kno
 * You guess: 25.
 * I say lower.
 
-So we know that 1≤number<25. Once again we made the problem half as hard again. Note that at every step we will make the problem half as hard. We need to pick the next middle number which is either 12 or 13, but we are indifferent because it will still tell us the most information (unless you get lucky).
+So we know that 1 <= number < 25. Once again, we made the problem half as hard. Note that at every step we will make the problem half as hard. We need to pick the next middle number which is either 12 or 13, but we are indifferent because it will still tell us the most information (unless you get lucky).
 
 * You guess 13.
 * I say higher.
@@ -63,7 +63,7 @@ void binarySearch (int ans, int minVal, int maxVal) {
 
 Suppose we have a sorted array and we want to find if a number X is in the array. We can do this easily by looping through the entire array and searching for the element we want. However, we can do better with binary search. 
 
-Let's say we start with the array [-6, -5, 1, 2, 5, 7, 10, 17, 23, 29] and we are looking for the element 2. We pick the middle element in the array which is 7 and we compare it with 5. Since 2 < 7, and everything in the last half the array is greater than 7, then everything in the last half the array is greater than 2 and there is no point searching there. Thus we have halved the work we need to do. We can do the same thing by picking the middle element of the first half [-6, -5, 1, 2, 5] which is 1. Since 2 > 1 and everything in the first half is less than 1, then everything in the first quarter is less than 1 and there is no point searching there. Thus the element we are looking for must be in the 2nd quarter of the array [2, 5]. 
+Let's say we start with the array [-6, -5, 1, 2, 5, 7, 10, 17, 23, 29] and we are looking for the element 2. We pick the middle element in the array which is 7 and we compare it with 5. Since 2 < 7, and everything in the last half the array is greater than 7, then everything in the last half the array is greater than 2 and there is no point searching there. Thus we have halved the work we need to do. We can do the same thing by picking the middle element of the first half [-6, -5, 1, 2, 5] which is 1. Since 2 > 1 and everything in the first half is less than 1, then everything in the first quarter is less than 1 and there is no point searching there. Thus the element 2 we are looking for should be in the 2nd quarter of the array [2, 5] which it is and we can return that it is found.
 
 [[[[
 public static boolean exists(int[] arr, int x) {
@@ -85,7 +85,7 @@ public static boolean exists(int[] arr, int x) {
 }
 ]]]]
 ## Exercises
-1. Given a sorted array, find the the number of elements between the number A and number B inclusive.
+1. Given a sorted array, find the number of elements between the number A and number B inclusive.
     Example: 1, 2, 4, 6, 8, 10, 16, 20. Given A=5 and B=15, the number of elements between A and B is 3 (6, 8, 10).
 2. Given two sorted arrays, find the number of duplicate elements.
 3. Given two decimal numbers A and B, find A/B without using the division operation or using decimals.

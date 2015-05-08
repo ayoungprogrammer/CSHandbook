@@ -53,4 +53,4 @@ Just for fun, these are some silly sorts that you should never use.
 1. Given two sorted arrays of N numbers, merge the two arrays into an single array of size 2N.
 2. Find the minimum number of swaps to sort an array.
 3. Find the minimum number of adjacent swaps to sort an array.
-4. Let flip(int[] arr, int x) be a function that reverses all elements from arr[0..x]. Devise a function that sorts the array.
+4. Let flip(int[] arr, int x) be a function that reverses all elements from arr[0..x]. Devise an algorithm that sorts the array.

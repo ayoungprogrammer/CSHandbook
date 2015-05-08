@@ -1,11 +1,6 @@
 ## Introduction
 
-Quick Sort is another fast sorting algorithm that uses divide and conquer. It is also known as partition-exchange sort or as Hoare's quicksort (named after the author).
-
-In quick sort an element is selected as a "pivot". The list is then divided into two sublists: a list of elements less than (or equal to) the pivot and a list of elements greater than the pivot. Each sublist is sorted (conquered) and then appended together along with the origin pivot.
-
-In the best case (if the pivot that is chosen is exactly the middle element), then the runtime is O(n log n). However, in the worst case, the runtime for Quick Sort is n^^2^^. Despite its worst case behaviour, quick sort is still popular and in widespread use. The average case behaviour is quite good and there are straightforward methods that can be used to improve the selection of the pivot.
-
+Quick Sort is another fast sorting algorithm that uses divide and conquer. In quick sort, an element is selected as a "pivot". The list is then divided into two sublists: a list of elements less than (or equal to) the pivot and a list of elements greater than the pivot. Each sublist is sorted and then appended together along with the origin pivot.
 
 ## Implementation
 
@@ -23,7 +18,7 @@ quicksort([x]) = [x]
 Recurrence:
 Let pivot be a random element in array
 
-quicksort(array) = quicksort([elements < pivot]) + [pivot] + quicksort([elements >= pivot])
+quicksort(arr) = quicksort(arr[elements < pivot]) + [pivot] + quicksort(arr[elements >= pivot])
 
 Example:
 quicksort([6,1,4,3,5,7,9,2,8,0])
@@ -37,7 +32,7 @@ quicksort([6,1,4,3,5,7,9,2,8,0])
 
 ### Code
 
-We will implement our solution in Java that reflects our formalization in a way that is more inefficient but easier to understand. In our code, we create new arrays to store partitions and merged results but we can actually do this in place without extra memory (left as an exercise).
+We will implement our solution in Java that reflects our formalization in a way that is easier to understand, but more inefficient. In our code, we create new arrays to store partitions and merged results but we can actually do this in place without extra memory (left as an exercise).
 
 [[[[
 // Quick sorts array from [first..last]

@@ -65,7 +65,7 @@ bellmanFord(start,0,0)
 
 ### Implementation
 
-We can rewrite this solution using dynamic programming without recursion.
+We can rewrite this solution using dynamic programming to be more efficient.
 
 [[[[
 class edge {
@@ -138,7 +138,7 @@ public static int BellmanFord(Vector<Vector<edge>> adjList, int startNode,
 ]]]]
 
 ## Exercises
-1. Prove Bellmand-Ford works.
+1. Prove Bellman-Ford works.
 2. Arbitrage occurs when you can exchange currencies for another and make a profit. For example given a currency exchange table:
   
   | USD | CAD | EURO

@@ -15,27 +15,27 @@ To find a dynamic programming solution to a problem, first start with a recursiv
 
 ## Fibonacci Sequence
 
-The Fibonacci sequence is determined by f(n) = f(n-1)+f(n-2) where f(0) = 1 and f(1) = 1. 
+The Fibonacci sequence is determined by fib(n) = fib(n-1) + fib(n-2) where fib(0) = 1 and fib(1) = 1. 
 
-If we calculate f(5) we have:
+If we calculate fib(5) we have:
 [[[[
-f(5) 
-= f(4) + f(3) 
-= f(3) + f(2) + f(2) + f(1) 
-= f(2) + f(1) + f(1) + f(0) + f(1) + f(0) + f(1) 
-= f(1) + f(0) + f(1) + f(1) + f(0) + f(1) + f(0) + f(1) 
+fib(5) 
+= fib(4) + fib(3) 
+= fib(3) + fib(2) + fib(2) + fib(1) 
+= fib(2) + fib(1) + fib(1) + fib(0) + fib(1) + fib(0) + fib(1) 
+= fib(1) + fib(0) + fib(1) + fib(1) + fib(0) + fib(1) + fib(0) + fib(1) 
 = 1 + 1 + 1 + 1 + 1 + 1 + 1
 = 8
 ]]]]
 
-However we are computing multiple values more than once. When we compute f(5) we need to compute f(4) and f(3) but f(3) is already computed when we compute f(4) and thus we have to recompute it again. We can avoid this redundancy by "building up". We can calculate f(2), then f(3) then f(4) and finally f(5) and we won't have duplicate calculations. 
+However we are computing multiple values more than once. When we compute fib(5) we need to compute fib(4) and fib(3) but fib(3) is already computed when we compute fib(4) and thus we have to recompute it again. We can avoid this redundancy by "building up". We can calculate fib(2), then fib(3) then fib(4) and finally fib(5) and we won't have duplicate calculations. 
 [[[[
-f(0) = 1
-f(1) = 1
-f(2) = f(1) + f(0) = 2
-f(3) = f(2) + f(1) = 3
-f(4) = f(3) + f(2) = 5
-f(5) = f(4) + f(3) = 8
+fib(0) = 1
+fib(1) = 1
+fib(2) = fib(1) + fib(0) = 2
+fib(3) = fib(2) + fib(1) = 3
+fib(4) = fib(3) + fib(2) = 5
+fib(5) = fib(4) + fib(3) = 8
 ]]]]
 
 ### Formalization
@@ -43,7 +43,7 @@ f(5) = f(4) + f(3) = 8
 Formalization using recursion:
 
 [[[[{lang-html}
-Let f(n) be the nth Fibonacci number
+Let fib(n) be the nth Fibonacci number
 
 Base case:
 fib(0) = 1, fib(1) = 1
@@ -52,11 +52,11 @@ Subproblem:
 fib(n) = fib(n - 1) + fib(n - 2)
 
 Example:
-f(5) 
-= f(4) + f(3) 
-= f(3) + f(2) + f(2) + f(1) 
-= f(2) + f(1) + f(1) + f(0) + f(1) + f(0) + f(1) 
-= f(1) + f(0) + f(1) + f(1) + f(0) + f(1) + f(0) + f(1) 
+fib(5) 
+= fib(4) + fib(3) 
+= fib(3) + fib(2) + fib(2) + fib(1) 
+= fib(2) + fib(1) + fib(1) + fib(0) + fib(1) + fib(0) + fib(1) 
+= fib(1) + fib(0) + fib(1) + fib(1) + fib(0) + fib(1) + fib(0) + fib(1) 
 = 1 + 1 + 1 + 1 + 1 + 1 + 1
 = 8
 ]]]]
@@ -92,7 +92,7 @@ fib[10] = 89
 
 Implementation for recursion:
 [[[[
-public int fib(int n){
+public int fib(int n) {
   if (n == 0 || n == 1) {
     return 1;
   }
@@ -103,10 +103,10 @@ public int fib(int n){
 Implementation  for dynamic programming:
 [[[[
 public int fib(int n) {
-  int fibArr[] = new int[n];
+  int fibArr[] = new int[n+1];
   fibArr[0] = 1;
   fibArr[1] = 1;
-  for (int x = 2; x < n; x++) {
+  for (int x = 2; x <= n; x++) {
     fibArr[x] = fibArr[x - 1] + fibArr[x - 2];
   }
   return fibArr[n];
@@ -115,15 +115,15 @@ public int fib(int n) {
 
 ## [[Coin Problem]]
 
-Let's say that you wanted to make change for $51 using the smallest amount of bills ($1, $2, $5, $10, $20). We can use a greedy approach by always taking the highest bill that can be subtracted to find the smallest amount of change. 51 - 20 = 31 - 20 = 11 - 10 = 1. So the smallest amount of change would be comprised of 2 x $20 + 1 x $10 + 1 for a total of 5 bills. This solution seems very easy to implement, but what if the bills were not so nice?
+Let's say that you wanted to make change for $51 using the smallest amount of bills ($1, $2, $5, $10, $20). We can use a greedy approach by always taking the highest bill that can be subtracted to find the smallest amount of change. 51 - 20 = 31 - 20 = 11 - 10 = 1. So the smallest amount of change would be comprised of 2 x $20 + 1 x $10 + 1 x $! for a total of 5 bills. This solution seems very easy to implement, but what if the bills were not so nice?
 
-Imagine that an alien currency was in denominations of $3, $5, $7 and $11. What would be the smallest amount of bills to make change for $13? Note that a greedy approach does not work for this alien currency. For example: 13 - 11 = 2. It is impossible to make change using the greedy approach. Note that we can make change with 2 x $5 + 1 x $3 = $13.
+Imagine that an alien currency with denominations of $3, $5, $7 and $11. What would be the smallest amount of bills to make change for $13? Note that a greedy approach does not work for this alien currency. For example: 13 - 11 = 2. It is impossible to make change using the greedy approach. Note that we can make change with 2 x $5 + 1 x $3 = $13.
 
 Let's define the problem more formally: Given a list of bills each with a positive denominations, find the lowest amount of bills required to make C dollars or return impossible if it cannot be done.
 
 The base case for 0 dollars is very simple. There are 0 bills to make 0 dollars.
 
-Lets try to simply this problem. Assume we only have one bill worth d dollars. If we have C dollars and we want to use the bill, then we will have C-d dollars left. So the minimum bills to make C dollars is the minimum number of bills to make (C - d) bills plus the 1 for the bill we used. For example, we want to make 10 dollars and we only have 2 dollar bills. If we use a 2 dollar bill, then the minimum bills required to make 10 dollars is the minimum number of bills required to make 8 dollars plus that 2 dollar bill. To find the minimum number of bills required to make 8 dollars, is the same problem as finding the minimum number of bills required to make 10 dollars. As you can see it is the same as before and it is a recursive function!
+Lets try to simply this problem. Assume we only have one bill worth d dollars. If we have C dollars and we want to use the bill, then we will have C-d dollars left. So the minimum bills to make C dollars is the minimum number of bills to make (C - d) bills plus the 1 for the bill we used. For example, we want to make 10 dollars and we only have 2 dollar bills. If we use a 2 dollar bill, then the minimum bills required to make 10 dollars is the minimum number of bills required to make 8 dollars plus that 2 dollar bill. Finding the minimum number of bills required to make 8 dollars, is the same problem as finding the minimum number of bills required to make 10 dollars. Thus we are solving a reduced version of the same problem and this is our recurrence relation.
 
 Formalization for recursion:
 [[[[
@@ -151,7 +151,7 @@ bills(10)
 = 5
 ]]]]
 
-We could implement this using dynamic programming but it will not give us much benefit since the recursion has no recalculations.
+We could implement this using dynamic programming, but it will not give us much benefit since the recursion has no recalculations.
 
 Formalization for dynamic programming:
 [[[[
@@ -180,14 +180,14 @@ bills[9] = impossible
 bills[10] = 5
 ]]]]
 
-Now let's consider the problem with multiple bills of denominations d1, d2 .... dn and we want to make C dollars. If we use a d1 bill, then we will have C-d1 dollars left and similarly if we use a d2 bill then we will have C-d2 dollars left. More generally, if we use a dn bill, then we will have C-dn dollars left. If we want to find the minimum bills to make C dollars we should try to use every bill and see which requires the minimum number of bills. So the minimum bills to make C dollars is the minimum of C - dn dollars plus one more dn bill for all denominations. However, finding the minimum number of bills to make C-dn dollars is the same problem as finding the number of C dollars! Thus we found the subproblem and a recursive formula.
+Now let's consider the problem with multiple bills of denominations d1, d2 .... dn and we want to make C dollars. If we use a d1 bill, then we will have C-d1 dollars left and similarly if we use a d2 bill then we will have C-d2 dollars left. More generally, if we use a dn bill, then we will have C-dn dollars left. If we want to find the minimum bills to make C dollars we should try to use every bill and see which requires the minimum number of bills. So the minimum number of bills to make C dollars is the minimum of C - dn dollars plus one more dn bill for all denominations. However, finding the minimum number of bills to make C-dn dollars is the same problem as finding the number of C dollars! Thus we found the subproblem and a recursive formula.
 
-For example, if we have $7 and we have bills $3,$4, and $5, the minimum number of bills to make $7 is the minimum of the minimum number of bills to make $4 plus one more $3 bill, minimum number of bills to make $3 plus one more $4 or the minimum number of bills to make $2 plus one more $5 bill. 
+For example, if we have $7 and we have bills $3, $4, and $5, the minimum number of bills to make $7 is the minimum of the minimum number of bills to make $4 plus one more $3 bill, minimum number of bills to make $3 plus one more $4 or the minimum number of bills to make $2 plus one more $5 bill. 
 
 Formalization for recursion:
 [[[[
-Let denom be a list of denominations
-Let bills(C) be the minimum number of bills from denominations to make C dollars
+Let denom[] be a list of denominations
+Let bills(C) be the minimum number of bills to make C dollars from denominations denom[]
 
 Base Cases:
 bills(C) = impossible if C <= 0
@@ -217,13 +217,13 @@ bill(7)
 = 2
 ]]]]
 
-However note, that we are recomputing multiple things. For example we are recomputing bill(0) multiple times and bill(-1) multiple times. If instead we worked the solution up instead of down, we can find bill(C) more efficiently. We can do this by computing bill(c) as c goes from 0 to C. Eg. we compute bill(0) then bill(1) then bill(2) .... until bill(C).
+However, note that we are recomputing partial solutions. For example, we are recomputing bill(0) multiple times and bill(-1) multiple times. Instead, if we built up the solution from bill(0), we could find bill(C) more efficiently. We can do this by computing bill(c) as c goes from 0 to C. E.g. we compute bill(0) then bill(1) then bill(2) .... until bill(C).
 
 Putting it all together:
 
 [[[[{lang-html}
-Let bills[C] be the smallest amount of bills to make the amount C, or impossible if it is not possible
-Let denom be an array of denominations
+Let denom[] be an array of denominations
+Let bills[C] be the smallest amount of bills to make the amount C using denominations denom[], or impossible if it is not possible
 
 Base case:
 bills[0] = 0
@@ -248,6 +248,53 @@ bills[6] = 2 (bills[3]+1)
 bills[7] = 2 (bills[3]+1 or bills[4]+1)
 ]]]]
 
+## Number of Paths
+
+{{recursion_grid.png}}
+
+We first examined the number of paths problem in [[advanced recursion|Advanced Recursion]]. However, now that we know how to use dynamic programming, we can see that the recursive solution was very inefficient because we were recomputing values many times. 
+
+[[[[{lang-html}
+Let path(x,y) be the number of ways to get to the cell at x and y
+
+Base case:
+paths(1,y) = 1
+paths(x,1) = 1
+
+Recurrence:
+paths(x,y) = paths(x-1,y) + paths(x,y-1)
+
+Example:
+paths(3,5)
+= paths(2,5) + paths(3,4)
+= paths(1,5) + paths(2,4) + paths(2,4) + paths(3,3)
+= 1 + paths(1,4) + paths(2,3) + paths(1,4) + paths(2,3) + paths(2,3) + paths(3,2)
+= 1 + 1 + paths(1,3) + paths(2,2) + 1 + paths(1,3) + paths(2,2) + paths(1,3) + paths(2,2) + paths(2,2) + paths(3,1)
+= 1 + 1 + 1 + paths(1,2) + paths(2,1) + 1 + 1 + path(1,2) + paths(2,1) + 1 + paths(1,2) + paths(2,1) + ....
+= 15
+]]]]
+
+Instead of recomputing multiple values, we can build our solution upwards starting from (1,1).
+
+[[[[
+Let paths[x][y] be the number of ways to get from (1,1) to (x,y). 
+
+paths[1][1] = 1
+
+for x from 1 to N
+  for y from 1 to M
+    paths[x][y] = paths[x-1][y] + paths[x][y-1]
+
+Example:
+N = 3
+M = 5
+
+1 1 1 1  1
+1 2 3 4  5
+1 3 6 10 15
+]]]]
+
+
 ## [[Knapsack Problem]]
 
 Imagine you are a robber and you have found a large stash of valuables. Each valuable has a value and a weight. You can only hold 10kg in your bag and you want to find the highest valued haul you can get away with. 
@@ -264,11 +311,11 @@ Let's try a greedy approach: we will take the items with the highest value to we
 * Jewelry: $95/kg
 * Rare painting: $100/kg
 
-The greedy approach will choose the rare painting and the necklace for a total of $910. However if we take the jewelry and the stack of cash we will get $935 and still fit it into the bag. How can we solve this problem? The answer is dynamic programming. 
+The greedy approach will choose the rare painting and the necklace for a total of $910. However, if we take the jewelry and the stack of cash, we will get $935 and it will still fit it into the bag. We solve this problem with dynamic programming. 
 
 Let's first write a more formal definition of the problem:
 
-Given unlimited quantities of N items, each associated with a positive weight and value, and a maximum total weight W that we can hold, what is the maximum value we can hold. 
+Given unlimited quantities of N items, each associated with a positive weight and value, and a maximum total weight W that we can hold, what is the maximum value we can hold?
 
 Let's write a more specific version of the problem: we want to find the maximum value that a bag with weight capacity W can carry out of N items of positive values and weights.
 
@@ -276,7 +323,7 @@ The base case for this is trivial. With zero weight, the maximum value you can h
 
 Let's try simplifying the problem by using only one item with weight w1 and value v1 and a knapsack with maximum weight capacity W. Suppose we want to add the item into the knapsack then we have (W-w1) capacity remaining and the item. So the maximum value of knapsack with capacity W is the maximum value of (W-w1) plus v1 the value of the item we have. The maximum value of (W-w1) is the same problem as finding the maximum value of W. As we can see, its the same subproblem as before and we have found a recursive relation. 
 
-For example if we had an item with value $5 and weight 4kg and a knapsack with capacity 9kg. The maximum value that knapsack of 8kg can contain is the maximum value of a knapsack of 5kg plus $5 for the item we put in the bag and so forth.
+For example, if we had an item with value $5 and weight 4kg and a knapsack with capacity 9kg. The maximum value that a knapsack of 8kg can contain is the maximum value of a knapsack of 5kg plus $5 for the item we put in the bag and so forth.
 
 [[[[
 Let knapsack(W) be the maximum value of items that can fit into maximum capacity of W.
@@ -329,11 +376,18 @@ knapsack[9] = 10    ^
 
 Now let's go back to the original problem. We have N items each of positive weight and value and we want to find the maximum value to be put into a knapsack of capacity W. 
 
-If no items are left to fit in our remaining capacity, then the maximum value must be $0. This is our base case.
+If no items left fit in our remaining capacity, then the maximum value must be $0. This is our base case.
 
 If we use an item, we will have capacity W-wi and the added value will be vi. We want to try all items to place into the knapsack so we try every single item and find the maximum value out of the items. So the maximum value of capacity W is the maximum value of W-wi plus the added value of vi for all items. To find the maximum value of capacity W-wi we can do the exact same thing by trying to place each item and finding the maximum value out of the items.
 
-For example we have a knapsack of capacity 10kg and necklaces worth $30 with weight 3kg, paintings worth $50 with weight 9kg and silver bars worth $60 with weight 7kg. If we choose a necklace, we will have 7kg capacity left with the added value of $30. If we choose a painting, we will have 1kg capacity left and added value of $50. If we choose a silver bar, we will have 3kg capacity left and added value of $60. With the remaining capacity, we can choose another item and do the exact same thing. 
+Using the initial example, if we have a knapsack of capacity 10kg and the following items:
+
+* Necklace: $10, 1kg
+* Stack of cash: $270, 3kg
+* Jewelry: $665, 7kg
+* Rare painting: $900, 9kg
+
+If we choose a necklace, we will have 7kg capacity left with the added value of $10. If we choose a painting, we will have 1kg capacity left and added value of $900. If we choose jewelry, we will have 3kg capacity left and added value of $665. With the remaining capacity, we can choose another item and do the exact same thing. 
 
 ### Formalization
 
@@ -374,52 +428,6 @@ knapsack[7] = 665 [ max(knapsack[6] + 10, knapsack[4] + 270, knapsack[0] + 665) 
 knapsack[8] = 675 [ max(knapsack[7] + 10, knapsack[5] + 270, knapsack[1] + 665) ]
 knapsack[9] = 900 [ max(knapsack[8] + 10, knapsack[6] + 270, knapsack[2] + 665, knapsack[0] + 900) ]
 knapsack[10] = 935 [ max(knapsack[9] + 10, knapsack[7] + 270, knapsack[7] + 665, knapsack[1] + 900) ]
-]]]]
-
-## Number of Paths
-
-{{recursion_grid.png}}
-
-We first examined the number of paths problem in [[advanced recursion|Advanced Recursion]]. However, now that we know how to use dynamic programming, we can see that the recursive solution was very inefficient because we were recomputing values many times. 
-
-[[[[{lang-html}
-Let path(x,y) be the number of ways to get to the cell at x and y
-
-Base case:
-paths(1,y) = 1
-paths(x,1) = 1
-
-Recurrence:
-paths(x,y) = paths(x-1,y) + paths(x,y-1)
-
-Example:
-paths(3,5)
-= paths(2,5) + paths(3,4)
-= paths(1,5) + paths(2,4) + paths(2,4) + paths(3,3)
-= 1 + paths(1,4) + paths(2,3) + paths(1,4) + paths(2,3) + paths(2,3) + paths(3,2)
-= 1 + 1 + paths(1,3) + paths(2,2) + 1 + paths(1,3) + paths(2,2) + paths(1,3) + paths(2,2) + paths(2,2) + paths(3,1)
-= 1 + 1 + 1 + paths(1,2) + paths(2,1) + 1 + 1 + path(1,2) + paths(2,1) + 1 + paths(1,2) + paths(2,1) + ....
-= 15
-]]]]
-
-Instead of recomputing multiple values, we can build our solution upwards starting from (1,1).
-
-[[[[
-Let paths[x][y] be the number of ways to get from (1,1) to (x,y). 
-
-paths[1][1] = 1
-
-for x from 1 to N
-  for y from 1 to M
-    paths[x][y] = paths[x-1][y] + paths[x][y-1]
-
-Example:
-N = 3
-M = 5
-
-1 1 1 1  1
-1 2 3 4  5
-1 3 6 10 15
 ]]]]
 
 ## Exercises

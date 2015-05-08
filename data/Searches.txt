@@ -1,6 +1,6 @@
 ## Introduction
 
-Searches are used to find solutions to problems and there many ways to search for a solution. Here are some generic searches that can be applied to many different problems. 
+Searches are used to find solutions to problems and there are many ways to search for a solution. Here are some generic searches that can be applied to many different problems. 
 
 ## [[Binary Search]]
 

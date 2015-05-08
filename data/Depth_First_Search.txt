@@ -2,11 +2,11 @@
 
 **Prerequisites**: [[Recursion]], [[Stack]]
 
-A depth first search on a tree is a traversal of a tree that goes as far down as a branch as possible and then back.
+A depth first search (DFS) is a search that goes as far as possible before backtracking. The search requires a stack but DFS is usually implemented with recursion which uses the system stack. So most of the time you do not need an explicit stack.
 
-A DFS can also be used on a graph to transverse it by ignoring nodes that have already been visited.
-
-A DFS requires a stack but DFS is usually implemented with recursion which uses the system stack. So most of the time you do not need an explicit stack.
+1. Push the root into the stack.
+2. Pop the first element from the stack and push all of its non-visited neighbours to the stack.
+3. Repeat until the stack is empty.
 
 {{dfs.png}}
 
@@ -22,11 +22,11 @@ public class Tree {
 }
 ]]]]
 
-### Binary Tree Transversal
+### Binary Tree Traversal
 
 {{dfs.png}}
 
-Implementation for outputting a binary tree in order from left to right using DFS
+Implementation for outputting a binary tree in order from left to right using DFS:
 
 [[[[
 public static void DFS(Tree cur) {
@@ -43,7 +43,7 @@ public static void DFS(Tree cur) {
 
 {{dfs-preorder.png}}
 
-Implementation for outputting a binary tree in DFS pre order
+Implementation for outputting a binary tree in DFS pre order:
 
 [[[[
 public static void DFS(Tree cur) {
@@ -60,7 +60,7 @@ public static void DFS(Tree cur) {
 
 {{dfs-postorder.png}}
 
-Implementation for outputting a binary tree in DFS post order
+Implementation for outputting a binary tree in DFS postorder:
 
 [[[[
 public static void DFS(Tree cur) {
@@ -73,9 +73,9 @@ public static void DFS(Tree cur) {
 }
 ]]]]
 
-### Graph Transversal
+### Graph Traversal
 
-This is a DFS implementation for traversing a bidirectional graph with positive weights.
+This is a DFS implementation for traversing a bidirectional graph with positive weights:
 
 [[[[
 public static void DFS_graph(int[][] adjMatrix, int cur, boolean[] visited) {
@@ -95,6 +95,6 @@ public static void DFS_graph(int[][] adjMatrix, int cur, boolean[] visited) {
 
 ## Exercises
 
-1. Given a binary tree, find the height of it (the longest path from root to leaf).
-2. Given a graph and a node, determine if a path exists to that node.
-3. Given a node and a binary tree, find the next node for post order, pre order and normal order.
+1. Given a binary tree, find the its height (the longest path from the root to a leaf)
+2. Given a graph and two nodes X and Y, determine if a path exists between X and Y.
+3. Given a node and a binary tree, find the next node in post order, pre order and normal order.

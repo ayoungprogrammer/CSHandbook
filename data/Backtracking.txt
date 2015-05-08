@@ -1,8 +1,8 @@
 ## Introduction
 
-Backtracking is a search that find all possible solutions by enumerating on partial solutions. Backtracking can be done using [[DFS|Depth First Search]] or [[BFS|Breadth First Search]]. Generally, DFS will be better than BFS because backtracking is used to enumerate many, many solutions. Since BFS requires storing each "level" of solutions and DFS requires storing each "height" of the solution.
+Backtracking is a search that find all possible solutions by enumerating on partial solutions. Backtracking can be done using [[DFS|Depth First Search]] or [[BFS|Breadth First Search]]. Generally, DFS will be better than BFS because backtracking is used to enumerate many, many solutions. Since BFS requires storing each "level" of solutions and DFS requires storing each "height" of the solution, DFS will have a smaller memory footprint. In most backtracking problems, the "levels" of the solutions will be very large but the "height" will be small. Thus, DFS will be the preferred solution for most backtracking problems.
 
-Backtracking is similar to recursion, but instead of generating all the solutions, we will generate each solution one by one. In this way, we only need to store the current solution in memory whereas in normal recursion we need to store all the solutions into memory.
+Backtracking is similar to recursion, but instead of generating all the solutions, we will generate each solution one by one. When backtracking, we only need to store the current solution in memory, whereas with normal recursion we need to store all the solutions into memory.
 
 Since backtracking requires enumerating through all solutions, it is usually slow with runtimes such as O(n!) or O(2^^n^^). 
 
@@ -37,7 +37,7 @@ backtrack( empty_solution)
 
 Given a set of numbers S of length N, output all subsets of S.
 
-For example S=(1,2,3,4). The subsets encodings of (1,2,3,4):
+For example S=(1,2,3,4). The subsets of (1,2,3,4):
 
 * ()
 * (1), (2), (3), (4)
@@ -45,7 +45,7 @@ For example S=(1,2,3,4). The subsets encodings of (1,2,3,4):
 * (1,2,3), (1,2,4), (1,3,4), (2,3,4)
 * (1,2,3,4)
 
-We want to be able to enumerate all the subsets of S so we need to find a way to encode a subset of an array. We can use a binary number of length N to encode a subset of an array of length N. For example a 1 represents we use a number in the set and a 0 means we don't use a number in the set.
+We want to be able to enumerate all the subsets of S so we need to find a way to encode a subset of an array. We can use a binary number of length N to encode a subset of an array of length N. A one at position x will indicate that the xth number is in the set. For example, 1001 means the first and fourth is in the set so we have (1,4).
 
 So above:
 
@@ -66,19 +66,19 @@ So above:
 * (2,3,4) = 0111
 * (1,2,3,4) = 1111
 
-At each position we either take or don't take the number in the set and we can do this for each number. We can enumerate through all these encoding by first starting with 0 or 1 and appending more 0's or 1's.
+At each position, we either use or don't use the number in the set. We can enumerate through all possible encodings by starting with 0 or 1 and appending more 0's or 1's.
 
 ### Recursive Method
 
-Here is the way we would do this problem with recursion:
+Here is how we would solve this problem with recursion:
 [[[[{lang-html}
 Start with []
 Add 1 and 0 to the right of each binary number in the array
 Repeat until N
 [0,1]
-[00,01,10,11]
-[000,001,010,011,100,101,110,111]
-[0000,0001,0010,0011,0100,0101,0110,0111,1000,1001,1010,1011,1100,1101,1110,1111]
+[00, 01, 10, 11]
+[000, 001, 010, 011, 100, 101, 110, 111]
+[0000, 0001, 0010, 0011, 0100, 0101, 0110, 0111, 1000, 1001, 1010, 1011, 1100, 1101, 1110, 1111]
 Let S be an array of N integers
 Let subsets(set, n) return an array of subsets of S from 1 to n
  
@@ -91,14 +91,14 @@ subsets(set,n) = subsets([sub+0 for sub in set] + [sub+1 for sub in set], n)
 Example:
 
 subsets([],4)
-subsets([0,1],3)
-subsets([00,01,10,11],2)
-subsets([000,001,010,011,100,101,110,111],1)
-subsets([0000,0001,0010,0011,0100,0101,0110,0111,1000,1001,1010,1011,1100,1101,1110,1111],0)
+subsets([0, 1], 3)
+subsets([00, 01, 10, 11], 2)
+subsets([000, 001, 010, 011, 100, 101, 110, 111], 1)
+subsets([0000, 0001, 0010, 0011, 0100, 0101, 0110, 0111, 1000, 1001, 1010, 1011, 1100, 1101, 1110, 1111], 0)
 =
-[0000,0001,0010,0011,0100,0101,0110,0111,1000,1001,1010,1011,1100,1101,1110,1111]
+[0000, 0001, 0010, 0011, 0100, 0101, 0110, 0111, 1000, 1001, 1010, 1011, 1100, 1101, 1110, 1111]
 ]]]]
-Here is the way we would do this problem with backtracking, however it takes a lot of memory to store **ALL** the solutions. Instead of building all the solutions, we can build each solution one by one and only store one solution at a time.
+However recursion uses a lot of memory to store **all** the solutions. Instead of building all the solutions, we can build each solution one by one and only store one solution at a time.
 
 {{enumerate-sets.png}}
 
@@ -153,8 +153,7 @@ subset(0,'1111')
 
 ### Implementation
 
-We can implement subsets in code using recursion. Note that we only store one solution as the array use[] and we keep changing it as we iterate through partial solutions.
-
+We can implement backtracking with recursion, but we pass in the same array instead of creating new ones. We only store one set at a time in the use[] array.
 [[[[
 void subsets(int arr[], boolean use[], int i) {
   int n = arr.length;
@@ -176,7 +175,7 @@ subsets([1, 2, 3, 4], [false, false, false], 0);
 
 ## [[N Queen Problem]]
 
-Find the number of ways to place N queens on a NxN board without any of them attacking each other. Queens attack each other by being along the same row, column or diagonal.
+Find the number of ways to place N queens on a NxN board without any of them attacking each other. Queens can attack anything along its row, column or diagonal.
 
 {{nqueen.jpg}}
 
@@ -186,7 +185,7 @@ First we need to be able to encode a solution. There must be only one queen in e
 
 If we guarantee that all rows are unique and we have all columns filled, then we can guarantee that all the columns are unique as well.
 
-To encode a diagonal we can use a clever equation to represent the diagonal. We can notice that every positive diagonal has the same value with row+col.
+To encode a diagonal we can use a clever equation to represent the diagonal. Notice that every positive diagonal has the same value for row+col.
 
 d1 = row+column
 
@@ -194,9 +193,9 @@ N=6:
 
 {{nqueen1.png}}
 
-Every square with the same d1 is in the same diagonal ( / ). For example on a 6x6 board: (0,2), (1,1), (2,0) all have d1 = 2 and are all along the same diagonal.
+Every square with the same d1 is in the same diagonal ( / ). For example, on a 6x6 board: (0,2), (1,1), (2,0) all have d1 = 2 and are all along the same diagonal.
 
-We can also notice that every negative diagonal has the same value of (N-row)+column. The second diagonal can also be found using another equation:
+We can also see that every negative diagonal has the same value for (N-row)+column. The second diagonal can also be found using the following equation:
 
 d2 = (N-row-1)+column
 
@@ -204,7 +203,7 @@ N=6:
 
 {{nqueen2.png}}
 
-Everything with the same d2 will be on the same diagonal. For example on a 6x6 board (0,0),(1,1),(2,2) have d2 = 5 and are all along the same diagonal. 
+Everything with the same d2 will be on the same diagonal. For example, on a 6x6 board, (0,0),(1,1),(2,2) have d2 = 5 and are all along the same diagonal. 
 
 Now that we get can encode rows, columns, and diagonals, we can use it to make checking solutions more easy. We can keep sets that track with rows/columns/diagonals are currently filled and check our solution to make sure we do not have anything in the same row/column/diagonal.
  
@@ -311,6 +310,7 @@ public int nqueen(int col, boolean row[], boolean d1[], boolean d2[]) {
   int sum = 0;
 
   for (int r = 0; r < n; r++) {
+    // Check queen coordinates are valid.
     if (!row[r] && !d1[r + col] && !d2[n - 1 - r + col]) {
       // Mark rows and diagonals as filled.
       row[r] = true;

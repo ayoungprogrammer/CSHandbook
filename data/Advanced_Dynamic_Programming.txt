@@ -6,6 +6,7 @@ Dynamic programming is very powerful and more efficient than recursion for probl
 
 ## [[Longest Common Subsequence]]
 
+((((Longest Common Subsequence.Introduction))))
 ((((Longest Common Subsequence.Solution))))
 
 ## [[Zero-One Knapsack Problem]]
@@ -16,9 +17,9 @@ Given an unlimited amount of N items with positive weights and values, we want t
 
 Let's change the problem slightly such that there is only one of each object. The problem becomes slightly more difficult because we need to take into account whether or not we have used an object before. 
 
-Given only one copy of N items with positive weights and values, we want to find the maximum value we can hold with a capacity W.
+Given only one copy each of N items with positive weights and values, we want to find the maximum value we can hold with a capacity W.
 
-The base case is simple, if there are no more items or total capacity is less than or equal to 0 then the maximum value is 0. Suppose we have items remaining and total capacity is positive. We can either take or leave the first item and we want the maximum value of both actions. If we take the item, the value will be the value of the item plus the maximum value of the rest of the items that fit in the rest of the space in the knapsack minus the space of the item we took. If we leave the item, the value will be the maximum value of the rest of the items that fit in the knapsack. Thus we have our recurrence relation.
+The base case is simple, if there are no more items or the total capacity is less than or equal to 0, then the maximum value is 0. Suppose we have items remaining and total capacity is positive. We can either take or leave the first item and we want the maximum value of both actions. If we take the item, the value will be the value of the item plus the maximum value of the rest of the items that fit in the rest of the space in the knapsack minus the space of the item we took. If we leave the item, the value will be the maximum value of the rest of the items that fit in the knapsack. Thus we have our recurrence relation.
 
 [[[[
 Let knapsack(items[], W) be the maximum value of items that fit in a maximum capacity of W.

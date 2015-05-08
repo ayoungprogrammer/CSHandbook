@@ -2,7 +2,7 @@
 
 *Next*: [[Advanced Graph Theory]]
 
-Graphs are a set of objects where some pairs of objects  called **nodes** or **verticies** are usually connected by links called **edges**. The nodes here can be seen numbered from 1 to 6. There are edges connecting these various nodes.
+Graphs are a set of objects where some pairs of objects  called **nodes** or **verticies** are connected by links called **edges**. The nodes here can be seen numbered from 1 to 6. There are edges connecting these various nodes.
 
 {{graph.png}}
 

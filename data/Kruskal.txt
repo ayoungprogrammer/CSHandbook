@@ -75,8 +75,7 @@ public static int getParent(int parents[], int x) {
 
 public static int Kruskal(Vector<Vector<edge>> adjList) {
   int n = adjList.size();
-  // Parents of each node. Nodes with the same parents are in the same
-  // component.
+  // Array of parents of each node. Nodes with the same parent are in the same component.
   int parents[] = new int[n];
 
   // Set parents of each node to itself.

@@ -1,6 +1,6 @@
 ## Introduction
 
-An adjacency matrix stores a graph of N nodes with a two dimensional NxN array. We let adjMatrix[i][j] represents the weight between the node i and node j. If we a sparse graph which has many nodes but few edges, the memory storage will be very inefficient and it would be better to use an [[adjacency list|Adjacency List]]. However, if the graph is very dense, or there are few nodes, then an adjacency matrix is quick and easy to use. Checking if an edge exists between two nodes is O(1).
+An adjacency matrix stores a graph of N nodes with a two dimensional NxN array. We let adjMatrix[i][j] represents the weight between the node i and node j. If we have a sparse graph which has many nodes but few edges, the memory storage will be very inefficient and it would be better to use an [[adjacency list|Adjacency List]]. However, if the graph is very dense, or there are few nodes, then an adjacency matrix is quick and easy to use. Checking if an edge exists between two nodes is O(1).
 
 Example:
 
