@@ -17,9 +17,9 @@ Time Complexity  | O(1) | O(1) | O(1) | O(n) | O(n)
 
 ### [[Linked List]]
 
-| Operation | Get | Push | Delete  | Insert
+| Operation | Get | Push | Pop | Delete At | Insert At
 |-----------|---------|------------|---------
-| Time Complexity | O(n) | O(1) | O(1) | O(1)
+| Time Complexity | O(n) | O(1) | O(1) | O(1) | O(1)
 
 ### [[Hash Set]]
 
@@ -27,7 +27,7 @@ Time Complexity  | O(1) | O(1) | O(1) | O(n) | O(n)
 |-
 | Time Complexity | O(1) | O(1) | O(1)
 
-### [[Tree Set]]
+### [[Binary Search Tree]]
 
 | Operation | Membership | Insertion | Deletion
 |-

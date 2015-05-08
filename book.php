@@ -91,6 +91,9 @@ function latexParse($str){
 	$str = preg_replace('/∙/','\$\cdot\$', $str);
 	$str = preg_replace('/•/','\$\cdot\$', $str);
 
+	// → -> $\to$
+	$str = preg_replace('/→/','\$\to\$', $str);
+
 	// <tag> -> 
 	$str = preg_replace('/<.*?>/','',$str);
 

@@ -8,8 +8,8 @@ Dynamic programming uses memoization by solving subproblems to solve the more co
 
 Like [[recursion|Recursion]], dynamic programming requires two things:
 
-* A base case and
-* A subproblem that can be reduced into smaller subproblems 
+* a base case, and
+* a subproblem that can be reduced into smaller subproblems 
 
 To find a dynamic programming solution to a problem, first start with a recursive solution and then use memoizations to optimize for duplicate calculations.
 

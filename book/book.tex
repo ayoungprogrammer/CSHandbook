@@ -70,7 +70,7 @@
 
 The Computer Science handbook is a handbook designed to explain algorithms and data structures in a way that anyone can understand. Many websites (e.g. Wikipedia) contain lengthy and wordy explanations that are full of technical jargon. I have tried my hardest to simplify language to make it easy to read without a strong math or computer science background. I hope to share my knowledge with you and I hope you will learn something new from reading this!
 
-Before you get started with this handbook, it is highly recommended that you are already familiar with Java or C++ syntax. This handbook is not meaning for learning programming basics since there are other resources better suited for that task.
+Before you get started with this handbook, it is highly recommended that you are already familiar with Java or C++ syntax. This handbook is not meant for learning programming basics since there are other resources better suited for that material.
 
 \subsection{Format}
 
@@ -86,13 +86,13 @@ The implementation section will be an implementation of the article in Java. It 
 
 \subsubsection{Exercises}
 
-The exercises section contains practice problems to test if you truly understand the concept. Many of these questions come from real interview questions.
+The exercises section contains practice problems to test your understanding. Some of these questions come from real interview questions.
 
 \chapter{ Interviews }
     \section{ Interviews }
     \subsection{Interview Preparation}
 
-From personal experience, I know that programming interviews can be quite stressful. You will be off your game because it is a much more different environment than you are probably used to. Many programmers are good at focusing on just programming by themselves. However, in an interview, you will have to code with someone who is watching you and talking to you. In my first few interviews, I was a nervous wreck and I fumbled through easy problems. However, in later interviews, I became more accustomed to the process and became more comfortable with the interviewer. As you do more interviews in your life, you will be less nervous and become more confident in your abilities. The more prepared you are, the more likely your chances of success in the interview room. In this section, you will find a small guide to rocking the interview!
+From personal experience, I know that programming interviews can be quite stressful. You will be off your game because it is a much more different environment than you are probably used to. Many programmers are accustomed to programming alone and focusing on just typing. However, in an interview, you will have to code with someone who is watching you and talking to you. In my first few interviews, I was a nervous wreck and I fumbled through easy problems. However, in later interviews, I became more accustomed to the process and became more comfortable with the interviewer. As you do more interviews in your life, you will be less nervous and become more confident in your abilities. The more prepared you are, the more likely your chances of success in the interview room. In this section, you will find a small guide to rocking the interview!
 
 \subsection{Resume}
 
@@ -102,14 +102,14 @@ Resumes are key to getting any interview in the first place and your resume shou
 \item Have either one or two pages exactly
 \item GPA doesn't matter unless it's low
 \item Your school is not very important
-\item Github with interesting side projects show your interest
+\item Github with interesting side projects show your abilities
 \item ACM / TopCoder / Programming Contests show your abilities
-\item Put relevant work experience (marketing at a tech company doesn't show anything)
+\item Put relevant work experience (e.g. marketing at a tech company will not matter when applying for a technical role)
 \end{itemize}
 
 \subsection{Before the Interview}
 
-Preparation is the most important thing you can do for interviews. You can be as charming and confident as you want, but if you cannot solve their problems, your application will quickly be discarded. When you are given a problem, there is a chance you have solved or read about a solution to the problem. Hence, the more prepared you are, the more likely you can come up with a solution. The sections in this handbook that come up the most are: everything in Data Structures, Advanced Recursion and Binary Search. If you cover those topics, you should be set for most interviews. However, if you are interviewing for higher end companies, you may need to learn a lot more. In some interviews, you will be asked to code your solution, therefore I suggest you become very familiar with a language. You should be proficient enough to know how to do input/output, use the standard library and how to debug properly. Java is a good language to use as it has many built in data structures and has stack traces for debugging.
+Preparation is the most important thing you can do for interviews. You can be as charming and confident as you want, but if you cannot solve their problems, your application will quickly be discarded. When you are given a problem, there is a chance you have solved or read about a solution to the problem. Hence, the more prepared you are, the more likely you can come up with a solution. The sections in this handbook that come up the most are: everything in Data Structures, Advanced Recursion and Binary Search. If you cover those topics, you should be set for most interviews. However, if you are interviewing for higher end companies, you may need to cover much more material. In some interviews, you will be asked to code your solution, therefore I suggest you become very familiar with a language. You should be proficient enough to know how to do input/output, use the standard library and how to debug properly. Java is a good language to use as it has many built in data structures and has stack traces for debugging.
 
 There are two types of interviews I have encountered: phone/Skype interviews and in person. If given a choice, in person is always preferable. When you doing an in person interview, you are able to communicate better with your interviewer and build a rapport. You will also be able to show your thought process on paper which is easier to do than via phone or Skype. Additionally, depending on the company, if they fly you down to their headquarters for the interview, you'll get a free trip!
 
@@ -163,7 +163,7 @@ Now that you have a solution, you need to prove to the interviewer that you can 
 
 \subsection{End Interview}
 
-Hopefully you have time left before the interview (otherwise, you took too long for the technical part). Ask your interviewer about projects at the company to get a feel of what will interest you. Ask them any other questions you have about the position like any other interview. When you leave, thank the interviewer for their time, put on a smile and shake their hand. Ultimately, the outcome of the interview is determined by the amount of rapport you built with the interviewer, how capable you were at the technical problems and how enthusiastic you are. If all goes well, you will get the job, or you will get a second round of interviews meaning you get to repeat the same process with another interviewer! Good luck!
+Hopefully, you have time left before the interview (otherwise, you took too long for the technical part). Ask your interviewer about projects at the company to get a feel of what will interest you. Ask them any other questions you have about the position like any other interview. When you leave, thank the interviewer for their time, put on a smile and shake their hand. Ultimately, the outcome of the interview is determined by the amount of rapport you built with the interviewer, how capable you were at the technical problems and how enthusiastic you are. If all goes well, you will get the job, or you will get a second round of interviews meaning you get to repeat the same process with another interviewer! Good luck!
 
 \part{ Fundamentals }
     \chapter{ Fundamentals }
@@ -181,7 +181,7 @@ Processing time and memory are two primary resources that computer programs use 
 
 \subsection{Limits}
 
-There are many different methods of implementing different things but most of the time we care most about implementations that are the fastest and use the least amount of memory. Let's go through some basic benchmarks about computers that you should know. Adding two numbers takes a nanosecond (1 billionth of a second) for an average computer to process as of this date of writing. For practical purposes, we'll assume that the average computer program can hold up to 1GB or RAM or about 250 million integers.
+There are many different methods of implementing different things but most of the time we care most about implementations that are the fastest and use the least amount of memory. Let's go through some basic benchmarks about computers that you should know. Adding two numbers takes a nanosecond (1 billionth of a second) for an average computer to process as of this date of writing. For practical purposes, we'll assume that the average computer program can hold up to 1GB of RAM or about 250 million 32 bit integers.
 
 \begin{center}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
@@ -198,7 +198,9 @@ There are many different methods of implementing different things but most of th
 
 \subsection{Big O Notation}
 
-When we compare how efficient algorithms or data structures are to another, we want to be able to describe them such that they can be quantified. We use something called Big O notation to do this. The size of the inputs determines the space and time complexities of many algorithms and data structures. The Big O notation takes the largest factor of an input to compare computation times / memory usage. When we take the largest factor, we ignore smaller factors, coefficients and constants because they become insignificant at very large values. For example: O(3n$^{2}$ + 12n + 20) is simply O(n$^{2}$) because it is the largest factor.
+When we design algorithms and data structures, we are concerned with their runtime and memory complexities. The runtime complexity is the number of operations required for a program the run. We will consider reading a unit of data, writing a unit of data, simple arithmetic and logic operations to be a single operation. For example, if we had a program that read two numbers, added them together and stored them the result, it would take 2 operations to read the two numbers, 1 operation to add the numbers and 1 more operation to store the result.The size of the inputs determines the space and runtime complexities of algorithms and data structures. The memory complexity is the additional amount of data required by an algorithm or data structure. For example, if you had an array of 10 integers, the memory complexity would be 10 integers.
+
+When we compare how efficient algorithms or data structures are to another, we want to be able to describe them such that they can be compared by a quantifiable amount. We use a notation called Big O notation to do this. We can use it to describe the runtime and memory complexities of algorithms and data structures. The complexities of an algorithm or data structure will depend on the size of its inputs. For example, if we have a program that calculates the sum of N integers, the runtime would take much longer if N was 1000 versus if N was 10. Thus we want to determine how long a program will take to run or how much memory it will use relative to the size of the inputs. The Big O notation takes the largest factor of an input to compare computation times / memory usage. When we take the largest factor, we ignore smaller factors, coefficients and constants because they become insignificant at very large values. For example: O(3n$^{2}$ + 12n + 20) is simply O(n$^{2}$) because it is the largest factor.
 
 Here is a list of common Big O notations based on complexity:
 
@@ -236,11 +238,11 @@ Here is a list of common Big O notations based on complexity:
 
 \hline\end{tabulary}\end{center}
 
-Keep in mind that in a couple of years as technology improves, this chart will be outdated.
+Keep in mind that in a couple of years, this chart will be outdated as technology improves.
 
 \subsection{Runtime and Memory Analysis}
 
-In a program we are usually concerned with two main factors: runtime and memory. Runtime complexity is the amount of time it takes for a program to run and memory complexity is usually used as the additional amount of memory other than the input that a program takes. Note that if you are able to stream your input in your program (read in chunks at a time), then the memory footprint will be reduced to your stream size.
+In a program we are usually concerned with two main factors: runtime and memory. Runtime complexity is the amount of time it takes for a program to run.  Memory complexity is usually used as the additional amount of memory other than the input that a program takes. Note that if you are able to stream your input in your program (read in chunks at a time), then the input memory footprint will be reduced to your stream size.
 
 \subsubsection{Example}
 
@@ -251,8 +253,8 @@ Suppose we have a function that has an array of size N as an input that returns 
 int findMax(int[] array) {
   int maxVal = array[0]; //O(1) memory to store max element, O(1) time for assignment.
   for(int i = 1; i < array.length; i++) { //O(n) loop runtime.
-    if (maxVal < array[i]) { //O(1) to compare runtime.
-      maxVal = array[i]; //O(1) to assign new value runtime.
+    if (maxVal < array[i]) { //O(1) to compare.
+      maxVal = array[i]; //O(1) to assign new value.
     }
   }
   return maxVal;
@@ -284,7 +286,7 @@ There are NxN cells we need to set to 0, so we need O(n$^{2}$) operations. We ca
 
 \subsubsection{Example}
 
-Suppose we have another function that prints out the binary number backwards for each number from 1 to N. For example, the binary number backwards for 25 is 11001.
+Suppose we have another function that prints out the binary number backwards for each number from 1 to N. For example, the binary number backwards for 25 is 10011.
 
 \begin{lstlisting}
 void binaryNumbers(int n) {
@@ -306,7 +308,7 @@ void binaryNumbers(int n) {
 }
 \end{lstlisting}
 
-For each number x, it will take O(ln$_{2}$ x) to convert the number to binary because we dividing by 2. Since O(ln$_{2}$ x) = O( (ln x)/ (ln 2) ), and the denominator is a constant, we can rewrite this as O(ln x). We can also rewrite this os O(log x) which most people when referring to logarithmic complexities. We do this operation N times so the total runtime complexity is: O(n log n). We need O(1) additional memory to store the variable bin and x.
+For each number x, it will take O(ln$_{2}$ x) to convert the number to binary because we dividing by 2. Since O(ln$_{2}$ x) = O( (ln x)/ (ln 2) ), and the denominator is a constant, we can rewrite this as O(ln x). We can also rewrite this as O(log x) which most people use when referring to logarithmic complexities. We do this operation N times so the total runtime complexity is: O(n log n). We need O(1) additional memory to store the variable bin and x.
 
 \subsubsection{Example}
 
@@ -369,14 +371,14 @@ public int mode2(int[] arr, int m) {
 }
 \end{lstlisting}
 
-We first initialize the array of occurrences to 0 which takes O(m). We then loop through the array of numbers which takes O(n). FInally, we loop through the array of occurrences to find the mode which takes O(m). Thus the final runtime is O(n + m). We need to store the mode which takes O(1) and the array of occurrences which takes O(m). Thus the memory footprint is O(m).
+We first initialize the array of occurrences to 0 which takes O(m). We then loop through the array of numbers which takes O(n). Finally, we loop through the array of occurrences to find the mode which takes O(m). Thus the final runtime is O(n + m). We need to store the mode which takes O(1) and the array of occurrences which takes O(m). Thus the memory footprint is O(m).
 
-Note that although the two approaches do the same thing, they have different complexities for runtime and space. If m was large and the cost of storing m integers was too expensive, then we would use the first approach at the cost of having O(n$^{2}$) quadratic runtime. However, if m was small and we wanted a fast solution, then we would use the second approach at the cost of storing extra O(m) integers. Problems can have solutions that optimize for speed and other solutions that optimize for space. Sometimes space can be more expensive than speed and sometimes speed can be more expensive than space.
+Note that although the two approaches do the same thing, they have different complexities for runtime and space. If m was large and the cost of storing m integers was too expensive, then we would use the first approach at the cost of having O(n$^{2}$) quadratic runtime. However, if m was small and we wanted a fast solution, then we would use the second approach at the cost of storing extra O(m) integers. Problems can have solutions that optimize for speed and other solutions that optimize for space. Sometimes space can be more expensive than speed and vice versa.
 
 \subsection{Exercises}
 
 \begin{enumerate}
-\item Determine the runtime and memory complexities of finding the average of an array.
+\item Determine the runtime and memory complexities of finding the average of an integer array.
 \item Determine the runtime and memory complexities of adding two NxN matrices together.
 \item Determine the runtime complexity of guessing a N digit numeric password.
 \item Determine the runtime complexity of summing the digits of a number.
@@ -393,7 +395,7 @@ Next: Advanced Recursion
 
 Recursion is process that repeats itself in a similar way. Anything that has its definition nested inside itself is considered to be recursive. For example, GNU stands for GNU's Not Unix!. Expanding this acronym gives us ((GNU's Not Unix) Not Unix!). As you can see this will go on forever and GNU's definition is nested inside itself so it is recursive. The Fibonacci sequence is also recursive: F(n) = F(n-1)+F(n-2). Inside the function F, we see two more F's!
 
-In computer science infinite looping is not good, because we want our programs to finish at some point. This means we have to find a stopping point where the function will stop calling itself. A base case is the condition where the last step is reached. All cases should eventually reduce to a base case. For the Fibonacci sequence, the base case is F(0) = 1 and F(1) = 1, and we can see that for all N$>$1, the Fibonacci sequence will reach the base case.
+In computer science, we want to avoid infinite looping since we want our programs to finish at some point. This means we have to find a stopping point where the function will stop calling itself. A base case is the condition where the last step is reached. All cases should eventually reduce to a base case. For the Fibonacci sequence, the base case is F(0) = 1 and F(1) = 1, and we can see that for all N$>$1, the Fibonacci sequence will reach the base case.
 
 So for something to be recursive in computer science, it needs:
 
@@ -407,10 +409,10 @@ Template for recursion:
 \begin{lstlisting}
 fun(x) {
   if baseCase(x) {
-    return;
+    return base
   }
   else {
-    fun(reduce(x))
+    return fun(reduce(x))
   }
 }
 \end{lstlisting}
@@ -454,10 +456,10 @@ f(n) = f(n-1) * n
 
 Example:
 f(4) 
-= 4 $\cdot$ f(3)
-= 4 $\cdot$ 3 $\cdot$ f(2)
-= 4 $\cdot$ 3 $\cdot$ 2 $\cdot$ f(1)  [Base Case]
-= 4 $\cdot$ 3 $\cdot$ 2 $\cdot$ 1
+= 4 * f(3)
+= 4 * 3 * f(2)
+= 4 * 3 * 2 * f(1)  [Base Case]
+= 4 * 3 * 2 * 1
 = 24
 \end{lstlisting}
 
@@ -476,15 +478,15 @@ int factorial(int n){
 
 We can use recursion in many places, and we can apply it to simple problems that you probably have not thought about. Summing the digits of a string can be done using a simple loop, but we can also use recursion to do it.
 
-Let's say we have the string '23528'. The total is equal to the first digit plus the sum of the rest of the digits. 2 + '3528'. We can do the exact same thing for the rest of the digits: the second digit plus the sum of the rest of the digits and keep doing this until we have no more digits.
+Let's say we have the string '23528'. The sum is equal to the first digit plus the sum of the rest of the digits: 2 + '3528'. The sum of the rest of the digits is equal to sum of the second digit plus the rest of those digits. As we can see, each time we are performing the same operation on smaller parameters and this is our recurrence relation. We can keep doing this until we have no more digits and that is our base case.
 
 \begin{itemize}
-\item f('23528')
-\item 2 + f('3528')
-\item 2 + 3 + f('528')
-\item 2 + 3 + 5 + f('28')
-\item 2 + 3+ 5 + 2 + f('8') 
-\item 2 + 3+ 5 + 2 + 8 + f('')
+\item sum('23528')
+\item 2 + sum('3528')
+\item 2 + 3 + sum('528')
+\item 2 + 3 + 5 + sum('28')
+\item 2 + 3+ 5 + 2 + sum('8') 
+\item 2 + 3+ 5 + 2 + 8 + sum('')
 \item 2 + 3 + 5 + 2 + 8 + 0
 \item 20
 \end{itemize}
@@ -541,11 +543,11 @@ sum('23528');
 
 \subsection{Count}
 
-Let's say we have an string of N characters and we want to find the number of times the letter 'c' appears. This time we need to add some logic to the solution.
+Let's say we have an string of N characters and we want to find the number of times the letter 'c' appears. This time we will need to add some logic to the solution.
 
-If the first letter of the string is a 'c', then we can add 1 to the count. Otherwise, we don't add anything. We can do the exact same thing for the substring without the first letter. If the second letter of the string is a 'c', we add 1 other we don't add anything etc.
+If the first letter of the string is a 'c', then we can add 1 to the count. Otherwise, we don't add anything. We can do the exact same thing for the rest of the string. If the second letter of the string is a 'c', we add 1, otherwise we don't add anything etc. As we can see, we are repeating the process on smaller parameters and we have our recurrence relation. We keep reducing this way until we get an empty string and this is our base case.
 
-For example we have the string 'cacaec'. Since the first letter is a 'c' we add 1 to the count. Then we remove the first letter and get 'acaec', the first letter is not a 'c' so we don't add to the count. We keep reducing this way until we get an empty string and we return the count.
+For example, we have the string 'cacaec'. Since the first letter is a 'c', we add 1 to the count. Then we do the same for the rest of the string 'acaec', the first letter is not a 'c' so we don't add to the count.
 
 \begin{itemize}
 \item 'cacaec'
@@ -696,7 +698,7 @@ Suppose we have a grid of N rows and M columns. How many ways are there to get f
 
 We see that the only way to reach a cell, is to come from the left or from the bottom. So the number of ways to reach a cell is the number of ways to reach the cell to the left plus the number of ways to reach the cell on the bottom.
 
-So more accurately, the number of ways to get to cell (x, y) is the sum of the ways to get to the cell (x-1, y) and the cell (x, y-1). However, the number of ways to reach the cell (x-1, y) is the sum of the number of ways to the cell (x-2, y) and (x-1, y-1). As we can see, we are solving a reduced version of the same problem! Thus we have a recurrence relation.
+In other words, the number of ways to get to cell (x, y) is the sum of the ways to get to the cell (x-1, y) and the cell (x, y-1). However, the number of ways to reach the cell (x-1, y) is the sum of the number of ways to the cell (x-2, y) and (x-1, y-1). As we can see, we are solving a reduced version of the same problem! Thus we have a recurrence relation.
 
 The base case is any cell on the left border or bottom border. There is only one way to reach the cell by either going only up or only going right.
 
@@ -741,14 +743,14 @@ int paths(int n,int m){
 
 \subsection{Towers of Hanoi}
 
-There are three poles and N discs where each disc is heavier than the next disc. In the initial configuration, the discs are stacked upon another on the first pole where the lighter discs are above the heavier discs. We want to move all the discs to the last pole with the following conditions:
+Suppose we have a game where there are three poles and N discs where each disc is heavier than the next disc. In the initial configuration, the discs are stacked upon another on the first pole where the lighter discs are above the heavier discs. The end goal is to move all the discs to the last pole with the following conditions:
 
 \begin{itemize}
 \item Only one disc can be moved from one pole to another at a time.
 \item The discs have to be stacked such that all the lighter discs are on top of the heavier ones.
 \end{itemize}
 
-Lets' try to make this problem simpler. To move N discs from the first pole the the last pole we need to move N-1 discs to the middle pole, then move the Nth disc to the last pole, and then move all N-1 discs from the middle pole back on to the last pole.
+Let's try to make this problem simpler. To move N discs from the first pole the the last pole we need to move N-1 discs to the middle pole, then move the Nth disc to the last pole, and then move all N-1 discs from the middle pole back on to the last pole.
 
 Let the starting pole be the first pole, the helper pole be the middle pole and the destination pole the third pole.
 
@@ -779,7 +781,7 @@ We need to move N-1 discs from the helper pole to the destination pole.
         \includegraphics[width=0.66\maxwidth{\textwidth}]{hanoi4.png}
         \end{figure}
 
-We can see that Step 2 is easy, all we have to do is move that one disc. But for Step 1 and Step 3, we have to move N-1 discs. How can we move N-1 discs to the middle pole?
+We can see that Step 2 is easy, all we have to do is move one disc. But for Step 1 and Step 3, we have to move N-1 discs. How can we move N-1 discs to the middle pole?
 
 We see that we can use the same reasoning: we need to move N-2 discs to the third pole. Then we need to move the N-1 disc to the second pole and then move N-2 discs from the third pole to the second pole. Note that the Nth disc does not matter at all in this case since we can move any disc on top of it and we can pretend as if it doesn't exist.
 
@@ -932,7 +934,7 @@ For example, here we have a few permutations of A,B,C,D,E,F:
 
 Given a string S of length N, how can we generate all permutations?
 
-Let's assume that we have a list of permutations for the substring of S of N-1 characters. Then to get the permutations for the string of length N, all we need to do is insert the Nth character in between all the positions of each permutation of N-1 characters. For example, here is how the permutation of A,B,C,D is generated.
+Let's assume that we have a list of permutations for the substring of S of N-1 characters. To get the permutations for a string of length N, we need to insert the Nth character in between all the positions of each permutation of N-1 characters. For example, here is how the permutation of A,B,C,D is generated.
 
 We can manually find the permutations of A,B,C.
 
@@ -961,7 +963,7 @@ If we insert the letter D between each letter for every permutation in N-1 lette
 
 And we can guarantee that every new permutation will be unique. (Try to prove that to yourself).
 
-But let's look at how we can get the permutation of A,B,C. We can also get all the permutations of the string by taking the permutations of A,B and inserting C in all the positions for all substrings.
+But let's look at how we can get the permutations of A,B,C. We can also get all the permutations of the string by taking the permutations of A,B and inserting C in all the positions for all substrings.
 
 Substrings of A,B
 
@@ -1063,7 +1065,7 @@ For example, a bottle should be able to hold water and allow us to drink from it
         \includegraphics[width=0.66\maxwidth{\textwidth}]{bottle.png}
         \end{figure}
 
-Some implementations of abstract data types are better than others for different purposes. For example, plastic water bottles are very cheap, whereas a thermos is more expensive. However, a thermos can hold hot water and keep it warm for a long period of time. When selecting a data structure, we should pick one based on the efficiencies of data operations that we will do most often.
+Some implementations of abstract data types are better than others for different purposes. For example, plastic water bottles are very cheap, whereas a thermos is more expensive. However, a thermos can hold hot water and keep it warm for a longer period of time. When selecting a data structure, we should pick one based on the efficiencies of data operations that we will do most often.
 
 \vspace{5px}\begin{figure}[H]\centering
         \includegraphics[width=0.66\maxwidth{\textwidth}]{adt.png}
@@ -1160,7 +1162,7 @@ public class Vec {
 
 \subsection{Resize}
 
-Resize will be used to resize the current size of elements. We create a new array of two times the size of the old one and copy the old array over.
+Resize will be used to resize the array to have twice the capacity. We create a new array of two times the size of the old one and copy the old elements over.
 
 \vspace{5px}\begin{figure}[H]\centering
         \includegraphics[width=0.66\maxwidth{\textwidth}]{vector3.png}
@@ -1216,7 +1218,7 @@ public int pop() {
 
 \subsection{Remove}
 
-Removes element at index and shift element to the right of it to the left by one.
+Removes element at index and shifts all elements to the right of it to the left by one.
 
 \vspace{5px}\begin{figure}[H]\centering
         \includegraphics[width=0.66\maxwidth{\textwidth}]{vector4.png}
@@ -1239,7 +1241,7 @@ public int remove(int idx) {
 
 \subsection{Get Element}
 
-Returns the element at the specified index. It will throw an exception if the index is out of bounds. Note this function is exactly as the same as in the array
+Returns the element at the specified index. It will throw an exception if the index is out of bounds.
 
 \vspace{5px}\begin{figure}[H]\centering
         \includegraphics[width=0.66\maxwidth{\textwidth}]{vectorget.png}
@@ -1256,13 +1258,13 @@ public int get(int idx) {
 
 \subsection{Insert Element}
 
-Insert the new number x at the index. We need to make space at the index for the new element so we shift everything to the right of the index by 1.
+Insert the new number x at the index.
 
 \vspace{5px}\begin{figure}[H]\centering
         \includegraphics[width=0.66\maxwidth{\textwidth}]{vectorinsert.png}
         \end{figure}
 
-When we insert the new element, we have to shift all the elements to the right of it by 1.
+We need to make space for the new element so when we insert the element, we have to shift all the elements to the right of the index by 1.
 
 \vspace{5px}\begin{figure}[H]\centering
         \includegraphics[width=0.66\maxwidth{\textwidth}]{vectorinsert2.png}
@@ -1278,10 +1280,12 @@ public void insert(int idx, int x) {
     resize();
   }
   int idx2 = size;
+  // Shift elements to the right.
   while (idx2 > idx) {
     arr[idx2] = arr[idx2 - 1];
     idx2--;
   }
+  // Insert element.
   arr[idx] = x;
 }
 \end{lstlisting}
@@ -1322,7 +1326,7 @@ A queue is an abstract data type with two functions, pop and push. Removal from 
 
 Imagine you are standing in line for a restaurant. Whoever is first in line will be served first and whoever is last in line will be served last. People can be served while more people join the line and the line may get very long because it takes a while to serve one person while more people join the queue. This is called a queue.
 
-Queues are often used for buffer systems, for example a text message service. The messages that arrive at the server first are relayed first and the messages that arrive later are relayed later. If there are too many text messages in the system such that the rate  texts are received overwhelm the number of texts that are sent the buffer may overflow and messages will get dropped. Most of the time this won't happen because the systems are designed to handle large loads, but if there were an emergency that caused everyone to start texting many texts could be dropped.
+Queues are often used for buffer systems, such as a text message service. The messages that arrive at the server first are relayed first and the messages that arrive later are relayed later. If there are too many text messages in the system such that the rate  texts are received overwhelm the number of texts that are sent the buffer may overflow and messages will get dropped. Most of the time this won't happen because the systems are designed to handle large loads, but if there were an emergency that caused everyone to start texting many texts could be dropped.
 
 Example of push:
 
@@ -1372,9 +1376,7 @@ Imagine you were on a scavenger hunt with lots of treasure chests. You start wit
         \includegraphics[width=0.66\maxwidth{\textwidth}]{linkedlist.png}
         \end{figure}
 
-A linked list is similar to an array but it is different such that it is not stored in one block of data. Each element can be stored in a random place in memory but each element contains a pointer to the next element thus forming a chain of pointers. Think of a pointer as a clue to the next chest. Since the elements aren't in a block, accessing an element must be done by traversing the entire linked list by following each pointer to the next. However, this also allows insertion to be done more quickly by simply changing the point of the previous element and setting to the pointer of the current element to the next element. Deletion is also done by taking the previous element and changing its pointer to two elements ahead. In a linked list the links only go forward and you cannot move backward.
-
-A doubly linked list is a linked list that has pointers going backwards as well as forwards.
+A linked list is similar to an array but it is different such that it is not stored in one block of data. Each element can be stored in a random place in memory but each element contains a pointer to the next element thus forming a chain of pointers. Think of a pointer as a clue to the next chest. Since the elements aren't in a block, accessing an element must be done by traversing the entire linked list by following each pointer to the next. However, this also allows insertion and deletion to be done more quickly. In a linked list the links only go forward and you cannot move backward. However, a doubly linked list is a linked list that has pointers going backwards as well as forwards.
 
 \vspace{5px}\begin{figure}[H]\centering
         \includegraphics[width=0.66\maxwidth{\textwidth}]{doublelinkedlist.png}
@@ -1732,7 +1734,7 @@ The hash code is the result of the hashing algorithm for an element. In our hash
         \includegraphics[width=0.66\maxwidth{\textwidth}]{hashcode.png}
         \end{figure}
 
-For the most part, if the numbers are all random, then the hash function will perform well. However, if the number of buckets was 10 and we added the elements 20,30,40,50,60,70, then they would all end up in the same bucket and performance degenerates to a linked list.
+For the most part, if the numbers are all random, then the hash function will perform well. However, if the number of buckets was 10 and we added the elements 20,30,40,50,60,70, then they would all end up in the same bucket and performance degenerates to a linked list. A good hash function can prevent this from occurring.
 
 \begin{lstlisting}
 public int getHash(int x, int hashSize) {
@@ -1888,7 +1890,7 @@ public boolean remove(int x) {
 \subsection{Exercises}
 
 \begin{enumerate}
-\item Devise a better hashing algorithm for strings.
+\item Devise a hashing algorithm for strings.
 \item Calculate the probability of a collision occurring given the number of buckets and number of elements in the hash set.
 \item Prove that the runtime of all the operations are O(1).
 \end{enumerate}
@@ -1910,6 +1912,9 @@ Tree Sets are implemented using binary search trees.
         \includegraphics[width=0.66\maxwidth{\textwidth}]{bst.png}
         \end{figure}
 
+
+        
+
 \begin{center}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
 
@@ -1920,25 +1925,20 @@ Tree Sets are implemented using binary search trees.
 \hline
 
 
-  Time Complexity &
+  Binary Search Tree &
   O(log n) &
   O(log n) &
   O(log n)\\
 
 \hline\end{tabulary}\end{center}
 
-\subsection{Exercises}
-
-\begin{enumerate}
-\item Given a list of names, output all the unique names in alphabetical order
-\end{enumerate}
 
         \section{ Binary Search Tree }
         
 
 Prerequisites: Set, Binary Tree
 
-A binary search tree is a  binary tree with special properties. The left children of a node will always be less than the node and the right children of a node will always be more than the node. It has a recursive structure such that every subtree is also a binary search tree.
+A binary search tree is a  binary tree with special properties. For every node in the tree, the values of all the nodes in left subtree of a node will always be less than the value of the node and all the nodes in the right subtree will always be more than the value of the node. It has a recursive structure meaning every subtree is also a binary search tree.
 
 Structure:
 
@@ -1987,7 +1987,7 @@ Example:
 
 \subsubsection{Implementation}
 
-A Node is a node in our tree set. Each node will contain a left subtree, a right subtree, the parent of the tree and the value stored at that node. It is unnecessary to store the parent, but for this implementation it will be easier to keep track of the parent.
+A Node is a node in our binary search tree. Each node will contain a left subtree, a right subtree, the parent of the tree and the value stored at that node. It is unnecessary to store the parent, but for this implementation it will be easier to keep track of the parent.
 
 replaceChild replaces the left or right child node specified with the replacement node.
 
@@ -2059,7 +2059,7 @@ Since 4 is greater than 2, we traverse the right subtree to 3.
         \includegraphics[width=0.66\maxwidth{\textwidth}]{bstinsert3.png}
         \end{figure}
 
-Since 4 is greater than 3 and there is no right child, than we set 4 as the right child.
+Since 4 is greater than 3 and there is no right child, than we create a new node with the value 4 as the right child.
 
 \vspace{5px}\begin{figure}[H]\centering
         \includegraphics[width=0.66\maxwidth{\textwidth}]{bstinsert4.png}
@@ -2118,7 +2118,7 @@ We want to check if the number 6 is in the binary search tree.
         \includegraphics[width=0.66\maxwidth{\textwidth}]{bstcontains.png}
         \end{figure}
 
-Since 6 is larger than 5, we traverse the right subtree of56.
+Since 6 is larger than 5, we traverse the right subtree of 5.
 
 \vspace{5px}\begin{figure}[H]\centering
         \includegraphics[width=0.66\maxwidth{\textwidth}]{bstcontains2.png}
@@ -2163,7 +2163,7 @@ public boolean contains(int x) {
 
 \subsection{Remove}
 
-Removing an element is a much more complex because we need to maintain the tree structure of the tree set when removing elements. First we locate the element that we want to remove. If the element is not there then the operation failed and we return false. If the element is there then are three cases we need to consider.
+Removing an element is a much more complex because we need to maintain the tree structure of the tree set when removing elements. First, we locate the element that we want to remove. If the element is not there, then the operation failed and we return false. If the element is there, then are three cases we need to consider.
 
 \vspace{5px}\begin{figure}[H]\centering
         \includegraphics[width=0.66\maxwidth{\textwidth}]{bst-rem.png}
@@ -2205,7 +2205,7 @@ We need to replace the node with the rightmost of the left subtree or the leftmo
         \includegraphics[width=0.66\maxwidth{\textwidth}]{bst-rem-case32.png}
         \end{figure}
 
-It does not matter which side we pick so we will use the rightmost of the left subtree. First we copy the value of the rightmost of the left subtree into the node that will be deleted.
+It does not matter which side we pick, so we will use the rightmost of the left subtree. First, we copy the value of the rightmost of the left subtree into the node that will be deleted.
 
 \vspace{5px}\begin{figure}[H]\centering
         \includegraphics[width=0.66\maxwidth{\textwidth}]{bst-rem-case33.png}
@@ -2254,7 +2254,7 @@ public boolean remove(int x) {
       curNode.parent.replaceChild(curNode, null);
     }
   }
-  // Case 2: Removed node only has a right child.
+  // Case 2a: Removed node only has a right child.
   else if (curNode.left == null) {
     // Special case if node is root.
     if (curNode == root) {
@@ -2266,7 +2266,7 @@ public boolean remove(int x) {
       curNode.parent.replaceChild(curNode, curNode.right);
     }
   }
-  // Case 2: Removed node only has a left child.
+  // Case 2b: Removed node only has a left child.
   else if (curNode.right == null) {
     // Special case if node is root.
     if (curNode == root) {
@@ -2297,7 +2297,7 @@ public boolean remove(int x) {
 
 \subsection{Print Tree}
 
-Since tree sets are stored as a binary search tree, we can print the elements in order.
+In a binary search tree, we can print the elements in order.
 
 \subsubsection{Implementation}
 
@@ -2339,11 +2339,11 @@ public String toString() {
 \item Given a list of words, determine how many of them are anagrams of each other. An anagram is a word that can have its letters scrambled into another word. 
 
 \begin{itemize}
-\item For example silent and listen are anagrams but banana and orange are not.
+\item For example, silent and listen are anagrams but banana and orange are not.
 \end{itemize}
-\item Given friend lists of two people, find the number of mutual friends.
+\item Given the friend lists of two people, find the number of mutual friends.
 \item Given an array of numbers, find the number of pairs of numbers that sum to 0.
-\item Given a array of numbers, find the number of tuples of size 4 that add to A.
+\item Given an array of numbers, find the number of tuples of size 4 that add to A.
 
 \begin{itemize}
 \item For example in the list (10,5,-1, 3, 4, -6) the tuple of size 4 (-1,3,4-6) adds to 0.
@@ -2358,9 +2358,9 @@ Prerequisites: Sets
 
 A map is an abstract data type that stores key-value pairs.
 
-Imagine you had a English dictionary. If you look up a word, you can find it's definition and read it out. For example if you looked up the word 'cat' in the English dictionary, you would look through the dictionary alphabetically until you found the word 'cat' and then you would look at the definition: 'a feline animal'. If you really wanted to, you could also add your own words into the dictionary and the definitions of your words. This type of structure is called a map.
+Imagine you had a English dictionary. If you look up a word, you can find it's definition. For example if you looked up the word 'cat' in the English dictionary, you would look through the dictionary alphabetically until you found the word 'cat' and then you would look at the definition: 'a feline animal'. If you really wanted to, you could also add your own words into the dictionary and the definitions of your words. This type of structure is called a map.
 
-Maps (also called dictionaries) are abstract data types that store pairs of key-values and can be used to look up values from the keys. The keys are like the words in an English dictionary and the definitions can be seen as the values. Maps are able to support insertion of key-value pairs, retrieve values from keys, and delete key-value pairs.
+Maps (also called dictionaries) are abstract data types that store pairs of key-values and can be used to look up values from the keys. The keys are like the words in an English dictionary and the definitions can be seen as the values. Maps are able to insert key-value pairs, retrieve values from keys, and delete key-value pairs.
 
 
         
@@ -2454,7 +2454,7 @@ Since most of the implementation is the same as Hash Set, we will skip most of t
 
 \subsection{Resize}
 
-Resizing is the same as a Hash Set, but we to copy the pairs instead of only the values.
+Resizing is the same as a Hash Set, but we copy the pairs instead of only the values.
 
 \begin{lstlisting}
 public void resize() {
@@ -2563,7 +2563,7 @@ public boolean remove(int key) {
 \subsection{Exercises}
 
 \begin{enumerate}
-\item Create a hash map for the an contact list (phone numbers as keys, names as value).
+\item Create a hash map for a contact list (phone numbers as keys, names as value).
 \end{enumerate}
 
         \section{ Tree Map }
@@ -2601,7 +2601,7 @@ Tree Maps are implemented using binary search trees. Since the implementation of
 \subsection{Exercise}
 
 \begin{enumerate}
-\item Implement a Tree Map following the code of Binary Search Tree and Hash Map.
+\item Implement a Tree Map using the code of Binary Search Tree and Hash Map as guides.
 \end{enumerate}
 
         \section{ Exercises }
@@ -2609,7 +2609,7 @@ Tree Maps are implemented using binary search trees. Since the implementation of
 
 \begin{enumerate}
 \item Given a list of N strings, output the strings in alphabetical order and the number of times they appear in the list.
-\item Given a mapping of a id to a name, output the ids in order by lexicographical name.
+\item Given a mapping of ids to names, output the ids in order by lexicographical name.
 \end{enumerate}
 
     \chapter{ Priority Queue }
@@ -2620,7 +2620,7 @@ Prerequisites: Queue, Heap
 
 A priority queue is a queue that takes elements which have the highest priority first. This is either the maximum or minimum property for all elements.
 
-Consider a waiting list for lung donors. The patients are given a score when they are placed on the waiting list by how much they need a lung based on their whether they smoke, risk factors, age, expected time left etc. When a lung is available, the patient with the highest score will receive the lung first. During this time, it is possible more patients could be added to the queue. The behaviour is similar to a queue but instead of the first person getting in the queue getting a lung first, the person with the highest score will get it. This means that if Sam has a score of 60 and gets placed in the queue after Bob who has a score of 40, Sam will get the lung first even though Bob was in the queue before him.
+Consider a waiting list for lung transplants. The patients are given a score when they are placed on the waiting list based on whether they smoke, risk factors, age, expected time left, etc. When a lung is available, the patient with the highest score will receive the lung first. During this time, it is possible more patients could be added to the queue. The behaviour is similar to a queue but instead of the first person getting in the queue getting a lung first, the person with the highest score will get it. This means that if Sam, who  has a score of 60, joins the queue after Bob, who has a score of 40, Sam will get the lung first even though Bob was in the queue before him.
 
 A priority queue is an abstract data structure with two operations: push and pop. Push adds an element into the priority queue and pop removes the highest or lowest element.
 
@@ -2652,9 +2652,9 @@ Prerequisites: Queue
 
 
 
-Heaps are data structures that are able to pop the maximum or minimum value or push a value very quickly. Heaps are implemented as trees which have the property that a parent node must either be greater than all the elements in its left and right subtrees (a max heap) or less than all the elements in its left and right subtrees (a min heap). Priority queue's are most efficiently implemented as heaps. This guarantees that the maximum or minimum element is the root node.
+Heaps are data structures that can pop the maximum or minimum value or push a value very efficiently. Heaps are special binary trees which have the property that: the value of each node is greater than the values of all its children (a max heap) or the value of each node is less than the values of all its children (a min heap). Priority queue's are most efficiently implemented as heaps. This guarantees that the maximum or minimum element is the root node.
 
-Heaps store their data level by level in a binary tree. This allows us to store heaps in an array. The root index is 0. For every node, the left index can be found by using the formula 2=ind+1 and the right index can be found by using the formula 2=ind + 2. The parent of a node can be found by integer division with (ind-1)/2.
+Heaps store their data level by level in a binary tree. This allows us to store heaps in an array. The root index is 0. For every node with index i, the left index can be found by using the formula 2=i+1 and the right index can be found by using the formula 2=i + 2. The parent of a node can be found by integer division as (i-1)/2.
 
 \begin{lstlisting}
 root = 0
@@ -2675,7 +2675,7 @@ Example Heap:
         \includegraphics[width=0.66\maxwidth{\textwidth}]{maxheap.png}
         \end{figure}
 
-A heap has two operations: push and pop. Pushing an element into a heap adds it into the heap and the heap needs to ensure that the properties of the heap still hold. Popping removes an element from the top of the heap and the heap needs to ensure that the properties of the heap still hold.
+A heap has two operations: push and pop. Pushing an element into a heap adds it into the heap while ensuring that the properties of the heap still hold. Popping removes an element from the top of the heap and the heap needs to ensure that the properties of the heap still hold.
 
 \begin{center}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
@@ -2698,7 +2698,7 @@ A heap has two operations: push and pop. Pushing an element into a heap adds it 
 
 \subsection{Class}
 
-We will implement a max heap in Java and in our class we need to store the element in the heap and the size of the heap.
+We will implement a max heap in Java and in our class we need to store the elements in the heap and the size of the heap.
 
 \begin{lstlisting}
 public class Heap {
@@ -2719,8 +2719,8 @@ When the heap reaches capacity, we need to resize it to be able to contain more 
 
 \begin{lstlisting}
 public void resize() {
-  int[] newArr = new int[arr.length*2];
-  for (int i=0;i<size;i++) {
+  int[] newArr = new int[arr.length * 2];
+  for (int i = 0; i < size; i++) {
     newArr[i] = arr[i];
   }
   arr = newArr;
@@ -2767,7 +2767,7 @@ The parent of 9 is 8 and smaller so we can swap the two.
         \includegraphics[width=0.66\maxwidth{\textwidth}]{maxheappush3.png}
         \end{figure}
 
-Since the parent of 9 is 10 and greater than 9 then we can stop.
+Since the parent of 9 is 10 and greater than 9 then we can stop. We can also see that the heap structure is still valid.
 
 \begin{lstlisting}
 public void push(int x) {
@@ -2878,7 +2878,7 @@ public int pop() {
 
 \subsection{Heapify}
 
-Heapify takes a random array of N elements and transforms it into a heap in the same array. The runtime of heapify is O(n) and the proof of that is beyond the scope of this article.
+Heapify takes an array of N elements and transforms it into a heap in the same array. The runtime of heapify is suprisingly O(n) and the proof of that is beyond the scope of this book.
 
 \begin{lstlisting}
 public void heapify(int arr[]) {
@@ -2895,7 +2895,8 @@ public void heapify(int arr[]) {
 
 \begin{enumerate}
 \item Implement a min heap in Java.
-\item Write a function that checks if an array is a heap. 
+\item Write a function that checks if an array is a heap.
+\item Prove that heapify is O(n).
 \end{enumerate}
 
         \section{ Exercises }
@@ -2910,17 +2911,25 @@ public void heapify(int arr[]) {
     \subsubsection{ Introduction }
     
 
-Sorting is arranging an array of n elements in either increasing or decreasing order by some property. It is very useful in computer science for efficiency in other algorithms that usually require a search.
+Sorting is arranging an array of N elements in either increasing or decreasing order by some properties. It is very useful in computer science for efficiency in other algorithms that usually require a search.
 
-A stable sort is a sort that can preserve sorting of other properties. For example, if we have
+A stable sort is a sort that can preserve sorting of other properties. For example, if we have:
 
 (3,G), (1,G), (3, A), (6 K), (1,B)
 
 and we want to sort by the first property in increasing order, we will have:
 
-(1, G) (1,B) (3,G), (3,A) (6 K).
+(1, G) (1,B) (3,G), (3,A), (6 K)
 
-If we sort again by the second property we have (1,B) (3, A) (1, G) (3, G) (6,K) then the sort is stable as the first sort is preserved. However, if we had (1,B) (3, A) (3, G) (1, G) (6, K), then the sort would be unstable.
+If we sort again by the second property we have:
+
+(1,B) (3, A) (1, G) (3, G), (6,K)
+
+then the sort is stable as the first sort is preserved. However, if we sorted differently by the second property and got:
+
+(1,B) (3, A) (3, G) (1, G) (6, K)
+
+then the sort would be unstable.
 
 
     \chapter{ Slow Sorts }
@@ -2951,9 +2960,7 @@ Slow sorts are sorts that have the runtime of O(n$^{2}$). Although they should a
         \section{ Bubble Sort }
         
 
-Bubble sort is one of the most basic sorting algorithms, one of the first you should learn.
-
-Its name describes how the algorithm works: bigger bubbles float to the top. Each time we pass through the array, we swap adjacent bigger elements with smaller elements. If we do this and we do not swap any adjacent elements in a pass, then we know we have sorted the array. It can be proved that you will need to pass through the array at most N times. Try to prove this for yourself.
+Bubble sort is one of the most basic sorting algorithms Its name describes how the algorithm works: bigger bubbles float to the top. Each time we pass through the array, we swap adjacent bigger elements with smaller elements. We keep passing through the array bubbling bigger elements to the top and until the array is sorted. It can be proved that you will need to pass through the array at most N times. Try to prove this for yourself.
 
 \subsection{Implementation}
 
@@ -3084,11 +3091,11 @@ Fast sorts are sorts that have a runtime of O(n log n). They are very fast and y
 
 Prerequisites: Heap
 
-Heap sort is a sort that inserts all the element in an array into a min heap and then pops all the element outs. Since a heap guarantees that the root node will be the smallest element, we can store the entire array in a heap and the order that they are popped out of the heap will be in order.
+Heap sort is a sort that takes advantage of the efficiencies of a heap. To sort an array of N elements, we convert it to a heap by using heapify and then we pop out all the elements one by one since can the root element will be either the maximum or minimum element.
 
 \subsection{Implementation}
 
-We can simply use builtin heaps for this sort by adding all the elements to the array which is O(n log n) and then popping all the elements which is O(n log n).
+We can simply use the heap built into the standard library for this sort by adding all the elements to the array which is O(n log n) and then popping all the elements which is O(n log n).
 
 \subsubsection{Code}
 
@@ -3119,7 +3126,7 @@ Merge sort works by breaking down the sorting into smaller pieces. If we want to
 
 Merge sort work be breaking down the problem into smaller and smaller parts and then combining those parts to solve the larger problem.
 
-We can keep splitting the list into half until there each piece has 1 element or no elements. We can then combine the results of each piece repeatedly until the entire list is sorted.
+We can keep splitting the list into half until each piece has zero or one elements. We can then combine the results of each piece repeatedly until the entire list is sorted.
 
 Example:
 
@@ -3155,7 +3162,7 @@ sort([3, 7, 1, 9, 8, 4, 5])
 
 \subsubsection{Code}
 
-We will implement our solution in Java that reflects our formalization in a way that is more inefficient but easier to understand. In our code, we create new arrays to store merged results but we can actually do this in place without extra memory (left as an exercise).
+We will implement our solution in Java that reflects our formalization in a way that is easier to understand but more inefficient. In our code, we create new arrays to store merged results but we can actually do this in place without extra memory (left as an exercise).
 
 \begin{lstlisting}
 // Merges two sorted arrays v1 and v2 into a new sorted array
@@ -3219,11 +3226,7 @@ System.out.println(mergeSort(v));
         \section{ Quick Sort }
         
 
-Quick Sort is another fast sorting algorithm that uses divide and conquer. It is also known as partition-exchange sort or as Hoare's quicksort (named after the author).
-
-In quick sort an element is selected as a "pivot". The list is then divided into two sublists: a list of elements less than (or equal to) the pivot and a list of elements greater than the pivot. Each sublist is sorted (conquered) and then appended together along with the origin pivot.
-
-In the best case (if the pivot that is chosen is exactly the middle element), then the runtime is O(n log n). However, in the worst case, the runtime for Quick Sort is n$^{2}$. Despite its worst case behaviour, quick sort is still popular and in widespread use. The average case behaviour is quite good and there are straightforward methods that can be used to improve the selection of the pivot.
+Quick Sort is another fast sorting algorithm that uses divide and conquer. In quick sort, an element is selected as a "pivot". The list is then divided into two sublists: a list of elements less than (or equal to) the pivot and a list of elements greater than the pivot. Each sublist is sorted and then appended together along with the origin pivot.
 
 \subsection{Implementation}
 
@@ -3243,7 +3246,7 @@ quicksort([x]) = [x]
 Recurrence:
 Let pivot be a random element in array
 
-quicksort(array) = quicksort([elements < pivot]) + [pivot] + quicksort([elements >= pivot])
+quicksort(arr) = quicksort(arr[elements < pivot]) + [pivot] + quicksort(arr[elements >= pivot])
 
 Example:
 quicksort([6,1,4,3,5,7,9,2,8,0])
@@ -3257,7 +3260,7 @@ quicksort([6,1,4,3,5,7,9,2,8,0])
 
 \subsubsection{Code}
 
-We will implement our solution in Java that reflects our formalization in a way that is more inefficient but easier to understand. In our code, we create new arrays to store partitions and merged results but we can actually do this in place without extra memory (left as an exercise).
+We will implement our solution in Java that reflects our formalization in a way that is easier to understand, but more inefficient. In our code, we create new arrays to store partitions and merged results but we can actually do this in place without extra memory (left as an exercise).
 
 \begin{lstlisting}
 // Quick sorts array from [first..last]
@@ -3419,7 +3422,7 @@ public void miracleSort(int[] arr) {
 \item Given two sorted arrays of N numbers, merge the two arrays into an single array of size 2N.
 \item Find the minimum number of swaps to sort an array.
 \item Find the minimum number of adjacent swaps to sort an array.
-\item Let flip(int[] arr, int x) be a function that reverses all elements from arr[0..x]. Devise a function that sorts the array.
+\item Let flip(int[] arr, int x) be a function that reverses all elements from arr[0..x]. Devise an algorithm that sorts the array.
 \end{enumerate}
 
 \part{ Graph Theory }
@@ -3428,7 +3431,7 @@ public void miracleSort(int[] arr) {
 
 Next: Advanced Graph Theory
 
-Graphs are a set of objects where some pairs of objects  called nodes or verticies are usually connected by links called edges. The nodes here can be seen numbered from 1 to 6. There are edges connecting these various nodes.
+Graphs are a set of objects where some pairs of objects  called nodes or verticies are connected by links called edges. The nodes here can be seen numbered from 1 to 6. There are edges connecting these various nodes.
 
 \vspace{5px}\begin{figure}[H]\centering
         \includegraphics[width=0.66\maxwidth{\textwidth}]{graph.png}
@@ -3458,7 +3461,7 @@ A graph can be represented in various ways, but the most useful representations 
         \section{ Adjacency Matrix }
         
 
-An adjacency matrix stores a graph of N nodes with a two dimensional NxN array. We let adjMatrix[i][j] represents the weight between the node i and node j. If we a sparse graph which has many nodes but few edges, the memory storage will be very inefficient and it would be better to use an adjacency list. However, if the graph is very dense, or there are few nodes, then an adjacency matrix is quick and easy to use. Checking if an edge exists between two nodes is O(1).
+An adjacency matrix stores a graph of N nodes with a two dimensional NxN array. We let adjMatrix[i][j] represents the weight between the node i and node j. If we have a sparse graph which has many nodes but few edges, the memory storage will be very inefficient and it would be better to use an adjacency list. However, if the graph is very dense, or there are few nodes, then an adjacency matrix is quick and easy to use. Checking if an edge exists between two nodes is O(1).
 
 Example:
 
@@ -3635,7 +3638,7 @@ public static Vector<Vector<edge>> getAdjList(Vector<edge> edges, int n) {
 
 Prerequisites: Graph Theory
 
-The shortest path is defined as a path from one node to another while trying to minimize a certain property (least number of nodes, smallest total weight). However, shortest paths may have negative weights leads to cycles.
+The shortest path is defined as a path from one node to another while trying to minimize a certain property (least number of nodes, smallest total weight). However, shortest paths may have negative weights which leads to cycles.
 
 
         
@@ -3682,7 +3685,7 @@ If Dijkstra's is implemented using a priority queue, the run time is O(n log n).
 
 If a negative cycle exists within the graph, then the algorithm breaks as it will repeatedly try to take the negative edges. See the Bellman Ford algorithm for finding negative cycles in a graph.
 
-A naive fix for negative cycles would be to offset all edges by the largest negative edge and then subtract it from the resulting total but this does not work. Consider an example where you have the path from A to B. The first path from A-$>$B has a weight of 2 and the second path has weights 1,1,-2. Clearly, the second route has less cost. If we try to make the length positive by adding all costs by 2, we will have the first path of weight 4 and the second path of weights 3,3,0. From the adjusted weights, we determine the first path minimizes total cost which is wrong.
+A naive fix for negative cycles would be to offset all edges by the largest negative edge and then subtract it from the resulting total but this does not work. Consider an example where you have the path from A to B. The first path from A-$>$B has a weight of 2 and the second path has weights 1,1,-2. Clearly, the second route has less cost. If we try to make the length positive by adding all costs by 2, we will have the first path of weight 4 and the second path of weights 3,3,0. From the adjusted weights, the first path minimizes the total cost which is incorrect.
 
 In general, Dijkstra is usually the method for finding the minimum cost between two nodes in any kind of network. For example, Dijkstra can be used in computer networking to find the shortest path between two hosts. It can also be used in flight networking to find the cheapest cost to get from one airport to another airport.
 
@@ -3705,7 +3708,7 @@ We first start at the starting node. The distance from the starting node to the 
         \includegraphics[width=0.66\maxwidth{\textwidth}]{djikstra.png}
         \end{figure}
 
-From the starting node we have two nodes we can reach. The top node has a cost of 3 to reach and the bottom node has a cost of 5 to reach.
+From the starting node, we have two nodes we can reach. The top node has a cost of 3 to reach and the bottom node has a cost of 5 to reach.
 
 \vspace{5px}\begin{figure}[H]\centering
         \includegraphics[width=0.66\maxwidth{\textwidth}]{djikstra1.png}
@@ -3807,8 +3810,8 @@ public static int dijkstra(int[][] adjMatrix, int start, int end) {
 \subsection{Practice Exercises}
 
 \begin{enumerate}
-\item Extend Dijkstra's to find the exact path from start to end (the order of nodes of the shortest path A-$>$B-$>$C).
-\item Extend Dijkstra's to find the best three minimal costs with unique paths from the start node to the end node.
+\item Extend Dijkstra's to return the order of nodes in the shortest path from start to end (e.g. A$\to$B$\to$C).
+\item Extend Dijkstra's to find the best three shortest unique paths from the start node to the end node.
 \item Prove that Dijkstra's algorithm works.
 \end{enumerate}
 
@@ -3890,7 +3893,7 @@ bellmanFord(start,0,0)
 
 \subsubsection{Implementation}
 
-We can rewrite this solution using dynamic programming without recursion.
+We can rewrite this solution using dynamic programming to be more efficient.
 
 \begin{lstlisting}
 class edge {
@@ -3965,7 +3968,7 @@ public static int BellmanFord(Vector<Vector<edge>> adjList, int startNode,
 \subsection{Exercises}
 
 \begin{enumerate}
-\item Prove Bellmand-Ford works.
+\item Prove Bellman-Ford works.
 \item Arbitrage occurs when you can exchange currencies for another and make a profit. For example given a currency exchange table:
 \end{enumerate}
 
@@ -4007,7 +4010,7 @@ Floyd Warshall is a algorithm for finding the shortest distances between all pai
 
 \subsection{Implementation}
 
-Floyd-Warshall uses a dynamic programming approach to finding the shortest path between node A and node B. Every path from node A to node B can be rewritten as a path from A to some node in between plus the path from the node in between to node B. The shortest path from A to B can be found by finding a node C such the shortest path from A to C plus the shortest path from C to B is minimized.
+Floyd-Warshall uses a dynamic programming approach to finding the shortest path between node A and node B. Every path from node A to node B can be rewritten as a path from A to some node in between plus the path from the node in between to node B. The shortest path from A to B can be found by finding a node C such that the shortest path from A to C plus the shortest path from C to B is minimized.
 
 \vspace{5px}\begin{figure}[H]\centering
         \includegraphics[width=0.66\maxwidth{\textwidth}]{floydwarshall1.png}
@@ -4110,7 +4113,7 @@ public static int[][] FloydWarshall(Vector<Vector<edge>> adjList) {
 
 \begin{enumerate}
 \item Prove Floyd Warshall works.
-\item Extend Floyd Warshall to reconstruct the paths from each pair of nodes.
+\item Extend Floyd Warshall to return the order of nodes in a shortest path from the start to end (e.g. A$\to$B$\to$C)..
 \end{enumerate}
 
     \chapter{ Minimum Spanning Tree }
@@ -4182,7 +4185,7 @@ Suppose we have the following graph and we would like the find the minimum spann
         \includegraphics[width=0.66\maxwidth{\textwidth}]{prim.png}
         \end{figure}
 
-We start a random node and for this example we will start at 1.
+We can start at any random node so this example, we will start at 1.
 
 \vspace{5px}\begin{figure}[H]\centering
         \includegraphics[width=0.66\maxwidth{\textwidth}]{prim1.png}
@@ -4224,7 +4227,7 @@ The last node to be chosen is 3 with a cost of 8.
 
 \subsubsection{Java Code}
 
-We can implement Prim's algorithm in Java efficiently with a priority queue of the closest edges with the least cost.
+We can implement Prim's algorithm in Java efficiently with a priority queue of edges using the weight as the comparing property.
 
 \begin{lstlisting}
 class node implements Comparable<node> {
@@ -4386,8 +4389,7 @@ public static int getParent(int parents[], int x) {
 
 public static int Kruskal(Vector<Vector<edge>> adjList) {
   int n = adjList.size();
-  // Parents of each node. Nodes with the same parents are in the same
-  // component.
+  // Array of parents of each node. Nodes with the same parent are in the same component.
   int parents[] = new int[n];
 
   // Set parents of each node to itself.
@@ -4438,7 +4440,7 @@ public static int Kruskal(Vector<Vector<edge>> adjList) {
         
 
 \begin{enumerate}
-\item Given a weighted graph with n nodes, find the smallest total cost to connect all nodes into 3 separate groups. (A single node can be a group)
+\item Given a weighted graph with N nodes, find the smallest total cost to connect all nodes into 3 separate groups. (A single node can be a group)
 \item Same as 3, but a group must contain at least 3 other nodes.
 \end{enumerate}
 
@@ -4448,7 +4450,7 @@ public static int Kruskal(Vector<Vector<edge>> adjList) {
 
 Prerequisites: Graph Theory, Depth First Search
 
-A topological sort or topological order of a directed graph is an order in which every node will come after its ancestors.
+A topological sort or topological order of a directed graph is an order in which every node comes after its ancestors.
 
 \vspace{5px}\begin{figure}[H]\centering
         \includegraphics[width=0.66\maxwidth{\textwidth}]{topsort.png}
@@ -4469,11 +4471,11 @@ But (B, A, C, F, D, E, G) is not a topological ordering because D is an ancestor
 Topological sort can implemented in O(n) time using DFS for a directed acyclic graph (a digraph with no cycles). How it works:
 
 \begin{enumerate}
-\item Start with an empty top order
-\item Pick any unmarked node
-\item Get the DFS preordering from that node for unvisited nodes 
-\item Add the DFS to the head of the current order
-\item Mark every node that has been visited
+\item Start with an empty top order.
+\item Pick any unmarked node.
+\item Get the DFS preordering from that node for unvisited nodes.
+\item Add the DFS to the head of the current order.
+\item Mark every node that has been visited.
 \end{enumerate}
 
 \vspace{5px}\begin{figure}[H]\centering
@@ -4508,12 +4510,14 @@ A connected component is a subgraph where all the vertices in the subgraph conne
 
 Finding the number of distinct connected components can be done using a breadth first search or a depth first search.
 
+Finding the number the connected components for each node can be done with a simple algorithm.
+
 \subsection{Implementation}
 
 \begin{enumerate}
-\item Set each node's parent to itself
-\item Pick an unused edge in the graph that is from node A to node B, if the parent of A is not the same as parent of B then set all nodes whose parent is B to parents of A
-\item Repeat for all edges
+\item Set each node's parent to itself.
+\item Pick an unused edge in the graph that is from node A to node B, if the parent of A is not the same as parent of B then set all nodes whose parent is B to parents of A.
+\item Repeat for all edges.
 \end{enumerate}
 
 \subsubsection{Example}
@@ -4595,7 +4599,7 @@ public static void connectedComponents(int adjMatrix[][]) {
     for (j = 0; j < n; j++) {
       // If the two nodes have an edge.
       if (adjMatrix[i][j] > 0) {
-        // Recursively get parents of each node.
+        // Recursively get root parents of each node.
         int pi = getParent(i, parent);
         int pj = getParent(j, parent);
         // Set parent of one to the other if they are different.
@@ -4612,13 +4616,17 @@ public static void connectedComponents(int adjMatrix[][]) {
         \section{ Cycle Detection }
         
 
-A cycle occurs in a graph when a duplicate node is encountered when traversing a tree using a depth first search. In other words, a cycle occurs when you can reach the same node again.
+A cycle occurs in a graph when a duplicate node is encountered when traversing a tree using a depth first search. In other words, a cycle occurs when you can reach the same node through a path in a graph.
 
 An undirected graph where the number of edges is greater than or equal to the number of nodes will always have cycles.
 
+\vspace{5px}\begin{figure}[H]\centering
+        \includegraphics[width=0.66\maxwidth{\textwidth}]{cycle2.png}
+        \end{figure}
+
 \subsection{Implementation}
 
-We first mark every node as unvisited. We start at each unvisited node and we do a depth first search from that node. We mark each node along the way as temporarily visited and if encounter a temporarily visited node, then we have a cycle. After temporarily visiting the nodes, we mark them as visited. If we reach a visited node again, then we stop since we already checked if that node had a cycle.
+We first mark every node as unvisited. We start at each unvisited node and we do a depth first search from that node. We mark each node along the way as temporarily visited and if we encounter a temporarily visited node, then we have a cycle. After temporarily visiting the nodes, we mark them as visited. If we reach a visited node again, then we stop since we already checked if that node had a cycle.
 
 \begin{lstlisting}
 public static boolean hasCycle(int[][] adjMatrix) {
@@ -4670,7 +4678,7 @@ public static boolean hasCycleAt(int[][] adjMatrix, int i, int visited[]) {
     \chapter{ Searches }
         
 
-Searches are used to find solutions to problems and there many ways to search for a solution. Here are some generic searches that can be applied to many different problems.
+Searches are used to find solutions to problems and there are many ways to search for a solution. Here are some generic searches that can be applied to many different problems.
 
 
         \section{ Binary Search }
@@ -4700,7 +4708,7 @@ So we know that: 1 $<$= number $<$ 50. Since the number is less than 50, then we
 \item I say lower.
 \end{itemize}
 
-So we know that 1≤number$<$25. Once again we made the problem half as hard again. Note that at every step we will make the problem half as hard. We need to pick the next middle number which is either 12 or 13, but we are indifferent because it will still tell us the most information (unless you get lucky).
+So we know that 1 $<$= number $<$ 25. Once again, we made the problem half as hard. Note that at every step we will make the problem half as hard. We need to pick the next middle number which is either 12 or 13, but we are indifferent because it will still tell us the most information (unless you get lucky).
 
 \begin{itemize}
 \item You guess 13.
@@ -4753,7 +4761,7 @@ void binarySearch (int ans, int minVal, int maxVal) {
 
 Suppose we have a sorted array and we want to find if a number X is in the array. We can do this easily by looping through the entire array and searching for the element we want. However, we can do better with binary search.
 
-Let's say we start with the array [-6, -5, 1, 2, 5, 7, 10, 17, 23, 29] and we are looking for the element 2. We pick the middle element in the array which is 7 and we compare it with 5. Since 2 $<$ 7, and everything in the last half the array is greater than 7, then everything in the last half the array is greater than 2 and there is no point searching there. Thus we have halved the work we need to do. We can do the same thing by picking the middle element of the first half [-6, -5, 1, 2, 5] which is 1. Since 2 $>$ 1 and everything in the first half is less than 1, then everything in the first quarter is less than 1 and there is no point searching there. Thus the element we are looking for must be in the 2nd quarter of the array [2, 5].
+Let's say we start with the array [-6, -5, 1, 2, 5, 7, 10, 17, 23, 29] and we are looking for the element 2. We pick the middle element in the array which is 7 and we compare it with 5. Since 2 $<$ 7, and everything in the last half the array is greater than 7, then everything in the last half the array is greater than 2 and there is no point searching there. Thus we have halved the work we need to do. We can do the same thing by picking the middle element of the first half [-6, -5, 1, 2, 5] which is 1. Since 2 $>$ 1 and everything in the first half is less than 1, then everything in the first quarter is less than 1 and there is no point searching there. Thus the element 2 we are looking for should be in the 2nd quarter of the array [2, 5] which it is and we can return that it is found.
 
 \begin{lstlisting}
 public static boolean exists(int[] arr, int x) {
@@ -4778,7 +4786,7 @@ public static boolean exists(int[] arr, int x) {
 \subsection{Exercises}
 
 \begin{enumerate}
-\item Given a sorted array, find the the number of elements between the number A and number B inclusive.
+\item Given a sorted array, find the number of elements between the number A and number B inclusive.
 Example: 1, 2, 4, 6, 8, 10, 16, 20. Given A=5 and B=15, the number of elements between A and B is 3 (6, 8, 10).
 \item Given two sorted arrays, find the number of duplicate elements.
 \item Given two decimal numbers A and B, find A/B without using the division operation or using decimals.
@@ -4798,7 +4806,7 @@ If there are multiple local minimum and maximum values, ternary search will only
 
 \subsection{Implementation}
 
-Suppose we have a function f(x) with only one max point between A and B. We want to find the point f(M) where f(M) is maximum between A and B.
+Suppose we have a function f(x) with only one max point between A and B. We want to find the point (M, f(M)) where f(M) is the maximum between A and B.
 
 We split the range from A to B into three intervals. At every iteration of our algorithm, we can narrow down the range by 1/3 and we have a new interval. At every step, we can remove one of the intervals based on the following:
 
@@ -4811,12 +4819,12 @@ Let m$_{1}$ by 1/3 of the way from A and B and let m$_{2}$ be 2/3 of the way fro
 Case 1 : f(m$_{1}$) $<$ f(m$_{2}$)
 
 \begin{itemize}
-\item Case 1.1:  m$_{1}$ $<$ m$_{2}$ $<$ M
+\item Case 1.1:  m$_{1}$ $<$ m$_{2}$ $<$ M, so m$_{1}$ $<$ M
 
 \vspace{5px}\begin{figure}[H]\centering
         \includegraphics[width=0.66\maxwidth{\textwidth}]{ternarycase11.png}
         \end{figure}
-\item Case 1.2: m$_{1}$ $<$ M $<$ m$_{2}$
+\item Case 1.2: m$_{1}$ $<$ M $<$ m$_{2}$, so m$_{1}$ $<$ M
 
 \vspace{5px}\begin{figure}[H]\centering
         \includegraphics[width=0.66\maxwidth{\textwidth}]{ternarycase12.png}
@@ -4824,8 +4832,7 @@ Case 1 : f(m$_{1}$) $<$ f(m$_{2}$)
 \item Case 1.3: M $<$ m$_{1}$ $<$ m$_{2}$ is not possible.
 \end{itemize}
 
-Thus if f(m$_{1}$) $<$ f(m$_{2}$), then M $>$ m$_{1}$ thus the maximum point cannot be in the first third and we can remove it. The new range becomes from m$_{1}$ to B.
-
+Thus if f(m$_{1}$) $<$ f(m$_{2}$), then m$_{1}$ $<$ M, so we only need to search from m$_{1}$ to B.
 \vspace{5px}\begin{figure}[H]\centering
         \includegraphics[width=0.66\maxwidth{\textwidth}]{ternarycase1.png}
         \end{figure}
@@ -4833,12 +4840,12 @@ Thus if f(m$_{1}$) $<$ f(m$_{2}$), then M $>$ m$_{1}$ thus the maximum point can
 Case 2: f(m$_{1}$) $>$= f(m$_{2}$)
 
 \begin{itemize}
-\item Case 2.1: m$_{1}$ $<$ M $<$ m$_{2}$
+\item Case 2.1: m$_{1}$ $<$ M $<$ m$_{2}$, so M $<$ m$_{2}$
 
 \vspace{5px}\begin{figure}[H]\centering
         \includegraphics[width=0.66\maxwidth{\textwidth}]{ternarycase21.png}
         \end{figure}
-\item Case 2.2: x $<$ m$_{1}$ $<$ m$_{2}$
+\item Case 2.2: M $<$ m$_{1}$ $<$ m$_{2}$, so M $<$ m$_{2}$
 
 \vspace{5px}\begin{figure}[H]\centering
         \includegraphics[width=0.66\maxwidth{\textwidth}]{ternarycase22.png}
@@ -4846,7 +4853,7 @@ Case 2: f(m$_{1}$) $>$= f(m$_{2}$)
 \item Case 2.3: m$_{1}$ $<$ m$_{2}$ $<$ M is not possible
 \end{itemize}
 
-Thus, if f(m$_{1}$) $>$= f(m$_{2}$), then M $<$ m$_{2}$ thus the maximum point cannot be in the last third and we can remove it. The new range must be from A to m$_{2}$.
+Thus, if f(m$_{1}$) $>$= f(m$_{2}$), then M $<$ m$_{2}$, so we only need to search from A to m$_{2}$.
 
 \vspace{5px}\begin{figure}[H]\centering
         \includegraphics[width=0.66\maxwidth{\textwidth}]{ternarycase2.png}
@@ -4864,7 +4871,7 @@ Suppose we have a function f(x) with a maximum point between A and B.
         \includegraphics[width=0.66\maxwidth{\textwidth}]{ternarysearch.png}
         \end{figure}
 
-We find m1 (1/3) point and m2 (2/3) point between A and B.
+We find m$_{1}$ (1/3) point and m$_{2}$ (2/3) point between A and B.
 
 \vspace{5px}\begin{figure}[H]\centering
         \includegraphics[width=0.66\maxwidth{\textwidth}]{ternarysearch2.png}
@@ -4882,7 +4889,7 @@ Since f(m$_{1}$) $<$ f(m$_{2}$), then we can reduce the range from m$_{1}$ to B.
         \includegraphics[width=0.66\maxwidth{\textwidth}]{ternarysearch4.png}
         \end{figure}
 
-Since f(m$_{1}$) $<$ f(m$_{2}$), then we can reduce the range from m$_{1}$ to B.We find the new m$_{1}$ and m$_{2}$ points.
+Since f(m$_{1}$) $<$ f(m$_{2}$), then we can reduce the range from m$_{1}$ to B. We find the new m$_{1}$ and m$_{2}$ points.
 
 \vspace{5px}\begin{figure}[H]\centering
         \includegraphics[width=0.66\maxwidth{\textwidth}]{ternarysearch5.png}
@@ -4938,11 +4945,13 @@ public double tern(double a,double b){
 
 Prerequisites: Recursion, Stack
 
-A depth first search on a tree is a traversal of a tree that goes as far down as a branch as possible and then back.
+A depth first search (DFS) is a search that goes as far as possible before backtracking. The search requires a stack but DFS is usually implemented with recursion which uses the system stack. So most of the time you do not need an explicit stack.
 
-A DFS can also be used on a graph to transverse it by ignoring nodes that have already been visited.
-
-A DFS requires a stack but DFS is usually implemented with recursion which uses the system stack. So most of the time you do not need an explicit stack.
+\begin{enumerate}
+\item Push the root into the stack.
+\item Pop the first element from the stack and push all of its non-visited neighbours to the stack.
+\item Repeat until the stack is empty.
+\end{enumerate}
 
 \vspace{5px}\begin{figure}[H]\centering
         \includegraphics[width=0.66\maxwidth{\textwidth}]{dfs.png}
@@ -4960,13 +4969,13 @@ public class Tree {
 }
 \end{lstlisting}
 
-\subsubsection{Binary Tree Transversal}
+\subsubsection{Binary Tree Traversal}
 
 \vspace{5px}\begin{figure}[H]\centering
         \includegraphics[width=0.66\maxwidth{\textwidth}]{dfs.png}
         \end{figure}
 
-Implementation for outputting a binary tree in order from left to right using DFS
+Implementation for outputting a binary tree in order from left to right using DFS:
 
 \begin{lstlisting}
 public static void DFS(Tree cur) {
@@ -4985,7 +4994,7 @@ public static void DFS(Tree cur) {
         \includegraphics[width=0.66\maxwidth{\textwidth}]{dfs-preorder.png}
         \end{figure}
 
-Implementation for outputting a binary tree in DFS pre order
+Implementation for outputting a binary tree in DFS pre order:
 
 \begin{lstlisting}
 public static void DFS(Tree cur) {
@@ -5004,7 +5013,7 @@ public static void DFS(Tree cur) {
         \includegraphics[width=0.66\maxwidth{\textwidth}]{dfs-postorder.png}
         \end{figure}
 
-Implementation for outputting a binary tree in DFS post order
+Implementation for outputting a binary tree in DFS postorder:
 
 \begin{lstlisting}
 public static void DFS(Tree cur) {
@@ -5017,9 +5026,9 @@ public static void DFS(Tree cur) {
 }
 \end{lstlisting}
 
-\subsubsection{Graph Transversal}
+\subsubsection{Graph Traversal}
 
-This is a DFS implementation for traversing a bidirectional graph with positive weights.
+This is a DFS implementation for traversing a bidirectional graph with positive weights:
 
 \begin{lstlisting}
 public static void DFS_graph(int[][] adjMatrix, int cur, boolean[] visited) {
@@ -5040,9 +5049,9 @@ public static void DFS_graph(int[][] adjMatrix, int cur, boolean[] visited) {
 \subsection{Exercises}
 
 \begin{enumerate}
-\item Given a binary tree, find the height of it (the longest path from root to leaf).
-\item Given a graph and a node, determine if a path exists to that node.
-\item Given a node and a binary tree, find the next node for post order, pre order and normal order.
+\item Given a binary tree, find the its height (the longest path from the root to a leaf)
+\item Given a graph and two nodes X and Y, determine if a path exists between X and Y.
+\item Given a node and a binary tree, find the next node in post order, pre order and normal order.
 \end{enumerate}
 
         \section{ Breadth First Search }
@@ -5050,12 +5059,12 @@ public static void DFS_graph(int[][] adjMatrix, int cur, boolean[] visited) {
 
 Prerequisites: Recursion, Queue
 
-A breadth first search is a search that transverses level by level. For example in a tree, it will transverse everything from the first layer, to the second layer, the third layer and all the way down to the last layer. BFS is implemented with a queue.
+A breadth first search is a search that traverses level by level. For example, in a tree, the search will transverse everything from the first layer, to the second layer, the third layer and all the way down to the last layer. BFS is implemented with a queue.
 
 \begin{enumerate}
-\item Push root into queue
-\item Pop element from queue and push all non visited neighbours
-\item Repeat 2 until queue is empty
+\item Push the root into the queue.
+\item Pop the first element from the queue and push its non-visited neighbours.
+\item Repeat 2 until the queue is empty.
 \end{enumerate}
 
 \vspace{5px}\begin{figure}[H]\centering
@@ -5090,12 +5099,12 @@ void bfs(Node root) {
 \item Given a tree of letters (A is the root), output the tree using BFS with separators between levels:
 
 \begin{itemize}
-\item Example: A-$>$B, B-$>$D,B-$>$C, C-$>$G will output A | B | C D | G.
+\item Example: A$\to$B, B$\to$D,B$\to$C, C-$>$G will output A | B | C D | G.
 \end{itemize}
-\item Given a tree of letters, and two letters X and Y determine if X is an ancestor of Y or Y is a ancestor of X or neither. An ancestor of a node is another node that is the root of a subtree that contains that node. Or simply parent of the node, grand parent, great grandparents etc.
+\item Given a tree of letters, and two letters X and Y determine if X is an ancestor of Y or if Y is a ancestor of X or neither. X is an ancestor of Y if X's subtrees contain Y.
 
 \begin{itemize}
-\item Example: A-$>$B, B-$>$C, B-$>$D, D-$>$G,  A is a parent of both C and D but G and C are not ancestors of each other
+\item Example: A$\to$B, B$\to$C, B$\to$D, D$\to$G,  A is a parent of both C and D but G and C are not ancestors of each other
 \end{itemize}
 \item Given a binary tree and a node in the binary tree, find the next node in BFS order of the tree.
 \end{enumerate}
@@ -5105,7 +5114,7 @@ void bfs(Node root) {
 
 Prerequisites: Depth First Search, Breadth First Search
 
-Flood fill is a search that fills a grid from a start point to find the areas connected to the start point. For example the "bucket fill" in Photoshop or MS Paint uses flood fill to fill in the connecting areas with the same colour.
+Flood fill is a search that starts at a point and finds the areas connected to the start point. For example, the "bucket fill" in Photoshop or MS Paint uses flood fill to fill in the connecting areas of the same colour.
 
 Flood fill can be implemented using a BFS or DFS.
 
@@ -5113,9 +5122,11 @@ Flood fill can be implemented using a BFS or DFS.
         \includegraphics[width=0.66\maxwidth{\textwidth}]{floodfill.png}
         \end{figure}
 
+The above grid shows how flood fill works. The number in each cell represents the number of steps from the starting cell and the black cells are blocked off. We start at the cell marked as 0 and we reach all adjacent cells.
+
 \subsection{Bucket Fill}
 
-Given an n x m matrix and a start point and two colors (src and dst), we want to replace all the cells in the matrix that are connected to the start point with the color src and change to color dst as well as output the number of cells changed.
+Given an N x M matrix and a start point and two colors (src and dst), we want to replace all the cells in the matrix that are connected to the start point with the color src and change to color dst as well as output the number of cells changed.
 
 Example:
 
@@ -5233,9 +5244,9 @@ The number of rooms is 2,  the perimeter of the first room is 12 and the perimet
         \section{ Backtracking }
         
 
-Backtracking is a search that find all possible solutions by enumerating on partial solutions. Backtracking can be done using DFS or BFS. Generally, DFS will be better than BFS because backtracking is used to enumerate many, many solutions. Since BFS requires storing each "level" of solutions and DFS requires storing each "height" of the solution.
+Backtracking is a search that find all possible solutions by enumerating on partial solutions. Backtracking can be done using DFS or BFS. Generally, DFS will be better than BFS because backtracking is used to enumerate many, many solutions. Since BFS requires storing each "level" of solutions and DFS requires storing each "height" of the solution, DFS will have a smaller memory footprint. In most backtracking problems, the "levels" of the solutions will be very large but the "height" will be small. Thus, DFS will be the preferred solution for most backtracking problems.
 
-Backtracking is similar to recursion, but instead of generating all the solutions, we will generate each solution one by one. In this way, we only need to store the current solution in memory whereas in normal recursion we need to store all the solutions into memory.
+Backtracking is similar to recursion, but instead of generating all the solutions, we will generate each solution one by one. When backtracking, we only need to store the current solution in memory, whereas with normal recursion we need to store all the solutions into memory.
 
 Since backtracking requires enumerating through all solutions, it is usually slow with runtimes such as O(n!) or O(2$^{n}$).
 
@@ -5272,7 +5283,7 @@ backtrack( empty_solution)
 
 Given a set of numbers S of length N, output all subsets of S.
 
-For example S=(1,2,3,4). The subsets encodings of (1,2,3,4):
+For example S=(1,2,3,4). The subsets of (1,2,3,4):
 
 \begin{itemize}
 \item ()
@@ -5282,7 +5293,7 @@ For example S=(1,2,3,4). The subsets encodings of (1,2,3,4):
 \item (1,2,3,4)
 \end{itemize}
 
-We want to be able to enumerate all the subsets of S so we need to find a way to encode a subset of an array. We can use a binary number of length N to encode a subset of an array of length N. For example a 1 represents we use a number in the set and a 0 means we don't use a number in the set.
+We want to be able to enumerate all the subsets of S so we need to find a way to encode a subset of an array. We can use a binary number of length N to encode a subset of an array of length N. A one at position x will indicate that the xth number is in the set. For example, 1001 means the first and fourth is in the set so we have (1,4).
 
 So above:
 
@@ -5305,20 +5316,20 @@ So above:
 \item (1,2,3,4) = 1111
 \end{itemize}
 
-At each position we either take or don't take the number in the set and we can do this for each number. We can enumerate through all these encoding by first starting with 0 or 1 and appending more 0's or 1's.
+At each position, we either use or don't use the number in the set. We can enumerate through all possible encodings by starting with 0 or 1 and appending more 0's or 1's.
 
 \subsubsection{Recursive Method}
 
-Here is the way we would do this problem with recursion:
+Here is how we would solve this problem with recursion:
 
 \begin{lstlisting}
 Start with []
 Add 1 and 0 to the right of each binary number in the array
 Repeat until N
 [0,1]
-[00,01,10,11]
-[000,001,010,011,100,101,110,111]
-[0000,0001,0010,0011,0100,0101,0110,0111,1000,1001,1010,1011,1100,1101,1110,1111]
+[00, 01, 10, 11]
+[000, 001, 010, 011, 100, 101, 110, 111]
+[0000, 0001, 0010, 0011, 0100, 0101, 0110, 0111, 1000, 1001, 1010, 1011, 1100, 1101, 1110, 1111]
 Let S be an array of N integers
 Let subsets(set, n) return an array of subsets of S from 1 to n
  
@@ -5331,15 +5342,15 @@ subsets(set,n) = subsets([sub+0 for sub in set] + [sub+1 for sub in set], n)
 Example:
 
 subsets([],4)
-subsets([0,1],3)
-subsets([00,01,10,11],2)
-subsets([000,001,010,011,100,101,110,111],1)
-subsets([0000,0001,0010,0011,0100,0101,0110,0111,1000,1001,1010,1011,1100,1101,1110,1111],0)
+subsets([0, 1], 3)
+subsets([00, 01, 10, 11], 2)
+subsets([000, 001, 010, 011, 100, 101, 110, 111], 1)
+subsets([0000, 0001, 0010, 0011, 0100, 0101, 0110, 0111, 1000, 1001, 1010, 1011, 1100, 1101, 1110, 1111], 0)
 =
-[0000,0001,0010,0011,0100,0101,0110,0111,1000,1001,1010,1011,1100,1101,1110,1111]
+[0000, 0001, 0010, 0011, 0100, 0101, 0110, 0111, 1000, 1001, 1010, 1011, 1100, 1101, 1110, 1111]
 \end{lstlisting}
 
-Here is the way we would do this problem with backtracking, however it takes a lot of memory to store ALL the solutions. Instead of building all the solutions, we can build each solution one by one and only store one solution at a time.
+However recursion uses a lot of memory to store all the solutions. Instead of building all the solutions, we can build each solution one by one and only store one solution at a time.
 
 \vspace{5px}\begin{figure}[H]\centering
         \includegraphics[width=0.66\maxwidth{\textwidth}]{enumerate-sets.png}
@@ -5396,7 +5407,7 @@ subset(0,'1111')
 
 \subsubsection{Implementation}
 
-We can implement subsets in code using recursion. Note that we only store one solution as the array use[] and we keep changing it as we iterate through partial solutions.
+We can implement backtracking with recursion, but we pass in the same array instead of creating new ones. We only store one set at a time in the use[] array.
 
 \begin{lstlisting}
 void subsets(int arr[], boolean use[], int i) {
@@ -5419,7 +5430,7 @@ subsets([1, 2, 3, 4], [false, false, false], 0);
 
 \subsection{N Queen Problem}
 
-Find the number of ways to place N queens on a NxN board without any of them attacking each other. Queens attack each other by being along the same row, column or diagonal.
+Find the number of ways to place N queens on a NxN board without any of them attacking each other. Queens can attack anything along its row, column or diagonal.
 
 \vspace{5px}\begin{figure}[H]\centering
         \includegraphics[width=0.66\maxwidth{\textwidth}]{nqueen.jpg}
@@ -5433,7 +5444,7 @@ First we need to be able to encode a solution. There must be only one queen in e
 
 If we guarantee that all rows are unique and we have all columns filled, then we can guarantee that all the columns are unique as well.
 
-To encode a diagonal we can use a clever equation to represent the diagonal. We can notice that every positive diagonal has the same value with row+col.
+To encode a diagonal we can use a clever equation to represent the diagonal. Notice that every positive diagonal has the same value for row+col.
 
 d1 = row+column
 
@@ -5443,9 +5454,9 @@ N=6:
         \includegraphics[width=0.66\maxwidth{\textwidth}]{nqueen1.png}
         \end{figure}
 
-Every square with the same d1 is in the same diagonal ( / ). For example on a 6x6 board: (0,2), (1,1), (2,0) all have d1 = 2 and are all along the same diagonal.
+Every square with the same d1 is in the same diagonal ( / ). For example, on a 6x6 board: (0,2), (1,1), (2,0) all have d1 = 2 and are all along the same diagonal.
 
-We can also notice that every negative diagonal has the same value of (N-row)+column. The second diagonal can also be found using another equation:
+We can also see that every negative diagonal has the same value for (N-row)+column. The second diagonal can also be found using the following equation:
 
 d2 = (N-row-1)+column
 
@@ -5455,7 +5466,7 @@ N=6:
         \includegraphics[width=0.66\maxwidth{\textwidth}]{nqueen2.png}
         \end{figure}
 
-Everything with the same d2 will be on the same diagonal. For example on a 6x6 board (0,0),(1,1),(2,2) have d2 = 5 and are all along the same diagonal.
+Everything with the same d2 will be on the same diagonal. For example, on a 6x6 board, (0,0),(1,1),(2,2) have d2 = 5 and are all along the same diagonal.
 
 Now that we get can encode rows, columns, and diagonals, we can use it to make checking solutions more easy. We can keep sets that track with rows/columns/diagonals are currently filled and check our solution to make sure we do not have anything in the same row/column/diagonal.
 
@@ -5562,6 +5573,7 @@ public int nqueen(int col, boolean row[], boolean d1[], boolean d2[]) {
   int sum = 0;
 
   for (int r = 0; r < n; r++) {
+    // Check queen coordinates are valid.
     if (!row[r] && !d1[r + col] && !d2[n - 1 - r + col]) {
       // Mark rows and diagonals as filled.
       row[r] = true;
@@ -5611,37 +5623,37 @@ Dynamic programming uses memoization by solving subproblems to solve the more co
 Like recursion, dynamic programming requires two things:
 
 \begin{itemize}
-\item A base case and
-\item A subproblem that can be reduced into smaller subproblems 
+\item a base case, and
+\item a subproblem that can be reduced into smaller subproblems 
 \end{itemize}
 
 To find a dynamic programming solution to a problem, first start with a recursive solution and then use memoizations to optimize for duplicate calculations.
 
 \subsection{Fibonacci Sequence}
 
-The Fibonacci sequence is determined by f(n) = f(n-1)+f(n-2) where f(0) = 1 and f(1) = 1.
+The Fibonacci sequence is determined by fib(n) = fib(n-1) + fib(n-2) where fib(0) = 1 and fib(1) = 1.
 
-If we calculate f(5) we have:
+If we calculate fib(5) we have:
 
 \begin{lstlisting}
-f(5) 
-= f(4) + f(3) 
-= f(3) + f(2) + f(2) + f(1) 
-= f(2) + f(1) + f(1) + f(0) + f(1) + f(0) + f(1) 
-= f(1) + f(0) + f(1) + f(1) + f(0) + f(1) + f(0) + f(1) 
+fib(5) 
+= fib(4) + fib(3) 
+= fib(3) + fib(2) + fib(2) + fib(1) 
+= fib(2) + fib(1) + fib(1) + fib(0) + fib(1) + fib(0) + fib(1) 
+= fib(1) + fib(0) + fib(1) + fib(1) + fib(0) + fib(1) + fib(0) + fib(1) 
 = 1 + 1 + 1 + 1 + 1 + 1 + 1
 = 8
 \end{lstlisting}
 
-However we are computing multiple values more than once. When we compute f(5) we need to compute f(4) and f(3) but f(3) is already computed when we compute f(4) and thus we have to recompute it again. We can avoid this redundancy by "building up". We can calculate f(2), then f(3) then f(4) and finally f(5) and we won't have duplicate calculations.
+However we are computing multiple values more than once. When we compute fib(5) we need to compute fib(4) and fib(3) but fib(3) is already computed when we compute fib(4) and thus we have to recompute it again. We can avoid this redundancy by "building up". We can calculate fib(2), then fib(3) then fib(4) and finally fib(5) and we won't have duplicate calculations.
 
 \begin{lstlisting}
-f(0) = 1
-f(1) = 1
-f(2) = f(1) + f(0) = 2
-f(3) = f(2) + f(1) = 3
-f(4) = f(3) + f(2) = 5
-f(5) = f(4) + f(3) = 8
+fib(0) = 1
+fib(1) = 1
+fib(2) = fib(1) + fib(0) = 2
+fib(3) = fib(2) + fib(1) = 3
+fib(4) = fib(3) + fib(2) = 5
+fib(5) = fib(4) + fib(3) = 8
 \end{lstlisting}
 
 \subsubsection{Formalization}
@@ -5649,7 +5661,7 @@ f(5) = f(4) + f(3) = 8
 Formalization using recursion:
 
 \begin{lstlisting}
-Let f(n) be the nth Fibonacci number
+Let fib(n) be the nth Fibonacci number
 
 Base case:
 fib(0) = 1, fib(1) = 1
@@ -5658,11 +5670,11 @@ Subproblem:
 fib(n) = fib(n - 1) + fib(n - 2)
 
 Example:
-f(5) 
-= f(4) + f(3) 
-= f(3) + f(2) + f(2) + f(1) 
-= f(2) + f(1) + f(1) + f(0) + f(1) + f(0) + f(1) 
-= f(1) + f(0) + f(1) + f(1) + f(0) + f(1) + f(0) + f(1) 
+fib(5) 
+= fib(4) + fib(3) 
+= fib(3) + fib(2) + fib(2) + fib(1) 
+= fib(2) + fib(1) + fib(1) + fib(0) + fib(1) + fib(0) + fib(1) 
+= fib(1) + fib(0) + fib(1) + fib(1) + fib(0) + fib(1) + fib(0) + fib(1) 
 = 1 + 1 + 1 + 1 + 1 + 1 + 1
 = 8
 \end{lstlisting}
@@ -5700,7 +5712,7 @@ fib[10] = 89
 Implementation for recursion:
 
 \begin{lstlisting}
-public int fib(int n){
+public int fib(int n) {
   if (n == 0 || n == 1) {
     return 1;
   }
@@ -5712,10 +5724,10 @@ Implementation  for dynamic programming:
 
 \begin{lstlisting}
 public int fib(int n) {
-  int fibArr[] = new int[n];
+  int fibArr[] = new int[n+1];
   fibArr[0] = 1;
   fibArr[1] = 1;
-  for (int x = 2; x < n; x++) {
+  for (int x = 2; x <= n; x++) {
     fibArr[x] = fibArr[x - 1] + fibArr[x - 2];
   }
   return fibArr[n];
@@ -5724,15 +5736,15 @@ public int fib(int n) {
 
 \subsection{Coin Problem}
 
-Let's say that you wanted to make change for \$51 using the smallest amount of bills (\$1, \$2, \$5, \$10, \$20). We can use a greedy approach by always taking the highest bill that can be subtracted to find the smallest amount of change. 51 - 20 = 31 - 20 = 11 - 10 = 1. So the smallest amount of change would be comprised of 2 x \$20 + 1 x \$10 + 1 for a total of 5 bills. This solution seems very easy to implement, but what if the bills were not so nice?
+Let's say that you wanted to make change for \$51 using the smallest amount of bills (\$1, \$2, \$5, \$10, \$20). We can use a greedy approach by always taking the highest bill that can be subtracted to find the smallest amount of change. 51 - 20 = 31 - 20 = 11 - 10 = 1. So the smallest amount of change would be comprised of 2 x \$20 + 1 x \$10 + 1 x \$! for a total of 5 bills. This solution seems very easy to implement, but what if the bills were not so nice?
 
-Imagine that an alien currency was in denominations of \$3, \$5, \$7 and \$11. What would be the smallest amount of bills to make change for \$13? Note that a greedy approach does not work for this alien currency. For example: 13 - 11 = 2. It is impossible to make change using the greedy approach. Note that we can make change with 2 x \$5 + 1 x \$3 = \$13.
+Imagine that an alien currency with denominations of \$3, \$5, \$7 and \$11. What would be the smallest amount of bills to make change for \$13? Note that a greedy approach does not work for this alien currency. For example: 13 - 11 = 2. It is impossible to make change using the greedy approach. Note that we can make change with 2 x \$5 + 1 x \$3 = \$13.
 
 Let's define the problem more formally: Given a list of bills each with a positive denominations, find the lowest amount of bills required to make C dollars or return impossible if it cannot be done.
 
 The base case for 0 dollars is very simple. There are 0 bills to make 0 dollars.
 
-Lets try to simply this problem. Assume we only have one bill worth d dollars. If we have C dollars and we want to use the bill, then we will have C-d dollars left. So the minimum bills to make C dollars is the minimum number of bills to make (C - d) bills plus the 1 for the bill we used. For example, we want to make 10 dollars and we only have 2 dollar bills. If we use a 2 dollar bill, then the minimum bills required to make 10 dollars is the minimum number of bills required to make 8 dollars plus that 2 dollar bill. To find the minimum number of bills required to make 8 dollars, is the same problem as finding the minimum number of bills required to make 10 dollars. As you can see it is the same as before and it is a recursive function!
+Lets try to simply this problem. Assume we only have one bill worth d dollars. If we have C dollars and we want to use the bill, then we will have C-d dollars left. So the minimum bills to make C dollars is the minimum number of bills to make (C - d) bills plus the 1 for the bill we used. For example, we want to make 10 dollars and we only have 2 dollar bills. If we use a 2 dollar bill, then the minimum bills required to make 10 dollars is the minimum number of bills required to make 8 dollars plus that 2 dollar bill. Finding the minimum number of bills required to make 8 dollars, is the same problem as finding the minimum number of bills required to make 10 dollars. Thus we are solving a reduced version of the same problem and this is our recurrence relation.
 
 Formalization for recursion:
 
@@ -5761,7 +5773,7 @@ bills(10)
 = 5
 \end{lstlisting}
 
-We could implement this using dynamic programming but it will not give us much benefit since the recursion has no recalculations.
+We could implement this using dynamic programming, but it will not give us much benefit since the recursion has no recalculations.
 
 Formalization for dynamic programming:
 
@@ -5791,15 +5803,15 @@ bills[9] = impossible
 bills[10] = 5
 \end{lstlisting}
 
-Now let's consider the problem with multiple bills of denominations d1, d2 .... dn and we want to make C dollars. If we use a d1 bill, then we will have C-d1 dollars left and similarly if we use a d2 bill then we will have C-d2 dollars left. More generally, if we use a dn bill, then we will have C-dn dollars left. If we want to find the minimum bills to make C dollars we should try to use every bill and see which requires the minimum number of bills. So the minimum bills to make C dollars is the minimum of C - dn dollars plus one more dn bill for all denominations. However, finding the minimum number of bills to make C-dn dollars is the same problem as finding the number of C dollars! Thus we found the subproblem and a recursive formula.
+Now let's consider the problem with multiple bills of denominations d1, d2 .... dn and we want to make C dollars. If we use a d1 bill, then we will have C-d1 dollars left and similarly if we use a d2 bill then we will have C-d2 dollars left. More generally, if we use a dn bill, then we will have C-dn dollars left. If we want to find the minimum bills to make C dollars we should try to use every bill and see which requires the minimum number of bills. So the minimum number of bills to make C dollars is the minimum of C - dn dollars plus one more dn bill for all denominations. However, finding the minimum number of bills to make C-dn dollars is the same problem as finding the number of C dollars! Thus we found the subproblem and a recursive formula.
 
-For example, if we have \$7 and we have bills \$3,\$4, and \$5, the minimum number of bills to make \$7 is the minimum of the minimum number of bills to make \$4 plus one more \$3 bill, minimum number of bills to make \$3 plus one more \$4 or the minimum number of bills to make \$2 plus one more \$5 bill.
+For example, if we have \$7 and we have bills \$3, \$4, and \$5, the minimum number of bills to make \$7 is the minimum of the minimum number of bills to make \$4 plus one more \$3 bill, minimum number of bills to make \$3 plus one more \$4 or the minimum number of bills to make \$2 plus one more \$5 bill.
 
 Formalization for recursion:
 
 \begin{lstlisting}
-Let denom be a list of denominations
-Let bills(C) be the minimum number of bills from denominations to make C dollars
+Let denom[] be a list of denominations
+Let bills(C) be the minimum number of bills to make C dollars from denominations denom[]
 
 Base Cases:
 bills(C) = impossible if C <= 0
@@ -5829,13 +5841,13 @@ bill(7)
 = 2
 \end{lstlisting}
 
-However note, that we are recomputing multiple things. For example we are recomputing bill(0) multiple times and bill(-1) multiple times. If instead we worked the solution up instead of down, we can find bill(C) more efficiently. We can do this by computing bill(c) as c goes from 0 to C. Eg. we compute bill(0) then bill(1) then bill(2) .... until bill(C).
+However, note that we are recomputing partial solutions. For example, we are recomputing bill(0) multiple times and bill(-1) multiple times. Instead, if we built up the solution from bill(0), we could find bill(C) more efficiently. We can do this by computing bill(c) as c goes from 0 to C. E.g. we compute bill(0) then bill(1) then bill(2) .... until bill(C).
 
 Putting it all together:
 
 \begin{lstlisting}
-Let bills[C] be the smallest amount of bills to make the amount C, or impossible if it is not possible
-Let denom be an array of denominations
+Let denom[] be an array of denominations
+Let bills[C] be the smallest amount of bills to make the amount C using denominations denom[], or impossible if it is not possible
 
 Base case:
 bills[0] = 0
@@ -5860,6 +5872,54 @@ bills[6] = 2 (bills[3]+1)
 bills[7] = 2 (bills[3]+1 or bills[4]+1)
 \end{lstlisting}
 
+\subsection{Number of Paths}
+
+\vspace{5px}\begin{figure}[H]\centering
+        \includegraphics[width=0.66\maxwidth{\textwidth}]{recursion_grid.png}
+        \end{figure}
+
+We first examined the number of paths problem in advanced recursion. However, now that we know how to use dynamic programming, we can see that the recursive solution was very inefficient because we were recomputing values many times.
+
+\begin{lstlisting}
+Let path(x,y) be the number of ways to get to the cell at x and y
+
+Base case:
+paths(1,y) = 1
+paths(x,1) = 1
+
+Recurrence:
+paths(x,y) = paths(x-1,y) + paths(x,y-1)
+
+Example:
+paths(3,5)
+= paths(2,5) + paths(3,4)
+= paths(1,5) + paths(2,4) + paths(2,4) + paths(3,3)
+= 1 + paths(1,4) + paths(2,3) + paths(1,4) + paths(2,3) + paths(2,3) + paths(3,2)
+= 1 + 1 + paths(1,3) + paths(2,2) + 1 + paths(1,3) + paths(2,2) + paths(1,3) + paths(2,2) + paths(2,2) + paths(3,1)
+= 1 + 1 + 1 + paths(1,2) + paths(2,1) + 1 + 1 + path(1,2) + paths(2,1) + 1 + paths(1,2) + paths(2,1) + ....
+= 15
+\end{lstlisting}
+
+Instead of recomputing multiple values, we can build our solution upwards starting from (1,1).
+
+\begin{lstlisting}
+Let paths[x][y] be the number of ways to get from (1,1) to (x,y). 
+
+paths[1][1] = 1
+
+for x from 1 to N
+  for y from 1 to M
+    paths[x][y] = paths[x-1][y] + paths[x][y-1]
+
+Example:
+N = 3
+M = 5
+
+1 1 1 1  1
+1 2 3 4  5
+1 3 6 10 15
+\end{lstlisting}
+
 \subsection{Knapsack Problem}
 
 Imagine you are a robber and you have found a large stash of valuables. Each valuable has a value and a weight. You can only hold 10kg in your bag and you want to find the highest valued haul you can get away with.
@@ -5880,11 +5940,11 @@ Let's try a greedy approach: we will take the items with the highest value to we
 \item Rare painting: \$100/kg
 \end{itemize}
 
-The greedy approach will choose the rare painting and the necklace for a total of \$910. However if we take the jewelry and the stack of cash we will get \$935 and still fit it into the bag. How can we solve this problem? The answer is dynamic programming.
+The greedy approach will choose the rare painting and the necklace for a total of \$910. However, if we take the jewelry and the stack of cash, we will get \$935 and it will still fit it into the bag. We solve this problem with dynamic programming.
 
 Let's first write a more formal definition of the problem:
 
-Given unlimited quantities of N items, each associated with a positive weight and value, and a maximum total weight W that we can hold, what is the maximum value we can hold.
+Given unlimited quantities of N items, each associated with a positive weight and value, and a maximum total weight W that we can hold, what is the maximum value we can hold?
 
 Let's write a more specific version of the problem: we want to find the maximum value that a bag with weight capacity W can carry out of N items of positive values and weights.
 
@@ -5892,7 +5952,7 @@ The base case for this is trivial. With zero weight, the maximum value you can h
 
 Let's try simplifying the problem by using only one item with weight w1 and value v1 and a knapsack with maximum weight capacity W. Suppose we want to add the item into the knapsack then we have (W-w1) capacity remaining and the item. So the maximum value of knapsack with capacity W is the maximum value of (W-w1) plus v1 the value of the item we have. The maximum value of (W-w1) is the same problem as finding the maximum value of W. As we can see, its the same subproblem as before and we have found a recursive relation.
 
-For example if we had an item with value \$5 and weight 4kg and a knapsack with capacity 9kg. The maximum value that knapsack of 8kg can contain is the maximum value of a knapsack of 5kg plus \$5 for the item we put in the bag and so forth.
+For example, if we had an item with value \$5 and weight 4kg and a knapsack with capacity 9kg. The maximum value that a knapsack of 8kg can contain is the maximum value of a knapsack of 5kg plus \$5 for the item we put in the bag and so forth.
 
 \begin{lstlisting}
 Let knapsack(W) be the maximum value of items that can fit into maximum capacity of W.
@@ -5945,11 +6005,20 @@ knapsack[9] = 10    ^
 
 Now let's go back to the original problem. We have N items each of positive weight and value and we want to find the maximum value to be put into a knapsack of capacity W.
 
-If no items are left to fit in our remaining capacity, then the maximum value must be \$0. This is our base case.
+If no items left fit in our remaining capacity, then the maximum value must be \$0. This is our base case.
 
 If we use an item, we will have capacity W-wi and the added value will be vi. We want to try all items to place into the knapsack so we try every single item and find the maximum value out of the items. So the maximum value of capacity W is the maximum value of W-wi plus the added value of vi for all items. To find the maximum value of capacity W-wi we can do the exact same thing by trying to place each item and finding the maximum value out of the items.
 
-For example we have a knapsack of capacity 10kg and necklaces worth \$30 with weight 3kg, paintings worth \$50 with weight 9kg and silver bars worth \$60 with weight 7kg. If we choose a necklace, we will have 7kg capacity left with the added value of \$30. If we choose a painting, we will have 1kg capacity left and added value of \$50. If we choose a silver bar, we will have 3kg capacity left and added value of \$60. With the remaining capacity, we can choose another item and do the exact same thing.
+Using the initial example, if we have a knapsack of capacity 10kg and the following items:
+
+\begin{itemize}
+\item Necklace: \$10, 1kg
+\item Stack of cash: \$270, 3kg
+\item Jewelry: \$665, 7kg
+\item Rare painting: \$900, 9kg
+\end{itemize}
+
+If we choose a necklace, we will have 7kg capacity left with the added value of \$10. If we choose a painting, we will have 1kg capacity left and added value of \$900. If we choose jewelry, we will have 3kg capacity left and added value of \$665. With the remaining capacity, we can choose another item and do the exact same thing.
 
 \subsubsection{Formalization}
 
@@ -5992,54 +6061,6 @@ knapsack[9] = 900 [ max(knapsack[8] + 10, knapsack[6] + 270, knapsack[2] + 665, 
 knapsack[10] = 935 [ max(knapsack[9] + 10, knapsack[7] + 270, knapsack[7] + 665, knapsack[1] + 900) ]
 \end{lstlisting}
 
-\subsection{Number of Paths}
-
-\vspace{5px}\begin{figure}[H]\centering
-        \includegraphics[width=0.66\maxwidth{\textwidth}]{recursion_grid.png}
-        \end{figure}
-
-We first examined the number of paths problem in advanced recursion. However, now that we know how to use dynamic programming, we can see that the recursive solution was very inefficient because we were recomputing values many times.
-
-\begin{lstlisting}
-Let path(x,y) be the number of ways to get to the cell at x and y
-
-Base case:
-paths(1,y) = 1
-paths(x,1) = 1
-
-Recurrence:
-paths(x,y) = paths(x-1,y) + paths(x,y-1)
-
-Example:
-paths(3,5)
-= paths(2,5) + paths(3,4)
-= paths(1,5) + paths(2,4) + paths(2,4) + paths(3,3)
-= 1 + paths(1,4) + paths(2,3) + paths(1,4) + paths(2,3) + paths(2,3) + paths(3,2)
-= 1 + 1 + paths(1,3) + paths(2,2) + 1 + paths(1,3) + paths(2,2) + paths(1,3) + paths(2,2) + paths(2,2) + paths(3,1)
-= 1 + 1 + 1 + paths(1,2) + paths(2,1) + 1 + 1 + path(1,2) + paths(2,1) + 1 + paths(1,2) + paths(2,1) + ....
-= 15
-\end{lstlisting}
-
-Instead of recomputing multiple values, we can build our solution upwards starting from (1,1).
-
-\begin{lstlisting}
-Let paths[x][y] be the number of ways to get from (1,1) to (x,y). 
-
-paths[1][1] = 1
-
-for x from 1 to N
-  for y from 1 to M
-    paths[x][y] = paths[x-1][y] + paths[x][y-1]
-
-Example:
-N = 3
-M = 5
-
-1 1 1 1  1
-1 2 3 4  5
-1 3 6 10 15
-\end{lstlisting}
-
 \subsection{Exercises}
 
 \begin{enumerate}
@@ -6059,18 +6080,34 @@ Dynamic programming is very powerful and more efficient than recursion for probl
 
 
 
-Let first write a formal definition of the problem, given two strings A and B each with lengths N and M respectively we want to find the longest common subsequence between them.
+A subsequence is a subset of the original sequence that is in the same order. For example in the string "abcdefghi", "aeg" is a subsequence but "eaq" is not because it is not in order.
+
+The longest common subsequence between two strings A and B is the longest subsequence in A that is also in B.
+
+For example, given A="xyaaaabcdeg", B="bcaaaaefgxy" the longest common subsequence is "aaaaeg".
+
+\begin{lstlisting}
+xyaaaabcde_g
+bcaaaa___efgxy
+\end{lstlisting}
+
+If we try to use greedy we will see it doesn't work. For example, if we use try to take as much as B as we can, we see that we will get BCEG or if we try to take as much as A we get XY.
+
+
+
+
+Let first write a formal definition of the problem, given two strings A and B each with lengths N and M respectively, we want to find the longest common subsequence between them.
 
 The base case is very simple: if A or B are empty strings, then trivially, the longest common subsequence is an empty string.
 
-Now suppose that A and B are non empty strings. Let's consider the case that A and B both start with the same letter (A[0] == B[0]). It can be seen that the longest common subsequence must also begin with that letter. Thus the longest common subsequence is A[0] plus the longest common subsequence from A[1..N] and B[1..M]. However, suppose that A and B do not start with the same letter (A[0] != B[0]). Then the LCS of A and B is either the LCS of A[1..N] and B or the LCS of A and B[1..M] and we take the longer of the two. Thus this is our recurrence relation.
+Now suppose that A and B are non empty strings. Let's consider the case that A and B both start with the same letter (A[0] == B[0]). It can be seen that the longest common subsequence must also begin with that letter. Thus the longest common subsequence is A[0] plus the longest common subsequence from A[1..N] and B[1..M]. However, suppose that A and B do not start with the same letter (A[0] != B[0]). Then the LCS of A and B is either the LCS of A[1..N] and B or the LCS of A and B[1..M] and we take the longer of the two. Thus, this is our recurrence relation.
 
 \subsubsection{Formalization}
 
 \begin{lstlisting}
 Let lcs(A, B) be the longest common substring between A and B.
 Let N be the length of A and M be the length of B.
-Let max(A, B) return the string with longer length.
+Let max(A, B) be the string with longer length.
 
 lcs('', A) = ''
 lcs(B, '') = ''
@@ -6139,9 +6176,9 @@ Given an unlimited amount of N items with positive weights and values, we want t
 
 Let's change the problem slightly such that there is only one of each object. The problem becomes slightly more difficult because we need to take into account whether or not we have used an object before.
 
-Given only one copy of N items with positive weights and values, we want to find the maximum value we can hold with a capacity W.
+Given only one copy each of N items with positive weights and values, we want to find the maximum value we can hold with a capacity W.
 
-The base case is simple, if there are no more items or total capacity is less than or equal to 0 then the maximum value is 0. Suppose we have items remaining and total capacity is positive. We can either take or leave the first item and we want the maximum value of both actions. If we take the item, the value will be the value of the item plus the maximum value of the rest of the items that fit in the rest of the space in the knapsack minus the space of the item we took. If we leave the item, the value will be the maximum value of the rest of the items that fit in the knapsack. Thus we have our recurrence relation.
+The base case is simple, if there are no more items or the total capacity is less than or equal to 0, then the maximum value is 0. Suppose we have items remaining and total capacity is positive. We can either take or leave the first item and we want the maximum value of both actions. If we take the item, the value will be the value of the item plus the maximum value of the rest of the items that fit in the rest of the space in the knapsack minus the space of the item we took. If we leave the item, the value will be the maximum value of the rest of the items that fit in the knapsack. Thus we have our recurrence relation.
 
 \begin{lstlisting}
 Let knapsack(items[], W) be the maximum value of items that fit in a maximum capacity of W.
@@ -6179,7 +6216,7 @@ for n from 1 to N
         \section{ Greedy Algorithm }
         
 
-A greedy algorithm is an algorithm that always selects the optimal next step towards the solution based on some property. Greedy problems are generally straightforward and easy to solve once you determine what property to maximize. However, the most difficult part is proving that greedy is the optimal solution for all cases. It is much easier to provide a counter example to a faulty solution than to prove that a solution works for all cases or even to determine if a greedy solution exists.
+A greedy algorithm is an algorithm that always selects the optimal next step towards the solution based on some property. Greedy problems are generally straightforward and easy to solve once you determine what property to maximize. However, the most difficult part is proving that greedy is the optimal solution for all cases.
 
 \subsection{Coin Problem}
 
@@ -6311,7 +6348,7 @@ For example you are given \$1000, the future prices of a stock are: 100, 103, 10
 \item Buy 11 x \$95 [\$15]
 \item Sell 11 x \$97 [\$1082]
 \end{itemize}
-\item You are on a road trip that is D km and there are N gas stations along the way and your gas tank has capacity C. Assuming that you start with a full tank, travel 1km/min, use 1L/km and the gas station fill rate is 5L/min, how do you finish in the quickest way?
+\item You are on a road trip that is D km with N gas stations along the way and your gas tank has capacity C. Assuming that you start with a full tank, travel 1km/min, use 1L/km and the gas station fill rate is 5L/min, find the quickest time you can finish the trip in.
 
 For example, if the total distance is 200km apart with tank capacity 80L and with 5 gas stations at 10km, 40km, 50km, 90km, 150km, the minimum time it will take is 224 minutes.
 \end{enumerate}
@@ -6379,13 +6416,15 @@ For example, if the total distance is 200km apart with tank capacity 80L and wit
   Operation &
   Get &
   Push &
-  Delete &
-  Insert\\
+  Pop &
+  Delete At &
+  Insert At\\
 \hline
 
 
   Time Complexity &
   O(n) &
+  O(1) &
   O(1) &
   O(1) &
   O(1)\\
@@ -6411,7 +6450,7 @@ For example, if the total distance is 200km apart with tank capacity 80L and wit
 
 \hline\end{tabulary}\end{center}
 
-\subsubsection{Tree Set}
+\subsubsection{Binary Search Tree}
 
 \begin{center}\begin{tabulary}{0.4\linewidth}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l}\hline
 
